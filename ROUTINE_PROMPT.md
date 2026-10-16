@@ -43,7 +43,7 @@ The repository is checked out for you. Work on branch main. Steps:
 
 5. Do NOT edit any file under papertrade/, config, strategy, costs, or universe. Do NOT edit
    decisions/pending_orders.json. Do NOT reset state. The only files you may change are the
-   journal file for the day and docs/data.json (plus, on Fridays only, the thesis files in step 8).
+   journal file for the day and docs/data.json (plus the thesis files in steps 8 and 9).
 
 6. Regenerate the dashboard data so the review shows on the phone:
    `pip install -r requirements.txt` (if not done) then `python -m papertrade export`.
@@ -62,6 +62,14 @@ The repository is checked out for you. Work on branch main. Steps:
    thesis: propose those in theses/reviews/<date>.md for the user to decide. Include theses in the
    commit (`git add journal docs/data.json theses decisions/thesis_orders.json`) and use the message
    `review <date> + weekly thesis review`.
+
+9. Any weekday: catalyst theses. If the journal's "## Thesis sleeve" section shows
+   "CATALYST RULE DUE" for a thesis (its event_date has passed and the post-event rule is not yet
+   applied), do the catalyst check in THESIS_REVIEW.md for that thesis: apply its post_event_rule
+   literally. You may queue ONLY the SELL that rule specifies (in decisions/thesis_orders.json, with
+   today's market date as decision_date and the rule as reason), and you must then fill in
+   post_event_applied in theses/<slug>.md with the date and what you did (held or sold). Nothing
+   else: no other orders, no rule changes. Commit those two files with the journal.
 
 If anything prevents the review (no journal, repo errors, run failure), do not guess. Write what
 you found as your result and stop.

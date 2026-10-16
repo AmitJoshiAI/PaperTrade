@@ -9,7 +9,7 @@ and writes a daily journal for review. No real orders are ever placed.
 | Sleeve | Capital | What | Files | Review |
 |---|---|---|---|---|
 | Momentum | Rs 5,00,000 | the daily rotation rules below; the Rs 1,000/day target applies here | `state/portfolio.json`, `trades.csv`, `equity_curve.csv`, `decisions/pending_orders.json` | daily (DAILY.md) |
-| Thesis | Rs 5,00,000 | macro / economic-theme buys held weeks to years, one written thesis per position | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly, Fridays (THESIS_REVIEW.md) |
+| Thesis | Rs 5,00,000 | one written thesis per position: `theme` (macro reason, weeks to years) or `catalyst` (positioned before a scheduled event such as results, Budget, IPO listing or RBI policy, days to weeks, with a pre-set post-event rule) | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly on Fridays; catalysts on the first trading day after the event (THESIS_REVIEW.md) |
 
 The thesis sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
 sleeve's capital, rules and history are unchanged. Both share the cost model, slippage, daily run and

@@ -17,9 +17,43 @@ What the daily run already does by itself:
   override, and say why in the review);
 - sets `status: open` and `entry_date` on the first fill, `status: closed` and `exit_date` on a full exit.
 
+- for `type: catalyst` theses, counts days to `event_date` and, from the first trading day after it,
+  writes "CATALYST RULE DUE" in the journal until `post_event_applied` is filled in, a SELL for that
+  thesis is queued, or the thesis is closed. It does not interpret `post_event_rule` (free text).
+
 What it cannot do is judge whether the macro reason is still true. That is this review.
 
-## Every Friday (after the 17:30 IST run)
+## Two thesis types
+
+- **theme**: a macro or economic reason (defence indigenisation, railway capex, rate cuts), held weeks
+  to years. Reviewed weekly, below.
+- **catalyst**: a scheduled event (results, Union Budget, IPO listing, RBI policy). The money is made
+  by being positioned BEFORE the event, so the BUY must be queued early enough to fill before
+  `event_date`; the horizon is days to a few weeks. The exit is decided in advance in
+  `post_event_rule`. Catalysts are reviewed on the first trading day after the event (next section),
+  not only on Fridays.
+
+## Catalyst check (any weekday: the first trading day after event_date)
+
+The daily journal flags it as "CATALYST RULE DUE". On that day, for that thesis only:
+
+1. Read `post_event_rule` and the day's close (and the event outcome: results, policy decision).
+2. Apply the rule literally. If it calls for a sale ("sell at next open regardless", "hold if close
+   > entry" with the close below entry, "trail stop 5%" with the stop hit), queue that SELL in
+   `decisions/thesis_orders.json` with today's market date as `decision_date` and the rule as `reason`.
+   If it calls for holding, queue nothing.
+3. Either way, fill in `post_event_applied` in the thesis file with the date and what was done
+   (`2026-10-27 held: close 412 > entry 398`), and add a line to its "## Review log". A "trail stop"
+   rule stays live after that: check it again at each later review until it triggers or the thesis is
+   closed.
+   Timing: the check runs after the close of the first trading day after the event, so a SELL queued
+   then fills one session later than "next open" suggests (event Friday, flagged Monday evening, sold
+   Tuesday open). For a rule that sells regardless of the outcome, the SELL may be queued ahead, with
+   `decision_date` = `event_date`, so it fills at the first open after the event.
+4. Nothing else. The reviewer may queue only the SELL the rule specifies: no other sells, no buys,
+   no changes to the rule after the event.
+
+## Every Friday (after the 17:30 IST run): theme theses and anything open
 
 1. `git pull`. Read the "## Thesis sleeve" section of today's journal, every open thesis file in
    `theses/`, `decisions/thesis_orders.json` and the newest `decisions/thesis_executed_*.json`.

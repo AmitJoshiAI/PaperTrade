@@ -405,7 +405,8 @@ footer a { color: inherit; }
         var hit = isNum(r.to_invalidation_pct) && r.to_invalidation_pct >= 0;
         return h("div", { class: "card pos" }, [
           h("div", { class: "row" }, [
-            h("span", null, [h("span", { class: "sym", text: r.symbol }), h("span", { class: "badge status", text: String(r.status || "").toUpperCase() })]),
+            h("span", null, [h("span", { class: "sym", text: r.symbol }), h("span", { class: "badge status", text: String(r.status || "").toUpperCase() }),
+              r.type === "catalyst" ? h("span", { class: "badge status", text: "CATALYST" }) : null]),
             held ? h("span", { class: tone(r.unrealised_pnl), style: "font-weight:600",
               text: rsSigned(r.unrealised_pnl) + (isNum(r.unrealised_pct) ? "  " + pct(r.unrealised_pct, 1) : "") })
               : h("span", { class: "muted small", text: "not bought" })]),
@@ -417,7 +418,12 @@ footer a { color: inherit; }
               held ? rs(r.avg_cost, 2) + " / " + (isNum(r.last_close) ? rs(r.last_close, 2) : "no price") : (isNum(r.last_close) ? rs(r.last_close, 2) : "no price")]),
             h("div", null, [h("span", { text: "Target" }), tgt]),
             h("div", { class: "wide" + (hit ? " warn-hit" : "") }, [h("span", { text: hit ? "Invalidation HIT" : "Invalidation" }), inv]),
-            r.invalidation_price != null && r.invalidation ? h("div", { class: "wide muted", text: r.invalidation }) : null
+            r.invalidation_price != null && r.invalidation ? h("div", { class: "wide muted", text: r.invalidation }) : null,
+            r.type === "catalyst" ? h("div", { class: "wide" + (r.post_event_due ? " warn-hit" : "") }, [
+              h("span", { text: r.post_event_due ? "Catalyst: post-event rule DUE" : "Catalyst" }),
+              (r.event || "") + " · " + dLong(r.event_date) + (r.days_to_event > 0 ? " (in " + r.days_to_event + "d)" : r.days_to_event === 0 ? " (today)" : " (" + (-r.days_to_event) + "d ago)")]) : null,
+            r.type === "catalyst" ? h("div", { class: "wide" }, [h("span", { text: "After the event" }),
+              r.post_event_rule + (r.post_event_applied ? " · applied: " + r.post_event_applied : "")]) : null
           ])
         ]);
       })));

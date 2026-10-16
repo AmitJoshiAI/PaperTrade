@@ -18,7 +18,19 @@ Ledger: one file per thesis, theses/<slug>.md, with front matter between two `--
                                       makes the engine queue a SELL when the close is at or below it
     size_cap_pct: 20                  max % of sleeve equity in this thesis; never above 25
     status: proposed                  proposed -> open (engine, on first fill) -> closed (engine, on full exit)
+    type: theme                       theme (macro, weeks to years) or catalyst (a scheduled event, days to weeks)
     ---
+
+A catalyst thesis also needs (the run rejects the file without them):
+
+    event: Q2 results                 one line: Q2 results, Union Budget, IPO listing, RBI policy ...
+    event_date: 2026-10-24            ISO date of the event
+    post_event_rule: sell at next open regardless      what to do the day after the event
+    post_event_applied:               set by the reviewer (date + what was done) once the rule is applied
+
+The engine does not interpret post_event_rule (it is free text). It counts days to the event, and from
+the first trading day after event_date it flags the thesis as "CATALYST RULE DUE" in the journal until
+post_event_applied is filled in, a SELL for it is queued, or it is closed.
     Free text below: the long-form argument, evidence, what would change the view, review log.
 
 Files whose name starts with "_" (e.g. _TEMPLATE.md) are ignored.
@@ -58,8 +70,9 @@ from .portfolio import Portfolio
 log = logging.getLogger(__name__)
 
 FIELDS = ["symbol", "thesis", "entry_date", "horizon", "target", "invalidation", "invalidation_price",
-          "size_cap_pct", "status"]
+          "size_cap_pct", "status", "type", "event", "event_date", "post_event_rule", "post_event_applied"]
 STATUSES = ("proposed", "open", "closed")
+TYPES = ("theme", "catalyst")
 
 
 class ThesisPortfolio(Portfolio):
@@ -88,6 +101,15 @@ class Thesis:
     @property
     def status(self) -> str:
         return str(self.get("status", "proposed")).strip().lower() or "proposed"
+
+    @property
+    def type(self) -> str:
+        return str(self.get("type", "theme")).strip().lower() or "theme"
+
+    @property
+    def event_date(self):
+        v = str(self.get("event_date", "")).strip()
+        return _date.fromisoformat(v) if v else None
 
     @property
     def invalidation_price(self):
@@ -154,6 +176,17 @@ def parse_thesis(path: Path) -> Thesis:
         raise ValueError("missing symbol")
     if t.status not in STATUSES:
         raise ValueError(f"status {t.status!r} is not one of {', '.join(STATUSES)}")
+    if t.type not in TYPES:
+        raise ValueError(f"type {t.type!r} is not one of {', '.join(TYPES)}")
+    if t.type == "catalyst":
+        try:
+            ed = t.event_date
+        except ValueError:
+            raise ValueError(f"event_date {t.get('event_date')!r} is not an ISO date (YYYY-MM-DD)")
+        missing = [k for k, ok in (("event", t.get("event")), ("event_date", ed),
+                                   ("post_event_rule", t.get("post_event_rule"))) if not ok]
+        if missing:
+            raise ValueError(f"catalyst thesis is missing {', '.join(missing)}")
     return t
 
 
@@ -382,6 +415,34 @@ def check_invalidations(pf: ThesisPortfolio, theses: dict, last: pd.Series, mark
     return hits
 
 
+def catalyst_state(t: Thesis, market_day: str, orders: list[dict]) -> dict:
+    """Days to the event (calendar) and whether the post-event rule is due and not yet applied."""
+    days = (t.event_date - _date.fromisoformat(market_day)).days
+    sell_queued = any(o.get("thesis") == t.slug and str(o.get("side", "")).upper() == "SELL" for o in orders)
+    applied = bool(str(t.get("post_event_applied", "")).strip())
+    passed = days < 0
+    return dict(days_to_event=days, passed=passed, sell_queued=sell_queued, applied=applied,
+                due=passed and t.status == "open" and not applied and not sell_queued)
+
+
+def catalyst_flags(theses: dict, orders: list[dict], market_day: str) -> list[str]:
+    out = []
+    for t in theses.values():
+        if t.type != "catalyst" or t.status == "closed":
+            continue
+        c = catalyst_state(t, market_day, orders)
+        if c["due"]:
+            out.append(f"CATALYST RULE DUE: {t.slug} ({t.symbol}) - {t.get('event')} was on {t.event_date}, "
+                       f"{-c['days_to_event']} day(s) ago. Apply the post-event rule: \"{t.get('post_event_rule')}\". "
+                       f"Then fill in post_event_applied in theses/{t.slug}.md (or queue the SELL it specifies).")
+        elif c["passed"] and t.status == "open" and c["sell_queued"] and not c["applied"]:
+            out.append(f"Catalyst {t.slug}: post-event SELL queued for the next open.")
+        elif c["passed"] and t.status == "proposed":
+            out.append(f"Catalyst {t.slug}: {t.get('event')} ({t.event_date}) passed with no position. "
+                       f"Close the thesis or move the event.")
+    return out
+
+
 def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     """Thesis-sleeve part of the daily run. Called by engine.run_day AFTER the momentum sleeve is saved."""
     market_day = _day(main_prices["date"].max())
@@ -408,6 +469,7 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     pf.save()
 
     hits = check_invalidations(pf, theses, last, market_day)
+    hits += catalyst_flags(theses, load_orders()["orders"], market_day)
     held_without = [s for s in pf.positions if s not in {t.symbol for t in theses.values() if t.status == "open"}]
     if held_without:
         warnings.append(f"Held with no open thesis file: {', '.join(held_without)}. Write or reopen the thesis.")
@@ -420,7 +482,7 @@ def _pct(a, b):
     return None if a is None or b is None or not b else (a / b - 1) * 100
 
 
-def thesis_rows(pf: ThesisPortfolio, theses: dict, last: pd.Series, market_day: str) -> list[dict]:
+def thesis_rows(pf: ThesisPortfolio, theses: dict, last: pd.Series, market_day: str, orders=()) -> list[dict]:
     """One row per proposed/open thesis (plus any held symbol without one), with live P&L and distances."""
     rows = []
     by_symbol = {}
@@ -438,7 +500,14 @@ def thesis_rows(pf: ThesisPortfolio, theses: dict, last: pd.Series, market_day: 
             days = (_date.fromisoformat(market_day) - _date.fromisoformat(entry)).days if entry else None
         except ValueError:
             days = None
+        cat = catalyst_state(t, market_day, list(orders)) if t is not None and t.type == "catalyst" else None
         rows.append(dict(
+            type=t.type if t else "theme",
+            event=t.get("event") if cat else None, event_date=str(t.event_date) if cat else None,
+            days_to_event=cat["days_to_event"] if cat else None,
+            post_event_rule=t.get("post_event_rule") if cat else None,
+            post_event_applied=t.get("post_event_applied") if cat else None,
+            post_event_due=cat["due"] if cat else False,
             slug=t.slug if t else None, symbol=sym, status=t.status if t else "open (no thesis file)",
             thesis=t.get("thesis") if t else "", horizon=t.get("horizon") if t else "",
             entry_date=entry or None, days_held=days if p else None,
@@ -476,7 +545,7 @@ def journal_lines(s: dict, momentum_equity: float | None = None) -> list[str]:
                      f"{_f(config.STARTING_CAPITAL + pf.starting_capital)} paper capital |")
     lines.append("")
 
-    rows = thesis_rows(pf, s["theses"], s["last"], market_day)
+    rows = thesis_rows(pf, s["theses"], s["last"], market_day, s["orders"])
     held = [r for r in rows if r["qty"]]
     lines += ["### Open theses", ""]
     if held:
@@ -494,6 +563,19 @@ def journal_lines(s: dict, momentum_equity: float | None = None) -> list[str]:
     proposed = [r for r in rows if not r["qty"] and r["status"] == "proposed"]
     if proposed:
         lines += ["Proposed, not yet bought: " + "; ".join(f"{r['slug']} ({r['symbol']}, close {_f(r['last_close'], 2)})" for r in proposed), ""]
+
+    cats = [r for r in rows if r["type"] == "catalyst"]
+    if cats:
+        lines += ["### Catalyst theses", "",
+                  "| Thesis | Symbol | Status | Event | Event date | Days to event | Post-event rule | Applied |",
+                  "|---|---|---|---|---|---|---|---|"]
+        for r in cats:
+            d = r["days_to_event"]
+            when = "today" if d == 0 else (f"in {d}" if d > 0 else f"{-d} ago")
+            applied = r["post_event_applied"] or ("**DUE**" if r["post_event_due"] else "-")
+            lines.append(f"| {r['slug']} | {r['symbol']} | {r['status']} | {r['event']} | {r['event_date']} | {when} | "
+                         f"{r['post_event_rule']} | {applied} |")
+        lines.append("")
 
     lines += ["### Thesis fills today", ""]
     if s["fills"]:
@@ -559,7 +641,7 @@ def export_data(main_prices: pd.DataFrame | None, momentum_curve: pd.DataFrame) 
         capital=pf.starting_capital, start_date=pf.start_date, cash=pf.cash, equity=eq,
         total_pnl=eq - pf.starting_capital, total_pnl_pct=(eq / pf.starting_capital - 1) * 100,
         costs_paid=pf.costs_paid, realised_pnl=pf.realised_pnl, max_position_pct=config.THESIS_MAX_POSITION_PCT * 100,
-        theses=thesis_rows(pf, theses, last, market_day),
+        theses=thesis_rows(pf, theses, last, market_day, orders),
         closed=[dict(slug=t.slug, symbol=t.symbol, thesis=t.get("thesis"), exit_date=t.get("exit_date"))
                 for t in theses.values() if t.status == "closed"],
         orders=orders, warnings=warnings,

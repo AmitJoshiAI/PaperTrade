@@ -56,6 +56,8 @@ Monday to Friday**, and commits state, decisions, journal and dashboard data to 
 7. **Fridays: weekly thesis-sleeve review.** The separate Rs 5,00,000 thesis sleeve is reviewed once
    a week, not daily. Follow THESIS_REVIEW.md. On other days just read the "## Thesis sleeve" section
    of the journal; it flags invalidation hits, which the engine has already turned into a queued SELL.
+   Exception, any weekday: a catalyst thesis flagged "CATALYST RULE DUE" gets its post-event rule
+   applied that day (THESIS_REVIEW.md, "Catalyst check").
 
 Weekends and NSE holidays: nothing to review. If a day is missed, the next run catches up; pending
 orders fill at the first open after their decision date (stops are not re-checked for skipped days).

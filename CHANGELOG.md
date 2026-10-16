@@ -23,3 +23,20 @@
   hero is relabelled "Momentum sleeve equity".
 - **Revert if**: the thesis step ever changes a momentum file or fails a daily run. It is wrapped so a
   failure is logged and the momentum run is still saved.
+
+## 2026-10-17 - Thesis sleeve: catalyst theses (momentum sleeve unchanged)
+
+- **What**: thesis files gain `type: theme | catalyst` (missing = theme, so existing files are unchanged).
+  A catalyst thesis is positioned BEFORE a scheduled event and must give `event`, `event_date` (ISO) and
+  `post_event_rule`; the run rejects the file (with a journal warning) if any is missing. New optional
+  field `post_event_applied`, filled in by the reviewer.
+- **Engine**: shows a "### Catalyst theses" table with days to the event; from the first trading day after
+  `event_date` it writes "CATALYST RULE DUE" until `post_event_applied` is set, a SELL for the thesis is
+  queued, or it is closed. It does not apply the rule itself: the rules are free text.
+- **Review**: catalysts are checked on the first trading day after the event, any weekday
+  (THESIS_REVIEW.md "Catalyst check", ROUTINE_PROMPT.md step 9). The reviewer may queue only the SELL the
+  post-event rule specifies.
+- **Why**: the user's examples (an IPO listing, a +20% day after results plus a dividend) were made by
+  holding before a known date; the theme type had no notion of a date.
+- **Evidence the momentum sleeve did not change**: same old-vs-new comparison as the entry above
+  (committed 2026-10-15 state, and the 8-day replay with a catalyst thesis added): byte-identical.

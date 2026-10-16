@@ -84,7 +84,8 @@ def cmd_thesis(args):
     for s, p in pf.positions.items():
         print(f"  held {s}: {p.qty} @ avg {p.avg_cost:,.2f} since {p.entry_date}")
     for t in theses.values():
-        print(f"  [{t.status}] {t.slug}: {t.symbol} - {t.get('thesis')}")
+        ev = f"  [{t.get('event')} {t.event_date}]" if t.type == "catalyst" else ""
+        print(f"  [{t.status}] [{t.type}] {t.slug}: {t.symbol} - {t.get('thesis')}{ev}")
     for w in warnings:
         print(f"  WARNING {w}")
     print(json.dumps(load_orders(), indent=2))

@@ -8,6 +8,11 @@ invalidation: The fact that would prove the thesis wrong, e.g. close below 0 or 
 invalidation_price: 0
 size_cap_pct: 20
 status: proposed
+type: theme
+event:
+event_date:
+post_event_rule:
+post_event_applied:
 ---
 
 Copy this file to `theses/<slug>.md` (lower-case, hyphens, e.g. `hal-defence-indigenisation.md`) and
@@ -21,6 +26,13 @@ and THESIS_REVIEW.md; in short:
 - `size_cap_pct`: max share of the sleeve's equity in this one thesis. The engine never allows more
   than 25%.
 - `entry_date` and `status: open` / `closed` are written by the engine when orders fill.
+- `type`: `theme` (a macro reason, held weeks to years; leave the event fields blank) or `catalyst`
+  (positioned BEFORE a known, scheduled event: results, Union Budget, IPO listing, RBI policy; held
+  days to a few weeks). A catalyst needs `event` (one line), `event_date` (YYYY-MM-DD) and
+  `post_event_rule` (what to do the day after: "sell at next open regardless", "hold if close > entry",
+  "trail stop 5%"). The journal counts down to the event and, from the first trading day after it,
+  flags the thesis until the rule is applied. When you apply it, write the date and what you did in
+  `post_event_applied` (e.g. `2026-10-27 sold at open per rule`).
 
 To buy, add an order to `decisions/thesis_orders.json`:
 
