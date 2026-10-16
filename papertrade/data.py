@@ -18,10 +18,14 @@ def download_prices(period: str = config.HISTORY_PERIOD) -> pd.DataFrame:
 
 
 def download_symbols(symbols, period: str = config.HISTORY_PERIOD, allow_empty: bool = False) -> pd.DataFrame:
-    """Same as download_prices for any list of NSE symbols (the thesis sleeve is not limited to Nifty 50).
+    """Same as download_prices for any list of symbols (the thesis sleeve is not limited to Nifty 50).
+    A symbol is an NSE symbol (Yahoo SYMBOL.NS), "US:XXX" for a US listing (Yahoo XXX), or an explicit
+    Yahoo ticker containing a '.' (used as is); see universe.yahoo_symbol. Prices stay in the listing's
+    own currency. The "symbol" column holds the symbol exactly as passed in.
     If every symbol fails: raises (as download_prices always has) unless allow_empty, which returns an
     empty frame with the same columns."""
-    tickers = [yahoo_symbol(s) for s in symbols]
+    key_of = {yahoo_symbol(s): s for s in symbols}
+    tickers = list(key_of)
     raw = yf.download(
         tickers, period=period, interval="1d",
         auto_adjust=False, progress=False, group_by="ticker", threads=True,
@@ -42,7 +46,7 @@ def download_symbols(symbols, period: str = config.HISTORY_PERIOD, allow_empty: 
         df.index.name = "date"
         df = df.reset_index()
         df["date"] = pd.to_datetime(df["date"]).dt.tz_localize(None).dt.normalize()
-        df["symbol"] = nse_symbol(t)
+        df["symbol"] = key_of.get(t, nse_symbol(t))
         frames.append(df)
     if dropped:
         log.warning("Dropped %d symbols with no Yahoo data: %s", len(dropped), ", ".join(dropped))

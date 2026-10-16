@@ -5,7 +5,7 @@
   status         print portfolio and last equity row
   pending        print the pending orders file
   thesis         print the thesis sleeve: cash, holdings, theses, queued thesis orders
-  costs QTY PX   show Zerodha charges for a buy+sell of QTY shares at PX (delivery)
+  costs QTY PX   show Zerodha charges for a buy+sell of QTY shares at PX (delivery; --product MIS|FUT)
   export         write docs/data.json for the dashboard (read-only; no download, no state change)
   reset --yes    wipe state/, decisions/, journal/ and start again (both sleeves; theses/ is kept)
 """
@@ -76,16 +76,18 @@ def cmd_status(args):
 
 
 def cmd_thesis(args):
-    from .thesis import ThesisPortfolio, load_theses, load_orders
+    from .thesis import ThesisPortfolio, load_theses, load_orders, display_symbol, PAPER_SHORT
     pf = ThesisPortfolio.load()
     theses, warnings = load_theses()
     print(f"Thesis sleeve: cash Rs {pf.cash:,.2f} of Rs {pf.starting_capital:,.0f}  costs Rs {pf.costs_paid:,.2f}  "
           f"realised Rs {pf.realised_pnl:,.2f}")
     for s, p in pf.positions.items():
-        print(f"  held {s}: {p.qty} @ avg {p.avg_cost:,.2f} since {p.entry_date}")
+        short = f"  SHORT ({PAPER_SHORT})" if p.qty < 0 else ""
+        ccy = "" if p.currency == "INR" else f" {p.currency}"
+        print(f"  held {display_symbol(s)}: {p.qty} @ avg {p.avg_cost:,.2f}{ccy} since {p.entry_date}{short}")
     for t in theses.values():
-        ev = f"  [{t.get('event')} {t.event_date}]" if t.type == "catalyst" else ""
-        print(f"  [{t.status}] [{t.type}] {t.slug}: {t.symbol} - {t.get('thesis')}{ev}")
+        ev = f"  [{t.get('event')} {t.event_date}]" if t.type in ("catalyst", "second_order") else ""
+        print(f"  [{t.status}] [{t.type}] {t.slug}: {t.label} - {t.get('thesis')}{ev}")
     for w in warnings:
         print(f"  WARNING {w}")
     print(json.dumps(load_orders(), indent=2))
@@ -131,7 +133,7 @@ def main(argv=None):
     sub.add_parser("pending").set_defaults(fn=cmd_pending)
     sub.add_parser("thesis").set_defaults(fn=cmd_thesis)
     c = sub.add_parser("costs"); c.add_argument("qty", type=int); c.add_argument("price", type=float)
-    c.add_argument("--product", default="CNC", choices=["CNC", "MIS"]); c.set_defaults(fn=cmd_costs)
+    c.add_argument("--product", default="CNC", choices=["CNC", "MIS", "FUT"]); c.set_defaults(fn=cmd_costs)
     sub.add_parser("export").set_defaults(fn=cmd_export)
     rs = sub.add_parser("reset"); rs.add_argument("--yes", action="store_true"); rs.set_defaults(fn=cmd_reset)
 

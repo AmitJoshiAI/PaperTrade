@@ -9,11 +9,23 @@ and writes a daily journal for review. No real orders are ever placed.
 | Sleeve | Capital | What | Files | Review |
 |---|---|---|---|---|
 | Momentum | Rs 5,00,000 | the daily rotation rules below; the Rs 1,000/day target applies here | `state/portfolio.json`, `trades.csv`, `equity_curve.csv`, `decisions/pending_orders.json` | daily (DAILY.md) |
-| Thesis | Rs 5,00,000 | one written thesis per position: `theme` (macro reason, weeks to years) or `catalyst` (positioned before a scheduled event such as results, Budget, IPO listing or RBI policy, days to weeks, with a pre-set post-event rule) | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly on Fridays; catalysts on the first trading day after the event (THESIS_REVIEW.md) |
+| Thesis | Rs 5,00,000 | one written thesis per position: `theme` (macro reason, weeks to years) or `catalyst` (positioned before a scheduled event such as results, Budget, IPO listing or RBI policy, days to weeks, with a pre-set post-event rule) or `second_order` (an event with the obvious winner held long and the non-obvious losers held as PAPER shorts, see `theses/_EXAMPLE_second_order.md`) | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly on Fridays; catalysts on the first trading day after the event (THESIS_REVIEW.md) |
 
 The thesis sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
 sleeve's capital, rules and history are unchanged. Both share the cost model, slippage, daily run and
 dashboard. How to open a thesis: copy `theses/_TEMPLATE.md`.
+
+Two things in the thesis sleeve cannot be done as written in a real Zerodha cash account, and are
+labelled wherever they appear:
+
+- **Shorts are PAPER shorts** ("PAPER SHORT: needs F&O to execute"). India's cash market allows shorting
+  only intraday; holding a short needs a stock future, and only F&O-listed stocks have one. Paper shorts
+  are charged as Zerodha futures trades (`costs.py`, product `FUT`, rates to verify on zerodha.com), the
+  proceeds are credited to cash but cannot fund buys, and total short notional is capped at 50% of the
+  sleeve's capital (`THESIS_MAX_SHORT_PCT`). Lot sizes and margin blocking are not modelled.
+- **US tickers** (`market: US`, e.g. META) keep prices in USD and are converted to INR at a FIXED rate,
+  `USD_INR = 84.0` in `config.py`, a placeholder to update by hand. Trading them for real needs an
+  overseas broker under LRS; shorting them is not possible from India.
 
 Phase 1 is about measuring, not being clever: the strategy is deliberately simple so the daily review
 has something concrete to criticise.
@@ -55,10 +67,11 @@ papertrade/        the package
   config.py        capital, targets, strategy parameters, paths  (edit parameters here only)
   universe.py      Nifty 50 symbol list
   data.py          Yahoo download -> data_cache/prices_daily.parquet
-  costs.py         Zerodha CNC/MIS charge model
+  costs.py         Zerodha CNC/MIS/FUT charge model (FUT only for the thesis sleeve's paper shorts)
   portfolio.py     cash, positions, trade ledger, equity curve
   strategy.py      momentum rotation rules
-  thesis.py        thesis sleeve: ledger parsing, thesis orders, invalidation check, journal section
+  thesis.py        thesis sleeve: ledger parsing (incl. second-order legs), thesis orders (BUY/SELL/SHORT/COVER),
+                   paper shorts, invalidation and catalyst checks, journal section
   engine.py        the daily cycle
   review.py        journal writer
   export.py        dashboard data -> docs/data.json
@@ -67,7 +80,8 @@ state/             portfolio.json, trades.csv, equity_curve.csv; thesis_portfoli
                    thesis_equity_curve.csv (thesis sleeve)
 decisions/         pending_orders.json (next session's orders), executed_YYYY-MM-DD.json (what filled);
                    thesis_orders.json, thesis_executed_YYYY-MM-DD.json (thesis sleeve)
-theses/            <slug>.md, one per thesis (copy _TEMPLATE.md); reviews/ for the Friday write-ups
+theses/            <slug>.md, one per thesis (copy _TEMPLATE.md); reviews/ for the Friday write-ups;
+                   _EXAMPLE_second_order.md (Meta / CoreWeave / Nebius, a worked example, never executed)
 journal/           YYYY-MM-DD.md daily reviews
 data_cache/        prices_daily.parquet, thesis_prices.parquet (re-downloadable; git-ignored)
 docs/              index.html (mobile dashboard), data.json (written by run/export), .nojekyll

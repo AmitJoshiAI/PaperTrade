@@ -70,6 +70,8 @@ The repository is checked out for you. Work on branch main. Steps:
    today's market date as decision_date and the rule as reason), and you must then fill in
    post_event_applied in theses/<slug>.md with the date and what you did (held or sold). Nothing
    else: no other orders, no rule changes. Commit those two files with the journal.
+   For a second_order thesis you may likewise queue, for each leg, only the SELL (LONG leg) or COVER
+   (SHORT leg) its post_event_rule specifies, with "leg" set to that leg's symbol.
 
 If anything prevents the review (no journal, repo errors, run failure), do not guess. Write what
 you found as your result and stop.

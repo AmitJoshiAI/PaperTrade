@@ -46,5 +46,13 @@ MAX_STALE_BARS = 3          # carry a missing close forward at most this many ba
 # momentum book and its history are untouched. Total paper capital is now Rs 10,00,000.
 THESIS_CAPITAL = 500_000.0
 THESIS_MAX_POSITION_PCT = 0.25        # hard cap per thesis: 25% of sleeve equity; a thesis file may set a lower cap
+THESIS_MAX_SHORT_PCT = 0.50           # paper shorts: total short notional <= 50% of the sleeve's capital
+                                      # (the lower of starting capital and current equity), checked at each SHORT fill
+
+# Thesis legs priced in another currency (e.g. a US ticker, `market: US`) keep their prices in that
+# currency; cash, P&L and sleeve equity are in INR at this FIXED rate. 84.0 is a placeholder, not a live
+# rate: change it here when it drifts. Changing it revalues every open foreign leg at once (no FX history).
+USD_INR = 84.0
+FX_TO_INR = {"INR": 1.0, "USD": USD_INR}
 
 PRODUCT = "CNC"             # CNC = delivery. "MIS" = intraday (not used by baseline strategy)

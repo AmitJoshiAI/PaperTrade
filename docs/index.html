@@ -113,6 +113,17 @@ summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
 .badge.status { color: var(--ink-2); margin-left: 6px; vertical-align: 2px; }
 .kv .wide { grid-column: 1 / -1; }
 .warn-hit { color: var(--down); font-weight: 600; }
+/* second-order thesis: winner (long) vs losers (paper short) */
+.cards .so { grid-column: 1 / -1; }
+.vs { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 8px; margin-top: 10px; align-items: start; }
+.vs-mid { align-self: center; font-size: 12px; font-weight: 700; color: var(--muted); }
+.vs-col > .label { font-size: 12px; color: var(--muted); }
+.leg { border: 1px solid var(--border); border-radius: 8px; padding: 8px; margin-top: 6px; min-width: 0; }
+.leg .sym { font-size: 15px; }
+.leg .row { gap: 6px; }
+.leg-detail { margin-top: 4px; font-size: 12px; color: var(--ink-2); overflow-wrap: anywhere; }
+.badge.short { color: var(--sell); background: color-mix(in srgb, var(--sell) 12%, transparent); white-space: normal; border-radius: 6px; margin-top: 4px; }
+@media (max-width: 359px) { .vs { grid-template-columns: 1fr; } .vs-mid { text-align: center; } }
 
 /* tables: scroll inside their own box, never the page */
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
@@ -378,6 +389,53 @@ footer a { color: inherit; }
   }
 
   // ---------- thesis sleeve ----------
+  function money(v, ccy) { return !ccy || ccy === "INR" ? rs(v, 2) : (isNum(v) ? v.toFixed(2) + " " + ccy : "n/a"); }
+  function countdown(d) { return d > 0 ? " (in " + d + "d)" : d === 0 ? " (today)" : " (" + (-d) + "d ago)"; }
+  function legCard(l, label) {
+    var held = l.qty !== 0;
+    var detail = held
+      ? Math.abs(l.qty) + " @ " + money(l.avg_cost, l.currency) + " · now " + (isNum(l.last_close) ? money(l.last_close, l.currency) : "no price") +
+        (isNum(l.unrealised_pct) ? " (" + pct(l.unrealised_pct, 1) + ")" : "")
+      : "last " + (isNum(l.last_close) ? money(l.last_close, l.currency) : "no price") + " · weight " + l.weight;
+    return h("div", { class: "leg" }, [
+      h("div", { class: "row" }, [h("span", { class: "sym", text: l.symbol }),
+        held || l.realised_pnl ? h("span", { class: "num " + tone(l.pnl), style: "font-weight:600", text: rsSigned(l.pnl) })
+          : h("span", { class: "muted small", text: "not opened" })]),
+      l.side === "SHORT" ? h("div", { class: "badge short", text: label }) : null,
+      h("div", { class: "leg-detail num", text: detail + (l.realised_pnl ? " · realised " + rsSigned(l.realised_pnl) : "") }),
+      h("div", { class: "leg-detail", text: l.rationale || "" })
+    ]);
+  }
+  function secondOrderCard(r, label) {
+    var legs = r.legs || [];
+    var anyHeld = legs.some(function (l) { return l.qty !== 0; });
+    var winners = legs.filter(function (l) { return l.side === "LONG"; });
+    var losers = legs.filter(function (l) { return l.side === "SHORT"; });
+    return h("div", { class: "card pos so" }, [
+      h("div", { class: "row" }, [
+        h("span", null, [h("span", { class: "sym", text: r.slug }), h("span", { class: "badge status", text: String(r.status || "").toUpperCase() }),
+          h("span", { class: "badge status", text: "SECOND-ORDER" })]),
+        anyHeld || r.realised_pnl ? h("span", { class: "num " + tone(r.combined_pnl), style: "font-weight:600",
+          text: (isNum(r.combined_pnl) ? rsSigned(r.combined_pnl) : "n/a") + " combined" })
+          : h("span", { class: "muted small", text: "not opened" })]),
+      h("div", { class: "thesis-line", text: r.thesis || "" }),
+      h("div", { class: "vs" }, [
+        h("div", { class: "vs-col" }, [h("div", { class: "label", text: "Winner (long)" })].concat(winners.map(function (l) { return legCard(l, label); }))),
+        h("div", { class: "vs-mid", text: "vs" }),
+        h("div", { class: "vs-col" }, [h("div", { class: "label", text: "Losers (paper short)" })].concat(losers.map(function (l) { return legCard(l, label); })))
+      ]),
+      h("div", { class: "kv num" }, [
+        h("div", { class: "wide" + (r.post_event_due ? " warn-hit" : "") }, [h("span", { text: r.post_event_due ? "Event: post-event rule DUE" : "Event" }),
+          (r.event || "") + " · " + dLong(r.event_date) + countdown(r.days_to_event)]),
+        h("div", { class: "wide" }, [h("span", { text: "After the event (both sides)" }),
+          (r.post_event_rule || "") + (r.rule_due_date && r.rule_due_date !== r.event_date ? " · due after " + dLong(r.rule_due_date) : "") +
+          (r.post_event_applied ? " · applied: " + r.post_event_applied : "") +
+          (r.missing_exits && r.missing_exits.length && r.post_event_due ? " · no exit queued for " + r.missing_exits.join(", ") : "")]),
+        h("div", null, [h("span", { text: "Entry" }), r.entry_date ? dLong(r.entry_date) + (r.days_held != null ? " · " + r.days_held + "d" : "") : "-"]),
+        h("div", null, [h("span", { text: "Gross exposure" }), rs(r.gross_exposure) + " (cap " + (r.size_cap_pct || 0).toFixed(0) + "%)"])
+      ])
+    ]);
+  }
   function renderThesis(app, th) {
     var kids = [];
     kids.push(h("div", { class: "card" }, [
@@ -390,11 +448,15 @@ footer a { color: inherit; }
           h("div", { class: "sub", text: pct(th.total_pnl_pct) + " · cash " + rs(th.cash) })])
       ]),
       h("p", { class: "muted small", style: "margin:10px 0 0", text: "Macro and economic-theme positions held weeks to years, each with a written thesis in theses/. Max " +
-        (th.max_position_pct || 25).toFixed(0) + "% of the sleeve per thesis. Reviewed every Friday. Not part of the daily target." })
+        (th.max_position_pct || 25).toFixed(0) + "% of the sleeve per thesis. Reviewed every Friday. Not part of the daily target." }),
+      th.short_notional ? h("p", { class: "small warn-hit", style: "margin:8px 0 0", text: "Paper shorts " + rs(th.short_notional) + " of " +
+        rs(th.short_limit) + " limit. " + (th.paper_short_label || "PAPER SHORT: needs F&O to execute") }) : null
     ]));
     var rows = th.theses || [];
-    if (rows.length) {
-      kids.push(h("div", { class: "cards", style: "margin-top:10px" }, rows.map(function (r) {
+    var so = th.second_order || [];
+    var label = th.paper_short_label || "PAPER SHORT: needs F&O to execute";
+    if (rows.length || so.length) {
+      kids.push(h("div", { class: "cards", style: "margin-top:10px" }, so.map(function (r) { return secondOrderCard(r, label); }).concat(rows.map(function (r) {
         var held = r.qty > 0;
         var inv = r.invalidation_price != null
           ? rs(r.invalidation_price, 2) + (isNum(r.to_invalidation_pct) ? " (" + pct(r.to_invalidation_pct, 1) + " away)" : "")
@@ -415,7 +477,7 @@ footer a { color: inherit; }
             h("div", null, [h("span", { text: "Entry" }), r.entry_date ? dLong(r.entry_date) + (r.days_held != null ? " · " + r.days_held + "d" : "") : "-"]),
             h("div", null, [h("span", { text: "Horizon" }), r.horizon || "-"]),
             h("div", null, [h("span", { text: held ? "Avg cost / last" : "Last close" }),
-              held ? rs(r.avg_cost, 2) + " / " + (isNum(r.last_close) ? rs(r.last_close, 2) : "no price") : (isNum(r.last_close) ? rs(r.last_close, 2) : "no price")]),
+              held ? money(r.avg_cost, r.currency) + " / " + (isNum(r.last_close) ? money(r.last_close, r.currency) : "no price") : (isNum(r.last_close) ? money(r.last_close, r.currency) : "no price")]),
             h("div", null, [h("span", { text: "Target" }), tgt]),
             h("div", { class: "wide" + (hit ? " warn-hit" : "") }, [h("span", { text: hit ? "Invalidation HIT" : "Invalidation" }), inv]),
             r.invalidation_price != null && r.invalidation ? h("div", { class: "wide muted", text: r.invalidation }) : null,
@@ -426,7 +488,7 @@ footer a { color: inherit; }
               r.post_event_rule + (r.post_event_applied ? " · applied: " + r.post_event_applied : "")]) : null
           ])
         ]);
-      })));
+      }))));
     } else {
       kids.push(h("div", { class: "card empty", style: "margin-top:10px", text: "No theses yet. Each one starts as a file in theses/ (copy theses/_TEMPLATE.md)." }));
     }
@@ -435,10 +497,11 @@ footer a { color: inherit; }
       kids.push(h("p", { class: "muted small", style: "margin:12px 0 8px", text: "Thesis orders queued for the next open" }));
       kids.push(h("div", { class: "cards" }, orders.map(function (o) {
         var side = String(o.side || "").toUpperCase();
-        var size = o.qty ? "qty " + o.qty : o.amount ? rs(o.amount) : side === "SELL" ? "all" : "up to cap";
+        var size = o.qty ? "qty " + o.qty : o.amount ? rs(o.amount) : (side === "SELL" || side === "COVER") ? "all" : "up to cap";
         return h("div", { class: "card order" }, [
-          h("div", { class: "row" }, [h("span", null, [h("span", { class: "badge " + (side === "SELL" ? "sell" : "buy"), text: side }),
-            h("span", { class: "sym", text: o.thesis || "" })]), h("span", { class: "muted small num", text: size })]),
+          h("div", { class: "row" }, [h("span", null, [h("span", { class: "badge " + (side === "SELL" || side === "SHORT" ? "sell" : "buy"), text: side }),
+            h("span", { class: "sym", text: (o.thesis || "") + (o.leg ? " / " + o.leg : "") })]), h("span", { class: "muted small num", text: size })]),
+          side === "SHORT" || side === "COVER" ? h("div", { class: "badge short", text: label }) : null,
           h("div", { class: "reason", text: (o.reason || "") + (o.decision_date ? " · decided " + dLong(o.decision_date) : "") })
         ]);
       })));
@@ -450,7 +513,9 @@ footer a { color: inherit; }
       var wrap2 = h("div", { class: "chart-wrap", tabindex: "0", "aria-label": "Combined equity chart, momentum plus thesis sleeve. Use left and right arrows to step through days." });
       kids.push(h("div", { class: "card", style: "margin-top:10px" }, [
         h("div", { class: "label small", style: "color:var(--ink-2);margin-bottom:6px", text: "Combined equity (momentum + thesis)" }), wrap2]));
-      app.appendChild(section("thesis", "Thesis sleeve (" + rows.filter(function (r) { return r.qty > 0; }).length + " open)", kids));
+      var nOpen = rows.filter(function (r) { return r.qty !== 0; }).length +
+        so.filter(function (r) { return (r.legs || []).some(function (l) { return l.qty !== 0; }); }).length;
+      app.appendChild(section("thesis", "Thesis sleeve (" + nOpen + " open)", kids));
       drawChart(wrap2, cc, th.combined_capital);
       if (window.ResizeObserver) {
         var lw = wrap2.clientWidth;

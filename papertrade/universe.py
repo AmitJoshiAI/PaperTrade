@@ -20,6 +20,13 @@ NIFTY50 = [
 
 
 def yahoo_symbol(nse_symbol: str) -> str:
+    """NSE symbol -> SYMBOL.NS. Two other forms are used only by the thesis sleeve (Nifty 50 symbols have
+    neither a '.' nor a ':'): "US:META" (a US listing, `market: US`) -> META, and a symbol that already
+    contains a '.' (an explicit Yahoo ticker such as 7203.T) -> unchanged."""
+    if nse_symbol.startswith("US:"):
+        return nse_symbol[3:]
+    if "." in nse_symbol:
+        return nse_symbol
     return f"{nse_symbol}.NS"
 
 

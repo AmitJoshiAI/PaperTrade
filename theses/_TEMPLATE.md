@@ -33,6 +33,11 @@ and THESIS_REVIEW.md; in short:
   "trail stop 5%"). The journal counts down to the event and, from the first trading day after it,
   flags the thesis until the rule is applied. When you apply it, write the date and what you did in
   `post_event_applied` (e.g. `2026-10-27 sold at open per rule`).
+- `market: US` (optional) for a US listing: `symbol: META` then means Yahoo `META`, priced in USD and
+  converted to INR at the fixed `USD_INR` in config.
+- `type: second_order`: an event with a winner held long and losers held as PAPER shorts. It has no
+  `symbol`; it has a `legs:` block instead. Start from `theses/_EXAMPLE_second_order.md`, not this file,
+  and answer the second-order checklist in THESIS_REVIEW.md first.
 
 To buy, add an order to `decisions/thesis_orders.json`:
 

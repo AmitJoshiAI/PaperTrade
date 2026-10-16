@@ -17,9 +17,12 @@ What the daily run already does by itself:
   override, and say why in the review);
 - sets `status: open` and `entry_date` on the first fill, `status: closed` and `exit_date` on a full exit.
 
-- for `type: catalyst` theses, counts days to `event_date` and, from the first trading day after it,
-  writes "CATALYST RULE DUE" in the journal until `post_event_applied` is filled in, a SELL for that
-  thesis is queued, or the thesis is closed. It does not interpret `post_event_rule` (free text).
+- for `type: catalyst` and `type: second_order` theses, counts days to `event_date` and, from the first
+  trading day after it (or after `rule_due_date` if set), writes "CATALYST RULE DUE" in the journal
+  until `post_event_applied` is filled in, an exit (SELL / COVER) is queued for every held leg, or the
+  thesis is closed. It does not interpret `post_event_rule` (free text).
+- for second-order theses, shows each leg with its own P&L and the combined P&L of the thesis, and
+  labels every short "PAPER SHORT: needs F&O to execute".
 
 What it cannot do is judge whether the macro reason is still true. That is this review.
 
@@ -32,6 +35,37 @@ What it cannot do is judge whether the macro reason is still true. That is this 
   `event_date`; the horizon is days to a few weeks. The exit is decided in advance in
   `post_event_rule`. Catalysts are reviewed on the first trading day after the event (next section),
   not only on Fridays.
+- **second_order**: an event, the obvious winner and the non-obvious losers, with positions on both
+  sides (`legs:`, each LONG or SHORT with a weight and a rationale). Example: on 1 July 2026 Bloomberg
+  reported Meta would rent out spare GPUs; Meta rose, the GPU-cloud sellers CoreWeave and Nebius fell
+  (`theses/_EXAMPLE_second_order.md`). It has the catalyst fields, and its post-event rule must say when
+  to close BOTH sides. Every SHORT is a PAPER short ("PAPER SHORT: needs F&O to execute").
+
+## Second-order checklist (before proposing one, and again at each review)
+
+Write the answers in the thesis file. If any answer is vague, it is not a thesis yet.
+
+1. **What is the event?** One line, with the date and the source (report, filing, policy decision).
+2. **Who gains, and why?** The obvious winner and the mechanism (more revenue, lower cost, a rival
+   weakened). Not "it went up".
+3. **Who loses, and why?** The non-obvious losers and the mechanism: new supply, lost customers,
+   pricing pressure, a substitute. Each SHORT leg needs its own rationale.
+4. **What breaks the link?** The fact that would show the loss does not follow from the event (a
+   denial, a scaled-back plan, a loser announcing strong demand), and the price sign that the market
+   disagrees (the losers win back half their fall while the winner holds).
+5. **When do both legs close?** A date (`rule_due_date`) or a condition, written in `post_event_rule`
+   before the first order. Close the legs together: one side alone is a plain directional bet.
+6. **Can it actually be traded?** An Indian short needs the stock on the NSE F&O list (a future); a US
+   leg needs an overseas account and cannot be shorted from India. Paper trading it is still useful,
+   but say so in the file.
+7. **Is the entry late?** Orders fill at the next open after the decision. If the event moved prices
+   on the day, the trade is a bet that the move continues. Say why it should.
+
+Mechanics the engine enforces: each leg's order names it (`"leg": "CRWV"`); BUY / SELL on LONG legs,
+SHORT / COVER on SHORT legs; the size cap applies to the gross value of all legs together; total short
+notional across the sleeve stays under 50% of its capital; short proceeds cannot fund buys. US legs are
+converted at the fixed `USD_INR` in config. A second-order thesis has no engine stop
+(`invalidation_price` is ignored): the post-event rule and this review close it.
 
 ## Catalyst check (any weekday: the first trading day after event_date)
 
@@ -50,8 +84,10 @@ The daily journal flags it as "CATALYST RULE DUE". On that day, for that thesis 
    then fills one session later than "next open" suggests (event Friday, flagged Monday evening, sold
    Tuesday open). For a rule that sells regardless of the outcome, the SELL may be queued ahead, with
    `decision_date` = `event_date`, so it fills at the first open after the event.
-4. Nothing else. The reviewer may queue only the SELL the rule specifies: no other sells, no buys,
-   no changes to the rule after the event.
+   For a second-order thesis apply the rule to every leg: a SELL for each LONG leg and a COVER for each
+   SHORT leg it calls for, each with `"leg"` set. The flag stays up until every held leg has its exit.
+4. Nothing else. The reviewer may queue only the SELL / COVER the rule specifies: no other exits, no
+   buys or new shorts, no changes to the rule after the event.
 
 ## Every Friday (after the 17:30 IST run): theme theses and anything open
 

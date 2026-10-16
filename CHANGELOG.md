@@ -40,3 +40,41 @@
   holding before a known date; the theme type had no notion of a date.
 - **Evidence the momentum sleeve did not change**: same old-vs-new comparison as the entry above
   (committed 2026-10-15 state, and the 8-day replay with a catalyst thesis added): byte-identical.
+
+## 2026-10-17 - Thesis sleeve: second-order theses and paper shorts (momentum sleeve unchanged)
+
+- **What**: thesis files gain `type: second_order`: an event, the obvious winner held LONG and the
+  non-obvious losers held SHORT, as a `legs:` block of `{symbol, side, weight, rationale}` (plus optional
+  `market` / `currency`). It needs the catalyst fields; optional `rule_due_date` moves the post-event rule's
+  due date (a reaction trade is often opened after the event, so the rule cannot fall due the day after
+  the event). Single-symbol theses are unchanged: they are treated as one LONG leg.
+- **Paper shorts**: `decisions/thesis_orders.json` accepts `side: SHORT | COVER` and a `leg`. A short is
+  negative qty, proceeds credited at entry, charged as a Zerodha futures trade (new `FUT` product in
+  `costs.py`: brokerage min(0.03%, Rs 20), STT 0.02% sell, NSE 0.00173%, SEBI 0.0001%, stamp 0.002% buy,
+  GST 18%; marked VERIFY against zerodha.com). Total short notional <= 50% of the lower of sleeve capital
+  and equity (`THESIS_MAX_SHORT_PCT`); a SHORT is clipped to it. Short proceeds cannot fund a BUY (buys
+  are limited to cash minus open short value). Every short is labelled "PAPER SHORT: needs F&O to execute"
+  in the ledger (`label` column and reason), journal, dashboard and CLI.
+- **US tickers**: `market: US` (or an explicit Yahoo ticker containing a '.', with `currency`). Prices
+  stay in USD; cash, P&L and equity are in INR at the fixed `USD_INR = 84.0` (placeholder) in config.
+  `data.download_symbols` maps such symbols to the right Yahoo ticker; the Nifty 50 download is unchanged.
+- **Fills**: each leg fills at its own first open after the decision date (a US leg on the US calendar).
+  Previously the fill day was the first date in the combined price index; for symbols trading on the
+  same calendar this is the same day.
+- **Ledger**: `state/thesis_trades.csv` gains columns `thesis, leg_side, currency, fx, label` (the file
+  did not exist yet; an older file keeps its header). `price` is in the listing's currency, money columns
+  in INR.
+- **Journal / dashboard**: "### Second-order theses (winner vs losers)" with each leg's unrealised and
+  realised P&L and the thesis' combined P&L; dashboard cards show winner vs losers side by side. The
+  catalyst due-flag covers every leg: it stays up until each held leg has an exit queued.
+- **Evidence**: (1) a scratch test drove a long INR leg and a short USD leg through entry, a mark up, a
+  mark down and exit, plus the 50% short limit and bad orders: every number matched a hand calculation to
+  the paisa. (2) Old and new `thesis.py` on the same single-symbol scenario (cap-sized BUY, BUY by amount,
+  invalidation SELL, catalyst flag): portfolio, equity curve, trades, journal lines and thesis-file edits
+  identical. (3) `run --offline` on the committed state, old vs new code: `state/*` and the journal
+  byte-identical; `pending_orders.json` and the momentum part of `docs/data.json` identical apart from
+  the wall-clock `generated_at` stamps.
+- **Not done**: no per-leg stop (`invalidation_price` is ignored on second-order theses); lot sizes,
+  futures margin blocking, F&O-list membership and FX moves are not modelled.
+- **Revert if**: a short or a US leg ever changes a momentum file, or the FUT rates turn out wrong (fix
+  the rates first).
