@@ -84,13 +84,8 @@ FEEDS = [
      "url": "https://www.business-standard.com/rss/markets-106.rss"},
     {"id": "bl_markets", "name": "BusinessLine", "kind": "rss",
      "url": "https://www.thehindubusinessline.com/markets/feeder/default.rss"},
-    # Optional: used whenever it responds. On 2026-10-17 every moneycontrol.com URL (all /rss/ feeds and the
-    # home page) returned 403 to urllib and curl with full browser headers, and the FeedBurner address
-    # redirected to a consent page: a site-wide bot block, not a wrong URL. Its failure is reported
-    # separately ("optional_unavailable") and does not count as a feed down.
-    {"id": "moneycontrol", "name": "Moneycontrol", "kind": "rss", "optional": True,
-     "url": "https://www.moneycontrol.com/rss/business.xml",
-     "headers": {"Referer": "https://www.moneycontrol.com/", "Cache-Control": "no-cache"}},
+    # Moneycontrol: a fallback chain, see _from_moneycontrol. The path that served it is reported per run.
+    {"id": "moneycontrol", "name": "Moneycontrol", "kind": "moneycontrol"},
     {"id": "cnbc", "name": "CNBC top news", "kind": "rss",
      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"},
 ]
@@ -270,6 +265,92 @@ def _from_rss(feed: dict, raw: bytes) -> list[dict]:
     return items
 
 
+# Moneycontrol blocks plain HTTP clients site-wide (Akamai "Access Denied" 403 on the home page, every
+# /rss/ feed and the listing pages, for urllib, curl and requests with full browser headers, cookies and
+# sec-fetch-* headers; checked 2026-10-17). The block is on the TLS fingerprint: curl_cffi impersonating
+# Chrome gets 200. Its /rss/ feeds then answer but are frozen (newest items April 2024, MCtopnews 2016),
+# so the live source is the HTML listing page. Paths, tried in order until one yields items:
+#   1. curl_cffi RSS (latestnews), used only if its newest item is fresh (in case the feeds come back);
+#   2. curl_cffi + BeautifulSoup on the markets listing page (no timestamps: alerts carry first_seen);
+#   3. Google News RSS restricted to moneycontrol.com (works from datacenter IPs that Akamai may block;
+#      links go through news.google.com).
+MC_RSS = "https://www.moneycontrol.com/rss/latestnews.xml"
+MC_LISTING = "https://www.moneycontrol.com/news/business/markets/"
+MC_GNEWS = ("https://news.google.com/rss/search?q=site:moneycontrol.com+when:1d&hl=en-IN&gl=IN&ceid=IN:en")
+MC_ARTICLE_RE = re.compile(r"-\d{6,}\.html")
+
+
+def _impersonated_get(url: str) -> bytes:
+    from curl_cffi import requests as cffi_requests   # installed with yfinance; pinned in requirements.txt
+    last = None
+    for attempt in range(2):
+        try:
+            r = cffi_requests.get(url, impersonate="chrome", timeout=FETCH_TIMEOUT)
+            if r.status_code == 200:
+                return r.content
+            last = RuntimeError(f"HTTP {r.status_code}")
+        except Exception as e:
+            last = e
+        if attempt == 0:
+            time.sleep(1.5)
+    raise last
+
+
+def _mc_rss(now: datetime) -> list[dict]:
+    items = _from_rss({}, _impersonated_get(MC_RSS))
+    newest = max((it["published"] for it in items if it["published"]), default=None)
+    if not newest or newest < now - timedelta(hours=MAX_AGE_HOURS):
+        raise ValueError(f"RSS stale (newest item {newest.date() if newest else 'none'})")
+    return items
+
+
+def _mc_listing(now: datetime) -> list[dict]:
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(_impersonated_get(MC_LISTING), "html.parser")
+    items, seen = [], set()
+    for li in soup.select("li.clearfix"):
+        a = li.find("a", href=MC_ARTICLE_RE)
+        if not a or a["href"] in seen:
+            continue
+        h2 = li.find("h2")
+        title = _clean(a.get("title") or (h2.get_text(" ") if h2 else a.get_text(" ")))
+        if not title:
+            continue
+        seen.add(a["href"])
+        p = li.find("p")
+        items.append({"title": title, "summary": _clean(p.get_text(" ") if p else "")[:300], "link": a["href"],
+                      "published": None, "symbol_text": title})
+    if not items:
+        raise ValueError("listing page parsed to 0 articles (layout changed?)")
+    return items
+
+
+def _mc_gnews(now: datetime) -> list[dict]:
+    items = _from_rss({}, _fetch(MC_GNEWS))
+    for it in items:
+        it["title"] = re.sub(r"\s+-\s+moneycontrol(\.com)?$", "", it["title"], flags=re.I)
+        it["symbol_text"] = it["title"]
+        it["summary"] = ""   # Google's description is the title again plus HTML
+    if not items:
+        raise ValueError("Google News returned 0 items")
+    return items
+
+
+MC_PATHS = [("curl_cffi RSS", _mc_rss), ("curl_cffi HTML listing", _mc_listing), ("Google News RSS", _mc_gnews)]
+
+
+def _from_moneycontrol(now: datetime) -> tuple[list[dict], str, list[str]]:
+    """Returns (items, path that served them, failures of the earlier paths). Raises if all fail."""
+    tried = []
+    for name, fn in MC_PATHS:
+        try:
+            return fn(now), name, tried
+        except Exception as e:
+            tried.append(f"{name}: {type(e).__name__}: {str(e)[:100]}")
+            log.info("moneycontrol path %s failed: %s", name, tried[-1])
+    raise RuntimeError("all Moneycontrol paths failed; " + " | ".join(tried))
+
+
 def fetch_feed(feed: dict, now: datetime) -> tuple[dict, list[dict]]:
     """Returns (status, items). Never raises."""
     t0 = time.monotonic()
@@ -278,6 +359,8 @@ def fetch_feed(feed: dict, now: datetime) -> tuple[dict, list[dict]]:
     try:
         if feed["kind"] == "bse_json":
             items = _from_bse(feed, now)
+        elif feed["kind"] == "moneycontrol":
+            items, status["path"], status["skipped"] = _from_moneycontrol(now)
         else:
             raw = _fetch(feed["url"], feed.get("headers"))
             items = _from_nse(feed, raw) if feed["kind"] == "nse_rss" else _from_rss(feed, raw)
@@ -621,7 +704,7 @@ def write_latest_md(alerts: list[dict], status: dict, now: datetime) -> None:
     cutoff = (now - timedelta(hours=24)).isoformat(timespec="minutes")
     recent = [a for a in alerts if (_sort_key(a) >= cutoff)]
     top = sorted(recent, key=lambda a: (a["score"], _sort_key(a)), reverse=True)[:LATEST_TOP_N]
-    ok = [f["name"] for f in status["feeds"] if f["ok"]]
+    ok = [f["name"] + (f" (via {f['path']})" if f.get("path") else "") for f in status["feeds"] if f["ok"]]
     bad = [f"{f['name']} ({f['error']})" for f in status["feeds"] if not f["ok"]]
     lines = [
         f"# Catalyst scanner: top alerts, last 24 hours",
@@ -748,6 +831,7 @@ def main(argv=None) -> int:
     for f in st["feeds"] + st["optional_unavailable"]:
         tag = "OK  " if f["ok"] else ("OPT " if f["optional"] else "FAIL")
         print(f"  {tag} {f['name']:<18} items {f['items']:>3}  {f['seconds']}s"
+              + (f"  via {f['path']}" if f.get("path") else "")
               + (f"  {f['error']}" if f["error"] else ""))
     print(f"Quotes: {st['quotes_checked']} checked, {st['movers']} moving"
           + (f"  ({st['quotes_error']})" if st["quotes_error"] else ""))
