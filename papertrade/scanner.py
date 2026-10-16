@@ -80,9 +80,17 @@ FEEDS = [
      "url": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"},
     {"id": "et_stocks", "name": "ET Stocks", "kind": "rss",
      "url": "https://economictimes.indiatimes.com/markets/stocks/rssfeeds/2146842.cms"},
-    {"id": "moneycontrol", "name": "Moneycontrol", "kind": "rss",
+    {"id": "bs_markets", "name": "Business Standard", "kind": "rss",
+     "url": "https://www.business-standard.com/rss/markets-106.rss"},
+    {"id": "bl_markets", "name": "BusinessLine", "kind": "rss",
+     "url": "https://www.thehindubusinessline.com/markets/feeder/default.rss"},
+    # Optional: used whenever it responds. On 2026-10-17 every moneycontrol.com URL (all /rss/ feeds and the
+    # home page) returned 403 to urllib and curl with full browser headers, and the FeedBurner address
+    # redirected to a consent page: a site-wide bot block, not a wrong URL. Its failure is reported
+    # separately ("optional_unavailable") and does not count as a feed down.
+    {"id": "moneycontrol", "name": "Moneycontrol", "kind": "rss", "optional": True,
      "url": "https://www.moneycontrol.com/rss/business.xml",
-     "headers": {"Referer": "https://www.moneycontrol.com/"}},
+     "headers": {"Referer": "https://www.moneycontrol.com/", "Cache-Control": "no-cache"}},
     {"id": "cnbc", "name": "CNBC top news", "kind": "rss",
      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114"},
 ]
@@ -155,11 +163,19 @@ def _clean(s) -> str:
     return re.sub(r"\s+", " ", html.unescape(str(s or ""))).strip()
 
 
-def _fetch(url: str, extra_headers: dict | None = None) -> bytes:
+def _fetch(url: str, extra_headers: dict | None = None, retries: int = 1) -> bytes:
+    """GET with browser-like headers. One short retry (1.5 s) on any error, 403 included: some sites
+    block the first request from a new IP and let the second through."""
     headers = dict(BROWSER_HEADERS)
     headers.update(extra_headers or {})
-    with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=FETCH_TIMEOUT) as r:
-        return r.read()
+    for attempt in range(retries + 1):
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=FETCH_TIMEOUT) as r:
+                return r.read()
+        except Exception:
+            if attempt == retries:
+                raise
+            time.sleep(1.5)
 
 
 def _parse_time(s: str) -> datetime | None:
@@ -257,7 +273,8 @@ def _from_rss(feed: dict, raw: bytes) -> list[dict]:
 def fetch_feed(feed: dict, now: datetime) -> tuple[dict, list[dict]]:
     """Returns (status, items). Never raises."""
     t0 = time.monotonic()
-    status = {"id": feed["id"], "name": feed["name"], "ok": False, "items": 0, "error": None}
+    status = {"id": feed["id"], "name": feed["name"], "ok": False, "items": 0, "error": None,
+              "optional": bool(feed.get("optional"))}
     try:
         if feed["kind"] == "bse_json":
             items = _from_bse(feed, now)
@@ -610,7 +627,9 @@ def write_latest_md(alerts: list[dict], status: dict, now: datetime) -> None:
         f"# Catalyst scanner: top alerts, last 24 hours",
         "",
         f"Generated {now.strftime('%Y-%m-%d %H:%M')} IST. High score = {HIGH_SCORE}+. "
-        f"Feeds OK: {', '.join(ok) or 'none'}." + (f" Failed: {'; '.join(bad)}." if bad else ""),
+        f"Feeds OK: {', '.join(ok) or 'none'}." + (f" Failed: {'; '.join(bad)}." if bad else "")
+        + (" Optional, unavailable: " + "; ".join(f"{f['name']} ({f['error']})" for f in status["optional_unavailable"])
+           + "." if status.get("optional_unavailable") else ""),
         f"Quotes: {status['quotes_checked']} symbols checked, {status['movers']} moving"
         + (f" (quote error: {status['quotes_error']})" if status.get("quotes_error") else "") + ".",
         "",
@@ -691,7 +710,10 @@ def run(do_quotes: bool = True, now: datetime | None = None) -> dict:
     day["updated_at"] = stamp
 
     status = {
-        "generated_at": stamp, "feeds": [s for s, _ in results], "quotes_checked": len(quotes),
+        # an optional feed that failed is listed apart, so the dashboard does not show it as a feed down
+        "generated_at": stamp, "feeds": [s for s, _ in results if s["ok"] or not s["optional"]],
+        "optional_unavailable": [s for s, _ in results if not s["ok"] and s["optional"]],
+        "quotes_checked": len(quotes),
         "movers": len(movers), "quotes_error": quotes_error, "new_alerts": new,
         "high_score": HIGH_SCORE, "seconds": round(time.monotonic() - t0, 1),
     }
@@ -723,8 +745,9 @@ def main(argv=None) -> int:
     ap.add_argument("--no-quotes", action="store_true", help="skip the Yahoo quote check (feeds only)")
     args = ap.parse_args(argv)
     st = run(do_quotes=not args.no_quotes)
-    for f in st["feeds"]:
-        print(f"  {'OK  ' if f['ok'] else 'FAIL'} {f['name']:<18} items {f['items']:>3}  {f['seconds']}s"
+    for f in st["feeds"] + st["optional_unavailable"]:
+        tag = "OK  " if f["ok"] else ("OPT " if f["optional"] else "FAIL")
+        print(f"  {tag} {f['name']:<18} items {f['items']:>3}  {f['seconds']}s"
               + (f"  {f['error']}" if f["error"] else ""))
     print(f"Quotes: {st['quotes_checked']} checked, {st['movers']} moving"
           + (f"  ({st['quotes_error']})" if st["quotes_error"] else ""))
