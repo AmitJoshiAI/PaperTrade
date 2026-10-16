@@ -5,7 +5,9 @@
   status         print portfolio and last equity row
   pending        print the pending orders file
   thesis         print the thesis sleeve: cash, holdings, theses, queued thesis orders
-  costs QTY PX   show Zerodha charges for a buy+sell of QTY shares at PX (delivery; --product MIS|FUT)
+  fno status     print the India F&O sleeve: equity, margin, positions, circuit breaker, queued orders
+  us status      print the US sleeve (same, in USD with INR at the fixed USD_INR)
+  costs QTY PX   show Zerodha charges for a buy+sell of QTY shares at PX (delivery; --product MIS|FUT|OPT)
   export         write docs/data.json for the dashboard (read-only; no download, no state change)
   reset --yes    wipe state/, decisions/, journal/ and start again (both sleeves; theses/ is kept)
 """
@@ -43,6 +45,20 @@ def cmd_run(args):
         for f in t["fills"]:
             print(f"  {f['side']} {f['qty']} {f['symbol']} @ {f['price']}  charges {f['charges']}  {f['reason']}")
         for m in t["hits"] + t["notes"] + t["warnings"]:
+            print(f"  {m}")
+    for key, name, ccy in (("fno", "India F&O sleeve", "Rs"), ("us", "US sleeve", "$")):
+        s = out.get(key)
+        if s is None:
+            print(f"{name}: STEP FAILED (see error above); the other sleeves are saved.")
+            continue
+        e = s["equity"]
+        inr = f" (Rs {e['equity_inr']:,.0f})" if key == "us" else ""
+        print(f"{name} ({s['date']}): equity {ccy} {e['equity']:,.2f}{inr}  day {ccy} {e['day_pnl']:,.2f}  cash {ccy} {e['cash']:,.2f}  "
+              f"margin {ccy} {e['margin']:,.2f}  positions {e['positions']}  queued orders {len(s['orders'])}  "
+              f"breaker {'ON' if s['book'].breaker else 'off'}")
+        for f in s["fills"]:
+            print(f"  {f['date']} {f['action']} {f['side']} {f['lots']} {f['instrument']} @ {f['price']}  charges {f['charges']}  {f['pricing']}")
+        for m in s["notes"] + s["warnings"]:
             print(f"  {m}")
 
 
@@ -93,6 +109,39 @@ def cmd_thesis(args):
     print(json.dumps(load_orders(), indent=2))
 
 
+def cmd_deriv(args):
+    if args.what != "status":
+        print("usage: python -m papertrade fno status | us status")
+        sys.exit(1)
+    from .derivbook import load_queue
+    from .fno import position_rows
+    if args.cmd == "fno":
+        from .fno import FnoBook as Book
+        qf, ccy, name = config.FNO_ORDERS_FILE, "Rs", "India F&O"
+    else:
+        from .us import UsBook as Book
+        qf, ccy, name = config.US_ORDERS_FILE, "$", "US"
+    b = Book.load()
+    curve = b.equity_curve()
+    day = str(curve["date"].iloc[-1]) if len(curve) else (b.start_date or "")
+    eq = b.equity()
+    inr = f" (Rs {eq * b.fx():,.0f} at USD_INR {b.fx():g})" if b.CURRENCY != "INR" else ""
+    print(f"{name} sleeve as of {day or 'no run yet'}: equity {ccy} {eq:,.2f}{inr} of {ccy} {b.starting_capital:,.2f}  "
+          f"cash {ccy} {b.cash:,.2f}  margin used {ccy} {b.margin_used():,.2f}")
+    print(f"  charges {ccy} {b.costs_paid:,.2f}  realised {ccy} {b.realised_pnl:,.2f}  "
+          f"open positions {len(b.positions)} of {config.DERIV_MAX_POSITIONS}  circuit breaker: {b.breaker_text()}")
+    for r in position_rows(b, day or "2000-01-01"):
+        dte = f"  {r['days_to_expiry']}d to expiry" if r["days_to_expiry"] is not None else ""
+        print(f"  {r['id']}: {r['side']} {r['lots']} lot(s) ({r['units']} units)  entry {r['entry']:,.2f}  mark "
+              f"{(r['mark'] or 0):,.2f}  P&L {ccy} {r['pnl']:,.2f}  margin {ccy} {r['margin']:,.2f}{dte}")
+        print(f"      priced by: {r['pricing']}")
+    if len(curve):
+        print("\nLast equity rows:")
+        print(curve.tail(5).to_string(index=False))
+    print("\nQueued orders:")
+    print(json.dumps(load_queue(qf), indent=2))
+
+
 def cmd_pending(args):
     if config.PENDING_ORDERS_FILE.exists():
         print(config.PENDING_ORDERS_FILE.read_text())
@@ -132,8 +181,10 @@ def main(argv=None):
     sub.add_parser("status").set_defaults(fn=cmd_status)
     sub.add_parser("pending").set_defaults(fn=cmd_pending)
     sub.add_parser("thesis").set_defaults(fn=cmd_thesis)
+    for name in ("fno", "us"):
+        d = sub.add_parser(name); d.add_argument("what", nargs="?", default="status"); d.set_defaults(fn=cmd_deriv)
     c = sub.add_parser("costs"); c.add_argument("qty", type=int); c.add_argument("price", type=float)
-    c.add_argument("--product", default="CNC", choices=["CNC", "MIS", "FUT"]); c.set_defaults(fn=cmd_costs)
+    c.add_argument("--product", default="CNC", choices=["CNC", "MIS", "FUT", "OPT"]); c.set_defaults(fn=cmd_costs)
     sub.add_parser("export").set_defaults(fn=cmd_export)
     rs = sub.add_parser("reset"); rs.add_argument("--yes", action="store_true"); rs.set_defaults(fn=cmd_reset)
 

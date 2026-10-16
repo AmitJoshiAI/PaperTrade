@@ -4,6 +4,13 @@ The mechanical part runs in the cloud: GitHub Actions runs `python -m papertrade
 Monday to Friday**, and commits state, decisions, journal and dashboard data to the repo (README,
 "Running in the cloud"). The human/Claude part is the review below, done any time after that run.
 
+Four sleeves of Rs 5,00,000 each: momentum (rules decide), thesis, India F&O and US. Since 2026-10-17
+the cloud reviewer (ROUTINE_PROMPT.md, 18:30 IST) is the decision-maker for the thesis, F&O and US
+sleeves: it activates or opens theses and queues and closes positions itself, within RISK_LIMITS.md,
+and writes every decision with its reasoning under "Decisions" in the journal's "Claude's review". The
+hourly catalyst reviewer may activate one drafted second_order or catalyst thesis per run
+(SCANNER_PROMPT.md). Your part is to read the decisions and push back where the reasoning is weak.
+
 1. **Check that today's run happened.** Open the dashboard (the GitHub Pages URL) and check the
    "As of" date, or run `git pull` in the project and look at the newest `journal/<date>.md`.
 
@@ -53,11 +60,16 @@ Monday to Friday**, and commits state, decisions, journal and dashboard data to 
    again later). Then commit and push everything under `state/`, `decisions/`, `journal/` and `docs/`
    straight away so the next cloud run starts from it.
 
-7. **Fridays: weekly thesis-sleeve review.** The separate Rs 5,00,000 thesis sleeve is reviewed once
-   a week, not daily. Follow THESIS_REVIEW.md. On other days just read the "## Thesis sleeve" section
-   of the journal; it flags invalidation hits, which the engine has already turned into a queued SELL.
-   Exception, any weekday: a catalyst thesis flagged "CATALYST RULE DUE" gets its post-event rule
-   applied that day (THESIS_REVIEW.md, "Catalyst check").
+7. **Fridays: weekly thesis-sleeve review.** Each thesis's macro reason is re-checked once a week
+   (THESIS_REVIEW.md). On other days the "## Thesis sleeve" section of the journal flags invalidation
+   hits, which the engine has already turned into a queued SELL. Exception, any weekday: a catalyst
+   thesis flagged "CATALYST RULE DUE" gets its post-event rule applied that day.
+
+8. **F&O and US sleeves.** Read "## India F&O sleeve" and "## US sleeve" in the journal (or
+   `python -m papertrade fno status` / `us status`): positions with the pricing method used, margin,
+   days to expiry, the circuit-breaker state, rejected orders and why. India option prices are a model
+   (Black-Scholes), not quotes. Orders go in `decisions/fno_orders.json` / `decisions/us_orders.json`,
+   each with a `reason` and a `risk_check`; formats in `papertrade/fno.py` and `papertrade/us.py`.
 
 Weekends and NSE holidays: nothing to review. If a day is missed, the next run catches up; pending
 orders fill at the first open after their decision date (stops are not re-checked for skipped days).

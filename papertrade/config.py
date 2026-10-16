@@ -56,3 +56,68 @@ USD_INR = 84.0
 FX_TO_INR = {"INR": 1.0, "USD": USD_INR}
 
 PRODUCT = "CNC"             # CNC = delivery. "MIS" = intraday (not used by baseline strategy)
+
+# ---------------------------------------------------------------------------------------------------
+# India F&O sleeve (papertrade/fno.py) and US sleeve (papertrade/us.py). Two more separate books, each
+# ADDED on top of the existing capital (total paper capital Rs 20,00,000). Every limit below is listed
+# again, with its reason, in RISK_LIMITS.md. The reviewer routines may NOT change them.
+FNO_CAPITAL = 500_000.0
+FNO_PORTFOLIO_FILE = STATE_DIR / "fno_portfolio.json"
+FNO_TRADES_FILE = STATE_DIR / "fno_trades.csv"
+FNO_EQUITY_FILE = STATE_DIR / "fno_equity_curve.csv"
+FNO_ORDERS_FILE = DECISIONS_DIR / "fno_orders.json"
+FNO_PRICES_FILE = CACHE_DIR / "fno_prices.parquet"
+
+US_CAPITAL = 500_000.0                # INR; held in USD at USD_INR (fixed, see above): Rs 5,00,000 / 84 = $5,952.38
+US_PORTFOLIO_FILE = STATE_DIR / "us_portfolio.json"
+US_TRADES_FILE = STATE_DIR / "us_trades.csv"
+US_EQUITY_FILE = STATE_DIR / "us_equity_curve.csv"
+US_ORDERS_FILE = DECISIONS_DIR / "us_orders.json"
+US_PRICES_FILE = CACHE_DIR / "us_prices.parquet"
+
+# Risk rules shared by both sleeves (enforced in code: papertrade/derivbook.py)
+DERIV_MAX_POSITIONS = 5               # open positions (every future / option / stock line counts as one)
+DERIV_MAX_ORDER_RISK_PCT = 0.10       # per order: premium (long option), margin (future, short option,
+                                      # short stock) or notional (long stock) <= 10% of sleeve equity
+DERIV_DAILY_LOSS_PCT = 0.03           # circuit breaker: a day's loss > 3% of starting capital blocks new
+                                      # positions until the next Monday (exits are always allowed)
+
+# India F&O pricing. Futures: spot x (1 + CARRY_RATE x days_to_expiry / 365). Options: Black-Scholes on the
+# spot (European), r = CARRY_RATE, vol = India VIX / 100 for index options and 1.5 x the stock's 30-day
+# realised vol for stock options. MARK-TO-MODEL, NOT MARKET QUOTES: Yahoo has no NSE option chains.
+CARRY_RATE = 0.065
+STOCK_OPT_VOL_MULT = 1.5
+REALISED_VOL_DAYS = 30
+FNO_VIX_SYMBOL = "^INDIAVIX"
+FUT_MARGIN_PCT = {"index": 0.12, "stock": 0.20}    # of notional at entry, blocked from cash until exit
+FNO_OPT_SLIPPAGE_PCT = 0.01           # 1% adverse on model option premiums (stands in for the bid/ask spread
+                                      # a model price does not have); futures use SLIPPAGE_PCT like the other sleeves
+# Monthly expiry = the last <weekday> of the month (0 = Monday ... 3 = Thursday). NSE moved ALL its equity
+# derivatives (index AND stock) from Thursday to Tuesday in September 2025, so both are Tuesday here. The
+# brief that commissioned this sleeve said Thursday for stock futures; Tuesday follows the 2026 sources.
+# VERIFY on nseindia.com. A holiday expiry is handled by settling on the last trading day on or before it.
+INDEX_EXPIRY_WEEKDAY = 1
+STOCK_EXPIRY_WEEKDAY = 1
+# Underlyings. lot = contract lot size, step = option strike interval. VERIFY ON nseindia.com: NSE revises
+# lot sizes (NIFTY 75 -> 65 and BANKNIFTY 35 -> 30 from the January 2026 series, per 2026 broker notes) and
+# the F&O list itself. Only the symbols listed here can be traded in the sleeve; add a line to add one.
+FNO_INDEX = {
+    "NIFTY": {"yahoo": "^NSEI", "lot": 65, "step": 50},
+    "BANKNIFTY": {"yahoo": "^NSEBANK", "lot": 30, "step": 100},
+}
+FNO_STOCKS = {                         # NSE symbol -> lot size and strike step. Examples only: VERIFY each.
+    "RELIANCE": {"lot": 500, "step": 10},
+    "HDFCBANK": {"lot": 550, "step": 10},
+    "ICICIBANK": {"lot": 700, "step": 10},
+    "INFY": {"lot": 400, "step": 20},
+    "SBIN": {"lot": 750, "step": 10},
+    "TCS": {"lot": 175, "step": 20},
+    "ONGC": {"lot": 2250, "step": 2.5},
+    "HINDPETRO": {"lot": 2025, "step": 5},
+}
+
+# US sleeve. Options use REAL Yahoo option chains (mid of bid/ask); 100 shares per contract.
+US_CONTRACT_SIZE = 100
+US_SHORT_STOCK_MARGIN_PCT = 0.50      # paper short stock: 50% of notional blocked (Reg T initial margin)
+US_RISK_FREE_RATE = 0.04              # approximate US T-bill yield; used ONLY by the labelled Black-Scholes fallback
+                                      # when a chain has no two-sided quote. VERIFY / update by hand.

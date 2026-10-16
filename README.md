@@ -4,15 +4,22 @@ A paper-trading engine for Nifty 50 cash stocks. It downloads daily prices from 
 simple momentum-rotation strategy, simulates fills at the next day's open with Zerodha's real charges,
 and writes a daily journal for review. No real orders are ever placed.
 
-**Total paper capital is Rs 10,00,000, in two separate sleeves:**
+**Total paper capital is Rs 20,00,000, in four separate sleeves:**
 
 | Sleeve | Capital | What | Files | Review |
 |---|---|---|---|---|
 | Momentum | Rs 5,00,000 | the daily rotation rules below; the Rs 1,000/day target applies here | `state/portfolio.json`, `trades.csv`, `equity_curve.csv`, `decisions/pending_orders.json` | daily (DAILY.md) |
-| Thesis | Rs 5,00,000 | one written thesis per position: `theme` (macro reason, weeks to years) or `catalyst` (positioned before a scheduled event such as results, Budget, IPO listing or RBI policy, days to weeks, with a pre-set post-event rule) or `second_order` (an event with the obvious winner held long and the non-obvious losers held as PAPER shorts, see `theses/_EXAMPLE_second_order.md`) | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly on Fridays; catalysts on the first trading day after the event (THESIS_REVIEW.md) |
+| Thesis | Rs 5,00,000 | (decided by Claude) one written thesis per position: `theme` (macro reason, weeks to years) or `catalyst` (positioned before a scheduled event such as results, Budget, IPO listing or RBI policy, days to weeks, with a pre-set post-event rule) or `second_order` (an event with the obvious winner held long and the non-obvious losers held as PAPER shorts, see `theses/_EXAMPLE_second_order.md`) | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly on Fridays; catalysts on the first trading day after the event (THESIS_REVIEW.md) |
+| India F&O | Rs 5,00,000 | (decided by Claude) NIFTY / BANKNIFTY and listed stock futures and options, in lots; futures priced spot x carry, options by Black-Scholes on India VIX (mark-to-model, not market quotes) | `papertrade/fno.py`, `state/fno_*`, `decisions/fno_orders.json` | daily |
+| US | Rs 5,00,000 (= $5,952 at a fixed Rs 84/$) | (decided by Claude) US stocks/ETFs long and paper-short, US options at the mid of REAL Yahoo option chains | `papertrade/us.py`, `state/us_*`, `decisions/us_orders.json` | daily |
 
-The thesis sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
-sleeve's capital, rules and history are unchanged. Both share the cost model, slippage, daily run and
+Each sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
+sleeve's capital, rules and history are unchanged. **The user has made Claude the decision-maker for the
+thesis, F&O and US sleeves**: the daily cloud reviewer (ROUTINE_PROMPT.md) activates drafted theses,
+opens new ones, queues and closes F&O and US positions itself, and writes every decision with its
+reasoning in the journal; the hourly catalyst reviewer may activate one drafted second_order or catalyst
+thesis per run (SCANNER_PROMPT.md). Neither may change code, config or a limit. **Every limit is listed
+in RISK_LIMITS.md.** All sleeves share the slippage assumption, daily run and
 dashboard. How to open a thesis: copy `theses/_TEMPLATE.md`.
 
 Two things in the thesis sleeve cannot be done as written in a real Zerodha cash account, and are
@@ -57,7 +64,9 @@ Run from the project root:
 | `... status` | Print cash, positions, and the last equity rows. |
 | `... pending` | Print `decisions/pending_orders.json`. |
 | `... thesis` | Print the thesis sleeve: cash, holdings, theses and queued thesis orders. |
-| `... costs QTY PRICE [--product MIS]` | Show Zerodha charges for a buy and a sell of QTY shares at PRICE. |
+| `... fno status` | Print the India F&O sleeve: equity, cash, margin, positions (with how each is priced), circuit breaker, queued orders. |
+| `... us status` | The same for the US sleeve, in USD with the INR value at the fixed rate. |
+| `... costs QTY PRICE [--product MIS, FUT or OPT]` | Show Zerodha charges for a buy and a sell of QTY shares (or option units at a premium) at PRICE. |
 | `... export` | Rewrite `docs/data.json` for the dashboard from the current state. Read-only: no download, no state change. `run` already does this at the end. |
 | `.venv/Scripts/python -m papertrade.scanner` | Catalyst scanner: pull the news feeds and watchlist quotes once, write `alerts/<date>.json`, `alerts/latest.md` and `docs/alerts.json`. `--no-quotes` skips Yahoo. Touches no trading state. |
 | `... reset --yes` | Wipe `state/`, `decisions/`, `journal/` and start both sleeves again (Rs 5,00,000 each). `theses/` is kept. |
@@ -77,15 +86,21 @@ papertrade/        the package
   strategy.py      momentum rotation rules
   thesis.py        thesis sleeve: ledger parsing (incl. second-order legs), thesis orders (BUY/SELL/SHORT/COVER),
                    paper shorts, invalidation and catalyst checks, journal section
+  derivbook.py     shared by the F&O and US sleeves: Black-Scholes, expiries, margin/cash accounting,
+                   the risk rules and the daily-loss circuit breaker, the order loop, ledgers
+  fno.py           India F&O sleeve: futures (carry model) and options (Black-Scholes), expiry and roll
+  us.py            US sleeve: stocks/ETFs and options from real Yahoo chains
   engine.py        the daily cycle
   review.py        journal writer
   export.py        dashboard data -> docs/data.json
   scanner.py       catalyst scanner: news feeds + watchlist quotes -> alerts/, docs/alerts.json
   cli.py           command line
 state/             portfolio.json, trades.csv, equity_curve.csv; thesis_portfolio.json, thesis_trades.csv,
-                   thesis_equity_curve.csv (thesis sleeve)
+                   thesis_equity_curve.csv (thesis sleeve); fno_portfolio.json, fno_trades.csv, fno_equity_curve.csv;
+                   us_portfolio.json, us_trades.csv, us_equity_curve.csv
 decisions/         pending_orders.json (next session's orders), executed_YYYY-MM-DD.json (what filled);
-                   thesis_orders.json, thesis_executed_YYYY-MM-DD.json (thesis sleeve)
+                   thesis_orders.json, thesis_executed_YYYY-MM-DD.json (thesis sleeve); fno_orders.json,
+                   us_orders.json and their fno_ / us_executed_YYYY-MM-DD.json
 theses/            <slug>.md, one per thesis (copy _TEMPLATE.md); reviews/ for the Friday write-ups;
                    _EXAMPLE_second_order.md (Meta / CoreWeave / Nebius, a worked example, never executed)
                    proposed/ for draft theses written by the scanner routine (never read by the engine)
@@ -100,6 +115,7 @@ docs/              index.html (mobile dashboard), data.json (written by run/expo
 requirements.txt   pinned dependencies
 DAILY.md           the daily routine
 THESIS_REVIEW.md   the weekly thesis-sleeve review
+RISK_LIMITS.md     every limit of every sleeve in one place, and what is not modelled
 SCANNER_PROMPT.md  the hourly cloud routine that writes second-order notes on high-score alerts
 CHANGELOG.md       every rule change, with reasoning
 ```
@@ -143,14 +159,37 @@ Every run (about 10 seconds):
 
 The hourly cloud routine in `SCANNER_PROMPT.md` reads `alerts/latest.md`, writes a short second-order
 note (winner, losers and why, scheduled or surprise) for each HIGH alert into `alerts/notes/<date>.md`,
-and may draft (never activate) a thesis under `theses/proposed/`. The scanner reads those notes back
-into the "Second-order candidates" field and the dashboard shows them under the alert. Neither ever
-places or queues an order: to act on a draft, move it to `theses/` and queue the order yourself.
+and may draft a thesis under `theses/proposed/`; it may also activate at most one drafted second_order or
+catalyst thesis per run (move it to `theses/` and queue its legs) when every checklist answer is
+concrete. The scanner reads those notes back into the "Second-order candidates" field and the dashboard
+shows them under the alert. The scanner itself never queues an order.
 
 Limits: free feeds only, so this is minutes-late, not real-time (best case: the event is published, the
 next :00 or :30 run starts up to 20 minutes late on GitHub, Yahoo is 15 minutes delayed); headline
 matching is by name, so a story about an unlisted company or a non-watchlist supplier only scores on
 keywords; Moneycontrol is blocked; NSE's RSS is a short rolling window.
+
+## India F&O and US sleeves
+
+Both are run by `engine.run_day` after the thesis sleeve, each wrapped so a failure cannot lose the other
+sleeves' run. Orders are queued by the reviewer in `decisions/fno_orders.json` and `decisions/us_orders.json`
+(formats in the module docstrings); each OPEN needs a `reason` and a `risk_check`.
+
+| | India F&O | US |
+|---|---|---|
+| Instruments | NIFTY (^NSEI), BANKNIFTY (^NSEBANK), stocks in `config.FNO_STOCKS`; futures, CE, PE, in lots (NIFTY 65, BANKNIFTY 30: VERIFY) | any US ticker: stock/ETF (shares), CALL, PUT (100 shares per contract) |
+| Fill | first NSE open after decision_date | stock: first US open after decision_date; option: chain mid as of the latest US session, at the next daily run |
+| Price | future = spot x (1 + 6.5% x days/365); option = Black-Scholes on the spot, IV = India VIX (index) or 1.5x 30-day realised vol (stock). **Mark-to-model, not market quotes** | stock: Yahoo bars; option: mid of bid/ask of the real chain; with no two-sided quote, Black-Scholes on the chain's implied vol, labelled FALLBACK |
+| Expiry | last Tuesday of the month (NSE moved all equity derivatives to Tuesday in Sept 2025: VERIFY); futures settle at the spot close and roll to next month at the next open unless `"roll": false`; options settle at intrinsic | as listed in the chain; cash-settled at intrinsic |
+| Costs | Zerodha FUT and OPT (OPT: Rs 20/order, STT 0.15% on sell premium and on exercised intrinsic, NSE 0.03503%: VERIFY) | zero commission; SEC fee and FINRA TAF on sells |
+| Shorts | futures and covered options only (no naked short options) | paper-short stock ("PAPER SHORT: not possible from India (LRS)"), covered options |
+
+Limits (code): 5 positions per sleeve, risk per order at most 10% of sleeve equity, no naked short
+options, free cash must cover margin, and a daily-loss circuit breaker (a day worse than -3% of capital
+stops new positions until the next Monday). **At Rs 5 lakh the 10% rule rejects every future in the
+list** (one NIFTY lot needs about Rs 1.8 lakh margin); the F&O sleeve in practice holds long options and
+covered spreads. See RISK_LIMITS.md for all of it and for what is not modelled. Tax is not modelled: the
+user is in the 30% slab, which applies to F&O profits and US short-term gains.
 
 ## Cost model (Zerodha, NSE equity)
 

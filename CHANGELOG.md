@@ -105,3 +105,52 @@
   whether its 17:30 run ever sees the same gap.
 - **Revert if**: the scanner commits ever conflict with the daily run, or the alerts are judged noise
   after two weeks of use (then tune `HIGH_SCORE`, the keyword weights or `watchlist.yaml` first).
+
+## 2026-10-17 - India F&O and US sleeves added; Claude made the decision-maker (momentum and thesis sleeves unchanged)
+
+- **What**: two more separate paper books, Rs 5,00,000 each, ADDED on top (total paper capital Rs 20,00,000):
+  - **India F&O** (`papertrade/fno.py`): NIFTY, BANKNIFTY and the stocks in `config.FNO_STOCKS`; futures priced
+    spot x (1 + 6.5% x days/365); options by Black-Scholes on the spot with India VIX (index) or 1.5x 30-day
+    realised vol (stock): mark-to-model, not market quotes. Monthly expiry, auto-roll of futures, options settle
+    at intrinsic. Margin 12% (index) / 20% (stock) of notional, blocked from cash.
+  - **US** (`papertrade/us.py`): Rs 5,00,000 at the fixed USD_INR 84 ($5,952.38); stocks/ETFs long and paper
+    short; options at the mid of real Yahoo option chains, with a labelled Black-Scholes fallback on the chain's
+    implied vol. Zero commission, SEC fee and FINRA TAF.
+  - Shared accounting and risk rules in `papertrade/derivbook.py`, enforced in code: max 5 positions, risk per
+    order at most 10% of sleeve equity, no naked short options, free cash must cover margin, daily-loss circuit
+    breaker at 3% of capital (no new positions until the next Monday). All limits listed in the new
+    `RISK_LIMITS.md`.
+  - Costs: new `OPT` product and `us_charges()` in `costs.py`; `data.download_tickers()` for raw Yahoo tickers
+    (`download_symbols` behaves exactly as before). Journal gains "## India F&O sleeve", "## US sleeve" and
+    "## All sleeves"; dashboard gains a four-sleeve strip in the header, two new sections and a combined chart;
+    CLI gains `fno status` and `us status`.
+- **Values that differ from the brief that commissioned this** (the brief said to verify them; 2026 sources
+  say otherwise, so the newer values are used; all marked VERIFY in config/costs):
+  NIFTY lot 65 and BANKNIFTY 30 (not 75 / 35: revised from the January 2026 series); stock futures expire on
+  the last Tuesday (not Thursday: NSE moved all equity derivatives to Tuesday in September 2025); options STT
+  0.15% of sell premium and of exercised intrinsic (not 0.1%: raised from 1 April 2026 by Budget 2026-27).
+  **Not changed, flagged**: futures STT in `costs.py` is still 0.02%; the same sources say 0.05% since
+  1 April 2026. Changing it would change the thesis sleeve's paper-short costs, so it is left for the user.
+- **Autonomy (the user's decision)**: the daily reviewer (ROUTINE_PROMPT.md) now takes all paper decisions for
+  the thesis, F&O and US sleeves without waiting for approval: it may activate drafted theses from
+  `theses/proposed/`, open new theses of any type it can justify with the checklist, queue F&O and US orders
+  (each with a written `reason` and `risk_check`; the engine rejects an OPEN without them) and close positions.
+  Every decision gets a dated entry in the journal's "Claude's review"; rule-level changes go here. The hourly
+  catalyst reviewer (SCANNER_PROMPT.md) may activate at most one drafted second_order or catalyst thesis per
+  run when every checklist answer is concrete. Neither may edit code, config, limits or the momentum sleeve's
+  orders. THESIS_REVIEW.md and DAILY.md updated to match (the old "a new position needs the user's agreement"
+  rule is gone).
+- **Consequence to know**: at this capital the 10% per-order rule rejects every future in the list (one NIFTY
+  lot needs about Rs 1.8 lakh margin against a Rs 50,000 limit). The F&O sleeve can in practice hold long
+  options and covered spreads only. Left as specified; changing it is the user's call.
+- **Evidence**: hand-checked against raw Yahoo bars (future entry, carry, margin, MTM, roll; long call vs a
+  numerical integration of the lognormal payoff; covered short call; US stock long; US long and short call from
+  the real AAPL chain): every figure matched to the paisa / cent (one 1-paisa rounding difference in futures
+  sell charges). Old (HEAD) and new code on copies of the committed state, `run --offline` and `run`: momentum
+  `state/*`, `decisions/pending_orders.json` (apart from the wall-clock `generated_at`), the momentum and thesis
+  parts of the journal and of `docs/data.json` byte-identical; thesis state and orders identical. That state has
+  no fills (Yahoo's 16 Oct NSE bar has no Close), so a 9-day replay from an empty book (5-15 Oct, 15 momentum
+  fills) was also run old vs new: every momentum and thesis file and journal part identical.
+- **Not modelled**: SPAN margin changes after entry, early exercise, option skew/liquidity, FX moves, tax.
+- **Revert if**: either new sleeve ever changes a momentum or thesis file or fails a daily run (each step is
+  wrapped so a failure is logged and the other sleeves are still saved).

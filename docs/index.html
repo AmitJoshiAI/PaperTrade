@@ -174,6 +174,15 @@ td { font-variant-numeric: tabular-nums; }
 .more { margin-top: 10px; width: 100%; font: inherit; font-size: 14px; padding: 10px; border-radius: 10px; border: 1px solid var(--border);
   background: var(--surface); color: var(--ink-2); cursor: pointer; }
 
+/* four-sleeve strip in the header: each tile jumps to its sleeve */
+.sleeves { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+@media (min-width: 640px) { .sleeves { grid-template-columns: repeat(4, 1fr); } }
+.sleeve { display: flex; flex-direction: column; gap: 1px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px;
+  text-decoration: none; color: var(--ink); background: var(--page); min-width: 0; }
+.sleeve .label { font-size: 12px; color: var(--ink-2); }
+.sleeve .num { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
+.sleeve .num.small { font-size: 12px; font-weight: 500; }
+
 footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--muted); }
 footer p { margin: 4px 0; }
 footer a { color: inherit; }
@@ -551,6 +560,82 @@ footer a { color: inherit; }
     }
   }
 
+  // ---------- derivative sleeves: India F&O (Rs) and US ($, INR at a fixed rate) ----------
+  function cur(v, ccy, dp) {
+    if (ccy !== "USD") return rs(v, dp);
+    if (!isNum(v)) return "n/a";
+    return (v < 0 ? "-$" : "$") + Math.abs(v).toLocaleString("en-US", { minimumFractionDigits: dp == null ? 0 : dp, maximumFractionDigits: dp == null ? 0 : dp });
+  }
+  function curSigned(v, ccy, dp) { return !isNum(v) ? "n/a" : (v > 0 ? "+" : "") + cur(v, ccy, dp); }
+  function renderDeriv(app, id, title, sd, blurb) {
+    var ccy = sd.currency || "INR", usd = ccy === "USD";
+    var kids = [];
+    var inr = function (v) { return usd && isNum(v) ? " (" + rs(v * (sd.fx_to_inr || 0)) + ")" : ""; };
+    kids.push(h("div", { class: "card" }, [
+      h("div", { class: "pair" }, [
+        h("div", { class: "stat" }, [h("div", { class: "label", text: "Sleeve equity" }),
+          h("div", { class: "value", text: cur(sd.equity, ccy, usd ? 2 : 0) }),
+          h("div", { class: "sub", text: (usd ? rs(sd.equity_inr) + " · " : "") + "of " + cur(sd.capital, ccy, usd ? 2 : 0) + (sd.start_date ? " since " + dShort(sd.start_date) : "") })]),
+        h("div", { class: "stat" }, [h("div", { class: "label", text: "Total P&L" }),
+          h("div", { class: "value " + tone(sd.total_pnl), text: curSigned(sd.total_pnl, ccy, usd ? 2 : 0) }),
+          h("div", { class: "sub", text: pct(sd.total_pnl_pct) + " · day " + curSigned(sd.day_pnl, ccy, usd ? 2 : 0) })])
+      ]),
+      h("div", { class: "kv num" }, [
+        h("div", null, [h("span", { text: "Cash" }), cur(sd.cash, ccy, usd ? 2 : 0)]),
+        h("div", null, [h("span", { text: "Margin blocked" }), cur(sd.margin_used, ccy, usd ? 2 : 0)]),
+        h("div", null, [h("span", { text: "Positions" }), (sd.positions || []).length + " of " + sd.max_positions]),
+        h("div", null, [h("span", { text: "Charges paid" }), cur(sd.costs_paid, ccy, 2)])
+      ]),
+      h("p", { class: "muted small", style: "margin:10px 0 0", text: blurb }),
+      h("p", { class: "muted small", style: "margin:6px 0 0", text: "Limits: max " + sd.max_positions + " positions, risk per order ≤ " +
+        (sd.max_order_risk_pct || 0).toFixed(0) + "% of equity, no naked short options, new positions stop for the week after a day loss over " +
+        (sd.daily_loss_pct || 0).toFixed(0) + "% (RISK_LIMITS.md)." })
+    ]));
+    if (sd.breaker) kids.push(h("div", { class: "banner", text: "Circuit breaker " + sd.breaker_text + "." }));
+    var pos = sd.positions || [];
+    if (pos.length) {
+      kids.push(h("div", { class: "cards", style: "margin-top:10px" }, pos.map(function (p) {
+        var short = p.side === "SHORT";
+        var label = p.kind === "STK" && short ? sd.paper_short_label : null;
+        return h("div", { class: "card pos" }, [
+          h("div", { class: "row" }, [
+            h("span", null, [h("span", { class: "badge " + (short ? "sell" : "buy"), text: p.side }), h("span", { class: "sym", style: "margin-left:6px", text: p.instrument })]),
+            h("span", { class: "num " + tone(p.pnl), style: "font-weight:600", text: curSigned(p.pnl, ccy, 2) })]),
+          label ? h("div", { class: "badge short", text: label }) : null,
+          h("div", { class: "kv num" }, [
+            h("div", null, [h("span", { text: p.kind === "STK" ? "Shares" : "Lots (units)" }), p.kind === "STK" ? String(p.units) : p.lots + " (" + p.units + ")"]),
+            h("div", null, [h("span", { text: "Entry / mark" }), f2.format(p.entry) + " / " + (isNum(p.mark) ? f2.format(p.mark) : "n/a")]),
+            h("div", null, [h("span", { text: "Margin" }), cur(p.margin, ccy, 2)]),
+            h("div", null, [h("span", { text: "Expiry" }), p.expiry ? dLong(p.expiry) + (p.days_to_expiry != null ? " · " + p.days_to_expiry + "d" : "") + (p.roll ? " · rolls" : "") : "-"]),
+            h("div", { class: "wide muted" }, [h("span", { text: "Priced by" }), p.pricing || "-"]),
+            p.reason ? h("div", { class: "wide muted" }, [h("span", { text: "Why" }), p.reason]) : null
+          ])
+        ]);
+      })));
+    } else {
+      kids.push(h("div", { class: "card empty", style: "margin-top:10px", text: "No positions. All cash: " + cur(sd.cash, ccy, usd ? 2 : 0) + "." }));
+    }
+    var orders = sd.orders || [];
+    if (orders.length) {
+      kids.push(h("p", { class: "muted small", style: "margin:12px 0 8px", text: "Queued for the next open" }));
+      kids.push(h("div", { class: "cards" }, orders.map(function (o) {
+        var side = String(o.side || (o.action === "CLOSE" ? "CLOSE" : "")).toUpperCase();
+        var what = o.position || ((o.underlying || "") + " " + (o.instrument || "") + (o.strike != null ? " " + o.strike : "") + (o.expiry ? " " + o.expiry : ""));
+        return h("div", { class: "card order" }, [
+          h("div", { class: "row" }, [h("span", null, [h("span", { class: "badge " + (side === "SELL" ? "sell" : "buy"), text: (o.action || "OPEN") + " " + side }),
+            h("span", { class: "sym", text: what })]), h("span", { class: "muted small num", text: o.lots ? o.lots + " lot(s)" : o.amount ? cur(o.amount, ccy) : "all" })]),
+          h("div", { class: "reason", text: (o.reason || "") + (o.decision_date ? " · decided " + dLong(o.decision_date) : "") }),
+          o.risk_check ? h("div", { class: "reason muted", text: "Risk check: " + o.risk_check }) : null
+        ]);
+      })));
+    }
+    var lr = sd.last_run || {};
+    var notes = (lr.notes || []).concat(lr.warnings || []);
+    if (notes.length) kids.push(h("details", null, [h("summary", { text: "Last run (" + (lr.date || "?") + "): " + notes.length + " note(s)" }),
+      h("ul", { class: "small", style: "padding-left:18px;margin:6px 0 0" }, notes.map(function (n) { return h("li", { text: n }); }))]));
+    app.appendChild(section(id, title + " (" + pos.length + " open)", kids));
+  }
+
   // ---------- alerts (catalyst scanner: docs/alerts.json, refreshed every 30 min in market hours) ----------
   function istTime(iso) {
     var d = iso ? new Date(iso) : null;
@@ -676,15 +761,28 @@ footer a { color: inherit; }
       var age = Math.floor((Date.now() - new Date(d.as_of + "T12:00:00Z").getTime()) / 86400000);
       if (age > 4) hdr.appendChild(h("div", { class: "banner", text: "Data is " + age + " days old. Check the latest run in the repo's Actions tab." }));
     }
-    var th = d.thesis;
-    if (th) {
+    var th = d.thesis, cb = d.combined;
+    if (cb && cb.sleeves) {
+      // all four sleeves in one glance, each a link to its own section
+      var names = { momentum: ["Momentum", "#positions"], thesis: ["Thesis", "#thesis"], fno: ["India F&O", "#fno"], us: ["US", "#us"] };
+      hdr.appendChild(h("div", { class: "sleeves" }, cb.sleeves.map(function (s) {
+        var nm = names[s.name] || [s.name, "#"];
+        return h("a", { class: "sleeve", href: nm[1] }, [h("span", { class: "label", text: nm[0] }),
+          h("span", { class: "num", text: isNum(s.equity) ? rs(s.equity) : "n/a" }),
+          h("span", { class: "num small " + tone(s.pnl), text: isNum(s.pnl) ? rsSigned(s.pnl) : "" })]);
+      })));
+      hdr.appendChild(h("p", { class: "muted small", style: "margin:8px 0 0" }, ["All sleeves ",
+        h("strong", { text: isNum(cb.equity) ? rs(cb.equity) : "n/a" }), " of " + rs(cb.capital) + " paper capital" +
+        (isNum(cb.equity) && cb.capital ? " (" + pct((cb.equity / cb.capital - 1) * 100) + ")" : "") + ". US at a fixed Rs " + cb.usd_inr + "/$."]));
+    } else if (th) {
       var combinedEq = (perf.equity || 0) + (th.equity || 0), combinedCap = th.combined_capital || 0;
       hdr.appendChild(h("p", { class: "muted small", style: "margin:10px 0 0" }, [
         "Thesis sleeve " + rs(th.equity) + " (" + pct(th.total_pnl_pct) + "). Combined ",
         h("strong", { text: rs(combinedEq) }), " of " + rs(combinedCap) + " paper capital."]));
     }
     hdr.appendChild(h("nav", { class: "jump", "aria-label": "Sections" }, [
-      ["#alerts", "Alerts"], ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis sleeve"], ["#trades", "Trades"], ["#journal", "Journal"]
+      ["#alerts", "Alerts"], ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis"], ["#fno", "F&O"], ["#us", "US"],
+      ["#combined", "All sleeves"], ["#trades", "Trades"], ["#journal", "Journal"]
     ].map(function (p) { return h("a", { href: p[0], text: p[1] }); })));
     app.appendChild(hdr);
 
@@ -794,6 +892,30 @@ footer a { color: inherit; }
     if (th) renderThesis(app, th);
     else if ("thesis" in d) app.appendChild(section("thesis", "Thesis sleeve", [h("div", { class: "banner",
       text: "Thesis sleeve data could not be exported this run (see the run log). The momentum sleeve above is unaffected." })]));
+
+    // (e3) India F&O and US sleeves, then all four sleeves on one chart
+    [["fno", "India F&O sleeve", "NIFTY / BANKNIFTY and listed stock futures and options. Futures are priced spot x (1 + 6.5% x days/365); options with Black-Scholes on India VIX (index) or 1.5x 30-day realised vol (stocks). Mark-to-model, not market quotes."],
+     ["us", "US sleeve", "US stocks and ETFs (long; shorts are paper only) and US options priced at the mid of the real Yahoo option chain (a Black-Scholes fallback is labelled). Rs 5,00,000 converted at a fixed Rs/$; FX moves not modelled."]
+    ].forEach(function (x) {
+      if (d[x[0]]) renderDeriv(app, x[0], x[1], d[x[0]], x[2]);
+      else if (x[0] in d) app.appendChild(section(x[0], x[1], [h("div", { class: "banner", text: x[1] + " data could not be exported this run (see the run log)." })]));
+    });
+    if (cb && cb.equity_curve && cb.equity_curve.length) {
+      var wrap3 = h("div", { class: "chart-wrap", tabindex: "0", "aria-label": "Equity of all four sleeves together. Use left and right arrows to step through days." });
+      var tb3 = h("tbody", null, (cb.sleeves || []).map(function (s) {
+        return h("tr", null, [h("td", { text: ({ momentum: "Momentum", thesis: "Thesis", fno: "India F&O", us: "US" })[s.name] || s.name }),
+          h("td", { class: "r", text: rs(s.capital) }), h("td", { class: "r", text: isNum(s.equity) ? rs(s.equity) : "n/a" }),
+          h("td", { class: "r " + tone(s.pnl), text: isNum(s.pnl) ? rsSigned(s.pnl) : "-" })]);
+      }));
+      app.appendChild(section("combined", "All sleeves", [h("div", { class: "card" }, [wrap3,
+        h("div", { class: "table-scroll", style: "margin-top:10px" }, [h("table", null, [h("thead", null, [h("tr", null,
+          ["Sleeve", "Capital", "Equity", "P&L"].map(function (c, i) { return h("th", { class: i ? "r" : null, text: c }); }))]), tb3])])])]));
+      drawChart(wrap3, cb.equity_curve, cb.capital);
+      if (window.ResizeObserver) {
+        var lw3 = wrap3.clientWidth;
+        new ResizeObserver(function () { if (Math.abs(wrap3.clientWidth - lw3) > 2) { lw3 = wrap3.clientWidth; drawChart(wrap3, cb.equity_curve, cb.capital); } }).observe(wrap3);
+      }
+    }
 
     // (f) recent trades, newest first (ledger is append-only, so reverse is chronological desc)
     var recent = trades.slice().reverse().slice(0, 20);

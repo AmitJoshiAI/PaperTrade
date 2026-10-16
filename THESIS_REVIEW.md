@@ -86,8 +86,8 @@ The daily journal flags it as "CATALYST RULE DUE". On that day, for that thesis 
    `decision_date` = `event_date`, so it fills at the first open after the event.
    For a second-order thesis apply the rule to every leg: a SELL for each LONG leg and a COVER for each
    SHORT leg it calls for, each with `"leg"` set. The flag stays up until every held leg has its exit.
-4. Nothing else. The reviewer may queue only the SELL / COVER the rule specifies: no other exits, no
-   buys or new shorts, no changes to the rule after the event.
+4. Never change the rule after the event. Any other decision on the same thesis (adding, a new
+   thesis on the outcome) is a separate, written decision under ROUTINE_PROMPT.md step 5.
 
 ## Every Friday (after the 17:30 IST run): theme theses and anything open
 
@@ -109,13 +109,16 @@ The daily journal flags it as "CATALYST RULE DUE". On that day, for that thesis 
    field must change; if you change `target`, `horizon` or `invalidation_price`, write old -> new and why
    in the log entry).
 
-4. Act only within these limits:
-   - **SELL**: queue one in `decisions/thesis_orders.json` if the invalidation hit or the reason is no
-     longer true. Give `decision_date` as today's market date and a `reason`.
-   - **BUY / new theses**: propose them in the weekly review, do not queue them. A new position needs the
-     user's agreement in an interactive session (they are a beginner and the point is to learn from each
-     thesis). After agreement, write `theses/<slug>.md` with `status: proposed` and queue the BUY.
-   - Never change the momentum sleeve's files, `config.py` or any code.
+4. Act. Since 2026-10-17 the user has authorised Claude to take the paper decisions itself, without
+   waiting for approval (CHANGELOG 2026-10-17, "Autonomous decisions"):
+   - **SELL / COVER**: queue one in `decisions/thesis_orders.json` if the invalidation hit or the reason
+     is no longer true. Give `decision_date` as today's market date and a `reason`.
+   - **BUY / SHORT / new theses**: allowed, with the checklist above answered in the thesis file and the
+     limits in RISK_LIMITS.md checked first. Write `theses/<slug>.md` with `status: proposed` and queue
+     the orders. Drafts in `theses/proposed/` are activated by moving them into `theses/`.
+   - Every decision gets a dated entry with the reasoning in the journal's "Claude's review" (and in the
+     thesis file's review log); a change to how decisions are made goes in CHANGELOG.md.
+   - Never change the momentum sleeve's files, `config.py`, `RISK_LIMITS.md` values or any code.
 
 5. Write the weekly summary to `theses/reviews/<YYYY-MM-DD>.md` (not in `journal/`: the dashboard shows
    the newest file there as the daily journal): one paragraph per open thesis, the sleeve's equity and

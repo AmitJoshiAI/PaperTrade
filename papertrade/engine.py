@@ -6,7 +6,10 @@ One `run` does, in order:
   3. mark     : mark positions to today's close, update stops/highs, append the equity curve.
   4. propose  : evaluate the strategy on today's close and write pending orders for the next session.
   5. thesis   : the separate thesis sleeve (thesis.py): fill queued thesis orders, mark, check invalidations.
-  6. review   : write journal/YYYY-MM-DD.md (momentum sections, then "## Thesis sleeve").
+  6. F&O, US  : the India F&O sleeve (fno.py, fills at the NSE open) and the US sleeve (us.py, fills at the US
+                open); each fills its queued orders, settles expiries, marks, checks its circuit breaker.
+  7. review   : write journal/YYYY-MM-DD.md (momentum sections, "## Thesis sleeve", "## India F&O sleeve",
+                "## US sleeve", "## All sleeves").
 
 Claude (or you) may edit decisions/pending_orders.json between steps 4 and 2 of the next day.
 """
@@ -153,6 +156,23 @@ def run_day(do_update: bool = True) -> dict:
         log.exception("Thesis sleeve step failed; the momentum sleeve run completed and was saved.")
         thesis_section = ["## Thesis sleeve", "", "**The thesis sleeve step FAILED this run** (see the run log). "
                           "The momentum sleeve above is unaffected."]
+    # India F&O and US sleeves: two more separate books, run after the thesis sleeve, each isolated the same way.
+    fno_out, us_out = None, None
+    try:
+        from . import fno
+        fno_out = fno.run_day(prices, do_update)
+        thesis_section += [""] + fno.journal_lines(fno_out)
+    except Exception:
+        log.exception("F&O sleeve step failed; the momentum and thesis sleeves completed and were saved.")
+        thesis_section += ["", "## India F&O sleeve", "", "**The F&O sleeve step FAILED this run** (see the run log)."]
+    try:
+        from . import us
+        us_out = us.run_day(today, do_update)
+        thesis_section += [""] + us.journal_lines(us_out)
+    except Exception:
+        log.exception("US sleeve step failed; the other sleeves completed and were saved.")
+        thesis_section += ["", "## US sleeve", "", "**The US sleeve step FAILED this run** (see the run log)."]
+    thesis_section += [""] + combined_lines(eq_row, thesis_out, fno_out, us_out)
     report_path = review.write_daily_review(pf, prices, shown_fills, proposals, dropped=prices.attrs.get("dropped", []),
                                             extra_sections=thesis_section)
     # Dashboard export is read-only and runs after state is saved. A failure here must not fail the run:
@@ -164,4 +184,20 @@ def run_day(do_update: bool = True) -> dict:
         log.exception("Dashboard export failed; the trading run itself completed and was saved.")
         dashboard = None
     return dict(date=today, fills=fills, equity=eq_row, proposals=proposals, report=str(report_path),
-                dashboard=dashboard, thesis=thesis_out)
+                dashboard=dashboard, thesis=thesis_out, fno=fno_out, us=us_out)
+
+
+def combined_lines(eq_row: dict, thesis_out, fno_out, us_out) -> list[str]:
+    """Journal section: the four sleeves side by side, in INR (US at the fixed USD_INR)."""
+    rows = [("Momentum", config.STARTING_CAPITAL, eq_row["equity"]),
+            ("Thesis", config.THESIS_CAPITAL, thesis_out["equity"]["equity"] if thesis_out else None),
+            ("India F&O", config.FNO_CAPITAL, fno_out["equity"]["equity"] if fno_out else None),
+            ("US (at USD_INR %g)" % config.USD_INR, config.US_CAPITAL, us_out["equity"]["equity_inr"] if us_out else None)]
+    lines = ["## All sleeves", "", "| Sleeve | Capital | Equity | P&L |", "|---|---|---|---|"]
+    for name, cap, eq in rows:
+        lines.append(f"| {name} | Rs {cap:,.0f} | " + (f"Rs {eq:,.0f} | Rs {eq - cap:+,.0f} |" if eq is not None else "n/a (step failed) | - |"))
+    cap = sum(r[1] for r in rows)
+    if all(r[2] is not None for r in rows):
+        tot = sum(r[2] for r in rows)
+        lines.append(f"| **Combined** | Rs {cap:,.0f} | **Rs {tot:,.0f}** | Rs {tot - cap:+,.0f} ({(tot / cap - 1) * 100:+.2f}%) |")
+    return lines

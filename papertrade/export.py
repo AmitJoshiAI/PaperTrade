@@ -164,7 +164,65 @@ def build_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | Non
     except Exception:
         log.exception("Thesis sleeve export failed; dashboard written without it.")
         out["thesis"] = None
+    # India F&O and US sleeves, then the four-sleeve total. Each failure leaves the rest intact.
+    try:
+        from .fno import export_data as fno_export
+        out["fno"] = fno_export(prices)
+    except Exception:
+        log.exception("F&O sleeve export failed; dashboard written without it.")
+        out["fno"] = None
+    try:
+        from .us import export_data as us_export
+        out["us"] = us_export()
+    except Exception:
+        log.exception("US sleeve export failed; dashboard written without it.")
+        out["us"] = None
+    try:
+        out["combined"] = _combined(curve, out)
+    except Exception:
+        log.exception("Combined equity export failed.")
+        out["combined"] = None
     return _clean(out)
+
+
+def _combined(momentum_curve: pd.DataFrame, out: dict) -> dict:
+    """All four sleeves in INR on the momentum sleeve's dates. A sleeve's value on a date is its latest
+    equity row on or before it (the US sleeve's dates are US sessions), or its capital before its first row."""
+    parts = [("momentum", config.STARTING_CAPITAL, None), ("thesis", config.THESIS_CAPITAL, "thesis"),
+             ("fno", config.FNO_CAPITAL, "fno"), ("us", config.US_CAPITAL, "us")]
+    series = {}
+    for name, cap, key in parts:
+        if key is None:
+            series[name] = [(str(r["date"]), float(r["equity"])) for r in momentum_curve.to_dict("records")]
+        else:
+            rows = (out.get(key) or {}).get("equity_curve") or []
+            col = "equity_inr" if key in ("fno", "us") else "equity"
+            series[name] = [(str(r["date"]), float(r[col])) for r in rows if r.get(col) is not None]
+    curve = []
+    last_day = series["momentum"][-1][0] if series["momentum"] else None
+    for d, _ in series["momentum"]:
+        row = dict(date=d)
+        for name, cap, _k in parts:
+            v = cap
+            for dd, e in series[name]:
+                if dd <= d or d == last_day:    # the last point uses every sleeve's latest row, so it
+                    v = e                       # matches the headline total (US rows can be a day ahead)
+            row[name] = v
+        row["equity"] = sum(row[n] for n, _c, _k in parts)
+        curve.append(row)
+    sleeves = []
+    for name, cap, key in parts:
+        if key is None:
+            eq = float(momentum_curve["equity"].iloc[-1]) if len(momentum_curve) else cap
+        elif out.get(key) is None:
+            eq = None
+        else:
+            eq = out[key]["equity_inr"] if key in ("fno", "us") else out[key]["equity"]
+        sleeves.append(dict(name=name, capital=cap, equity=eq, pnl=None if eq is None else eq - cap))
+    known = [s for s in sleeves if s["equity"] is not None]
+    capital = sum(c for _n, c, _k in parts)
+    return dict(capital=capital, equity=sum(s["equity"] for s in known) if len(known) == len(sleeves) else None,
+                sleeves=sleeves, equity_curve=curve, usd_inr=config.USD_INR)
 
 
 def write_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | None = None, dropped=None) -> Path:

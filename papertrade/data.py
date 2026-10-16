@@ -24,7 +24,16 @@ def download_symbols(symbols, period: str = config.HISTORY_PERIOD, allow_empty: 
     own currency. The "symbol" column holds the symbol exactly as passed in.
     If every symbol fails: raises (as download_prices always has) unless allow_empty, which returns an
     empty frame with the same columns."""
-    key_of = {yahoo_symbol(s): s for s in symbols}
+    return _download({yahoo_symbol(s): s for s in symbols}, period, allow_empty)
+
+
+def download_tickers(tickers, period: str = config.HISTORY_PERIOD, allow_empty: bool = True) -> pd.DataFrame:
+    """Same frame for raw Yahoo tickers used exactly as given (^NSEI, ^INDIAVIX, SPY, RELIANCE.NS); the
+    "symbol" column holds the ticker. Used by the F&O and US sleeves."""
+    return _download({t: t for t in tickers}, period, allow_empty)
+
+
+def _download(key_of: dict, period: str, allow_empty: bool) -> pd.DataFrame:
     tickers = list(key_of)
     raw = yf.download(
         tickers, period=period, interval="1d",
