@@ -1,0 +1,60 @@
+# Daily paper-trading run. Downloads prices, fills pending orders, writes state/journal/dashboard data,
+# then commits the results back to the repo. GitHub Pages serves docs/ from the main branch
+# (enable it once in Settings > Pages; see README "Running in the cloud").
+name: Daily run
+
+on:
+  schedule:
+    - cron: "0 12 * * 1-5"   # 12:00 UTC = 17:30 IST, Monday-Friday, after the NSE close
+  workflow_dispatch:          # manual "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write   # commit and push state/, decisions/, journal/, docs/
+  pages: write      # request a Pages rebuild after the push
+
+concurrency:
+  group: daily-run
+  cancel-in-progress: false   # never kill a run halfway through writing state
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the daily cycle
+        run: python -m papertrade run
+
+      - name: Commit and push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A state decisions journal docs
+          if git diff --cached --quiet; then
+            echo "Nothing changed; no commit."
+            exit 0
+          fi
+          RUN_DATE=$(python -c "import json; print(json.load(open('docs/data.json'))['as_of'])" 2>/dev/null || date -u +%F)
+          git commit -m "daily run ${RUN_DATE}"
+          # pick up any review/override pushed from a laptop while this job ran
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Request a GitHub Pages rebuild
+        # Pages "Deploy from a branch" normally rebuilds on push by itself; this makes sure a push made
+        # with the workflow token also triggers it. Harmless if Pages is not enabled yet.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds"

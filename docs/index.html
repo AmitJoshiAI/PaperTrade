@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>PaperTrade Dashboard</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #6f6d68;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --border: rgba(11,11,11,0.10);
+  --series: #2a78d6;
+  --track: #cde2fb;
+  --up: #006300;
+  --down: #c62f2f;
+  --buy: #2a78d6;
+  --sell: #eb6834;
+  --warn-bg: #fff4d6;
+  --warn-ink: #5c4300;
+  --code-bg: #f0efec;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --muted: #9a988f;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --series: #3987e5;
+    --track: #22303f;
+    --up: #2fbf2f;
+    --down: #f07a7a;
+    --buy: #3987e5;
+    --sell: #d95926;
+    --warn-bg: #3a2e0a;
+    --warn-ink: #f5d98a;
+    --code-bg: #262624;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--page); color: var(--ink);
+  font: 15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 780px; margin: 0 auto; padding: 16px 16px 32px; }
+h1, h2, h3, h4 { margin: 0; line-height: 1.25; }
+h2 { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 8px; }
+section { margin-top: 20px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.num { font-variant-numeric: tabular-nums; }
+.up { color: var(--up); }
+.down { color: var(--down); }
+.row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+
+/* header */
+.top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.top h1 { font-size: 17px; font-weight: 650; }
+.hero-label { margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+.hero { font-size: clamp(34px, 11vw, 52px); font-weight: 650; letter-spacing: -0.02em; line-height: 1.1; margin: 2px 0 12px; overflow-wrap: anywhere; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.stat .label { font-size: 13px; color: var(--ink-2); }
+.stat .value { font-size: 20px; font-weight: 600; }
+.stat .sub { font-size: 12px; color: var(--muted); }
+.banner { margin-top: 12px; padding: 10px 12px; border-radius: 10px; background: var(--warn-bg); color: var(--warn-ink); font-size: 13px; }
+nav.jump { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+nav.jump a { font-size: 13px; color: var(--ink-2); text-decoration: none; padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+
+/* progress strip */
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tiles .wide { grid-column: 1 / -1; }
+.meter { height: 8px; border-radius: 4px; background: var(--track); overflow: hidden; margin: 8px 0 4px; }
+.meter > span { display: block; height: 100%; border-radius: 4px; background: var(--series); }
+@media (min-width: 640px) { .tiles { grid-template-columns: repeat(4, 1fr); } }
+
+/* chart */
+.chart-wrap { position: relative; touch-action: pan-y; outline: none; }
+.chart-wrap:focus-visible { box-shadow: 0 0 0 2px var(--series); border-radius: 6px; }
+.chart-wrap svg { display: block; width: 100%; overflow: visible; }
+.tip { position: absolute; top: 0; pointer-events: none; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 6px 9px; font-size: 12px; box-shadow: 0 2px 10px rgba(0,0,0,.12); white-space: nowrap; display: none; }
+.tip b { display: block; font-size: 14px; }
+details { margin-top: 10px; }
+summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
+
+/* cards */
+.cards { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 640px) { .cards { grid-template-columns: 1fr 1fr; } }
+.pos .sym { font-size: 17px; font-weight: 650; }
+.kv { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 12px; margin-top: 8px; font-size: 13px; }
+.kv div span { display: block; color: var(--muted); font-size: 12px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .05em; padding: 2px 8px; border-radius: 999px;
+  border: 1px solid currentColor; }
+.badge.buy { color: var(--buy); background: color-mix(in srgb, var(--buy) 12%, transparent); }
+.badge.sell { color: var(--sell); background: color-mix(in srgb, var(--sell) 12%, transparent); }
+.badge.lock { color: var(--ink-2); }
+.order .sym { font-weight: 650; font-size: 16px; margin-left: 6px; }
+.order .reason { margin-top: 4px; font-size: 13px; color: var(--ink-2); }
+
+/* tables: scroll inside their own box, never the page */
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+table { border-collapse: collapse; font-size: 13px; width: 100%; }
+th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--grid); white-space: nowrap; vertical-align: top; }
+th { font-weight: 600; color: var(--ink-2); font-size: 12px; }
+td.r, th.r { text-align: right; }
+td { font-variant-numeric: tabular-nums; }
+
+/* journal */
+.md h3 { font-size: 18px; margin: 4px 0 10px; }
+.md h4 { font-size: 15px; margin: 18px 0 8px; }
+.md h5, .md h6 { font-size: 14px; margin: 14px 0 6px; }
+.md p, .md ul, .md ol, .md blockquote { margin: 0 0 10px; }
+.md ul, .md ol { padding-left: 20px; }
+.md li { margin: 3px 0; }
+.md td, .md th { white-space: nowrap; }
+.md code { background: var(--code-bg); padding: 1px 4px; border-radius: 4px; font-size: 12.5px; }
+.md pre { background: var(--code-bg); padding: 10px; border-radius: 8px; overflow-x: auto; font-size: 12.5px; }
+.md pre code { background: none; padding: 0; }
+.md blockquote { border-left: 3px solid var(--axis); padding-left: 10px; color: var(--ink-2); }
+.md hr { border: 0; border-top: 1px solid var(--grid); margin: 14px 0; }
+.md a { color: var(--series); }
+.md .table-scroll { margin: 0 0 12px; }
+
+footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--muted); }
+footer p { margin: 4px 0; }
+footer a { color: inherit; }
+.empty { color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main id="app">
+  <p class="muted" id="loading">Loading data.json...</p>
+</main>
+<script>
+(function () {
+  "use strict";
+
+  // ---------- formatting (Indian grouping) ----------
+  var f0 = new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 });
+  var f2 = new Intl.NumberFormat("en-IN", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  function isNum(v) { return typeof v === "number" && isFinite(v); }
+  function rs(v, dp) {
+    if (!isNum(v)) return "n/a";
+    var s = (dp === 2 ? f2 : f0).format(Math.abs(v));
+    return (v < 0 ? "-" : "") + "Rs " + s;
+  }
+  function rsSigned(v, dp) {
+    if (!isNum(v)) return "n/a";
+    return (v > 0 ? "+" : "") + rs(v, dp);
+  }
+  function pct(v, dp) {
+    if (!isNum(v)) return "n/a";
+    return (v > 0 ? "+" : "") + v.toFixed(dp == null ? 2 : dp) + "%";
+  }
+  function tone(v) { return !isNum(v) || v === 0 ? "" : (v > 0 ? "up" : "down"); }
+  var MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  function dShort(iso) { if (!iso) return ""; var p = iso.split("-"); return +p[2] + " " + MONTHS[+p[1] - 1]; }
+  function dLong(iso) { if (!iso) return "n/a"; var p = iso.split("-"); return +p[2] + " " + MONTHS[+p[1] - 1] + " " + p[0]; }
+
+  // ---------- DOM helper: text always via textContent ----------
+  function h(tag, attrs, kids) {
+    var el = document.createElement(tag);
+    if (attrs) for (var k in attrs) {
+      if (attrs[k] == null) continue;
+      if (k === "class") el.className = attrs[k];
+      else if (k === "text") el.textContent = attrs[k];
+      else el.setAttribute(k, attrs[k]);
+    }
+    (kids || []).forEach(function (c) {
+      if (c == null) return;
+      el.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+    });
+    return el;
+  }
+  function section(id, title, kids) {
+    return h("section", { id: id }, [h("h2", { text: title })].concat(kids));
+  }
+
+  // ---------- minimal markdown renderer (escapes all HTML) ----------
+  function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function inline(s) {
+    var codes = [];
+    s = s.replace(/`([^`]+)`/g, function (_, c) { codes.push(c); return "\u0000" + (codes.length - 1) + "\u0000"; });
+    s = esc(s);
+    s = s.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (m, t, u) {
+      if (!/^(https?:\/\/|\.{0,2}\/|#)/.test(u) && /^[a-z]+:/i.test(u)) return t; // drop javascript: etc.
+      return '<a href="' + u + '" rel="noopener">' + t + "</a>";
+    });
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    s = s.replace(/(^|[^*])\*([^*\s][^*]*)\*/g, "$1<em>$2</em>");
+    s = s.replace(/(^|[\s(])_([^_]+)_(?=$|[\s).,;:!?])/g, "$1<em>$2</em>");
+    s = s.replace(/\u0000(\d+)\u0000/g, function (_, i) { return "<code>" + esc(codes[+i]) + "</code>"; });
+    return s;
+  }
+  function splitRow(line) {
+    var t = line.trim();
+    if (t.charAt(0) === "|") t = t.slice(1);
+    if (t.charAt(t.length - 1) === "|") t = t.slice(0, -1);
+    return t.split("|").map(function (c) { return c.trim(); });
+  }
+  function renderMarkdown(md) {
+    var lines = md.replace(/\r\n?/g, "\n").split("\n");
+    var out = [], i = 0, para = [];
+    function flush() { if (para.length) { out.push("<p>" + inline(para.join(" ")) + "</p>"); para = []; } }
+    var isSep = function (l) { return /^\s*\|?\s*:?-{2,}:?\s*(\|\s*:?-{2,}:?\s*)*\|?\s*$/.test(l); };
+    var listRe = /^(\s*)([-*+]|\d+\.)\s+(.*)$/;
+    while (i < lines.length) {
+      var line = lines[i];
+      if (/^\s*$/.test(line)) { flush(); i++; continue; }
+      if (/^```/.test(line)) {
+        flush(); var code = []; i++;
+        while (i < lines.length && !/^```/.test(lines[i])) code.push(lines[i++]);
+        i++; out.push("<pre><code>" + esc(code.join("\n")) + "</code></pre>"); continue;
+      }
+      var m = /^(#{1,6})\s+(.*)$/.exec(line);
+      if (m) { flush(); var lv = Math.min(m[1].length + 2, 6); out.push("<h" + lv + ">" + inline(m[2]) + "</h" + lv + ">"); i++; continue; }
+      if (/^\s*([-*_])(\s*\1){2,}\s*$/.test(line)) { flush(); out.push("<hr>"); i++; continue; }
+      if (/^\s*\|/.test(line) && i + 1 < lines.length && isSep(lines[i + 1])) {
+        flush();
+        var head = splitRow(line), rows = []; i += 2;
+        while (i < lines.length && /^\s*\|/.test(lines[i])) rows.push(splitRow(lines[i++]));
+        var t = '<div class="table-scroll"><table><thead><tr>' + head.map(function (c) { return "<th>" + inline(c) + "</th>"; }).join("") + "</tr></thead><tbody>";
+        rows.forEach(function (r) { t += "<tr>" + r.map(function (c) { return "<td>" + inline(c) + "</td>"; }).join("") + "</tr>"; });
+        out.push(t + "</tbody></table></div>"); continue;
+      }
+      if (/^\s*>/.test(line)) {
+        flush(); var q = [];
+        while (i < lines.length && /^\s*>/.test(lines[i])) q.push(lines[i++].replace(/^\s*>\s?/, ""));
+        out.push("<blockquote>" + renderMarkdown(q.join("\n")) + "</blockquote>"); continue;
+      }
+      if (listRe.test(line)) {
+        flush();
+        // nested lists by indentation
+        var stack = [], html = "";
+        while (i < lines.length) {
+          var lm = listRe.exec(lines[i]);
+          if (!lm) {
+            if (/^\s+\S/.test(lines[i]) && stack.length) { html += " " + inline(lines[i].trim()); i++; continue; } // continuation
+            break;
+          }
+          var ind = lm[1].replace(/\t/g, "    ").length, type = /\d/.test(lm[2]) ? "ol" : "ul";
+          while (stack.length && ind < stack[stack.length - 1].ind) { html += "</li></" + stack.pop().type + ">"; }
+          if (!stack.length || ind > stack[stack.length - 1].ind) { html += "<" + type + ">"; stack.push({ ind: ind, type: type }); }
+          else html += "</li>";
+          html += "<li>" + inline(lm[3]); i++;
+        }
+        while (stack.length) html += "</li></" + stack.pop().type + ">";
+        out.push(html); continue;
+      }
+      para.push(line.trim()); i++;
+    }
+    flush();
+    return out.join("\n");
+  }
+
+  // ---------- equity chart (inline SVG, single series) ----------
+  var SVGNS = "http://www.w3.org/2000/svg";
+  function s(tag, attrs, text) {
+    var el = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    if (text != null) el.textContent = text;
+    return el;
+  }
+  // y-axis tick label in lakh/crore with just enough decimals to be exact (2.5K steps -> 5.025L, not 5.03L)
+  function tickFmt(v, step, hi) {
+    var unit = hi >= 1e7 ? 1e7 : hi >= 1e5 ? 1e5 : 1, suf = unit === 1e7 ? "Cr" : unit === 1e5 ? "L" : "";
+    if (unit === 1) return f0.format(v);
+    var d = 0; while (d < 4 && Math.abs(Math.round(step / unit * Math.pow(10, d)) - step / unit * Math.pow(10, d)) > 1e-9) d++;
+    return (v / unit).toFixed(d) + suf;
+  }
+  function niceStep(range, count) {
+    var raw = range / Math.max(count, 1), mag = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / mag;
+    return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * mag;
+  }
+  function drawChart(wrap, rows, start) {
+    wrap.textContent = "";
+    var W = Math.max(wrap.clientWidth, 260), H = 230;
+    var m = { t: 16, r: 12, b: 26, l: 46 };
+    var pw = W - m.l - m.r, ph = H - m.t - m.b;
+    var vals = rows.map(function (r) { return r.equity; });
+    var lo = Math.min.apply(null, vals.concat([start])), hi = Math.max.apply(null, vals.concat([start]));
+    if (hi - lo < hi * 0.002) { lo -= hi * 0.02; hi += hi * 0.02; }
+    var step = niceStep(hi - lo, 4);
+    lo = Math.floor(lo / step) * step; hi = Math.ceil(hi / step) * step;
+    var n = rows.length;
+    var x = function (i) { return m.l + (n === 1 ? pw / 2 : (i / (n - 1)) * pw); };
+    var y = function (v) { return m.t + (1 - (v - lo) / (hi - lo)) * ph; };
+    var css = getComputedStyle(document.documentElement);
+    var C = function (v) { return css.getPropertyValue(v).trim(); };
+
+    var svg = s("svg", { viewBox: "0 0 " + W + " " + H, height: H, role: "img",
+      "aria-label": "Equity by trading day, " + n + " day(s), latest " + rs(vals[n - 1]) });
+    // grid + y ticks
+    for (var v = lo; v <= hi + step / 2; v += step) {
+      svg.appendChild(s("line", { x1: m.l, x2: W - m.r, y1: y(v), y2: y(v), stroke: C("--grid"), "stroke-width": 1 }));
+      svg.appendChild(s("text", { x: m.l - 6, y: y(v) + 4, "text-anchor": "end", "font-size": 11, fill: C("--muted"),
+        style: "font-variant-numeric: tabular-nums" }, tickFmt(v, step, hi)));
+    }
+    // starting-capital reference
+    svg.appendChild(s("line", { x1: m.l, x2: W - m.r, y1: y(start), y2: y(start), stroke: C("--axis"), "stroke-width": 1.5 }));
+    svg.appendChild(s("text", { x: m.l + 4, y: y(start) - 5, "font-size": 11, fill: C("--muted") }, "Start " + rs(start)));
+    // x labels: up to 4, evenly spaced by trading day
+    var nl = Math.min(n, W < 420 ? 3 : 5), seen = {};
+    for (var k = 0; k < nl; k++) {
+      var idx = nl === 1 ? n - 1 : Math.round(k * (n - 1) / (nl - 1));
+      if (seen[idx]) continue; seen[idx] = 1;
+      var anchor = n === 1 ? "middle" : k === 0 ? "start" : k === nl - 1 ? "end" : "middle";
+      svg.appendChild(s("text", { x: x(idx), y: H - 6, "text-anchor": anchor, "font-size": 11, fill: C("--muted") }, dShort(rows[idx].date)));
+    }
+    // line
+    if (n > 1) {
+      var d = rows.map(function (r, i) { return (i ? "L" : "M") + x(i).toFixed(1) + "," + y(r.equity).toFixed(1); }).join("");
+      svg.appendChild(s("path", { d: d, fill: "none", stroke: C("--series"), "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round" }));
+    }
+    // end dot + end label
+    var ex = x(n - 1), ey = y(vals[n - 1]);
+    svg.appendChild(s("circle", { cx: ex, cy: ey, r: 4.5, fill: C("--series"), stroke: C("--surface"), "stroke-width": 2 }));
+    var ly = ey - 10 < m.t ? ey + 18 : ey - 10;
+    svg.appendChild(s("text", { x: n === 1 ? ex : ex, y: ly, "text-anchor": n === 1 ? "middle" : "end", "font-size": 12, "font-weight": 600, fill: C("--ink") }, rs(vals[n - 1])));
+    // hover layer
+    var cross = s("line", { y1: m.t, y2: m.t + ph, stroke: C("--axis"), "stroke-width": 1, visibility: "hidden" });
+    var dot = s("circle", { r: 4.5, fill: C("--series"), stroke: C("--surface"), "stroke-width": 2, visibility: "hidden" });
+    svg.appendChild(cross); svg.appendChild(dot);
+    wrap.appendChild(svg);
+    var tip = h("div", { class: "tip" }); wrap.appendChild(tip);
+    if (n === 1) {
+      wrap.appendChild(h("p", { class: "muted small", text: "One trading day recorded. The line starts once there is a second day." }));
+    }
+    var cur = n - 1;
+    function show(i) {
+      cur = i; var r = rows[i], px = x(i), py = y(r.equity);
+      cross.setAttribute("x1", px); cross.setAttribute("x2", px); cross.setAttribute("visibility", "visible");
+      dot.setAttribute("cx", px); dot.setAttribute("cy", py); dot.setAttribute("visibility", "visible");
+      var prev = i > 0 ? rows[i - 1].equity : start, chg = r.equity - prev;
+      tip.textContent = "";
+      tip.appendChild(h("b", { text: rs(r.equity) }));
+      tip.appendChild(h("span", { text: dLong(r.date) + "  " }));
+      tip.appendChild(h("span", { class: tone(chg), text: rsSigned(chg) }));
+      tip.appendChild(h("div", { class: "muted", text: r.positions + " position(s), cash " + rs(r.cash) }));
+      tip.style.display = "block";
+      var tw = tip.offsetWidth, left = Math.min(Math.max(px - tw / 2, 0), W - tw);
+      tip.style.left = left + "px";
+      tip.style.top = Math.max(py - tip.offsetHeight - 14, -8) + "px";
+    }
+    function hide() { cross.setAttribute("visibility", "hidden"); dot.setAttribute("visibility", "hidden"); tip.style.display = "none"; }
+    function nearest(evt) {
+      var rect = svg.getBoundingClientRect(), px = (evt.clientX - rect.left) * (W / rect.width);
+      if (n === 1) return 0;
+      return Math.max(0, Math.min(n - 1, Math.round((px - m.l) / pw * (n - 1))));
+    }
+    wrap.onpointermove = function (e) { show(nearest(e)); };
+    wrap.onpointerdown = function (e) { show(nearest(e)); };
+    wrap.onpointerleave = hide;
+    wrap.onfocus = function () { show(cur); };
+    wrap.onblur = hide;
+    wrap.onkeydown = function (e) {
+      if (e.key === "ArrowLeft") { show(Math.max(0, cur - 1)); e.preventDefault(); }
+      else if (e.key === "ArrowRight") { show(Math.min(n - 1, cur + 1)); e.preventDefault(); }
+      else if (e.key === "Escape") hide();
+    };
+  }
+
+  // ---------- page ----------
+  function render(d) {
+    var app = document.getElementById("app");
+    app.textContent = "";
+    var perf = d.performance || {}, cfg = d.config || {}, pf = d.portfolio || { positions: [] };
+    var start = cfg.starting_capital || pf.starting_capital || 0;
+    var curve = d.equity_curve || [], trades = d.trades || [], pending = d.pending;
+    var totalPct = start ? perf.total_pnl / start * 100 : null;
+    var prevEq = curve.length > 1 ? curve[curve.length - 2].equity : null;
+    var dayPct = prevEq ? perf.day_pnl / prevEq * 100 : null;
+
+    // (a) header
+    var hdr = h("header", { class: "card" }, [
+      h("div", { class: "top" }, [h("h1", { text: "PaperTrade" }), h("span", { class: "muted small", text: "As of " + dLong(d.as_of) })]),
+      h("div", { class: "hero-label", text: "Equity" }),
+      h("div", { class: "hero", text: rs(perf.equity) }),
+      h("div", { class: "pair" }, [
+        h("div", { class: "stat" }, [h("div", { class: "label", text: "Day P&L" }),
+          h("div", { class: "value " + tone(perf.day_pnl), text: rsSigned(perf.day_pnl) }),
+          h("div", { class: "sub", text: dayPct == null ? "first day" : pct(dayPct) })]),
+        h("div", { class: "stat" }, [h("div", { class: "label", text: "Total P&L" }),
+          h("div", { class: "value " + tone(perf.total_pnl), text: rsSigned(perf.total_pnl) }),
+          h("div", { class: "sub", text: (totalPct == null ? "" : pct(totalPct)) + " since " + dShort(pf.start_date) })])
+      ])
+    ]);
+    // stale-data warning: the next step when the cloud run failed is to look at Actions
+    if (d.as_of) {
+      var age = Math.floor((Date.now() - new Date(d.as_of + "T12:00:00Z").getTime()) / 86400000);
+      if (age > 4) hdr.appendChild(h("div", { class: "banner", text: "Data is " + age + " days old. Check the latest run in the repo's Actions tab." }));
+    }
+    hdr.appendChild(h("nav", { class: "jump", "aria-label": "Sections" }, [
+      ["#positions", "Positions"], ["#decisions", "Next open"], ["#trades", "Trades"], ["#journal", "Journal"]
+    ].map(function (p) { return h("a", { href: p[0], text: p[1] }); })));
+    app.appendChild(hdr);
+
+    // (b) progress strip
+    var target = cfg.target_gross_per_day, net = cfg.target_net_per_day, avg = perf.avg_per_day;
+    var fill = isNum(avg) && target ? Math.max(0, Math.min(1, avg / target)) : 0;
+    var taxRate = (cfg.assumed_tax_rate_pct || 0) / 100;
+    var avgSub = isNum(avg) && avg > 0
+      ? Math.round(fill * 100) + "% of pre-tax target. About " + rs(avg * (1 - taxRate)) + " net vs " + rs(net) + " net target."
+      : "Target " + rs(target) + " pre-tax / " + rs(net) + " net per day.";
+    app.appendChild(section("progress", "Progress vs target", [h("div", { class: "tiles" }, [
+      h("div", { class: "card stat wide" }, [
+        h("div", { class: "label", text: "Avg P&L per trading day" }),
+        h("div", { class: "value " + tone(avg), text: rsSigned(avg) + " / " + rs(target) }),
+        h("div", { class: "meter", role: "meter", "aria-valuemin": 0, "aria-valuemax": target, "aria-valuenow": Math.max(0, avg || 0),
+          "aria-label": "Average P&L per day versus pre-tax target" }, [h("span", { style: "width:" + (fill * 100).toFixed(1) + "%" })]),
+        h("div", { class: "sub", text: avgSub })
+      ]),
+      h("div", { class: "card stat" }, [h("div", { class: "label", text: "Trading days" }),
+        h("div", { class: "value", text: String(perf.days || 0) }), h("div", { class: "sub", text: "first honest read ~60" })]),
+      h("div", { class: "card stat" }, [h("div", { class: "label", text: "Max drawdown" }),
+        h("div", { class: "value " + (perf.max_drawdown_pct < 0 ? "down" : ""), text: isNum(perf.max_drawdown_pct) ? perf.max_drawdown_pct.toFixed(2) + "%" : "n/a" }),
+        h("div", { class: "sub", text: "peak to trough" })]),
+      h("div", { class: "card stat" }, [h("div", { class: "label", text: "Charges paid" }),
+        h("div", { class: "value", text: rs(perf.costs_paid) }),
+        h("div", { class: "sub", text: (perf.n_trades || 0) + " fill(s)" })]),
+      h("div", { class: "card stat" }, [h("div", { class: "label", text: "Closed trades" }),
+        h("div", { class: "value", text: String(perf.n_closed || 0) }),
+        h("div", { class: "sub", text: isNum(perf.win_rate_pct) ? perf.win_rate_pct.toFixed(0) + "% won" : "win rate n/a" })])
+    ])]));
+
+    // (c) equity chart + table twin
+    var wrap = h("div", { class: "chart-wrap", tabindex: "0", "aria-label": "Equity chart. Use left and right arrows to step through days." });
+    var tbody = h("tbody");
+    curve.slice().reverse().forEach(function (r, i, arr) {
+      var prev = i + 1 < arr.length ? arr[i + 1].equity : start;
+      tbody.appendChild(h("tr", null, [h("td", { text: r.date }), h("td", { class: "r", text: rs(r.equity) }),
+        h("td", { class: "r " + tone(r.equity - prev), text: rsSigned(r.equity - prev) }),
+        h("td", { class: "r", text: rs(r.cash) }), h("td", { class: "r", text: String(r.positions) })]));
+    });
+    var chartCard = h("div", { class: "card" }, curve.length ? [wrap, h("details", null, [h("summary", { text: "Show as table" }),
+      h("div", { class: "table-scroll" }, [h("table", null, [h("thead", null, [h("tr", null, ["Date", "Equity", "Change", "Cash", "Pos."].map(function (c, i) {
+        return h("th", { class: i ? "r" : null, text: c }); }))]), tbody])])])]
+      : [h("p", { class: "empty", text: "No equity rows yet." })]);
+    app.appendChild(section("equity", "Equity curve", [chartCard]));
+    if (curve.length) {
+      drawChart(wrap, curve, start);
+      if (window.ResizeObserver) {
+        var lastW = wrap.clientWidth;
+        new ResizeObserver(function () { if (Math.abs(wrap.clientWidth - lastW) > 2) { lastW = wrap.clientWidth; drawChart(wrap, curve, start); } }).observe(wrap);
+      }
+      if (window.matchMedia) {
+        var mq = window.matchMedia("(prefers-color-scheme: dark)");
+        var redraw = function () { drawChart(wrap, curve, start); };
+        if (mq.addEventListener) mq.addEventListener("change", redraw); else if (mq.addListener) mq.addListener(redraw);
+      }
+    }
+
+    // (d) open positions
+    var positions = pf.positions || [];
+    var posKids = positions.length ? [h("div", { class: "cards" }, positions.map(function (p) {
+      var toStop = isNum(p.last_close) && isNum(p.stop) ? (p.stop / p.last_close - 1) * 100 : null;
+      return h("div", { class: "card pos" }, [
+        h("div", { class: "row" }, [h("span", { class: "sym", text: p.symbol }),
+          h("span", { class: tone(p.unrealised_pnl), style: "font-weight:600", text: rsSigned(p.unrealised_pnl) + (isNum(p.unrealised_pct) ? "  " + pct(p.unrealised_pct, 1) : "") })]),
+        h("div", { class: "kv num" }, [
+          h("div", null, [h("span", { text: "Qty" }), String(p.qty)]),
+          h("div", null, [h("span", { text: "Avg cost (incl. charges)" }), rs(p.avg_cost, 2)]),
+          h("div", null, [h("span", { text: "Last close" }), isNum(p.last_close) ? rs(p.last_close, 2) : "no price"]),
+          h("div", null, [h("span", { text: "Stop" + (toStop == null ? "" : " (" + pct(toStop, 1) + " away)") }), rs(p.stop, 2)]),
+          h("div", null, [h("span", { text: "Entry" }), dLong(p.entry_date)]),
+          h("div", null, [h("span", { text: "Value" }), rs(p.market_value)])
+        ])
+      ]);
+    }))] : [h("div", { class: "card empty", text: "No open positions. All cash: " + rs(pf.cash) + "." })];
+    app.appendChild(section("positions", "Open positions (" + positions.length + ")", posKids));
+
+    // (e) decisions for next open
+    var orders = pending && pending.orders ? pending.orders : [];
+    var decKids = [];
+    if (pending) {
+      decKids.push(h("p", { class: "muted small", style: "margin:0 0 8px" }, [
+        "Decided on the " + dLong(pending.decision_date) + " close; fills at the next open. ",
+        pending.locked ? h("span", { class: "badge lock", text: "LOCKED (manual override)" }) : null
+      ]));
+      if (pending.note) decKids.push(h("p", { class: "muted small", style: "margin:0 0 8px", text: pending.note }));
+    }
+    if (orders.length) {
+      decKids.push(h("div", { class: "cards" }, orders.map(function (o) {
+        var side = String(o.side || "").toUpperCase();
+        return h("div", { class: "card order" }, [
+          h("div", { class: "row" }, [h("span", null, [h("span", { class: "badge " + (side === "SELL" ? "sell" : "buy"), text: side }),
+            h("span", { class: "sym", text: o.symbol })]), h("span", { class: "muted small num", text: "qty " + (o.qty == null ? "auto" : o.qty) })]),
+          h("div", { class: "reason", text: o.reason || "" })
+        ]);
+      })));
+    } else {
+      decKids.push(h("div", { class: "card empty", text: "No orders for the next open. Hold." }));
+    }
+    app.appendChild(section("decisions", "Decisions for next open", decKids));
+
+    // (f) recent trades, newest first (ledger is append-only, so reverse is chronological desc)
+    var recent = trades.slice().reverse().slice(0, 20);
+    var closed = trades.filter(function (t) { return t.side === "SELL"; });
+    var trKids = [];
+    if (recent.length) {
+      trKids.push(h("p", { class: "muted small", style: "margin:0 0 8px", text: "Last " + recent.length + " of " + trades.length + " fills. Realised P&L " +
+        rsSigned(pf.realised_pnl) + " over " + closed.length + " closed trade(s)" + (isNum(perf.win_rate_pct) ? ", win rate " + perf.win_rate_pct.toFixed(0) + "%." : ".") }));
+      var cols = [["Date"], ["Side"], ["Symbol"], ["Qty", "r"], ["Price", "r"], ["Charges", "r"], ["Realised", "r"], ["Reason"]];
+      trKids.push(h("div", { class: "card" }, [h("div", { class: "table-scroll" }, [h("table", null, [
+        h("thead", null, [h("tr", null, cols.map(function (c) { return h("th", { class: c[1] || null, text: c[0] }); }))]),
+        h("tbody", null, recent.map(function (t) {
+          return h("tr", null, [h("td", { text: t.date }),
+            h("td", null, [h("span", { class: "badge " + (t.side === "SELL" ? "sell" : "buy"), text: t.side })]),
+            h("td", { text: t.symbol }), h("td", { class: "r", text: String(t.qty) }),
+            h("td", { class: "r", text: f2.format(t.price) }), h("td", { class: "r", text: f2.format(t.charges) }),
+            h("td", { class: "r " + tone(t.realised_pnl), text: isNum(t.realised_pnl) ? rsSigned(t.realised_pnl) : "-" }),
+            h("td", { class: "muted", text: t.reason || "" })]);
+        }))
+      ])])]));
+    } else {
+      trKids.push(h("div", { class: "card empty", text: "No trades yet. Pending orders fill at the next trading day's open." }));
+    }
+    app.appendChild(section("trades", "Recent fills", trKids));
+
+    // (g) journal
+    var j = d.journal;
+    var jCard = h("div", { class: "card md" });
+    if (j && j.markdown) jCard.innerHTML = renderMarkdown(j.markdown); // renderer escapes all HTML in the source
+    else jCard.appendChild(h("p", { class: "empty", text: "No journal yet." }));
+    app.appendChild(section("journal", "Latest journal" + (j ? " (" + j.file + ")" : ""), [jCard]));
+
+    if (d.dropped_symbols && d.dropped_symbols.length) {
+      app.appendChild(h("p", { class: "muted small", text: "Symbols with no Yahoo data (dropped): " + d.dropped_symbols.join(", ") }));
+    }
+
+    // (h) footer
+    var gen = d.generated_at ? new Date(d.generated_at) : null;
+    app.appendChild(h("footer", null, [
+      h("p", { style: "font-weight:600;color:var(--ink-2)", text: "Paper trading only. No real money." }),
+      h("p", null, ["Data generated " + (gen && !isNaN(gen) ? gen.toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" }) : "n/a") + " · ",
+        h("a", { href: "data.json", text: "data.json" })])
+    ]));
+  }
+
+  fetch("data.json", { cache: "no-cache" })
+    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+    .then(render)
+    .catch(function (e) {
+      var app = document.getElementById("app");
+      app.textContent = "";
+      app.appendChild(h("div", { class: "card" }, [
+        h("h1", { style: "font-size:17px", text: "PaperTrade" }),
+        h("p", { text: "Could not load data.json (" + e.message + ")." }),
+        h("p", { class: "muted small", text: "If you opened this file directly from disk, serve the docs/ folder instead (python -m http.server --directory docs). On GitHub Pages, check that docs/data.json is committed." })
+      ]));
+      app.appendChild(h("footer", null, [h("p", { text: "Paper trading only. No real money." })]));
+    });
+})();
+</script>
+</body>
+</html>
