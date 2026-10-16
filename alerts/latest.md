@@ -1,11 +1,23 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-17 03:55 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements, ET Markets, ET Stocks, CNBC top news. Failed: Moneycontrol (HTTPError: HTTP Error 403: Forbidden).
-Quotes: 54 symbols checked, 7 moving.
+Generated 2026-10-17 04:13 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements, ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 7 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [8 HIGH] TECHM +8.5% vs previous close, volume 8.1x 20-day average (close 1790.0, bar 2026-10-16)
+## 1. [10 HIGH] Nifty IT soars 14% in 6 days on Q2 earnings boost; TechM, Wipro, TCS shine
+
+- Time: 2026-10-16 11:08 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/nifty-it-soars-14-in-6-days-on-q2-earnings-boost-techm-wipro-tcs-shine-126101600315_1.html
+- Matched symbols: WIPRO, TCS (moving today: WIPRO, TCS)
+- Keywords: results
+- Thesis match: none
+- Score: 10
+- Alert id: eca527252338
+- Second-order candidates: 
+
+## 2. [8 HIGH] TECHM +8.5% vs previous close, volume 8.1x 20-day average (close 1790.0, bar 2026-10-16)
 
 - Time: 2026-10-17 03:55 IST
 - Source: Yahoo quotes
@@ -17,7 +29,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: bdb88831262a
 - Second-order candidates: 
 
-## 2. [7 HIGH] KSB Ltd: Announcement under Regulation 30 (LODR)-Award of Order Receipt of Order
+## 3. [8 HIGH] ICICI Bank Q2 Preview: Profit may rise 8-14% YoY, NIM likely to contract
+
+- Time: 2026-10-16 12:55 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/icici-bank-q2-preview-profit-may-rise-8-14-yoy-nim-likely-to-contract-126101600468_1.html
+- Matched symbols: ICICIBANK
+- Keywords: results
+- Thesis match: icici-bank-recovery (proposed)
+- Score: 8
+- Alert id: 9394ecbe90d0
+- Second-order candidates: 
+
+## 4. [7 HIGH] KSB Ltd: Announcement under Regulation 30 (LODR)-Award of Order Receipt of Order
 
 - Time: 2026-10-16 21:09 IST
 - Source: BSE announcements
@@ -29,7 +53,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 0089597ad323
 - Second-order candidates: 
 
-## 3. [7 HIGH] Wipro shares rise over 2% as Q2 revenue grows 9% YoY. What are Nomura, Goldman Sachs analysts saying?
+## 5. [7 HIGH] IT stocks rally 2% to lead sectoral gains as TechM, Wipro eye results day
+
+- Time: 2026-10-16 18:26 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/it-stocks-rally-2-to-lead-sectoral-gains-as-techm-wipro-eye-results-day/article71587243.ece
+- Matched symbols: WIPRO (moving today: WIPRO)
+- Keywords: results
+- Thesis match: none
+- Score: 7
+- Alert id: e4763676bca4
+- Second-order candidates: 
+
+## 6. [7 HIGH] Wipro shares rise over 2% as Q2 revenue grows 9% YoY. What are Nomura, Goldman Sachs analysts saying?
 
 - Time: 2026-10-16 09:56 IST
 - Source: ET Stocks
@@ -41,7 +77,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 215d172cf051
 - Second-order candidates: 
 
-## 4. [7 HIGH] Tech Mahindra shares gain 5% after Q2 results. Should you buy, sell or hold the stock?
+## 7. [7 HIGH] Tech Mahindra shares gain 5% after Q2 results. Should you buy, sell or hold the stock?
 
 - Time: 2026-10-16 09:34 IST
 - Source: ET Stocks
@@ -53,7 +89,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: df95744af045
 - Second-order candidates: 
 
-## 5. [6 HIGH] WIPRO +6.0% vs previous close, volume 3.3x 20-day average (close 184.4, bar 2026-10-16)
+## 8. [7 HIGH] Wipro shares gain nearly 2% after Q2 results; brokerages remain bearish
+
+- Time: 2026-10-16 09:21 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/wipro-shares-gain-nearly-2-after-q2-results-brokerages-remain-bearish-126101600154_1.html
+- Matched symbols: WIPRO (moving today: WIPRO)
+- Keywords: results
+- Thesis match: none
+- Score: 7
+- Alert id: 998314335964
+- Second-order candidates: 
+
+## 9. [6 HIGH] WIPRO +6.0% vs previous close, volume 3.3x 20-day average (close 184.4, bar 2026-10-16)
 
 - Time: 2026-10-17 03:55 IST
 - Source: Yahoo quotes
@@ -65,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 7a5107677c51
 - Second-order candidates: 
 
-## 6. [6 HIGH] CRWV -11.9% vs previous close (close 61.39, bar 2026-10-16)
+## 10. [6 HIGH] CRWV -11.9% vs previous close (close 61.39, bar 2026-10-16)
 
 - Time: 2026-10-17 03:55 IST
 - Source: Yahoo quotes
@@ -77,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 646a7162c807
 - Second-order candidates: 
 
-## 7. [6 HIGH] NBIS -12.2% vs previous close (close 165.47, bar 2026-10-16)
+## 11. [6 HIGH] NBIS -12.2% vs previous close (close 165.47, bar 2026-10-16)
 
 - Time: 2026-10-17 03:55 IST
 - Source: Yahoo quotes
@@ -89,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 55826987f1d6
 - Second-order candidates: 
 
-## 8. [6 HIGH] Reliance Industries Ltd: Newspaper Clippings - Proposed Initial Public Offer Of Jio Platforms Limited - Reservation For Eligible RIL Shareholders
+## 12. [6 HIGH] Reliance Industries Ltd: Newspaper Clippings - Proposed Initial Public Offer Of Jio Platforms Limited - Reservation For Eligible RIL Shareholders
 
 - Time: 2026-10-16 20:58 IST
 - Source: BSE announcements
@@ -101,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 4462276db4b4
 - Second-order candidates: 
 
-## 9. [5] Why did CoreWeave stock get crushed this week? Look to this corner of the debt market for clues
+## 13. [5] Why did CoreWeave stock get crushed this week? Look to this corner of the debt market for clues
 
 - Time: 2026-10-17 02:03 IST
 - Source: CNBC top news
@@ -113,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 00b8f71d7304
 - Second-order candidates: 
 
-## 10. [5] The Austin Powers steamroller: How to trade CoreWeave's slow moving crisis
+## 14. [5] The Austin Powers steamroller: How to trade CoreWeave's slow moving crisis
 
 - Time: 2026-10-16 23:54 IST
 - Source: CNBC top news
@@ -125,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 697eea0cc448
 - Second-order candidates: 
 
-## 11. [5] CoreWeave stock wipeout exposes divide between AI fear and greed
+## 15. [5] CoreWeave stock wipeout exposes divide between AI fear and greed
 
 - Time: 2026-10-16 21:33 IST
 - Source: ET Markets
@@ -135,52 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 5
 - Alert id: 14656bfa1a5e
-- Second-order candidates: 
-
-## 12. [5] Here's how the CoreWeave sell-off is affecting OpenAI vs. Anthropic valuations
-
-- Time: 2026-10-16 19:13 IST
-- Source: CNBC top news
-- Link: https://www.cnbc.com/2026/10/16/coreweave-openai-anthropic-perps.html
-- Matched symbols: CRWV (moving today: CRWV)
-- Keywords: none
-- Thesis match: none
-- Score: 5
-- Alert id: 4b899b44e479
-- Second-order candidates: 
-
-## 13. [5] Market wrap: Tech Mahindra, TCS, InterGlobe, BSE top gainers and losers on Nifty and Sensex on Friday
-
-- Time: 2026-10-16 16:34 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-tech-mahindra-tcs-interglobe-bse-top-gainers-and-losers-on-nifty-and-sensex-on-friday/articleshow/134992216.cms
-- Matched symbols: TECHM, TCS (moving today: TECHM, TCS)
-- Keywords: round-up
-- Thesis match: none
-- Score: 5
-- Alert id: 0bbb0811697f
-- Second-order candidates: 
-
-## 14. [5] ICICI Bank Q2 Results Preview: PAT, NII may rise up to 21% YoY; margins, deposit growth in focus
-
-- Time: 2026-10-16 14:37 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/earnings/icici-bank-q2-results-preview-pat-nii-may-rise-up-to-21-yoy-margins-deposit-growth-in-focus/articleshow/134988975.cms
-- Matched symbols: ICICIBANK
-- Keywords: results
-- Thesis match: none
-- Score: 5
-- Alert id: aa664061cf21
-- Second-order candidates: 
-
-## 15. [5] Mukesh Ambani taps massive Reliance workforce to boost Jio’s record IPO
-
-- Time: 2026-10-16 14:33 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/mukesh-ambani-taps-massive-reliance-workforce-to-boost-jios-record-ipo/articleshow/134988928.cms
-- Matched symbols: RELIANCE
-- Keywords: IPO
-- Thesis match: none
-- Score: 5
-- Alert id: 44bafd84ae06
 - Second-order candidates: 
