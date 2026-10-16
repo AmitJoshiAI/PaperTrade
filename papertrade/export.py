@@ -157,6 +157,13 @@ def build_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | Non
         journal=_latest_journal(),
         dropped_symbols=_dropped(prices, dropped),
     )
+    # Thesis sleeve (separate book). A failure here leaves the momentum dashboard intact.
+    try:
+        from .thesis import export_data
+        out["thesis"] = export_data(prices, curve)
+    except Exception:
+        log.exception("Thesis sleeve export failed; dashboard written without it.")
+        out["thesis"] = None
     return _clean(out)
 
 

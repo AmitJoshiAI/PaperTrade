@@ -4,9 +4,10 @@
   run --offline  same, but use cached prices (no download)
   status         print portfolio and last equity row
   pending        print the pending orders file
+  thesis         print the thesis sleeve: cash, holdings, theses, queued thesis orders
   costs QTY PX   show Zerodha charges for a buy+sell of QTY shares at PX (delivery)
   export         write docs/data.json for the dashboard (read-only; no download, no state change)
-  reset --yes    wipe state/, decisions/, journal/ and start again
+  reset --yes    wipe state/, decisions/, journal/ and start again (both sleeves; theses/ is kept)
 """
 from __future__ import annotations
 
@@ -32,6 +33,17 @@ def cmd_run(args):
         print(f"  {o['side']} {o['symbol']} qty={o['qty'] or 'auto'}  {o['reason']}")
     print(f"Review written: {out['report']}")
     print(f"Dashboard data: {out['dashboard'] or 'EXPORT FAILED (see error above)'}")
+    t = out.get("thesis")
+    if t is None:
+        print("Thesis sleeve: STEP FAILED (see error above); momentum results above are saved.")
+    else:
+        e = t["equity"]
+        print(f"Thesis sleeve: equity Rs {e['equity']:,.2f}  cash Rs {e['cash']:,.2f}  positions {e['positions']}  "
+              f"theses {len(t['theses'])}  queued orders {len(t['orders'])}")
+        for f in t["fills"]:
+            print(f"  {f['side']} {f['qty']} {f['symbol']} @ {f['price']}  charges {f['charges']}  {f['reason']}")
+        for m in t["hits"] + t["notes"] + t["warnings"]:
+            print(f"  {m}")
 
 
 def cmd_export(args):
@@ -61,6 +73,21 @@ def cmd_status(args):
     if len(curve):
         print("\nLast equity rows:")
         print(curve.tail(5).to_string(index=False))
+
+
+def cmd_thesis(args):
+    from .thesis import ThesisPortfolio, load_theses, load_orders
+    pf = ThesisPortfolio.load()
+    theses, warnings = load_theses()
+    print(f"Thesis sleeve: cash Rs {pf.cash:,.2f} of Rs {pf.starting_capital:,.0f}  costs Rs {pf.costs_paid:,.2f}  "
+          f"realised Rs {pf.realised_pnl:,.2f}")
+    for s, p in pf.positions.items():
+        print(f"  held {s}: {p.qty} @ avg {p.avg_cost:,.2f} since {p.entry_date}")
+    for t in theses.values():
+        print(f"  [{t.status}] {t.slug}: {t.symbol} - {t.get('thesis')}")
+    for w in warnings:
+        print(f"  WARNING {w}")
+    print(json.dumps(load_orders(), indent=2))
 
 
 def cmd_pending(args):
@@ -101,6 +128,7 @@ def main(argv=None):
     r = sub.add_parser("run"); r.add_argument("--offline", action="store_true"); r.set_defaults(fn=cmd_run)
     sub.add_parser("status").set_defaults(fn=cmd_status)
     sub.add_parser("pending").set_defaults(fn=cmd_pending)
+    sub.add_parser("thesis").set_defaults(fn=cmd_thesis)
     c = sub.add_parser("costs"); c.add_argument("qty", type=int); c.add_argument("price", type=float)
     c.add_argument("--product", default="CNC", choices=["CNC", "MIS"]); c.set_defaults(fn=cmd_costs)
     sub.add_parser("export").set_defaults(fn=cmd_export)

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T21:02:44+00:00",
+  "generated_at": "2026-10-16T21:45:38+00:00",
   "as_of": "2026-10-15",
   "price_date": "2026-10-15",
   "config": {
@@ -87,5 +87,33 @@
     "file": "journal/2026-10-15.md",
     "markdown": "# Daily review - 2026-10-15\n\n## Scorecard\n\n| Metric | Value |\n|---|---|\n| Equity | Rs 500,000 |\n| Day P&L | Rs 0 |\n| Total P&L since start | Rs 0 |\n| Trading days recorded | 1 |\n| Avg P&L per day | Rs 0 (target pre-tax Rs 1,250, net Rs 1,000) |\n| Max drawdown | 0.00% |\n| Charges paid to date | Rs 0 |\n| Closed trades / win rate | 0 / n/a |\n| Cash / invested | Rs 500,000 / Rs 0 |\n\n## Open positions\n\nNone (all cash).\n\n## Fills today\n\nNo fills.\n\n## Orders proposed for next session (fill at next open)\n\n| Side | Symbol | Qty | Reason |\n|---|---|---|---|\n| BUY | KOTAKBANK | auto | momentum rank 1, 63d return 18.8% |\n| BUY | DRREDDY | auto | momentum rank 2, 63d return -0.5% |\n| BUY | COALINDIA | auto | momentum rank 3, 63d return -2.2% |\n| BUY | HDFCLIFE | auto | momentum rank 4, 63d return -3.0% |\n| BUY | ADANIPORTS | auto | momentum rank 5, 63d return -4.6% |\n\n## Market snapshot (top 10 by momentum, trend-filtered)\n\n| Rank | Symbol | Close | 63d return | SMA20 | SMA50 | Held |\n|---|---|---|---|---|---|---|\n| 1 | KOTAKBANK | 447.95 | +18.8% | 423 | 413 |  |\n| 2 | DRREDDY | 1,218.80 | -0.5% | 1,210 | 1,186 |  |\n| 3 | COALINDIA | 418.00 | -2.2% | 418 | 414 |  |\n| 4 | HDFCLIFE | 550.55 | -3.0% | 545 | 541 |  |\n| 5 | ADANIPORTS | 1,743.20 | -4.6% | 1,771 | 1,726 |  |\n\nEligible names passing trend filter: 5 of 50.\n\n## Automatic observations\n\n- 4 proposed buy(s) have a NEGATIVE 63d return (DRREDDY, COALINDIA, HDFCLIFE, ADANIPORTS). The rule ranks only trend-passing names and does not require positive momentum.\n- Only 1 trading day(s) recorded. Nothing here is statistically meaningful yet; the first honest read is at ~60 days.\n- Average P&L per trading day is Rs 0 against a pre-tax target of Rs 1,250 (gap Rs 1,250/day).\n- Portfolio is fully in cash. Either no names pass the trend filter (defensive, fine) or the entry rule is too strict.\n- Reality check: Rs 1,250/day pre-tax on Rs 500,000 capital needs ~62% per year. Nifty's long-run average is ~12-14%.\n\n## Claude's review\n\n_To be filled by Claude after reading the numbers above: what went right, what went wrong, whether any rule should change, and what to watch tomorrow. Rule changes are logged in CHANGELOG.md, never applied silently._\n"
   },
-  "dropped_symbols": []
+  "dropped_symbols": [],
+  "thesis": {
+    "capital": 200000.0,
+    "start_date": null,
+    "cash": 200000.0,
+    "equity": 200000.0,
+    "total_pnl": 0.0,
+    "total_pnl_pct": 0.0,
+    "costs_paid": 0.0,
+    "realised_pnl": 0.0,
+    "max_position_pct": 25.0,
+    "theses": [],
+    "closed": [],
+    "orders": [],
+    "warnings": [],
+    "equity_curve": [],
+    "trades": [],
+    "combined_equity_curve": [
+      {
+        "date": "2026-10-15",
+        "equity": 700000.0,
+        "cash": 700000.0,
+        "positions": 0,
+        "momentum": 500000.0,
+        "thesis": 200000.0
+      }
+    ],
+    "combined_capital": 700000.0
+  }
 }

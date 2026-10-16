@@ -14,7 +14,14 @@ log = logging.getLogger(__name__)
 def download_prices(period: str = config.HISTORY_PERIOD) -> pd.DataFrame:
     """Return a long DataFrame: columns [date, symbol, open, high, low, close, volume].
     Symbols with no data are dropped and logged."""
-    tickers = [yahoo_symbol(s) for s in NIFTY50]
+    return download_symbols(NIFTY50, period)
+
+
+def download_symbols(symbols, period: str = config.HISTORY_PERIOD, allow_empty: bool = False) -> pd.DataFrame:
+    """Same as download_prices for any list of NSE symbols (the thesis sleeve is not limited to Nifty 50).
+    If every symbol fails: raises (as download_prices always has) unless allow_empty, which returns an
+    empty frame with the same columns."""
+    tickers = [yahoo_symbol(s) for s in symbols]
     raw = yf.download(
         tickers, period=period, interval="1d",
         auto_adjust=False, progress=False, group_by="ticker", threads=True,
@@ -39,6 +46,10 @@ def download_prices(period: str = config.HISTORY_PERIOD) -> pd.DataFrame:
         frames.append(df)
     if dropped:
         log.warning("Dropped %d symbols with no Yahoo data: %s", len(dropped), ", ".join(dropped))
+    if not frames and allow_empty:
+        out = pd.DataFrame(columns=["date", "open", "high", "low", "close", "volume", "symbol"])
+        out.attrs["dropped"] = dropped
+        return out
     out = pd.concat(frames, ignore_index=True)
     out = out.sort_values(["symbol", "date"]).reset_index(drop=True)
     out.attrs["dropped"] = dropped

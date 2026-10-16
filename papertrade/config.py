@@ -13,6 +13,14 @@ EQUITY_FILE = STATE_DIR / "equity_curve.csv"
 PENDING_ORDERS_FILE = DECISIONS_DIR / "pending_orders.json"
 PRICES_FILE = CACHE_DIR / "prices_daily.parquet"
 
+# Thesis sleeve (separate book: own capital, own ledger, own weekly review; see THESIS_REVIEW.md)
+THESES_DIR = ROOT / "theses"
+THESIS_PORTFOLIO_FILE = STATE_DIR / "thesis_portfolio.json"
+THESIS_TRADES_FILE = STATE_DIR / "thesis_trades.csv"
+THESIS_EQUITY_FILE = STATE_DIR / "thesis_equity_curve.csv"
+THESIS_ORDERS_FILE = DECISIONS_DIR / "thesis_orders.json"
+THESIS_PRICES_FILE = CACHE_DIR / "thesis_prices.parquet"
+
 # Capital and targets (INR)
 STARTING_CAPITAL = 500_000.0
 TARGET_NET_PER_DAY = 1_000.0          # after tax, the user's goal
@@ -33,5 +41,10 @@ MIN_HISTORY_DAYS = 80
 SLIPPAGE_PCT = 0.0005       # 0.05% adverse slippage on fills at open
 HISTORY_PERIOD = "2y"       # how much daily history to pull from Yahoo
 MAX_STALE_BARS = 3          # carry a missing close forward at most this many bars (data gaps, not a strategy rule)
+
+# Thesis sleeve capital. ADDED to the momentum sleeve's Rs 5,00,000, not carved out of it, so the
+# momentum book and its history are untouched. Total paper capital is now Rs 7,00,000.
+THESIS_CAPITAL = 200_000.0
+THESIS_MAX_POSITION_PCT = 0.25        # hard cap per thesis: 25% of sleeve equity; a thesis file may set a lower cap
 
 PRODUCT = "CNC"             # CNC = delivery. "MIS" = intraday (not used by baseline strategy)

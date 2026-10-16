@@ -109,6 +109,10 @@ summary { cursor: pointer; font-size: 13px; color: var(--ink-2); }
 .badge.lock { color: var(--ink-2); }
 .order .sym { font-weight: 650; font-size: 16px; margin-left: 6px; }
 .order .reason { margin-top: 4px; font-size: 13px; color: var(--ink-2); }
+.thesis-line { margin-top: 6px; font-size: 14px; color: var(--ink-2); }
+.badge.status { color: var(--ink-2); margin-left: 6px; vertical-align: 2px; }
+.kv .wide { grid-column: 1 / -1; }
+.warn-hit { color: var(--down); font-weight: 600; }
 
 /* tables: scroll inside their own box, never the page */
 .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
@@ -373,6 +377,84 @@ footer a { color: inherit; }
     };
   }
 
+  // ---------- thesis sleeve ----------
+  function renderThesis(app, th) {
+    var kids = [];
+    kids.push(h("div", { class: "card" }, [
+      h("div", { class: "pair" }, [
+        h("div", { class: "stat" }, [h("div", { class: "label", text: "Sleeve equity" }),
+          h("div", { class: "value", text: rs(th.equity) }),
+          h("div", { class: "sub", text: "of " + rs(th.capital) + (th.start_date ? " since " + dShort(th.start_date) : "") })]),
+        h("div", { class: "stat" }, [h("div", { class: "label", text: "Total P&L" }),
+          h("div", { class: "value " + tone(th.total_pnl), text: rsSigned(th.total_pnl) }),
+          h("div", { class: "sub", text: pct(th.total_pnl_pct) + " · cash " + rs(th.cash) })])
+      ]),
+      h("p", { class: "muted small", style: "margin:10px 0 0", text: "Macro and economic-theme positions held weeks to years, each with a written thesis in theses/. Max " +
+        (th.max_position_pct || 25).toFixed(0) + "% of the sleeve per thesis. Reviewed every Friday. Not part of the daily target." })
+    ]));
+    var rows = th.theses || [];
+    if (rows.length) {
+      kids.push(h("div", { class: "cards", style: "margin-top:10px" }, rows.map(function (r) {
+        var held = r.qty > 0;
+        var inv = r.invalidation_price != null
+          ? rs(r.invalidation_price, 2) + (isNum(r.to_invalidation_pct) ? " (" + pct(r.to_invalidation_pct, 1) + " away)" : "")
+          : (r.invalidation || "not set");
+        var tgt = r.target_price != null
+          ? rs(r.target_price, 2) + (isNum(r.to_target_pct) ? " (" + pct(r.to_target_pct, 1) + " away)" : "")
+          : (r.target || "not set");
+        var hit = isNum(r.to_invalidation_pct) && r.to_invalidation_pct >= 0;
+        return h("div", { class: "card pos" }, [
+          h("div", { class: "row" }, [
+            h("span", null, [h("span", { class: "sym", text: r.symbol }), h("span", { class: "badge status", text: String(r.status || "").toUpperCase() })]),
+            held ? h("span", { class: tone(r.unrealised_pnl), style: "font-weight:600",
+              text: rsSigned(r.unrealised_pnl) + (isNum(r.unrealised_pct) ? "  " + pct(r.unrealised_pct, 1) : "") })
+              : h("span", { class: "muted small", text: "not bought" })]),
+          h("div", { class: "thesis-line", text: r.thesis || "(no thesis line)" }),
+          h("div", { class: "kv num" }, [
+            h("div", null, [h("span", { text: "Entry" }), r.entry_date ? dLong(r.entry_date) + (r.days_held != null ? " · " + r.days_held + "d" : "") : "-"]),
+            h("div", null, [h("span", { text: "Horizon" }), r.horizon || "-"]),
+            h("div", null, [h("span", { text: held ? "Avg cost / last" : "Last close" }),
+              held ? rs(r.avg_cost, 2) + " / " + (isNum(r.last_close) ? rs(r.last_close, 2) : "no price") : (isNum(r.last_close) ? rs(r.last_close, 2) : "no price")]),
+            h("div", null, [h("span", { text: "Target" }), tgt]),
+            h("div", { class: "wide" + (hit ? " warn-hit" : "") }, [h("span", { text: hit ? "Invalidation HIT" : "Invalidation" }), inv]),
+            r.invalidation_price != null && r.invalidation ? h("div", { class: "wide muted", text: r.invalidation }) : null
+          ])
+        ]);
+      })));
+    } else {
+      kids.push(h("div", { class: "card empty", style: "margin-top:10px", text: "No theses yet. Each one starts as a file in theses/ (copy theses/_TEMPLATE.md)." }));
+    }
+    var orders = th.orders || [];
+    if (orders.length) {
+      kids.push(h("p", { class: "muted small", style: "margin:12px 0 8px", text: "Thesis orders queued for the next open" }));
+      kids.push(h("div", { class: "cards" }, orders.map(function (o) {
+        var side = String(o.side || "").toUpperCase();
+        var size = o.qty ? "qty " + o.qty : o.amount ? rs(o.amount) : side === "SELL" ? "all" : "up to cap";
+        return h("div", { class: "card order" }, [
+          h("div", { class: "row" }, [h("span", null, [h("span", { class: "badge " + (side === "SELL" ? "sell" : "buy"), text: side }),
+            h("span", { class: "sym", text: o.thesis || "" })]), h("span", { class: "muted small num", text: size })]),
+          h("div", { class: "reason", text: (o.reason || "") + (o.decision_date ? " · decided " + dLong(o.decision_date) : "") })
+        ]);
+      })));
+    }
+    (th.warnings || []).forEach(function (w) { kids.push(h("div", { class: "banner", text: w })); });
+    // combined equity: momentum + thesis, on its own scale (the two lines differ by Rs 2 lakh)
+    var cc = th.combined_equity_curve || [];
+    if (cc.length) {
+      var wrap2 = h("div", { class: "chart-wrap", tabindex: "0", "aria-label": "Combined equity chart, momentum plus thesis sleeve. Use left and right arrows to step through days." });
+      kids.push(h("div", { class: "card", style: "margin-top:10px" }, [
+        h("div", { class: "label small", style: "color:var(--ink-2);margin-bottom:6px", text: "Combined equity (momentum + thesis)" }), wrap2]));
+      app.appendChild(section("thesis", "Thesis sleeve (" + rows.filter(function (r) { return r.qty > 0; }).length + " open)", kids));
+      drawChart(wrap2, cc, th.combined_capital);
+      if (window.ResizeObserver) {
+        var lw = wrap2.clientWidth;
+        new ResizeObserver(function () { if (Math.abs(wrap2.clientWidth - lw) > 2) { lw = wrap2.clientWidth; drawChart(wrap2, cc, th.combined_capital); } }).observe(wrap2);
+      }
+    } else {
+      app.appendChild(section("thesis", "Thesis sleeve", kids));
+    }
+  }
+
   // ---------- page ----------
   function render(d) {
     var app = document.getElementById("app");
@@ -387,7 +469,7 @@ footer a { color: inherit; }
     // (a) header
     var hdr = h("header", { class: "card" }, [
       h("div", { class: "top" }, [h("h1", { text: "PaperTrade" }), h("span", { class: "muted small", text: "As of " + dLong(d.as_of) })]),
-      h("div", { class: "hero-label", text: "Equity" }),
+      h("div", { class: "hero-label", text: "Momentum sleeve equity" }),
       h("div", { class: "hero", text: rs(perf.equity) }),
       h("div", { class: "pair" }, [
         h("div", { class: "stat" }, [h("div", { class: "label", text: "Day P&L" }),
@@ -403,8 +485,15 @@ footer a { color: inherit; }
       var age = Math.floor((Date.now() - new Date(d.as_of + "T12:00:00Z").getTime()) / 86400000);
       if (age > 4) hdr.appendChild(h("div", { class: "banner", text: "Data is " + age + " days old. Check the latest run in the repo's Actions tab." }));
     }
+    var th = d.thesis;
+    if (th) {
+      var combinedEq = (perf.equity || 0) + (th.equity || 0), combinedCap = th.combined_capital || 0;
+      hdr.appendChild(h("p", { class: "muted small", style: "margin:10px 0 0" }, [
+        "Thesis sleeve " + rs(th.equity) + " (" + pct(th.total_pnl_pct) + "). Combined ",
+        h("strong", { text: rs(combinedEq) }), " of " + rs(combinedCap) + " paper capital."]));
+    }
     hdr.appendChild(h("nav", { class: "jump", "aria-label": "Sections" }, [
-      ["#positions", "Positions"], ["#decisions", "Next open"], ["#trades", "Trades"], ["#journal", "Journal"]
+      ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis sleeve"], ["#trades", "Trades"], ["#journal", "Journal"]
     ].map(function (p) { return h("a", { href: p[0], text: p[1] }); })));
     app.appendChild(hdr);
 
@@ -505,6 +594,11 @@ footer a { color: inherit; }
       decKids.push(h("div", { class: "card empty", text: "No orders for the next open. Hold." }));
     }
     app.appendChild(section("decisions", "Decisions for next open", decKids));
+
+    // (e2) thesis sleeve: separate book, one card per thesis, combined equity chart
+    if (th) renderThesis(app, th);
+    else if ("thesis" in d) app.appendChild(section("thesis", "Thesis sleeve", [h("div", { class: "banner",
+      text: "Thesis sleeve data could not be exported this run (see the run log). The momentum sleeve above is unaffected." })]));
 
     // (f) recent trades, newest first (ledger is append-only, so reverse is chronological desc)
     var recent = trades.slice().reverse().slice(0, 20);

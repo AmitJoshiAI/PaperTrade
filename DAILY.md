@@ -53,5 +53,9 @@ Monday to Friday**, and commits state, decisions, journal and dashboard data to 
    again later). Then commit and push everything under `state/`, `decisions/`, `journal/` and `docs/`
    straight away so the next cloud run starts from it.
 
+7. **Fridays: weekly thesis-sleeve review.** The separate Rs 2,00,000 thesis sleeve is reviewed once
+   a week, not daily. Follow THESIS_REVIEW.md. On other days just read the "## Thesis sleeve" section
+   of the journal; it flags invalidation hits, which the engine has already turned into a queued SELL.
+
 Weekends and NSE holidays: nothing to review. If a day is missed, the next run catches up; pending
 orders fill at the first open after their decision date (stops are not re-checked for skipped days).

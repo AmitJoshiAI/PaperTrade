@@ -36,18 +36,30 @@ class Portfolio:
     costs_paid: float = 0.0
     realised_pnl: float = 0.0
 
+    # Names of the config attributes holding this book's files and capital. Looked up at call time, so a
+    # subclass (the thesis sleeve, thesis.ThesisPortfolio) can point the same logic at different files.
+    _PORTFOLIO_FILE = "PORTFOLIO_FILE"
+    _TRADES_FILE = "TRADES_FILE"
+    _EQUITY_FILE = "EQUITY_FILE"
+    _CAPITAL = "STARTING_CAPITAL"
+
+    @classmethod
+    def _path(cls, name: str):
+        return getattr(config, getattr(cls, name))
+
     # ---------- persistence ----------
     @classmethod
     def load(cls) -> "Portfolio":
-        if not config.PORTFOLIO_FILE.exists():
-            return cls(cash=config.STARTING_CAPITAL)
-        d = json.loads(config.PORTFOLIO_FILE.read_text())
+        capital = getattr(config, cls._CAPITAL)
+        if not cls._path("_PORTFOLIO_FILE").exists():
+            return cls(cash=capital, starting_capital=capital)
+        d = json.loads(cls._path("_PORTFOLIO_FILE").read_text())
         d["positions"] = {k: Position(**v) for k, v in d["positions"].items()}
         return cls(**d)
 
     def save(self) -> None:
         config.STATE_DIR.mkdir(parents=True, exist_ok=True)
-        config.PORTFOLIO_FILE.write_text(json.dumps(asdict(self), indent=2))
+        self._path("_PORTFOLIO_FILE").write_text(json.dumps(asdict(self), indent=2))
 
     # ---------- valuation ----------
     def market_value(self, closes: dict) -> float:
@@ -101,21 +113,22 @@ class Portfolio:
         return row
 
     # ---------- ledgers ----------
-    @staticmethod
-    def _append_trade(row: dict) -> None:
+    @classmethod
+    def _append_trade(cls, row: dict) -> None:
         config.STATE_DIR.mkdir(parents=True, exist_ok=True)
-        new = not config.TRADES_FILE.exists()
-        with open(config.TRADES_FILE, "a", newline="") as f:
+        path = cls._path("_TRADES_FILE")
+        new = not path.exists()
+        with open(path, "a", newline="") as f:
             w = csv.DictWriter(f, fieldnames=TRADE_COLUMNS)
             if new:
                 w.writeheader()
             w.writerow(row)
 
-    @staticmethod
-    def trades() -> pd.DataFrame:
-        if not config.TRADES_FILE.exists():
+    @classmethod
+    def trades(cls) -> pd.DataFrame:
+        if not cls._path("_TRADES_FILE").exists():
             return pd.DataFrame(columns=TRADE_COLUMNS)
-        return pd.read_csv(config.TRADES_FILE)
+        return pd.read_csv(cls._path("_TRADES_FILE"))
 
     def record_equity(self, day: str, closes: dict) -> dict:
         eq = self.equity(closes)
@@ -125,12 +138,12 @@ class Portfolio:
         curve = curve[curve["date"].astype(str) != str(day)]
         curve = pd.concat([curve, pd.DataFrame([row])], ignore_index=True)
         config.STATE_DIR.mkdir(parents=True, exist_ok=True)
-        curve.to_csv(config.EQUITY_FILE, index=False)
+        curve.to_csv(self._path("_EQUITY_FILE"), index=False)
         return row
 
-    @staticmethod
-    def equity_curve() -> pd.DataFrame:
+    @classmethod
+    def equity_curve(cls) -> pd.DataFrame:
         cols = ["date", "cash", "market_value", "equity", "positions", "costs_paid"]
-        if not config.EQUITY_FILE.exists():
+        if not cls._path("_EQUITY_FILE").exists():
             return pd.DataFrame(columns=cols)
-        return pd.read_csv(config.EQUITY_FILE)
+        return pd.read_csv(cls._path("_EQUITY_FILE"))

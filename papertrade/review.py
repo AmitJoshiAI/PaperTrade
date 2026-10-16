@@ -96,7 +96,8 @@ def observations(perf: dict, pf: Portfolio, fills: list[dict], proposals=(), clo
     return obs
 
 
-def write_daily_review(pf: Portfolio, prices: pd.DataFrame, fills: list[dict], proposals: list[dict], dropped=None):
+def write_daily_review(pf: Portfolio, prices: pd.DataFrame, fills: list[dict], proposals: list[dict], dropped=None,
+                       extra_sections: list[str] | None = None):
     closes = data.pivot(prices, "close")
     day = closes.index[-1].strftime("%Y-%m-%d")
     perf = performance(pf, closes)
@@ -158,6 +159,8 @@ def write_daily_review(pf: Portfolio, prices: pd.DataFrame, fills: list[dict], p
 
     lines += ["## Automatic observations", ""]
     lines += [f"- {o}" for o in observations(perf, pf, fills, proposals, closes)]
+    if extra_sections:   # the thesis sleeve; must stay ABOVE the review heading, which _existing_review splits on
+        lines += [""] + extra_sections
     config.JOURNAL_DIR.mkdir(parents=True, exist_ok=True)
     path = config.JOURNAL_DIR / f"{day}.md"
     lines += ["", REVIEW_HEADING, "", _existing_review(path) or REVIEW_PLACEHOLDER, ""]

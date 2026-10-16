@@ -4,6 +4,17 @@ A paper-trading engine for Nifty 50 cash stocks. It downloads daily prices from 
 simple momentum-rotation strategy, simulates fills at the next day's open with Zerodha's real charges,
 and writes a daily journal for review. No real orders are ever placed.
 
+**Total paper capital is Rs 7,00,000, in two separate sleeves:**
+
+| Sleeve | Capital | What | Files | Review |
+|---|---|---|---|---|
+| Momentum | Rs 5,00,000 | the daily rotation rules below; the Rs 1,000/day target applies here | `state/portfolio.json`, `trades.csv`, `equity_curve.csv`, `decisions/pending_orders.json` | daily (DAILY.md) |
+| Thesis | Rs 2,00,000 | macro / economic-theme buys held weeks to years, one written thesis per position | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly, Fridays (THESIS_REVIEW.md) |
+
+The thesis sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
+sleeve's capital, rules and history are unchanged. Both share the cost model, slippage, daily run and
+dashboard. How to open a thesis: copy `theses/_TEMPLATE.md`.
+
 Phase 1 is about measuring, not being clever: the strategy is deliberately simple so the daily review
 has something concrete to criticise.
 
@@ -29,9 +40,10 @@ Run from the project root:
 | `... run --offline` | Same, using the cached prices (no download). |
 | `... status` | Print cash, positions, and the last equity rows. |
 | `... pending` | Print `decisions/pending_orders.json`. |
+| `... thesis` | Print the thesis sleeve: cash, holdings, theses and queued thesis orders. |
 | `... costs QTY PRICE [--product MIS]` | Show Zerodha charges for a buy and a sell of QTY shares at PRICE. |
 | `... export` | Rewrite `docs/data.json` for the dashboard from the current state. Read-only: no download, no state change. `run` already does this at the end. |
-| `... reset --yes` | Wipe `state/`, `decisions/`, `journal/` and start again from Rs 5,00,000. |
+| `... reset --yes` | Wipe `state/`, `decisions/`, `journal/` and start both sleeves again (Rs 5,00,000 + Rs 2,00,000). `theses/` is kept. |
 
 Running `run` twice on the same market date is safe. Orders do not fill until a later trading day
 exists, and that date's equity row is replaced, not duplicated.
@@ -46,18 +58,23 @@ papertrade/        the package
   costs.py         Zerodha CNC/MIS charge model
   portfolio.py     cash, positions, trade ledger, equity curve
   strategy.py      momentum rotation rules
+  thesis.py        thesis sleeve: ledger parsing, thesis orders, invalidation check, journal section
   engine.py        the daily cycle
   review.py        journal writer
   export.py        dashboard data -> docs/data.json
   cli.py           command line
-state/             portfolio.json, trades.csv, equity_curve.csv
-decisions/         pending_orders.json (next session's orders), executed_YYYY-MM-DD.json (what filled)
+state/             portfolio.json, trades.csv, equity_curve.csv; thesis_portfolio.json, thesis_trades.csv,
+                   thesis_equity_curve.csv (thesis sleeve)
+decisions/         pending_orders.json (next session's orders), executed_YYYY-MM-DD.json (what filled);
+                   thesis_orders.json, thesis_executed_YYYY-MM-DD.json (thesis sleeve)
+theses/            <slug>.md, one per thesis (copy _TEMPLATE.md); reviews/ for the Friday write-ups
 journal/           YYYY-MM-DD.md daily reviews
-data_cache/        prices_daily.parquet (re-downloadable; git-ignored)
+data_cache/        prices_daily.parquet, thesis_prices.parquet (re-downloadable; git-ignored)
 docs/              index.html (mobile dashboard), data.json (written by run/export), .nojekyll
 .github/workflows/ daily.yml (scheduled cloud run)
 requirements.txt   pinned dependencies
 DAILY.md           the daily routine
+THESIS_REVIEW.md   the weekly thesis-sleeve review
 CHANGELOG.md       every rule change, with reasoning
 ```
 

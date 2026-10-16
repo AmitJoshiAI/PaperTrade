@@ -5,7 +5,8 @@ One `run` does, in order:
   2. execute  : fill yesterday's pending orders at TODAY's open (+/- slippage). No look-ahead.
   3. mark     : mark positions to today's close, update stops/highs, append the equity curve.
   4. propose  : evaluate the strategy on today's close and write pending orders for the next session.
-  5. review   : write journal/YYYY-MM-DD.md.
+  5. thesis   : the separate thesis sleeve (thesis.py): fill queued thesis orders, mark, check invalidations.
+  6. review   : write journal/YYYY-MM-DD.md (momentum sections, then "## Thesis sleeve").
 
 Claude (or you) may edit decisions/pending_orders.json between steps 4 and 2 of the next day.
 """
@@ -141,7 +142,19 @@ def run_day(do_update: bool = True) -> dict:
         t = Portfolio.trades()
         t = t[t["date"].astype(str) == today]
         shown_fills = [{k: ("" if pd.isna(v) else v) for k, v in r.items()} for r in t.to_dict("records")]
-    report_path = review.write_daily_review(pf, prices, shown_fills, proposals, dropped=prices.attrs.get("dropped", []))
+    # Thesis sleeve: a separate book, run only after the momentum sleeve is saved. A failure here must not
+    # fail the run (the momentum fills above would not be committed in GitHub Actions).
+    thesis_out, thesis_section = None, None
+    try:
+        from . import thesis
+        thesis_out = thesis.run_day(prices, do_update)
+        thesis_section = thesis.journal_lines(thesis_out, momentum_equity=eq_row["equity"])
+    except Exception:
+        log.exception("Thesis sleeve step failed; the momentum sleeve run completed and was saved.")
+        thesis_section = ["## Thesis sleeve", "", "**The thesis sleeve step FAILED this run** (see the run log). "
+                          "The momentum sleeve above is unaffected."]
+    report_path = review.write_daily_review(pf, prices, shown_fills, proposals, dropped=prices.attrs.get("dropped", []),
+                                            extra_sections=thesis_section)
     # Dashboard export is read-only and runs after state is saved. A failure here must not fail the run:
     # in GitHub Actions a failed run is not committed, and the fills above would be lost.
     try:
@@ -151,4 +164,4 @@ def run_day(do_update: bool = True) -> dict:
         log.exception("Dashboard export failed; the trading run itself completed and was saved.")
         dashboard = None
     return dict(date=today, fills=fills, equity=eq_row, proposals=proposals, report=str(report_path),
-                dashboard=dashboard)
+                dashboard=dashboard, thesis=thesis_out)
