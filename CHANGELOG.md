@@ -5,9 +5,10 @@
 - **What**: a second, separate paper book for macro / economic-theme positions held weeks to years, each
   with a written thesis in `theses/<slug>.md`. Code in `papertrade/thesis.py`; review process in
   THESIS_REVIEW.md (weekly, Fridays).
-- **Capital: ADDED, not carved out.** `THESIS_CAPITAL = 200000` is new paper money on top of the momentum
+- **Capital: ADDED, not carved out.** `THESIS_CAPITAL = 500000` is new paper money on top of the momentum
   sleeve's Rs 5,00,000, kept in a new `state/thesis_portfolio.json` (created by the first run). Total paper
-  capital is now Rs 7,00,000. Carving it out of the Rs 5,00,000 was rejected because it would mean
+  capital is now Rs 10,00,000. (First drafted as Rs 2,00,000; raised to Rs 5,00,000 at the
+  user's request before any run used it, so no thesis state ever existed at 2,00,000.) Carving it out of the Rs 5,00,000 was rejected because it would mean
   rewriting `state/portfolio.json`, the equity curve and past journals. The momentum sleeve's capital,
   rules, files and Rs 1,250/day target are unchanged.
 - **Rules of the sleeve**: max 25% of sleeve equity per thesis (`THESIS_MAX_POSITION_PCT`; a thesis file

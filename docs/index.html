@@ -438,7 +438,7 @@ footer a { color: inherit; }
       })));
     }
     (th.warnings || []).forEach(function (w) { kids.push(h("div", { class: "banner", text: w })); });
-    // combined equity: momentum + thesis, on its own scale (the two lines differ by Rs 2 lakh)
+    // combined equity: momentum + thesis, on its own scale (the combined book is twice the momentum sleeve)
     var cc = th.combined_equity_curve || [];
     if (cc.length) {
       var wrap2 = h("div", { class: "chart-wrap", tabindex: "0", "aria-label": "Combined equity chart, momentum plus thesis sleeve. Use left and right arrows to step through days." });

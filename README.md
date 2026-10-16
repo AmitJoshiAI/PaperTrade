@@ -4,12 +4,12 @@ A paper-trading engine for Nifty 50 cash stocks. It downloads daily prices from 
 simple momentum-rotation strategy, simulates fills at the next day's open with Zerodha's real charges,
 and writes a daily journal for review. No real orders are ever placed.
 
-**Total paper capital is Rs 7,00,000, in two separate sleeves:**
+**Total paper capital is Rs 10,00,000, in two separate sleeves:**
 
 | Sleeve | Capital | What | Files | Review |
 |---|---|---|---|---|
 | Momentum | Rs 5,00,000 | the daily rotation rules below; the Rs 1,000/day target applies here | `state/portfolio.json`, `trades.csv`, `equity_curve.csv`, `decisions/pending_orders.json` | daily (DAILY.md) |
-| Thesis | Rs 2,00,000 | macro / economic-theme buys held weeks to years, one written thesis per position | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly, Fridays (THESIS_REVIEW.md) |
+| Thesis | Rs 5,00,000 | macro / economic-theme buys held weeks to years, one written thesis per position | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly, Fridays (THESIS_REVIEW.md) |
 
 The thesis sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
 sleeve's capital, rules and history are unchanged. Both share the cost model, slippage, daily run and
@@ -43,7 +43,7 @@ Run from the project root:
 | `... thesis` | Print the thesis sleeve: cash, holdings, theses and queued thesis orders. |
 | `... costs QTY PRICE [--product MIS]` | Show Zerodha charges for a buy and a sell of QTY shares at PRICE. |
 | `... export` | Rewrite `docs/data.json` for the dashboard from the current state. Read-only: no download, no state change. `run` already does this at the end. |
-| `... reset --yes` | Wipe `state/`, `decisions/`, `journal/` and start both sleeves again (Rs 5,00,000 + Rs 2,00,000). `theses/` is kept. |
+| `... reset --yes` | Wipe `state/`, `decisions/`, `journal/` and start both sleeves again (Rs 5,00,000 each). `theses/` is kept. |
 
 Running `run` twice on the same market date is safe. Orders do not fill until a later trading day
 exists, and that date's equity row is replaced, not duplicated.

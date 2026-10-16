@@ -1,6 +1,6 @@
 # Thesis sleeve: weekly review (for Claude, every Friday)
 
-The thesis sleeve is a separate Rs 2,00,000 paper book for macro or economic-theme positions held for
+The thesis sleeve is a separate Rs 5,00,000 paper book for macro or economic-theme positions held for
 weeks to years (for example defence indigenisation, railway capex, rate cuts). It does not change the
 momentum sleeve and is not part of the Rs 1,000/day target. Each position has a written thesis in
 `theses/<slug>.md`; orders go through `decisions/thesis_orders.json` and fill at the next open with the

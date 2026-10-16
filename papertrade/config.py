@@ -43,8 +43,8 @@ HISTORY_PERIOD = "2y"       # how much daily history to pull from Yahoo
 MAX_STALE_BARS = 3          # carry a missing close forward at most this many bars (data gaps, not a strategy rule)
 
 # Thesis sleeve capital. ADDED to the momentum sleeve's Rs 5,00,000, not carved out of it, so the
-# momentum book and its history are untouched. Total paper capital is now Rs 7,00,000.
-THESIS_CAPITAL = 200_000.0
+# momentum book and its history are untouched. Total paper capital is now Rs 10,00,000.
+THESIS_CAPITAL = 500_000.0
 THESIS_MAX_POSITION_PCT = 0.25        # hard cap per thesis: 25% of sleeve equity; a thesis file may set a lower cap
 
 PRODUCT = "CNC"             # CNC = delivery. "MIS" = intraday (not used by baseline strategy)
