@@ -27,6 +27,10 @@ labelled wherever they appear:
   `USD_INR = 84.0` in `config.py`, a placeholder to update by hand. Trading them for real needs an
   overseas broker under LRS; shorting them is not possible from India.
 
+A **catalyst scanner** (`python -m papertrade.scanner`, every 30 minutes in market hours on GitHub
+Actions) watches free news feeds and Yahoo quotes so market-moving events are seen while they happen,
+not researched afterwards. It only writes alerts; it never trades. See "Catalyst scanner" below.
+
 Phase 1 is about measuring, not being clever: the strategy is deliberately simple so the daily review
 has something concrete to criticise.
 
@@ -39,8 +43,8 @@ python -m venv .venv
 .venv\Scripts\python -m pip install -r requirements.txt
 ```
 
-`requirements.txt` pins yfinance 1.7.0, pandas 3.0.6, numpy 2.5.4 and pyarrow 26.0.0 (pyarrow is needed
-for the parquet price cache). The GitHub Actions run installs the same file.
+`requirements.txt` pins yfinance 1.7.0, pandas 3.0.6, numpy 2.5.4, pyarrow 26.0.0 (pyarrow is needed
+for the parquet price cache) and PyYAML 6.0.3 (the scanner's `watchlist.yaml` and thesis front matter). The GitHub Actions run installs the same file.
 
 ## Commands
 
@@ -55,6 +59,7 @@ Run from the project root:
 | `... thesis` | Print the thesis sleeve: cash, holdings, theses and queued thesis orders. |
 | `... costs QTY PRICE [--product MIS]` | Show Zerodha charges for a buy and a sell of QTY shares at PRICE. |
 | `... export` | Rewrite `docs/data.json` for the dashboard from the current state. Read-only: no download, no state change. `run` already does this at the end. |
+| `.venv/Scripts/python -m papertrade.scanner` | Catalyst scanner: pull the news feeds and watchlist quotes once, write `alerts/<date>.json`, `alerts/latest.md` and `docs/alerts.json`. `--no-quotes` skips Yahoo. Touches no trading state. |
 | `... reset --yes` | Wipe `state/`, `decisions/`, `journal/` and start both sleeves again (Rs 5,00,000 each). `theses/` is kept. |
 
 Running `run` twice on the same market date is safe. Orders do not fill until a later trading day
@@ -75,6 +80,7 @@ papertrade/        the package
   engine.py        the daily cycle
   review.py        journal writer
   export.py        dashboard data -> docs/data.json
+  scanner.py       catalyst scanner: news feeds + watchlist quotes -> alerts/, docs/alerts.json
   cli.py           command line
 state/             portfolio.json, trades.csv, equity_curve.csv; thesis_portfolio.json, thesis_trades.csv,
                    thesis_equity_curve.csv (thesis sleeve)
@@ -82,15 +88,69 @@ decisions/         pending_orders.json (next session's orders), executed_YYYY-MM
                    thesis_orders.json, thesis_executed_YYYY-MM-DD.json (thesis sleeve)
 theses/            <slug>.md, one per thesis (copy _TEMPLATE.md); reviews/ for the Friday write-ups;
                    _EXAMPLE_second_order.md (Meta / CoreWeave / Nebius, a worked example, never executed)
+                   proposed/ for draft theses written by the scanner routine (never read by the engine)
 journal/           YYYY-MM-DD.md daily reviews
+alerts/            YYYY-MM-DD.json (all scored alerts of the day), latest.md (top 15, for the routine),
+                   notes/YYYY-MM-DD.md (second-order notes written by the scanner routine)
+watchlist.yaml     scanner watchlist: Nifty 50 + thesis symbols + extra names, headline names, thresholds
 data_cache/        prices_daily.parquet, thesis_prices.parquet (re-downloadable; git-ignored)
-docs/              index.html (mobile dashboard), data.json (written by run/export), .nojekyll
-.github/workflows/ daily.yml (scheduled cloud run)
+docs/              index.html (mobile dashboard), data.json (written by run/export), alerts.json (written by
+                   the scanner), .nojekyll
+.github/workflows/ daily.yml (scheduled cloud run), scanner.yml (catalyst scanner, every 30 min)
 requirements.txt   pinned dependencies
 DAILY.md           the daily routine
 THESIS_REVIEW.md   the weekly thesis-sleeve review
+SCANNER_PROMPT.md  the hourly cloud routine that writes second-order notes on high-score alerts
 CHANGELOG.md       every rule change, with reasoning
 ```
+
+## Catalyst scanner
+
+Why: the best examples so far (the Waaree Energies IPO frenzy, Oct 2024; Bloomberg's 1 July 2026 Meta
+GPU-rental story that lifted Meta 9% and dropped CoreWeave 14% and Nebius 17%) were researched after the
+fact. The scanner is there to see the next one on the day.
+
+Every run (about 10 seconds):
+
+1. **News feeds**, each fetched with a 12-second timeout; a feed that fails is recorded and skipped:
+
+   | Feed | Source | Status when built (2026-10-17) |
+   |---|---|---|
+   | NSE announcements | RSS `nsearchives.nseindia.com/content/RSS/Online_announcements.xml` | works; holds only the last few filings, so many are missed between runs |
+   | NSE results | RSS `.../Financial_Results.xml` | works |
+   | BSE announcements | BSE's public JSON (`api.bseindia.com/.../AnnSubCategoryGetData`); BSE has no announcements RSS | works; today pages 1-2, plus yesterday early in the day |
+   | ET Markets, ET Stocks | Economic Times RSS | works |
+   | Moneycontrol | RSS `moneycontrol.com/rss/business.xml` | **403 Forbidden from this laptop**; kept in case it works from GitHub's servers |
+   | CNBC top news | RSS (the old Reuters RSS address no longer resolves) | works |
+
+2. **Quotes**: Yahoo daily bars for every watchlist symbol (Nifty 50, every symbol in an open or proposed
+   thesis, and the `extra` names in `watchlist.yaml`: WAAREEENER, META, CRWV, NBIS). A symbol is flagged
+   when it is more than 4% from the previous close or its volume is above 3x the 20-day average. Yahoo
+   NSE quotes are about 15 minutes delayed, and Yahoo sometimes leaves the latest daily bar without a
+   Close; the scanner then uses the last 5-minute price of that day.
+
+3. **Score** per headline: +3 per watchlist company named (max 6), catalyst keywords (results, order
+   win, demerger, IPO, listing, buyback, dividend, SEBI, RBI, budget, tariff, capex, guidance, rating,
+   block deal, stake sale, M&A, enters/launches business, "report/sources"; capped at 6), +2 if a named
+   symbol is moving, +3 if it touches an open or proposed thesis, +1 for an exchange filing, -3 for
+   round-ups and live blogs. Price alerts start at 4. **6 or more is HIGH.** Items below 2 are dropped.
+
+4. **Output**: new items are appended to `alerts/<IST date>.json` (deduped by a hash of the headline
+   against today and yesterday); `alerts/latest.md` lists the top 15 of the last 24 hours with time,
+   source, headline, link, matched symbols, score and a "Second-order candidates" field;
+   `docs/alerts.json` feeds the **Alerts** section at the top of the dashboard (newest first, High/All
+   filter, score badge, link out, and whether the alert matches an open thesis).
+
+The hourly cloud routine in `SCANNER_PROMPT.md` reads `alerts/latest.md`, writes a short second-order
+note (winner, losers and why, scheduled or surprise) for each HIGH alert into `alerts/notes/<date>.md`,
+and may draft (never activate) a thesis under `theses/proposed/`. The scanner reads those notes back
+into the "Second-order candidates" field and the dashboard shows them under the alert. Neither ever
+places or queues an order: to act on a draft, move it to `theses/` and queue the order yourself.
+
+Limits: free feeds only, so this is minutes-late, not real-time (best case: the event is published, the
+next :00 or :30 run starts up to 20 minutes late on GitHub, Yahoo is 15 minutes delayed); headline
+matching is by name, so a story about an unlisted company or a non-watchlist supplier only scores on
+keywords; Moneycontrol is blocked; NSE's RSS is a short rolling window.
 
 ## Cost model (Zerodha, NSE equity)
 
@@ -220,7 +280,7 @@ fail, for example before Pages is enabled). `docs/.nojekyll` tells Pages to serv
 ### 5. On your phone
 
 Open `https://<you>.github.io/PaperTrade/` and add it to the home screen. Top to bottom it shows: equity
-with day and total P&L; progress against the Rs 1,250 pre-tax / Rs 1,000 net daily target; the equity
+with day and total P&L; the scanner's alerts (high-score first view, tap a headline to open the source); progress against the Rs 1,250 pre-tax / Rs 1,000 net daily target; the equity
 curve (tap or drag for values, "Show as table" for the numbers); open positions; the decisions for the
 next open; the last 20 fills; and the latest journal in full. The "As of" date is the market date of
 the last run. If it is more than 4 days old the page says so, which usually means a run failed (check
@@ -230,7 +290,18 @@ To preview locally: `.venv/Scripts/python -m http.server 8765 --directory docs`,
 http://localhost:8765. Opening `docs/index.html` straight from disk does not work, because the browser
 blocks reading `data.json` from a `file://` page.
 
-### 6. Running locally as well
+### 6. Catalyst scanner schedule
+
+`.github/workflows/scanner.yml` runs `python -m papertrade.scanner` every 30 minutes from **03:30 to
+10:00 UTC (09:00 to 15:30 IST), Monday to Friday**, and commits `alerts/` and `docs/alerts.json` as
+`scanner <date time> IST`. Same caveats as the daily run: GitHub starts cron jobs late or skips them at
+busy times, so expect gaps. A feed error never fails the job. Run it by hand from Actions >
+**Catalyst scanner** > Run workflow.
+
+The second-order notes come from a separate cloud routine (prompt in `SCANNER_PROMPT.md`), suggested
+hourly at :15 past from 09:15 to 15:15 IST. It is set up in Claude, not in this repo.
+
+### 7. Running locally as well
 
 Once the cloud run is on, the repo on GitHub is the source of truth. `git pull` before doing anything
 locally. If you run `python -m papertrade run` locally, commit and push the result straight away, or the

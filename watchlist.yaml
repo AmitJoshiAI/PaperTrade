@@ -1,0 +1,91 @@
+# Catalyst scanner watchlist (read by papertrade/scanner.py every run).
+#
+# The scanner watches three groups of symbols:
+#   1. the Nifty 50 (papertrade/universe.py), when include_nifty50 is true;
+#   2. every symbol in an open or proposed thesis in theses/*.md (read automatically, no need to list here);
+#   3. the names under `extra` below.
+#
+# For each symbol it (a) matches news headlines against the symbol and its `names`, and (b) pulls a Yahoo
+# Finance daily quote and flags a move of more than move_pct % against the previous close, or volume of
+# more than volume_x times the 20-day average.
+#
+# Symbol format, same as the thesis sleeve: an NSE symbol (WAAREEENER -> Yahoo WAAREEENER.NS), "US:XXX" for
+# a US listing (US:META -> Yahoo META), or an explicit Yahoo ticker containing a '.' (7203.T).
+#
+# `names`: how the company appears in headlines. Matching is whole-word and case-sensitive, as written or in
+# ALL CAPS (exchange filings often shout: "RELIANCE INDUSTRIES LIMITED"), so "Reliance" does not match
+# "reliance on imports" and "Titan" does not match "titan".
+# Longer names win: "SBI Life" is matched before "SBI", so it is not also counted as SBIN.
+
+include_nifty50: true
+move_pct: 4.0
+volume_x: 3.0
+
+extra:
+  - symbol: WAAREEENER
+    names: [Waaree Energies, Waaree]
+  - symbol: US:META
+    names: [Meta Platforms, Meta, Facebook, Zuckerberg]
+  - symbol: US:CRWV
+    names: [CoreWeave]
+  - symbol: US:NBIS
+    names: [Nebius]
+
+# Names that contain a watched name but are a different company. They are removed from a headline before
+# matching, so "Reliance Power" does not count as RELIANCE.
+ignore: [Reliance Power, Reliance Infrastructure, Reliance Infra, Reliance Capital, Reliance Communications,
+         Reliance Home Finance, Tata Motors Commercial, Bajaj Housing Finance, Bajaj Hindusthan, Bajaj Consumer,
+         Bajaj Electricals, Max Financial, Titan Intech]
+
+# Headline names for the Nifty 50 (the symbol itself is also matched when it is 3+ characters).
+names:
+  ADANIENT: [Adani Enterprises]
+  ADANIPORTS: [Adani Ports, APSEZ]
+  APOLLOHOSP: [Apollo Hospitals]
+  ASIANPAINT: [Asian Paints]
+  AXISBANK: [Axis Bank]
+  BAJAJ-AUTO: [Bajaj Auto]
+  BAJFINANCE: [Bajaj Finance]
+  BAJAJFINSV: [Bajaj Finserv]
+  BEL: [Bharat Electronics, BEL]
+  BHARTIARTL: [Bharti Airtel, Airtel]
+  CIPLA: [Cipla]
+  COALINDIA: [Coal India]
+  DRREDDY: [Dr Reddy's, Dr. Reddy's, Dr Reddys, Dr Reddy]
+  EICHERMOT: [Eicher Motors, Eicher, Royal Enfield]
+  ETERNAL: [Eternal Ltd, Eternal Limited, Zomato, Blinkit]
+  GRASIM: [Grasim]
+  HCLTECH: [HCLTech, HCL Tech, HCL Technologies]
+  HDFCBANK: [HDFC Bank]
+  HDFCLIFE: [HDFC Life]
+  HINDALCO: [Hindalco]
+  HINDUNILVR: [Hindustan Unilever, HUL]
+  ICICIBANK: [ICICI Bank]
+  INDIGO: [IndiGo, InterGlobe Aviation]
+  INFY: [Infosys]
+  ITC: [ITC]
+  JIOFIN: [Jio Financial]
+  JSWSTEEL: [JSW Steel]
+  KOTAKBANK: [Kotak Mahindra Bank, Kotak Bank, Kotak]
+  LT: [Larsen & Toubro, Larsen and Toubro, L&T]
+  M&M: [Mahindra & Mahindra, Mahindra and Mahindra, M&M]
+  MARUTI: [Maruti Suzuki, Maruti]
+  MAXHEALTH: [Max Healthcare]
+  NESTLEIND: [Nestle India]
+  NTPC: [NTPC]
+  ONGC: [ONGC, Oil and Natural Gas]
+  POWERGRID: [Power Grid]
+  RELIANCE: [Reliance Industries, Reliance, RIL]
+  SBILIFE: [SBI Life]
+  SBIN: [State Bank of India, SBI]
+  SHRIRAMFIN: [Shriram Finance]
+  SUNPHARMA: [Sun Pharmaceutical, Sun Pharma]
+  TCS: [Tata Consultancy, TCS]
+  TATACONSUM: [Tata Consumer]
+  TATASTEEL: [Tata Steel]
+  TECHM: [Tech Mahindra]
+  TITAN: [Titan Company, Titan]
+  TRENT: [Trent]
+  ULTRACEMCO: [UltraTech Cement, UltraTech]
+  WIPRO: [Wipro]
+  TMPV: [Tata Motors Passenger, Tata Motors]

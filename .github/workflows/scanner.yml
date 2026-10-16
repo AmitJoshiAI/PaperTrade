@@ -1,0 +1,61 @@
+# Catalyst scanner: every 30 minutes in NSE market hours, pull free news feeds and Yahoo quotes, score them
+# against the watchlist and open theses, and commit alerts/ and docs/alerts.json (the dashboard's Alerts
+# section). Never touches trading state or orders. See papertrade/scanner.py and SCANNER_PROMPT.md.
+#
+# GitHub cron is best-effort: runs can start 5-20 minutes late, and are sometimes skipped at busy times.
+name: Catalyst scanner
+
+on:
+  schedule:
+    # 09:00-15:30 IST = 03:30-10:00 UTC, Monday-Friday, every 30 minutes (two lines cover :30 and :00)
+    - cron: "30 3-9 * * 1-5"   # 03:30, 04:30 ... 09:30 UTC = 09:00 ... 15:00 IST
+    - cron: "0 4-10 * * 1-5"   # 04:00, 05:00 ... 10:00 UTC = 09:30 ... 15:30 IST
+  workflow_dispatch:            # manual "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write   # commit and push alerts/ and docs/alerts.json
+
+concurrency:
+  group: scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Scan feeds and quotes
+        # Feed errors are handled inside the scanner (recorded in alerts/latest.md and docs/alerts.json).
+        # A crash of the scanner itself still lets the commit step run, so earlier alerts stay published.
+        continue-on-error: true
+        timeout-minutes: 3
+        run: python -m papertrade.scanner
+
+      - name: Commit and push alerts
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A alerts docs/alerts.json
+          if git diff --cached --quiet; then
+            echo "No new alerts; no commit."
+            exit 0
+          fi
+          git commit -m "scanner $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M') IST"
+          # the daily run, the review routine or a laptop may have pushed meanwhile: rebase and retry
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i * 5))
+          done
+          echo "Push failed after 3 attempts"; exit 1

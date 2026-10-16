@@ -149,6 +149,31 @@ td { font-variant-numeric: tabular-nums; }
 .md a { color: var(--series); }
 .md .table-scroll { margin: 0 0 12px; }
 
+/* alerts (catalyst scanner, docs/alerts.json) */
+.al-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 999px; overflow: hidden; }
+.seg button { font: inherit; font-size: 13px; padding: 6px 12px; border: 0; background: var(--surface); color: var(--ink-2); cursor: pointer; min-height: 32px; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--page); }
+.alerts { display: grid; gap: 8px; margin-top: 10px; }
+.alert { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 10px; padding: 12px 14px; }
+.alert .score { grid-row: 1 / span 4; align-self: start; min-width: 34px; text-align: center; font-size: 14px; font-weight: 700;
+  padding: 4px 6px; border-radius: 8px; border: 1px solid currentColor; color: var(--muted); }
+.alert .score.hi { color: var(--sell); background: color-mix(in srgb, var(--sell) 14%, transparent); }
+.alert .score.mid { color: var(--buy); background: color-mix(in srgb, var(--buy) 10%, transparent); }
+.alert .hl { font-weight: 600; color: var(--ink); text-decoration: none; overflow-wrap: anywhere; }
+.alert .hl:hover, .alert .hl:focus-visible { text-decoration: underline; }
+.alert .meta { font-size: 12px; color: var(--muted); }
+.alert .chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 12px; font-weight: 600; padding: 1px 7px; border-radius: 6px; background: var(--code-bg); color: var(--ink-2); }
+.chip.up { color: var(--up); } .chip.down { color: var(--down); }
+.alert > :not(.score) { grid-column: 2; }
+.alert .th { font-size: 13px; color: var(--muted); }
+.alert .note { margin: 2px 0 0; padding-left: 16px; font-size: 13px; color: var(--ink-2); overflow-wrap: anywhere; }
+.alert .th.open { color: var(--sell); font-weight: 600; }
+.alert .th a { color: inherit; }
+.more { margin-top: 10px; width: 100%; font: inherit; font-size: 14px; padding: 10px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--ink-2); cursor: pointer; }
+
 footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--muted); }
 footer p { margin: 4px 0; }
 footer a { color: inherit; }
@@ -526,6 +551,101 @@ footer a { color: inherit; }
     }
   }
 
+  // ---------- alerts (catalyst scanner: docs/alerts.json, refreshed every 30 min in market hours) ----------
+  function istTime(iso) {
+    var d = iso ? new Date(iso) : null;
+    if (!d || isNaN(d)) return "";
+    return d.toLocaleString("en-IN", { timeZone: "Asia/Kolkata", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false }) + " IST";
+  }
+  function ago(iso) {
+    var d = iso ? new Date(iso) : null;
+    if (!d || isNaN(d)) return "";
+    var m = Math.round((Date.now() - d.getTime()) / 60000);
+    return m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " d ago";
+  }
+  function repoFileUrl(path) {   // only on GitHub Pages: <owner>.github.io/<repo>/ -> github.com/<owner>/<repo>
+    var host = location.hostname, seg = location.pathname.split("/")[1];
+    return /\.github\.io$/.test(host) && seg ? "https://github.com/" + host.split(".")[0] + "/" + seg + "/blob/main/" + path : null;
+  }
+  function alertCard(a, highMin) {
+    var cls = a.score >= highMin ? "hi" : a.score >= 4 ? "mid" : "";
+    var head = a.link ? h("a", { class: "hl", href: a.link, target: "_blank", rel: "noopener", text: a.headline }) : h("span", { class: "hl", text: a.headline });
+    var chips = (a.symbols || []).map(function (s) {
+      var moving = (a.moving || []).indexOf(s) >= 0;
+      return h("span", { class: "chip", text: s + (moving ? " · moving" : "") });
+    });
+    if (a.kind === "price" && isNum(a.change_pct)) chips.unshift(h("span", { class: "chip " + tone(a.change_pct), text: pct(a.change_pct, 1) }));
+    (a.keywords || []).forEach(function (k) { chips.push(h("span", { class: "chip", style: "font-weight:400", text: k })); });
+    var th = a.theses || [];
+    var open = th.filter(function (t) { return t.status === "open"; });
+    var thLine;
+    if (th.length) {
+      var kids = [open.length ? "Matches open thesis: " : "Matches proposed thesis: "];
+      th.forEach(function (t, i) {
+        var url = repoFileUrl("theses/" + t.slug + ".md");
+        if (i) kids.push(", ");
+        kids.push(url ? h("a", { href: url, target: "_blank", rel: "noopener", text: t.slug }) : t.slug);
+        if (t.status !== "open" && open.length) kids.push(" (" + t.status + ")");
+      });
+      thLine = h("div", { class: "th" + (open.length ? " open" : "") }, kids);
+    } else {
+      thLine = h("div", { class: "th", text: "No open thesis" });
+    }
+    return h("div", { class: "card alert" }, [
+      h("div", { class: "score num " + cls, title: "score", text: String(a.score) }),
+      head,
+      h("div", { class: "meta", text: a.source + " · " + istTime(a.time || a.first_seen) }),
+      chips.length ? h("div", { class: "chips" }, chips) : null,
+      thLine,
+      (a.second_order_candidates || []).length ? h("ul", { class: "note", "aria-label": "Second-order note" },
+        a.second_order_candidates.map(function (t) { return h("li", { text: t }); })) : null
+    ]);
+  }
+  function renderAlerts(sec, d) {
+    sec.textContent = "";
+    var all = d.alerts || [], highMin = d.high_score || 6;
+    var high = all.filter(function (a) { return a.score >= highMin; });
+    var feeds = d.feeds || [], bad = feeds.filter(function (f) { return !f.ok; });
+    var mode = high.length ? "high" : "all", shown = 12;
+    var list = h("div", { class: "alerts" }), more = h("button", { class: "more", type: "button" });
+    var bHigh = h("button", { type: "button", text: "High (" + high.length + ")" }), bAll = h("button", { type: "button", text: "All (" + all.length + ")" });
+    function draw() {
+      var src = mode === "high" ? high : all;
+      list.textContent = "";
+      if (!src.length) list.appendChild(h("p", { class: "empty", text: mode === "high" ? "No high-score alerts in the last two days." : "No alerts yet." }));
+      src.slice(0, shown).forEach(function (a) { list.appendChild(alertCard(a, highMin)); });
+      more.style.display = src.length > shown ? "" : "none";
+      more.textContent = "Show " + Math.min(12, src.length - shown) + " more";
+      bHigh.setAttribute("aria-pressed", mode === "high"); bAll.setAttribute("aria-pressed", mode === "all");
+    }
+    bHigh.onclick = function () { mode = "high"; shown = 12; draw(); };
+    bAll.onclick = function () { mode = "all"; shown = 12; draw(); };
+    more.onclick = function () { shown += 12; draw(); };
+    sec.appendChild(h("h2", { text: "Alerts" }));
+    sec.appendChild(h("div", { class: "al-head" }, [
+      h("span", { class: "muted small", text: "Updated " + istTime(d.generated_at) + " (" + ago(d.generated_at) + ") · " +
+        (feeds.length - bad.length) + "/" + feeds.length + " feeds · " + (d.movers || 0) + " of " + (d.quotes_checked || 0) + " symbols moving" }),
+      h("div", { class: "seg", role: "group", "aria-label": "Filter alerts" }, [bHigh, bAll])
+    ]));
+    if (bad.length) sec.appendChild(h("p", { class: "muted small", style: "margin:6px 0 0", text: "Feed down: " + bad.map(function (f) { return f.name; }).join(", ") }));
+    sec.appendChild(list);
+    sec.appendChild(more);
+    sec.appendChild(h("p", { class: "muted small", style: "margin:8px 0 0", text: "News scored against the watchlist and theses. Not orders: the hourly review writes notes and draft theses for you to approve." }));
+    draw();
+  }
+  function loadAlerts(app) {
+    var sec = document.getElementById("alerts");
+    if (!sec) { sec = h("section", { id: "alerts" }); app.appendChild(sec); }
+    fetch("alerts.json", { cache: "no-cache" })
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (d) { renderAlerts(sec, d); })
+      .catch(function (e) {
+        sec.textContent = "";
+        sec.appendChild(h("h2", { text: "Alerts" }));
+        sec.appendChild(h("p", { class: "empty", text: "No scanner data yet (alerts.json: " + e.message + "). It appears after the first scanner run." }));
+      });
+  }
+
   // ---------- page ----------
   function render(d) {
     var app = document.getElementById("app");
@@ -564,9 +684,13 @@ footer a { color: inherit; }
         h("strong", { text: rs(combinedEq) }), " of " + rs(combinedCap) + " paper capital."]));
     }
     hdr.appendChild(h("nav", { class: "jump", "aria-label": "Sections" }, [
-      ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis sleeve"], ["#trades", "Trades"], ["#journal", "Journal"]
+      ["#alerts", "Alerts"], ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis sleeve"], ["#trades", "Trades"], ["#journal", "Journal"]
     ].map(function (p) { return h("a", { href: p[0], text: p[1] }); })));
     app.appendChild(hdr);
+
+    // (a2) alerts: right under the header, the most time-sensitive thing on the page
+    app.appendChild(h("section", { id: "alerts" }, [h("h2", { text: "Alerts" }), h("p", { class: "muted small", text: "Loading alerts.json..." })]));
+    loadAlerts(app);
 
     // (b) progress strip
     var target = cfg.target_gross_per_day, net = cfg.target_net_per_day, avg = perf.avg_per_day;
@@ -726,6 +850,7 @@ footer a { color: inherit; }
         h("p", { text: "Could not load data.json (" + e.message + ")." }),
         h("p", { class: "muted small", text: "If you opened this file directly from disk, serve the docs/ folder instead (python -m http.server --directory docs). On GitHub Pages, check that docs/data.json is committed." })
       ]));
+      loadAlerts(app);
       app.appendChild(h("footer", null, [h("p", { text: "Paper trading only. No real money." })]));
     });
 })();

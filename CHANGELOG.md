@@ -78,3 +78,30 @@
   futures margin blocking, F&O-list membership and FX moves are not modelled.
 - **Revert if**: a short or a US leg ever changes a momentum file, or the FUT rates turn out wrong (fix
   the rates first).
+
+## 2026-10-17 - Catalyst scanner added (no trading rule changed)
+
+- **What**: `papertrade/scanner.py` pulls free news feeds (NSE announcements and results RSS, BSE
+  corporate announcements via BSE's public JSON, ET Markets and ET Stocks RSS, Moneycontrol RSS, CNBC top
+  news RSS) and Yahoo quotes for `watchlist.yaml` (Nifty 50 + open/proposed thesis symbols + WAAREEENER,
+  META, CRWV, NBIS). Flags a move of more than 4% vs the previous close or volume above 3x the 20-day
+  average; scores headlines on watchlist names, catalyst keywords, moving symbols and thesis matches.
+  Writes `alerts/<date>.json`, `alerts/latest.md`, `docs/alerts.json`. New dashboard section "Alerts"
+  under the header. `.github/workflows/scanner.yml` runs it every 30 minutes, 09:00-15:30 IST, weekdays.
+  `SCANNER_PROMPT.md` is the brief for an hourly cloud routine that writes second-order notes to
+  `alerts/notes/` and may draft theses under `theses/proposed/` (not read by the engine). New dependency:
+  PyYAML 6.0.3.
+- **Why**: the Waaree IPO (Oct 2024) and Meta GPU-rental (1 July 2026) examples were found after the
+  move. The scanner exists to see such events on the day.
+- **Evidence it does not touch trading**: it reads only `theses/*.md` and `watchlist.yaml`, writes only
+  `alerts/` and `docs/alerts.json`, and imports nothing from engine, strategy, portfolio or thesis.
+  First real run, 2026-10-17 03:45 IST (a Saturday, so Friday's data): 6 of 7 feeds OK (Moneycontrol 403),
+  54 symbols priced, 7 flagged (TECHM +8.5% on 8.1x volume, WIPRO +6.0%, TCS +4.9%, INFY +4.6%,
+  BHARTIARTL volume 3.7x, CRWV -11.9%, NBIS -12.2%), 58 alerts kept, 8 HIGH.
+- **Found while building**: Yahoo's daily bar for 2026-10-16 on NSE symbols had volume but no Close.
+  Dropping it silently judged Thursday's move instead (it flagged NESTLEIND -7.8%, a Thursday move, and
+  missed TECHM's +8.5% Friday). The scanner now uses the last 5-minute price for such a bar. The momentum
+  sleeve's own download (`data.py`) drops rows without a Close and was NOT changed; worth checking
+  whether its 17:30 run ever sees the same gap.
+- **Revert if**: the scanner commits ever conflict with the daily run, or the alerts are judged noise
+  after two weeks of use (then tune `HIGH_SCORE`, the keyword weights or `watchlist.yaml` first).
