@@ -26,7 +26,7 @@ Ledger: one file per thesis, theses/<slug>.md, with front matter between two `--
 
 A symbol may also be an explicit Yahoo ticker containing a '.' (7203.T), which then needs `currency:`
 (a key of config.FX_TO_INR). Foreign prices stay in their own currency; cash, P&L and sleeve equity are
-in INR at the fixed rate in config (USD_INR).
+in INR at the day's USD/INR (fx.py: Yahoo USDINR=X close, set into config.USD_INR each run).
 
 A catalyst thesis also needs (the run rejects the file without them):
 

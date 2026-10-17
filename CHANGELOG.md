@@ -154,3 +154,33 @@
 - **Not modelled**: SPAN margin changes after entry, early exercise, option skew/liquidity, FX moves, tax.
 - **Revert if**: either new sleeve ever changes a momentum or thesis file or fails a daily run (each step is
   wrapped so a failure is logged and the other sleeves are still saved).
+
+## 2026-10-17 - USD/INR: daily Yahoo rate replaces the fixed 84.0; US sleeve re-initialised
+
+- **Why**: the fixed `USD_INR = 84.0` was wrong. Yahoo `USDINR=X` closed at 95.78, 95.29, 95.15, 94.52 and
+  94.96 over the last five bars (13-17 Oct 2026). At 84 the US sleeve's Rs 5,00,000 was $5,952; at the
+  real rate it is about $5,290.
+- **What**: new `papertrade/fx.py`. `get_usd_inr(date)` / `lookup(date)` download USDINR=X daily closes
+  (same yfinance path as `data.py`), cache them in `state/fx_rates.csv` (date, rate, source, fetched_at)
+  and return the close on or before the date; if the download fails, the cache; only with no cache,
+  `config.USD_INR_FALLBACK = 95.0`. Each source is logged and named in the journal. `engine.run_day` sets
+  the NSE-date rate into `config.USD_INR` / `FX_TO_INR["USD"]` before the thesis sleeve runs (thesis US legs
+  use it); the US sleeve uses the close on or before its US market date.
+- **US sleeve**: starting capital is Rs 5,00,000 / USD/INR of its start date, stored as `start_fx` in
+  `state/us_portfolio.json`. INR equity each day = USD equity x that day's rate, so a rupee move is P&L;
+  `state/us_equity_curve.csv` gains `usd_inr, fx_date, day_pnl_inr, day_fx_pnl_inr, total_pnl_inr,
+  fx_pnl_inr`, and the journal and dashboard show "of which FX". Limits and the circuit breaker stay in
+  USD (an FX move alone never trips the breaker).
+- **Re-initialised**: `state/us_portfolio.json` and `state/us_equity_curve.csv` had been created on
+  2026-10-16 at 84.0 ($5,952.38). No US order had ever filled, so the first run with this code
+  re-created them at 94.5248 (Yahoo close of 2026-10-16): $5,289.62. The code does this only when the
+  book has no `start_fx` AND no position or trade; otherwise it keeps the book and labels 84.0 as its
+  legacy start rate.
+- **Evidence**: HEAD vs new code on copies of the committed state (`run` and `run --offline`; the online
+  run included real momentum fills at the 16 Oct open): momentum and thesis state, `pending_orders.json`
+  (apart from `generated_at`), F&O state and orders, and the journal's momentum, thesis and F&O sections
+  byte-identical. The thesis export differs only in `usd_inr` (84.0 -> the day's rate); no thesis has a US
+  leg today. FX split checked by hand: rate 94.5248 -> 95.00 with a $10 loss gives INR P&L 1,563.63, of
+  which FX 2,513.63 on the day (previous USD equity x rate change).
+- **Revert if**: Yahoo's USDINR=X proves unreliable (it had a 93.55 print on 2026-08-26 between 95.70 and
+  95.43, likely a bad tick); then switch the source, not back to a fixed rate.

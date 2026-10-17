@@ -282,9 +282,13 @@ class DerivBook:
     _EQUITY_FILE = ""
     CURRENCY = "INR"
 
-    @classmethod
-    def fx(cls) -> float:
-        return float(config.FX_TO_INR[cls.CURRENCY])
+    def fx(self) -> float:
+        """Book currency -> INR for this book's latest mark (the US book overrides it with its day rate)."""
+        return float(config.FX_TO_INR[self.CURRENCY])
+
+    def _extra_equity(self, row: dict, prev: Optional[dict]) -> dict:
+        """Extra equity-curve columns (the US book adds its FX columns). None for this base book."""
+        return {}
 
     @classmethod
     def initial_capital(cls) -> float:
@@ -417,6 +421,7 @@ class DerivBook:
                    positions_value=round(eq - self.cash, 2), equity=round(eq, 2),
                    equity_inr=round(eq * self.fx(), 2), day_pnl=round(eq - prev_eq, 2),
                    positions=len(self.positions), costs_paid=round(self.costs_paid, 2))
+        row.update(self._extra_equity(row, prev.iloc[-1].to_dict() if len(prev) else None))
         curve = pd.concat([curve, pd.DataFrame([row])], ignore_index=True) if len(curve) else pd.DataFrame([row])
         config.STATE_DIR.mkdir(parents=True, exist_ok=True)
         curve.to_csv(self._path("_EQUITY_FILE"), index=False)

@@ -24,7 +24,7 @@ Options (OPT):   brokerage Rs 20 flat per order; STT 0.15% of premium on the sel
                  0.15% for both follows Zerodha's STT support article as found on 2026-10-17.
 US (USD):        us_charges(): zero commission; SEC fee 0.0000278 x sell notional; FINRA TAF $0.000166 per
                  share sold, max $8.30 per trade (options: $0.00279 per contract sold). VERIFY: both fees
-                 are reset by the SEC/FINRA, usually once a year. FX conversion is a fixed rate (config).
+                 are reset by the SEC/FINRA, usually once a year. FX: the day's USD/INR (fx.py).
 """
 from __future__ import annotations
 import math

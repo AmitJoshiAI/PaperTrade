@@ -147,6 +147,13 @@ def run_day(do_update: bool = True) -> dict:
         shown_fills = [{k: ("" if pd.isna(v) else v) for k, v in r.items()} for r in t.to_dict("records")]
     # Thesis sleeve: a separate book, run only after the momentum sleeve is saved. A failure here must not
     # fail the run (the momentum fills above would not be committed in GitHub Actions).
+    # USD/INR for this run: Yahoo USDINR=X close on or before the market date (fx.py), set before the
+    # thesis and US sleeves convert any USD leg. A failure falls back to the cache, then to config.
+    try:
+        from . import fx
+        fx.use_rate(fx.lookup(today, download=do_update))
+    except Exception:
+        log.exception("USD/INR refresh failed; using config.USD_INR %s", config.USD_INR)
     thesis_out, thesis_section = None, None
     try:
         from . import thesis
@@ -188,11 +195,12 @@ def run_day(do_update: bool = True) -> dict:
 
 
 def combined_lines(eq_row: dict, thesis_out, fno_out, us_out) -> list[str]:
-    """Journal section: the four sleeves side by side, in INR (US at the fixed USD_INR)."""
+    """Journal section: the four sleeves side by side, in INR (US at that day's USD/INR)."""
     rows = [("Momentum", config.STARTING_CAPITAL, eq_row["equity"]),
             ("Thesis", config.THESIS_CAPITAL, thesis_out["equity"]["equity"] if thesis_out else None),
             ("India F&O", config.FNO_CAPITAL, fno_out["equity"]["equity"] if fno_out else None),
-            ("US (at USD_INR %g)" % config.USD_INR, config.US_CAPITAL, us_out["equity"]["equity_inr"] if us_out else None)]
+            ("US (at USD/INR %.4f, close of %s)" % (us_out["book"].fx(), us_out["book"].fx_date) if us_out else "US",
+             config.US_CAPITAL, us_out["equity"]["equity_inr"] if us_out else None)]
     lines = ["## All sleeves", "", "| Sleeve | Capital | Equity | P&L |", "|---|---|---|---|"]
     for name, cap, eq in rows:
         lines.append(f"| {name} | Rs {cap:,.0f} | " + (f"Rs {eq:,.0f} | Rs {eq - cap:+,.0f} |" if eq is not None else "n/a (step failed) | - |"))
@@ -200,4 +208,8 @@ def combined_lines(eq_row: dict, thesis_out, fno_out, us_out) -> list[str]:
     if all(r[2] is not None for r in rows):
         tot = sum(r[2] for r in rows)
         lines.append(f"| **Combined** | Rs {cap:,.0f} | **Rs {tot:,.0f}** | Rs {tot - cap:+,.0f} ({(tot / cap - 1) * 100:+.2f}%) |")
+    if us_out:
+        lines += ["", f"USD/INR {us_out['book'].fx():.4f}: {us_out['book'].fx_note}. Of the US sleeve's INR P&L, "
+                      f"Rs {us_out['equity']['fx_pnl_inr']:+,.2f} is FX (start rate {us_out['book'].start_fx:.4f}). "
+                      f"Check against the RBI/FBIL reference rate (https://www.fbil.org.in/); they differ by a few paise."]
     return lines

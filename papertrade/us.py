@@ -1,7 +1,10 @@
 """US sleeve: US stocks and ETFs (long, and PAPER short) and US equity options, paper only.
 
-Rs 5,00,000 (config.US_CAPITAL) converted once at the FIXED config.USD_INR (84.0 -> $5,952.38). The book
-is kept in USD; INR figures are USD x USD_INR (FX moves are not modelled). Separate files: state/us_*,
+Rs 5,00,000 (config.US_CAPITAL) converted to USD at the USD/INR close of the sleeve's start date (fx.py:
+Yahoo USDINR=X, cached in state/fx_rates.csv), stored as "start_fx". The book is kept in USD; its INR
+value each day is USD equity x that day's rate, so a rupee move shows up as INR P&L, reported separately
+as "of which FX" (USD equity x (day rate - start rate)). The circuit breaker works on the USD day P&L, so
+an FX move alone never trips it. Separate files: state/us_*,
 decisions/us_orders.json. Accounting, risk rules and the circuit breaker are in derivbook.py; every limit
 is in RISK_LIMITS.md. Decisions by the daily reviewer (ROUTINE_PROMPT.md).
 
@@ -44,11 +47,13 @@ from __future__ import annotations
 
 import logging
 import math
+from dataclasses import dataclass
 from datetime import date as _date, datetime, timezone, timedelta
+from typing import Optional
 
 import pandas as pd
 
-from . import config, data
+from . import config, data, fx
 from .costs import us_charges, Charges
 from .derivbook import (DerivBook, DPos, Reject, NotYet, bs_price, intrinsic, years_to, position_id,
                         run_orders, load_queue, save_queue, record_executed, OPTION_KINDS)
@@ -61,7 +66,14 @@ CHAIN_LABEL = "real option chain (mid of bid/ask)"
 REF_TICKER = "SPY"          # always downloaded: fixes the US market date even with nothing held
 
 
+@dataclass
 class UsBook(DerivBook):
+    start_fx: Optional[float] = None      # USD/INR used to convert the Rs 5,00,000 at the start
+    start_fx_date: Optional[str] = None
+    fx_rate: Optional[float] = None       # USD/INR of the latest mark
+    fx_date: Optional[str] = None
+    fx_note: str = ""
+
     _PORTFOLIO_FILE = "US_PORTFOLIO_FILE"
     _TRADES_FILE = "US_TRADES_FILE"
     _EQUITY_FILE = "US_EQUITY_FILE"
@@ -70,6 +82,22 @@ class UsBook(DerivBook):
     @classmethod
     def initial_capital(cls) -> float:
         return config.US_CAPITAL / config.USD_INR
+
+    def fx(self) -> float:
+        return float(self.fx_rate or config.FX_TO_INR["USD"])
+
+    def _extra_equity(self, row: dict, prev) -> dict:
+        """INR view: the day's rate, INR P&L (day and total) and the part of it that is FX alone."""
+        rate, start = self.fx(), float(self.start_fx or self.fx())
+        prev_usd = float(prev["equity"]) if prev else self.starting_capital
+        pr = prev.get("usd_inr") if prev else None
+        prev_rate = start if pr is None or pd.isna(pr) else float(pr)
+        eq = self.equity()                 # unrounded, so day one shows 0.00, not a rounding residue
+        return dict(usd_inr=round(rate, 4), fx_date=self.fx_date or "",
+                    day_pnl_inr=round(eq * rate - (float(prev["equity_inr"]) if prev else prev_usd * prev_rate), 2),
+                    day_fx_pnl_inr=round(prev_usd * (rate - prev_rate), 2),
+                    total_pnl_inr=round(eq * rate - self.starting_capital * start, 2),
+                    fx_pnl_inr=round(eq * (rate - start), 2))
 
     @classmethod
     def instrument(cls, p: DPos) -> str:
@@ -328,7 +356,27 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
     warnings = [f"No price data for {t}" for t in prices.attrs["dropped"]]
     market = UsMarket(prices, book, online=do_update)
     market_day = market.latest or fallback_day
-    fills, notes, keep, executed = run_orders(book, queue["orders"], market, market_day)
+    rate = fx.lookup(market_day, download=do_update)
+    notes = []
+    if book.start_fx is None:
+        if book.positions or len(UsBook.trades()):
+            # never happens today (no US order had filled when start_fx was added); keep the book as it is
+            book.start_fx, book.start_fx_date = 84.0, "legacy fixed rate"
+            warnings.append("US sleeve has positions from before the live rate; its start rate is the old fixed 84.0")
+        else:
+            config.USD_INR = rate.rate
+            cap = config.US_CAPITAL / rate.rate
+            if config.US_EQUITY_FILE.exists():
+                config.US_EQUITY_FILE.unlink()      # its rows were at the old fixed 84.0
+            book = UsBook(cash=cap, starting_capital=cap, start_fx=rate.rate, start_fx_date=rate.date)
+            market.book = book
+            notes.append(f"US sleeve (re)initialised at the live rate: Rs {config.US_CAPITAL:,.0f} / {rate.rate:.4f} "
+                         f"({rate.note}) = ${cap:,.2f}. No US order had ever filled.")
+    book.fx_rate, book.fx_date, book.fx_note = rate.rate, rate.date, rate.note
+    if rate.source == "fallback":
+        warnings.append(f"USD/INR: {rate.note}; INR values use {rate.rate}")
+    fills, n0, keep, executed = run_orders(book, queue["orders"], market, market_day)
+    notes += n0
     ex_fills, ex_notes = expire_positions(book, market, market_day)
     fills += ex_fills
     notes += ex_notes
@@ -360,16 +408,29 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
 
 def journal_lines(s: dict) -> list[str]:
     book = s["book"]
-    intro = (f"Separate book: Rs {config.US_CAPITAL:,.0f} = ${book.starting_capital:,.2f} at the FIXED USD_INR "
-             f"{config.USD_INR:g} (config; FX moves not modelled). US stocks/ETFs long and paper-short, US options "
+    e = s["equity"]
+    intro = (f"Separate book: Rs {config.US_CAPITAL:,.0f} = ${book.starting_capital:,.2f} at USD/INR "
+             f"{book.start_fx:.4f} (close of {book.start_fx_date}). INR values use each day's USD/INR "
+             f"(Yahoo USDINR=X daily close, state/fx_rates.csv). US stocks/ETFs long and paper-short, US options "
              f"priced from the {CHAIN_LABEL}; a Black-Scholes fallback is labelled. US market date {s['date']} "
              f"(US calendar). Every short stock: {PAPER_SHORT_US}. Limits in RISK_LIMITS.md.")
-    return _journal_lines(s, title="## US sleeve", ccy="$", label=CHAIN_LABEL, intro=intro, inr_note=True)
+    rows = [f"| USD/INR used today | {book.fx():.4f} ({book.fx_note}) |",
+            f"| Total P&L in INR | Rs {e['total_pnl_inr']:,.2f}, of which FX Rs {e['fx_pnl_inr']:,.2f} "
+            f"(start rate {book.start_fx:.4f}) |",
+            f"| Day P&L in INR | Rs {e['day_pnl_inr']:,.2f}, of which FX Rs {e['day_fx_pnl_inr']:,.2f} |"]
+    return _journal_lines(s, title="## US sleeve", ccy="$", label=CHAIN_LABEL, intro=intro, inr_note=True,
+                          extra_rows=rows)
 
 
 def export_data() -> dict:
     book = UsBook.load()
     d = _export(book, config.US_ORDERS_FILE, CHAIN_LABEL, "USD", book.last_run.get("date") or _date.today().isoformat())
-    d["usd_inr"] = config.USD_INR
+    curve = book.equity_curve()
+    last = curve.iloc[-1].to_dict() if len(curve) else {}
+    d["usd_inr"] = book.fx()
+    d["fx_date"], d["fx_note"] = book.fx_date, book.fx_note
+    d["start_fx"], d["start_fx_date"] = book.start_fx, book.start_fx_date
+    for k in ("total_pnl_inr", "fx_pnl_inr", "day_pnl_inr", "day_fx_pnl_inr"):
+        d[k] = last.get(k)
     d["paper_short_label"] = PAPER_SHORT_US
     return d

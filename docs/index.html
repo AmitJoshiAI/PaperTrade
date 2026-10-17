@@ -584,7 +584,12 @@ footer a { color: inherit; }
         h("div", null, [h("span", { text: "Cash" }), cur(sd.cash, ccy, usd ? 2 : 0)]),
         h("div", null, [h("span", { text: "Margin blocked" }), cur(sd.margin_used, ccy, usd ? 2 : 0)]),
         h("div", null, [h("span", { text: "Positions" }), (sd.positions || []).length + " of " + sd.max_positions]),
-        h("div", null, [h("span", { text: "Charges paid" }), cur(sd.costs_paid, ccy, 2)])
+        h("div", null, [h("span", { text: "Charges paid" }), cur(sd.costs_paid, ccy, 2)]),
+        usd ? h("div", { class: "wide" }, [h("span", { text: "INR P&L since start" }),
+          rsSigned(sd.total_pnl_inr, 2) + ", of which FX " + rsSigned(sd.fx_pnl_inr, 2)]) : null,
+        usd ? h("div", { class: "wide muted" }, [h("span", { text: "USD/INR used" }),
+          (isNum(sd.usd_inr) ? sd.usd_inr.toFixed(2) : "n/a") + " · " + (sd.fx_note || "") +
+          (isNum(sd.start_fx) ? " · start rate " + sd.start_fx.toFixed(2) + " (" + (sd.start_fx_date || "") + ")" : "")]) : null
       ]),
       h("p", { class: "muted small", style: "margin:10px 0 0", text: blurb }),
       h("p", { class: "muted small", style: "margin:6px 0 0", text: "Limits: max " + sd.max_positions + " positions, risk per order ≤ " +
@@ -773,7 +778,8 @@ footer a { color: inherit; }
       })));
       hdr.appendChild(h("p", { class: "muted small", style: "margin:8px 0 0" }, ["All sleeves ",
         h("strong", { text: isNum(cb.equity) ? rs(cb.equity) : "n/a" }), " of " + rs(cb.capital) + " paper capital" +
-        (isNum(cb.equity) && cb.capital ? " (" + pct((cb.equity / cb.capital - 1) * 100) + ")" : "") + ". US at a fixed Rs " + cb.usd_inr + "/$."]));
+        (isNum(cb.equity) && cb.capital ? " (" + pct((cb.equity / cb.capital - 1) * 100) + ")" : "") + ". US at Rs " +
+        (isNum(cb.usd_inr) ? cb.usd_inr.toFixed(2) : "n/a") + "/$" + (cb.fx_date ? " (Yahoo USDINR=X close of " + dShort(cb.fx_date) + ")" : "") + "."]));
     } else if (th) {
       var combinedEq = (perf.equity || 0) + (th.equity || 0), combinedCap = th.combined_capital || 0;
       hdr.appendChild(h("p", { class: "muted small", style: "margin:10px 0 0" }, [
@@ -895,7 +901,7 @@ footer a { color: inherit; }
 
     // (e3) India F&O and US sleeves, then all four sleeves on one chart
     [["fno", "India F&O sleeve", "NIFTY / BANKNIFTY and listed stock futures and options. Futures are priced spot x (1 + 6.5% x days/365); options with Black-Scholes on India VIX (index) or 1.5x 30-day realised vol (stocks). Mark-to-model, not market quotes."],
-     ["us", "US sleeve", "US stocks and ETFs (long; shorts are paper only) and US options priced at the mid of the real Yahoo option chain (a Black-Scholes fallback is labelled). Rs 5,00,000 converted at a fixed Rs/$; FX moves not modelled."]
+     ["us", "US sleeve", "US stocks and ETFs (long; shorts are paper only) and US options priced at the mid of the real Yahoo option chain (a Black-Scholes fallback is labelled). Rs 5,00,000 converted at the USD/INR of the start date; INR values use each day's Yahoo USDINR=X close, so a rupee move shows up as P&L (shown as FX)."]
     ].forEach(function (x) {
       if (d[x[0]]) renderDeriv(app, x[0], x[1], d[x[0]], x[2]);
       else if (x[0] in d) app.appendChild(section(x[0], x[1], [h("div", { class: "banner", text: x[1] + " data could not be exported this run (see the run log)." })]));

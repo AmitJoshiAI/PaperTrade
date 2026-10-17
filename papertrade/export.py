@@ -157,6 +157,12 @@ def build_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | Non
         journal=_latest_journal(),
         dropped_symbols=_dropped(prices, dropped),
     )
+    # USD/INR as of the price date from the cache (no download here), as the run used it.
+    try:
+        from . import fx
+        fx.use_rate(fx.lookup(price_date or datetime.now().strftime("%Y-%m-%d"), download=False))
+    except Exception:
+        log.exception("USD/INR lookup failed; using config.USD_INR")
     # Thesis sleeve (separate book). A failure here leaves the momentum dashboard intact.
     try:
         from .thesis import export_data
@@ -222,7 +228,9 @@ def _combined(momentum_curve: pd.DataFrame, out: dict) -> dict:
     known = [s for s in sleeves if s["equity"] is not None]
     capital = sum(c for _n, c, _k in parts)
     return dict(capital=capital, equity=sum(s["equity"] for s in known) if len(known) == len(sleeves) else None,
-                sleeves=sleeves, equity_curve=curve, usd_inr=config.USD_INR)
+                sleeves=sleeves, equity_curve=curve,
+                usd_inr=(out.get("us") or {}).get("usd_inr") or config.USD_INR,
+                fx_date=(out.get("us") or {}).get("fx_date"), fx_note=(out.get("us") or {}).get("fx_note"))
 
 
 def write_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | None = None, dropped=None) -> Path:

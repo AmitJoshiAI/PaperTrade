@@ -49,10 +49,12 @@ THESIS_MAX_POSITION_PCT = 0.25        # hard cap per thesis: 25% of sleeve equit
 THESIS_MAX_SHORT_PCT = 0.50           # paper shorts: total short notional <= 50% of the sleeve's capital
                                       # (the lower of starting capital and current equity), checked at each SHORT fill
 
-# Thesis legs priced in another currency (e.g. a US ticker, `market: US`) keep their prices in that
-# currency; cash, P&L and sleeve equity are in INR at this FIXED rate. 84.0 is a placeholder, not a live
-# rate: change it here when it drifts. Changing it revalues every open foreign leg at once (no FX history).
-USD_INR = 84.0
+# USD legs (thesis US legs and the whole US sleeve) keep their prices in USD; INR values use the day's
+# USD/INR rate: Yahoo USDINR=X daily close, cached in state/fx_rates.csv (papertrade/fx.py). Each run sets
+# USD_INR and FX_TO_INR["USD"] to that day's rate before the thesis and US sleeves run. The value below is
+# used only when there is neither a Yahoo rate nor a cached one (fx.py logs it as FALLBACK).
+USD_INR_FALLBACK = 95.0
+USD_INR = USD_INR_FALLBACK            # overwritten each run by fx.use_rate()
 FX_TO_INR = {"INR": 1.0, "USD": USD_INR}
 
 PRODUCT = "CNC"             # CNC = delivery. "MIS" = intraday (not used by baseline strategy)
@@ -68,7 +70,8 @@ FNO_EQUITY_FILE = STATE_DIR / "fno_equity_curve.csv"
 FNO_ORDERS_FILE = DECISIONS_DIR / "fno_orders.json"
 FNO_PRICES_FILE = CACHE_DIR / "fno_prices.parquet"
 
-US_CAPITAL = 500_000.0                # INR; held in USD at USD_INR (fixed, see above): Rs 5,00,000 / 84 = $5,952.38
+US_CAPITAL = 500_000.0                # INR; converted to USD at the USD/INR close of the sleeve's start date
+                                      # (state/us_portfolio.json "start_fx"); INR equity = USD equity x day's rate
 US_PORTFOLIO_FILE = STATE_DIR / "us_portfolio.json"
 US_TRADES_FILE = STATE_DIR / "us_trades.csv"
 US_EQUITY_FILE = STATE_DIR / "us_equity_curve.csv"

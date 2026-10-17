@@ -382,7 +382,7 @@ def _f(x, dp=0):
 
 
 def journal_lines(s: dict, title: str = "## India F&O sleeve", ccy: str = "Rs", label: str = MODEL_LABEL,
-                  intro: str | None = None, inr_note: bool = False) -> list[str]:
+                  intro: str | None = None, inr_note: bool = False, extra_rows=None) -> list[str]:
     """Shared by both derivative sleeves (us.py passes its own title, currency and label)."""
     book, day = s["book"], s["date"]
     eq = s["equity"]["equity"]
@@ -397,6 +397,7 @@ def journal_lines(s: dict, title: str = "## India F&O sleeve", ccy: str = "Rs", 
               f"| Sleeve equity | {ccy} {_f(eq, 2)}{inr(eq)} |",
               f"| Day P&L | {ccy} {_f(s['equity']['day_pnl'], 2)}{inr(s['equity']['day_pnl'])} |",
               f"| Total P&L since start | {ccy} {_f(total, 2)} ({total / book.starting_capital * 100:+.2f}%) |",
+              *(extra_rows or []),
               f"| Cash / margin used | {ccy} {_f(book.cash, 2)} / {ccy} {_f(book.margin_used(), 2)} |",
               f"| Charges paid / realised P&L | {ccy} {_f(book.costs_paid, 2)} / {ccy} {_f(book.realised_pnl, 2)} |",
               f"| Open positions | {len(book.positions)} of {config.DERIV_MAX_POSITIONS} |",

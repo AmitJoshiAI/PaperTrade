@@ -84,7 +84,7 @@ The repository is checked out for you. Work on branch main. Steps:
         Do not queue them. Long options and covered spreads fit.
       - A short option must be covered (same underlying and expiry): queue the cover in the same file;
         the engine fills covers before shorts.
-      - US: the sleeve is about $5,950, so the 10% limit is about $595 per order: a single share of an
+      - US: the sleeve is about $5,290, so the 10% limit is about $529 per order: a single share of an
         expensive stock or one ATM contract on a $300 stock may not fit. Check the premium x 100.
    d. **Close positions**: SELL / COVER in `decisions/thesis_orders.json` (thesis), `"action": "CLOSE"`
       with the position id from the journal in the F&O / US files.

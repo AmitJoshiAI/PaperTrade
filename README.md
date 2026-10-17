@@ -11,7 +11,7 @@ and writes a daily journal for review. No real orders are ever placed.
 | Momentum | Rs 5,00,000 | the daily rotation rules below; the Rs 1,000/day target applies here | `state/portfolio.json`, `trades.csv`, `equity_curve.csv`, `decisions/pending_orders.json` | daily (DAILY.md) |
 | Thesis | Rs 5,00,000 | (decided by Claude) one written thesis per position: `theme` (macro reason, weeks to years) or `catalyst` (positioned before a scheduled event such as results, Budget, IPO listing or RBI policy, days to weeks, with a pre-set post-event rule) or `second_order` (an event with the obvious winner held long and the non-obvious losers held as PAPER shorts, see `theses/_EXAMPLE_second_order.md`) | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly on Fridays; catalysts on the first trading day after the event (THESIS_REVIEW.md) |
 | India F&O | Rs 5,00,000 | (decided by Claude) NIFTY / BANKNIFTY and listed stock futures and options, in lots; futures priced spot x carry, options by Black-Scholes on India VIX (mark-to-model, not market quotes) | `papertrade/fno.py`, `state/fno_*`, `decisions/fno_orders.json` | daily |
-| US | Rs 5,00,000 (= $5,952 at a fixed Rs 84/$) | (decided by Claude) US stocks/ETFs long and paper-short, US options at the mid of REAL Yahoo option chains | `papertrade/us.py`, `state/us_*`, `decisions/us_orders.json` | daily |
+| US | Rs 5,00,000 (about $5,290 at the start date's USD/INR) | (decided by Claude) US stocks/ETFs long and paper-short, US options at the mid of REAL Yahoo option chains | `papertrade/us.py`, `state/us_*`, `decisions/us_orders.json` | daily |
 
 Each sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
 sleeve's capital, rules and history are unchanged. **The user has made Claude the decision-maker for the
@@ -30,8 +30,8 @@ labelled wherever they appear:
   are charged as Zerodha futures trades (`costs.py`, product `FUT`, rates to verify on zerodha.com), the
   proceeds are credited to cash but cannot fund buys, and total short notional is capped at 50% of the
   sleeve's capital (`THESIS_MAX_SHORT_PCT`). Lot sizes and margin blocking are not modelled.
-- **US tickers** (`market: US`, e.g. META) keep prices in USD and are converted to INR at a FIXED rate,
-  `USD_INR = 84.0` in `config.py`, a placeholder to update by hand. Trading them for real needs an
+- **US tickers** (`market: US`, e.g. META) keep prices in USD and are converted to INR at the day's
+  USD/INR (see "Exchange rate" below). Trading them for real needs an
   overseas broker under LRS; shorting them is not possible from India.
 
 A **catalyst scanner** (`python -m papertrade.scanner`, every 30 minutes in market hours on GitHub
@@ -65,7 +65,7 @@ Run from the project root:
 | `... pending` | Print `decisions/pending_orders.json`. |
 | `... thesis` | Print the thesis sleeve: cash, holdings, theses and queued thesis orders. |
 | `... fno status` | Print the India F&O sleeve: equity, cash, margin, positions (with how each is priced), circuit breaker, queued orders. |
-| `... us status` | The same for the US sleeve, in USD with the INR value at the fixed rate. |
+| `... us status` | The same for the US sleeve, in USD with the INR value at the day's USD/INR. |
 | `... costs QTY PRICE [--product MIS, FUT or OPT]` | Show Zerodha charges for a buy and a sell of QTY shares (or option units at a premium) at PRICE. |
 | `... export` | Rewrite `docs/data.json` for the dashboard from the current state. Read-only: no download, no state change. `run` already does this at the end. |
 | `.venv/Scripts/python -m papertrade.scanner` | Catalyst scanner: pull the news feeds and watchlist quotes once, write `alerts/<date>.json`, `alerts/latest.md` and `docs/alerts.json`. `--no-quotes` skips Yahoo. Touches no trading state. |
@@ -190,6 +190,25 @@ stops new positions until the next Monday). **At Rs 5 lakh the 10% rule rejects 
 list** (one NIFTY lot needs about Rs 1.8 lakh margin); the F&O sleeve in practice holds long options and
 covered spreads. See RISK_LIMITS.md for all of it and for what is not modelled. Tax is not modelled: the
 user is in the 30% slab, which applies to F&O profits and US short-term gains.
+
+## Exchange rate
+
+Every INR value of a USD position (thesis US legs and the whole US sleeve) uses the day's USD/INR:
+**Yahoo Finance `USDINR=X` daily close**, downloaded each run by `papertrade/fx.py` (the same yfinance
+path as the price data) and cached in `state/fx_rates.csv` (date, rate, source, fetched_at). A run uses
+the close on or before its market date (the NSE date for thesis legs, the US session date for the US
+sleeve). If the download fails it uses the cache, and only with no cache at all the fallback
+`USD_INR_FALLBACK = 95.0` in `config.py`; the journal says which one was used.
+
+The US sleeve's Rs 5,00,000 was converted at the rate of its start date (`start_fx` in
+`state/us_portfolio.json`). Its INR equity each day is USD equity x that day's rate, so a rupee move is
+P&L too: the journal and dashboard show it separately as "of which FX".
+
+To check the rate by hand, compare with the RBI / FBIL reference rate (https://www.fbil.org.in/, also
+on RBI's "Reference Rate" page), published once a day around 13:30 IST. Yahoo's close is a market quote
+at a different time, so the two usually differ by a few paise. Note: Yahoo sometimes shows a bar dated
+on a Saturday for USDINR=X (it did on 2026-10-17); the run simply uses the latest close on or before
+its own market date.
 
 ## Cost model (Zerodha, NSE equity)
 

@@ -6,7 +6,7 @@
   pending        print the pending orders file
   thesis         print the thesis sleeve: cash, holdings, theses, queued thesis orders
   fno status     print the India F&O sleeve: equity, margin, positions, circuit breaker, queued orders
-  us status      print the US sleeve (same, in USD with INR at the fixed USD_INR)
+  us status      print the US sleeve (same, in USD with INR at the day's USD/INR)
   costs QTY PX   show Zerodha charges for a buy+sell of QTY shares at PX (delivery; --product MIS|FUT|OPT)
   export         write docs/data.json for the dashboard (read-only; no download, no state change)
   reset --yes    wipe state/, decisions/, journal/ and start again (both sleeves; theses/ is kept)
@@ -125,7 +125,7 @@ def cmd_deriv(args):
     curve = b.equity_curve()
     day = str(curve["date"].iloc[-1]) if len(curve) else (b.start_date or "")
     eq = b.equity()
-    inr = f" (Rs {eq * b.fx():,.0f} at USD_INR {b.fx():g})" if b.CURRENCY != "INR" else ""
+    inr = f" (Rs {eq * b.fx():,.0f} at USD/INR {b.fx():.4f}, {getattr(b, 'fx_note', '')})" if b.CURRENCY != "INR" else ""
     print(f"{name} sleeve as of {day or 'no run yet'}: equity {ccy} {eq:,.2f}{inr} of {ccy} {b.starting_capital:,.2f}  "
           f"cash {ccy} {b.cash:,.2f}  margin used {ccy} {b.margin_used():,.2f}")
     print(f"  charges {ccy} {b.costs_paid:,.2f}  realised {ccy} {b.realised_pnl:,.2f}  "

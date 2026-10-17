@@ -39,7 +39,7 @@ session the user asks).
 | Free cash | must cover the margin / premium plus charges the order takes out | code |
 | Naked short options | rejected: a short CALL needs a long future / long call of the same underlying and expiry (US: or 100 shares per contract); a short PUT needs a short future / long put of the same expiry (US: or short stock). Each cover unit covers one short unit | code |
 | Closing a cover | rejected while it would leave a short option uncovered; close the short first | code |
-| Daily-loss circuit breaker | a day's equity change below -3% of starting capital (Rs 15,000; US $178.57) blocks new positions and futures rolls until the next Monday; exits always allowed; state in `state/*_portfolio.json` "breaker" | code (`DERIV_DAILY_LOSS_PCT`) |
+| Daily-loss circuit breaker | a day's equity change below -3% of starting capital (Rs 15,000; US 3% of its USD starting capital, about $159) blocks new positions and futures rolls until the next Monday; exits always allowed; state in `state/*_portfolio.json` "breaker" | code (`DERIV_DAILY_LOSS_PCT`) |
 | Futures margin | 12% (index) / 20% (stock) of the fill notional, blocked until exit | code (`FUT_MARGIN_PCT`) |
 | Short option margin | 0 when covered by a future or stock; the spread's max loss (strike gap x units) when covered by a long option | code |
 | US short stock margin | 50% of notional (Reg T initial) | code (`US_SHORT_STOCK_MARGIN_PCT`) |
@@ -54,7 +54,7 @@ What the 10% rule means at this size (worked out 2026-10-17, NIFTY about 23,000)
   **every future in the list is rejected**. The F&O sleeve can in practice hold long options and
   covered option spreads only. That follows from the rule as specified; it is not a bug. Changing it is
   the user's call.
-- US: the sleeve is about $5,950, so about $595 per order: one share of SPY (about $770) does not fit;
+- US: the sleeve is about $5,290, so about $529 per order: one share of SPY (about $770) does not fit;
   one ATM AAPL call (about $1,130) does not; a $3-5 premium option or a few shares of a cheaper stock do.
 
 ## Things NOT modelled (read before trusting a number)
@@ -64,7 +64,8 @@ What the 10% rule means at this size (worked out 2026-10-17, NIFTY about 23,000)
 - Margin is fixed at entry (no daily SPAN recalculation, no margin calls); exchange MTM settlement is not
   modelled separately (it nets to the same equity).
 - US options are cash-settled at intrinsic on expiry; early exercise and assignment are not modelled.
-- FX is fixed at `USD_INR` (84.0); a rupee move does not change the US sleeve's INR value.
+- FX: INR values use the day's Yahoo USDINR=X close (README "Exchange rate"); the US sleeve's limits and
+  circuit breaker work in USD, so a rupee move changes its INR value but never trips the breaker.
 - Tax is not modelled. The user is in the 30% slab: F&O profits (business income) and US short-term
   gains are taxed at the slab rate, so a gross paper profit is about 70% of that after tax.
 - Lot sizes, strike steps, expiry weekdays and charge rates are config values to VERIFY on nseindia.com
