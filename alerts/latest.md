@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-19 15:17 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news. Failed: BSE announcements (HTTPError: HTTP Error 403: Forbidden).
+Generated 2026-10-19 15:30 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -125,7 +125,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9fe1f94fdfca
 - Second-order candidates: 
 
-## 11. [7 HIGH] CARE Ratings Limited: update on sale of partial stake held by the Company in its wholly owned subsidiary i.e. CareEdge Global IFSC Limited to State Bank of India and NSE IFSC Limited.
+## 11. [7 HIGH] CARE Ratings Ltd: Update On Sale Of Partial Stake Held By The Company In Its Wholly Owned Subsidiary I.E. Careedge Global IFSC Limited To State Bank Of India And NSE IFSC Limited
+
+- Time: 2026-10-19 14:23 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/7d1ed7ca-bb93-4732-8fa8-99115be4d46c.pdf
+- Matched symbols: SBIN
+- Keywords: stake sale
+- Thesis match: none
+- Score: 7
+- Alert id: a61b7daffdb6
+- Second-order candidates: 
+
+## 12. [7 HIGH] CARE Ratings Limited: update on sale of partial stake held by the Company in its wholly owned subsidiary i.e. CareEdge Global IFSC Limited to State Bank of India and NSE IFSC Limited.
 
 - Time: 2026-10-19 14:18 IST
 - Source: NSE announcements
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: e6e0b3e93f90
 - Second-order candidates: Winner: CARE Ratings (CARERATINGS) - monetises a stake in a subsidiary and gets two strong strategic partners for its GIFT City arm; SBI (SBIN) and NSE are the buyers, so the SBIN match is incidental. / Losers: none clear - small GIFT City stake deal, no obvious competitor harmed. / Catalyst: surprise - corporate announcement filed 14:18 IST; deal value not stated in the headline. / Thesis fit: none
 
-## 12. [7 HIGH] Axis Bank shares fall 5% despite 39% rise in Q2 net profit; here's why
+## 13. [7 HIGH] Axis Bank shares fall 5% despite 39% rise in Q2 net profit; here's why
 
 - Time: 2026-10-19 10:15 IST
 - Source: Business Standard
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9831a9e19a8d
 - Second-order candidates: Winner: none clear / Losers: Axis Bank - same event as the note above; sell-off reflects expectations above the profit number, not the profit growth itself. / Catalyst: scheduled (Q2 results, done) - already priced in. / Thesis fit: none
 
-## 13. [6 HIGH] CRWV -11.9% vs previous close (close 61.39, bar 2026-10-16)
+## 14. [6 HIGH] CRWV -11.9% vs previous close (close 61.39, bar 2026-10-16)
 
 - Time: 2026-10-19 14:43 IST
 - Source: Yahoo quotes
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 646a7162c807
 - Second-order candidates: 
 
-## 14. [6 HIGH] NBIS -12.2% vs previous close (close 165.47, bar 2026-10-16)
+## 15. [6 HIGH] NBIS -12.2% vs previous close (close 165.47, bar 2026-10-16)
 
 - Time: 2026-10-19 14:43 IST
 - Source: Yahoo quotes
@@ -171,16 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 55826987f1d6
-- Second-order candidates: 
-
-## 15. [6 HIGH] UltraTech Cement Limited: Financial Results Updates
-
-- Time: 2026-10-19 14:00 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/content/debt/WDM/ULTRACEMCO1_19102026135919_Outcome_of_BM_-_Financial_Results.pdf
-- Matched symbols: ULTRACEMCO
-- Keywords: results
-- Thesis match: none
-- Score: 6
-- Alert id: 7ca456e36e03
 - Second-order candidates: 
