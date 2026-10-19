@@ -1,7 +1,7 @@
 ---
 thesis: Rising crude and a weak rupee lift the rupee realisation of an oil producer (ONGC) and squeeze the marketing margin of a refiner-marketer that cannot pass pump prices through quickly (HPCL). Long the winner, paper-short the loser.
 type: second_order
-status: proposed
+status: open
 event: Crude price rise plus rupee weakness through September-October 2026 (analyst commentary, 3-15 Oct 2026); not a single-day event, so the rule is time-boxed
 event_date: 2026-10-16
 rule_due_date: 2026-12-15
@@ -10,7 +10,7 @@ post_event_applied:
 horizon: 2 months
 size_cap_pct: 25
 invalidation: Government cuts excise duty or allows pump price hikes that restore HPCL's marketing margin; or a windfall tax on upstream producers removes ONGC's benefit from higher crude
-entry_date:
+entry_date: 2026-10-19
 legs:
   - symbol: ONGC
     side: LONG

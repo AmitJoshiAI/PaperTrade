@@ -1,13 +1,13 @@
 ---
 symbol: WAAREEENER
 thesis: Test the "strong results, stock still falls" pattern: Waaree has dropped after each of its last two strong quarters; be positioned before Q2 FY27 results and exit the day after, whatever the numbers say.
-entry_date:
+entry_date: 2026-10-19
 horizon: 2 weeks
 target: 0
 invalidation: Results are postponed beyond event_date (then the rule applies anyway: sell at the next open after event_date)
 invalidation_price: 0
 size_cap_pct: 10
-status: proposed
+status: open
 type: catalyst
 event: Waaree Energies Q2 FY27 results (board meeting date not yet announced; trading window closed since 1 Oct 2026 until 48h after results)
 event_date: 2026-10-28

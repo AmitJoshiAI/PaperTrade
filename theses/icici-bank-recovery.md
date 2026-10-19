@@ -1,13 +1,13 @@
 ---
 symbol: ICICIBANK
 thesis: After the longest losing streak in 25 years, driven by foreign selling, crude and the rupee, large private banks with purely domestic earnings and clean balance sheets recover first when the selling exhausts.
-entry_date:
+entry_date: 2026-10-19
 horizon: 3-6 months
 target: 1600
 invalidation: Nifty closes more than 5% below its 15 Oct 2026 level (22,623) on a sustained basis, or ICICI Q2/Q3 results show rising slippages (gross NPA up quarter on quarter)
 invalidation_price: 1320
 size_cap_pct: 20
-status: proposed
+status: open
 type: theme
 event:
 event_date:
