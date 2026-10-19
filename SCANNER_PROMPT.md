@@ -21,11 +21,14 @@ The repository is checked out for you. Work on branch main. Steps:
    `theses/_EXAMPLE_second_order.md` and the "Second-order checklist" in `THESIS_REVIEW.md` once, and
    list the open and proposed theses (`grep -l "^status: \(open\|proposed\)" theses/*.md`).
 
-2. Staleness. The first line under the title says when the scanner last ran ("Generated ... IST"). If
-   it is a weekday between 09:00 and 15:45 IST and that time is more than 90 minutes ago, run the
-   scanner once yourself: `pip install -r requirements.txt` then `python -m papertrade.scanner`, and
-   re-read `alerts/latest.md`. If feeds are listed as Failed, mention them in your result; do not try
-   to fix them.
+2. Staleness. The first line under the title says when the scanner last ran ("Generated ... IST").
+   NEVER run the scanner (or any downloading code) yourself: this sandbox's network proxy blocks the
+   news and price hosts (every feed returns "Tunnel connection failed: 403"), and `pip install` fails
+   here. The scanner runs only in GitHub Actions. If the alerts are more than 90 minutes old on a
+   weekday between 09:00 and 15:45 IST, write one line in your result ("scanner stale since <time>,
+   GitHub Actions schedule late or skipped") and continue with the alerts that exist; if they are more
+   than 24 hours old, stop after that line and report. Do not send a push notification for staleness.
+   If feeds are listed as Failed, mention them in your result; do not try to fix them.
 
 3. Pick the alerts to note: those marked `HIGH` in `alerts/latest.md`, highest score first, at most 8
    per run. Skip any whose alert id already has a note in today's notes file

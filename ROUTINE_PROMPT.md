@@ -34,10 +34,13 @@ The repository is checked out for you. Work on branch main. Steps:
 
 2. Check whether today's market date has been processed. Compare the newest journal date with
    today's date in IST (`TZ=Asia/Kolkata date +%F`). If today is a weekday and the newest journal
-   is older than today, the Actions run may have failed or Yahoo was late. In that case run
-   `pip install -r requirements.txt` then `python -m papertrade run` yourself, read its `Date:`
-   line, and continue with whatever date it produced. If it is a weekend or the run clearly
-   processed today, do not run it again.
+   is older than today, the Actions run may have failed, or Yahoo had not published today's bar
+   at 17:30 IST (a second scheduled run at 18:00 IST retries). NEVER run `python -m papertrade run`
+   or any downloading code yourself: this sandbox's network proxy blocks the price and news hosts
+   (403), so a run here would produce a broken day. Instead: if the newest journal is yesterday's
+   market date, review it only if it has no "Claude's review" yet (then continue normally with that
+   date); otherwise write one line in your result ("daily run not yet available for <date>; Actions
+   late or Yahoo late"), make no decisions, and stop. On a weekend or NSE holiday, stop the same way.
 
 3. Read the newest journal file in full (momentum sections, "## Thesis sleeve", "## India F&O sleeve",
    "## US sleeve", "## All sleeves"), plus `state/trades.csv`, `state/equity_curve.csv`,
@@ -100,7 +103,10 @@ The repository is checked out for you. Work on branch main. Steps:
    sizing habit, a changed post-event rule) is rule-level: add a dated CHANGELOG.md entry for it.
 
 6. Regenerate the dashboard data so the review shows on the phone:
-   `pip install -r requirements.txt` (if not done) then `python -m papertrade export`.
+   `pip install -q -r requirements.txt` (if it fails on a Debian-installed PyYAML, run
+   `pip install -q --ignore-installed PyYAML -r requirements.txt`) then `python -m papertrade export`.
+   `export` reads local files only and needs no network. If it still fails, skip it, commit the
+   review anyway, and say so in your result; the next GitHub Actions run regenerates the dashboard.
 
 7. Commit and push: `git add journal docs/data.json theses decisions/thesis_orders.json
    decisions/fno_orders.json decisions/us_orders.json CHANGELOG.md`, commit with message
