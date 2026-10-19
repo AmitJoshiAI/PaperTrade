@@ -29,6 +29,7 @@ import hashlib
 import html
 import json
 import logging
+import os
 import re
 import sys
 import time
@@ -71,11 +72,15 @@ FEEDS = [
      "url": "https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml"},
     {"id": "nse_results", "name": "NSE results", "kind": "nse_rss", "primary": True,
      "url": "https://nsearchives.nseindia.com/content/RSS/Financial_Results.xml"},
+    # BSE: a fallback chain (see BSE_PATHS). `paths` is the order tried; the environment variable
+    # PAPERTRADE_BSE_PATHS (comma-separated names) overrides it, and PAPERTRADE_BSE_API_URL overrides `url`,
+    # so the runner's path can be changed without a code edit.
     {"id": "bse", "name": "BSE announcements", "kind": "bse_json", "primary": True,
+     "paths": ["cffi_api", "urllib_api", "nse_api", "cffi_notices"],   # cffi first: urllib gets 403 on GitHub runners
      "url": "https://api.bseindia.com/BseIndiaAPI/api/AnnSubCategoryGetData/w?pageno={page}&strCat=-1"
             "&strPrevDate={prev}&strScrip=&strSearch=P&strToDate={to}&strType=C&subcategory=-1",
      "headers": {"Referer": "https://www.bseindia.com/", "Origin": "https://www.bseindia.com",
-                 "Accept": "application/json"}},
+                 "Accept": "application/json, text/plain, */*"}},
     {"id": "et_markets", "name": "ET Markets", "kind": "rss",
      "url": "https://economictimes.indiatimes.com/markets/rssfeeds/1977021501.cms"},
     {"id": "et_stocks", "name": "ET Stocks", "kind": "rss",
@@ -217,7 +222,9 @@ def _from_nse(feed: dict, raw: bytes) -> list[dict]:
     return items
 
 
-def _from_bse(feed: dict, now: datetime) -> list[dict]:
+def _from_bse(feed: dict, now: datetime, get_json=None) -> list[dict]:
+    """get_json(url) -> parsed JSON; default plain urllib with the feed's headers."""
+    get_json = get_json or (lambda u: json.loads(_fetch(u, feed.get("headers"))))
     # The endpoint only answers a single-day query (prev == to; a two-day range returns nothing). 50 rows a
     # page, newest first. Today pages 1-2 cover a busy half hour; early in the day, top up with yesterday.
     today = now.strftime("%Y%m%d")
@@ -229,7 +236,7 @@ def _from_bse(feed: dict, now: datetime) -> list[dict]:
         if day == yday and today_rows >= 50:
             break
         url = feed["url"].format(page=page, prev=day, to=day)
-        resp = json.loads(_fetch(url, feed.get("headers")))
+        resp = get_json(url)
         if not isinstance(resp, dict) or "Table" not in resp:
             raise ValueError("BSE response has no 'Table' (format changed?)")
         rows = resp.get("Table") or []
@@ -251,6 +258,104 @@ def _from_bse(feed: dict, now: datetime) -> list[dict]:
                           "link": link, "published": _parse_time(r.get("DT_TM") or r.get("NEWS_DT")),
                           "symbol_text": f"{company} {subject} {detail}"})
     return items
+
+
+# BSE answered 403 to GitHub Actions runners on 2026-10-19 while it worked from this laptop. Paths, tried
+# in order until one yields items (checked locally 2026-10-19; the runner cannot be tested from here):
+#   cffi_api      (first) the JSON endpoint through curl_cffi impersonating Chrome, after a GET of bseindia.com
+#                 to collect Akamai cookies (works locally; aimed at a TLS-fingerprint block);
+#   urllib_api    the same endpoint with plain urllib and browser headers (works locally, 403 on runners);
+#   nse_api       SUBSTITUTE if BSE blocks the runner's IP outright: NSE's corporate-announcements JSON
+#                 (curl_cffi session with NSE's cookies; 20 latest filings with times). Items are labelled
+#                 "NSE filings (BSE substitute)"; most companies file on both exchanges;
+#   cffi_notices  SUBSTITUTE: BSE's exchange notices RSS (exchange circulars, not company filings).
+# Not used: AnnGetData/w answers "No Record Found!" with the same parameters; corporates/ann.html is an
+# Angular shell with no data in the HTML.
+BSE_HOME = "https://www.bseindia.com/"
+BSE_NOTICES = "https://www.bseindia.com/data/xml/notices.xml"
+NSE_PAGE = "https://www.nseindia.com/companies-listing/corporate-filings-announcements"
+NSE_API = "https://www.nseindia.com/api/corporate-announcements?index=equities"
+
+
+def _cffi_session(warm_url: str | None = None):
+    from curl_cffi import requests as cffi_requests
+    sess = cffi_requests.Session(impersonate="chrome")
+    if warm_url:
+        try:
+            sess.get(warm_url, timeout=FETCH_TIMEOUT)   # sets the Akamai cookies; its status does not matter
+        except Exception:
+            pass
+    return sess
+
+
+def _cffi_json(sess, url: str, headers: dict | None = None):
+    r = sess.get(url, headers=headers, timeout=FETCH_TIMEOUT)
+    if r.status_code != 200:
+        raise RuntimeError(f"HTTP {r.status_code}")
+    return json.loads(r.content)
+
+
+def _bse_urllib_api(feed: dict, now: datetime) -> list[dict]:
+    return _from_bse(feed, now)
+
+
+def _bse_cffi_api(feed: dict, now: datetime) -> list[dict]:
+    sess = _cffi_session(BSE_HOME)
+    return _from_bse(feed, now, lambda u: _cffi_json(sess, u, feed.get("headers")))
+
+
+def _bse_nse_api(feed: dict, now: datetime) -> list[dict]:
+    sess = _cffi_session(NSE_PAGE)
+    rows = _cffi_json(sess, NSE_API, {"Referer": NSE_PAGE, "Accept": "application/json, text/plain, */*"})
+    if not isinstance(rows, list):
+        raise ValueError("NSE announcements API: unexpected response (format changed?)")
+    items = []
+    for r in rows:
+        company, desc = _clean(r.get("sm_name")), _clean(r.get("desc"))
+        text = _clean(r.get("attchmntText"))
+        items.append({"title": f"{company}: {desc}" if desc else company, "summary": text[:300],
+                      "link": _clean(r.get("attchmntFile")) or NSE_PAGE, "published": _parse_time(r.get("an_dt")),
+                      "symbol_text": f"{company} {_clean(r.get('symbol'))} {desc} {text}",
+                      "source": "NSE filings (BSE substitute)"})
+    return items
+
+
+def _bse_cffi_notices(feed: dict, now: datetime) -> list[dict]:
+    r = _cffi_session().get(BSE_NOTICES, timeout=FETCH_TIMEOUT)
+    if r.status_code != 200:
+        raise RuntimeError(f"HTTP {r.status_code}")
+    items = _from_rss({}, r.content)
+    for it in items:
+        it["source"] = "BSE notices (BSE substitute)"
+    return items
+
+
+BSE_PATHS = {"urllib_api": _bse_urllib_api, "cffi_api": _bse_cffi_api, "nse_api": _bse_nse_api,
+             "cffi_notices": _bse_cffi_notices}
+
+
+def _from_bse_chain(feed: dict, now: datetime) -> tuple[list[dict], str, list[str]]:
+    """Returns (items, path that served them, failures of the earlier paths). Raises if all fail."""
+    feed = dict(feed)
+    if os.environ.get("PAPERTRADE_BSE_API_URL"):
+        feed["url"] = os.environ["PAPERTRADE_BSE_API_URL"]
+    names = [n.strip() for n in (os.environ.get("PAPERTRADE_BSE_PATHS") or ",".join(feed["paths"])).split(",")
+             if n.strip()]
+    tried = []
+    for name in names:
+        fn = BSE_PATHS.get(name)
+        if fn is None:
+            tried.append(f"{name}: unknown path (valid: {', '.join(BSE_PATHS)})")
+            continue
+        try:
+            items = fn(feed, now)
+            if not items:
+                raise ValueError("0 items")
+            return items, name, tried
+        except Exception as e:
+            tried.append(f"{name}: {type(e).__name__}: {str(e)[:100]}")
+            log.info("bse path %s failed: %s", name, tried[-1])
+    raise RuntimeError("all BSE paths failed; " + " | ".join(tried))
 
 
 def _from_rss(feed: dict, raw: bytes) -> list[dict]:
@@ -358,20 +463,20 @@ def fetch_feed(feed: dict, now: datetime) -> tuple[dict, list[dict]]:
               "optional": bool(feed.get("optional"))}
     try:
         if feed["kind"] == "bse_json":
-            items = _from_bse(feed, now)
+            items, status["path"], status["skipped"] = _from_bse_chain(feed, now)
         elif feed["kind"] == "moneycontrol":
             items, status["path"], status["skipped"] = _from_moneycontrol(now)
         else:
             raw = _fetch(feed["url"], feed.get("headers"))
             items = _from_nse(feed, raw) if feed["kind"] == "nse_rss" else _from_rss(feed, raw)
         for it in items:
-            it["source"] = feed["name"]
+            it["source"] = it.get("source") or feed["name"]   # a substitute path names its own source
             it["source_id"] = feed["id"]
             it["primary"] = bool(feed.get("primary"))
         status.update(ok=True, items=len(items))
     except Exception as e:   # fail soft: blocked, timeout, bad XML, changed format
         items = []
-        status["error"] = f"{type(e).__name__}: {str(e)[:160]}"
+        status["error"] = f"{type(e).__name__}: {str(e)[:500]}"   # long enough for every path of a chain
         log.warning("feed %s failed: %s", feed["id"], status["error"])
     status["seconds"] = round(time.monotonic() - t0, 1)
     return status, items
