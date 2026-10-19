@@ -37,10 +37,15 @@ The repository is checked out for you. Work on branch main. Steps:
    is older than today, the Actions run may have failed, or Yahoo had not published today's bar
    at 17:30 IST (a second scheduled run at 18:00 IST retries). NEVER run `python -m papertrade run`
    or any downloading code yourself: this sandbox's network proxy blocks the price and news hosts
-   (403), so a run here would produce a broken day. Instead: if the newest journal is yesterday's
-   market date, review it only if it has no "Claude's review" yet (then continue normally with that
-   date); otherwise write one line in your result ("daily run not yet available for <date>; Actions
-   late or Yahoo late"), make no decisions, and stop. On a weekend or NSE holiday, stop the same way.
+   (403), so a run here would produce a broken day. Instead, trigger the GitHub Actions run by a
+   push (push events are reliable; cron is not): `date -u +%FT%TZ > triggers/daily && git add
+   triggers/daily && git commit -m "trigger daily run" && git push origin main`. Then wait for it:
+   every 60 seconds run `git fetch -q origin && git log origin/main -1 --format=%s`, up to 12 minutes,
+   until the newest commit subject starts with "daily run". Then `git pull --rebase origin main` and
+   continue with the newest journal. If it does not arrive in 12 minutes, or the journal is still not
+   today's market date (Yahoo has not published today's bar, or an NSE holiday): if the newest journal
+   has no "Claude's review" yet, review that date normally; otherwise write one line in your result
+   ("daily run not available for <date>"), make no decisions, and stop.
 
 3. Read the newest journal file in full (momentum sections, "## Thesis sleeve", "## India F&O sleeve",
    "## US sleeve", "## All sleeves"), plus `state/trades.csv`, `state/equity_curve.csv`,

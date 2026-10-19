@@ -12,6 +12,8 @@ on:
     - cron: "37 3-9 * * 1-5"   # 03:37, 04:37 ... 09:37 UTC = 09:07 ... 15:07 IST
     - cron: "7 4-10 * * 1-5"   # 04:07, 05:07 ... 10:07 UTC = 09:37 ... 15:37 IST
   workflow_dispatch:            # manual "Run workflow" button in the Actions tab
+  push:                         # reliable fallback: any push that touches triggers/scanner starts a run
+    paths: ["triggers/scanner"]
 
 permissions:
   contents: write   # commit and push alerts/ and docs/alerts.json
