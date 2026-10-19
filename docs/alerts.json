@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-19T14:43+05:30",
+ "generated_at": "2026-10-19T15:17+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 432,
+   "items": 472,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.4
   },
   {
    "id": "nse_results",
@@ -17,7 +17,7 @@
    "items": 4,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.3
   },
   {
    "id": "bse",
@@ -35,7 +35,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "et_stocks",
@@ -68,14 +68,15 @@
    "id": "moneycontrol",
    "name": "Moneycontrol",
    "ok": true,
-   "items": 25,
+   "items": 100,
    "error": null,
    "optional": false,
-   "path": "curl_cffi HTML listing",
+   "path": "Google News RSS",
    "skipped": [
-    "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
+    "curl_cffi RSS: ParseError: not well-formed (invalid token): line 6, column 305",
+    "curl_cffi HTML listing: ValueError: listing page parsed to 0 articles (layout changed?)"
    ],
-   "seconds": 1.2
+   "seconds": 2.1
   },
   {
    "id": "cnbc",
@@ -84,16 +85,16 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.4
   }
  ],
  "optional_unavailable": [],
  "quotes_checked": 55,
  "movers": 3,
  "quotes_error": null,
- "new_alerts": 183,
+ "new_alerts": 38,
  "high_score": 6,
- "seconds": 5.1,
+ "seconds": 4.3,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -127,6 +128,238 @@
  ],
  "watchlist_size": 55,
  "alerts": [
+  {
+   "id": "c1d09e48e8b4",
+   "kind": "news",
+   "time": "2026-10-19T15:16+05:30",
+   "source": "NSE announcements",
+   "headline": "Kalyani Steels Limited: voting results.",
+   "summary": "Kalyani Steels Limited has submitted the Exchange a copy Srutinizers report of Postal Ballot. Further, the company has informed the Exchange regarding voting results. |SUBJECT: Shareholders meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/KSL_19102026151440_KSL_Postal_Ballot-Voting_Result_19102026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "153fd8543677",
+   "kind": "news",
+   "time": "2026-10-19T15:15+05:30",
+   "source": "NSE announcements",
+   "headline": "Jana Small Finance Bank Limited: The Exchange has sought clarification from Jana Small Finance Bank Limited with respect to recent news item captioned Federal Bank not in active acquisition talks, but open to deals: ED Harsh Dugar ET Now Exclusive. The response from the Company is attached.",
+   "summary": "The Exchange has sought clarification from Jana Small Finance Bank Limited with respect to recent news item captioned Federal Bank not in active acquisition talks, but open to deals: ED Harsh Dugar ET Now Exclusive. The response from the Co",
+   "link": "https://nsearchives.nseindia.com/corporate/vinay_raikar_janabank_com_19102026151431_Clarification3rd.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "dc9eed9cc6fe",
+   "kind": "news",
+   "time": "2026-10-19T15:12+05:30",
+   "source": "NSE announcements",
+   "headline": "Educomp Solutions Limited: The Exchange has sought clarification from Educomp Solutions Limited for the quarter ended 31-Mar-2020 with respect to Regulation 33 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015. On basis of above the Company is required to clarify the following: -1. The company has not submitted the Statement of Impact of Audit Qualifications in case of modified opinion(s) -2. Quarterly figures not submitted by the Company The response of the Company is awaited.",
+   "summary": "The Exchange has sought clarification from Educomp Solutions Limited for the quarter ended 31-Mar-2020 with respect to Regulation 33 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015. On basis of above the Comp",
+   "link": "",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "510715551e1d",
+   "kind": "news",
+   "time": "2026-10-19T15:07+05:30",
+   "source": "NSE announcements",
+   "headline": "German Green Steel and Power Limited: Board Meeting to be held on 24-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended June 2026 .",
+   "summary": "GERMAN GREEN STEEL AND POWER LIMITED has informed the Exchange about Board Meeting to be held on 24-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended June 2026 . |SUBJECT: Boa",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_26436_WebXMLFile_20261019_150714521.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "3c84523acb20",
+   "kind": "news",
+   "time": "2026-10-19T15:06+05:30",
+   "source": "BusinessLine",
+   "headline": "Q2 Results Today Live: UltraTech Q2 profit declines q-o-q, Union Bank & HFCL Q2 PAT up, Bajaj Finance, Hindustan Zinc, LTTS, Piramal Finance, IREDA to announce Q2 results",
+   "summary": "Q2 Results Today, 19th October 2026 Live Updates: Stay tuned to businessline for more",
+   "link": "https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-bajaj-finance-ultratech-cement-hindustan-zinc-union-bank-of-india-ltts-piramal-finance-ireda-company-results-hdfc-bank-axis-bank-yes-icici-results-19-october-2026/article71599553.ece",
+   "symbols": [
+    "BAJFINANCE",
+    "ULTRACEMCO"
+   ],
+   "symbol_keys": [
+    "BAJFINANCE",
+    "ULTRACEMCO"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 11,
+   "high": true,
+   "theses": [
+    {
+     "slug": "bajaj-finance-rbi-december",
+     "status": "proposed",
+     "type": "catalyst"
+    }
+   ],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "1243cf9cf584",
+   "kind": "news",
+   "time": "2026-10-19T15:05+05:30",
+   "source": "NSE announcements",
+   "headline": "Tara Chand InfraLogistic Solutions Limited: Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+   "summary": "Tara Chand InfraLogistic Solutions Limited has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |S",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_15962_WebXMLFile_20261019_150518949.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "ef869c3ea846",
+   "kind": "news",
+   "time": "2026-10-19T15:03+05:30",
+   "source": "Moneycontrol",
+   "headline": "Live: Q2 results cheer PSU banking stocks in dull market; Rupee falls 32 paise | Closing Bell",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQaExndU0zRzJrTDgxV3ltenVIenFkQUk0MzZNdzdkdzM1azBZSU96bmw0YW9ReTZoS191ckNkaVlVVG01aWpzUXdXVUxIelMyOE9RcjM0UDZMWWZQOHRhSEszdlNvN01rRmhOVzE5M1IyUzBQb2VFc3NDT2NTaEE1TFFrMWdKcEJTWHZfTXN2UGJYODVVbnNsd010V2lxMEg0QmhJOFFZY0wydUZfc3JMOEJaUl9YX2ZseVp5U1FwMGwybnRidGZTWFhjcWxJcGc2YmFoWmphS1VQd1pMNm9zcWdIaThJTDd2enZBcTR1X0EydzTSAfgBQVVfeXFMT1Npc2dPVWZvZ1pxMUdwWVF4c3poYW5fSnNYaFNGZHhUaGp6cnBpT0sydzdiMkM3WVlzbkloNFpsMWJrc1JjSTBlTWtMMmJVeHIxUWtWUVhNZmlpdzJFY085UkVnU2dNVkRPZ00tZkplNUZzdzJnOGpUN09tQVYxYkgtS29jNHFUcmRaY0ItQjRuMDRGeUdzN0RVbGxNS1VQU2VJSkNpa0xhZ2JSanduWjU2eTRETmpJYzlQeFJQekEyeWhoQXV2dXJWWUM4RHBtMmpYWGR2ODdqMHYyM2F3RkVmbGF3cGxDMXNkNVcwTXdMcFdQT1M2dXQ?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "7a5081dd743a",
+   "kind": "news",
+   "time": "2026-10-19T14:57+05:30",
+   "source": "NSE announcements",
+   "headline": "Tata Elxsi Limited: Transcripts - earnings or quarterly calls",
+   "summary": "Tata Elxsi Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_368_WebXMLFile_20261019_145725605.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "e230d3a1e5ab",
+   "kind": "news",
+   "time": "2026-10-19T14:52+05:30",
+   "source": "NSE announcements",
+   "headline": "CL Educate Limited: Amalgamation/Merger",
+   "summary": "CL Educate Limited has informed the Exchange about Amalgamation/Merger |SUBJECT: Amalgamation/Merger",
+   "link": "https://nsearchives.nseindia.com/corporate/CLEDUCATE_19102026145210_merger_intimation-SD.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "c23e71b04f61",
+   "kind": "news",
+   "time": "2026-10-19T14:51+05:30",
+   "source": "ET Markets",
+   "headline": "FIIs raise stakes in 8 smallcap stocks in Q2; shares surge over 200% in FY27 so far",
+   "summary": "Eight smallcap stocks have surged over 200% in FY27 so far as foreign institutional investors increased their shareholdings in the September 2026 quarter. Kabra Extrusiontechnik led the gains at 343%, followed by Modison at 333%, according ",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/fiis-raise-stakes-in-8-smallcap-stocks-in-q2-shares-surge-over-200-in-fy27-so-far/slideshow/135045033.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "b2da7a23e828",
+   "kind": "news",
+   "time": "2026-10-19T14:44+05:30",
+   "source": "NSE announcements",
+   "headline": "Hero Housing Finance Limited: Financial Results Updates",
+   "summary": "Financial Results Updates |SUBJECT: Financial Results Updates",
+   "link": "https://nsearchives.nseindia.com/content/debt/WDM/herohousing_19102026144401_Outcome_of_the_meeting_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
   {
    "id": "7b15c49a487f",
    "kind": "news",
@@ -388,7 +621,12 @@
      "type": "theme"
     }
    ],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: ICICI Bank bulls on valuation - brokerages stay bullish, so dips are being bid by analysts' targets.",
+    "Losers: none clear",
+    "Catalyst: scheduled (Q2 results, done) - fade of the morning gain suggests the good news was in the price.",
+    "Thesis fit: open thesis icici-bank-recovery: supports (no draft: not a new angle, result already priced in)"
+   ],
    "first_seen": "2026-10-19T14:43+05:30"
   },
   {
@@ -461,8 +699,8 @@
    "kind": "price",
    "time": "2026-10-19T14:43+05:30",
    "source": "Yahoo quotes",
-   "headline": "AXISBANK -4.4% vs previous close (close 1233.8, bar 2026-10-19)",
-   "summary": "Headlines this run: Axis Bank shares fall over 4% despite 38% YoY jump in Q2 net profit. Why brokerages are revising target prices | Axis Bank shares fall over 4% despite 38% YoY jump in Q2 net profit. Why brokerages are revising target prices | Axis Bank Share Price Live Updates: PSU bank stocks soar up to 8%, but HDFC, Axis and other private lenders fall up to 5% after Q2 results. Why the sharp divide?",
+   "headline": "AXISBANK -4.2% vs previous close (close 1236.5, bar 2026-10-19)",
+   "summary": "Headlines this run: Axis Bank shares fall over 4% despite 38% YoY jump in Q2 net profit. Why brokerages are revising target prices | Axis Bank shares fall over 4% despite 38% YoY jump in Q2 net profit. Why brokerages are revising target prices | Axis Bank Share Price Live Updates: Axis Bank Reports Significant Daily Change",
    "link": "https://finance.yahoo.com/quote/AXISBANK.NS",
    "symbols": [
     "AXISBANK"
@@ -480,8 +718,8 @@
    "high": false,
    "theses": [],
    "second_order_candidates": [],
-   "change_pct": -4.36,
-   "volume_x": 1.71,
+   "change_pct": -4.15,
+   "volume_x": 1.88,
    "first_seen": "2026-10-19T14:43+05:30"
   },
   {
@@ -541,6 +779,46 @@
    "first_seen": "2026-10-19T14:43+05:30"
   },
   {
+   "id": "097275b27729",
+   "kind": "news",
+   "time": "2026-10-19T14:43+05:30",
+   "source": "NSE announcements",
+   "headline": "CARYSIL LIMITED: Board Meeting to be held on 04-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+   "summary": "CARYSIL LIMITED has informed the Exchange about Board Meeting to be held on 04-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board Meeting Intim",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_19070_WebXMLFile_20261019_144354321.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "9b1c9eebd9d0",
+   "kind": "news",
+   "time": "2026-10-19T14:43+05:30",
+   "source": "NSE announcements",
+   "headline": "Knack Packaging Limited: Board Meeting to be held on 27-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "KNACK PACKAGING LIMITED has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUBJ",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_26872_WebXMLFile_20261019_144345824.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
    "id": "a8e634562e6a",
    "kind": "news",
    "time": "2026-10-19T14:36+05:30",
@@ -583,6 +861,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-19T14:43+05:30"
+  },
+  {
+   "id": "32b6e9bfe2f4",
+   "kind": "news",
+   "time": "2026-10-19T14:32+05:30",
+   "source": "Moneycontrol",
+   "headline": "From Uri strikes and Operation Sindoor to Rs 852-crore IPO: How Arvind Lakshmikumar built defence tech...",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMipAJBVV95cUxQaUl2Y0VzZ2N2WDFnZ0M1ZHlKeGdDcnlTMzRlZmJzbkNPbmVTSm4yZzZ1bXFaVE9fc18zY3ZKa24yQWpicWZrMkFSWlVHeTRNLXFrd3VVOGF3OHd2RnB4NWlSQlc1Q2FMeHcyRWRfbkZqVTFYZlFmMTFIaUtHY0FwRzdtZlV1M1lNSTVkdk1ySnVFX2V5eE5ieEhJMXhiMEtCSjF4MlRLSUE0NHoySlJaQ3hDM2NsNzE5NEFnZ1ZrVEZscmJYZjFEVUJwa1FBeThZOGJjMzA4MlAxdzRWRTU3RExGN2RfZy13ZXVWcnVDeWdhMGpoYm1XWExoTWFqVVgxT3NrbXQxZnJpVG01dF95cFF6QmFVVGZpQ0RDNFE4SWo2YldT0gGqAkFVX3lxTE1HcFR2czRhU2R6R09FSnJBTVBRN3NmcEZMOTA5c1VERXF0MFZpNFhidGgzRjhfTkFsWWpEUmxXb1hJSE1aYWNMYy1iUzItcFpPSm9acjVUNExXSGNBV0ZaS1FOeDhWeFpUUVJVbWRGZHY0bW5ETkFOVmxOejN4RUtWNmR5NlczSUhRZks2eGY5THNvNjZUN3ZEQThtRENvSG9RQnltdkdORmxsRlNhUlR1ZVhlS29BNzA0REVZX2dxR3A0emVtUzQ5Y3R5R3pTZWJZREtVdllSYVBBaTBkelFad1NPa2RWX24zSUJrV01WVTZSWV9ZWGtQTUJjN00yblZUQjBRb05fbHZQRzdYSkRycHl1VzBRUi1XRHZuNEtJRHduaEVRSTVyU0E?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
   },
   {
    "id": "15b2bff4619f",
@@ -725,7 +1023,12 @@
    "score": 7,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: CARE Ratings (CARERATINGS) - monetises a stake in a subsidiary and gets two strong strategic partners for its GIFT City arm; SBI (SBIN) and NSE are the buyers, so the SBIN match is incidental.",
+    "Losers: none clear - small GIFT City stake deal, no obvious competitor harmed.",
+    "Catalyst: surprise - corporate announcement filed 14:18 IST; deal value not stated in the headline.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-10-19T14:43+05:30"
   },
   {
@@ -747,6 +1050,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-19T14:43+05:30"
+  },
+  {
+   "id": "f5894deff252",
+   "kind": "news",
+   "time": "2026-10-19T14:14+05:30",
+   "source": "Moneycontrol",
+   "headline": "Jio Platforms IPO: Deven Choksey bullish on Rs 30,000 crore issue, sees EBITDA doubling in next 4 years",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQUzNMbFkzRkRjekQ0akhkckVvSU52LWEtRGlzU00zb19YNUVtc2s3VlpBeTQ2NjZrR1paTEJlZWs0UTkyVnRySl9pLXZXd1NpNzVYR3l3X1I0TThpZ3FWZW9wYWNCTl9fbFVNZHRTb2hTRU5nNDlXb2kyNlI1ZlRSTFlFOTh0Y05DbXVEdjVmTGUzRmh1SWlzeTUxREVjQ092WVl3dFdMaXlEU09Ock13OVZvTEtYNUJRYTdLQVE5cEM5YVh4ZzZJaE9VdzQ1QzFCcmhpSGZIczVqaGYzaXlSVXE5SlBYV3ZQRzlYMXJsa2cxQV9n0gH6AUFVX3lxTFBfaDlTNWFfYmdnMjZYdjYzcktkVGc3Wm5nbzk2UU5LWV9hRl9GdUJaMEVNS1czZS1lNzByZ2ZHNFFZQ1ZXZDBFOWtaMnNPSWNkSENOQ1p4VFRsN2VTcm1MMlExMXNNSmozclRvaGVFOW5yQ2tka2ZZcHRYNzlFUGpVY0VFT2pLMXE3a1lZNXg3aDBnMHdDMlJMMXM2MTlrNWZVOGs5M1poY3VIMWVpX0RhNWVDblFxanZJZEROOUk5N2NiR3RWUUJWLXJRczNNcGlacG1GLWY3V1RqZkNSb2x0aHhZYmtzWFRmcmdWNDNwYTEwTmk1c0d3NUE?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
   },
   {
    "id": "d1c8ea13467a",
@@ -1005,6 +1328,30 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-19T14:43+05:30"
+  },
+  {
+   "id": "66344fe218cb",
+   "kind": "news",
+   "time": "2026-10-19T13:58+05:30",
+   "source": "Moneycontrol",
+   "headline": "Jio IPO anchor book subscribed over 30 times; BlackRock, GIC, Norges, SBI MF among marquee investors",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPRzljWl9KZG8zdTlHOEV0TnlIUEQzaDFWTjRyZWN3MWRubXhuUnZBUkxJM1ZwUlJhTlNBMGxPaUQ1cDlCNjlqRDdyTHhMUUFpX2dLR0FkUDBxNDA2SjNZZmRNSXc1SWljSFYxX01fNjVBYUdfWk15bnF3RVNSRUx2OFVncUsyTElXOWN1QVhfSDRkV2ZmU2c1ZXEzaFl2SGg5UHozNU5uc2M4QnhXc19QNkZFY0ZKdERCczZzUW5Lb29KN1k3aW91OHJIdWJqcmJMTUZ5VXVTdHliM3p0TW1SN3ZkWGR1VHZwQkNVNTZB0gHzAUFVX3lxTE5wanFiNGoxN1A4aHpMOHdlLTRGSHphMWh0b242dUdremh1cldpWW00MUtGSDBkNmZSUzg0SGZXMGQ3ekRTSWdsak1BbGJmQklEeU5ObDRiSVJRX1FBUjlaaEJtLVVwUTZzOUFBdmRHZkt6VkJid1RyRllZSF9DaVlwNmFSald4X1FRYjBXRmxXRFRPSC1wT3U4NlkxUEY3TDFpa21sQXc5V0tMd2thMGRES3Q3VlNBaExicGpROEgzYkxUN3M1TG9Cb3ZXNVd6eUJ4b2JnTjU0M1BKM3pmZmVaTkRQRkxkZnEtMVN5REtsTjE0Zw?oc=5",
+   "symbols": [
+    "SBIN"
+   ],
+   "symbol_keys": [
+    "SBIN"
+   ],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
   },
   {
    "id": "fc179f51d22c",
@@ -1696,7 +2043,9 @@
      "type": "theme"
     }
    ],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: live-blog round-up of many companies, not a single catalyst; the Bajaj Finance and ICICI thesis matches are by name only."
+   ],
    "first_seen": "2026-10-19T14:43+05:30"
   },
   {
@@ -1826,7 +2175,9 @@
      "type": "theme"
     }
    ],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: opinion round-up comparing two banks, no new event."
+   ],
    "first_seen": "2026-10-19T14:43+05:30"
   },
   {
@@ -2643,6 +2994,56 @@
    "first_seen": "2026-10-19T14:43+05:30"
   },
   {
+   "id": "4c07cfb85aa5",
+   "kind": "news",
+   "time": "2026-10-19T11:39+05:30",
+   "source": "Moneycontrol",
+   "headline": "Latest News | Latest Business News | BSE | IPO News",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFAwM1draS1zUnphZm1RMEIyOVJmRXYtMWdoMmxsc1V0QVRsREhnY1hHbFZDTGdvdXZzZXZ2bXRuSm1DVDRqcUNwQkF5RkIyN0tJMG0xOFZrT3BWcWF1VU5uTGFhY05haDlCVllEWWpHQzg?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
+   "id": "0e8fffbb54e4",
+   "kind": "news",
+   "time": "2026-10-19T11:37+05:30",
+   "source": "Moneycontrol",
+   "headline": "ICICI Bank stock falls 1% after Q2 results, among top Nifty losers; brokerages bullish on growth,...",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQeUZNakZueDdQbFZ4X2xmNnkyaEotVWUwaDhtSWJGUGd0YWJZR3dCTWpWRlh0Y0tLcF9TVnhaM2tpTEVNRWNXZ2d2dGt6V1BzNFJ2amZyVkE2WTdZemtZcUZFQWVQc0JKaGw2cF82LWNHS2ZqS0swWHMtTHJBWFdGMWFMTWVvWmV2ZmRLMVpxMkxXOW5Td2FZblkwa1o5LVpSOUhaR29sTzRGZVlwZm8wSm9lUkdFQUlrRk9BUDExcDhDUmtadlphS2JaLUlOUno2SFhKUlhMQWNEa1dDN3JLRGpSMGZjRGMyOEk1WXY1ZldpS2xHZWhFN0hSMW9CTXc2dUHSAYcCQVVfeXFMUG9la0Jubk5VNHFROVFObTZVWmpKcGRQaTgwRlVZbXZzM25IaWJ5bDJxTWdvVnE1NnZxWWEtVkl2YVRkS2RKbWtJcXZXVnV0UlVKUHRFVjNVU3JjTVZZTUxIeWJTcUJhNFZkTWYtWGNzdWZnV1NqUUl5Mllua3RVajEzZEFyQnVScEFqa0JkVU5oejU2OW51RlZTZWR2THJVRHRqQkY2dmdJUW12Z1lUeGdkc1ZzSTlTMXpVUmlzN09RX01GQjJSRDh5dlA2LTc2aEhaVnBGeUdSQnBKVDJQU3R2YUQtUXpvcEVqTDk2ck9fMER5d254YzV3WUtuYWZfeXBqT2tkQTQ?oc=5",
+   "symbols": [
+    "ICICIBANK"
+   ],
+   "symbol_keys": [
+    "ICICIBANK"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 8,
+   "high": true,
+   "theses": [
+    {
+     "slug": "icici-bank-recovery",
+     "status": "proposed",
+     "type": "theme"
+    }
+   ],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-19T15:17+05:30"
+  },
+  {
    "id": "b310f2d68dae",
    "kind": "news",
    "time": "2026-10-19T11:35+05:30",
@@ -2961,394 +3362,6 @@
    "headline": "Andhra Cements Limited: Board Meeting to be held on 30-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
    "summary": "Andhra Cements Limited has informed the Exchange about Board Meeting to be held on 30-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board Meetin",
    "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_21810_WebXMLFile_20261019_105324798.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "cf661c1bbe11",
-   "kind": "news",
-   "time": "2026-10-19T10:52+05:30",
-   "source": "NSE announcements",
-   "headline": "Shriram Finance Limited: Schedule of meet",
-   "summary": "Shriram Finance Limited has informed the Exchange about Schedule of meet |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/Mathew_19102026105216_BSENSE_ConCall_19102026.pdf",
-   "symbols": [
-    "SHRIRAMFIN"
-   ],
-   "symbol_keys": [
-    "SHRIRAMFIN"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "bb61e2dd855b",
-   "kind": "news",
-   "time": "2026-10-19T10:48+05:30",
-   "source": "NSE announcements",
-   "headline": "NRB Industrial Bearings Limited: Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "NRB INDUSTRIAL BEARINGS LIMITED has informed the Exchange about Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Boa",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_6768_WebXMLFile_20261019_104852612.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "5572ed59a47d",
-   "kind": "news",
-   "time": "2026-10-19T10:46+05:30",
-   "source": "BusinessLine",
-   "headline": "India bonds to decline on elevated oil, hawkish RBI",
-   "summary": "The benchmark ​6.94% 2036 bond yield may trade between ⁠7.37% and 7.42%",
-   "link": "https://www.thehindubusinessline.com/markets/india-bonds-to-decline-on-elevated-oil-hawkish-rbi/article71602027.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "RBI"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "da15f10374dd",
-   "kind": "news",
-   "time": "2026-10-19T10:42+05:30",
-   "source": "ET Markets",
-   "headline": "Kross shares rally 16% after Q2 profit jumps 143% YoY; stock hits 52-week high",
-   "summary": "Kross shares surged following strong Q2 FY27 results, with revenue rising 80% and net profit climbing 143% year-on-year. EBITDA more than doubled, while margins improved. Robust commercial vehicle demand, capacity expansion and operational ",
-   "link": "https://economictimes.indiatimes.com/markets/stocks/news/kross-shares-rally-16-after-q2-profit-jumps-143-yoy-stock-hits-52-week-high/articleshow/135040431.cms",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "8450648b7878",
-   "kind": "news",
-   "time": "2026-10-19T10:41+05:30",
-   "source": "NSE announcements",
-   "headline": "TechEra Engineering (India) Limited: TechEra Engineering (India) Limited has informed regarding Non-applicability of the Compliance Report on Corporate Governance for the Q2 FY 2026-27.",
-   "summary": "TechEra Engineering (India) Limited has informed regarding Non-applicability of the Compliance Report on Corporate Governance for the Q2 FY 2026-27. |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the end",
-   "link": "https://nsearchives.nseindia.com/corporate/TECHERA_19102026104103_Non-applicability_of_Corporate_Governance_report.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "c6fedce86689",
-   "kind": "news",
-   "time": "2026-10-19T10:36+05:30",
-   "source": "Business Standard",
-   "headline": "Urban Company shares fall 10% as Q2 net loss widens despite revenue growth",
-   "summary": "Urban Company's consolidated net loss widened to ₹182.48 crore in the July-September quarter of FY27. The company had posted a net loss of ₹59.33 crore in the year-ago period.",
-   "link": "https://www.business-standard.com/markets/news/urban-company-shares-fall-10-as-q2-net-loss-widens-despite-revenue-growth-126101900225_1.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "c263e9bd0988",
-   "kind": "news",
-   "time": "2026-10-19T10:34+05:30",
-   "source": "NSE announcements",
-   "headline": "Shriram Finance Limited: Schedule of Analysts or Institutional Investors Meet",
-   "summary": "SHRIRAM FINANCE LIMITED has informed the Exchange about Schedule of Analysts or Institutional Investors Meet |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1464_WebXMLFile_20261019_103425742.xml",
-   "symbols": [
-    "SHRIRAMFIN"
-   ],
-   "symbol_keys": [
-    "SHRIRAMFIN"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "17c6fcf0f341",
-   "kind": "news",
-   "time": "2026-10-19T10:23+05:30",
-   "source": "NSE announcements",
-   "headline": "Indraprastha Medical Corporation Limited: Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "INDRAPRASTHA MEDICAL CORPORATION LIMITED has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUB",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_1577_WebXMLFile_20261019_102336030.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "0e6fd29b0b65",
-   "kind": "news",
-   "time": "2026-10-19T10:18+05:30",
-   "source": "NSE announcements",
-   "headline": "Larsen & Toubro Limited: Bagging/Receiving of orders/contracts",
-   "summary": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts |SUBJECT: Bagging/Receiving of orders/contracts",
-   "link": "https://nsearchives.nseindia.com/corporate/PAM_19102026101805_PressRelease19102026.pdf",
-   "symbols": [
-    "LT"
-   ],
-   "symbol_keys": [
-    "LT"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "107e29d2691d",
-   "kind": "news",
-   "time": "2026-10-19T10:15+05:30",
-   "source": "NSE announcements",
-   "headline": "SBI Cards and Payment Services Limited: Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "SBI Cards and Payment Services Limited has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUB",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17645_WebXMLFile_20261019_101501736.xml",
-   "symbols": [
-    "SBIN"
-   ],
-   "symbol_keys": [
-    "SBIN"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "9831a9e19a8d",
-   "kind": "news",
-   "time": "2026-10-19T10:15+05:30",
-   "source": "Business Standard",
-   "headline": "Axis Bank shares fall 5% despite 39% rise in Q2 net profit; here's why",
-   "summary": "MOFSL said that Axis Bank's elevated opex led to slight earnings miss in Q2. The strong NII growth and lower-than-expected provisions were offset by elevated opex and softer treasury income.",
-   "link": "https://www.business-standard.com/markets/news/axis-bank-shares-fall-5-despite-39-rise-in-q2-net-profit-here-s-why-126101900187_1.html",
-   "symbols": [
-    "AXISBANK"
-   ],
-   "symbol_keys": [
-    "AXISBANK"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [
-    "AXISBANK"
-   ],
-   "score": 7,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "8b3645c462ab",
-   "kind": "news",
-   "time": "2026-10-19T10:04+05:30",
-   "source": "Business Standard",
-   "headline": "Karur Vysya Bank hits new lifetime high, up 8% in two days post Q2 results",
-   "summary": "Karur Vysya Bank's share price hit a record high of ₹375 in Monday's trading session on the NSE. Equirus Securities and Elara Capital pegged upside targets of ₹400 and ₹415, respectively.",
-   "link": "https://www.business-standard.com/markets/news/karur-vysya-bank-hits-new-lifetime-high-up-8-in-two-days-post-q2-results-126101900172_1.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "f9238ec28e92",
-   "kind": "news",
-   "time": "2026-10-19T10:02+05:30",
-   "source": "ET Markets",
-   "headline": "Holding company discount after Jio IPO: What is it & how will it impact RIL shares?",
-   "summary": "Jio Platforms IPO: Jio Platforms is preparing to unveil its initial public offering, enhancing its valuation significantly. Analysts foresee a potential reduction in the holding company discount for Reliance Industries post-IPO. While some ",
-   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/holding-company-discount-after-jio-ipo-what-is-it-how-will-it-impact-ril-shares/articleshow/135039648.cms",
-   "symbols": [
-    "RELIANCE"
-   ],
-   "symbol_keys": [
-    "RELIANCE"
-   ],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "9efdc8223735",
-   "kind": "news",
-   "time": "2026-10-19T10:01+05:30",
-   "source": "NSE announcements",
-   "headline": "Bajaj Finserv Nifty 1D Rate Liquid ETF-Growth: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on October 16, 2026 is Rs. 1103.1931.",
-   "summary": "BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on October 16, 2026 is Rs. 1103.1931. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [
-    "BAJAJFINSV"
-   ],
-   "symbol_keys": [
-    "BAJAJFINSV"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "045372e81a8a",
-   "kind": "news",
-   "time": "2026-10-19T10:01+05:30",
-   "source": "NSE announcements",
-   "headline": "BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on October 16, 2026 is Rs. 20.5669.",
-   "summary": "BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on October 16, 2026 is Rs. 20.5669. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [
-    "BAJAJFINSV"
-   ],
-   "symbol_keys": [
-    "BAJAJFINSV"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "2f81c3aa8ec9",
-   "kind": "news",
-   "time": "2026-10-19T10:01+05:30",
-   "source": "NSE announcements",
-   "headline": "Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on October 16, 2026 is Rs. 56.8551.",
-   "summary": "BANKBETF : BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on October 16, 2026 is Rs. 56.8551. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [
-    "BAJAJFINSV"
-   ],
-   "symbol_keys": [
-    "BAJAJFINSV"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "6e9a4240714a",
-   "kind": "news",
-   "time": "2026-10-19T10:01+05:30",
-   "source": "NSE announcements",
-   "headline": "Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on October 16, 2026 is Rs. 238.5564.",
-   "summary": "NIFTYBETF : BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on October 16, 2026 is Rs. 238.5564. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [
-    "BAJAJFINSV"
-   ],
-   "symbol_keys": [
-    "BAJAJFINSV"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T14:43+05:30"
-  },
-  {
-   "id": "5a1f4c623ebd",
-   "kind": "news",
-   "time": "2026-10-19T09:59+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Technologies Limited: Transcript of the earnings conference call on financial results for the quarter ended September 30, 2026",
-   "summary": "Tata Technologies Limited has informed the Exchange about Transcript of the earnings conference call on financial results for the quarter ended September 30, 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/TTLNSE_19102026095926_Investorcalltranscript_S.pdf",
    "symbols": [],
    "symbol_keys": [],
    "keywords": [
