@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-20T19:58+05:30",
+ "generated_at": "2026-10-20T20:30+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 333,
+   "items": 336,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 2.0
   },
   {
    "id": "nse_results",
@@ -17,7 +17,7 @@
    "items": 4,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 1.4
   },
   {
    "id": "bse",
@@ -28,7 +28,7 @@
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.2
+   "seconds": 1.4
   },
   {
    "id": "et_markets",
@@ -37,7 +37,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "et_stocks",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bs_markets",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.2
+   "seconds": 1.7
   },
   {
    "id": "cnbc",
@@ -91,11 +91,11 @@
  ],
  "optional_unavailable": [],
  "quotes_checked": 55,
- "movers": 1,
+ "movers": 2,
  "quotes_error": null,
- "new_alerts": 82,
+ "new_alerts": 1,
  "high_score": 6,
- "seconds": 4.5,
+ "seconds": 5.6,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -129,6 +129,34 @@
  ],
  "watchlist_size": 55,
  "alerts": [
+  {
+   "id": "64246c14a3be",
+   "kind": "price",
+   "time": "2026-10-20T20:30+05:30",
+   "source": "Yahoo quotes",
+   "headline": "CRWV +4.2% vs previous close (close 63.66, bar 2026-10-20)",
+   "summary": "No matching headline in this run's feeds.",
+   "link": "https://finance.yahoo.com/quote/CRWV",
+   "symbols": [
+    "CRWV"
+   ],
+   "symbol_keys": [
+    "US:CRWV"
+   ],
+   "keywords": [
+    "price move"
+   ],
+   "moving": [
+    "CRWV"
+   ],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "change_pct": 4.16,
+   "volume_x": 1.09,
+   "first_seen": "2026-10-20T20:30+05:30"
+  },
   {
    "id": "850954dcdae2",
    "kind": "news",
@@ -3186,26 +3214,6 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-20T11:50+05:30"
-  },
-  {
-   "id": "25660e563a92",
-   "kind": "news",
-   "time": "2026-10-20T10:56+05:30",
-   "source": "Moneycontrol",
-   "headline": "HD Fire Protect Share Price, HD Fire Protect Stock Price, HD Fire Protect Ltd. Stock Price, Share Price, Live BSE/NSE, HD Fire Protect Ltd. Bids Offers. Buy/Sell HD Fire Protect Ltd. news & tips, & F&O Quotes, NSE/BSE Forecast News and Live Quotes",
-   "summary": "",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxORm8wZlhJcDZnTEF2a1VxeUNfa1V4YWdfVWZTaXNrMXNyODVPU2ozYUZkdWtlcUtsXzhvZ3NSZE9yR0JKSVFYb1djMjBjcXJrdnRKUzVBZUkyRWpnMjdwY3RIVERlLUlHRjNiY2oxUmVUQ21fLV9LYWM5ZzZya25YQlYyc1lnMHY0SldZU0IxRTU4RmFWbjNUQTlWMUVCbWpoZHFyTg?oc=5",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "guidance"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T14:52+05:30"
   }
  ]
 }
