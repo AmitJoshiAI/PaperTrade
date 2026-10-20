@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-20 13:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
+Generated 2026-10-20 14:20 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -171,7 +171,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 8
 - Alert id: ba19d6c972fa
-- Second-order candidates: 
+- Second-order candidates: False match: duplicate of the Bajaj Finance Q2 results already noted under ec245185064d (same results, republished via Moneycontrol; no new information).
 
 ## 15. [8 HIGH] Bajaj Finance Q2 results: Net profit rises 29% to Rs 6,266 crore, NII increases 24%
 
@@ -183,4 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 8
 - Alert id: 375a0f097993
-- Second-order candidates: 
+- Second-order candidates: False match: duplicate of the Bajaj Finance Q2 results already noted under ec245185064d (same results, Moneycontrol link; no new information).

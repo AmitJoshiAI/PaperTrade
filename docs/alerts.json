@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-20T13:53+05:30",
+ "generated_at": "2026-10-20T14:20+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 244,
+   "items": 250,
    "error": null,
    "optional": false,
-   "seconds": 0.9
+   "seconds": 0.5
   },
   {
    "id": "nse_results",
@@ -17,18 +17,18 @@
    "items": 4,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.5
   },
   {
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 56,
+   "items": 67,
    "error": null,
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.3
+   "seconds": 1.5
   },
   {
    "id": "et_markets",
@@ -37,7 +37,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "et_stocks",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bs_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bl_markets",
@@ -64,21 +64,20 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.5
   },
   {
    "id": "moneycontrol",
    "name": "Moneycontrol",
    "ok": true,
-   "items": 100,
+   "items": 25,
    "error": null,
    "optional": false,
-   "path": "Google News RSS",
+   "path": "curl_cffi HTML listing",
    "skipped": [
-    "curl_cffi RSS: ParseError: not well-formed (invalid token): line 6, column 305",
-    "curl_cffi HTML listing: ValueError: listing page parsed to 0 articles (layout changed?)"
+    "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.7
+   "seconds": 5.7
   },
   {
    "id": "cnbc",
@@ -94,9 +93,9 @@
  "quotes_checked": 55,
  "movers": 1,
  "quotes_error": null,
- "new_alerts": 47,
+ "new_alerts": 8,
  "high_score": 6,
- "seconds": 4.1,
+ "seconds": 6.0,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -130,6 +129,167 @@
  ],
  "watchlist_size": 55,
  "alerts": [
+  {
+   "id": "a717e78cbbed",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "EAAA India Alternatives to open Rs 1,200-crore IPO on October 26",
+   "summary": "EAAA India Alternatives IPO | The initial public offering comprises an offer-for-sale, closing on October 28, while the one-day anchor book for institutional investors will open on October 23.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/eaaa-india-alternatives-to-open-rs-1-200-crore-ipo-on-october-26-14055949.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "ed50b85b292e",
+   "kind": "news",
+   "time": "2026-10-20T14:18+05:30",
+   "source": "BSE announcements",
+   "headline": "HFCL Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. We hereby submit copies of the newspaper publications of the Un-audited Financial Results of the Company for the 2nd quarter and half year ended September 30, 2026, for the Financial Year ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5cc28fc4-d4a7-4077-9e80-48c945335157.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "03559bd42e65",
+   "kind": "news",
+   "time": "2026-10-20T14:14+05:30",
+   "source": "BSE announcements",
+   "headline": "Shardul Securities Ltd: Approval Of Un-Audited Financial Results For The Quarter And Half Year Ended 30Th September 2026",
+   "summary": "Result. Approval of Un-audited Financial Results for the quarter and half year ended 30th September 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b62a9e49-a268-451d-8132-0b53e78f35f2.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "e33ddc54e4af",
+   "kind": "news",
+   "time": "2026-10-20T14:09+05:30",
+   "source": "BSE announcements",
+   "headline": "Shardul Securities Ltd: Board Meeting Outcome for Outcome Of Board Meeting Dated 20Th October 2026",
+   "summary": "Board Meeting. Outcome of Board Meeting dated 20th October 2026 for approval of Un-Audited Financial Results for the quarter and half year ended 30th September 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/76050432-fa39-4de4-8687-1eb746ef8c1c.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "da1d36884eaa",
+   "kind": "news",
+   "time": "2026-10-20T13:59+05:30",
+   "source": "NSE announcements",
+   "headline": "Winny Immigration & Education Services Limited: voting results.",
+   "summary": "Winny Immigration & Education Services Limited has submitted the Exchange a copy Srutinizers report of Postal Ballot. Further, the company has informed the Exchange regarding voting results. |SUBJECT: Shareholders meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/WINNY_20102026135937_Scrutiniser_report_winny_postal_ballot.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "4f499152e24a",
+   "kind": "news",
+   "time": "2026-10-20T13:58+05:30",
+   "source": "NSE announcements",
+   "headline": "Aeron Composite Limited: Aeron Composite Limited has informed regarding Non Applicability of the Compliance Report on Corporate Governance for the quarter ended on September 30, 2026",
+   "summary": "Aeron Composite Limited has informed regarding Non Applicability of the Compliance Report on Corporate Governance for the quarter ended on September 30, 2026 |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days fro",
+   "link": "https://nsearchives.nseindia.com/corporate/AERON_20102026135829_CGNA.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "7b6ce9996fc5",
+   "kind": "news",
+   "time": "2026-10-20T13:58+05:30",
+   "source": "NSE announcements",
+   "headline": "Gravita India Limited: Board Meeting to be held on 27-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
+   "summary": "GRAVITA INDIA LIMITED has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend. |SUBJECT: Board",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_3733_WebXMLFile_20261020_135830088.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "dividend"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "c5f1e2ea9bbc",
+   "kind": "news",
+   "time": "2026-10-20T13:49+05:30",
+   "source": "BusinessLine",
+   "headline": "Copper rises as US inventories, bullish outlook builds",
+   "summary": "The ‌London Metal Exchange rose 0.36% to $14,391 a metric ​ton by 0705 GMT, while the ⁠most-traded November copper contract on the Shanghai Futures Exchange closed down 0.27% at 109,550 yuan ($16,403.38) a ton",
+   "link": "https://www.thehindubusinessline.com/markets/commodities/copper-rises-as-us-inventories-bullish-outlook-builds/article71603770.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:20+05:30"
+  },
   {
    "id": "53f883c98826",
    "kind": "news",
@@ -3090,168 +3250,6 @@
    ],
    "moving": [],
    "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "32300b058852",
-   "kind": "news",
-   "time": "2026-10-19T22:26+05:30",
-   "source": "BSE announcements",
-   "headline": "Indus Infra Trust: Reg 26K: Quarterly Compliance Report on Corporate governance",
-   "summary": "Others. Indus Infra Trust has informed the Exchange regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/569cc5ce-1a65-4adf-9eba-d77a6f4f3fc1.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "9c3e234cb71b",
-   "kind": "news",
-   "time": "2026-10-19T22:18+05:30",
-   "source": "NSE announcements",
-   "headline": "ATC Energies System Limited: ATC Energies System Limited has informed regarding Submission of the Compliance Report on Corporate Governance for the September Quarter ended FY 2026-27",
-   "summary": "ATC Energies System Limited has informed regarding Submission of the Compliance Report on Corporate Governance for the September Quarter ended FY 2026-27 |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from th",
-   "link": "https://nsearchives.nseindia.com/corporate/ATCENERGIES_19102026221741_CG_Non_Applicablility_ATC_energies.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "fa6637d7a48a",
-   "kind": "news",
-   "time": "2026-10-19T22:14+05:30",
-   "source": "Moneycontrol",
-   "headline": "Jio Platforms raises Rs 8,110 crore from 212 anchor investors ahead of Rs 30,188-crore IPO; LIC, Capital...",
-   "summary": "",
-   "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNVUJwVHFoVFE4dFhrUjNhUGctNm42SV9QV0hsSzBTdHNTSEFucUtYUEJ2Mml5MGtpQzRfb0t5TnN0aHdVR0kyanBZN1Fmdy1PbklIUlljSXlwS2I3Ukw1WG01bEZSSFNyTnNhY1E2d3RCSjFCX0dwXzN6YWwzY1o4WnNXaDFWYWdjWnRydzFnNmt0NXdsM0tfTk1INWxNM2FXYnlvYzY4V1hBbE00Smd0N0E0RFl6UHMxS25WaWJCei1SMG1mUjhKbmxINUE3U2pjdDZNZkM2RkhtVUtUT1JhbkhMQ0hVOXdLellLa3k2SzhNR3VlR2JHVVBqbF8yWFM3cER3MUJJR2ZESnU0X2xmcnY4X3dSZy1i0gGeAkFVX3lxTFAzRlFoOE1KVlNKczYwOHNvX1VqWmRzd2M3X1JUY1VrOWZGQlRWeV9pdC1SU0VpM2FmZENiVF9VU1R1WHcxRXdGMC1fNlJKZXc0WHBqaDV0QjFHdE9ncnR3Tlgtc3dVU0NpVmFrN1NNSTRKWHFsVFZ5NVZHbVRnbWlyaUZWMW1BV2xTbzJwcXFJREZ6NnNIZTNEalFVb2JyMnM5Ui1GcWhwR09RWHZoRjd3UVE3blhXc0hoR0liV29HWG5kZHBhb3NPTzZjOEVuS2V2VXRfSVNYM3JvWnh5bGFGUzJSY3N6aE94SjlxSDJIREhPQ3FhWjlYUEF1YVZKejNIWjJEV0ctZkFQNUEwbDUzSXg4UGt6TDY2VnhSV1E?oc=5",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T13:53+05:30"
-  },
-  {
-   "id": "5b4c98c84e49",
-   "kind": "news",
-   "time": "2026-10-19T22:12+05:30",
-   "source": "BSE announcements",
-   "headline": "Just Dial Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press Release - Unaudited Financial Results for the second quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/906347ef-69be-4add-81be-287149bb92eb.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "b39cff54605d",
-   "kind": "news",
-   "time": "2026-10-19T22:12+05:30",
-   "source": "CNBC top news",
-   "headline": "Anthropic is AI trade's last big hope for a major IPO this year",
-   "summary": "On Kalshi, Anthropic is seen as the last major IPO in 2026 after OpenAI delayed its public market debut. Others have postponed too.",
-   "link": "https://www.cnbc.com/2026/10/19/anthropic-ipo-ai-trade.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "fbcfc4f32fa7",
-   "kind": "news",
-   "time": "2026-10-19T22:08+05:30",
-   "source": "Moneycontrol",
-   "headline": "Bengaluru-Mumbai Vande Bharat Sleeper likely to launch from November 1",
-   "summary": "",
-   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTWtKYkxiSHVNcDJxVTFxbnIwZnhvZkFMeXNiRlZUc2tvaDI3WVg2ZWMyM3RkOFl2ZHNhQi1hckFkaGxTV2JzUEhBQV8wa19SVzBIa1NSVTNoZG5iMWRJVlNXYTUwQUNianM1Szl6ZzRjdnlLS0Y2QkJnaTBtbEtCY3VnNlpyUnlwQmdvTmdDamt4SmNtUDBwbFNzM1dXRmg5UnRXZGlkQ1QtWW9PSTRKVHpsdXRSallWa3VBX1ZLcEc2Z9IBxwFBVV95cUxPNkJvS29IcmV5UVJoOWlqeVFrZGdlUWFhS0JvRC1XV05oZHhTOUY0Vk80ZWdRamJEbTFvLWppR3lGSVdMSFBIbmMyaXRBZ0VWMUhtYlpyYVFEd2Q2NTNwenZlWWJHR0hOSDZ5VUVqSkRVYWtidWhkWTNRYU55RDk0cjJiNlBKczZZMC1RYVhNQ0wyZTY3TjNOWDJmencyMmNackxSLUpwSlhOdW9YV2VrOXpHcVFIQTk2Q3k2ZXpGZmx3WmZWQmxn?oc=5",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T13:53+05:30"
-  },
-  {
-   "id": "02c5a63e0191",
-   "kind": "news",
-   "time": "2026-10-19T22:06+05:30",
-   "source": "NSE announcements",
-   "headline": "Just Dial Limited: a press release dated October 19, 2026, titled \"Just Dial announces results for the quarter ended September 30, 2026\"",
-   "summary": "Just Dial Limited has informed the Exchange regarding a press release dated October 19, 2026, titled \"Just Dial announces results for the quarter ended September 30, 2026\" |SUBJECT: Press Release",
-   "link": "https://nsearchives.nseindia.com/corporate/chintan_19102026220527_Press_Release.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "0e39c502c4bd",
-   "kind": "news",
-   "time": "2026-10-19T22:04+05:30",
-   "source": "NSE announcements",
-   "headline": "Max Healthcare Institute Limited: Options to purchase securities ESOPS (Sub-para 10-Para B)",
-   "summary": "Max Healthcare Institute Limited has informed the Exchange about Options to purchase securities ESOPS (Sub-para 10-Para B) |SUBJECT: Options to purchase securities ESOPS (Sub-para 10-Para B)",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_PARA_B_18642_WebXMLFile_20261019_220458580.xml",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
    "high": false,
    "theses": [],
    "second_order_candidates": [],
