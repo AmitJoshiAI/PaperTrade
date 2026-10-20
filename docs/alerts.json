@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-20T11:50+05:30",
+ "generated_at": "2026-10-20T13:53+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 195,
+   "items": 244,
    "error": null,
    "optional": false,
-   "seconds": 0.7
+   "seconds": 0.9
   },
   {
    "id": "nse_results",
@@ -17,18 +17,18 @@
    "items": 4,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.3
   },
   {
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 73,
+   "items": 56,
    "error": null,
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.9
+   "seconds": 1.3
   },
   {
    "id": "et_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 1.1
+   "seconds": 0.2
   },
   {
    "id": "bl_markets",
@@ -64,20 +64,21 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "moneycontrol",
    "name": "Moneycontrol",
    "ok": true,
-   "items": 25,
+   "items": 100,
    "error": null,
    "optional": false,
-   "path": "curl_cffi HTML listing",
+   "path": "Google News RSS",
    "skipped": [
-    "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
+    "curl_cffi RSS: ParseError: not well-formed (invalid token): line 6, column 305",
+    "curl_cffi HTML listing: ValueError: listing page parsed to 0 articles (layout changed?)"
    ],
-   "seconds": 1.1
+   "seconds": 1.7
   },
   {
    "id": "cnbc",
@@ -86,16 +87,16 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.3
   }
  ],
  "optional_unavailable": [],
  "quotes_checked": 55,
  "movers": 1,
  "quotes_error": null,
- "new_alerts": 16,
+ "new_alerts": 47,
  "high_score": 6,
- "seconds": 4.0,
+ "seconds": 4.1,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -129,6 +130,733 @@
  ],
  "watchlist_size": 55,
  "alerts": [
+  {
+   "id": "53f883c98826",
+   "kind": "news",
+   "time": "2026-10-20T13:46+05:30",
+   "source": "BSE announcements",
+   "headline": "Shri Niwas Leasing And Finance Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Submission of extract of newspaper publication of un-audited financial Results for the quarter and half year ended on September 30th, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/66374e95-d4c5-4647-94c6-ddd5d5db55c9.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "66f8d47d2329",
+   "kind": "news",
+   "time": "2026-10-20T13:34+05:30",
+   "source": "NSE announcements",
+   "headline": "Neochem Bio Solutions Limited: Neochem Bio Solutions Limited has informed regarding Submission of the Compliance Report on Corporate Governance for the Quarter and half year ended on 30th September, 2026",
+   "summary": "Neochem Bio Solutions Limited has informed regarding Submission of the Compliance Report on Corporate Governance for the Quarter and half year ended on 30th September, 2026 |SUBJECT: Quarterly Compliance Report on Corporate governance - wit",
+   "link": "https://nsearchives.nseindia.com/corporate/NEOCHEM_20102026133408_Non_App_of_CG_Report.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "c5b3b06da28c",
+   "kind": "news",
+   "time": "2026-10-20T13:34+05:30",
+   "source": "BSE announcements",
+   "headline": "Subam Papers Ltd: Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
+   "summary": "Company Update. Compliance Certifcate under Reg74 (5) of SEBI DP Regulation 2018 for the Quarter ended 30/09/2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6cefb9fd-6003-40cb-b151-b3f5450aac90.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "d3e2f28f3c24",
+   "kind": "news",
+   "time": "2026-10-20T13:33+05:30",
+   "source": "NSE announcements",
+   "headline": "PG Electroplast Limited: Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "PG Electroplast Limited has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Mee",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_5240_WebXMLFile_20261020_133303850.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "258727a90d1e",
+   "kind": "news",
+   "time": "2026-10-20T13:33+05:30",
+   "source": "BSE announcements",
+   "headline": "Aerpace Industries Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Submission of newspaper publication of Unaudited Standalone and Consolidated Financial Results for the quarter and half year ended September 30,2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8b4ac95a-a118-4d39-8aca-9ae357316f4c.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "c3679437d38f",
+   "kind": "news",
+   "time": "2026-10-20T13:29+05:30",
+   "source": "BSE announcements",
+   "headline": "String Metaverse Ltd: Disclsoure Under Reg 30 SEBI LODR",
+   "summary": "Company Update. Association of Dr.S.Ravi as Director Emeritus.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4fe2c96f-3d63-4766-a838-8093b2e01295.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "0508cb590196",
+   "kind": "news",
+   "time": "2026-10-20T13:28+05:30",
+   "source": "BusinessLine",
+   "headline": "EAAA India Alternatives to float ₹1,200-crore IPO on Oct 26",
+   "summary": "The issue is entirely an Offer for Sale (OFS) by Edelweiss Group with no fresh issue component",
+   "link": "https://www.thehindubusinessline.com/markets/eaaa-india-alternatives-to-float-1200-crore-ipo-on-oct-26/article71603713.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "cf8fe224cb1e",
+   "kind": "news",
+   "time": "2026-10-20T13:25+05:30",
+   "source": "BusinessLine",
+   "headline": "SLMG Beverages eyes ₹20,000 cr turnover in 5 years, IPO in 3-4 years",
+   "summary": "The company, which holds Coca-Cola's bottling rights for high-density markets in Uttar Pradesh and Bihar, looks to capitalise on India's consumption growth and also explore opportunities in overseas markets",
+   "link": "https://www.thehindubusinessline.com/markets/slmg-beverages-eyes-20000-cr-turnover-in-5-years-ipo-in-3-4-years/article71603673.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "a09ae77cc01c",
+   "kind": "news",
+   "time": "2026-10-20T13:21+05:30",
+   "source": "ET Markets",
+   "headline": "EAAA India Alternatives to float Rs 1,200-cr IPO on Oct 26",
+   "summary": "EAAA India Alternatives Ltd will open its initial public offering worth Rs 1,200 crore on October 26. The IPO will close for subscription on October 28, following anchor investor bidding on October 23. This offering is entirely an offer for",
+   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/eaaa-india-alternatives-to-float-rs-1200-cr-ipo-on-oct-26/articleshow/135064394.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "bf7550b1b825",
+   "kind": "news",
+   "time": "2026-10-20T13:14+05:30",
+   "source": "NSE announcements",
+   "headline": "TVS Infrastructure Trust: TVS Infrastructure Trust has informed regarding submission of the Compliance Report on Corporate Governance for Q2 FY 2026-27.",
+   "summary": "TVS Infrastructure Trust has informed regarding submission of the Compliance Report on Corporate Governance for Q2 FY 2026-27. |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the end of the quarter",
+   "link": "https://nsearchives.nseindia.com/corporate/TVSINVIT_20102026131340_TVSInvITCGRQ2FY27sd.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "bded4c85d6f3",
+   "kind": "news",
+   "time": "2026-10-20T13:14+05:30",
+   "source": "BSE announcements",
+   "headline": "PG Electroplast Ltd: Board Meeting Intimation for Intimation Of Board Meeting Pursuant To Regulation 29 Of SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 & Closure Of Trading Window.",
+   "summary": "Board Meeting. PG Electroplast Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/10/2026 ,inter alia, to consider and approve Unaudited Financial Results ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ebeaa6b1-290c-4faf-91ec-f7e03b28b18e.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "eec98602098d",
+   "kind": "news",
+   "time": "2026-10-20T13:08+05:30",
+   "source": "Moneycontrol",
+   "headline": "Persistent Systems may soon launch up to $450 million QIP; proceeds part of financing plan for Nagarro...",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQalVQekNQOVg5Uzd2Q0NvWjdYdzBnY3VDX1E2TkVaM2xDVUZiN1FWSmhwM29BY05YdEV4LUNUMWdGNjBia0kxY18xRlpxanNDRDY2MWRyb095NkZ5dVJDWHZtM2VkVWxLU3ZIbjNrMnlrNDg4SElVazNtV2tRTFM3ZjFHUy1WRWlHc2tOSFREX29maFIyWlNIZl9pVTl3SzF0RWZDZ3RsaUdkYjBhZXhnTkxTWk9LNW9ibGlzOVpBV1JUcnBOOGtyREdubXlqR1FFeUNpblFMQ0Y0ZlZzUl9wQmRqZUVVLVF2Q0dqdFhEOXJzVU1qZkJ1c1VlMUJPd9IBgwJBVV95cUxOQi1QbjIzNERNSkhhaDc1V19IdTRZRWdTZHlPYmZLQzNHeHpNek01WDctRVRLcGIxYVA0Si01UjlVRWUwWHFkZUFsVE93ZHhUYU9PYUgxRVJTMFZWckRIeTZfMDdfQVk0VzQwYm5TZ3Noeml3UVVUVnlWeFhhdXNET3JvNDJodk1qaHpLTlk4V1hoOGlLZUdRcEJxbHdQSHQ2OXRUVGV4LWdkWElIQUg4STR4YkVfcmk4N2NWdDFfc0xaYmVvSjRQX3NLSFJhU1NpX3BaZ0NWeDBLcjJJOHpoSmVXbmktQlFKX2N5OFJ5dExQZGRfUlY2RWhmMXJGdTJOREw0?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "cd89a0a90456",
+   "kind": "news",
+   "time": "2026-10-20T13:05+05:30",
+   "source": "ET Markets",
+   "headline": "Jio IPO opens tomorrow: How can investors maximise allotment chances under Rs 2,500 crore RIL shareholders quota",
+   "summary": "The much-anticipated Reliance Jio Platforms IPO is launching for public subscription starting October 21, 2023. Shareholders of Reliance Industries can benefit from a Rs 2,500 crore reservation aimed at maximizing their investment opportuni",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/jio-ipo-opens-tomorrow-how-can-investors-maximise-allotment-chances-under-rs-2500-crore-ril-shareholders-quota/articleshow/135064168.cms",
+   "symbols": [
+    "RELIANCE"
+   ],
+   "symbol_keys": [
+    "RELIANCE"
+   ],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "9aa9000c7de5",
+   "kind": "news",
+   "time": "2026-10-20T12:51+05:30",
+   "source": "NSE announcements",
+   "headline": "HDB Financial Services Limited: Transcripts - earnings or quarterly calls",
+   "summary": "HDB Financial Services Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_24797_WebXMLFile_20261020_125151336.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "6de05c1c6c34",
+   "kind": "news",
+   "time": "2026-10-20T12:50+05:30",
+   "source": "BSE announcements",
+   "headline": "HDB Financial Services Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Intimation of Transcript",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9156af89-9b47-4561-b4e5-a85d1385032b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "cd726c5b74cc",
+   "kind": "news",
+   "time": "2026-10-20T12:44+05:30",
+   "source": "NSE announcements",
+   "headline": "Alembic Pharmaceuticals Limited: Acquisition of to be incorporated companies",
+   "summary": "Alembic Pharmaceuticals Limited has informed the Exchange regarding Acquisition of to be incorporated companies |SUBJECT: Acquisition of 'to be incorporated companies'-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_5232_WebXMLFile_20261020_124430574.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "4323014ee7f7",
+   "kind": "news",
+   "time": "2026-10-20T12:39+05:30",
+   "source": "BSE announcements",
+   "headline": "EPL Ltd: Record Date For The Purpose Of Maturity Of Commercial Papers Issued By EPL Limited",
+   "summary": "Company Update. Intimation regarding Record Date for the purpose of maturity of Commercial Papers in terms of SEBI Circular dated October 15, 2025, is enclosed herewith.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4104f17a-d268-4097-980a-d2b1c1245468.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "1139d173ae4d",
+   "kind": "news",
+   "time": "2026-10-20T12:38+05:30",
+   "source": "BSE announcements",
+   "headline": "Kreon Finnancial Services Ltd: Board Meeting Intimation for To Consider And Approve The Unaudited Financial Results Of The Company For The Quarter And Half-Year Ended September 30, 2026.",
+   "summary": "Board Meeting. Kreon Finnancial Services Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 26/10/2026 ,inter alia, to consider and approve The unaudited financial ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/361aede5-bce3-40a0-b253-11a772321462.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "7877deeb8126",
+   "kind": "news",
+   "time": "2026-10-20T12:33+05:30",
+   "source": "NSE announcements",
+   "headline": "Vedanta Limited: 'Intimation under Regulation 30(9) of Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations )'.",
+   "summary": "Vedanta Limited has informed the Exchange regarding 'Intimation under Regulation 30(9) of Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations )'. |SUBJECT: Up",
+   "link": "https://nsearchives.nseindia.com/corporate/VEDL_20102026123223_VEDLSEIntimationReg30_9_HZLResultsQ2FY2027signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "70218d0e1afb",
+   "kind": "news",
+   "time": "2026-10-20T12:33+05:30",
+   "source": "NSE announcements",
+   "headline": "Polycab India Limited: Transcripts - earnings or quarterly calls",
+   "summary": "POLYCAB INDIA LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_17413_WebXMLFile_20261020_123304626.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "7d288de1856f",
+   "kind": "news",
+   "time": "2026-10-20T12:31+05:30",
+   "source": "BSE announcements",
+   "headline": "Vedanta Ltd: Intimation Under Regulation 30(9) Of Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('SEBI Listing Regulations')",
+   "summary": "Company Update. Please refer the enclosed file.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d6f5537a-1ca7-45c1-b330-78cf8ee8b4f7.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "bd21b19f6dfc",
+   "kind": "news",
+   "time": "2026-10-20T12:24+05:30",
+   "source": "NSE announcements",
+   "headline": "PTC India Limited: ESG rating given by Crisil ESG Ratings & Analytics Ltd., as per attached disclosure.",
+   "summary": "PTC India Limited has informed the Exchange about ESG rating given by Crisil ESG Ratings & Analytics Ltd., as per attached disclosure. |SUBJECT: General Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/PTC_20102026122350_Intimation_for_ESG_Rating_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "d911d1110926",
+   "kind": "news",
+   "time": "2026-10-20T12:22+05:30",
+   "source": "NSE announcements",
+   "headline": "SML Mahindra Limited: Newspaper Advertisements - Unaudited Financial Results for the second quarter and half year ended on 30th September, 2026",
+   "summary": "SML Mahindra Limited has informed the Exchange about Newspaper Advertisements - Unaudited Financial Results for the second quarter and half year ended on 30th September, 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/SMLISUZU_20102026122032_NP_Ad-_UFR_Sep_2026_SdPM.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "04034cbb227d",
+   "kind": "news",
+   "time": "2026-10-20T12:22+05:30",
+   "source": "ET Markets",
+   "headline": "Bank of Japan may raise inflation forecast, stand pat on rates, sources say",
+   "summary": "The Bank of Japan plans to slightly upgrade its fiscal year 2027 inflation forecasts this month. Interest rates are expected to remain stable at 1.25% during the upcoming policy meeting in late October. While inflation risks are present, th",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/bank-of-japan-may-raise-inflation-forecast-stand-pat-on-rates-sources-say/articleshow/135063146.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance",
+    "report/sources"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "14020d007ae8",
+   "kind": "news",
+   "time": "2026-10-20T12:20+05:30",
+   "source": "BSE announcements",
+   "headline": "SML Mahindra Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Newspaper Advertisements - Unaudited Financial Results for the second quarter and half year ended on 30th September, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6e9d3d70-aa60-4cff-a731-426911a63dcf.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "cd86de542865",
+   "kind": "news",
+   "time": "2026-10-20T12:19+05:30",
+   "source": "NSE announcements",
+   "headline": "Sobha Limited: advertisement in newspapers about Financial Results for the quarter and half year ended September 30, 2026.",
+   "summary": "Sobha Limited has informed the Exchange regarding advertisement in newspapers about Financial Results for the quarter and half year ended September 30, 2026. |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/SOBHA_20102026121859_SOBHANewspaperAdvertisementQ2FY2027.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "4797928d3c5f",
+   "kind": "news",
+   "time": "2026-10-20T12:16+05:30",
+   "source": "BSE announcements",
+   "headline": "PTC India Ltd: Communication Of ESG Rating",
+   "summary": "Company Update. PTC communicates ESG rating given by Crisil ESG Ratings & Analytics Ltd., as per attached disclosure.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/187ff2ed-56b3-4336-9b26-ff1a6724e927.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "364d4c37a051",
+   "kind": "news",
+   "time": "2026-10-20T12:12+05:30",
+   "source": "BSE announcements",
+   "headline": "Sobha Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Sobha Limited has informed the Exchange regarding advertisement in newspapers about Financial Results for the quarter and half year ended September 30, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/801301d0-5cd0-4f02-ae46-399d3f1bc3df.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "71c91cb606fc",
+   "kind": "news",
+   "time": "2026-10-20T12:09+05:30",
+   "source": "NSE announcements",
+   "headline": "IndiGrid Infrastructure Trust: IndiGrid Infrastructure Trust has informed regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27",
+   "summary": "IndiGrid Infrastructure Trust has informed regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27 |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the end of the quarte",
+   "link": "https://nsearchives.nseindia.com/corporate/INDIGRID_20102026120809_cgrsep302026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "04a3608f594d",
+   "kind": "news",
+   "time": "2026-10-20T12:05+05:30",
+   "source": "BSE announcements",
+   "headline": "Sovereign Diamonds Ltd: Board Meeting Intimation for Financial Results For 30-Sep-2026",
+   "summary": "Board Meeting. Sovereign Diamonds Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 24/10/2026 ,inter alia, to consider and approve un-audited financial results ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5e0b3a06-e231-480a-9feb-5ea3a4d7344f.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "dd9f6d349015",
+   "kind": "news",
+   "time": "2026-10-20T12:03+05:30",
+   "source": "BSE announcements",
+   "headline": "IndiGrid Infrastructure Trust: Reg 26K: Quarterly Compliance Report on Corporate governance",
+   "summary": "Others. Indigrid Infrastructure Trust has informed the Exchange regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/637a6b14-106e-4f75-91b0-2351c02e2fd6.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "c15d4e423dfb",
+   "kind": "news",
+   "time": "2026-10-20T12:02+05:30",
+   "source": "ET Markets",
+   "headline": "Mukul Agrawal portfolio: Ace investor adds 7 new equity stocks in Q2. Do you own any?",
+   "summary": "7 stocks he likely added to his secondary market portfolio during the second quarter of FY27. With shareholding disclosures still being released, further changes to his portfolio cannot be ruled out.",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/mukul-agrawal-portfolio-ace-investor-adds-7-new-equity-stocks-in-q2-do-you-own-any/slideshow/135063009.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "5cef874f4016",
+   "kind": "news",
+   "time": "2026-10-20T12:00+05:30",
+   "source": "BSE announcements",
+   "headline": "Ushakiran Finance Ltd: Non Applicability Of SEBI Circular No. SEBI/HO/DDHS/DDHS/CIR/P/2020/ 231?Dated?November 13, 2020 For The Quarter Ended 30.9.2026",
+   "summary": "Company Update. We wish to inform that the company has not issued any Non convertible Debt Securities, Non convertible redeemable preference shares and Commercial papers or any other instruments and as ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d4a8a302-f0d1-4a08-a69d-7179e14b78ff.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "442c6c1a764d",
+   "kind": "news",
+   "time": "2026-10-20T11:55+05:30",
+   "source": "NSE announcements",
+   "headline": "UFLEX Limited: Credit Rating",
+   "summary": "UFLEX Limited has informed the Exchange about Credit Rating |SUBJECT: Credit Rating",
+   "link": "https://nsearchives.nseindia.com/corporate/DineshSharma_20102026115455_SIGNEDUFLEXNSEBSECREDITR20OCT26.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "28e8ffe73aee",
+   "kind": "news",
+   "time": "2026-10-20T11:53+05:30",
+   "source": "NSE announcements",
+   "headline": "Jash Engineering Limited: Board Meeting to be held on 04-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "JASH ENGINEERING LIMITED has informed the Exchange about Board Meeting to be held on 04-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUB",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_15524_WebXMLFile_20261020_115327428.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "e121f64c56fd",
+   "kind": "news",
+   "time": "2026-10-20T11:53+05:30",
+   "source": "BSE announcements",
+   "headline": "Uflex Ltd: Announcement under Regulation 30 (LODR)-Credit Rating",
+   "summary": "Company Update. Credit Rating",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c663e890-45a8-42e3-af3a-9f6876ae9836.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
   {
    "id": "124c2da96efe",
    "kind": "news",
@@ -391,6 +1119,26 @@
    "first_seen": "2026-10-20T11:50+05:30"
   },
   {
+   "id": "5a685f0fd670",
+   "kind": "news",
+   "time": "2026-10-20T10:34+05:30",
+   "source": "BusinessLine",
+   "headline": "Paras Healthcare secures ₹652 cr from anchor investors; IPO to open on Oct 21",
+   "summary": "The company attracted participation from domestic as well as global anchor investors.",
+   "link": "https://www.thehindubusinessline.com/markets/paras-healthcare-secures-652-cr-from-anchor-investors-ipo-to-open-on-oct-21/article71603313.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
    "id": "7c984d382132",
    "kind": "news",
    "time": "2026-10-20T10:28+05:30",
@@ -530,6 +1278,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-20T09:46+05:30"
+  },
+  {
+   "id": "56d63db472ca",
+   "kind": "news",
+   "time": "2026-10-20T09:32+05:30",
+   "source": "BusinessLine",
+   "headline": "RBI steps up overseas investment checks as rupee slides",
+   "summary": "The RBI issued a standardized checklist to major banks last week, requiring detailed information on overseas direct investments exceeding $1 billion and transactions above the regulatory limit",
+   "link": "https://www.thehindubusinessline.com/markets/forex/rbi-steps-up-overseas-investment-checks-as-rupee-slides/article71603230.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "RBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
   },
   {
    "id": "93ad0b9ee5b6",
@@ -1845,6 +2613,26 @@
    "first_seen": "2026-10-20T09:46+05:30"
   },
   {
+   "id": "bd855fa33cf0",
+   "kind": "news",
+   "time": "2026-10-20T02:27+05:30",
+   "source": "CNBC top news",
+   "headline": "Tech stocks had a nice oversold bounce on Monday. Earnings this week will determine if it's for real",
+   "summary": "Investors are hopeful that last week's pullback was a clearing event for equities, but lingering concerns remain.",
+   "link": "https://www.cnbc.com/2026/10/19/tech-stocks-rebound-meta-tesla-earnings.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
    "id": "c8dccbd75b90",
    "kind": "news",
    "time": "2026-10-20T01:23+05:30",
@@ -2348,6 +3136,26 @@
    "first_seen": "2026-10-19T22:27+05:30"
   },
   {
+   "id": "fa6637d7a48a",
+   "kind": "news",
+   "time": "2026-10-19T22:14+05:30",
+   "source": "Moneycontrol",
+   "headline": "Jio Platforms raises Rs 8,110 crore from 212 anchor investors ahead of Rs 30,188-crore IPO; LIC, Capital...",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxNVUJwVHFoVFE4dFhrUjNhUGctNm42SV9QV0hsSzBTdHNTSEFucUtYUEJ2Mml5MGtpQzRfb0t5TnN0aHdVR0kyanBZN1Fmdy1PbklIUlljSXlwS2I3Ukw1WG01bEZSSFNyTnNhY1E2d3RCSjFCX0dwXzN6YWwzY1o4WnNXaDFWYWdjWnRydzFnNmt0NXdsM0tfTk1INWxNM2FXYnlvYzY4V1hBbE00Smd0N0E0RFl6UHMxS25WaWJCei1SMG1mUjhKbmxINUE3U2pjdDZNZkM2RkhtVUtUT1JhbkhMQ0hVOXdLellLa3k2SzhNR3VlR2JHVVBqbF8yWFM3cER3MUJJR2ZESnU0X2xmcnY4X3dSZy1i0gGeAkFVX3lxTFAzRlFoOE1KVlNKczYwOHNvX1VqWmRzd2M3X1JUY1VrOWZGQlRWeV9pdC1SU0VpM2FmZENiVF9VU1R1WHcxRXdGMC1fNlJKZXc0WHBqaDV0QjFHdE9ncnR3Tlgtc3dVU0NpVmFrN1NNSTRKWHFsVFZ5NVZHbVRnbWlyaUZWMW1BV2xTbzJwcXFJREZ6NnNIZTNEalFVb2JyMnM5Ui1GcWhwR09RWHZoRjd3UVE3blhXc0hoR0liV29HWG5kZHBhb3NPTzZjOEVuS2V2VXRfSVNYM3JvWnh5bGFGUzJSY3N6aE94SjlxSDJIREhPQ3FhWjlYUEF1YVZKejNIWjJEV0ctZkFQNUEwbDUzSXg4UGt6TDY2VnhSV1E?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
    "id": "5b4c98c84e49",
    "kind": "news",
    "time": "2026-10-19T22:12+05:30",
@@ -2388,6 +3196,26 @@
    "first_seen": "2026-10-19T22:27+05:30"
   },
   {
+   "id": "fbcfc4f32fa7",
+   "kind": "news",
+   "time": "2026-10-19T22:08+05:30",
+   "source": "Moneycontrol",
+   "headline": "Bengaluru-Mumbai Vande Bharat Sleeper likely to launch from November 1",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNTWtKYkxiSHVNcDJxVTFxbnIwZnhvZkFMeXNiRlZUc2tvaDI3WVg2ZWMyM3RkOFl2ZHNhQi1hckFkaGxTV2JzUEhBQV8wa19SVzBIa1NSVTNoZG5iMWRJVlNXYTUwQUNianM1Szl6ZzRjdnlLS0Y2QkJnaTBtbEtCY3VnNlpyUnlwQmdvTmdDamt4SmNtUDBwbFNzM1dXRmg5UnRXZGlkQ1QtWW9PSTRKVHpsdXRSallWa3VBX1ZLcEc2Z9IBxwFBVV95cUxPNkJvS29IcmV5UVJoOWlqeVFrZGdlUWFhS0JvRC1XV05oZHhTOUY0Vk80ZWdRamJEbTFvLWppR3lGSVdMSFBIbmMyaXRBZ0VWMUhtYlpyYVFEd2Q2NTNwenZlWWJHR0hOSDZ5VUVqSkRVYWtidWhkWTNRYU55RDk0cjJiNlBKczZZMC1RYVhNQ0wyZTY3TjNOWDJmencyMmNackxSLUpwSlhOdW9YV2VrOXpHcVFIQTk2Q3k2ZXpGZmx3WmZWQmxn?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
    "id": "02c5a63e0191",
    "kind": "news",
    "time": "2026-10-19T22:06+05:30",
@@ -2424,942 +3252,6 @@
    "keywords": [],
    "moving": [],
    "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "fa2c21c9fec7",
-   "kind": "news",
-   "time": "2026-10-19T21:57+05:30",
-   "source": "BSE announcements",
-   "headline": "Max Healthcare Institute Ltd: Disclosure Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015",
-   "summary": "Company Update. Disclosure under regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a1728ec8-e555-45e5-966a-74bc10557f35.pdf",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "2ce3d5bc5143",
-   "kind": "news",
-   "time": "2026-10-19T21:55+05:30",
-   "source": "NSE announcements",
-   "headline": "Max Healthcare Institute Limited: disclosure under regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-   "summary": "Max Healthcare Institute Limited has informed the Exchange about disclosure under regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 |SUBJECT: General Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/MAXHEALTH_19102026215500_SE_Disclosure__PRSU_Alteration_of_MOA.pdf",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "b6ff7244b632",
-   "kind": "news",
-   "time": "2026-10-19T21:55+05:30",
-   "source": "NSE announcements",
-   "headline": "Satin Creditcare Network Limited: Credit Rating",
-   "summary": "Satin Creditcare Network Limited has informed the Exchange about Credit Rating |SUBJECT: Credit Rating",
-   "link": "https://nsearchives.nseindia.com/corporate/SATIN_19102026215329_SCNL_Intimation.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "d241982c9f54",
-   "kind": "news",
-   "time": "2026-10-19T21:52+05:30",
-   "source": "BSE announcements",
-   "headline": "Satin Creditcare Network Ltd: Announcement under Regulation 30 (LODR)-Credit Rating",
-   "summary": "Company Update. Announcement under Regulation 30 of SEBI (LODR) Regulations, 2015 - Credit Rating",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e473814e-9ecf-488a-99c4-2d4f9b5568e3.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "2601054e42ec",
-   "kind": "news",
-   "time": "2026-10-19T21:51+05:30",
-   "source": "NSE announcements",
-   "headline": "Simca Advertising Limited: Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "SIMCA ADVERTISING LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board M",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_26441_WebXMLFile_20261019_215105234.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "454740b81a54",
-   "kind": "news",
-   "time": "2026-10-19T21:49+05:30",
-   "source": "NSE announcements",
-   "headline": "Max Healthcare Institute Limited: voting results.",
-   "summary": "Max Healthcare Institute Limited has submitted the Exchange a copy Scrutinizers report of Postal Ballot. Further, the Company has informed the Exchange regarding voting results. |SUBJECT: Shareholders meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/MAXHEALTH_19102026214552_SE_Disclosure.pdf",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "3b9d38623563",
-   "kind": "news",
-   "time": "2026-10-19T21:47+05:30",
-   "source": "ET Markets",
-   "headline": "AI stocks rebound as CoreWeave jumps on Goldman Sachs upgrade",
-   "summary": "AI stocks rebound after last week’s sharp selloff, with semiconductor stocks leading the recovery. CoreWeave gains after Goldman Sachs upgrades the stock to buy, while Intel, Nvidia, AMD and Broadcom also rise. Investors now turn to upcomin",
-   "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/ai-stocks-rebound-as-coreweave-jumps-on-goldman-upgrade/articleshow/135052127.cms",
-   "symbols": [
-    "CRWV"
-   ],
-   "symbol_keys": [
-    "US:CRWV"
-   ],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "90a7089b14eb",
-   "kind": "news",
-   "time": "2026-10-19T21:46+05:30",
-   "source": "BSE announcements",
-   "headline": "Marathon Nextgen Realty Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. Intimation of Earnings Conference Call - Q2 FY27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dd6dce72-e5ab-4a6f-af41-7bfd6bbe3a17.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "6a9d1dff7b17",
-   "kind": "news",
-   "time": "2026-10-19T21:45+05:30",
-   "source": "BSE announcements",
-   "headline": "Max Healthcare Institute Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
-   "summary": "AGM/EGM. Voting Results and Scrutinizer''s Report on Postal Ballot",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/520d2242-a6a2-43f8-863f-19a1e7e69d02.pdf",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "2701f8d735c3",
-   "kind": "news",
-   "time": "2026-10-19T21:44+05:30",
-   "source": "NSE announcements",
-   "headline": "Piramal Finance Limited: Audio recording of Conference call on the Unaudited Financial Results (Standalone and Consolidated) for the quarter and half year ended 30th September 2026",
-   "summary": "Audio recording of Conference call on the Unaudited Financial Results (Standalone and Consolidated) for the quarter and half year ended 30th September 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/Piramalcapital_19102026214348_06_PFL_SE_Intimation_Audio_Recordings_sd.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "638aa4d6466c",
-   "kind": "news",
-   "time": "2026-10-19T21:42+05:30",
-   "source": "BSE announcements",
-   "headline": "DCB Bank Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. In continuation of our intimation dated October 16, 2026 regarding the date of the Board Meeting, inter alia, to consider and approve the Unaudited Financial Results of DCB Bank Limited ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fd4d3f40-f8eb-4f42-bd24-df8036b90b07.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "90f070d7dc77",
-   "kind": "news",
-   "time": "2026-10-19T21:42+05:30",
-   "source": "BSE announcements",
-   "headline": "Piramal Finance Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
-   "summary": "Company Update. Audio recording of Conference call on the Unaudited Financial Results (Standalone and Consolidated) for the quarter and half year ended 30th September 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3abdb1c6-b747-4dfe-9298-e93e0c967c38.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "92626e36efee",
-   "kind": "news",
-   "time": "2026-10-19T21:42+05:30",
-   "source": "BSE announcements",
-   "headline": "Max Healthcare Institute Ltd: Shareholder Meeting / Postal Ballot-Outcome of Postal Ballot",
-   "summary": "AGM/EGM. Voting Results and Scrutinizer''s Report on Postal Ballot",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5bd0590b-fbf5-4dd8-9dba-f2c245312fa9.pdf",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "80f707dc936f",
-   "kind": "news",
-   "time": "2026-10-19T21:31+05:30",
-   "source": "BSE announcements",
-   "headline": "Inani Securities Ltd: Announcement under Regulation 30 (LODR)-Open Offer - Updates",
-   "summary": "Company Update. Disclosure under Regulation 30 and other applicable provision of SEBI( LODR )Regulation 2015",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e51dd906-611f-47aa-b8cc-1620d8420bb0.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "4d7d9e5810f9",
-   "kind": "news",
-   "time": "2026-10-19T21:29+05:30",
-   "source": "ET Markets",
-   "headline": "Ireda net profit grows to Rs 554 cr in Sep qtr",
-   "summary": "Ireda has announced a net profit of Rs 554 crore for the September quarter of FY27, reflecting a robust financial performance. Revenue from operations increased by 14%, totaling Rs 2,345 crore. Additionally, loan disbursements surged by 31%",
-   "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/ireda-net-profit-grows-to-rs-554-cr-in-sep-qtr/articleshow/135051929.cms",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "d93831d2ffb7",
-   "kind": "news",
-   "time": "2026-10-19T21:23+05:30",
-   "source": "BSE announcements",
-   "headline": "GOCL Corporation Ltd-$: Unaudited Financial Results For The Quarter And Half Year Ended September 30, 2026",
-   "summary": "Result. Unaudited Financial Results for the quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/76e67177-5163-4205-885c-e72ffabd7f78.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "cfc29bfbda5c",
-   "kind": "news",
-   "time": "2026-10-19T21:22+05:30",
-   "source": "BusinessLine",
-   "headline": "Q2 Results Today Highlights: UltraTech Q2 profit declines q-o-q, Hindustan Zinc, Union Bank & HFCL Q2 PAT up; Bajaj Finance, LTTS, IREDA announce Q2 results",
-   "summary": "Q2 Results Today, 19th October 2026 Highlights: Stay tuned to businessline for more",
-   "link": "https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-bajaj-finance-ultratech-cement-hindustan-zinc-union-bank-of-india-ltts-piramal-finance-ireda-company-results-hdfc-bank-axis-bank-yes-icici-results-19-october-2026/article71599553.ece",
-   "symbols": [
-    "BAJFINANCE",
-    "ULTRACEMCO"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE",
-    "ULTRACEMCO"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 11,
-   "high": true,
-   "theses": [
-    {
-     "slug": "bajaj-finance-rbi-december",
-     "status": "proposed",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [
-    "False match: live-blog round-up of many companies (same series as b51273103ff3), not a single catalyst."
-   ],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "c1304bbcb5a0",
-   "kind": "news",
-   "time": "2026-10-19T21:18+05:30",
-   "source": "BSE announcements",
-   "headline": "Elevate Campuses Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Investor Presentation on the Unaudited Consolidated and Standalone Financial Results for the the Quarter ended June 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/86f8385c-4abf-4f1f-9d66-cabc3a8f8931.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "ffe50e2e0cfb",
-   "kind": "news",
-   "time": "2026-10-19T21:10+05:30",
-   "source": "NSE announcements",
-   "headline": "Bajaj Finance Limited: Audio Recording/Video Recording",
-   "summary": "BAJAJ FINANCE LIMITED has informed the Exchange about Audio Recording/Video Recording |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1257_WebXMLFile_20261019_211031103.xml",
-   "symbols": [
-    "BAJFINANCE"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 7,
-   "high": true,
-   "theses": [
-    {
-     "slug": "bajaj-finance-rbi-december",
-     "status": "proposed",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "010d6dd2aa62",
-   "kind": "news",
-   "time": "2026-10-19T21:10+05:30",
-   "source": "NSE announcements",
-   "headline": "Bajaj Finance Limited: Schedule of Analysts or Institutional Investors Meet",
-   "summary": "BAJAJ FINANCE LIMITED has informed the Exchange about Schedule of Analysts or Institutional Investors Meet |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1257_WebXMLFile_20261019_211031103.xml",
-   "symbols": [
-    "BAJFINANCE"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 7,
-   "high": true,
-   "theses": [
-    {
-     "slug": "bajaj-finance-rbi-december",
-     "status": "proposed",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "3f86e9dfb036",
-   "kind": "news",
-   "time": "2026-10-19T21:10+05:30",
-   "source": "BSE announcements",
-   "headline": "GOCL Corporation Ltd-$: Board Meeting Outcome for Unaudited Financial Results For The Quarter And Half Year Ended September 30, 2026 And Update On Scheme Of Merger Of HNPCL With GOCL",
-   "summary": "Board Meeting. Outcome of the Board meeting - Unaudited Financial Results for the quarter and half year ended September 30, 2026 and update on Scheme of Merger of HNPCL with GOCL",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bbf58af3-e2fd-4016-83aa-709affa72cd0.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "M&A"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "07367cacce87",
-   "kind": "news",
-   "time": "2026-10-19T21:09+05:30",
-   "source": "BSE announcements",
-   "headline": "Sterling and Wilson Renewable Energy Ltd: Disclosure Under Regulation 30 Read With Para B Of Part A Of Schedule III Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 (SEBI Listing Regulations)",
-   "summary": "Company Update. Pursuant to Regulation 30 read with Para B of Part A of Schedule III of the SEBI Listing Regulations, the details of initiation of material litigation(s) or dispute(s) are enclosed as 'Annexure ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dce3412d-68c0-47ca-bcb4-07f346c08b31.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "b4d1c3f32b35",
-   "kind": "news",
-   "time": "2026-10-19T21:08+05:30",
-   "source": "BSE announcements",
-   "headline": "Just Dial Ltd: Unaudited Financial Results For The Second Quarter And Half Year Ended September 30, 2026",
-   "summary": "Result. Unaudited Financial Results for the second quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ac1a9351-0761-4d5b-adb0-99804e8d2552.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "42261e7be92d",
-   "kind": "news",
-   "time": "2026-10-19T21:05+05:30",
-   "source": "BSE announcements",
-   "headline": "Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
-   "summary": "Company Update. The audio recording of the conference call has been hosted on the website of the Company and is available at 'QUARTERLY EARNINGS CALL' drop down https://www.aboutbajajfinserv.com/finan ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/adefbbb0-caa9-46a5-91aa-41c5359a7271.pdf",
-   "symbols": [
-    "BAJFINANCE"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 9,
-   "high": true,
-   "theses": [
-    {
-     "slug": "bajaj-finance-rbi-december",
-     "status": "proposed",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [
-    "Winner: none clear - routine post-results analyst call filing; no new numbers by itself.",
-    "Losers: none clear",
-    "Catalyst: scheduled (Q2 results call, done) - nothing ahead from this filing.",
-    "Thesis fit: none (bajaj-finance-rbi-december is about the December RBI meeting, not Q2 results)"
-   ],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "cd1f427aad37",
-   "kind": "news",
-   "time": "2026-10-19T21:03+05:30",
-   "source": "BSE announcements",
-   "headline": "Shah Metacorp Ltd: Intimation Under Regulation 30 Of SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 As Amended ('SEBI Listing Regulations')- Update On Waiver Of Fine Levied By The National Stock Exchange Of India Limited (NSE).",
-   "summary": "Company Update. In furtherance to our earlier intimation dated August 17, 2026, wherein the Company informed the Exchanges regarding the receipt of notice NSE/LIST-SOP/FINES/0904 from the National Stock ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/73d01e51-9a9a-4bd0-bf7e-41a6d8c6a383.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "3fa918faa84a",
-   "kind": "news",
-   "time": "2026-10-19T21:02+05:30",
-   "source": "NSE announcements",
-   "headline": "GOCL Corporation Limited: Outcome of Board Meeting held on October 19, 2026 - Update on Scheme of Merger of HNPCL with GOCL",
-   "summary": "GOCL Corporation Limited has informed the Exchange regarding Outcome of Board Meeting held on October 19, 2026 - Update on Scheme of Merger of HNPCL with GOCL |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/GULFCORP_19102026205624_BMOutcomeQ219102026Signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "c60f15c74280",
-   "kind": "news",
-   "time": "2026-10-19T21:02+05:30",
-   "source": "NSE announcements",
-   "headline": "GOCL Corporation Limited: GOCL Corporation Limited has submitted to the Exchange, Unaudited Financial Results for the quarter and half year ended September 30, 2026",
-   "summary": "GOCL Corporation Limited has submitted to the Exchange, Unaudited Financial Results for the quarter and half year ended September 30, 2026 |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/GULFCORP_19102026204841_BMOutcomeQ219102026Signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "2d6065c3b709",
-   "kind": "news",
-   "time": "2026-10-19T21:02+05:30",
-   "source": "BSE announcements",
-   "headline": "Aerpace Industries Ltd: Financial Results For The Quarter And Half Year Ended September 30, 2026.",
-   "summary": "Result. Unaudited Standalone and Consolidated Financial Results for the quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f852e71f-3b6f-48ed-ba8d-4444272f3008.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "3307a7d7d18d",
-   "kind": "news",
-   "time": "2026-10-19T21:01+05:30",
-   "source": "BSE announcements",
-   "headline": "Taylormade Renewables Ltd: Board Meeting Outcome for Outcome Of Board Meeting",
-   "summary": "Board Meeting. Outcome of Board Meeting and Intimation under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ('Listing Regulations')",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5e152e1b-3c9e-463d-9da2-184e6d52fe9c.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "16e755eb9368",
-   "kind": "news",
-   "time": "2026-10-19T21:00+05:30",
-   "source": "NSE announcements",
-   "headline": "Bajaj Finance Limited: Link of Recording",
-   "summary": "Bajaj Finance Limited has informed the Exchange about Link of Recording |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_19102026205822_Outcome_of_investor_call_-_Q2FY27.pdf",
-   "symbols": [
-    "BAJFINANCE"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 7,
-   "high": true,
-   "theses": [
-    {
-     "slug": "bajaj-finance-rbi-december",
-     "status": "proposed",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "9cc13c2e3596",
-   "kind": "news",
-   "time": "2026-10-19T20:58+05:30",
-   "source": "BSE announcements",
-   "headline": "Elevate Campuses Ltd: Unaudited Consolidated And Standalone Financial Results For The Quarter Ended June 30, 2026",
-   "summary": "Result. Unaudited Consolidated and Standalone Financial Results for the Quarter ended June 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/736b6af5-3976-4971-abd0-9b956723a7ea.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "4ad599f0cc36",
-   "kind": "news",
-   "time": "2026-10-19T20:56+05:30",
-   "source": "BSE announcements",
-   "headline": "Delta Corp Ltd: Un-Audited Financial Results For The Quarter And Half Year Ended 30Th September, 2026",
-   "summary": "Result. Unaudited Financial Results for the quarter and half year ended 30th September, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/00a0929e-2544-40ba-bded-7303fa921121.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "957dced86463",
-   "kind": "news",
-   "time": "2026-10-19T20:53+05:30",
-   "source": "BSE announcements",
-   "headline": "Waaree Renewable Technologies Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release (Revised)",
-   "summary": "Company Update. Please find attached herewith revised press release for quarter and half year ended 30th September 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c578a915-f24b-4e7b-bf9e-fcc9b81c1846.pdf",
-   "symbols": [
-    "WAAREEENER"
-   ],
-   "symbol_keys": [
-    "WAAREEENER"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 7,
-   "high": true,
-   "theses": [
-    {
-     "slug": "waaree-q2-results",
-     "status": "open",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "cd52deb1ddff",
-   "kind": "news",
-   "time": "2026-10-19T20:51+05:30",
-   "source": "NSE announcements",
-   "headline": "Waaree Renewable Technologies Limited: a revised press release dated October 19, 2026, titled \"Revised Press Release for the quarter and half year ended 30th September 2026\".",
-   "summary": "Waaree Renewable Technologies Limited has informed the Exchange regarding a revised press release dated October 19, 2026, titled \"Revised Press Release for the quarter and half year ended 30th September 2026\". |SUBJECT: Press Release (Revis",
-   "link": "https://nsearchives.nseindia.com/corporate/WAAREERTL_19102026205127_Release-s.pdf",
-   "symbols": [
-    "WAAREEENER"
-   ],
-   "symbol_keys": [
-    "WAAREEENER"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 7,
-   "high": true,
-   "theses": [
-    {
-     "slug": "waaree-q2-results",
-     "status": "open",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "5de7ee45d2ac",
-   "kind": "news",
-   "time": "2026-10-19T20:51+05:30",
-   "source": "BSE announcements",
-   "headline": "Aerpace Industries Ltd: Board Meeting Outcome for Unaudited Standalone And Consolidated Financials Results For The Quarter And Half Year Ended September 30, 2026",
-   "summary": "Board Meeting. Unaudited Standalone and Consolidated Financials Results for the quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/365ef7ab-7dc8-4a0a-9c64-2f66e8be4d85.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "e6d2445c0736",
-   "kind": "news",
-   "time": "2026-10-19T20:49+05:30",
-   "source": "NSE announcements",
-   "headline": "Cura Technologies Limited: Cura Technologies Limited has informed regarding Submission of the Compliance Report on Corporate Governance for the Q_ FY 20__-__",
-   "summary": "Cura Technologies Limited has informed regarding Submission of the Compliance Report on Corporate Governance for the Q_ FY 20__-__ |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the end of the quarter",
-   "link": "https://nsearchives.nseindia.com/corporate/CURAA_19102026204913_Non-CG_Cerificate_SD.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "4361342631de",
-   "kind": "news",
-   "time": "2026-10-19T20:49+05:30",
-   "source": "NSE announcements",
-   "headline": "IndiGrid Infrastructure Trust: IndiGrid Infrastructure Trust has informed regarding Investor grievance report for Q_ FY 20__-__",
-   "summary": "IndiGrid Infrastructure Trust has informed regarding Investor grievance report for Q_ FY 20__-__ |SUBJECT: Disclosure of all complaints including SCORES complaints received by the InvIT on a quarterly basis",
-   "link": "https://nsearchives.nseindia.com/corporate/INDIGRID_19102026204852_IGRunits30092026_signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "dd4351f5a8f2",
-   "kind": "news",
-   "time": "2026-10-19T20:49+05:30",
-   "source": "NSE announcements",
-   "headline": "Elevate Campuses Limited: Elevate Campuses Limited has submitted to the Exchange, the financial results for the period ended Jun 30, 2026.",
-   "summary": "Elevate Campuses Limited has submitted to the Exchange, the financial results for the period ended Jun 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/ELEVATE_19102026204356_Financial_Results.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "5176cf2bd22b",
-   "kind": "news",
-   "time": "2026-10-19T20:43+05:30",
-   "source": "ET Markets",
-   "headline": "Bajaj Finance Q2 consolidated net profit rises 29% to Rs 6,367 crore",
-   "summary": "Bajaj Finance expects AUM to grow 26-27% in FY27 as it accelerates customer acquisition and loan disbursements. The lender plans to book 60-62 million new loans and add 18-20 million customers during the year. Consolidated AUM grew 26% to R",
-   "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/bajaj-finance-q2-consolidated-net-profit-rises-29-to-rs-6367-crore/articleshow/135051459.cms",
-   "symbols": [
-    "BAJFINANCE"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 8,
-   "high": true,
-   "theses": [
-    {
-     "slug": "bajaj-finance-rbi-december",
-     "status": "proposed",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [
-    "False match: duplicate of the Bajaj Finance Q2 results already noted under ec245185064d (same figures, no new information)."
-   ],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "8feaebe6b096",
-   "kind": "news",
-   "time": "2026-10-19T20:41+05:30",
-   "source": "ET Markets",
-   "headline": "Waaree Renewable Technologies Q2 Results: Net profit falls 29% to Rs 81 crore",
-   "summary": "Waaree Renewable Technologies experienced a notable 29 percent drop in net profit for the quarter ending September. Their consolidated profit stood at Rs 81.48 crore, a decrease from Rs 116.36 crore year-on-year. While expenses surged, reve",
-   "link": "https://economictimes.indiatimes.com/markets/stocks/earnings/waaree-renewable-technologies-q2-results-net-profit-falls-29-to-rs-81-crore/articleshow/135051423.cms",
-   "symbols": [
-    "WAAREEENER"
-   ],
-   "symbol_keys": [
-    "WAAREEENER"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 8,
-   "high": true,
-   "theses": [
-    {
-     "slug": "waaree-q2-results",
-     "status": "open",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [
-    "False match: Waaree Renewable Technologies (WAAREERTL) is a different company from Waaree Energies (WAAREEENER); the open thesis waaree-q2-results is not triggered (see 0bc9d7dd8c18)."
-   ],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "575fdcd08830",
-   "kind": "news",
-   "time": "2026-10-19T20:38+05:30",
-   "source": "BSE announcements",
-   "headline": "IndiGrid Infrastructure Trust: Investor Complaints",
-   "summary": "Others. Indigrid Infrastructure Trust has informed the Exchange regarding Investor grievance report for Report Q2 FY 2026-27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8446e204-b0fc-4bf6-82a5-521466b6633b.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
    "high": false,
    "theses": [],
    "second_order_candidates": [],
