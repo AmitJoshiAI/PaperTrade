@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-20T14:20+05:30",
+ "generated_at": "2026-10-20T14:52+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 250,
+   "items": 256,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.2
   },
   {
    "id": "nse_results",
@@ -23,12 +23,12 @@
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 67,
+   "items": 75,
    "error": null,
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.5
+   "seconds": 0.6
   },
   {
    "id": "et_markets",
@@ -37,7 +37,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   },
   {
    "id": "et_stocks",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   },
   {
    "id": "bs_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   },
   {
    "id": "bl_markets",
@@ -64,20 +64,21 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.2
   },
   {
    "id": "moneycontrol",
    "name": "Moneycontrol",
    "ok": true,
-   "items": 25,
+   "items": 100,
    "error": null,
    "optional": false,
-   "path": "curl_cffi HTML listing",
+   "path": "Google News RSS",
    "skipped": [
-    "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
+    "curl_cffi RSS: ParseError: not well-formed (invalid token): line 6, column 305",
+    "curl_cffi HTML listing: ValueError: listing page parsed to 0 articles (layout changed?)"
    ],
-   "seconds": 5.7
+   "seconds": 1.8
   },
   {
    "id": "cnbc",
@@ -86,16 +87,16 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.4
   }
  ],
  "optional_unavailable": [],
  "quotes_checked": 55,
  "movers": 1,
  "quotes_error": null,
- "new_alerts": 8,
+ "new_alerts": 13,
  "high_score": 6,
- "seconds": 6.0,
+ "seconds": 3.9,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -129,6 +130,194 @@
  ],
  "watchlist_size": 55,
  "alerts": [
+  {
+   "id": "148d3471316d",
+   "kind": "news",
+   "time": "2026-10-20T14:52+05:30",
+   "source": "BSE announcements",
+   "headline": "Fedbank Financial Services Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Corrigendum to Newspaper Advertisement of Unaudited Financial Result of the Company for the Quarter and Half Year ended September 30, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bc394e6f-3cc4-44f0-a9de-0bf3f4ace7e1.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
+   "id": "8c974f4c2783",
+   "kind": "news",
+   "time": "2026-10-20T14:49+05:30",
+   "source": "BSE announcements",
+   "headline": "Waaree Renewable Technologies Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Please find attached herewith Newspaper Publication for the Un-audited Financial Results for the quarter and half year ended 30th September 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d8d70149-2e59-4715-b7f9-c9c02d41dfd3.pdf",
+   "symbols": [
+    "WAAREEENER"
+   ],
+   "symbol_keys": [
+    "WAAREEENER"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 9,
+   "high": true,
+   "theses": [
+    {
+     "slug": "waaree-q2-results",
+     "status": "open",
+     "type": "catalyst"
+    }
+   ],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
+   "id": "aae249e0be4a",
+   "kind": "news",
+   "time": "2026-10-20T14:47+05:30",
+   "source": "NSE announcements",
+   "headline": "Waaree Renewable Technologies Limited: Copy of Newspaper Publication",
+   "summary": "Waaree Renewable Technologies Limited has informed the Exchange about Copy of Newspaper Publication |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/WAAREERTL_20102026144654_Newspaper-S.pdf",
+   "symbols": [
+    "WAAREEENER"
+   ],
+   "symbol_keys": [
+    "WAAREEENER"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 7,
+   "high": true,
+   "theses": [
+    {
+     "slug": "waaree-q2-results",
+     "status": "open",
+     "type": "catalyst"
+    }
+   ],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
+   "id": "0edd3284d429",
+   "kind": "news",
+   "time": "2026-10-20T14:43+05:30",
+   "source": "NSE announcements",
+   "headline": "Edelweiss Financial Services Limited: 'Disclosure under the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 in respect of price band of IPO of EAAA India Alternatives Limited.'",
+   "summary": "Edelweiss Financial Services Limited has informed the Exchange regarding 'Disclosure under the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 in respect of price band of IPO of EAA",
+   "link": "https://nsearchives.nseindia.com/corporate/EDELWEISS_20102026144319_EFSLExchangeIntimationPriceband.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
+   "id": "621d8989141e",
+   "kind": "news",
+   "time": "2026-10-20T14:42+05:30",
+   "source": "BSE announcements",
+   "headline": "Titan Company Ltd: Board Meeting Intimation for Consider And Approve The Unaudited Financial Results For The Quarter Ended 30Th September 2026",
+   "summary": "Board Meeting. Titan Company Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 05/11/2026 ,inter alia, to consider and approve the unaudited financial results ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e9e04a61-ebc4-47ec-868d-20d8a3c5d631.pdf",
+   "symbols": [
+    "TITAN"
+   ],
+   "symbol_keys": [
+    "TITAN"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
+   "id": "8656733dd926",
+   "kind": "news",
+   "time": "2026-10-20T14:31+05:30",
+   "source": "NSE announcements",
+   "headline": "HFCL Limited: Copy of Publication of Un-audited Financial Results for the 2nd Quarter and half year ended September 30, 2026, of the Financial Year 2026-27, in Newspapers",
+   "summary": "HFCL Limited has informed the Exchange about Copy of Publication of Un-audited Financial Results for the 2nd Quarter and half year ended September 30, 2026, of the Financial Year 2026-27, in Newspapers |SUBJECT: Copy of Newspaper Publicatio",
+   "link": "https://nsearchives.nseindia.com/corporate/AHMED_20102026143102_HFCL_STX_Newspaper_20102026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
+   "id": "6703bede4c31",
+   "kind": "news",
+   "time": "2026-10-20T14:26+05:30",
+   "source": "NSE announcements",
+   "headline": "UltraTech Cement Limited: Copy of Newspaper Publication",
+   "summary": "UltraTech Cement Limited has informed the Exchange about Copy of Newspaper Publication |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/ULTRACEMCO1_20102026142616_Newspaper_Publication.pdf",
+   "symbols": [
+    "ULTRACEMCO"
+   ],
+   "symbol_keys": [
+    "ULTRACEMCO"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
+   "id": "f4fd3af216b9",
+   "kind": "news",
+   "time": "2026-10-20T14:22+05:30",
+   "source": "BSE announcements",
+   "headline": "UltraTech Cement Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Newspaper Advertisement of Financial Results of UltraTech Cement Limited",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e938d14b-77fa-42a2-a59e-3a5775ccc38e.pdf",
+   "symbols": [
+    "ULTRACEMCO"
+   ],
+   "symbol_keys": [
+    "ULTRACEMCO"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
   {
    "id": "a717e78cbbed",
    "kind": "news",
@@ -188,6 +377,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-20T14:20+05:30"
+  },
+  {
+   "id": "49a39ab03f9b",
+   "kind": "news",
+   "time": "2026-10-20T14:14+05:30",
+   "source": "ET Markets",
+   "headline": "IPO bound Paras Healthcare raises Rs 652.50 crore from anchor investors as issue set to open on October 21",
+   "summary": "The investors included Abu Dhabi Investment Authority, BlackRock Global Funds, Eastspring Investments, Government Pension Fund Global, Natixis International Funds, Integrated Core Strategies (Asia) and Citigroup Global.",
+   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/ipo-bound-paras-healthcare-raises-rs-652-50-crore-from-anchor-investors-as-issue-set-to-open-on-october-21/articleshow/135065506.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
   },
   {
    "id": "e33ddc54e4af",
@@ -311,6 +520,26 @@
    "first_seen": "2026-10-20T13:53+05:30"
   },
   {
+   "id": "96daa8683c1a",
+   "kind": "news",
+   "time": "2026-10-20T13:40+05:30",
+   "source": "Moneycontrol",
+   "headline": "SLMG Beverages, Coca Cola's largest bottler in India, eyes Rs 20,000 crore turnover in 5 yrs, IPO in 3-4...",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNOGtORy1ENU0tdzJlUnVqNVUya2ViNG5pZWw3OWk2d2M2OHJOaG9pZ1pCQm5jY0UyOXZwYkZaSVk5czZRZEY0eXFQaW5fT2VYVWhqcVZIZ2RKRHFadjBIZnh5QkhodXZvWFN4ZloxaERzNTduOE9UblJqVW1EeWhnaHdjakhJeHJFODFkN0dDRDZ0UFdOckc3aDh5QmlIOExEQ0JSVnpEekFGTS1fb3FLYjk2LUhRZGhLWmg3dVB3ZTNjZUZORmJlaEY0ZG9wcWhkU2MweDBoOVVFWlo0bXFRaXVxbENaNjVYLVUzWUpGQ1UxUnNkYjVZ0gH8AUFVX3lxTE9xZ1JpNGkzOWEtUmJCWXJuVlpXM1RyTldReXNoNGxzQ2RZS2xreTAtUURsX043TzktaEVuOEdlNDZkQTYxMkwxRC1uSEdqX2xxaTFmekRfZV9yZTJjamhRQnRXbWNZRWh5aTkxMjYyUjJBRFhUdEg1bGwtbTBmcHlRdUZNNklaeEItMFhLa1JORi1TZE5QRlVad3VuVjdxenEtT01XM3JpREt6OXR5NzR0cFIwQ25udkVpejV6Y3VPOHBFUWVjSWxvSlNXUXViRDR0OXFVY3ZYSVV0SDR5MjdqUmJ4QW5IZ2wta3k1OXdsMmtib0tZMlJnaUtucQ?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
    "id": "66f8d47d2329",
    "kind": "news",
    "time": "2026-10-20T13:34+05:30",
@@ -389,6 +618,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "08f3874589e0",
+   "kind": "news",
+   "time": "2026-10-20T13:30+05:30",
+   "source": "Moneycontrol",
+   "headline": "Copper holds drop as traders gauge risks from US tariff policy",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxORG9kVU5FWnd4ZGNuVllhUXlfeC1CMVBNOHEtUXlMNkpSRE42QVNsVEU4bFVTNENWRTNhLVhXa0JHOUw0U2dOdHI4SVZtc2dNbjdjaXJsWm92YUdVazlaSkJMVlNrVUt2LW82NFR2bVN6ZmxqbFVOdzEzc3lJQ0p6V2kwaWNHY1F2YlhxRDBxY1AxWUFZNEdaQ2EtLVVqS01LSU9YWkljMkZuUkFIRFBpTi03VGduZTYyc2w40gHAAUFVX3lxTE5ybEZLNTNnX2hTN1BodldtTkdzX2tyemczZzc3V0NoRGJHdDFfamdYSFdRSFBSdGU5azZvQ1d1d3FDTDRwZ2VRNFRTZzNHclpTMDNSekRHNHpocU5Pa1VHcUM2bDRZdHZXYklFZF9TY2FBQmVpRFFvSVBhR05Yd0tEelQwOU1JdzNjcVBpRzg2X3dQejJqT0ZJVkxiYTY5YmNoX3hXeF9YbGJpcEp1NllKMnBqbFZFU3czczRMR3Z3Uw?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "tariff"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
   },
   {
    "id": "c3679437d38f",
@@ -1259,6 +1508,26 @@
    "first_seen": "2026-10-20T11:50+05:30"
   },
   {
+   "id": "25660e563a92",
+   "kind": "news",
+   "time": "2026-10-20T10:56+05:30",
+   "source": "Moneycontrol",
+   "headline": "HD Fire Protect Share Price, HD Fire Protect Stock Price, HD Fire Protect Ltd. Stock Price, Share Price, Live BSE/NSE, HD Fire Protect Ltd. Bids Offers. Buy/Sell HD Fire Protect Ltd. news & tips, & F&O Quotes, NSE/BSE Forecast News and Live Quotes",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxORm8wZlhJcDZnTEF2a1VxeUNfa1V4YWdfVWZTaXNrMXNyODVPU2ozYUZkdWtlcUtsXzhvZ3NSZE9yR0JKSVFYb1djMjBjcXJrdnRKUzVBZUkyRWpnMjdwY3RIVERlLUlHRjNiY2oxUmVUQ21fLV9LYWM5ZzZya25YQlYyc1lnMHY0SldZU0IxRTU4RmFWbjNUQTlWMUVCbWpoZHFyTg?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
+  },
+  {
    "id": "afa2de0dc54b",
    "kind": "news",
    "time": "2026-10-20T10:50+05:30",
@@ -1458,6 +1727,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-20T13:53+05:30"
+  },
+  {
+   "id": "d1eea857b4e5",
+   "kind": "news",
+   "time": "2026-10-20T09:31+05:30",
+   "source": "CNBC top news",
+   "headline": "General Motors is set to report earnings before the bell. Here's what Wall Street expects",
+   "summary": "GM's 2025 third-quarter results included $48.59 billion in revenue, net income attributable to stockholders of $1.3 billion and adjusted EPS of $2.80.",
+   "link": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-20T14:52+05:30"
   },
   {
    "id": "93ad0b9ee5b6",
@@ -2993,267 +3282,6 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "84045fb9eb9e",
-   "kind": "news",
-   "time": "2026-10-19T23:24+05:30",
-   "source": "BSE announcements",
-   "headline": "REC Ltd: Announcement under Regulation 30 (LODR)-Scheme of Arrangement",
-   "summary": "Company Update. Intimation of reciept of NOC from NSE and BSE in relation to proposed scheme of merger of REC Limited with and into Power Finance Corporation Limited.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/834ca26d-c7b3-4858-b553-ff775b4ca502.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "0af14b01a6b4",
-   "kind": "news",
-   "time": "2026-10-19T23:04+05:30",
-   "source": "ET Markets",
-   "headline": "Jio IPO: LIC, BlackRock, Fidelity, GIC among 212 anchor investors to pour Rs 8,110 crore",
-   "summary": "Jio Platforms successfully raised approximately Rs 8,110 crore from 212 anchor investors before its upcoming IPO. The company allotted shares to well-known investors such as LIC, BlackRock, and Fidelity. These allocations indicate strong in",
-   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-ipo-lic-blackrock-fidelity-gic-among-212-anchor-investors-pour-rs-8110-crore/articleshow/135053762.cms",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "ddcc485ac37a",
-   "kind": "news",
-   "time": "2026-10-19T22:59+05:30",
-   "source": "BSE announcements",
-   "headline": "Varmora Granito Ltd: Outcome Of Board Meeting Dated October 19, 2026 Pursuant To Reg 30 And Other Applicable Provisions Of SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 For Quarter And Half Year Ended September 30, 2026",
-   "summary": "Result. Outcome of Board Meeting dated October 19, 2026 pursuant to Reg 30 and 33 of SEBI (LODR) Reg, 2015",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8f30e0c4-97c5-44cf-8c70-a312da8e8c5b.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "f6814c5eace9",
-   "kind": "news",
-   "time": "2026-10-19T22:59+05:30",
-   "source": "Business Standard",
-   "headline": "Tonbo Imaging India IPO subscribed nearly 136 times, led by QIB demand",
-   "summary": "The issue drew 55,24,267 applications, according to Chittorgarh data, with qualified institutional buyers subscribing 293.56 times and non-institutional investors 170.94 times",
-   "link": "https://www.business-standard.com/markets/news/tonbo-imaging-india-ipo-subscribed-nearly-136-times-led-by-qib-demand-126101901284_1.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "aadda491e8f9",
-   "kind": "news",
-   "time": "2026-10-19T22:58+05:30",
-   "source": "BusinessLine",
-   "headline": "Jio Platforms IPO draws record ₹2.50 lakh crore institutional demand",
-   "summary": "The ₹8,110 crore anchor book attracted more than 200 investors and over 100 fund schemes, including leading global and domestic institutions",
-   "link": "https://www.thehindubusinessline.com/markets/jio-platforms-ipo-draws-record-250-lakh-crore-institutional-demand/article71603046.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "ce25a0214aa2",
-   "kind": "news",
-   "time": "2026-10-19T22:46+05:30",
-   "source": "BSE announcements",
-   "headline": "Varmora Granito Ltd: Outcome Of Board Meeting Dated October 19, 2026 Pursuant To Reg 30 And Other Applicable Provisions Of SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 For Quarter Ended June 30, 2026",
-   "summary": "Result. Outcome of Board Meeting dated October 19, 2026 pursuant to Reg 30 and other applicable provisions of SEBI (LODR) Regulations, 2015 for quarter ended June 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cb460762-b480-4a12-9da7-407858342717.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "34d3730fa180",
-   "kind": "news",
-   "time": "2026-10-19T22:45+05:30",
-   "source": "BSE announcements",
-   "headline": "Power Finance Corporation Ltd: Announcement under Regulation 30 (LODR)-Scheme of Arrangement",
-   "summary": "Company Update. Intimation of receipt of NOC from NSE and BSE in relation to proposed scheme of merger of REC limited with and into Power Finance Corporation Limited",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0b4f4a30-102c-4410-80da-04f08e37d278.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "8cfdf85c62b9",
-   "kind": "news",
-   "time": "2026-10-19T22:28+05:30",
-   "source": "BSE announcements",
-   "headline": "Just Dial Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Investor Presentation on Unaudited Financial Results for the second quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/54f288aa-9c5f-4123-a87f-8abb1c0a81c1.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "7057d644841d",
-   "kind": "news",
-   "time": "2026-10-19T22:27+05:30",
-   "source": "BSE announcements",
-   "headline": "Megamont Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press release - Company Secure Orders worth Rs.6.04 Crores for Supply of Crude Degummed Soyabean oil to AWLAgri Business Limited",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b35a35a4-0000-495e-982e-bf340df823f1.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "order win"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T09:46+05:30"
-  },
-  {
-   "id": "e67af06fa603",
-   "kind": "news",
-   "time": null,
-   "source": "Moneycontrol",
-   "headline": "Jio Platforms raises Rs 8,110 crore from 212 anchor investors ahead of Rs 30,188-crore IPO; LIC, Capital Group among top investors",
-   "summary": "Jio Platforms IPO | The country's largest public issue worth Rs 30,187.6 crore is set to open on October 21 and close on October 23. The price band for the offer has been fixed at Rs 1,065-1,119 per share.",
-   "link": "https://www.moneycontrol.com/news/business/ipo/jio-platforms-raises-rs-8-110-crore-from-212-anchor-investors-ahead-of-rs-30-188-crore-ipo-lic-capital-group-among-top-investors-14055692.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "da0034c01a93",
-   "kind": "news",
-   "time": null,
-   "source": "Moneycontrol",
-   "headline": "J Pan Tubular Components gets SEBI nod to proceed with IPO plans",
-   "summary": "J Pan Tubular Components IPO.| The company filed its draft documents with the capital markets regulator in July 2026.",
-   "link": "https://www.moneycontrol.com/news/business/ipo/j-pan-tubular-components-gets-sebi-nod-to-proceed-with-ipo-plans-14055615.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "ee7ac636ecbb",
-   "kind": "news",
-   "time": "2026-10-19T22:26+05:30",
-   "source": "NSE announcements",
-   "headline": "Indus Infra Trust: Indus Infra Trust has informed regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27",
-   "summary": "Indus Infra Trust has informed regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27 |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the end of the quarter",
-   "link": "https://nsearchives.nseindia.com/corporate/BHINVIT_19102026222509_Filing_version.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
-  },
-  {
-   "id": "bf242b9e08b9",
-   "kind": "news",
-   "time": "2026-10-19T22:26+05:30",
-   "source": "BSE announcements",
-   "headline": "Quint Digital Ltd: Results- Unaudited Financial Results (Standalone And Consolidated) Of The Company For The Quarter And Half Year Ended On September 30, 2026",
-   "summary": "Result. Results- Unaudited Financial Results (Standalone and Consolidated) of the Company for the quarter and half year ended on September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2b8f2c5b-e029-406f-9975-ddc7a9fc2608.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-19T22:27+05:30"
   }
  ]
 }

@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-20 14:20 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-20 14:52 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
 Quotes: 55 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -65,7 +65,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 3c84523acb20
 - Second-order candidates: False match: live-blog round-up of many companies (same series as b51273103ff3), not a single catalyst.
 
-## 6. [9 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome
+## 6. [9 HIGH] Waaree Renewable Technologies Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication
+
+- Time: 2026-10-20 14:49 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/d8d70149-2e59-4715-b7f9-c9c02d41dfd3.pdf
+- Matched symbols: WAAREEENER
+- Keywords: results
+- Thesis match: waaree-q2-results (open)
+- Score: 9
+- Alert id: 8c974f4c2783
+- Second-order candidates: 
+
+## 7. [9 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome
 
 - Time: 2026-10-19 21:05 IST
 - Source: BSE announcements
@@ -77,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 42261e7be92d
 - Second-order candidates: Winner: none clear - routine post-results analyst call filing; no new numbers by itself. / Losers: none clear / Catalyst: scheduled (Q2 results call, done) - nothing ahead from this filing. / Thesis fit: none (bajaj-finance-rbi-december is about the December RBI meeting, not Q2 results)
 
-## 7. [9 HIGH] Waaree Renewable Technologies Limited: Waaree Renewable Technologies Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.
+## 8. [9 HIGH] Waaree Renewable Technologies Limited: Waaree Renewable Technologies Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.
 
 - Time: 2026-10-19 18:13 IST
 - Source: NSE announcements
@@ -89,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 0bc9d7dd8c18
 - Second-order candidates: False match: this is Waaree Renewable Technologies (NSE: WAAREERTL), a different listed company from Waaree Energies (WAAREEENER). The open thesis waaree-q2-results concerns Waaree Energies only, so its results-day rule is not triggered; its event_date still stands.
 
-## 8. [9 HIGH] Bajaj Finance Ltd: Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended 30 September 2026
+## 9. [9 HIGH] Bajaj Finance Ltd: Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended 30 September 2026
 
 - Time: 2026-10-19 17:39 IST
 - Source: BSE announcements
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: ec245185064d
 - Second-order candidates: Winner: Bajaj Finance (BAJFINANCE) - consolidated net profit up about 29% to Rs 6,367 crore per ET Markets (see 5176cf2bd22b). / Losers: none clear - one-company filing; no named competitor is harmed by its own growth. / Catalyst: scheduled (Q2 results, done at 17:20 IST on 19 Oct) - first trading reaction is today's session. / Thesis fit: none (the proposed thesis is a December RBI trade; the results do not change it)
 
-## 9. [9 HIGH] Bajaj Finance Limited: Bajaj Finance Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.
+## 10. [9 HIGH] Bajaj Finance Limited: Bajaj Finance Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.
 
 - Time: 2026-10-19 17:20 IST
 - Source: NSE announcements
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 847be3371df7
 - Second-order candidates: False match: duplicate of the Bajaj Finance Q2 filing noted under ec245185064d.
 
-## 10. [9 HIGH] Bajaj Finance Ltd: Board Meeting Outcome for Outcome Of Board Meeting Held On 19 October 2026
+## 11. [9 HIGH] Bajaj Finance Ltd: Board Meeting Outcome for Outcome Of Board Meeting Held On 19 October 2026
 
 - Time: 2026-10-19 17:19 IST
 - Source: BSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: cf599d6f0555
 - Second-order candidates: False match: procedural filing accompanying the Q2 results noted under ec245185064d; no separate catalyst.
 
-## 11. [8 HIGH] Bajaj Finance Q2 consolidated net profit rises 29% to Rs 6,367 crore
+## 12. [8 HIGH] Bajaj Finance Q2 consolidated net profit rises 29% to Rs 6,367 crore
 
 - Time: 2026-10-19 20:43 IST
 - Source: ET Markets
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5176cf2bd22b
 - Second-order candidates: False match: duplicate of the Bajaj Finance Q2 results already noted under ec245185064d (same figures, no new information).
 
-## 12. [8 HIGH] Waaree Renewable Technologies Q2 Results: Net profit falls 29% to Rs 81 crore
+## 13. [8 HIGH] Waaree Renewable Technologies Q2 Results: Net profit falls 29% to Rs 81 crore
 
 - Time: 2026-10-19 20:41 IST
 - Source: ET Markets
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8feaebe6b096
 - Second-order candidates: False match: Waaree Renewable Technologies (WAAREERTL) is a different company from Waaree Energies (WAAREEENER); the open thesis waaree-q2-results is not triggered (see 0bc9d7dd8c18).
 
-## 13. [8 HIGH] Here are Monday's biggest analyst calls: SpaceX, Nvidia, Apple, CoreWeave, Amazon, Meta, Eli Lilly & more
+## 14. [8 HIGH] Here are Monday's biggest analyst calls: SpaceX, Nvidia, Apple, CoreWeave, Amazon, Meta, Eli Lilly & more
 
 - Time: 2026-10-19 17:58 IST
 - Source: CNBC top news
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 91af719541be
 - Second-order candidates: False match: CNBC round-up of many analyst calls, not a single catalyst; CRWV and META are matched by name only.
 
-## 14. [8 HIGH] Bajaj Finance Q2 Results: Net profit jumps 29% YoY to Rs 6,367 crore, NII up 24%
+## 15. [8 HIGH] Bajaj Finance Q2 Results: Net profit jumps 29% YoY to Rs 6,367 crore, NII up 24%
 
 - Time: 2026-10-19 17:40 IST
 - Source: ET Markets
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 8
 - Alert id: ba19d6c972fa
 - Second-order candidates: False match: duplicate of the Bajaj Finance Q2 results already noted under ec245185064d (same results, republished via Moneycontrol; no new information).
-
-## 15. [8 HIGH] Bajaj Finance Q2 results: Net profit rises 29% to Rs 6,266 crore, NII increases 24%
-
-- Time: 2026-10-19 17:30 IST
-- Source: Moneycontrol
-- Link: https://news.google.com/rss/articles/CBMi3gFBVV95cUxOOTVId1dvSk5MRUlmOFJTUjBHdnBPS25pdWZZci1OUW9QUFY1UldsbGl1OWJoVHpKajdFYlNkYmw1cFhXaUpFVm0tM2lGMWwzNDlkSUNZbHk2VGwzVkhkNzlzV19McUstR2tXcGFISks4NW5QdWIzSWNUYWlSNElfeV81R3NVam9NNE8zVFNMRjJidHpmb3pqcUpMSVloZW9DSVExZnkyV0daUlBDV2ZqLTNjTTBpeUhLMGdicHNRNEM2MGpnYlhqb0UtRHFBQnZ2ZHY2SmlCY3VCMGIzcFE?oc=5
-- Matched symbols: BAJFINANCE
-- Keywords: results
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 8
-- Alert id: 375a0f097993
-- Second-order candidates: False match: duplicate of the Bajaj Finance Q2 results already noted under ec245185064d (same results, Moneycontrol link; no new information).
