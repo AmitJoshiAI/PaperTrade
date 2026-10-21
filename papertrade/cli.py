@@ -2,6 +2,7 @@
 
   run            full daily cycle (update -> execute pending -> mark -> propose -> review)
   run --offline  same, but use cached prices (no download)
+                 exit code 3: Yahoo's prices end before the last recorded date; nothing was written
   status         print portfolio and last equity row
   pending        print the pending orders file
   thesis         print the thesis sleeve: cash, holdings, theses, queued thesis orders
@@ -24,7 +25,13 @@ from . import config
 
 def cmd_run(args):
     from .engine import run_day
-    out = run_day(do_update=not args.offline)
+    from .staleness import StaleDataError, STALE_EXIT_CODE
+    try:
+        out = run_day(do_update=not args.offline)
+    except StaleDataError as e:
+        print(f"NOT RUN: {e}. Nothing was written (state, journal, decisions, docs). "
+              f"Exit code {STALE_EXIT_CODE}; re-run once Yahoo has the latest bar.")
+        sys.exit(STALE_EXIT_CODE)
     print(f"Date: {out['date']}")
     print(f"Equity: Rs {out['equity']['equity']:,.2f}  cash Rs {out['equity']['cash']:,.2f}  positions {out['equity']['positions']}")
     print(f"Fills today: {len(out['fills'])}")
@@ -48,6 +55,9 @@ def cmd_run(args):
             print(f"  {m}")
     for key, name, ccy in (("fno", "India F&O sleeve", "Rs"), ("us", "US sleeve", "$")):
         s = out.get(key)
+        if s is None and key == "us" and out.get("us_skipped"):
+            print(f"{name}: SKIPPED - {out['us_skipped']}; US state not changed.")
+            continue
         if s is None:
             print(f"{name}: STEP FAILED (see error above); the other sleeves are saved.")
             continue

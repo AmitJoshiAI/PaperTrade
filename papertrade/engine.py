@@ -23,6 +23,7 @@ import pandas as pd
 
 from . import config, data, strategy
 from .portfolio import Portfolio
+from .staleness import StaleDataError, ensure_not_older, last_date
 
 log = logging.getLogger(__name__)
 
@@ -126,11 +127,43 @@ def mark_to_market(pf: Portfolio, prices: pd.DataFrame) -> dict:
     return row
 
 
+def _cached_date() -> str | None:
+    try:
+        return _day(pd.read_parquet(config.PRICES_FILE, columns=["date"])["date"].max()) if config.PRICES_FILE.exists() else None
+    except Exception:
+        return None
+
+
+def _curve_date(path) -> str | None:
+    try:
+        return last_date(pd.read_csv(path, usecols=["date"])) if path.exists() else None
+    except Exception:
+        return None
+
+
+def check_fresh(prices: pd.DataFrame, cached: str | None = None) -> None:
+    """Stale-data guard (staleness.py). Raises StaleDataError, before anything is written, if the prices end
+    before a date already recorded by an NSE-dated book (momentum, thesis, F&O) or by the price cache.
+    An equal date is the normal same-date re-run; only a newer date advances."""
+    day = _day(prices["date"].max())
+    for what, recorded in (("state/equity_curve.csv", _curve_date(config.EQUITY_FILE)),
+                           ("state/thesis_equity_curve.csv", _curve_date(config.THESIS_EQUITY_FILE)),
+                           ("state/fno_equity_curve.csv", _curve_date(config.FNO_EQUITY_FILE)),
+                           ("data_cache/prices_daily.parquet", cached)):
+        ensure_not_older(day, recorded, what)
+
+
 def run_day(do_update: bool = True) -> dict:
-    """Full daily cycle. Returns a summary dict for the CLI/review."""
+    """Full daily cycle. Returns a summary dict for the CLI/review. Raises StaleDataError (and writes
+    nothing) if the prices end before the last recorded date."""
     from . import review  # local import to avoid cycle
 
-    prices = data.update_cache() if do_update else data.load_cache()
+    if do_update:
+        cached = _cached_date()
+        prices = data.update_cache(check=lambda px: check_fresh(px, cached))
+    else:
+        prices = data.load_cache()
+        check_fresh(prices)
     pf = Portfolio.load()
     fills = execute_pending(pf, prices)
     eq_row = mark_to_market(pf, prices)
@@ -164,7 +197,7 @@ def run_day(do_update: bool = True) -> dict:
         thesis_section = ["## Thesis sleeve", "", "**The thesis sleeve step FAILED this run** (see the run log). "
                           "The momentum sleeve above is unaffected."]
     # India F&O and US sleeves: two more separate books, run after the thesis sleeve, each isolated the same way.
-    fno_out, us_out = None, None
+    fno_out, us_out, us_skipped = None, None, None
     try:
         from . import fno
         fno_out = fno.run_day(prices, do_update)
@@ -176,6 +209,10 @@ def run_day(do_update: bool = True) -> dict:
         from . import us
         us_out = us.run_day(today, do_update)
         thesis_section += [""] + us.journal_lines(us_out)
+    except StaleDataError as e:
+        us_skipped = str(e)
+        thesis_section += ["", "## US sleeve", "", f"**Skipped this run: {e}.** Nothing in the US sleeve was "
+                           "written; it is marked again on the next run with current data."]
     except Exception:
         log.exception("US sleeve step failed; the other sleeves completed and were saved.")
         thesis_section += ["", "## US sleeve", "", "**The US sleeve step FAILED this run** (see the run log)."]
@@ -191,7 +228,7 @@ def run_day(do_update: bool = True) -> dict:
         log.exception("Dashboard export failed; the trading run itself completed and was saved.")
         dashboard = None
     return dict(date=today, fills=fills, equity=eq_row, proposals=proposals, report=str(report_path),
-                dashboard=dashboard, thesis=thesis_out, fno=fno_out, us=us_out)
+                dashboard=dashboard, thesis=thesis_out, fno=fno_out, us=us_out, us_skipped=us_skipped)
 
 
 def combined_lines(eq_row: dict, thesis_out, fno_out, us_out) -> list[str]:
@@ -203,7 +240,7 @@ def combined_lines(eq_row: dict, thesis_out, fno_out, us_out) -> list[str]:
              config.US_CAPITAL, us_out["equity"]["equity_inr"] if us_out else None)]
     lines = ["## All sleeves", "", "| Sleeve | Capital | Equity | P&L |", "|---|---|---|---|"]
     for name, cap, eq in rows:
-        lines.append(f"| {name} | Rs {cap:,.0f} | " + (f"Rs {eq:,.0f} | Rs {eq - cap:+,.0f} |" if eq is not None else "n/a (step failed) | - |"))
+        lines.append(f"| {name} | Rs {cap:,.0f} | " + (f"Rs {eq:,.0f} | Rs {eq - cap:+,.0f} |" if eq is not None else "n/a (step failed or skipped) | - |"))
     cap = sum(r[1] for r in rows)
     if all(r[2] is not None for r in rows):
         tot = sum(r[2] for r in rows)

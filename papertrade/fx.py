@@ -65,6 +65,11 @@ def refresh(period: str = "3mo") -> bool:
         return False
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     cache = {r["date"]: r for r in _read_cache().to_dict("records")}
+    newest = px["date"].max().strftime("%Y-%m-%d")
+    if cache and newest < max(cache):
+        # a history ending before the cached one: keep the cache untouched (same rule as staleness.py)
+        log.error("stale data from Yahoo (%s %s < cached %s); USD/INR cache not changed", YAHOO_TICKER, newest, max(cache))
+        return False
     changed = False
     for d, c in zip(px["date"].dt.strftime("%Y-%m-%d"), px["close"]):
         rate = round(float(c), 4)

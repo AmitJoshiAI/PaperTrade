@@ -356,6 +356,9 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
     warnings = [f"No price data for {t}" for t in prices.attrs["dropped"]]
     market = UsMarket(prices, book, online=do_update)
     market_day = market.latest or fallback_day
+    # its own calendar: never mark as of a date before the last US row (raises before any US write)
+    from .staleness import ensure_not_older, last_date
+    ensure_not_older(market_day, last_date(UsBook.equity_curve()), "state/us_equity_curve.csv")
     rate = fx.lookup(market_day, download=do_update)
     notes = []
     if book.start_fx is None:

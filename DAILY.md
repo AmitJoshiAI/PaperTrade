@@ -57,7 +57,8 @@ hourly catalyst reviewer may activate one drafted second_order or catalyst thesi
    ```
 
    Check the `Date:` line (if it is not today's date, Yahoo has not published today's bar yet; run
-   again later). Then commit and push everything under `state/`, `decisions/`, `journal/` and `docs/`
+   again later). If it prints `NOT RUN: stale data from Yahoo` (exit code 3), Yahoo returned a history
+   older than the recorded state; nothing was written, so there is nothing to commit: run again later. Then commit and push everything under `state/`, `decisions/`, `journal/` and `docs/`
    straight away so the next cloud run starts from it.
 
 7. **Fridays: weekly thesis-sleeve review.** Each thesis's macro reason is re-checked once a week

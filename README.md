@@ -307,10 +307,17 @@ Things to know:
   the run re-processes the previous market date. That is safe: orders do not fill until a later trading
   day exists, the equity row is replaced rather than duplicated, and a review already written in that
   day's journal is kept. Pending orders for that date are regenerated unless `"locked": true`.
+- **Stale data from Yahoo.** If Yahoo returns a history that ends BEFORE a date the books have already
+  recorded (it did on 2026-10-19: two late runs got data ending on the 16th and re-marked everything as of
+  the 16th), `run` writes nothing and exits with code 3, printing `stale data from Yahoo (<date> <
+  <recorded>)`. The workflow turns code 3 into a warning and skips the commit; the next run retries. The
+  US sleeve has its own calendar: if only its data is stale, that sleeve is skipped and the rest run.
+  Guard: `papertrade/staleness.py`; the same rule protects the USD/INR cache and `export`.
 - **Inactive repos.** GitHub disables scheduled workflows in public repos after 60 days without
   repository activity. The daily bot commits should count as activity, but if GitHub emails you that
   the schedule was disabled, re-enable it from the Actions tab.
-- **A failed run commits nothing.** The next run starts again from the last committed state, and pending
+- **A failed run commits nothing.** The commit step runs only after a successful run step, so a crash
+  leaves no partial commit. The next run starts again from the last committed state, and pending
   orders fill at the first open after their decision date.
 - **No price cache in the repo.** `data_cache/` is git-ignored, so every cloud run downloads two years of
   daily bars from Yahoo (a few seconds).

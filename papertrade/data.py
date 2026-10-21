@@ -69,9 +69,13 @@ def _download(key_of: dict, period: str, allow_empty: bool) -> pd.DataFrame:
     return out
 
 
-def update_cache() -> pd.DataFrame:
+def update_cache(check=None) -> pd.DataFrame:
+    """Download and cache. `check(prices)`, if given, runs BEFORE the cache is overwritten (the engine's
+    stale-data guard raises there, so a stale download never replaces a newer cache)."""
     config.CACHE_DIR.mkdir(parents=True, exist_ok=True)
     prices = download_prices()
+    if check is not None:
+        check(prices)
     prices.to_parquet(config.PRICES_FILE, index=False)
     return prices
 

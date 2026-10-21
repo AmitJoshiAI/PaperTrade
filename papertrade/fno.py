@@ -314,6 +314,8 @@ def expire_positions(book: FnoBook, market: FnoMarket, market_day: str) -> tuple
 def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     """F&O part of the daily run. Called by engine.run_day after the thesis sleeve."""
     market_day = main_prices["date"].max().strftime("%Y-%m-%d")
+    from .staleness import ensure_not_older, last_date
+    ensure_not_older(market_day, last_date(FnoBook.equity_curve()), "state/fno_equity_curve.csv")
     book = FnoBook.load()
     queue = load_queue(config.FNO_ORDERS_FILE)
     tickers = needed_tickers(book, queue["orders"])

@@ -59,7 +59,15 @@ def _load_prices() -> pd.DataFrame | None:
     if not config.PRICES_FILE.exists():
         log.warning("No price cache at %s; exporting without last closes.", config.PRICES_FILE)
         return None
-    return pd.read_parquet(config.PRICES_FILE)
+    prices = pd.read_parquet(config.PRICES_FILE)
+    # stale-data guard (staleness.py): a cache older than the recorded state would show old closes next to
+    # newer equity rows; export as if there were no cache instead
+    curve = Portfolio.equity_curve()
+    if len(curve) and len(prices) and prices["date"].max().strftime("%Y-%m-%d") < str(curve["date"].astype(str).max()):
+        log.warning("stale data: price cache ends %s, before the recorded %s; exporting without last closes.",
+                    prices["date"].max().strftime("%Y-%m-%d"), curve["date"].astype(str).max())
+        return None
+    return prices
 
 
 def _dropped(prices: pd.DataFrame | None, dropped) -> list[str] | None:

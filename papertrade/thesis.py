@@ -827,6 +827,8 @@ def catalyst_flags(theses: dict, orders: list[dict], market_day: str, held=()) -
 def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     """Thesis-sleeve part of the daily run. Called by engine.run_day AFTER the momentum sleeve is saved."""
     market_day = _day(main_prices["date"].max())
+    from .staleness import ensure_not_older, last_date
+    ensure_not_older(market_day, last_date(ThesisPortfolio.equity_curve()), "state/thesis_equity_curve.csv")
     theses, warnings = load_theses()
     pf = ThesisPortfolio.load()
     orders = load_orders()["orders"]
