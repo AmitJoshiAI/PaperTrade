@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-21 14:20 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 1 moving.
+Generated 2026-10-21 14:49 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -77,7 +77,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 87e9f16adbcb
 - Second-order candidates: Winner: none clear - analysts stay positive on asset quality, but the stock is trading down on the day, so the results look priced in. / Losers: none clear - no named competitor is affected. / Catalyst: scheduled (RBI MPC, estimated 4 Dec 2026) - the Q2 reaction does not change that; the pending thesis still depends on the rate decision. / Thesis fit: proposed thesis bajaj-finance-rbi-december: neither supports nor weakens (the results dip is not an input to the RBI-day rule)
 
-## 7. [7 HIGH] UltraTech Cement shares rise 2% post-Q2 results; brokerages divided on outlook amid fuel and energy cost pressures
+## 7. [7 HIGH] WAAREEENER -4.2% vs previous close (close 2408.9, bar 2026-10-21)
+
+- Time: 2026-10-21 14:49 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/WAAREEENER.NS
+- Matched symbols: WAAREEENER (moving today: WAAREEENER)
+- Keywords: price move
+- Thesis match: waaree-q2-results (open)
+- Score: 7
+- Alert id: 730f71c34c9a
+- Second-order candidates: 
+
+## 8. [7 HIGH] UltraTech Cement shares rise 2% post-Q2 results; brokerages divided on outlook amid fuel and energy cost pressures
 
 - Time: 2026-10-21 13:53 IST
 - Source: Moneycontrol
@@ -89,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2f5f0cb228ad
 - Second-order candidates: Winner: none clear - same Q2 story as the already-noted UltraTech alerts (792ac2b2d413, 637abb29f54d); brokerages are split, so no clear direction. / Losers: none clear - fuel and energy cost pressure is sector-wide, not a named company effect from this headline. / Catalyst: scheduled (Q2 results, done) - the move is the reaction; nothing further scheduled. / Thesis fit: none
 
-## 8. [7 HIGH] Bajaj Finance Limited: allotment of 2,12,000 securities pursuant to Non Convertible Securities at its meeting held on October 21, 2026
+## 9. [7 HIGH] Bajaj Finance Limited: allotment of 2,12,000 securities pursuant to Non Convertible Securities at its meeting held on October 21, 2026
 
 - Time: 2026-10-21 12:29 IST
 - Source: NSE announcements
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 72ce08dde5ed
 - Second-order candidates: Winner: none clear - routine NCD allotment (debt funding for Bajaj Finance); no new information. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
 
-## 9. [7 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Allotment
+## 10. [7 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Allotment
 
 - Time: 2026-10-21 12:22 IST
 - Source: BSE announcements
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 91234673aa48
 - Second-order candidates: Winner: none clear - same routine NCD allotment filing as 72ce08dde5ed. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
 
-## 10. [7 HIGH] Larsen & Toubro Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
+## 11. [7 HIGH] Larsen & Toubro Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
 
 - Time: 2026-10-21 09:45 IST
 - Source: BSE announcements
@@ -125,19 +137,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 66fce81348e9
 - Second-order candidates: Winner: Larsen & Toubro (LT) - an order win adds to its backlog; the filing alone does not show size or customer. / Losers: none clear - the order size and counterparty are not in the headline. / Catalyst: surprise (order announcement) - the value band is in the PDF, which was not checked here. / Thesis fit: none
 
-## 11. [7 HIGH] Waaree Renewable Technologies Limited: Copy of Newspaper Publication
+## 12. [6 HIGH] Shriram Finance Ltd: Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018
 
-- Time: 2026-10-20 14:47 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/WAAREERTL_20102026144654_Newspaper-S.pdf
-- Matched symbols: WAAREEENER
-- Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: aae249e0be4a
-- Second-order candidates: False match: Waaree Renewable Technologies (WAAREERTL), not Waaree Energies (WAAREEENER); a newspaper copy of results already noted under 8c974f4c2783 and 0bc9d7dd8c18.
+- Time: 2026-10-21 14:47 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/74f50596-52d0-45c4-b517-28f07f42c56a.pdf
+- Matched symbols: SHRIRAMFIN
+- Keywords: SEBI
+- Thesis match: none
+- Score: 6
+- Alert id: 5a2fad5d678b
+- Second-order candidates: 
 
-## 12. [6 HIGH] Aye Finance Ltd: Board Meeting Outcome for Financial Results For Quarter & Year To Date Ended September 30, 2026
+## 13. [6 HIGH] Aye Finance Ltd: Board Meeting Outcome for Financial Results For Quarter & Year To Date Ended September 30, 2026
 
 - Time: 2026-10-21 11:48 IST
 - Source: BSE announcements
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 08cbb203ea34
 - Second-order candidates: Winner: none clear - routine results filing (PDF), content not checked; a small NBFC with no read-across found. / Losers: none clear / Catalyst: unknown - no news found / Thesis fit: none
 
-## 13. [6 HIGH] Stocks to Watch Today: L&T Technology, Bajaj Finance, HD Fire Protect, Piramal Finance, Hindustan Zinc, Infosys, Dhampur Bio Organics, Ceigall India in focus on 21 October
+## 14. [6 HIGH] Stocks to Watch Today: L&T Technology, Bajaj Finance, HD Fire Protect, Piramal Finance, Hindustan Zinc, Infosys, Dhampur Bio Organics, Ceigall India in focus on 21 October
 
 - Time: 2026-10-21 09:46 IST
 - Source: Moneycontrol
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: dbb9e9983b21
 - Second-order candidates: False match: morning round-up of many companies, not a single catalyst; the items that matter are noted separately.
 
-## 14. [6 HIGH] UltraTech Cement shares in focus as brokerages revise target prices after Q2 results. What Citi, Nomura, Jefferies say
+## 15. [6 HIGH] UltraTech Cement shares in focus as brokerages revise target prices after Q2 results. What Citi, Nomura, Jefferies say
 
 - Time: 2026-10-21 09:25 IST
 - Source: ET Markets
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 792ac2b2d413
 - Second-order candidates: Winner: none clear - brokerage target changes after Q2 results that were already out on 20 Oct; the direction of the revisions was not checked. / Losers: none clear - no named competitor effect. / Catalyst: scheduled (Q2 results, done) - the revisions are after the fact and are mostly priced in. / Thesis fit: none
-
-## 15. [6 HIGH] UltraTech Cement shares jump 3% as brokerages revise target prices after Q2 results. What Jefferies, Citi are saying
-
-- Time: 2026-10-21 09:25 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/ultratech-cement-shares-in-focus-as-brokerages-revise-target-prices-after-q2-results-what-citi-nomura-jefferies-say/articleshow/135081591.cms
-- Matched symbols: ULTRACEMCO
-- Keywords: results, rating
-- Thesis match: none
-- Score: 6
-- Alert id: 637abb29f54d
-- Second-order candidates: Winner: none clear - the 3% move follows brokerage target changes after Q2 results out on 20 Oct; same story as the already-noted UltraTech alert 792ac2b2d413. / Losers: none clear - no named competitor effect. / Catalyst: scheduled (Q2 results, done) - the revisions are after the fact and mostly priced in. / Thesis fit: none
