@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-21T09:46+05:30",
+ "generated_at": "2026-10-21T11:49+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 96,
+   "items": 248,
    "error": null,
    "optional": false,
-   "seconds": 0.7
+   "seconds": 0.5
   },
   {
    "id": "nse_results",
@@ -17,18 +17,18 @@
    "items": 4,
    "error": null,
    "optional": false,
-   "seconds": 0.6
+   "seconds": 0.5
   },
   {
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 59,
+   "items": 63,
    "error": null,
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.0
+   "seconds": 3.1
   },
   {
    "id": "et_markets",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bs_markets",
@@ -64,7 +64,7 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.2
   },
   {
    "id": "moneycontrol",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.3
+   "seconds": 0.9
   },
   {
    "id": "cnbc",
@@ -93,9 +93,9 @@
  "quotes_checked": 55,
  "movers": 0,
  "quotes_error": null,
- "new_alerts": 76,
+ "new_alerts": 69,
  "high_score": 6,
- "seconds": 5.1,
+ "seconds": 4.1,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -130,6 +130,1331 @@
  "watchlist_size": 55,
  "alerts": [
   {
+   "id": "923931fc2807",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Jio Platforms IPO: Chola Securities sees 15-20% listing gains, backs long-term growth prospects",
+   "summary": "Chola’s Dharmesh Kant said Jio's 12-15% valuation discount to Bharti Airtel was justified, given the difference in their growth rates.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/jio-platforms-ipo-chola-securities-sees-15-20-listing-gains-backs-long-term-growth-prospects-14056534.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO",
+    "listing"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "5b2e038d6c50",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Bajaj Finance shares fall 3% despite 29% Q2 profit growth; brokerages retain bullish calls",
+   "summary": "JPMorgan highlighted a strong second quarter, with NII rising 24% year-on-year to Rs 13,330 crore, pre-provision operating profit (PPoP) increasing 21% to Rs 10,700 crore and profit after tax (PAT) growing 29% to Rs 6,270 crore.",
+   "link": "https://www.moneycontrol.com/news/business/stocks/bajaj-finance-shares-fall-3-despite-29-q2-profit-growth-brokerages-retain-bullish-calls-14056520.html",
+   "symbols": [
+    "BAJFINANCE"
+   ],
+   "symbol_keys": [
+    "BAJFINANCE"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 8,
+   "high": true,
+   "theses": [
+    {
+     "slug": "bajaj-finance-rbi-december",
+     "status": "proposed",
+     "type": "catalyst"
+    }
+   ],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "0a915b428550",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "L&T Tech Services shares rally over 14% after strong revenue growth in Q2 results",
+   "summary": "Shares of L&T Technology Services today opened at Rs 3,830.70 and rose to hit 4,143, rallying 14.7 percent from the previous day close. The strong rally in the stock came in the back of the company's robust revenue growth in the Q2 FY27 res",
+   "link": "https://www.moneycontrol.com/news/business/markets/l-t-tech-services-shares-rally-over-14-after-strong-revenue-growth-in-q2-results-14056466.html",
+   "symbols": [
+    "LT"
+   ],
+   "symbol_keys": [
+    "LT"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "6531f125c8c1",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Zetwerk IPO allotment today on BSE, NSE and registrar — check latest GMP",
+   "summary": "Investors awaiting the allotment of Zetwerk Manufacturing Business shares can check their application status today, October 21, as the basis of allotment for the Rs 5,012.33-crore initial public offering (IPO) is scheduled to be finalised.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/zetwerk-ipo-allotment-today-on-bse-nse-and-registrar-check-latest-gmp-14056487.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "d0b8fe1a35e1",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Jio Platforms IPO fully subscribed by 10:36 am on Day 1, fastest among mega-issues",
+   "summary": "Jio Platforms IPO received strong demand on the first day of bidding, with the issue being fully subscribed within minutes of opening.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/jio-platforms-ipo-becomes-fastest-among-mega-issues-to-get-fully-subscribed-14056475.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "42799d09829e",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Bonfiglioli Transmissions India IPO allotment today; check status on BSE, NSE and registrar",
+   "summary": "The allotment of shares for Bonfiglioli Transmissions India's initial public offering (IPO) is expected to be finalised on October 21, following strong demand from investors during the bidding period. Applicants can check their allotment st",
+   "link": "https://www.moneycontrol.com/news/business/ipo/bonfiglioli-transmissions-india-ipo-allotment-today-check-status-on-bse-nse-and-registrar-14056441.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "05f14127b004",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Jio IPO fully subscribed at 1.21 times: QIB portion booked nearly 4x so far; check GMP, other key details",
+   "summary": "Jio Platforms raised Rs 8,109.84 crore from 212 anchor investors, including BlackRock, Capital Group, Fidelity Investments, T. Rowe Price.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/jio-ipo-qib-portion-fully-booked-at-nearly-3x-overall-issue-sees-85-subscription-so-far-check-full-details-14056397.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "5c5305f0a306",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "SBI flags suspected dark web data leak affecting over 3.75 lakh customer records",
+   "summary": "SBI said the alleged leak has no material impact on its business operations",
+   "link": "https://www.moneycontrol.com/banking/sbi-flags-incident-of-data-leak-says-no-material-impact-on-bank-s-business-operations-article-14056419.html",
+   "symbols": [
+    "SBIN"
+   ],
+   "symbol_keys": [
+    "SBIN"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "dd749da94588",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Sensex rises 500 pts, Nifty reclaims 23,000: Buying in IT, RIL shares among key factors behind market gain",
+   "summary": "The IT index jumped 2.2%, as L&T Technology Services led with a 10.5% surge after reporting higher revenue and profit for September quarter",
+   "link": "https://www.moneycontrol.com/news/business/markets/sensex-rises-500-pts-nifty-reclaims-23-000-buying-in-it-ril-shares-among-key-factors-behind-market-gain-14056407.html",
+   "symbols": [
+    "RELIANCE"
+   ],
+   "symbol_keys": [
+    "RELIANCE"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "8e4806994ea1",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Tonbo Imaging India IPO allotment today; GMP at 73% — check status on BSE, NSE and registrar",
+   "summary": "The allotment status of Tonbo Imaging India's initial public offering (IPO) is expected to be finalised on October 21, with the defence electronics company's shares commanding a grey market premium (GMP) of around 73% ahead of their stock m",
+   "link": "https://www.moneycontrol.com/news/business/ipo/tonbo-imaging-india-ipo-allotment-today-gmp-at-73-check-status-on-bse-nse-and-registrar-14056384.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "8ca7475125ae",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "EAAA India Alternatives fixes price band at Rs 1,585-1,665 per share for Rs 1,200-crore IPO",
+   "summary": "EAAA India Alternatives IPO | The public issue will open for subscription on October 26 and close on October 28.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/eaaa-india-alternatives-fixes-price-band-at-rs-1-585-1-665-per-share-for-rs-1-200-crore-ipo-14056357.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "08cbb203ea34",
+   "kind": "news",
+   "time": "2026-10-21T11:48+05:30",
+   "source": "BSE announcements",
+   "headline": "Aye Finance Ltd: Board Meeting Outcome for Financial Results For Quarter & Year To Date Ended September 30, 2026",
+   "summary": "Board Meeting. Pursuant to Regulations 30, 33, 51 & 52 of SEBI Listing Regulations, an outcome of Board Meeting held today i.e. October 21, 2026 is attached herewith",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4383de1d-2d3b-4b71-ac3b-ba3b29e6571b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "cde7fb5c48cb",
+   "kind": "news",
+   "time": "2026-10-21T11:48+05:30",
+   "source": "BSE announcements",
+   "headline": "Duncan Engineering Ltd-$: Board Meeting Intimation for Consider And Approve The Un-Audited Standalone And Consolidated Financial Results Of The Company For The Quarter And Half Year Ended September 30, 2026.",
+   "summary": "Board Meeting. Duncan Engineering Ltd-has informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/10/2026 ,inter alia, to consider and approve the Un-audited Standalone ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/feaf45aa-aac0-47fc-a6ca-7f2db75559e7.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "84a0ec3b5fad",
+   "kind": "news",
+   "time": "2026-10-21T11:47+05:30",
+   "source": "NSE announcements",
+   "headline": "Aye Finance Limited: Aye Finance Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Aye Finance Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/AYEFINANCE_21102026114602_AYE_Outcome.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "52a6229b2e48",
+   "kind": "news",
+   "time": "2026-10-21T11:46+05:30",
+   "source": "BSE announcements",
+   "headline": "Omax Autos Ltd: Board Meeting Intimation for To Approve Financial Results For Quarter And Half Yearly Ended On September 30, 2026.",
+   "summary": "Board Meeting. Omax Autos Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve Please find attached intimation ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/77e828bc-485e-480b-9892-bb230b01a62c.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "51fb42af82c7",
+   "kind": "news",
+   "time": "2026-10-21T11:46+05:30",
+   "source": "BSE announcements",
+   "headline": "HDFC Bank Ltd: Shareholder Meeting / Postal Ballot-Notice of Postal Ballot",
+   "summary": "AGM/EGM. Notice of postal ballot",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/06533910-f3e7-4bae-80e9-34ecd08bbafc.pdf",
+   "symbols": [
+    "HDFCBANK"
+   ],
+   "symbol_keys": [
+    "HDFCBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "1d7889f415a2",
+   "kind": "news",
+   "time": "2026-10-21T11:45+05:30",
+   "source": "NSE announcements",
+   "headline": "A-One Steels India Limited: Copy of Newspaper Publication, all-India edition - Unaudited Financial Results for the quarter ended June 30, 2026",
+   "summary": "A-One Steels India Limited has informed the Exchange about Copy of Newspaper Publication, all-India edition - Unaudited Financial Results for the quarter ended June 30, 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/AONESTEELS_21102026114530_Newspaper_Advertisement_intimation.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "7ca70c11eabe",
+   "kind": "news",
+   "time": "2026-10-21T11:44+05:30",
+   "source": "BusinessLine",
+   "headline": "Q2 Results Today Live: Eternal, Adani Green, Indian Hotels, SRF, KEI Industries shares fall; PC Jeweller gains ahead of earnings",
+   "summary": "Q2 Results Today, 21th October 2026 Live Updates: Follow the latest announcements and developments on the company's September quarter earnings, revenue and profit, updates on Aditya Birla Sun Life AMC, Adani Green Energy, Aye Finance, Etern",
+   "link": "https://www.thehindubusinessline.com/companies/q2-results-today-live-updates-eternal-adani-green-indian-hotels-srf-vishal-mega-mafrt-kei-ind-mampm-financial-services-pc-jeweller-company-results-21-october-2026/article71606182.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "d6736672f743",
+   "kind": "news",
+   "time": "2026-10-21T11:42+05:30",
+   "source": "BusinessLine",
+   "headline": "Chennai police probe finance influencer’s death after alleged cyberbullying over SEBI credentials",
+   "summary": "Police are examining allegations of online harassment, statements from both parties and digital evidence, including a video reportedly recorded before his death",
+   "link": "https://www.thehindubusinessline.com/news/chennai-police-probe-finance-influencers-death-after-alleged-cyberbullying-over-sebi-credentials/article71606468.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "6ffd0e5bccac",
+   "kind": "news",
+   "time": "2026-10-21T11:35+05:30",
+   "source": "NSE announcements",
+   "headline": "Sudeep Pharma Limited: Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "SUDEEP PHARMA LIMITED has informed the Exchange about Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeti",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_26382_WebXMLFile_20261021_113505201.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "faf7da1b9767",
+   "kind": "news",
+   "time": "2026-10-21T11:34+05:30",
+   "source": "NSE announcements",
+   "headline": "Panama Petrochem Limited: Board Meeting to be held on 04-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "PANAMA PETROCHEM LIMITED has informed the Exchange about Board Meeting to be held on 04-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Me",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_5255_WebXMLFile_20261021_113411513.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "0899d2bdac9d",
+   "kind": "news",
+   "time": "2026-10-21T11:34+05:30",
+   "source": "BSE announcements",
+   "headline": "Prima Innovation Ltd: Board Meeting Intimation for Board Meeting Intimation For Consideration And Approval Of The Unaudited Standalone Financial Results For The Quarter And Half Year Ended 30Th September, 2026",
+   "summary": "Board Meeting. Prima Innovation Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve The Meeting of Board of Directors ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/15761c08-ae70-47e4-aac8-ba577bab13ee.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "85a99c59bec0",
+   "kind": "news",
+   "time": "2026-10-21T11:32+05:30",
+   "source": "BusinessLine",
+   "headline": "EAAA India Alternatives IPO to open on October 26; price band fixed at ₹1,585-1,665",
+   "summary": "The issue size has been reduced to ₹1,200 crore from the ₹1,500 crore proposed in the Draft Red Herring Prospectus (DRHP) filed with SEBI in January",
+   "link": "https://www.thehindubusinessline.com/markets/eaaa-india-alternatives-ipo-to-open-on-october-26-price-band-fixed-at-1585-1665/article71606368.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "c021025212a8",
+   "kind": "news",
+   "time": "2026-10-21T11:30+05:30",
+   "source": "BSE announcements",
+   "headline": "Sudeep Pharma Ltd: Board Meeting Intimation for Adoption And Approval Of Un-Audited Financial Results (Standalone & Consolidated) For The Quarter And Half Year Ended 30Th September 2026",
+   "summary": "Board Meeting. Sudeep Pharma Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 28/10/2026 ,inter alia, to consider and approve the Un-audited Financial Results ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/92d14a43-3067-4773-b915-be588d120b8a.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "c79341f24122",
+   "kind": "news",
+   "time": "2026-10-21T11:29+05:30",
+   "source": "BSE announcements",
+   "headline": "Nephrocare Health Services Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Pursuant to Reg 30 of the SEBI Listing Regulations, we hereby inform you that the Company has scheduled an investor conference call as per the disclosure annexed herewith.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/165a982c-0c93-4c70-b1f0-80458b115180.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "b0829fd7263d",
+   "kind": "news",
+   "time": "2026-10-21T11:24+05:30",
+   "source": "BSE announcements",
+   "headline": "Jay Bharat Maruti Ltd: Clarification sought from Jay Bharat Maruti Ltd",
+   "summary": "Company Update. The Exchange has sought clarification from Jay Bharat Maruti Ltd on October 21, 2026, with reference to Movement in Volume. <BR><BR>The reply is awaited.",
+   "link": "https://www.bseindia.com/stock-share-price/jay-bharat-maruti-ltd/jaybarmaru/520066/",
+   "symbols": [
+    "MARUTI"
+   ],
+   "symbol_keys": [
+    "MARUTI"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "8e9cb898d934",
+   "kind": "news",
+   "time": "2026-10-21T11:23+05:30",
+   "source": "BSE announcements",
+   "headline": "Shanmuga Hospital Ltd: Intimation Regarding Commercial Launch Of Shanmuga 360 Mobile Application",
+   "summary": "Company Update. The Company has launched the \"Shanmuga 360\" mobile application for commercial use on 20th October, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/47b64816-0ec2-4982-9359-7deb6e86b0c1.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "e1f4774b91f0",
+   "kind": "news",
+   "time": "2026-10-21T11:21+05:30",
+   "source": "Business Standard",
+   "headline": "Jio Platforms IPO fully subscribed in less than 35 minutes of opening",
+   "summary": "The issue received bids worth about Rs 22,354 crore by 10:34 am, with qualified institutional buyers leading demand at 3.25 times their reserved portion",
+   "link": "https://www.business-standard.com/markets/ipo/jio-platforms-ipo-subscription-qib-retail-anchor-investor-126102100328_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "de75b3cb4682",
+   "kind": "news",
+   "time": "2026-10-21T11:14+05:30",
+   "source": "BSE announcements",
+   "headline": "Future Consumer Ltd: Results-Delay in Financial Results",
+   "summary": "Result. Reason_delay in financial results",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f4ef85de-381e-4fa5-89c2-3ba248abcc73.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "7ceb08bcf0c4",
+   "kind": "news",
+   "time": "2026-10-21T11:11+05:30",
+   "source": "NSE announcements",
+   "headline": "Goldiam International Limited: Board Meeting to be held on 07-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
+   "summary": "Goldiam International Limited has informed the Exchange about Board Meeting to be held on 07-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend. |SUBJEC",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_2316_WebXMLFile_20261021_111150868.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "dividend"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "bc926c32ea3e",
+   "kind": "news",
+   "time": "2026-10-21T11:08+05:30",
+   "source": "BSE announcements",
+   "headline": "Yash Management & Satellite Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Newspaper cutting of Unaudited Standalone & Consolidated financial results of the company for the half year & quarter ended 30.09.2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0a22f0ef-9bf7-4960-89f4-df392aabdc0b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "0ed7fbf1b812",
+   "kind": "news",
+   "time": "2026-10-21T11:07+05:30",
+   "source": "NSE announcements",
+   "headline": "Embassy Office Parks REIT: Embassy Office Parks REIT has informed regarding Submission of the Compliance Report on Corporate Governance for the quarter ended September 30, 2026.",
+   "summary": "Embassy Office Parks REIT has informed regarding Submission of the Compliance Report on Corporate Governance for the quarter ended September 30, 2026. |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the e",
+   "link": "https://nsearchives.nseindia.com/corporate/EMBASSY_21102026110716_EmbassyREITCorporateGovernanceReportQ2FY27Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "70c8b9dc0a0c",
+   "kind": "news",
+   "time": "2026-10-21T11:06+05:30",
+   "source": "BSE announcements",
+   "headline": "Bajaj Consumer Care Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Please find attached transcript of earnings conference call held on October 15, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b439531b-bd03-4416-a0bb-8ada71ee3847.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "45776abe455a",
+   "kind": "news",
+   "time": "2026-10-21T11:04+05:30",
+   "source": "BSE announcements",
+   "headline": "Embassy Office Parks REIT: Reg 26E: Quarterly Compliance Report on Corporate governance",
+   "summary": "Others. Embassy Office Parks REIT has informed the Exchange regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b94c969e-2ac7-4724-8dcb-cbe52fa8e6d1.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "3e8c0a476510",
+   "kind": "news",
+   "time": "2026-10-21T11:04+05:30",
+   "source": "BSE announcements",
+   "headline": "Repco Home Finance Ltd: Intimation Of ESG Rating",
+   "summary": "Company Update. Intimation of ESG rating from CRISIL ESG Ratings & Analytics Limited",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3a7bc6d2-7de6-421b-b8e6-f79a78653852.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "47e341029f68",
+   "kind": "news",
+   "time": "2026-10-21T10:57+05:30",
+   "source": "Business Standard",
+   "headline": "UltraTech up 3% post Q2; Jefferies says cement price recovery key catalyst",
+   "summary": "UltraTech Cement's consolidated net profit attributable to owners of the parent rose 21.3 per cent year-on-year to ₹1,493.77 crore in the quarter ended September 30, 2026, from ₹1,231.58 crore.",
+   "link": "https://www.business-standard.com/markets/news/ultratech-up-3-post-q2-jefferies-says-cement-price-recovery-key-catalyst-126102100281_1.html",
+   "symbols": [
+    "ULTRACEMCO"
+   ],
+   "symbol_keys": [
+    "ULTRACEMCO"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "78d35ffd92bf",
+   "kind": "news",
+   "time": "2026-10-21T10:54+05:30",
+   "source": "NSE announcements",
+   "headline": "Yasho Industries Limited: Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "YASHO INDUSTRIES LIMITED has informed the Exchange about Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Me",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22010_WebXMLFile_20261021_105419488.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "946a45bcb068",
+   "kind": "news",
+   "time": "2026-10-21T10:50+05:30",
+   "source": "BSE announcements",
+   "headline": "Yasho Industries Ltd: Board Meeting Intimation for Standalone And Consolidated Unaudited Financial Results Of The Company For The Quarter Ended September 30, 2026",
+   "summary": "Board Meeting. Yasho Industries Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 28/10/2026 ,inter alia, to consider and approve Standalone And Consolidated ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6faf63bc-a4b7-42c3-9ce5-dc1cc286351b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "6fa65fdd6cb6",
+   "kind": "news",
+   "time": "2026-10-21T10:49+05:30",
+   "source": "BSE announcements",
+   "headline": "Polyspin Exports Ltd: Board Meeting Intimation for Unaudited Standalone And Consolidated Financial Results For The Quarter And Six Months Ended 30Th September, 2026",
+   "summary": "Board Meeting. Polyspin Exports Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve the Unaudited Standalone and ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/031fb195-49fc-4ea1-a71a-4da7a32d2492.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "55ead39205e5",
+   "kind": "news",
+   "time": "2026-10-21T10:47+05:30",
+   "source": "NSE announcements",
+   "headline": "LTM Limited: a press release dated October 21, 2026, titled \"LTM Launches BlueVerse ValueMesh to Help Enterprises Scale AI Across Oracle Transformations\".",
+   "summary": "LTM Limited has informed the Exchange regarding a press release dated October 21, 2026, titled \"LTM Launches BlueVerse ValueMesh to Help Enterprises Scale AI Across Oracle Transformations\". |SUBJECT: Press Release",
+   "link": "https://nsearchives.nseindia.com/corporate/LTI_21102026104657_StockexchangeSigned.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "5c6c4917d4ed",
+   "kind": "news",
+   "time": "2026-10-21T10:47+05:30",
+   "source": "ET Markets",
+   "headline": "Bajaj Finance shares fall 3% after Q2 results. What Jefferies, Nomura, other brokerages now expect?",
+   "summary": "Bajaj Finance shares dropped on Wednesday after the NBFC reported a 29% year-on-year rise in Q2FY27 net profit to Rs 6,367 crore. Nomura and Jefferies retained Buy ratings, with Jefferies cutting its target price, while 360 One WAM upgraded",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/bajaj-finance-shares-fall-3-after-q2-results-what-jefferies-nomura-other-brokerages-now-expect/articleshow/135082829.cms",
+   "symbols": [
+    "BAJFINANCE"
+   ],
+   "symbol_keys": [
+    "BAJFINANCE"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 8,
+   "high": true,
+   "theses": [
+    {
+     "slug": "bajaj-finance-rbi-december",
+     "status": "proposed",
+     "type": "catalyst"
+    }
+   ],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "fb79e3ddf111",
+   "kind": "news",
+   "time": "2026-10-21T10:41+05:30",
+   "source": "BusinessLine",
+   "headline": "Anthropic's confidential IPO filing reveals $80.7 billion H1 loss, massive computing costs",
+   "summary": "The loss largely reflected accounting adjustments related to financing agreements, including $72 billion in charges linked to changes in the value of convertible notes and other financial instruments",
+   "link": "https://www.thehindubusinessline.com/markets/anthropics-confidential-ipo-filing-reveals-807-billion-h1-loss-massive-computing-costs/article71606247.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "9e2f1ccc3715",
+   "kind": "news",
+   "time": "2026-10-21T10:40+05:30",
+   "source": "ET Markets",
+   "headline": "Jio IPO opens with a bang, issue gets fully booked as QIBs drive demand. Check GMP",
+   "summary": "Mukesh Ambani-led Jio Platforms’ IPO saw strong demand on Day 1. The IPO commanded a grey market premium (GMP) of around 25%, while brokerages remained optimistic, citing Jio’s telecom leadership, improving profitability and growth opportun",
+   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-ipo-opens-with-a-bang-issue-booked-over-90-as-qibs-drive-demand-check-gmp/articleshow/135082741.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "994f4c8dbd58",
+   "kind": "news",
+   "time": "2026-10-21T10:38+05:30",
+   "source": "BusinessLine",
+   "headline": "Jio IPO: What brokerages say about Jio Platforms’ ₹30,213 cr IPO",
+   "summary": "The issue is entirely a fresh issue of up to 27 crore equity shares, with a price band of ₹1,065–₹1,119 per share, aggregating up to ₹30,213 crore at the upper end",
+   "link": "https://www.thehindubusinessline.com/markets/mega-ipo-here-is-what-brokerages-say-about-jio-platforms-30213-crore-issue/article71606106.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "b0dc6f268932",
+   "kind": "news",
+   "time": "2026-10-21T10:25+05:30",
+   "source": "BSE announcements",
+   "headline": "Parshwanath Corporation Ltd: Disclosures under Reg. 10(7) of SEBI (SAST) Regulations, 2011",
+   "summary": "Insider Trading / SAST. The Exchange has received the disclosure under Regulation 10(7) in respect of acquisition under Regulation 10(4)(f) of SEBI (Substantial Acquisition of Shares & Takeovers) Regulations, ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8618B42E_A4CF_43C8_974D_985381F5675F_102511.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "0ee6da761be3",
+   "kind": "news",
+   "time": "2026-10-21T10:20+05:30",
+   "source": "BSE announcements",
+   "headline": "Bharat Parenterals Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Newspapaer Advertisement under regulation 30 of SEBI LODR (Listing Obligations and Disclosure Requirements), Regulations, 2015",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/09108709-7603-4d1d-9cfc-fcb9cb9a40be.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "da0bc2c30f32",
+   "kind": "news",
+   "time": "2026-10-21T10:20+05:30",
+   "source": "BSE announcements",
+   "headline": "Sigma Advanced Systems Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "summary": "Company Update. Pursuant to Regulation 30 of SEBI (LODR) Regulations, 2015, Sigma Advanced Systems Secures US$19.7 Million (Approx. Rs. 174 Crore) Order from North American NATO Customer for critical 155mm ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e1252544-d18b-4916-b142-b0c00e6061a9.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "ce789bee8630",
+   "kind": "news",
+   "time": "2026-10-21T10:20+05:30",
+   "source": "BusinessLine",
+   "headline": "Govt bonds sell off on oil shock ahead of RBI policy minutes",
+   "summary": "The benchmark 6.94% ⁠2036 bond yield was at 7.4352% as of 10 am, after ending at 7.3920% on Monday.",
+   "link": "https://www.thehindubusinessline.com/markets/govt-bonds-sell-off-on-oil-shock-ahead-of-rbi-policy-minutes/article71606249.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "RBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "618d7d557b22",
+   "kind": "news",
+   "time": "2026-10-21T10:17+05:30",
+   "source": "CNBC top news",
+   "headline": "U.S. eyes refining muscle of Indian billionaire Ambani's Reliance as Rubio visits Jamnagar plant",
+   "summary": "Rubio said the \"extraordinary\" refining capacity of Reliance could help India diversify its energy supplies, hinting at greater offtake of Venezuelan crude.",
+   "link": "https://www.cnbc.com/2026/10/21/rubio-reliance-venezuela-oil-diesel.html",
+   "symbols": [
+    "RELIANCE"
+   ],
+   "symbol_keys": [
+    "RELIANCE"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "c5aeab4971ac",
+   "kind": "news",
+   "time": "2026-10-21T10:13+05:30",
+   "source": "BSE announcements",
+   "headline": "Sudarshan Colorants India Ltd: Disclosures under Reg. 10(7) of SEBI (SAST) Regulations, 2011",
+   "summary": "Insider Trading / SAST. The Exchange has received the disclosure under Regulation 10(7) in respect of acquisition under Regulation 10(1)(a)(iii)of SEBI (Substantial Acquisition of Shares & Takeovers) Regulations, ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/C1DC7FB5_88B3_4BC8_A403_ACF96A116FA3_101326.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "8e5957cf17c4",
+   "kind": "news",
+   "time": "2026-10-21T10:11+05:30",
+   "source": "ET Markets",
+   "headline": "Indian bonds sell off on oil shock ahead of RBI policy minutes",
+   "summary": "Indian government bonds experienced a significant decline due to rising oil prices, raising concerns about inflation among investors. The benchmark bond yield has reached its highest point since March, leading to a more cautious trading env",
+   "link": "https://economictimes.indiatimes.com/markets/bonds/indian-bonds-sell-off-on-oil-shock-ahead-of-rbi-policy-minutes/articleshow/135082397.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "RBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "40c64c446c4b",
+   "kind": "news",
+   "time": "2026-10-21T10:10+05:30",
+   "source": "NSE announcements",
+   "headline": "SIGMA ADVANCED SYSTEMS LIMITED: a press release dated October 21, 2026, titled pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirement) Regulations, 2015, \"Sigma Advanced Systems Secures US$19.7 Million (Approx. Rs. 174 Crore) Order from North American NATO Customer for critical 155 mm Artillery Ammunition Subsystems",
+   "summary": "SIGMA ADVANCED SYSTEMS LIMITED has informed the Exchange regarding a press release dated October 21, 2026, titled pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirement) Regulations, 2015, \"Sigma Advanced Syst",
+   "link": "https://nsearchives.nseindia.com/corporate/MEGASOFT_21102026100925_Disclosure_Reg_30_-_20261021_signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "18a137e3dd8c",
+   "kind": "news",
+   "time": "2026-10-21T10:06+05:30",
+   "source": "NSE announcements",
+   "headline": "Larsen & Toubro Limited: Bagging/Receiving of orders/contracts (Sub-para 4-Para B)",
+   "summary": "LARSEN & TOUBRO LIMITED has informed the Exchange about Bagging/Receiving of orders/contracts (Sub-para 4-Para B) |SUBJECT: Bagging/Receiving of orders/contracts (Sub-para 4-Para B)",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_PARA_B_2203_WebXMLFile_20261021_100657244.xml",
+   "symbols": [
+    "LT"
+   ],
+   "symbol_keys": [
+    "LT"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "6982ff38dfb7",
+   "kind": "news",
+   "time": "2026-10-21T10:04+05:30",
+   "source": "BSE announcements",
+   "headline": "Tamboli Industries Ltd: Board Meeting Intimation for Intimation Regarding Meeting Of The Board Of Directors Will Be Held On THURSDAY November 5, 2026.",
+   "summary": "Board Meeting. Tamboli Industries Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 05/11/2026 ,inter alia, to consider and approve Un-audited Quarterly Financial ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7e725203-2c1d-419e-bcb5-559c928ae7fa.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "29afaa9ceb46",
+   "kind": "news",
+   "time": "2026-10-21T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Bajaj Finserv Nifty 1D Rate Liquid ETF-Growth: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on October 19, 2026 is Rs. 1103.6799.",
+   "summary": "BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on October 19, 2026 is Rs. 1103.6799. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "15e452e99481",
+   "kind": "news",
+   "time": "2026-10-21T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on October 19, 2026 is Rs. 20.3144.",
+   "summary": "BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on October 19, 2026 is Rs. 20.3144. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "fbd4c2b513b1",
+   "kind": "news",
+   "time": "2026-10-21T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on October 19, 2026 is Rs. 235.9075.",
+   "summary": "NIFTYBETF : BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on October 19, 2026 is Rs. 235.9075. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "fae29a48fe29",
+   "kind": "news",
+   "time": "2026-10-21T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on October 19, 2026 is Rs. 56.4922.",
+   "summary": "BANKBETF : BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on October 19, 2026 is Rs. 56.4922. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "95699bf50d76",
+   "kind": "news",
+   "time": "2026-10-21T10:01+05:30",
+   "source": "Business Standard",
+   "headline": "HD Fire Protect lists at 24% premium over IPO price after 132x subscription",
+   "summary": "On the BSE, the stock listed at ₹334, a premium of 23.39 per cent, while on the NSE, the stock made its debut at ₹335, a premium of 23.62 per cent.",
+   "link": "https://www.business-standard.com/markets/news/hd-fire-protect-lists-at-24-premium-over-ipo-price-after-132x-subscription-126102100213_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO",
+    "listing"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "af4310ed3560",
+   "kind": "news",
+   "time": "2026-10-21T09:54+05:30",
+   "source": "NSE announcements",
+   "headline": "Jay Bharat Maruti Limited: Clarification on Volume Movements.",
+   "summary": "Jay Bharat Maruti Limited has informed the Exchange regarding Clarification on Volume Movements. |SUBJECT: General Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/JAYBARMARUT_21102026094859_Submission.pdf",
+   "symbols": [
+    "MARUTI"
+   ],
+   "symbol_keys": [
+    "MARUTI"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "6e310a404fa5",
+   "kind": "news",
+   "time": "2026-10-21T09:52+05:30",
+   "source": "ET Markets",
+   "headline": "Why L&T Technology shares jumped 11% to hit the Rs 4,000 level afterQ2 results",
+   "summary": "L&T Technology Services shares rose sharply past Rs 4,000 after Q2 results beat expectations, driven by margin expansion, AI-led deal wins and strong sustainability business growth. Management expects a stronger second half of FY27, while M",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/why-lt-technology-shares-jumped-11-to-hit-the-rs-4000-level-afterq2-results/articleshow/135082035.cms",
+   "symbols": [
+    "LT"
+   ],
+   "symbol_keys": [
+    "LT"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "a2e7695306ea",
+   "kind": "news",
+   "time": "2026-10-21T09:52+05:30",
+   "source": "Business Standard",
+   "headline": "Hind Zinc up 4% post Q2; analysts see silver prices key to earnings growth",
+   "summary": "Jefferies said that Hindustan Zinc trades below the long-term average EV/Ebitda and that recovery in silver price would be key for stock performance.",
+   "link": "https://www.business-standard.com/markets/news/hindustan-zinc-up-4-post-q2-analysts-see-silver-prices-key-to-earnings-growth-126102100208_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "66bd6bfd8566",
+   "kind": "news",
+   "time": "2026-10-21T09:48+05:30",
+   "source": "ET Markets",
+   "headline": "Jio IPO or RIL shares? Where should investors bet as Ambani's Rs 30,213 crore issue opens",
+   "summary": "Jio Platforms is eyeing a staggering valuation of Rs 10 lakh crore for its upcoming IPO, sparking heated debates among analysts on whether to pursue Jio or Reliance Industries shares. The IPO holds the potential for investors to capitalize ",
+   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/jio-ipo-or-ril-shares-where-should-investors-bet-as-ambanis-rs-30213-crore-issue-opens/articleshow/135081917.cms",
+   "symbols": [
+    "RELIANCE"
+   ],
+   "symbol_keys": [
+    "RELIANCE"
+   ],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
    "id": "0e014759dd08",
    "kind": "news",
    "time": null,
@@ -152,7 +1477,12 @@
    "score": 9,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: L&T Technology Services (LTTS) on its Q2 earnings; Transrail Lighting on the stake acquisition. The \"LT\" match is LTTS, not Larsen & Toubro.",
+    "Losers: none clear - a price round-up of two unrelated companies; no named company is harmed by either move.",
+    "Catalyst: scheduled (Q2 results, already out) - the 12% move is the reaction; nothing further is scheduled from this headline.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-10-21T09:46+05:30"
   },
   {
@@ -356,7 +1686,9 @@
      "type": "catalyst"
     }
    ],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: morning round-up of many companies, not a single catalyst; the items that matter are noted separately."
+   ],
    "first_seen": "2026-10-21T09:46+05:30"
   },
   {
@@ -382,6 +1714,48 @@
    "first_seen": "2026-10-21T09:46+05:30"
   },
   {
+   "id": "0e6fd29b0b65",
+   "kind": "news",
+   "time": "2026-10-21T09:46+05:30",
+   "source": "NSE announcements",
+   "headline": "Larsen & Toubro Limited: Bagging/Receiving of orders/contracts",
+   "summary": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts |SUBJECT: Bagging/Receiving of orders/contracts",
+   "link": "https://nsearchives.nseindia.com/corporate/PAM_21102026094637_PressRelease21102026.pdf",
+   "symbols": [
+    "LT"
+   ],
+   "symbol_keys": [
+    "LT"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "c01c74059b44",
+   "kind": "news",
+   "time": "2026-10-21T09:46+05:30",
+   "source": "NSE announcements",
+   "headline": "Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF: the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on October 19, 2026 is Rs. 45.04.",
+   "summary": "MOIPO : Motilal Oswal Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on October 19, 2026 is Rs. 45.04. |SUBJECT: Declaration ",
+   "link": "",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
    "id": "66fce81348e9",
    "kind": "news",
    "time": "2026-10-21T09:45+05:30",
@@ -402,7 +1776,12 @@
    "score": 7,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: Larsen & Toubro (LT) - an order win adds to its backlog; the filing alone does not show size or customer.",
+    "Losers: none clear - the order size and counterparty are not in the headline.",
+    "Catalyst: surprise (order announcement) - the value band is in the PDF, which was not checked here.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-10-21T09:46+05:30"
   },
   {
@@ -512,6 +1891,27 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-21T09:46+05:30"
+  },
+  {
+   "id": "34e669e68f65",
+   "kind": "news",
+   "time": "2026-10-21T09:38+05:30",
+   "source": "ET Markets",
+   "headline": "Hindustan Zinc shares jump 4% after Q2 net profit more than doubles. Why Jefferies cut target price?",
+   "summary": "Hindustan Zinc reported a 142% year-on-year jump in Q2FY27 net profit to Rs 6,412 crore, while revenue rose 77% to Rs 15,093 crore. Despite strong earnings, Jefferies cut its target price to Rs 650 from Rs 750, citing silver price volatilit",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/hindustan-zinc-shares-in-focus-after-q2-net-profit-more-than-doubles-why-did-jefferies-cut-target-price/articleshow/135081741.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "rating"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
   },
   {
    "id": "bef0c9f40ff9",
@@ -659,8 +2059,38 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: none clear - brokerage target changes after Q2 results that were already out on 20 Oct; the direction of the revisions was not checked.",
+    "Losers: none clear - no named competitor effect.",
+    "Catalyst: scheduled (Q2 results, done) - the revisions are after the fact and are mostly priced in.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-10-21T09:46+05:30"
+  },
+  {
+   "id": "637abb29f54d",
+   "kind": "news",
+   "time": "2026-10-21T09:25+05:30",
+   "source": "ET Markets",
+   "headline": "UltraTech Cement shares jump 3% as brokerages revise target prices after Q2 results. What Jefferies, Citi are saying",
+   "summary": "Shares of UltraTech Cement increased by 3% after the company reported strong quarterly earnings for Q2 FY27. The company's net profit saw a 21% growth compared to the previous year, driven by operational revenue increases. Jefferies raised ",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/ultratech-cement-shares-in-focus-as-brokerages-revise-target-prices-after-q2-results-what-citi-nomura-jefferies-say/articleshow/135081591.cms",
+   "symbols": [
+    "ULTRACEMCO"
+   ],
+   "symbol_keys": [
+    "ULTRACEMCO"
+   ],
+   "keywords": [
+    "results",
+    "rating"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
   },
   {
    "id": "8556a060524c",
@@ -709,7 +2139,12 @@
      "type": "catalyst"
     }
    ],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: none clear - analysts stay positive on asset quality, but the stock is trading down on the day, so the results look priced in.",
+    "Losers: none clear - no named competitor is affected.",
+    "Catalyst: scheduled (RBI MPC, estimated 4 Dec 2026) - the Q2 reaction does not change that; the pending thesis still depends on the rate decision.",
+    "Thesis fit: proposed thesis bajaj-finance-rbi-december: neither supports nor weakens (the results dip is not an input to the RBI-day rule)"
+   ],
    "first_seen": "2026-10-21T09:46+05:30"
   },
   {
@@ -731,6 +2166,47 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-21T09:46+05:30"
+  },
+  {
+   "id": "15bd820b7209",
+   "kind": "news",
+   "time": "2026-10-21T09:11+05:30",
+   "source": "ET Markets",
+   "headline": "Paras Healthcare IPO opens for subscription: Check GMP, price band and key details",
+   "summary": "Paras Healthcare’s Rs 1,450 crore IPO opened for subscription on October 21 and closes on October 23, with a grey market premium (GMP) of around 7%. The issue comprises a fresh issue of Rs 500 crore and an offer for sale (OFS) of Rs 950 cro",
+   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/paras-healthcare-ipo-opens-today-check-gmp-price-band-and-key-details/articleshow/135081382.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
+  },
+  {
+   "id": "b65d4034b9ee",
+   "kind": "news",
+   "time": "2026-10-21T09:11+05:30",
+   "source": "ET Markets",
+   "headline": "HD Fire Protect shares list at 24% premium over IPO price on NSE",
+   "summary": "HD Fire Protect shares debuted at a premium of up to 23.6% on Wednesday after its Rs 712 crore IPO attracted 131.70 times subscription. The issue was entirely an offer for sale by promoter shareholders. The company reported a 12% rise in FY",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/hd-fire-protect-shares-to-list-today-gmp-signals-26-listing-gain/articleshow/135081363.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO",
+    "listing"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-21T11:49+05:30"
   },
   {
    "id": "918d6f43dcf5",
@@ -1089,7 +2565,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: a single analyst's technical view on two stocks, not a catalyst. The Kotak Mahindra Bank (KOTAKBANK) match comes from the analyst's employer name."
+   ],
    "first_seen": "2026-10-21T09:46+05:30"
   },
   {
@@ -1899,1421 +3377,6 @@
    "symbol_keys": [],
    "keywords": [
     "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "6cb007c652cc",
-   "kind": "news",
-   "time": "2026-10-20T19:29+05:30",
-   "source": "BSE announcements",
-   "headline": "Aptus Pharma Ltd: Financial Results For The Half Year Ended 30Th September,2026",
-   "summary": "Result. Pursuant to Regulation 30 and Regulation 33 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, we wish to inform you that the Board of Directors of the Company ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc2dc7d7-ebd1-44fb-a9bf-75cb419c42d6.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "f5cdd2be6953",
-   "kind": "news",
-   "time": "2026-10-20T19:29+05:30",
-   "source": "BSE announcements",
-   "headline": "Elitecon International Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
-   "summary": "AGM/EGM. Pursuant to Regulation 44(3) of SEBI (Listing Obligations and Disclosure Requirements), 2015, please find enclosed the voting results and scrutinizer''s report in respect of postal ballot.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8e634297-a3a4-4092-bc53-edf24526667c.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "9087dde0a4b9",
-   "kind": "news",
-   "time": "2026-10-20T19:25+05:30",
-   "source": "BusinessLine",
-   "headline": "Mutual funds raise stake in KRN Heat Exchanger; Union MF enters with five schemes",
-   "summary": "The number of mutual fund schemes holding the company’s shares rose to 30 in the September quarter from 26 in June",
-   "link": "https://www.thehindubusinessline.com/markets/mutual-funds-raise-stake-in-krn-heat-exchanger-union-mf-enters-with-five-schemes/article71604360.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "stake sale",
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "76eb3a573d09",
-   "kind": "news",
-   "time": "2026-10-20T19:20+05:30",
-   "source": "CNBC top news",
-   "headline": "Data center stocks slide as Korea IPO plunges 30%, pressuring tech sentiment",
-   "summary": "Neocloud stocks are falling again following the sector's troubles last week",
-   "link": "https://www.cnbc.com/2026/10/20/data-center-stocks-slide-as-korea-ipo-plunges-30percent-pressuring-tech-sentiment.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "a8781bf20256",
-   "kind": "news",
-   "time": "2026-10-20T19:19+05:30",
-   "source": "NSE announcements",
-   "headline": "Home First Finance Company India Limited: Board Meeting to be held on 27-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
-   "summary": "Home First Finance Company India Limited has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other ",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17646_WebXMLFile_20261020_191950653.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "b971d21219b3",
-   "kind": "news",
-   "time": "2026-10-20T19:16+05:30",
-   "source": "BSE announcements",
-   "headline": "KS Smart Technologies Ltd: Announcement under Regulation 30 (LODR)-Acquisition",
-   "summary": "Company Update. Intimation with respect to the proposal for incorporation of a foreign step down subsidiary.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f8ea352d-8141-4ff1-ae11-f267e0103e04.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "8bc0bcc80f40",
-   "kind": "news",
-   "time": "2026-10-20T19:16+05:30",
-   "source": "CNBC top news",
-   "headline": "General Motors beats Wall Street's Q3 earnings expectations, narrows full-year guidance",
-   "summary": "GM narrowed its 2026 earnings guidance and raised its adjusted automotive free cash flow outlook after beating Wall Street’s third-quarter estimates.",
-   "link": "https://www.cnbc.com/2026/10/20/general-motors-gm-earnings-q3-2026.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "guidance"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "ac85a70bb9eb",
-   "kind": "news",
-   "time": "2026-10-20T19:10+05:30",
-   "source": "NSE announcements",
-   "headline": "TVS Motor Company Limited: Credit rating",
-   "summary": "Credit rating |SUBJECT: Credit rating",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/TVSMOTOR_20102026190951_NSEBSEIntimation_sgd.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "67370b3f8ba9",
-   "kind": "news",
-   "time": "2026-10-20T19:07+05:30",
-   "source": "BSE announcements",
-   "headline": "TVS Motor Company Ltd: Announcement under Regulation 30 (LODR)-Credit Rating",
-   "summary": "Company Update. Intimation of Credit Rating under SEBI (Listing Obligation and Disclosure Requirements) Regulations, 2015",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2002b901-e641-44da-919a-013af53c97b2.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "46197282cef1",
-   "kind": "news",
-   "time": "2026-10-20T19:02+05:30",
-   "source": "NSE announcements",
-   "headline": "Moneyview Limited: Disclosure under Reg 30 of SEBI LODR",
-   "summary": "Disclosure under Reg 30 of SEBI LODR |SUBJECT: General Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/9916600823_20102026190138_SEIntimationPostalballotnoticeBoardApproval.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "263570c2de18",
-   "kind": "news",
-   "time": "2026-10-20T19:00+05:30",
-   "source": "BSE announcements",
-   "headline": "Aptus Pharma Ltd: Board Meeting Outcome for Outcome Of Board Meeting Held On 20.10.2026 Along With Financial Results For Half Year Ended 30Th September, 2026",
-   "summary": "Board Meeting. Pursuant to Regulation 30 and Regulation 33 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, we wish to inform you that the Board of Directors of the Company ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/88187953-1cac-4ff3-8c27-0a2bd7269b21.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "ab36c7b1352b",
-   "kind": "news",
-   "time": "2026-10-20T18:56+05:30",
-   "source": "BSE announcements",
-   "headline": "Moneyview Ltd: Announcement under Regulation 30 (LODR)-Amendments to Memorandum & Articles of Association",
-   "summary": "Company Update. Disclosure under Reg 30 of the SEBI LODR- Amendment to MOA & AOA",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/717a976e-5fc1-4f29-ae3e-f06bead969f1.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "e1a7866b3687",
-   "kind": "news",
-   "time": "2026-10-20T18:52+05:30",
-   "source": "BSE announcements",
-   "headline": "Moneyview Ltd: Intimation Under Regulation 30 Of The SEBI LODR",
-   "summary": "Company Update. Intimation under reg 30 of SEBI LODR",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/65ccb830-5a05-4aa1-a12c-245c2ba6284f.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "3d68a3e6f7b9",
-   "kind": "news",
-   "time": "2026-10-20T18:51+05:30",
-   "source": "NSE announcements",
-   "headline": "Essen Speciality Films Limited: Essen Speciality Films Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Essen Speciality Films Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/ESSEN_20102026185021_Financial_Results_Q2.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "d62799154514",
-   "kind": "news",
-   "time": "2026-10-20T18:49+05:30",
-   "source": "NSE announcements",
-   "headline": "Nityas Gems and Jewellery Limited: Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended June 2026 .",
-   "summary": "NITYAS GEMS AND JEWELLERY LIMITED has informed the Exchange about Board Meeting to be held on 28-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended June 2026 . |SUBJECT: Board ",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_28280_WebXMLFile_20261020_184900437.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "aca7c2d110d5",
-   "kind": "news",
-   "time": "2026-10-20T18:38+05:30",
-   "source": "NSE announcements",
-   "headline": "Sudarshan Chemical Industries Limited: Credit Rating- New",
-   "summary": "Sudarshan Chemical Industries Limited has informed the Exchange about Credit Rating- New |SUBJECT: Credit Rating- New",
-   "link": "https://nsearchives.nseindia.com/corporate/SUDARSCHEM_20102026183812_CreditRating20102026Signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "6f58879322aa",
-   "kind": "news",
-   "time": "2026-10-20T18:36+05:30",
-   "source": "NSE announcements",
-   "headline": "NTPC Limited: ''Clarification on the news item published on the website of AD HOC NEWS dated 20th October 2026 captioned \"NTPC Posts 7.43 Percent Profit Growth; Buyback Sets Date for NTPC stock\".",
-   "summary": "NTPC Limited has informed the Exchange regarding ''Clarification on the news item published on the website of AD HOC NEWS dated 20th October 2026 captioned \"NTPC Posts 7.43 Percent Profit Growth; Buyback Sets Date for NTPC stock\". |SUBJECT:",
-   "link": "https://nsearchives.nseindia.com/corporate/NTPC_20102026183417_20261020_NEWSCLARIFICATION_STEX.pdf",
-   "symbols": [
-    "NTPC"
-   ],
-   "symbol_keys": [
-    "NTPC"
-   ],
-   "keywords": [
-    "buyback"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "1defce704f14",
-   "kind": "news",
-   "time": "2026-10-20T18:35+05:30",
-   "source": "BSE announcements",
-   "headline": "Schaeffler India Ltd: Announcement Under Regulation 30 Of SEBI LODR Regulations, 2015",
-   "summary": "Company Update. Announcement under Regulation 30 of SEBI LODR Regulations, 2015",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ec7251e6-33b4-47bb-9db7-a0d20012c5fb.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "3f23d32ced60",
-   "kind": "news",
-   "time": "2026-10-20T18:34+05:30",
-   "source": "BSE announcements",
-   "headline": "Sudarshan Chemical Industries Ltd: Announcement under Regulation 30 (LODR)-Credit Rating",
-   "summary": "Company Update. Intimation of Credit Rating given by Ind-Ra",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e15e4c60-0bc4-4e15-a819-d21706846938.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "ec127119736a",
-   "kind": "news",
-   "time": "2026-10-20T18:30+05:30",
-   "source": "BSE announcements",
-   "headline": "NTPC Ltd: Clarification On The News Item Published On The Website Of AD HOC NEWS Dated 20Th October 2026 Captioned 'NTPC Posts 7.43 Percent Profit Growth; Buyback Sets Date For NTPC Stock\"",
-   "summary": "Company Update. Disclosure attached.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7e9ffad2-0a9f-49c9-95bc-f5a67b2b5f2e.pdf",
-   "symbols": [
-    "NTPC"
-   ],
-   "symbol_keys": [
-    "NTPC"
-   ],
-   "keywords": [
-    "buyback"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "a6fe7d8866fd",
-   "kind": "news",
-   "time": "2026-10-20T18:26+05:30",
-   "source": "BSE announcements",
-   "headline": "Maple Infrastructure Trust: Reg 26K: Quarterly Compliance Report on Corporate governance",
-   "summary": "Others. Maple Infrastructure Trust has informed the Exchange regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d706b4c6-a6f4-4cb5-86b2-efb88b2fe49a.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "c5c5c8f8fd8d",
-   "kind": "news",
-   "time": "2026-10-20T18:22+05:30",
-   "source": "CNBC top news",
-   "headline": "Investors look to earnings to reset the bull market. The key level to watch on the S&P 500",
-   "summary": "The key level traders are watching on the S&P 500 that could mean an even bigger decline is ahead.",
-   "link": "https://www.cnbc.com/2026/10/20/santoli-key-sp-500-level-to-watch.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "ec6ce970bbd9",
-   "kind": "news",
-   "time": "2026-10-20T18:16+05:30",
-   "source": "NSE announcements",
-   "headline": "Sakar Healthcare Limited: Board Meeting to be held on 23-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
-   "summary": "SAKAR HEALTHCARE LIMITED has informed the Exchange about Board Meeting to be held on 23-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUBJE",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_14283_WebXMLFile_20261020_181602912.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "a7b75ba50a70",
-   "kind": "news",
-   "time": "2026-10-20T18:15+05:30",
-   "source": "CNBC top news",
-   "headline": "Best Buy launches new gaming hub ahead of 'Zelda' and 'Grand Theft Auto VI'",
-   "summary": "Best Buy is launching a new gaming experience for customers as it leans into the business ahead of this fall's big launches.",
-   "link": "https://www.cnbc.com/2026/10/20/best-buy-gamers-beta-ign.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "c3f16e122c99",
-   "kind": "news",
-   "time": "2026-10-20T18:13+05:30",
-   "source": "NSE announcements",
-   "headline": "IFB Industries Limited: Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "IFB Industries Limited has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board Meetin",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_186_WebXMLFile_20261020_181316697.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "411f2eb67ac7",
-   "kind": "news",
-   "time": "2026-10-20T18:07+05:30",
-   "source": "NSE announcements",
-   "headline": "Kapston Services Limited: Kapston Services Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Kapston Services Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/KAPSTON_20102026180318_KSLOUTCOME.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "6d8deb8d3a35",
-   "kind": "news",
-   "time": "2026-10-20T18:06+05:30",
-   "source": "BSE announcements",
-   "headline": "IFB Industries Ltd: Board Meeting Intimation for To Consider And Approve The Unaudited Financial Results (Standalone And Consolidated) Of The Company For The Quarter And Half Year Ended 30Th September, 2026.",
-   "summary": "Board Meeting. IFB Industries Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/10/2026 ,inter alia, to consider and approve To consider and approve the ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c1d49113-fdb2-4fa4-b3db-af9ae556ae67.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "292ffa97a101",
-   "kind": "news",
-   "time": "2026-10-20T17:49+05:30",
-   "source": "CNBC top news",
-   "headline": "Here are Tuesday's biggest analyst calls: SpaceX, Nvidia, Apple, BlackRock, Alphabet, CoreWeave & more",
-   "summary": "Here are Tuesday's biggest calls on Wall Street.",
-   "link": "https://www.cnbc.com/2026/10/20/tuesday-big-wall-street-analyst-calls-like-spacex.html",
-   "symbols": [
-    "CRWV"
-   ],
-   "symbol_keys": [
-    "US:CRWV"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "2aa2732f1cbc",
-   "kind": "news",
-   "time": "2026-10-20T17:39+05:30",
-   "source": "BSE announcements",
-   "headline": "Shree Ram Twistex Ltd: Financial Results For Quarter Ended September 30, 2026",
-   "summary": "Result. Board Meeting outcome along with financial results for quarter ended Septemnber 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b32c3f6e-4555-4869-9ffa-bbd2dfdb1385.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "cfe147a549ef",
-   "kind": "news",
-   "time": "2026-10-20T17:35+05:30",
-   "source": "NSE announcements",
-   "headline": "Sun Pharmaceutical Industries Limited: a press release dated October 20, 2026.",
-   "summary": "Sun Pharmaceutical Industries Limited has informed the Exchange regarding a press release dated October 20, 2026. |SUBJECT: Press Release",
-   "link": "https://nsearchives.nseindia.com/corporate/SUNSEC_20102026173321_SE_Intimation_of_Press_Release_on_NCCN_Gudelines_Update.pdf",
-   "symbols": [
-    "SUNPHARMA"
-   ],
-   "symbol_keys": [
-    "SUNPHARMA"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "579b894bc4d1",
-   "kind": "news",
-   "time": "2026-10-20T17:33+05:30",
-   "source": "BSE announcements",
-   "headline": "Sun Pharmaceutical Industries Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press Release",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9a434af1-62a4-4822-a754-fa547098def0.pdf",
-   "symbols": [
-    "SUNPHARMA"
-   ],
-   "symbol_keys": [
-    "SUNPHARMA"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "9e83588fc569",
-   "kind": "news",
-   "time": "2026-10-20T17:32+05:30",
-   "source": "NSE announcements",
-   "headline": "BIRLASOFT LIMITED: Record date for the purpose of Dividend is 05-Nov-2026.",
-   "summary": "BIRLASOFT LIMITED has informed the Exchange that Record date for the purpose of Dividend is 05-Nov-2026. |SUBJECT: Record Date",
-   "link": "https://nsearchives.nseindia.com/corporate/BSOFT_20102026172834_SEIntimation.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "0bd291c7e288",
-   "kind": "news",
-   "time": "2026-10-20T17:31+05:30",
-   "source": "BSE announcements",
-   "headline": "Birlasoft Ltd: Corporate Action - Fixes Record Date For Interim Dividend",
-   "summary": "Corp. Action. Intimation of Record Date for payment of Interim Dividend for the financial year 2026-27, if declared by the Board of Directors at their meeting scheduled to be held on October 28, 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5cd037eb-4ca9-4856-ae92-910f6eabac7e.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "a7ec81e37f3f",
-   "kind": "news",
-   "time": "2026-10-20T17:28+05:30",
-   "source": "NSE announcements",
-   "headline": "Shree Ram Twistex Limited: Shree Ram Twistex Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Shree Ram Twistex Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/SRTL_20102026172600_SRTL_BM_Outcome_Complete_20-10-2026_Signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "dbc9e5509e9e",
-   "kind": "news",
-   "time": "2026-10-20T17:28+05:30",
-   "source": "BSE announcements",
-   "headline": "IndiaMART InterMESH Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. Please find enclosed herewith the intimation of Schedule of Earnings Conference Call on results and developments for the quarter ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/805ad2f3-90bd-4d18-bedd-e1b80ff6c20f.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "c43d89f27fe8",
-   "kind": "news",
-   "time": "2026-10-20T17:23+05:30",
-   "source": "NSE announcements",
-   "headline": "Indiamart Intermesh Limited: Please find enclosed herewith the intimation of Schedule of Earnings Conference Call on results and developments for the quarter ended September 30, 2026",
-   "summary": "Please find enclosed herewith the intimation of Schedule of Earnings Conference Call on results and developments for the quarter ended September 30, 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/INDIAMART_20102026172324_SE_Intimation_of_Investor_Call_2026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "f58c17cfd4e2",
-   "kind": "news",
-   "time": "2026-10-20T17:15+05:30",
-   "source": "BSE announcements",
-   "headline": "AksharChem India Ltd-$: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Publication of Financial Result",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/97925b30-8669-4618-af65-ac6535b6e18e.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "e9ce63f5a765",
-   "kind": "news",
-   "time": "2026-10-20T17:12+05:30",
-   "source": "NSE announcements",
-   "headline": "Indiamart Intermesh Limited: Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "INDIAMART INTERMESH LIMITED has informed the Exchange about Board Meeting to be held on 27-Oct-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board M",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17528_WebXMLFile_20261020_171208392.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "40390f3affe5",
-   "kind": "news",
-   "time": "2026-10-20T17:10+05:30",
-   "source": "CNBC top news",
-   "headline": "3M lifts annual profit forecast on cost controls, price hikes",
-   "summary": "3M boosted its expected full-year adjusted profit per share of $9.10 to $9.15, from its earlier forecast of $8.80 to $8.95.",
-   "link": "https://www.cnbc.com/2026/10/20/3m-mmm-earnings-q3-2026.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "guidance"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "5b78cff85a31",
-   "kind": "news",
-   "time": "2026-10-20T17:02+05:30",
-   "source": "ET Markets",
-   "headline": "Meta's AI spending, Muse assistant adoption in focus for quarterly results",
-   "summary": "Meta's upcoming third-quarter results will reflect its significant investments in artificial intelligence technologies and products. The company's revenue is expected to grow by 23.8%, despite intense competition from rival firms. Analysts ",
-   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/metas-ai-spending-muse-assistant-adoption-in-focus-for-quarterly-results/articleshow/135068976.cms",
-   "symbols": [
-    "META"
-   ],
-   "symbol_keys": [
-    "US:META"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "414f834b9a96",
-   "kind": "news",
-   "time": "2026-10-20T17:00+05:30",
-   "source": "ET Markets",
-   "headline": "Oyo parent PRISM to cut IPO fresh issue nearly 50% to Rs 3,350 crore: Sources",
-   "summary": "PRISM is set to scale back its initial public offering from Rs 6,650 crore to Rs 3,350 crore in light of its robust cash flow and enhanced balance sheet. The majority of the newly structured funds will focus on repaying or prepaying debts. ",
-   "link": "https://economictimes.indiatimes.com/markets/ipos/fpos/oyo-parent-prism-to-nearly-halve-ipo-fresh-issue-size-to-up-to-rs-3350-cr-sources/articleshow/135068962.cms",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "7b21b8d9a58f",
-   "kind": "news",
-   "time": "2026-10-20T16:59+05:30",
-   "source": "NSE announcements",
-   "headline": "BIRLASOFT LIMITED: Board Meeting to be held on 28-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
-   "summary": "Birlasoft Limited has informed the Exchange about Board Meeting to be held on 28-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend. |SUBJECT: Board Mee",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_1826_WebXMLFile_20261020_165958656.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "dividend"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "8fe860e22bf2",
-   "kind": "news",
-   "time": "2026-10-20T16:55+05:30",
-   "source": "BSE announcements",
-   "headline": "Birlasoft Ltd: Board Meeting Intimation for A) The Unaudited Financial Results (Standalone And Consolidated) Of The Company, For The Quarter And Half-Year Ended September 30, 2026; And B) Declaration Of Interim Dividend For The Financial Year 2026-27.",
-   "summary": "Board Meeting. Birlasoft Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 28/10/2026 ,inter alia, to consider and approve a) the unaudited financial results ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2d3bdcbe-7a3b-4f5d-af54-94ed8f7c5aec.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "dividend"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "b076b044f3a7",
-   "kind": "news",
-   "time": "2026-10-20T16:52+05:30",
-   "source": "BSE announcements",
-   "headline": "Maruti Global Industries Ltd: Compliances-Certificate under Reg. 74 (5) of SEBI (DP) Regulations, 2018",
-   "summary": "Company Update. Dear Sir & Madam, Please find the attached Quarterly compliance certificate issued by RTA under Reg.74(5) of SEBI (DP) Regulations, 2018 for the quarter ended September 30, 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/84e3b1b2-3ccb-4392-81b1-7ee0176d536d.pdf",
-   "symbols": [
-    "MARUTI"
-   ],
-   "symbol_keys": [
-    "MARUTI"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "36a350fd1c04",
-   "kind": "news",
-   "time": "2026-10-20T16:52+05:30",
-   "source": "ET Markets",
-   "headline": "US Stocks: 3M lifts annual profit forecast on cost controls, price hikes",
-   "summary": "3M has revised its profit outlook for the year, expecting a boost in adjusted earnings per share. Their quarterly revenue reflects growth thanks to the safety and industrial segment. Strong industrial demand and sales increases in targeted ",
-   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-3m-lifts-annual-profit-forecast-on-cost-controls-price-hikes/articleshow/135068806.cms",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "guidance"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "051f2082420c",
-   "kind": "news",
-   "time": "2026-10-20T16:50+05:30",
-   "source": "NSE announcements",
-   "headline": "Karamtara Engineering Limited: Credit Rating- Revision",
-   "summary": "Karamtara Engineering Limited has informed the Exchange about Credit Rating- Revision |SUBJECT: Credit Rating- Revision",
-   "link": "https://nsearchives.nseindia.com/corporate/9833315135_20102026164947_Intimation_Credit_Rating_Report.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "99344b23ef49",
-   "kind": "news",
-   "time": "2026-10-20T16:49+05:30",
-   "source": "ET Markets",
-   "headline": "US Stocks: GE Aerospace raises 2026 profit forecast as services strength drives growth",
-   "summary": "GE Aerospace has increased its 2026 adjusted earnings forecast due to continued demand for engine maintenance. The demand for spare parts remains high, which supports their financial outlook. Airlines are facing rising fuel costs due to dis",
-   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-ge-aerospace-raises-2026-profit-forecast-as-services-strength-drives-growth/articleshow/135068763.cms",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "guidance"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "36d86978f241",
-   "kind": "news",
-   "time": "2026-10-20T16:48+05:30",
-   "source": "NSE announcements",
-   "headline": "Venus Pipes & Tubes Limited: Product launch (Sub-para 3-Para B)",
-   "summary": "Venus Pipes & Tubes Limited has informed the Exchange about Product launch (Sub-para 3-Para B) |SUBJECT: Product launch (Sub-para 3-Para B)",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_PARA_B_20300_WebXMLFile_20261020_164805944.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "c06ca7f672b8",
-   "kind": "news",
-   "time": "2026-10-20T16:48+05:30",
-   "source": "BSE announcements",
-   "headline": "ICICI Prudential Life Insurance Company Ltd: Disclosure Under Regulation 30 And 51 Read With Schedule III Of SEBI Listing Regulations.",
-   "summary": "Company Update. Disclosure under Regulation 30 and 51 read with Schedule III of SEBI Listing Regulations",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/602f2792-2824-4a58-855f-a6819ca3b5cd.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "8f6ad9a0f0c9",
-   "kind": "news",
-   "time": "2026-10-20T16:48+05:30",
-   "source": "BusinessLine",
-   "headline": "OYO-parent PRISM to nearly halve IPO fresh issue size to up to ₹3,350 cr: Sources",
-   "summary": "Reduction in the issue size follows continued strong cash generation and an improving balance-sheet position, which lowered the amount of capital the company needs to raise compared with what was originally envisaged, sources said.",
-   "link": "https://www.thehindubusinessline.com/markets/oyo-parent-prism-to-nearly-halve-ipo-fresh-issue-size-to-up-to-3350-cr-sources/article71604229.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "006bab614150",
-   "kind": "news",
-   "time": "2026-10-20T16:47+05:30",
-   "source": "NSE announcements",
-   "headline": "L&T Technology Services Limited: Copy of Newspaper Clippings relating to the Unaudited Consolidated and Standalone financial results of the Company for the quarter and half year ended September 30, 2026.",
-   "summary": "L&T Technology Services Limited has informed the Exchange about Copy of Newspaper Clippings relating to the Unaudited Consolidated and Standalone financial results of the Company for the quarter and half year ended September 30, 2026. |SUBJ",
-   "link": "https://nsearchives.nseindia.com/corporate/LTTS_20102026164715_LTTS_Newspaperadv_19-10-2026sd.pdf",
-   "symbols": [
-    "LT"
-   ],
-   "symbol_keys": [
-    "LT"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "a91fc888d5a0",
-   "kind": "news",
-   "time": "2026-10-20T16:47+05:30",
-   "source": "ET Markets",
-   "headline": "US Stocks: GM's core profit rises 22% on strength of pickup-truck business",
-   "summary": "General Motors exceeded analyst expectations in third-quarter earnings, driven by robust demand for their pickups and SUVs. The company reported an adjusted EBIT of $4.1 billion, marking a 22% year-over-year increase. Despite facing inflati",
-   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/us-stocks-gms-core-profit-rises-22-on-strength-of-pickup-truck-business/articleshow/135068643.cms",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "b55838ea3c0c",
-   "kind": "news",
-   "time": "2026-10-20T16:44+05:30",
-   "source": "BSE announcements",
-   "headline": "Karamtara Engineering Ltd: Announcement under Regulation 30 (LODR)-Credit Rating",
-   "summary": "Company Update. Intimation regarding upgrade in Credit Rating",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a8eec105-0ccd-442b-8987-09afe5df0306.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "f6fd1327a54c",
-   "kind": "news",
-   "time": "2026-10-20T16:43+05:30",
-   "source": "BSE announcements",
-   "headline": "L&T Technology Services Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper Clippings relating to the Unaudited Financial Results for the quarter and half year ended September 30, 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c5cc7564-b070-40bf-be5f-3fd141e1b0c1.pdf",
-   "symbols": [
-    "LT"
-   ],
-   "symbol_keys": [
-    "LT"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "1911abe2e8b7",
-   "kind": "news",
-   "time": "2026-10-20T16:41+05:30",
-   "source": "BSE announcements",
-   "headline": "IndiaMART InterMESH Ltd: Board Meeting Intimation for Date Of The Board Meeting And Closure Of Trading Window",
-   "summary": "Board Meeting. Indiamart Intermesh Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/10/2026 ,inter alia, to consider and approve Audited Financial Results ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31be8195-a020-47ce-b305-5da44ea14b39.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "3a6815300e69",
-   "kind": "news",
-   "time": "2026-10-20T16:34+05:30",
-   "source": "NSE announcements",
-   "headline": "Goyal Salt Limited: Goyal Salt Limited has informed regarding Non-Applicability of the Compliance Report on Corporate Governance for the Quarter ended 30.09.2026.",
-   "summary": "Goyal Salt Limited has informed regarding Non-Applicability of the Compliance Report on Corporate Governance for the Quarter ended 30.09.2026. |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the end of th",
-   "link": "https://nsearchives.nseindia.com/corporate/GOYAL_20102026163405_Regulation_27_2__Corporate_Governance-NA.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "edc078bbb641",
-   "kind": "news",
-   "time": "2026-10-20T16:26+05:30",
-   "source": "BSE announcements",
-   "headline": "Harrisons Malayalam Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Pursuant to Regulation 30 of SEBI LODR attaching herewith newspaper publication regarding special window for re-lodgment of transfer request of physical securities.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/17731013-0a5b-4ca3-9275-42d8b73df825.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "3610c4de3eb2",
-   "kind": "news",
-   "time": "2026-10-20T16:26+05:30",
-   "source": "BSE announcements",
-   "headline": "CHD Chemicals Ltd: Board Meeting Intimation for Declaration Of Results For Quarter And Half Year Ended 30Th September 2026",
-   "summary": "Board Meeting. CHD Chemicals Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 27/10/2026 ,inter alia, to consider and approve declaration of results for quarter ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/2d32afdd-52d6-46c6-84d7-1dbe66130c6a.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "0df0622318b2",
-   "kind": "news",
-   "time": "2026-10-20T16:13+05:30",
-   "source": "NSE announcements",
-   "headline": "Amagi Media Labs Limited: the earnings conference call scheduled for Friday, November 06, 2026 at 10:00 A.M. (IST) to discuss the financial results of the Company for the quarter and half year ended September 30, 2026",
-   "summary": "Amagi Media Labs Limited has informed the Exchange about the earnings conference call scheduled for Friday, November 06, 2026 at 10:00 A.M. (IST) to discuss the financial results of the Company for the quarter and half year ended September ",
-   "link": "https://nsearchives.nseindia.com/corporate/AMAGI_20102026161300_Q2EarningsCallInvite.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "1838564bdd2a",
-   "kind": "news",
-   "time": "2026-10-20T16:12+05:30",
-   "source": "NSE announcements",
-   "headline": "Aseem Infrastructure Finance Limited: Credit rating",
-   "summary": "Credit rating |SUBJECT: Credit rating",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/ASSEM_20102026161101_CreditRating.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "8d0a517a3667",
-   "kind": "news",
-   "time": "2026-10-20T16:12+05:30",
-   "source": "BSE announcements",
-   "headline": "Genomic Valley Biotech Ltd: Disclosure Under Regulation 30 And Regulation 30A Of The Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015, As Amended ('SEBI (LODR) Regulations')",
-   "summary": "Company Update. Disclosure under Regulation 30 and Regulation 30A of the SEBI (LODR) Regulations, 2015 regarding Mr. Yogesh Agrawal (hereinafter referred to as the \"Promoters\" or \"Promoter Sellers\") of ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/19b78ec6-fe8d-4098-b7f0-0d034c580bd2.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "stake sale"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "101ab2cae5c3",
-   "kind": "news",
-   "time": "2026-10-20T16:06+05:30",
-   "source": "NSE announcements",
-   "headline": "Intellect Design Arena Limited: Board Meeting to be held on 30-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
-   "summary": "INTELLECT DESIGN ARENA LIMITED has informed the Exchange about Board Meeting to be held on 30-Oct-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business. ",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_11206_WebXMLFile_20261020_160633947.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "a547e7bae88b",
-   "kind": "news",
-   "time": "2026-10-20T16:06+05:30",
-   "source": "BSE announcements",
-   "headline": "Amagi Media Labs Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. Earnings conference call for analysts and investors is scheduled on Friday, November 06, 2026 at 10:00 A.M. (IST) to discuss the Financial Results of the Company for the quarter and half ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ca4c04c8-ce92-4b0f-9353-81982eb8352f.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "15be3bcbba29",
-   "kind": "news",
-   "time": "2026-10-20T16:03+05:30",
-   "source": "BSE announcements",
-   "headline": "Intellect Design Arena Ltd: Board Meeting Intimation for Considering And Approving The Unaudited Financial Results (Both Standalone And Consolidated) Of The Company For The Quarter And Half Year Ended September 30, 2026.",
-   "summary": "Board Meeting. Intellect Design Arena Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 30/10/2026 ,inter alia, to consider and approve unaudited financial ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b855b66c-c914-4774-97a8-d7be76f468c8.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "61bc2a43cbe0",
-   "kind": "news",
-   "time": "2026-10-20T15:59+05:30",
-   "source": "NSE announcements",
-   "headline": "Anantam Highways Trust: Anantam Highways Trust has informed regarding Submission of the Compliance Report on Corporate Governance for the quarter ended September 30, 2026.",
-   "summary": "Anantam Highways Trust has informed regarding Submission of the Compliance Report on Corporate Governance for the quarter ended September 30, 2026. |SUBJECT: Quarterly Compliance Report on Corporate governance - within 21 days from the end ",
-   "link": "https://nsearchives.nseindia.com/corporate/ANANTAM_20102026155758_AHT_Corporate_Governance_Report_30092026_without_PAN.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "f14c0b31b218",
-   "kind": "news",
-   "time": "2026-10-20T15:58+05:30",
-   "source": "BSE announcements",
-   "headline": "Anantam Highways Trust: Reg 26K: Quarterly Compliance Report on Corporate governance",
-   "summary": "Others. Anantam Highways Trust has informed the Exchange regarding Submission of the Compliance Report on Corporate Governance for the Q2 FY 2026-27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7e610998-edbb-480f-b92b-fa94854d3109.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "2af0ac422401",
-   "kind": "news",
-   "time": "2026-10-20T15:52+05:30",
-   "source": "NSE announcements",
-   "headline": "Bata India Limited: Board Meeting to be held on 03-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "BATA INDIA LIMITED has informed the Exchange about Board Meeting to be held on 03-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeting ",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_254_WebXMLFile_20261020_155222514.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "438244221eb0",
-   "kind": "news",
-   "time": "2026-10-20T15:38+05:30",
-   "source": "BSE announcements",
-   "headline": "Bata India Ltd: Board Meeting Intimation for Consideration And Approval Of The Unaudited (Standalone & Consolidated) Financial Results For The Quarter And Half Year Ended September 30, 2026",
-   "summary": "Board Meeting. Bata India Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 03/11/2026 ,inter alia, to consider and approve the Unaudited (Standalone and Consolidated) ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9e65fc46-018d-40ba-b22f-8af2bc020a2a.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-20T19:58+05:30"
-  },
-  {
-   "id": "5ebc6801d02f",
-   "kind": "news",
-   "time": "2026-10-20T15:30+05:30",
-   "source": "CNBC top news",
-   "headline": "Walmart launches joint membership with Sam's Club as it leans into delivery, gas discounts",
-   "summary": "Walmart is now offering a joint membership with Sam's Club for $120 per year as the retailer further leans into convenience.",
-   "link": "https://www.cnbc.com/2026/10/20/walmart-sams-club-plus-membership.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "enters/launches business"
    ],
    "moving": [],
    "score": 2,
