@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-21 13:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 0 moving.
+Generated 2026-10-21 14:20 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -39,7 +39,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 8
 - Alert id: 91e5a7972ba6
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - duplicate of the already-noted Bajaj Finance Q2 story (87e9f16adbcb); the result looks priced in. / Losers: none clear - no named competitor effect. / Catalyst: scheduled (RBI MPC, estimated 4 Dec 2026) - the Q2 reaction does not change the rate-day driver. / Thesis fit: proposed thesis bajaj-finance-rbi-december: neither supports nor weakens
 
 ## 4. [8 HIGH] Bajaj Finance shares fall 3% despite 29% Q2 profit growth; brokerages retain bullish calls
 
@@ -87,7 +87,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 2f5f0cb228ad
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - same Q2 story as the already-noted UltraTech alerts (792ac2b2d413, 637abb29f54d); brokerages are split, so no clear direction. / Losers: none clear - fuel and energy cost pressure is sector-wide, not a named company effect from this headline. / Catalyst: scheduled (Q2 results, done) - the move is the reaction; nothing further scheduled. / Thesis fit: none
 
 ## 8. [7 HIGH] Bajaj Finance Limited: allotment of 2,12,000 securities pursuant to Non Convertible Securities at its meeting held on October 21, 2026
 
@@ -99,7 +99,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 7
 - Alert id: 72ce08dde5ed
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - routine NCD allotment (debt funding for Bajaj Finance); no new information. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
 
 ## 9. [7 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Allotment
 
@@ -111,7 +111,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 7
 - Alert id: 91234673aa48
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - same routine NCD allotment filing as 72ce08dde5ed. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
 
 ## 10. [7 HIGH] Larsen & Toubro Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
 
