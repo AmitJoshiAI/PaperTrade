@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-22 12:00 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 0 moving.
+Generated 2026-10-22 13:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 54 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -15,7 +15,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: waaree-q2-results (open)
 - Score: 9
 - Alert id: b69b875dc473
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - a date intimation, no new information on the numbers. / Losers: none clear - no mechanism in a scheduling notice. / Catalyst: scheduled - results on 2026-10-27, one day before the 2026-10-28 event_date in the open thesis, so the exit rule falls due on 2026-10-28 (next open after the print). / Thesis fit: open thesis waaree-q2-results: supports (confirms the event is still ahead; reviewer should update event_date to 2026-10-27)
 
 ## 2. [9 HIGH] Waaree Energies Ltd: Board Meeting Intimation for Consideration And Approval Of The Un-Audited Financial Results (Standalone And Consolidated) For The Quarter And Half Year Ended September 30, 2026.
 
@@ -27,7 +27,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: waaree-q2-results (open)
 - Score: 9
 - Alert id: 1debff640013
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - duplicate of the NSE intimation b69b875dc473 from the BSE feed. / Losers: none clear - see b69b875dc473. / Catalyst: scheduled - results on 2026-10-27 - same board meeting as above. / Thesis fit: open thesis waaree-q2-results: supports (see b69b875dc473)
 
 ## 3. [8 HIGH] Bajaj Finance shares drop over 3% despite 29% Q2 profit growth; Nomura, CLSA, JP Morgan retain bullish calls
 
@@ -51,7 +51,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: dad2d3785dbe
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - a date intimation; the dividend is only "if any". / Losers: none clear - no mechanism in a scheduling notice. / Catalyst: scheduled (results and possible interim dividend, date in the filing) - no position can be justified from the notice alone. / Thesis fit: none
 
 ## 5. [7 HIGH] Meta raises AI spending forecast to $145 billion, plans new share issue; Q3 revenue beats estimates
 
@@ -161,26 +161,26 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2f5f0cb228ad
 - Second-order candidates: Winner: none clear - same Q2 story as the already-noted UltraTech alerts (792ac2b2d413, 637abb29f54d); brokerages are split, so no clear direction. / Losers: none clear - fuel and energy cost pressure is sector-wide, not a named company effect from this headline. / Catalyst: scheduled (Q2 results, done) - the move is the reaction; nothing further scheduled. / Thesis fit: none
 
-## 14. [7 HIGH] Bajaj Finance Limited: allotment of 2,12,000 securities pursuant to Non Convertible Securities at its meeting held on October 21, 2026
+## 14. [6 HIGH] Sun Pharma Advanced Research Company Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .
 
-- Time: 2026-10-21 12:29 IST
+- Time: 2026-10-22 12:26 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/BAJFINANCE_21102026122914_REG30_Allotment_intimation.pdf
-- Matched symbols: BAJFINANCE
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 7
-- Alert id: 72ce08dde5ed
-- Second-order candidates: Winner: none clear - routine NCD allotment (debt funding for Bajaj Finance); no new information. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_2626_WebXMLFile_20261022_122643796.xml
+- Matched symbols: SUNPHARMA
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 56958bb783c5
+- Second-order candidates: 
 
-## 15. [7 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Allotment
+## 15. [6 HIGH] Sun Pharma Advanced Research Company Ltd: Board Meeting Intimation for Approval Of Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended September 30, 2026
 
-- Time: 2026-10-21 12:22 IST
+- Time: 2026-10-22 12:07 IST
 - Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/5bb76cad-5a8c-42c8-8aa3-6d81edf31bf6.pdf
-- Matched symbols: BAJFINANCE
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 7
-- Alert id: 91234673aa48
-- Second-order candidates: Winner: none clear - same routine NCD allotment filing as 72ce08dde5ed. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/e1633c34-901b-42a4-a42e-9f1339472b74.pdf
+- Matched symbols: SUNPHARMA
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 204f2ba3e680
+- Second-order candidates: 
