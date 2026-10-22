@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-22 20:07 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-22 20:41 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -113,7 +113,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 08ddb3f967ce
 - Second-order candidates: 
 
-## 10. [6 HIGH] InterGlobe Aviation Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
+## 10. [6 HIGH] CRWV -8.1% vs previous close (close 56.83, bar 2026-10-22)
+
+- Time: 2026-10-22 20:07 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/CRWV
+- Matched symbols: CRWV (moving today: CRWV)
+- Keywords: price move
+- Thesis match: none
+- Score: 6
+- Alert id: bbeafd0dcfce
+- Second-order candidates: 
+
+## 11. [6 HIGH] InterGlobe Aviation Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
 
 - Time: 2026-10-22 19:52 IST
 - Source: BSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: a001cefa0ee2
 - Second-order candidates: 
 
-## 11. [6 HIGH] InterGlobe Aviation Limited: Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .
+## 12. [6 HIGH] InterGlobe Aviation Limited: Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .
 
 - Time: 2026-10-22 19:49 IST
 - Source: NSE announcements
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c2f8c99ff149
 - Second-order candidates: 
 
-## 12. [6 HIGH] InterGlobe Aviation Ltd: Board Meeting Intimation for Consideration And Approval The Unaudited (Standalone & Consolidated) Financial Results Of The Company For The Quarter And Half Year Ended September 30, 2026.
+## 13. [6 HIGH] InterGlobe Aviation Ltd: Board Meeting Intimation for Consideration And Approval The Unaudited (Standalone & Consolidated) Financial Results Of The Company For The Quarter And Half Year Ended September 30, 2026.
 
 - Time: 2026-10-22 19:45 IST
 - Source: BSE announcements
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 1de61657a9b6
 - Second-order candidates: 
 
-## 13. [6 HIGH] Market wrap: Bajaj Finance, Cipla, Nestle India, Eternal top gainers and losers on Nifty and Sensex on Thursday
+## 14. [6 HIGH] Market wrap: Bajaj Finance, Cipla, Nestle India, Eternal top gainers and losers on Nifty and Sensex on Thursday
 
 - Time: 2026-10-22 17:22 IST
 - Source: ET Markets
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 357cde1abc4f
 - Second-order candidates: 
 
-## 14. [6 HIGH] Mahindra & Mahindra Financial Services Limited: Copy of Newspaper Publication - Extract of Financial Results of Q2 FY 2027
+## 15. [6 HIGH] Mahindra & Mahindra Financial Services Limited: Copy of Newspaper Publication - Extract of Financial Results of Q2 FY 2027
 
 - Time: 2026-10-22 16:17 IST
 - Source: NSE announcements
@@ -171,16 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 46a8f7d1a6f0
-- Second-order candidates: 
-
-## 15. [6 HIGH] Clean Science and Technology Limited: In terms of the referred Regulation 30 read with Schedule III - Part A of SEBI Listing Regulations, 2015, we would like to inform you that, a conference call for analysts and investors has been scheduled on Saturday, 31st October, 2026 at 4:00 P.M. (IST) to discuss the unaudited financial results for the Quarter and Half Year ended 30th September, 2026.
-
-- Time: 2026-10-22 16:16 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/CLEAN_22102026161550_Intimation_of_Conference_call_31102026.pdf
-- Matched symbols: none
-- Keywords: results, listing, SEBI
-- Thesis match: none
-- Score: 6
-- Alert id: 4a080f00cd95
 - Second-order candidates: 
