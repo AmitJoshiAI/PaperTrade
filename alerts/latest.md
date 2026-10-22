@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-22 14:52 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 1 moving.
+Generated 2026-10-22 20:07 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -29,7 +29,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 1debff640013
 - Second-order candidates: Winner: none clear - duplicate of the NSE intimation b69b875dc473 from the BSE feed. / Losers: none clear - see b69b875dc473. / Catalyst: scheduled - results on 2026-10-27 - same board meeting as above. / Thesis fit: open thesis waaree-q2-results: supports (see b69b875dc473)
 
-## 3. [8 HIGH] ETERNAL LIMITED: Acquisition (including agreement to acquire)
+## 3. [8 HIGH] Here are Thursday's biggest analyst calls: Nvidia, Tesla, SpaceX, Meta, CoreWeave, IBM, Block & more
+
+- Time: 2026-10-22 17:59 IST
+- Source: CNBC top news
+- Link: https://www.cnbc.com/2026/10/22/wall-street-analyst-calls-nvidia-tesla-meta-spacex.html
+- Matched symbols: CRWV, META (moving today: CRWV, META)
+- Keywords: none
+- Thesis match: none
+- Score: 8
+- Alert id: d14d75e39570
+- Second-order candidates: 
+
+## 4. [8 HIGH] ETERNAL LIMITED: Acquisition (including agreement to acquire)
 
 - Time: 2026-10-22 14:19 IST
 - Source: NSE announcements
@@ -41,7 +53,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: dd2f8ec69bed
 - Second-order candidates: Winner: none clear - the filing text could not be read from this sandbox; Eternal's earlier restructuring filings (Bistro, Nugget) were internal subsidiary transfers. / Losers: none clear - no counterparty or third-party mechanism visible. / Catalyst: surprise (filing) - likely group restructuring, one web search found no external news for today. / Thesis fit: none
 
-## 4. [7 HIGH] Coal India Ltd: Board Meeting Intimation for Notice Of Board Meeting For Consideration Of Unaudited Financial Results For The 2Nd Quarter And Half Year Ended 30Th Sep' 2026, And Declaration Of 2Nd Interim Dividend, FY 26-27, If Any.
+## 5. [7 HIGH] ICICI Bank Limited: Allotment of 24096 Shares.
+
+- Time: 2026-10-22 16:45 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/ICICIBANK1_22102026164514_Lettertoexchange.pdf
+- Matched symbols: ICICIBANK
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 7
+- Alert id: 821bd2f04d42
+- Second-order candidates: 
+
+## 6. [7 HIGH] Infosys Q2 results preview: Analysts see PAT rising 10%; guidance in focus
+
+- Time: 2026-10-22 14:44 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/infosys-q2-results-preview-analysts-see-pat-rising-10-guidance-in-focus-126102200709_1.html
+- Matched symbols: INFY
+- Keywords: results, guidance
+- Thesis match: none
+- Score: 7
+- Alert id: e9d1ca78534b
+- Second-order candidates: 
+
+## 7. [7 HIGH] Coal India Ltd: Board Meeting Intimation for Notice Of Board Meeting For Consideration Of Unaudited Financial Results For The 2Nd Quarter And Half Year Ended 30Th Sep' 2026, And Declaration Of 2Nd Interim Dividend, FY 26-27, If Any.
 
 - Time: 2026-10-22 11:45 IST
 - Source: BSE announcements
@@ -53,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: dad2d3785dbe
 - Second-order candidates: Winner: none clear - a date intimation; the dividend is only "if any". / Losers: none clear - no mechanism in a scheduling notice. / Catalyst: scheduled (results and possible interim dividend, date in the filing) - no position can be justified from the notice alone. / Thesis fit: none
 
-## 5. [7 HIGH] Meta raises AI spending forecast to $145 billion, plans new share issue; Q3 revenue beats estimates
+## 8. [7 HIGH] Meta raises AI spending forecast to $145 billion, plans new share issue; Q3 revenue beats estimates
 
 - Time: 2026-10-22 01:42 IST
 - Source: ET Markets
@@ -65,122 +101,86 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 09e31d05f1d6
 - Second-order candidates: Winner: AI infrastructure suppliers (Nvidia NVDA, Broadcom AVGO, data-centre builders) - a higher capex forecast means more orders for chips, networking and power equipment. / Losers: Meta itself (META) if the new share issue dilutes holders and capex outruns revenue; other hyperscalers (MSFT, GOOGL, AMZN) face pressure to match spend. Indian IT services names get no direct benefit from this headline. / Catalyst: surprise - the issue size and timing are not yet disclosed; the capex guidance itself is already out (Q3 results 21 Oct US). / Thesis fit: none (US sleeve is not in scope for this reviewer)
 
-## 6. [7 HIGH] Jio IPO strengthens Reliance’s financial flexibility; capex funding remains key: Moody’s
+## 9. [6 HIGH] M&M Financial shares fall up to 10% to hit 52-week low despite 55% YoY profit in Q2; brokerages cut target price
 
-- Time: 2026-10-21 19:32 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/ipos/fpos/jio-ipo-strengthens-reliances-financial-flexibility-capex-funding-remains-key-moodys/articleshow/135094225.cms
-- Matched symbols: RELIANCE
-- Keywords: IPO, capex
-- Thesis match: none
-- Score: 7
-- Alert id: 9bb32b1ca276
-- Second-order candidates: Winner: Reliance Industries (RELIANCE) - IPO proceeds or listing value unlock cut leverage and fund telecom/new-energy capex. / Losers: none clear - Bharti Airtel (BHARTIARTL) gets a listed valuation comparison, but nothing in the headline harms it. / Catalyst: scheduled (Jio IPO timing, not dated in the headline) - a rating-agency comment on an already-known event, mostly priced in. / Thesis fit: none
-
-## 7. [7 HIGH] Waaree Renewable Technologies Limited: Audio Recording/Video Recording
-
-- Time: 2026-10-21 18:38 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_25069_WebXMLFile_20261021_183844402.xml
-- Matched symbols: WAAREEENER
-- Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: 6eae69c46c85
-- Second-order candidates: Winner: none clear - routine investor-meet disclosure; no business information in the headline. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. Same filing group as 6c2510c5d467 and 1735962770fa. / Thesis fit: open thesis waaree-q2-results: neither supports nor weakens
-
-## 8. [7 HIGH] Waaree Renewable Technologies Limited: Schedule of Analysts or Institutional Investors Meet
-
-- Time: 2026-10-21 18:38 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_25069_WebXMLFile_20261021_183844402.xml
-- Matched symbols: WAAREEENER
-- Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: 6c2510c5d467
-- Second-order candidates: Winner: none clear - routine investor-meet schedule; details sit in the attachment, not the headline. / Losers: none clear / Catalyst: scheduled (analyst meet, date in the attachment) - analyst meets often follow results, so mgmt commentary may arrive near the Q2 date. / Thesis fit: open thesis waaree-q2-results: neither supports nor weakens
-
-## 9. [7 HIGH] Waaree Renewable Technologies Limited: Link of Recording
-
-- Time: 2026-10-21 18:35 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/WAAREERTL_21102026183522_Intimation-s.pdf
-- Matched symbols: WAAREEENER
-- Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: 1735962770fa
-- Second-order candidates: Winner: none clear - recording link for an analyst meet already held; no new information in the headline. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: open thesis waaree-q2-results: neither supports nor weakens
-
-## 10. [7 HIGH] Bharat Electronics Limited: a press release dated October 21, 2026, titled "BEL receives orders worth Rs. 1011 Crore".
-
-- Time: 2026-10-21 18:16 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/BEL_21102026181543_Press_release_21102026.pdf
-- Matched symbols: BEL
-- Keywords: order win
-- Thesis match: none
-- Score: 7
-- Alert id: f74171ffc581
-- Second-order candidates: Winner: Bharat Electronics (BEL) - order inflow adds to the order book and revenue visibility; the size is small against a large book, so the impact is modest. / Losers: none clear - defence electronics orders are awarded individually; no named competitor lost this one. / Catalyst: surprise - the order came without prior notice, but orders of this size are routine for BEL and the news was filed after market hours on 21 Oct. / Thesis fit: none
-
-## 11. [7 HIGH] Bajaj Finance Limited: Allotment of Securities
-
-- Time: 2026-10-21 15:33 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/ALTERATION_OF_CAPITAL_AND_FUND_RAISING_1257_WebXMLFile_20261021_153311171.xml
-- Matched symbols: BAJFINANCE
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 7
-- Alert id: 810a2f50a455
-- Second-order candidates: Winner: none clear - routine allotment (the same NCD allotment noted under 72ce08dde5ed). / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
-
-## 12. [6 HIGH] ETERNAL LIMITED: Sale or disposal of unit(s)/division(s)/subsidiary
-
-- Time: 2026-10-22 14:18 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_19405_WebXMLFile_20261022_141852061.xml
-- Matched symbols: ETERNAL (moving today: ETERNAL)
-- Keywords: none
+- Time: 2026-10-22 20:07 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/m-m-financial-shares-fall-up-to-10-to-hit-52-week-low-despite-55-yoy-profit-in-q2-brokerages-cut-target-price-14057760.html
+- Matched symbols: M&M
+- Keywords: results, rating
 - Thesis match: none
 - Score: 6
-- Alert id: e1d4312ff781
-- Second-order candidates: Winner: none clear - batch filing with the acquisition and slump sale alerts, consistent with an internal reshuffle. / Losers: none clear - no named buyer or third party. / Catalyst: surprise (filing) - unknown, no news found. / Thesis fit: none
+- Alert id: 08ddb3f967ce
+- Second-order candidates: 
 
-## 13. [6 HIGH] ETERNAL LIMITED: Slump Sale
+## 10. [6 HIGH] InterGlobe Aviation Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
 
-- Time: 2026-10-22 14:18 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_19405_WebXMLFile_20261022_141844612.xml
-- Matched symbols: ETERNAL (moving today: ETERNAL)
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: aa303a9e1440
-- Second-order candidates: Winner: none clear - same-day Reg 30 batch with 3 and 13; precedent (Bistro Rs 57 cr, Nugget Rs 35 cr) is intra-group transfer to a subsidiary. / Losers: none clear - no mechanism for outside listed companies. / Catalyst: surprise (filing) - internal restructuring pattern, not an economic change; no news found. / Thesis fit: none
-
-## 14. [6 HIGH] Sun Pharma Advanced Research Company Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .
-
-- Time: 2026-10-22 12:26 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_2626_WebXMLFile_20261022_122643796.xml
-- Matched symbols: SUNPHARMA
-- Keywords: results
-- Thesis match: none
-- Score: 6
-- Alert id: 56958bb783c5
-- Second-order candidates: False match: this is SPARC (a separate listed R&D company), not Sun Pharmaceutical Industries (SUNPHARMA); a date intimation with no mechanism for the parent.
-
-## 15. [6 HIGH] Sun Pharma Advanced Research Company Ltd: Board Meeting Intimation for Approval Of Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended September 30, 2026
-
-- Time: 2026-10-22 12:07 IST
+- Time: 2026-10-22 19:52 IST
 - Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/e1633c34-901b-42a4-a42e-9f1339472b74.pdf
-- Matched symbols: SUNPHARMA
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/bb33ad2f-0d15-4161-b78f-a9727ac816cb.pdf
+- Matched symbols: INDIGO
 - Keywords: results
 - Thesis match: none
 - Score: 6
-- Alert id: 204f2ba3e680
-- Second-order candidates: False match: SPARC, not SUNPHARMA; BSE duplicate of the NSE intimation 56958bb783c5.
+- Alert id: a001cefa0ee2
+- Second-order candidates: 
+
+## 11. [6 HIGH] InterGlobe Aviation Limited: Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .
+
+- Time: 2026-10-22 19:49 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_13226_WebXMLFile_20261022_194903000.xml
+- Matched symbols: INDIGO
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: c2f8c99ff149
+- Second-order candidates: 
+
+## 12. [6 HIGH] InterGlobe Aviation Ltd: Board Meeting Intimation for Consideration And Approval The Unaudited (Standalone & Consolidated) Financial Results Of The Company For The Quarter And Half Year Ended September 30, 2026.
+
+- Time: 2026-10-22 19:45 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f3ab6c60-694f-4493-ba8e-f0749a1b9f76.pdf
+- Matched symbols: INDIGO
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 1de61657a9b6
+- Second-order candidates: 
+
+## 13. [6 HIGH] Market wrap: Bajaj Finance, Cipla, Nestle India, Eternal top gainers and losers on Nifty and Sensex on Thursday
+
+- Time: 2026-10-22 17:22 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/market-wrap-bajaj-finance-cipla-nestle-india-eternal-top-gainers-and-losers-on-nifty-and-sensex-on-thursday/articleshow/135117923.cms
+- Matched symbols: BAJFINANCE, NESTLEIND, CIPLA
+- Keywords: round-up
+- Thesis match: bajaj-finance-rbi-december (proposed)
+- Score: 6
+- Alert id: 357cde1abc4f
+- Second-order candidates: 
+
+## 14. [6 HIGH] Mahindra & Mahindra Financial Services Limited: Copy of Newspaper Publication - Extract of Financial Results of Q2 FY 2027
+
+- Time: 2026-10-22 16:17 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/M_MFIN_22102026161645_NewspaperSIGNED.pdf
+- Matched symbols: M&M
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 46a8f7d1a6f0
+- Second-order candidates: 
+
+## 15. [6 HIGH] Clean Science and Technology Limited: In terms of the referred Regulation 30 read with Schedule III - Part A of SEBI Listing Regulations, 2015, we would like to inform you that, a conference call for analysts and investors has been scheduled on Saturday, 31st October, 2026 at 4:00 P.M. (IST) to discuss the unaudited financial results for the Quarter and Half Year ended 30th September, 2026.
+
+- Time: 2026-10-22 16:16 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/CLEAN_22102026161550_Intimation_of_Conference_call_31102026.pdf
+- Matched symbols: none
+- Keywords: results, listing, SEBI
+- Thesis match: none
+- Score: 6
+- Alert id: 4a080f00cd95
+- Second-order candidates: 
