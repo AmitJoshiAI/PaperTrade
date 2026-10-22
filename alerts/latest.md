@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-21 20:40 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-22 09:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
 Quotes: 55 symbols checked, 0 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -41,7 +41,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5b2e038d6c50
 - Second-order candidates: Winner: none clear - same Q2 story as the already-noted Bajaj Finance alert; strong profit growth was expected and the stock sold off, so the result looks priced in. / Losers: none clear - no named competitor effect in the headline. / Catalyst: scheduled (RBI MPC, estimated 4 Dec 2026) - the Q2 reaction does not change the rate-day driver. / Thesis fit: proposed thesis bajaj-finance-rbi-december: neither supports nor weakens (duplicate coverage of the 87e9f16adbcb story)
 
-## 4. [8 HIGH] Bajaj Finance shares fall 3% after Q2 results. What Jefferies, Nomura, other brokerages now expect?
+## 4. [8 HIGH] Bajaj Finance shares drop over 3% despite 29% Q2 profit growth; Nomura, CLSA, JP Morgan retain bullish...
+
+- Time: 2026-10-21 11:23 IST
+- Source: Moneycontrol
+- Link: https://news.google.com/rss/articles/CBMi5gFBVV95cUxOcHZZVGZsMWdMSXRONjRWY0QxVDRCdXNjOFlNSUZTTUR3WVA0V1BtOFRUY0FFUW1RbkpJVlJmaDgtSnpqWkNKYUlzZjl5WHNpdzBtWkxjc0xCVFl5Qnh3ZjFzTXBwNVQ2QVpQZDRyYnl3MW1fSTh6TlZvNDRDVndnNy1fWWJjb2JSN21YSzNjaE1iV2dPRkwzMm9BUzM0Y05DODQ4blpONWxFODZ1Q3JJZzk2S2p1d0ZQaFk0Z2ExcTY3R2oySURZMUdJRXp2am5wT1FNUDRlclhXaWhKZzg5ZmJzbjhlUdIB6wFBVV95cUxOdXI3MlpFYkZXSDV6ODVhVGFQUVpPbk9QQllJc2ZMaXg5a0JTN0I0TjUzWmRiSHJZSFBEeS1XTU9DU1h4Y1ZuUmJ3c3JMNGh5RDlvdE10T09UbkVmLVRoS1JoeV9TSFVmRlNCYktUUlkxaTdhQ3BRMk9hQWhVVkNEaXB5ZnRoSVNQZnYzTVNSUDRkTG8wdWVsOXpVa3Z1SGVVYkwzN3VHQS1mWkFUSGZmZU84bVMwUEFMQXZJczFza3laVmVWSjFQVjZiMGRjSTNLSFdnVDFVUE1Sd3BkSkRkRUota2htWVRCd0FB?oc=5
+- Matched symbols: BAJFINANCE
+- Keywords: results
+- Thesis match: bajaj-finance-rbi-december (proposed)
+- Score: 8
+- Alert id: d8a5a27b7d8b
+- Second-order candidates: 
+
+## 5. [8 HIGH] Bajaj Finance shares fall 3% after Q2 results. What Jefferies, Nomura, other brokerages now expect?
 
 - Time: 2026-10-21 10:47 IST
 - Source: ET Markets
@@ -53,19 +65,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5c6c4917d4ed
 - Second-order candidates: Winner: none clear - brokerage target updates after results already out; the direction of each revision was not checked. / Losers: none clear - no named competitor effect. / Catalyst: scheduled (Q2 results, done) - revisions are after the fact and mostly priced in. / Thesis fit: none
 
-## 5. [8 HIGH] Bajaj Finance down 3% post Q2; analysts stay bullish on asset quality gains
+## 6. [7 HIGH] Meta raises AI spending forecast to $145 billion, plans new share issue; Q3 revenue beats estimates
 
-- Time: 2026-10-21 09:24 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/bajaj-finance-down-3-post-q2-analysts-stay-bullish-on-asset-quality-gains-126102100164_1.html
-- Matched symbols: BAJFINANCE
-- Keywords: results
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 8
-- Alert id: 87e9f16adbcb
-- Second-order candidates: Winner: none clear - analysts stay positive on asset quality, but the stock is trading down on the day, so the results look priced in. / Losers: none clear - no named competitor is affected. / Catalyst: scheduled (RBI MPC, estimated 4 Dec 2026) - the Q2 reaction does not change that; the pending thesis still depends on the rate decision. / Thesis fit: proposed thesis bajaj-finance-rbi-december: neither supports nor weakens (the results dip is not an input to the RBI-day rule)
+- Time: 2026-10-22 01:42 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/meta-raises-ai-spending-forecast-to-145-billion-plans-new-share-issue-q3-revenue-beats-estimates/articleshow/135100437.cms
+- Matched symbols: META
+- Keywords: results, guidance
+- Thesis match: none
+- Score: 7
+- Alert id: 09e31d05f1d6
+- Second-order candidates: 
 
-## 6. [7 HIGH] Jio IPO strengthens Reliance’s financial flexibility; capex funding remains key: Moody’s
+## 7. [7 HIGH] Jio IPO strengthens Reliance’s financial flexibility; capex funding remains key: Moody’s
 
 - Time: 2026-10-21 19:32 IST
 - Source: ET Markets
@@ -77,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9bb32b1ca276
 - Second-order candidates: 
 
-## 7. [7 HIGH] Waaree Renewable Technologies Limited: Audio Recording/Video Recording
+## 8. [7 HIGH] Waaree Renewable Technologies Limited: Audio Recording/Video Recording
 
 - Time: 2026-10-21 18:38 IST
 - Source: NSE announcements
@@ -89,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 6eae69c46c85
 - Second-order candidates: 
 
-## 8. [7 HIGH] Waaree Renewable Technologies Limited: Schedule of Analysts or Institutional Investors Meet
+## 9. [7 HIGH] Waaree Renewable Technologies Limited: Schedule of Analysts or Institutional Investors Meet
 
 - Time: 2026-10-21 18:38 IST
 - Source: NSE announcements
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 6c2510c5d467
 - Second-order candidates: 
 
-## 9. [7 HIGH] Waaree Renewable Technologies Limited: Link of Recording
+## 10. [7 HIGH] Waaree Renewable Technologies Limited: Link of Recording
 
 - Time: 2026-10-21 18:35 IST
 - Source: NSE announcements
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 1735962770fa
 - Second-order candidates: 
 
-## 10. [7 HIGH] Bharat Electronics Limited: a press release dated October 21, 2026, titled "BEL receives orders worth Rs. 1011 Crore".
+## 11. [7 HIGH] Bharat Electronics Limited: a press release dated October 21, 2026, titled "BEL receives orders worth Rs. 1011 Crore".
 
 - Time: 2026-10-21 18:16 IST
 - Source: NSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: f74171ffc581
 - Second-order candidates: 
 
-## 11. [7 HIGH] Bajaj Finance Limited: Allotment of Securities
+## 12. [7 HIGH] Bajaj Finance Limited: Allotment of Securities
 
 - Time: 2026-10-21 15:33 IST
 - Source: NSE announcements
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 810a2f50a455
 - Second-order candidates: 
 
-## 12. [7 HIGH] WAAREEENER -4.2% vs previous close (close 2408.9, bar 2026-10-21)
+## 13. [7 HIGH] WAAREEENER -4.2% vs previous close (close 2408.9, bar 2026-10-21)
 
 - Time: 2026-10-21 14:49 IST
 - Source: Yahoo quotes
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 730f71c34c9a
 - Second-order candidates: Winner: none clear - no news found for the move, so no beneficiary can be named. / Losers: none clear - cause unknown, so no reasoned loser. / Catalyst: unknown - no news found / Thesis fit: open thesis waaree-q2-results: supports (stock already weak into the Q2 results due by 2026-10-28; fits the "falls around results" pattern the thesis tests, no new information)
 
-## 13. [7 HIGH] UltraTech Cement shares rise 2% post-Q2 results; brokerages divided on outlook amid fuel and energy cost pressures
+## 14. [7 HIGH] UltraTech Cement shares rise 2% post-Q2 results; brokerages divided on outlook amid fuel and energy cost pressures
 
 - Time: 2026-10-21 13:53 IST
 - Source: Moneycontrol
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2f5f0cb228ad
 - Second-order candidates: Winner: none clear - same Q2 story as the already-noted UltraTech alerts (792ac2b2d413, 637abb29f54d); brokerages are split, so no clear direction. / Losers: none clear - fuel and energy cost pressure is sector-wide, not a named company effect from this headline. / Catalyst: scheduled (Q2 results, done) - the move is the reaction; nothing further scheduled. / Thesis fit: none
 
-## 14. [7 HIGH] Bajaj Finance Limited: allotment of 2,12,000 securities pursuant to Non Convertible Securities at its meeting held on October 21, 2026
+## 15. [7 HIGH] Bajaj Finance Limited: allotment of 2,12,000 securities pursuant to Non Convertible Securities at its meeting held on October 21, 2026
 
 - Time: 2026-10-21 12:29 IST
 - Source: NSE announcements
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 7
 - Alert id: 72ce08dde5ed
 - Second-order candidates: Winner: none clear - routine NCD allotment (debt funding for Bajaj Finance); no new information. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
-
-## 15. [7 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Allotment
-
-- Time: 2026-10-21 12:22 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/5bb76cad-5a8c-42c8-8aa3-6d81edf31bf6.pdf
-- Matched symbols: BAJFINANCE
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 7
-- Alert id: 91234673aa48
-- Second-order candidates: Winner: none clear - same routine NCD allotment filing as 72ce08dde5ed. / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
