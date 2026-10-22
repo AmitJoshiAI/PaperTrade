@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-22 14:23 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-22 14:52 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -39,7 +39,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: dd2f8ec69bed
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - the filing text could not be read from this sandbox; Eternal's earlier restructuring filings (Bistro, Nugget) were internal subsidiary transfers. / Losers: none clear - no counterparty or third-party mechanism visible. / Catalyst: surprise (filing) - likely group restructuring, one web search found no external news for today. / Thesis fit: none
 
 ## 4. [7 HIGH] Coal India Ltd: Board Meeting Intimation for Notice Of Board Meeting For Consideration Of Unaudited Financial Results For The 2Nd Quarter And Half Year Ended 30Th Sep' 2026, And Declaration Of 2Nd Interim Dividend, FY 26-27, If Any.
 
@@ -137,19 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 810a2f50a455
 - Second-order candidates: Winner: none clear - routine allotment (the same NCD allotment noted under 72ce08dde5ed). / Losers: none clear / Catalyst: surprise - routine filing, no price relevance. / Thesis fit: none
 
-## 12. [7 HIGH] WAAREEENER -4.2% vs previous close (close 2408.9, bar 2026-10-21)
-
-- Time: 2026-10-21 14:49 IST
-- Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/WAAREEENER.NS
-- Matched symbols: WAAREEENER (moving today: WAAREEENER)
-- Keywords: price move
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: 730f71c34c9a
-- Second-order candidates: Winner: none clear - no news found for the move, so no beneficiary can be named. / Losers: none clear - cause unknown, so no reasoned loser. / Catalyst: unknown - no news found / Thesis fit: open thesis waaree-q2-results: supports (stock already weak into the Q2 results due by 2026-10-28; fits the "falls around results" pattern the thesis tests, no new information)
-
-## 13. [6 HIGH] ETERNAL LIMITED: Sale or disposal of unit(s)/division(s)/subsidiary
+## 12. [6 HIGH] ETERNAL LIMITED: Sale or disposal of unit(s)/division(s)/subsidiary
 
 - Time: 2026-10-22 14:18 IST
 - Source: NSE announcements
@@ -159,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: e1d4312ff781
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - batch filing with the acquisition and slump sale alerts, consistent with an internal reshuffle. / Losers: none clear - no named buyer or third party. / Catalyst: surprise (filing) - unknown, no news found. / Thesis fit: none
 
-## 14. [6 HIGH] ETERNAL LIMITED: Slump Sale
+## 13. [6 HIGH] ETERNAL LIMITED: Slump Sale
 
 - Time: 2026-10-22 14:18 IST
 - Source: NSE announcements
@@ -171,9 +159,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: aa303a9e1440
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - same-day Reg 30 batch with 3 and 13; precedent (Bistro Rs 57 cr, Nugget Rs 35 cr) is intra-group transfer to a subsidiary. / Losers: none clear - no mechanism for outside listed companies. / Catalyst: surprise (filing) - internal restructuring pattern, not an economic change; no news found. / Thesis fit: none
 
-## 15. [6 HIGH] Sun Pharma Advanced Research Company Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .
+## 14. [6 HIGH] Sun Pharma Advanced Research Company Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .
 
 - Time: 2026-10-22 12:26 IST
 - Source: NSE announcements
@@ -184,3 +172,15 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 56958bb783c5
 - Second-order candidates: False match: this is SPARC (a separate listed R&D company), not Sun Pharmaceutical Industries (SUNPHARMA); a date intimation with no mechanism for the parent.
+
+## 15. [6 HIGH] Sun Pharma Advanced Research Company Ltd: Board Meeting Intimation for Approval Of Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended September 30, 2026
+
+- Time: 2026-10-22 12:07 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/e1633c34-901b-42a4-a42e-9f1339472b74.pdf
+- Matched symbols: SUNPHARMA
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 204f2ba3e680
+- Second-order candidates: False match: SPARC, not SUNPHARMA; BSE duplicate of the NSE intimation 56958bb783c5.
