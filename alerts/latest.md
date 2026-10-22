@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-22 13:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 1 moving.
+Generated 2026-10-22 14:23 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -29,17 +29,17 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 1debff640013
 - Second-order candidates: Winner: none clear - duplicate of the NSE intimation b69b875dc473 from the BSE feed. / Losers: none clear - see b69b875dc473. / Catalyst: scheduled - results on 2026-10-27 - same board meeting as above. / Thesis fit: open thesis waaree-q2-results: supports (see b69b875dc473)
 
-## 3. [8 HIGH] Bajaj Finance shares drop over 3% despite 29% Q2 profit growth; Nomura, CLSA, JP Morgan retain bullish calls
+## 3. [8 HIGH] ETERNAL LIMITED: Acquisition (including agreement to acquire)
 
-- Time: 2026-10-21 13:53 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/stocks/bajaj-finance-shares-fall-3-despite-29-q2-profit-growth-brokerages-retain-bullish-calls-14056520.html
-- Matched symbols: BAJFINANCE
-- Keywords: results
-- Thesis match: bajaj-finance-rbi-december (proposed)
+- Time: 2026-10-22 14:19 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_19405_WebXMLFile_20261022_141958119.xml
+- Matched symbols: ETERNAL (moving today: ETERNAL)
+- Keywords: M&A
+- Thesis match: none
 - Score: 8
-- Alert id: 91e5a7972ba6
-- Second-order candidates: Winner: none clear - duplicate of the already-noted Bajaj Finance Q2 story (87e9f16adbcb); the result looks priced in. / Losers: none clear - no named competitor effect. / Catalyst: scheduled (RBI MPC, estimated 4 Dec 2026) - the Q2 reaction does not change the rate-day driver. / Thesis fit: proposed thesis bajaj-finance-rbi-december: neither supports nor weakens
+- Alert id: dd2f8ec69bed
+- Second-order candidates: 
 
 ## 4. [7 HIGH] Coal India Ltd: Board Meeting Intimation for Notice Of Board Meeting For Consideration Of Unaudited Financial Results For The 2Nd Quarter And Half Year Ended 30Th Sep' 2026, And Declaration Of 2Nd Interim Dividend, FY 26-27, If Any.
 
@@ -149,19 +149,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 730f71c34c9a
 - Second-order candidates: Winner: none clear - no news found for the move, so no beneficiary can be named. / Losers: none clear - cause unknown, so no reasoned loser. / Catalyst: unknown - no news found / Thesis fit: open thesis waaree-q2-results: supports (stock already weak into the Q2 results due by 2026-10-28; fits the "falls around results" pattern the thesis tests, no new information)
 
-## 13. [7 HIGH] UltraTech Cement shares rise 2% post-Q2 results; brokerages divided on outlook amid fuel and energy cost pressures
+## 13. [6 HIGH] ETERNAL LIMITED: Sale or disposal of unit(s)/division(s)/subsidiary
 
-- Time: 2026-10-21 13:53 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/ultratech-shares-rise-2-post-q2-results-brokerages-divided-on-outlook-amid-fuel-and-energy-cost-pressures-14056555.html
-- Matched symbols: ULTRACEMCO
-- Keywords: results, guidance
+- Time: 2026-10-22 14:18 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_19405_WebXMLFile_20261022_141852061.xml
+- Matched symbols: ETERNAL (moving today: ETERNAL)
+- Keywords: none
 - Thesis match: none
-- Score: 7
-- Alert id: 2f5f0cb228ad
-- Second-order candidates: Winner: none clear - same Q2 story as the already-noted UltraTech alerts (792ac2b2d413, 637abb29f54d); brokerages are split, so no clear direction. / Losers: none clear - fuel and energy cost pressure is sector-wide, not a named company effect from this headline. / Catalyst: scheduled (Q2 results, done) - the move is the reaction; nothing further scheduled. / Thesis fit: none
+- Score: 6
+- Alert id: e1d4312ff781
+- Second-order candidates: 
 
-## 14. [6 HIGH] Sun Pharma Advanced Research Company Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .
+## 14. [6 HIGH] ETERNAL LIMITED: Slump Sale
+
+- Time: 2026-10-22 14:18 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_19405_WebXMLFile_20261022_141844612.xml
+- Matched symbols: ETERNAL (moving today: ETERNAL)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: aa303a9e1440
+- Second-order candidates: 
+
+## 15. [6 HIGH] Sun Pharma Advanced Research Company Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .
 
 - Time: 2026-10-22 12:26 IST
 - Source: NSE announcements
@@ -171,16 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 56958bb783c5
-- Second-order candidates: 
-
-## 15. [6 HIGH] Sun Pharma Advanced Research Company Ltd: Board Meeting Intimation for Approval Of Unaudited Standalone And Consolidated Financial Results For The Quarter And Half Year Ended September 30, 2026
-
-- Time: 2026-10-22 12:07 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/e1633c34-901b-42a4-a42e-9f1339472b74.pdf
-- Matched symbols: SUNPHARMA
-- Keywords: results
-- Thesis match: none
-- Score: 6
-- Alert id: 204f2ba3e680
-- Second-order candidates: 
+- Second-order candidates: False match: this is SPARC (a separate listed R&D company), not Sun Pharmaceutical Industries (SUNPHARMA); a date intimation with no mechanism for the parent.
