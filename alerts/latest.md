@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-23 19:52 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-23 20:29 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -89,7 +89,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b276a016e51b
 - Second-order candidates: Winner: none clear - a round-up of results day; no single company's numbers are known yet. / Losers: none clear - nothing to separate winners from losers before the prints. / Catalyst: scheduled - Q2 results today, but a multi-company round-up gives no edge on any one name. / Thesis fit: none
 
-## 8. [7 HIGH] Infosys Q2 results: IT major's ADR falls 6% after it lowers annual revenue growth guidance
+## 8. [7 HIGH] Aeroflex Enterprises Ltd-$: Announcement Under Regulation 30 Of SEBI LODR 2015
+
+- Time: 2026-10-23 20:06 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/19a27142-1d82-4eca-b2e2-8a3a9acfcdc3.pdf
+- Matched symbols: none
+- Keywords: SEBI, stake sale, M&A
+- Thesis match: none
+- Score: 7
+- Alert id: e48beedbf13c
+- Second-order candidates: 
+
+## 9. [7 HIGH] Infosys Q2 results: IT major's ADR falls 6% after it lowers annual revenue growth guidance
 
 - Time: 2026-10-23 19:52 IST
 - Source: Moneycontrol
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: d8586d90f8a3
 - Second-order candidates: 
 
-## 9. [7 HIGH] Ashika Global Securities Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
+## 10. [7 HIGH] Ashika Global Securities Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
 
 - Time: 2026-10-23 19:08 IST
 - Source: BSE announcements
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 458fc959c838
 - Second-order candidates: 
 
-## 10. [7 HIGH] Waaree Energies Limited: Schedule of Analysts or Institutional Investors Meet
+## 11. [7 HIGH] Waaree Energies Limited: Schedule of Analysts or Institutional Investors Meet
 
 - Time: 2026-10-23 18:22 IST
 - Source: NSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 203f0d1acd93
 - Second-order candidates: 
 
-## 11. [7 HIGH] Waaree Energies Limited: Schedule of Analyst/Institutional Investor Meet scheduled to be held on Wednesday, October 28, 2026.
+## 12. [7 HIGH] Waaree Energies Limited: Schedule of Analyst/Institutional Investor Meet scheduled to be held on Wednesday, October 28, 2026.
 
 - Time: 2026-10-23 18:16 IST
 - Source: NSE announcements
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: eb10de390ac7
 - Second-order candidates: 
 
-## 12. [7 HIGH] Infosys ADRs crash 6% after Q2 results as revenue guidance cut spooks investors
+## 13. [7 HIGH] Infosys ADRs crash 6% after Q2 results as revenue guidance cut spooks investors
 
 - Time: 2026-10-23 17:33 IST
 - Source: ET Markets
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: a77f60122e53
 - Second-order candidates: 
 
-## 13. [7 HIGH] Waaree Renewable Technologies Limited: Amendment or termination of orders/contracts (Sub-para 4-Para B)
+## 14. [7 HIGH] Waaree Renewable Technologies Limited: Amendment or termination of orders/contracts (Sub-para 4-Para B)
 
 - Time: 2026-10-23 16:21 IST
 - Source: NSE announcements
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 3ca9ec396825
 - Second-order candidates: 
 
-## 14. [7 HIGH] Infosys Q2 Results: Profit rises 6% YoY to Rs 7,823 crore; co lowers revenue guidance
+## 15. [7 HIGH] Infosys Q2 Results: Profit rises 6% YoY to Rs 7,823 crore; co lowers revenue guidance
 
 - Time: 2026-10-23 16:21 IST
 - Source: ET Markets
@@ -171,16 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 10d58e41b22c
-- Second-order candidates: 
-
-## 15. [7 HIGH] Waaree Renewable Technologies Limited: Bagging/Receiving of orders/contracts
-
-- Time: 2026-10-23 16:11 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/WAAREERTL_23102026161112_Intimation-s.pdf
-- Matched symbols: WAAREEENER
-- Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: bf7309bdfe42
 - Second-order candidates: 
