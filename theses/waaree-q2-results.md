@@ -43,3 +43,4 @@ fills at the first open after that date.
 - 2026-10-17 (opened by Claude): results date unknown; estimated 2026-10-28 from last year's timing
   (Q2 FY26 came 16-26 Oct 2025). Reviewer: check the NSE board-meeting intimation each day and set
   event_date to the actual date when it is announced.
+- 2026-10-23 (weekly review, Claude): Waaree results date still unannounced (web search, no exchange filing found); estimate 28 Oct kept. Rs -6.5%; rule unchanged, within cap.

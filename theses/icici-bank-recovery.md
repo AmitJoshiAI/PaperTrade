@@ -43,3 +43,4 @@ Hard stop Rs 1,320 (about 5% below the 15 Oct close), enforced by the engine.
 
 - 2026-10-17 (opened by Claude): opened on the mean-reversion-after-forced-selling reason. Check
   weekly: FII flow (positive week?), rupee, crude, and ICICI Q2 results (date to confirm).
+- 2026-10-23 (weekly review, Claude): Close 1,394.20, Rs -0.9%, invalidation 1,320 not hit. No new fundamental data checked; horizon unchanged.
