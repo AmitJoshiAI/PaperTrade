@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-23 13:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 4 moving.
+Generated 2026-10-23 14:18 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -15,7 +15,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 9
 - Alert id: 6c4fa629ba6e
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - round-up of a results day; no single company's numbers are in the headline. / Losers: none clear - nothing to separate winners from losers before the prints. / Catalyst: scheduled - Q2 results today, but a multi-company round-up gives no edge on any one name. / Thesis fit: none
 
 ## 2. [8 HIGH] Q2 Results 2026 LIVE: Godrej Properties profit down 62% YoY at Rs 154 cr; Infosys, IndusInd Bank, Dr. Reddy's among key firms to declare September quarter results today
 
@@ -27,7 +27,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 15c8fb7841f9
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - live blog across many companies; Godrej Properties' fall is a lumpy project-booking recognition effect, not a sector signal. / Losers: none clear - one weak print (GODREJPROP) does not show a read-through to peers like DLF or Lodha without their own numbers. / Catalyst: scheduled - Q2 results today for Infosys, IndusInd Bank, Dr. Reddy's; the round-up gives no edge before they print. / Thesis fit: none
 
 ## 3. [8 HIGH] Q2 Results Today Live: Infosys, Adani Power, JSW Steel, Tata Motors, Shriram Fin, Torrent Pharma, CG Power, BPCL, Dr Reddys Lab Share to announce Q2 results
 
@@ -75,7 +75,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 7
 - Alert id: 52334d886f4c
-- Second-order candidates: 
+- Second-order candidates: Winner: ONGC (ONGC) - ends a leadership vacancy, which removes governance uncertainty over capex and the dividend policy. / Losers: none clear - a management appointment has no competitor who loses from it. / Catalyst: surprise - ministry letter on a board appointment, a routine governance step with no earnings effect. / Thesis fit: none
 
 ## 7. [7 HIGH] ICICI Bank Limited: Allotment of Securities
 
@@ -87,7 +87,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 7
 - Alert id: 9f15cab446d1
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - routine allotment (employee stock options), dilution is immaterial. / Losers: none clear - no competitor effect. / Catalyst: surprise - routine filing, no price-relevant news. / Thesis fit: none
 
 ## 8. [7 HIGH] A lesson from poker tells us not to fold on Meta after its earnings sell-off. Here’s why
 
