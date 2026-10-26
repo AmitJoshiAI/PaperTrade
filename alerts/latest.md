@@ -1,186 +1,186 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-23 20:29 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 1 moving.
+Generated 2026-10-26 09:58 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
+Quotes: 55 symbols checked, 0 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [9 HIGH] ICICI Bank Limited: Transcripts - earnings or quarterly calls
+## 1. [9 HIGH] Trade Spotlight: How should you trade Bharti Airtel, ONGC, Anand Rathi Wealth, JSW Cement, Firstsource...
 
-- Time: 2026-10-23 19:08 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1606_WebXMLFile_20261023_190826858.xml
-- Matched symbols: ICICIBANK
-- Keywords: results
-- Thesis match: icici-bank-recovery (open)
+- Time: 2026-10-26 08:11 IST
+- Source: Moneycontrol
+- Link: https://news.google.com/rss/articles/CBMiowJBVV95cUxORHRPMkhoX0JDdnJOeDVuNWVRdHh1OFlBakxaOWpjSWVYLUNUQ3N1Q0s2TjFRM0VfN2ZCb05BcDhLSTYxNEVXTjQwQk5EZ082b0NFOEVTS09Ba1AzYVJjUDZjaWQyejkyMUVubS1oUGJLNG1Td0M0NGIwU0xyTldwejBGTC1QX2dKMUdjVWlRbkxtdHNDZDJoU0ZtZlRHOHY5YlhJV0JHVGVTMnlMNVE1b251TmhjMkU5NmlxYmljdWlncDhxMlhKU0xNWVNmdGlNZnhrYzkxV3hfQWFfSjRJOUpBNFFTMVp6N3NYeVBidE15NDI4XzBWdXpLNGpodElyNTFhZ0FKcGZTNVFNZ3hPREVpTGJiNHFpZDhjQWtGbldGVUXSAagCQVVfeXFMT2hEMVM3M3J5N2FVVUpSMy0tSmRmVUFnbXdtZ2hsOVJwRGV2NUU2dHhyMDZMQXRQRW96VWNlWHVEZHdFOGczcWlqelpFSWYzd19CNllfendsZENmTXBQQ0RoaDJLTFB2Q1liZWtPZzBHMDNUejZEbFp5YktqY042RDFVUzU3dWJmYS0yc2xJanpkYUR4dGg0aGZBUlo3TUMtd05xM18zNHZLRjJFOUNwZHAzdlNma1RvYUROZE5wbUp3bkxvMk93RG5HY01wbF9HT0xCZWNzM2Zya28wVnlMTDllQWFHRkhYWkMxRzFTcHF4LVgwVmNSR3psazh4NG5oWFJ3S0ZNTkRvTThUV0NzZ3NxWmJGdXlqNWNpYkk2cVBWOHA1aXNyR2c?oc=5
+- Matched symbols: BHARTIARTL, ONGC
+- Keywords: none
+- Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 9
-- Alert id: 4951357aa26a
+- Alert id: 115806de013a
 - Second-order candidates: 
 
-## 2. [9 HIGH] ICICI Bank Limited: transcript of the call with media and of earnings call with analysts and investors on the financial results for the quarter and six months ended September 30, 2026
+## 2. [9 HIGH] Top 10 firms lose ₹1.55 trillion in mcap as HDFC Bank, Bajaj Finance fall
 
-- Time: 2026-10-23 18:00 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/ICICI2022_23102026175603_NSEBSE23102026.pdf
-- Matched symbols: ICICIBANK
-- Keywords: results
-- Thesis match: icici-bank-recovery (open)
-- Score: 9
-- Alert id: 3a59cc948de7
-- Second-order candidates: 
-
-## 3. [9 HIGH] Bajaj Finance Limited: Transcripts - earnings or quarterly calls
-
-- Time: 2026-10-23 14:51 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1257_WebXMLFile_20261023_145122445.xml
-- Matched symbols: BAJFINANCE
-- Keywords: results
+- Time: 2026-10-25 14:23 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/top-10-firms-lose-1-55-trillion-in-mcap-as-hdfc-bank-bajaj-finance-fall-126102500268_1.html
+- Matched symbols: BAJFINANCE, HDFCBANK
+- Keywords: none
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 9
-- Alert id: 1576a4529706
+- Alert id: 489e55a8cd2d
 - Second-order candidates: 
 
-## 4. [9 HIGH] Q2 Results Today Live: Infosys, Tata Motors, Adani Power, JSW Steel, Shriram Finance, BPCL in focus; Steel Strips Wheels declares dividend
+## 3. [8 HIGH] Q2 Results Today Live: Paytm, Tata Consumer, Mankind Pharma, REC, IOB, Ather Energy, Aegis Logistics, Supreme Ind, ITC Hotels, Sumitomo Chemical Q2 results today, Kotak Mahindra shares gain, Shriram Finance, Infosys & IDFC First Bank in red after Q2 results
 
-- Time: 2026-10-23 13:23 IST
+- Time: 2026-10-26 09:27 IST
 - Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/companies/q2-results-today-live-updates-infosys-adani-power-jsw-steel-tata-motors-shiram-fin-torrent-pharma-cg-power-bpcl-dr-reddys-lab-company-results-23-october-2026/article71611542.ece
-- Matched symbols: SHRIRAMFIN, TMPV, JSWSTEEL, INFY
-- Keywords: results, dividend
-- Thesis match: none
-- Score: 9
-- Alert id: 6c4fa629ba6e
-- Second-order candidates: Winner: none clear - round-up of a results day; no single company's numbers are in the headline. / Losers: none clear - nothing to separate winners from losers before the prints. / Catalyst: scheduled - Q2 results today, but a multi-company round-up gives no edge on any one name. / Thesis fit: none
-
-## 5. [8 HIGH] Q2 Results Today Live: JSW Steel posts ₹5,359 cr profit, Adani Power jumps 134%, Infosys up 6.2%; CG Power, CSB Bank gain, Mahindra Logistics turns profitable
-
-- Time: 2026-10-23 19:39 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/companies/q2-results-today-live-updates-infosys-adani-power-jsw-steel-tata-motors-shiram-fin-torrent-pharma-cg-power-bpcl-dr-reddys-lab-company-results-23-october-2026/article71611542.ece
-- Matched symbols: JSWSTEEL, INFY
+- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-paytm-tata-consumer-mankind-pharma-rec-itc-hotels-iob-ather-energy-aegis-logistics-supreme-ind-sumitomo-chemical-kotak-idfc-results-26-october-2026/article71625561.ece
+- Matched symbols: SHRIRAMFIN, TATACONSUM, INFY, KOTAKBANK, ITC
 - Keywords: results
 - Thesis match: none
 - Score: 8
-- Alert id: eb9a57f85693
+- Alert id: 8a7862d961e6
 - Second-order candidates: 
 
-## 6. [8 HIGH] Q2 Results 2026 LIVE: Godrej Properties profit down 62% YoY at Rs 154 cr; Infosys, IndusInd Bank, Dr. Reddy's among key firms to declare September quarter results today
+## 4. [7 HIGH] Infosys shares drop 4% on Q2, guidance miss; here's what analysts recommend
 
-- Time: 2026-10-23 13:47 IST
+- Time: 2026-10-26 09:34 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/infosys-shares-drop-4-on-q2-guidance-miss-check-what-analysts-recommend-126102600141_1.html
+- Matched symbols: INFY
+- Keywords: results, guidance
+- Thesis match: none
+- Score: 7
+- Alert id: 66ff9c7facb7
+- Second-order candidates: 
+
+## 5. [7 HIGH] Buy or sell Infosys stock after Q2 earnings miss, guidance cut? UBS sees 23% upside, HSBC flags margin...
+
+- Time: 2026-10-26 08:52 IST
 - Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/earnings/q2-results-2026-live-updates-infosys-adani-power-jsw-steel-shriram-finance-torrent-pharma-tata-motors-q2-earnings-oct-23-liveblog-14058384.html
-- Matched symbols: DRREDDY, INFY
-- Keywords: results
-- Thesis match: none
-- Score: 8
-- Alert id: 15c8fb7841f9
-- Second-order candidates: Winner: none clear - live blog across many companies; Godrej Properties' fall is a lumpy project-booking recognition effect, not a sector signal. / Losers: none clear - one weak print (GODREJPROP) does not show a read-through to peers like DLF or Lodha without their own numbers. / Catalyst: scheduled - Q2 results today for Infosys, IndusInd Bank, Dr. Reddy's; the round-up gives no edge before they print. / Thesis fit: none
-
-## 7. [8 HIGH] Q2 Results Today Live: Infosys, Adani Power, JSW Steel, Tata Motors, Shriram Fin, Torrent Pharma, CG Power, BPCL, Dr Reddys Lab Share to announce Q2 results
-
-- Time: 2026-10-23 09:44 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/companies/q2-results-today-live-updates-infosys-adani-power-jsw-steel-tata-motors-shiram-fin-torrent-pharma-cg-power-bpcl-dr-reddys-lab-company-results-23-october-2026/article71611542.ece
-- Matched symbols: TMPV, DRREDDY, JSWSTEEL, INFY
-- Keywords: results
-- Thesis match: none
-- Score: 8
-- Alert id: b276a016e51b
-- Second-order candidates: Winner: none clear - a round-up of results day; no single company's numbers are known yet. / Losers: none clear - nothing to separate winners from losers before the prints. / Catalyst: scheduled - Q2 results today, but a multi-company round-up gives no edge on any one name. / Thesis fit: none
-
-## 8. [7 HIGH] Aeroflex Enterprises Ltd-$: Announcement Under Regulation 30 Of SEBI LODR 2015
-
-- Time: 2026-10-23 20:06 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/19a27142-1d82-4eca-b2e2-8a3a9acfcdc3.pdf
-- Matched symbols: none
-- Keywords: SEBI, stake sale, M&A
+- Link: https://news.google.com/rss/articles/CBMiggJBVV95cUxOZDB0UDhMUy02c1AyVjdOdWFWU3lsanVjck9lMUFUbkpBbEJPREkxQUpPMllQcnlDMk5qeDQ1NTk1V2VXZE54dWN6azdEQlBvWjZoWV9WYThhR0l5SGN3cnVnQ2NsTmNZNHdzUDR6OEYzVjVMLUJFUnlOblFDNU9aU1pVYjBvc3FoaDR4TXZXY2ZFVXRmSUN3YVNlRGZVNEJhYU04c1pmQnN6UVpOMDhOTEY5dmptS0VTYmtScWRmSjNpWGctSlJEbnMtLXpscndndFdDN2tYZTFGX1h4Q19RTWZiaVI5dzkxUUF4RTJKLVVUa3Q0RFAwOXNDQlpPUmg5U0HSAYcCQVVfeXFMTThiRDZ4dkl5bmw5MEdURXdEaTVFQ0lldXRiRFFKZlBVcTFPUHVzSHViaUFsMVFmcDY4Snh5NGxldlJhN1paVjFrcEpHaThHWW9YMWJyNlpfbmZLUV9YRDQzQXVhQ1RJc0lnTFFyWHhVSGtWWWZBbVNOd1hLckV6alhpTmFOTjNNMWtlaVpvRmw0LWhmc282NzBkMDRETURyLUhHVWZCWnVwNkFpc29fYURLbV9NSnpTMjNUSlJCcC1NUkM5X3RCYmVfalo5WXM0S0Y2cHBRN3RIY004SzNmblVwY0tiV1NhT3YzUVVCa1U0cEs0Tk5hQnNoV1FkZEdJUWdsVWFDa1k?oc=5
+- Matched symbols: INFY
+- Keywords: results, guidance
 - Thesis match: none
 - Score: 7
-- Alert id: e48beedbf13c
+- Alert id: 1738576a2dae
 - Second-order candidates: 
 
-## 9. [7 HIGH] Infosys Q2 results: IT major's ADR falls 6% after it lowers annual revenue growth guidance
+## 6. [7 HIGH] Dividends & stock splits: L&T Tech, Shriram Finance among 24 stocks turning ex-record date this week. Do you own?
 
-- Time: 2026-10-23 19:52 IST
+- Time: 2026-10-25 10:48 IST
+- Source: ET Stocks
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/dividends-stock-splits-lt-tech-shriram-finance-among-24-stocks-turning-ex-record-date-this-week-do-you-own/articleshow/135183913.cms
+- Matched symbols: SHRIRAMFIN, LT
+- Keywords: dividend
+- Thesis match: none
+- Score: 7
+- Alert id: 6719c2c25ce8
+- Second-order candidates: 
+
+## 7. [6 HIGH] L&T Technology Services Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript
+
+- Time: 2026-10-25 17:32 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/6cb9b4cd-73ce-492a-bba5-68842c2de890.pdf
+- Matched symbols: LT
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: b29189ced5dc
+- Second-order candidates: 
+
+## 8. [5] Infosys shares fall 4% after IT major lowers FY27 guidance. What are Goldman Sachs, Nomura, others saying?
+
+- Time: 2026-10-26 09:37 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/infosys-shares-fall-4-after-it-major-lowers-fy27-guidance-what-are-goldman-sachs-nomura-others-saying/articleshow/135202432.cms
+- Matched symbols: INFY
+- Keywords: guidance
+- Thesis match: none
+- Score: 5
+- Alert id: 59b05e668439
+- Second-order candidates: 
+
+## 9. [5] Kotak Mahindra Bank shares climb 4% after Q2 results. What are Jefferies, Goldman Sachs saying?
+
+- Time: 2026-10-26 09:36 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/kotak-mahindra-bank-shares-climb-4-after-q2-results-what-are-jefferies-goldman-sachs-saying/articleshow/135202411.cms
+- Matched symbols: KOTAKBANK
+- Keywords: results
+- Thesis match: none
+- Score: 5
+- Alert id: f2538be86ad3
+- Second-order candidates: 
+
+## 10. [5] US & Asian market in red | Crude prices, US yields inch up | Infosys cuts FY27 guidance
+
+- Time: 2026-10-26 08:36 IST
 - Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/infosys-q2-results-it-major-s-adr-falls-6-after-it-lowers-annual-revenue-growth-guidance-14058724.html
+- Link: https://news.google.com/rss/articles/CBMi5wFBVV95cUxPTjYyUFlaRzZxOTN6M0EtaTBSOVpyZExxVnYyWGFFM2t6cFZIbUJ1OHNxWUxmekJUMWJEVXJaYzNSUnA4eDB5dHdNNGYyREFyalF0NEtaY1dyQi1VNkE5Wmx5RlY3MjVlVlotc0NLN3JsNFpxTTl1WWQzLW42MUMtYTNLakxLTTlMMDIxeXBiNE04S3VEV2EwLWpCaFQ3RTVDYzlNeWxpZWpCYnNYTXVWU3o4eERIMmZRVWRzV3RaUVljNVRycG81SThLdU9TWFJCamgxVXd3aTdsdnNQQTNtNllaU0RQYnPSAewBQVVfeXFMUDJCSGJEVEtNTFd0OTVPWHBfVEdDenJnV2xSSlUzaWN3Mmo3bUtBMnRfRjdyRjIwcXVuTDlhRDAwbGZqXzZmZVFLUkVScEtLUldocW13MmMzRDVaYWhqLW9mZldsVG9iZUxqbW9ZbGdGc1JSbnVjLXdUZnhDMy1fTzlOM2JkeWlHSkoxaHhpY24wWWUtTFBKY2dtNkNKWVNDbTZVQlMzelNkR0RzUkQzU05aQUxpWTJac093a1A2ZG1vWXpfeWdqMW16SEVwdXA1WGhjR0xRUGU2am43aFdiS3k5RXA3eU1CZF9jeHg?oc=5
 - Matched symbols: INFY
-- Keywords: results, guidance
+- Keywords: guidance
 - Thesis match: none
-- Score: 7
-- Alert id: d8586d90f8a3
+- Score: 5
+- Alert id: 8cd95a372ea1
 - Second-order candidates: 
 
-## 10. [7 HIGH] Ashika Global Securities Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
+## 11. [5] Senco Gold to acquire 68% stake in August Jewellery for ₹68 crore
 
-- Time: 2026-10-23 19:08 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/2c8e03fc-89e2-4ef7-a968-5f00c01f1649.pdf
+- Time: 2026-10-25 19:46 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/companies/news/senco-gold-to-acquire-68-stake-in-august-jewellery-for-68-crore-126102500549_1.html
 - Matched symbols: none
-- Keywords: rating, stake sale, M&A
+- Keywords: stake sale, M&A
 - Thesis match: none
-- Score: 7
-- Alert id: 458fc959c838
+- Score: 5
+- Alert id: 628b33754302
 - Second-order candidates: 
 
-## 11. [7 HIGH] Waaree Energies Limited: Schedule of Analysts or Institutional Investors Meet
+## 12. [5] Tech Query: Bharti Airtel, Power Finance Corporation (PFC), REC, Alkyl Amines Chemicals — What is the outlook? Where are these stocks headed?
 
-- Time: 2026-10-23 18:22 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_20023_WebXMLFile_20261023_182231383.xml
-- Matched symbols: WAAREEENER
-- Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: 203f0d1acd93
-- Second-order candidates: 
-
-## 12. [7 HIGH] Waaree Energies Limited: Schedule of Analyst/Institutional Investor Meet scheduled to be held on Wednesday, October 28, 2026.
-
-- Time: 2026-10-23 18:16 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/WAAREE_23102026181458_EarningsCallIntimation_signed.pdf
-- Matched symbols: WAAREEENER
-- Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: eb10de390ac7
-- Second-order candidates: 
-
-## 13. [7 HIGH] Infosys ADRs crash 6% after Q2 results as revenue guidance cut spooks investors
-
-- Time: 2026-10-23 17:33 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/infosys-adrs-crash-6-after-q2-results-as-revenue-guidance-cut-spooks-investors/articleshow/135145145.cms
-- Matched symbols: INFY
-- Keywords: results, guidance
+- Time: 2026-10-25 16:43 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/portfolio/technical-analysis/tech-query-bharti-airtel-power-finance-corporation-pfc-rec-alkyl-amines-chemicals-what-is-the-outlook-where-are-these-stocks-headed/article71616387.ece
+- Matched symbols: BHARTIARTL
+- Keywords: guidance
 - Thesis match: none
-- Score: 7
-- Alert id: a77f60122e53
+- Score: 5
+- Alert id: 9b3d52e6d733
 - Second-order candidates: 
 
-## 14. [7 HIGH] Waaree Renewable Technologies Limited: Amendment or termination of orders/contracts (Sub-para 4-Para B)
+## 13. [4] Bajaj Finserv Nifty 1D Rate Liquid ETF-Growth: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on October 23, 2026 is Rs. 1104.2771.
 
-- Time: 2026-10-23 16:21 IST
+- Time: 2026-10-26 09:46 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_PARA_B_25069_WebXMLFile_20261023_162151271.xml
-- Matched symbols: WAAREEENER
+- Link: 
+- Matched symbols: BAJAJFINSV
 - Keywords: none
-- Thesis match: waaree-q2-results (open)
-- Score: 7
-- Alert id: 3ca9ec396825
+- Thesis match: none
+- Score: 4
+- Alert id: 7492e9c7107a
 - Second-order candidates: 
 
-## 15. [7 HIGH] Infosys Q2 Results: Profit rises 6% YoY to Rs 7,823 crore; co lowers revenue guidance
+## 14. [4] BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on October 23, 2026 is Rs. 19.941.
 
-- Time: 2026-10-23 16:21 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/earnings/infosys-q2-results-profit-rises-6-yoy-to-rs-7823-crore-co-lowers-revenue-guidance/articleshow/135143193.cms
-- Matched symbols: INFY
-- Keywords: results, guidance
+- Time: 2026-10-26 09:46 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: BAJAJFINSV
+- Keywords: none
 - Thesis match: none
-- Score: 7
-- Alert id: 10d58e41b22c
+- Score: 4
+- Alert id: f9821efce961
+- Second-order candidates: 
+
+## 15. [4] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on October 23, 2026 is Rs. 55.2691.
+
+- Time: 2026-10-26 09:46 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: BAJAJFINSV
+- Keywords: none
+- Thesis match: none
+- Score: 4
+- Alert id: bfc32b1b7c13
 - Second-order candidates: 
