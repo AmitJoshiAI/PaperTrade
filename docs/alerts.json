@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-10-26T21:47+05:30",
+ "generated_at": "2026-10-26T22:16+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 1371,
+   "items": 1387,
    "error": null,
    "optional": false,
-   "seconds": 0.6
+   "seconds": 0.7
   },
   {
    "id": "nse_results",
@@ -17,7 +17,7 @@
    "items": 4,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.6
   },
   {
    "id": "bse",
@@ -28,7 +28,7 @@
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.3
+   "seconds": 2.5
   },
   {
    "id": "et_markets",
@@ -37,7 +37,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.3
   },
   {
    "id": "et_stocks",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.6
   },
   {
    "id": "bs_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.3
   },
   {
    "id": "bl_markets",
@@ -64,7 +64,7 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.2
   },
   {
    "id": "moneycontrol",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.9
+   "seconds": 1.8
   },
   {
    "id": "cnbc",
@@ -91,11 +91,11 @@
  ],
  "optional_unavailable": [],
  "quotes_checked": 55,
- "movers": 4,
+ "movers": 3,
  "quotes_error": null,
- "new_alerts": 352,
+ "new_alerts": 15,
  "high_score": 6,
- "seconds": 6.7,
+ "seconds": 6.5,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -129,6 +129,294 @@
  ],
  "watchlist_size": 55,
  "alerts": [
+  {
+   "id": "5d8fc45d1b5c",
+   "kind": "news",
+   "time": "2026-10-26T22:11+05:30",
+   "source": "NSE announcements",
+   "headline": "One 97 Communications Limited: Acquisition (including agreement to acquire)",
+   "summary": "One 97 Communications Limited has informed the Exchange regarding Acquisition (including agreement to acquire) |SUBJECT: Acquisition (including agreement to acquire)-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_19784_WebXMLFile_20261026_221124604.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "c9d0d73a1c63",
+   "kind": "news",
+   "time": "2026-10-26T22:10+05:30",
+   "source": "NSE announcements",
+   "headline": "TATA CONSUMER PRODUCTS LIMITED: Audio Recording/Video Recording",
+   "summary": "TATA CONSUMER PRODUCTS LIMITED has informed the Exchange about Audio Recording/Video Recording |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1098_WebXMLFile_20261026_221055984.xml",
+   "symbols": [
+    "TATACONSUM"
+   ],
+   "symbol_keys": [
+    "TATACONSUM"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "42d035a5600e",
+   "kind": "news",
+   "time": "2026-10-26T22:10+05:30",
+   "source": "BSE announcements",
+   "headline": "Krsnaa Diagnostics Ltd: Board Meeting Intimation for Considering And Approving The Unaudited Financial Results For The Quarter And Half Year Ended September 30Th, 2026.",
+   "summary": "Board Meeting. Krsnaa Diagnostics Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 02/11/2026 ,inter alia, to consider and approve the Unaudited Financial ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/662dddbd-0ffa-4fd9-9267-f088dd1b38da.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "8fec2544ebee",
+   "kind": "news",
+   "time": "2026-10-26T22:08+05:30",
+   "source": "NSE announcements",
+   "headline": "TATA CONSUMER PRODUCTS LIMITED: Link of Recording",
+   "summary": "TATA CONSUMER PRODUCTS LIMITED has informed the Exchange about Link of Recording |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/Sukhvinder_26102026220716_4_AudiorecordingofConferenceCall_Financial_Results.pdf",
+   "symbols": [
+    "TATACONSUM"
+   ],
+   "symbol_keys": [
+    "TATACONSUM"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "a19b99d46e78",
+   "kind": "news",
+   "time": "2026-10-26T22:08+05:30",
+   "source": "BusinessLine",
+   "headline": "TSF Investments’ Board approves sale of 3.7% stake in TVS Holdings",
+   "summary": "The approval is for selling the stake to existing members of the Promoter and Promoter Group of TVS Holdings Ltd,",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/tsf-investments-board-approves-sale-of-37-stake-in-tvs-holdings/article71627671.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "stake sale"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "d0d222088254",
+   "kind": "news",
+   "time": "2026-10-26T22:06+05:30",
+   "source": "BSE announcements",
+   "headline": "Tata Consumer Products Ltd: Audio Recording Of The Analysts/Investors Call Pertaining To The Financial Results For The Quarter And Half Year Ended September 30, 2026",
+   "summary": "Company Update. Enclosed.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/006479cd-9d34-4bbf-a275-f3ace0d938c2.pdf",
+   "symbols": [
+    "TATACONSUM"
+   ],
+   "symbol_keys": [
+    "TATACONSUM"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "be2c22dcfc94",
+   "kind": "news",
+   "time": "2026-10-26T22:06+05:30",
+   "source": "BSE announcements",
+   "headline": "GRP Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Intimation of Updated Virtual Link for Earnings Call - Q2 & H1 FY 2026-27.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/00c34c14-ca6f-4de1-ae61-fc860ec06e6b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "92cb0701e18c",
+   "kind": "news",
+   "time": "2026-10-26T22:05+05:30",
+   "source": "BSE announcements",
+   "headline": "Mastek Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
+   "summary": "Company Update. Audio recording of the Earnings Conference Call held today with Investors / Analysts on the Unaudited Financial Results for the quarter & half year ended September 30, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b9377900-a665-4f5c-9b80-bcc667ca3951.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "67642d32ba35",
+   "kind": "news",
+   "time": "2026-10-26T22:04+05:30",
+   "source": "NSE announcements",
+   "headline": "Ashima Limited: Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "ASHIMA LIMITED has informed the Exchange about Board Meeting to be held on 29-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeting Inti",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_414_WebXMLFile_20261026_220440637.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "48bf20293ec6",
+   "kind": "news",
+   "time": "2026-10-26T22:00+05:30",
+   "source": "BSE announcements",
+   "headline": "Ashima Ltd: Board Meeting Intimation for Unaudited Financial Results Of The Company For The Quarter And Half-Financial Year Ended 30Th September, 2026",
+   "summary": "Board Meeting. Ashima Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve 1. The Unaudited Financial Results (Standalone ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6582e490-10b2-49bd-9537-ceb231e03fd5.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "3833e5cc7e7c",
+   "kind": "news",
+   "time": "2026-10-26T21:57+05:30",
+   "source": "ET Markets",
+   "headline": "Anthropic vs OpenAI: How Claude maker’s growth is challenging ChatGPT ahead of IPO",
+   "summary": "Anthropic has seen significant revenue growth, reaching $16.29 billion in the first half of 2026. OpenAI continues to expand its business model while generating substantial revenues from its consumer and enterprise offerings. Both companies",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/anthropic-vs-openai-how-claude-makers-growth-is-challenging-chatgpt-ahead-of-ipo/articleshow/135215446.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "a570ecc9f0cd",
+   "kind": "news",
+   "time": "2026-10-26T21:55+05:30",
+   "source": "BSE announcements",
+   "headline": "Gujarat Winding Systems Ltd: Board Meeting Intimation for Approval Of Unaudited Financial Results For The Quarter Ended 30Th September, 2026.",
+   "summary": "Board Meeting. Gujarat Winding Systems Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 29/10/2026 ,inter alia, to consider and approve of Unaudited Financial ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/16db1430-0f90-4947-b159-9f33c19ced7e.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "a9ac7964f9a4",
+   "kind": "news",
+   "time": "2026-10-26T21:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Omaxe Limited: Acquisition of to be incorporated companies",
+   "summary": "Omaxe Limited has informed the Exchange regarding Acquisition of to be incorporated companies |SUBJECT: Acquisition of 'to be incorporated companies'-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_2637_WebXMLFile_20261026_214947830.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
+  {
+   "id": "d2553d6d6ad7",
+   "kind": "news",
+   "time": "2026-10-26T21:48+05:30",
+   "source": "NSE announcements",
+   "headline": "Omaxe Limited: proposed incorporation.",
+   "summary": "Omaxe Limited has informed the Exchange about proposed incorporation. |SUBJECT: Acquisition",
+   "link": "https://nsearchives.nseindia.com/corporate/OMAXE_26102026214846_Intimation_OL_261026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
+  },
   {
    "id": "cf0867dc9f9e",
    "kind": "news",
@@ -322,6 +610,26 @@
    "change_pct": 4.88,
    "volume_x": 0.89,
    "first_seen": "2026-10-26T21:47+05:30"
+  },
+  {
+   "id": "a92c842b1921",
+   "kind": "news",
+   "time": "2026-10-26T21:46+05:30",
+   "source": "BSE announcements",
+   "headline": "Omaxe Ltd: Announcement under Regulation 30 (LODR)-Acquisition",
+   "summary": "Company Update. Please find enclosed herewith a copy of intimation w.r.t proposed incorporation.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/73c60709-fd7a-43f6-80fc-b7ea913b670c.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-10-26T22:16+05:30"
   },
   {
    "id": "60612634a449",
@@ -2884,318 +3192,6 @@
    "moving": [],
    "score": 6,
    "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "7eac4258a36b",
-   "kind": "news",
-   "time": "2026-10-26T19:26+05:30",
-   "source": "NSE announcements",
-   "headline": "Bajaj Finance Limited: Schedule of meet",
-   "summary": "Bajaj Finance Limited has informed the Exchange about Schedule of meet |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/BAJFINANCE_26102026192457_BSENSE_Intimation_Investor_meet.pdf",
-   "symbols": [
-    "BAJFINANCE"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 7,
-   "high": true,
-   "theses": [
-    {
-     "slug": "bajaj-finance-rbi-december",
-     "status": "proposed",
-     "type": "catalyst"
-    }
-   ],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "7b2f10efa37c",
-   "kind": "news",
-   "time": "2026-10-26T19:24+05:30",
-   "source": "NSE announcements",
-   "headline": "Vaibhav Vyapaar Limited: 'Intimation under Regulation 6(1) of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( Listing Regulations ).'.",
-   "summary": "Vaibhav Vyapaar Limited has informed the Exchange regarding 'Intimation under Regulation 6(1) of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( Listing Regulations ).'. |SUBJ",
-   "link": "https://nsearchives.nseindia.com/corporate/VAIBHAVVYAPAAR_26102026190445_Reg_6_1__Intimation_of_Compliance_officer.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "2c0515cf264d",
-   "kind": "news",
-   "time": "2026-10-26T19:23+05:30",
-   "source": "NSE announcements",
-   "headline": "Nazara Technologies Limited: Nazara Technologies Limited has submitted to the Exchange, the financial results for the quarter and half-year ended September 30, 2026",
-   "summary": "Nazara Technologies Limited has submitted to the Exchange, the financial results for the quarter and half-year ended September 30, 2026 |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/NAZARA_26102026192123_OutcomeofBoardMeetingF.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "b59a8aaf5178",
-   "kind": "news",
-   "time": "2026-10-26T19:22+05:30",
-   "source": "NSE announcements",
-   "headline": "United Foodbrands Limited: Schedule of Earnings Conference Call",
-   "summary": "United Foodbrands Limited has informed the Exchange about Schedule of Earnings Conference Call |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/BARBEQUE_26102026192055_EarningsConCallIntimationQ2FY27.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "982fb640ecad",
-   "kind": "news",
-   "time": "2026-10-26T19:21+05:30",
-   "source": "NSE announcements",
-   "headline": "DOMS Industries Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "DOMS Industries Limited has informed the Exchange about Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board Meeti",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22419_WebXMLFile_20261026_192139110.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "65afcb751573",
-   "kind": "news",
-   "time": "2026-10-26T19:21+05:30",
-   "source": "NSE announcements",
-   "headline": "The Peria Karamalai Tea & Produce Company Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "THE PERIA KARAMALAI TEA & PRODUCE COMPANY LIMITED has informed the Exchange about Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 20",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_12988_WebXMLFile_20261026_192125094.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "65c76da653c9",
-   "kind": "news",
-   "time": "2026-10-26T19:18+05:30",
-   "source": "NSE announcements",
-   "headline": "Bharti Hexacom Limited: Board Meeting to be held on 05-Nov-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "BHARTI HEXACOM LIMITED has informed the Exchange about Board Meeting to be held on 05-Nov-2026 to inter-alia consider and approve the Audited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meetin",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17875_WebXMLFile_20261026_191811303.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "40c4a45d347a",
-   "kind": "news",
-   "time": "2026-10-26T19:17+05:30",
-   "source": "NSE announcements",
-   "headline": "Dhanuka Agritech Limited: Board Meeting to be held on 30-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "DHANUKA AGRITECH LIMITED has informed the Exchange about Board Meeting to be held on 30-Oct-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Me",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_4965_WebXMLFile_20261026_191754395.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "706770e956b3",
-   "kind": "news",
-   "time": "2026-10-26T19:16+05:30",
-   "source": "NSE announcements",
-   "headline": "One Mobikwik Systems Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "One MobiKwik Systems Limited has informed the Exchange about Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Boar",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_19759_WebXMLFile_20261026_191559589.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "b1957e59f35b",
-   "kind": "news",
-   "time": "2026-10-26T19:16+05:30",
-   "source": "BusinessLine",
-   "headline": "Meta plans to raise up to $95 billion to fund AI and data centre expansion",
-   "summary": "The proposed financing combines depositary shares, Class A stock and a planned future offering as the company expands computing capacity and AI products",
-   "link": "https://www.thehindubusinessline.com/markets/meta-plans-to-raise-up-to-95-billion-to-fund-ai-and-data-centre-expansion/article71627458.ece",
-   "symbols": [
-    "META"
-   ],
-   "symbol_keys": [
-    "US:META"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "758d9a215235",
-   "kind": "news",
-   "time": "2026-10-26T19:15+05:30",
-   "source": "NSE announcements",
-   "headline": "Rollatainers Limited: Acquisition of equity shares of Satelite Forgings Private Limited",
-   "summary": "Rollatainers Limited has informed the Exchange about Acquisition of equity shares of Satelite Forgings Private Limited |SUBJECT: Acquisition",
-   "link": "https://nsearchives.nseindia.com/corporate/ROLLT_26102026191521_outcome.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "47923e9d2688",
-   "kind": "news",
-   "time": "2026-10-26T19:13+05:30",
-   "source": "NSE announcements",
-   "headline": "United Foodbrands Limited: Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "United Foodbrands Limited has informed the Exchange about Board Meeting to be held on 02-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board M",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17767_WebXMLFile_20261026_191351587.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "ec314ed77fcb",
-   "kind": "news",
-   "time": "2026-10-26T19:13+05:30",
-   "source": "NSE announcements",
-   "headline": "SRIT India Limited: SRIT India Limited has submitted to the Exchange, the financial results for the period ended June 30, 2026.",
-   "summary": "SRIT India Limited has submitted to the Exchange, the financial results for the period ended June 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/SRIT_26102026191237_Stock_Exchange_Intimation_Outcome_of_BM_Final_Signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "bdbdc53aeddf",
-   "kind": "news",
-   "time": "2026-10-26T19:12+05:30",
-   "source": "NSE announcements",
-   "headline": "Hikal Limited: Board Meeting to be held on 03-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "Hikal Limited has informed the Exchange about Board Meeting to be held on 03-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeting Intim",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_1961_WebXMLFile_20261026_191243235.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-10-26T21:47+05:30"
-  },
-  {
-   "id": "69032ae53fff",
-   "kind": "news",
-   "time": "2026-10-26T19:12+05:30",
-   "source": "NSE announcements",
-   "headline": "State Bank of India: Schedule of Analysts or Institutional Investors Meet",
-   "summary": "STATE BANK OF INDIA has informed the Exchange about Schedule of Analysts or Institutional Investors Meet |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_238_WebXMLFile_20261026_191214311.xml",
-   "symbols": [
-    "SBIN"
-   ],
-   "symbol_keys": [
-    "SBIN"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-10-26T21:47+05:30"
