@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-26 13:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 2 moving.
+Generated 2026-10-26 14:48 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 54 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -41,19 +41,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 115806de013a
 - Second-order candidates: Winner: none clear - a multi-stock trade-ideas round-up, no single event behind it. / Losers: none clear / Catalyst: unknown - round-up article, no dated event; ONGC mention only touches the open crude thesis through oil price, not news. / Thesis fit: none (round-up, not drafted)
 
-## 4. [9 HIGH] Top 10 firms lose ₹1.55 trillion in mcap as HDFC Bank, Bajaj Finance fall
-
-- Time: 2026-10-25 14:23 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/top-10-firms-lose-1-55-trillion-in-mcap-as-hdfc-bank-bajaj-finance-fall-126102500268_1.html
-- Matched symbols: BAJFINANCE, HDFCBANK
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 9
-- Alert id: 489e55a8cd2d
-- Second-order candidates: Winner: none clear - weekly market-cap round-up driven by a broad fall in large caps. / Losers: none clear - HDFC Bank and Bajaj Finance fell with the market; no company-specific cause given in the headline. / Catalyst: surprise - weekly mcap summary, no scheduled event; Bajaj Finance's dated catalyst remains the December RBI meeting in the proposed thesis. / Thesis fit: proposed bajaj-finance-rbi-december: weakens slightly (lower entry price, but no new information)
-
-## 5. [8 HIGH] Q2 Results Today Live: IOB, APL Apollo Tubes, Supreme Industries Q2 PAT rise, Paytm, Tata Consumer, Dalmia Bharat, KFin Tech, Mankind Pharma, BOM, TMB, Ather Energy, Aegis, Sona BLW, Nazara, ITC Hotels, Aequs to announce Q2 results
+## 4. [8 HIGH] Q2 Results Today Live: IOB, APL Apollo Tubes, Supreme Industries Q2 PAT rise, Paytm, Tata Consumer, Dalmia Bharat, KFin Tech, Mankind Pharma, BOM, TMB, Ather Energy, Aegis, Sona BLW, Nazara, ITC Hotels, Aequs to announce Q2 results
 
 - Time: 2026-10-26 13:29 IST
 - Source: BusinessLine
@@ -63,9 +51,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 91b3de41488c
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - results live blog covering many companies, no single event. / Losers: none clear / Catalyst: unknown - round-up article; see the note under e099bd685d03. / Thesis fit: none (round-up, not drafted)
 
-## 6. [8 HIGH] Shriram Finance stock hits 11-month low as growth outlook cut, credit costs weigh; brokerages slash target price
+## 5. [8 HIGH] Shriram Finance stock hits 11-month low as growth outlook cut, credit costs weigh; brokerages slash target price
 
 - Time: 2026-10-26 11:50 IST
 - Source: Moneycontrol
@@ -77,7 +65,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 7399c1c0f73d
 - Second-order candidates: Winner: better-capitalised vehicle and CV lenders with lower credit costs (e.g. Cholamandalam CHOLAFIN, Bajaj Finance BAJFINANCE) if investors rotate within NBFCs on asset-quality worries. / Losers: Shriram Finance itself (guidance cut, higher credit costs); closest peers on read-across: Muthoot Finance (MUTHOOTFIN), Manappuram (MANAPPURAM) are weak links only if the cause is sector-wide, not company-specific. / Catalyst: scheduled and already happened (Q2 results); brokerages still say Buy, so a further move needs fresh data (monthly disbursement, next quarter). / Thesis fit: none (results already priced in, not drafted)
 
-## 7. [8 HIGH] Dr Reddy's share price spurts 4% post Q2 earnings; analysts upgrade rating
+## 6. [8 HIGH] Dr Reddy's share price spurts 4% post Q2 earnings; analysts upgrade rating
 
 - Time: 2026-10-26 10:32 IST
 - Source: Business Standard
@@ -89,7 +77,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 7f61fb375548
 - Second-order candidates: Winner: Dr Reddy's (DRREDDY) on the beat and upgrades; domestic pharma peers with similar US generics exposure get a mild read-across. / Losers: none clear - no named competitor in the article loses share because of this result. / Catalyst: scheduled and already happened (Q2 results) - one clause: upgrades are in the price by midday. / Thesis fit: none (priced in, not drafted)
 
-## 8. [8 HIGH] Shriram Finance shares crash 6% as Jefferies, Citi, and other brokerages slash target prices after Q2 results. Why do they still say ‘Buy’?
+## 7. [8 HIGH] Shriram Finance shares crash 6% as Jefferies, Citi, and other brokerages slash target prices after Q2 results. Why do they still say ‘Buy’?
 
 - Time: 2026-10-26 10:06 IST
 - Source: ET Markets
@@ -101,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b9a751ae9120
 - Second-order candidates: 
 
-## 9. [8 HIGH] Q2 Results Today Live: Paytm, Tata Consumer, Mankind Pharma, REC, IOB, Ather Energy, Aegis Logistics, Supreme Ind, ITC Hotels, Sumitomo Chemical Q2 results today, Kotak Mahindra shares gain, Shriram Finance, Infosys & IDFC First Bank in red after Q2 results
+## 8. [8 HIGH] Q2 Results Today Live: Paytm, Tata Consumer, Mankind Pharma, REC, IOB, Ather Energy, Aegis Logistics, Supreme Ind, ITC Hotels, Sumitomo Chemical Q2 results today, Kotak Mahindra shares gain, Shriram Finance, Infosys & IDFC First Bank in red after Q2 results
 
 - Time: 2026-10-26 09:27 IST
 - Source: BusinessLine
@@ -113,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8a7862d961e6
 - Second-order candidates: 
 
-## 10. [7 HIGH] Shriram Finance slides 5% as analysts slash targets after mixed Q2 results
+## 9. [7 HIGH] Shriram Finance slides 5% as analysts slash targets after mixed Q2 results
 
 - Time: 2026-10-26 12:35 IST
 - Source: BusinessLine
@@ -123,9 +111,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 486aea61cdc9
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - same story as 7399c1c0f73d (growth outlook cut, credit costs, target cuts); see that note. / Losers: none clear - no new information beyond 7399c1c0f73d. / Catalyst: surprise - Q2 results already out and mostly priced in after the 5-6% fall; not a setup to trade. / Thesis fit: none
 
-## 11. [7 HIGH] Buzzing Stocks: Infosys down 2%, Dr Reddy’s Lab up 3% post Q2 results; Shriram Finance sheds 5%
+## 10. [7 HIGH] Buzzing Stocks: Infosys down 2%, Dr Reddy’s Lab up 3% post Q2 results; Shriram Finance sheds 5%
 
 - Time: 2026-10-26 11:50 IST
 - Source: Moneycontrol
@@ -137,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: ede1ff13a82f
 - Second-order candidates: Winner: none clear - round-up of today's results movers; Infosys follow-ups repeat the earlier Infosys note (66ff9c7facb7). / Losers: none clear / Catalyst: scheduled and already happened (Q2 results day). / Thesis fit: none
 
-## 12. [7 HIGH] Infosys stock falls after Q2 earnings miss, guidance cut, but pares loss to 1%; brokerages see margin pressure
+## 11. [7 HIGH] Infosys stock falls after Q2 earnings miss, guidance cut, but pares loss to 1%; brokerages see margin pressure
 
 - Time: 2026-10-26 11:50 IST
 - Source: Moneycontrol
@@ -149,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: af91ab823a19
 - Second-order candidates: 
 
-## 13. [7 HIGH] Buy or sell Infosys stock after Q2 earnings miss, guidance cut? UBS sees 23% upside, HSBC flags margin pressure
+## 12. [7 HIGH] Buy or sell Infosys stock after Q2 earnings miss, guidance cut? UBS sees 23% upside, HSBC flags margin pressure
 
 - Time: 2026-10-26 11:50 IST
 - Source: Moneycontrol
@@ -161,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 720f3fb7bd5e
 - Second-order candidates: 
 
-## 14. [7 HIGH] Coal India Limited: Board Meeting to be held on 29-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.
+## 13. [7 HIGH] Coal India Limited: Board Meeting to be held on 29-Oct-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.
 
 - Time: 2026-10-26 10:21 IST
 - Source: NSE announcements
@@ -173,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fbded45ab6e8
 - Second-order candidates: Winner: none clear - routine prior intimation; Coal India (COALINDIA) typically declares an interim dividend, which supports the stock only if above expectations. / Losers: none clear / Catalyst: scheduled - board meeting 29-Oct-2026 - one clause: results and dividend are known to the market in outline, so an edge needs a surprise on volumes or dividend size, which we have no evidence for. / Thesis fit: none (coin flip, not drafted)
 
-## 15. [7 HIGH] Infosys shares drop 4% on Q2, guidance miss; here's what analysts recommend
+## 14. [7 HIGH] Infosys shares drop 4% on Q2, guidance miss; here's what analysts recommend
 
 - Time: 2026-10-26 09:34 IST
 - Source: Business Standard
@@ -184,3 +172,15 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 7
 - Alert id: 66ff9c7facb7
 - Second-order candidates: Winner: mid-tier IT services peers with higher growth guidance and deal wins (e.g. Persistent PERSISTENT, Coforge COFORGE) if the miss is read as Infosys-specific; weak read-across is the risk. / Losers: large-cap IT peers TCS, Wipro (WIPRO), HCL Tech (HCLTECH) on sector read-across of a guidance cut and margin pressure; Infosys itself is the obvious loser. / Catalyst: scheduled and already happened (Q2 results, Infosys); next sector marker is peer results - reaction is likely priced in by the open. / Thesis fit: none (results already priced in, not drafted)
+
+## 15. [7 HIGH] Buy or sell Infosys stock after Q2 earnings miss, guidance cut? UBS sees 23% upside, HSBC flags margin...
+
+- Time: 2026-10-26 08:52 IST
+- Source: Moneycontrol
+- Link: https://news.google.com/rss/articles/CBMiggJBVV95cUxOZDB0UDhMUy02c1AyVjdOdWFWU3lsanVjck9lMUFUbkpBbEJPREkxQUpPMllQcnlDMk5qeDQ1NTk1V2VXZE54dWN6azdEQlBvWjZoWV9WYThhR0l5SGN3cnVnQ2NsTmNZNHdzUDR6OEYzVjVMLUJFUnlOblFDNU9aU1pVYjBvc3FoaDR4TXZXY2ZFVXRmSUN3YVNlRGZVNEJhYU04c1pmQnN6UVpOMDhOTEY5dmptS0VTYmtScWRmSjNpWGctSlJEbnMtLXpscndndFdDN2tYZTFGX1h4Q19RTWZiaVI5dzkxUUF4RTJKLVVUa3Q0RFAwOXNDQlpPUmg5U0HSAYcCQVVfeXFMTThiRDZ4dkl5bmw5MEdURXdEaTVFQ0lldXRiRFFKZlBVcTFPUHVzSHViaUFsMVFmcDY4Snh5NGxldlJhN1paVjFrcEpHaThHWW9YMWJyNlpfbmZLUV9YRDQzQXVhQ1RJc0lnTFFyWHhVSGtWWWZBbVNOd1hLckV6alhpTmFOTjNNMWtlaVpvRmw0LWhmc282NzBkMDRETURyLUhHVWZCWnVwNkFpc29fYURLbV9NSnpTMjNUSlJCcC1NUkM5X3RCYmVfalo5WXM0S0Y2cHBRN3RIY004SzNmblVwY0tiV1NhT3YzUVVCa1U0cEs0Tk5hQnNoV1FkZEdJUWdsVWFDa1k?oc=5
+- Matched symbols: INFY
+- Keywords: results, guidance
+- Thesis match: none
+- Score: 7
+- Alert id: 1738576a2dae
+- Second-order candidates: 
