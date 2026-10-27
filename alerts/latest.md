@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-27 21:01 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-27 21:21 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -125,7 +125,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 02ed4f66da31
 - Second-order candidates: 
 
-## 11. [8 HIGH] Q2 Results Live: Q2 Results Live: Cipla's profit falls 35.1% YoY to Rs 878 cr, revenue down 2.4%; Bajaj Auto, Maruti Suzuki, L&T, Tata Steel to release earnings today
+## 11. [8 HIGH] Waaree Energies Q2 Results: Profit falls 15% YoY to Rs 719 crore, revenue rises 24%
+
+- Time: 2026-10-27 20:56 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/stocks/earnings/waaree-energies-q2-results-profit-falls-15-yoy-to-rs-719-crore-revenue-rises-24/articleshow/135239084.cms
+- Matched symbols: WAAREEENER
+- Keywords: results
+- Thesis match: waaree-q2-results (open)
+- Score: 8
+- Alert id: 3f1f524200ec
+- Second-order candidates: 
+
+## 12. [8 HIGH] Q2 Results Live: Q2 Results Live: Cipla's profit falls 35.1% YoY to Rs 878 cr, revenue down 2.4%; Bajaj Auto, Maruti Suzuki, L&T, Tata Steel to release earnings today
 
 - Time: 2026-10-27 13:47 IST
 - Source: Moneycontrol
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5bfe07f9c6e9
 - Second-order candidates: Winner: none clear - live blog of many results; only Cipla's number (profit Rs 878 cr, down 35.1% YoY, revenue down 2.4%) is new since the earlier version of this blog (7aa897a5026a). / Losers: CIPLA - sharp profit decline on weak revenue; no listed peer is clearly hurt by it, so no second-order loser beyond the company itself. / Catalyst: scheduled and happening today (27 Oct results day); Bajaj Auto, Maruti, L&T and Tata Steel numbers still to come - round-up, not a tradeable single mechanism. / Thesis fit: none
 
-## 12. [8 HIGH] Nifty IT falls 1.5% as AI trade bounces back on Anthropic IPO filing; TCS, Infosys lead losses
+## 13. [8 HIGH] Nifty IT falls 1.5% as AI trade bounces back on Anthropic IPO filing; TCS, Infosys lead losses
 
 - Time: 2026-10-27 11:50 IST
 - Source: Moneycontrol
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 0ef72eb5f4cd
 - Second-order candidates: Winner: Same event as [4dcbd3068a9d]. / Losers: TCS, INFY - see [4dcbd3068a9d]. / Catalyst: surprise - same filing. / Thesis fit: none
 
-## 13. [8 HIGH] Q2 Results Live: Bajaj Auto, Maruti Suzuki, L&T, Tata Steel to announce September-quarter earnings today
+## 14. [8 HIGH] Q2 Results Live: Bajaj Auto, Maruti Suzuki, L&T, Tata Steel to announce September-quarter earnings today
 
 - Time: 2026-10-27 11:50 IST
 - Source: Moneycontrol
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 7aa897a5026a
 - Second-order candidates: Winner: Same round-up as [d9da5cf1b7b8]; nothing new. / Losers: none clear. / Catalyst: scheduled, results day. / Thesis fit: none
 
-## 14. [8 HIGH] TCS, Infosys, other IT stocks drop up to 3% as Anthropic IPO sparks rally in global AI stocks
+## 15. [8 HIGH] TCS, Infosys, other IT stocks drop up to 3% as Anthropic IPO sparks rally in global AI stocks
 
 - Time: 2026-10-27 11:06 IST
 - Source: ET Markets
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 8
 - Alert id: 4dcbd3068a9d
 - Second-order candidates: Winner: Listed AI platform/infra names globally (US) - IPO filing re-rates the AI trade and signals capital for model builders. / Losers: TCS, INFY (and mid-cap IT services) - market reads AI labs as substituting labour-based services revenue and pulling client budgets to AI projects; also pressure on pricing in app-maintenance deals. / Catalyst: surprise (IPO filing) - one clause why: the read is sentiment-led, hard facts on IT-services revenue loss come only with Q3 results in January. / Thesis fit: none (sentiment move, no dated trigger for a position; not drafted)
-
-## 15. [8 HIGH] Tata Consumer shares rally over 4% after Q2 results. Why brokerages remain bullish despite target price cuts
-
-- Time: 2026-10-27 09:30 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/tata-consumer-shares-in-focus-as-q2-net-profit-rises-16-yoy-why-jefferies-other-brokerages-are-bullish-despite-target-price-cuts/articleshow/135223973.cms
-- Matched symbols: TATACONSUM (moving today: TATACONSUM)
-- Keywords: results, rating
-- Thesis match: none
-- Score: 8
-- Alert id: 840ea60bf1a1
-- Second-order candidates: Winner: TATACONSUM - profit up 16-18% YoY, brokerages (Citi, Morgan Stanley, Jefferies) stay positive. / Losers: none clear - FMCG peers (HINDUNILVR, NESTLEIND, ITC) were not named as affected. / Catalyst: scheduled and already happened (results) - 6% gap up with target cuts suggests relief; late entry is chasing. / Thesis fit: none (already priced in, not drafted)
