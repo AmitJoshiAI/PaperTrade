@@ -223,3 +223,6 @@
   a 9-day replay with momentum fills: momentum, thesis and F&O output byte-identical.
 - **Not fixed (follow-up)**: the US sleeve can still record a row from a US session that is in progress
   when a run starts after 13:30 UTC (the retry and push-triggered runs); the next run re-marks it.
+
+## 2026-10-28 (daily reviewer)
+- Applied the Waaree catalyst post-event rule one day after the results (reported 27 Oct evening; estimated date was 28 Oct). Set event_date to 2026-10-27 as the thesis rule allows. PROPOSAL (not applied): have the engine/scanner flag a catalyst thesis when its company files results before the estimated event_date. Evidence: Waaree exit one day late.

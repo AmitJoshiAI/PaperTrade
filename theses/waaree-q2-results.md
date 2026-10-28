@@ -10,9 +10,9 @@ size_cap_pct: 10
 status: open
 type: catalyst
 event: Waaree Energies Q2 FY27 results (board meeting date not yet announced; trading window closed since 1 Oct 2026 until 48h after results)
-event_date: 2026-10-28
+event_date: 2026-10-27
 post_event_rule: sell at next open regardless, on the first trading day after results are announced; if results come before event_date, the reviewer applies the rule that day and updates event_date to the actual date
-post_event_applied:
+post_event_applied: 2026-10-28 - results were announced 2026-10-27 evening (before the estimated event_date, which the rule lets the reviewer correct); SELL of the whole position queued, decision_date 2026-10-28, fills at the 2026-10-29 open.
 ---
 
 ## Why (the long form)
@@ -44,3 +44,4 @@ fills at the first open after that date.
   (Q2 FY26 came 16-26 Oct 2025). Reviewer: check the NSE board-meeting intimation each day and set
   event_date to the actual date when it is announced.
 - 2026-10-23 (weekly review, Claude): Waaree results date still unannounced (web search, no exchange filing found); estimate 28 Oct kept. Rs -6.5%; rule unchanged, within cap.
+- 2026-10-28 (daily reviewer): results out 27 Oct 20:15 IST (profit -15% YoY to Rs 719 cr, revenue +24%, acquisition disclosed). event_date corrected to 2026-10-27; post-event rule applied literally: SELL all 19 shares at the next open. Stock closed 2,238 (-11.2% vs cost 2,519).
