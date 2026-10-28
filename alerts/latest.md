@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-28 15:28 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-28 16:00 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 5 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -99,7 +99,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 1935e2c00bd3
-- Second-order candidates: 
+- Second-order candidates: False match: results-day round-up of many companies, no single-company mechanism to extract; same live blog as c2322be9613b and 295234ccfbbe.
 
 ## 9. [8 HIGH] Q2 Results Today Live: Adani Enterprises Q2 PAT at ₹1,224.45 cr, Adani Ports Q2 con. profit rise, HUL, CarTrade, KPIT Tech, Arvind Q2 profit rise, Info Edge (Naukri) profit tumbles, TVS Motor, Hyundai, Pidilite, Hero MotoCorp, Meesho, United Spirits, Vedanta, JSW Energy share to announce Q2 results
 
