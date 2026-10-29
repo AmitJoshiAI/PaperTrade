@@ -7,12 +7,13 @@ target: 0
 invalidation: Results are postponed beyond event_date (then the rule applies anyway: sell at the next open after event_date)
 invalidation_price: 0
 size_cap_pct: 10
-status: open
+status: closed
 type: catalyst
 event: Waaree Energies Q2 FY27 results (board meeting date not yet announced; trading window closed since 1 Oct 2026 until 48h after results)
 event_date: 2026-10-27
 post_event_rule: sell at next open regardless, on the first trading day after results are announced; if results come before event_date, the reviewer applies the rule that day and updates event_date to the actual date
 post_event_applied: 2026-10-28 - results were announced 2026-10-27 evening (before the estimated event_date, which the rule lets the reviewer correct); SELL of the whole position queued, decision_date 2026-10-28, fills at the 2026-10-29 open.
+exit_date: 2026-10-29
 ---
 
 ## Why (the long form)
