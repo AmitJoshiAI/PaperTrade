@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-28 16:00 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 5 moving.
+Generated 2026-10-29 09:50 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news. Failed: Business Standard (ParseError: not well-formed (invalid token): line 159, column 58).
+Quotes: 55 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -17,79 +17,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c2322be9613b
 - Second-order candidates: False match: round-up of 28 Oct results day; Waaree "declines" is noted under 3f1f524200ec, no single-company mechanism to extract.
 
-## 2. [13 HIGH] Q2 Results Today Highlgihts: Bajaj Auto Q2 PAT up 35%, Maruti Suzuki & Cipla profit down, ACC, Mazagon Dock PAT tumbles, Honeywell Automation PAT up, L&T, Vedanta Iron, Waaree Energies, SAIL, SBI Life, Tata Capital, Star Health, ABDL to announce Q2 results
+## 2. [8 HIGH] Q2 Results Today Live: Coal India, Asian Paints, IndiGo, Trent, Laurus Labs, Ambuja Cements, Godrej Consumer, Welspun Corp, Apar Industries, Motilal Oswal, Blue Star, Strides Pharma, Milky Mist to announce Q2 results, Adani Ports, Hyundai, PVR Inox, Chola Finance, Meesho, Satin Creditcare, Birlasoft, United Spirits gain after Q2 results, Pidilite, Hero Moto, Goodluck, Vaibhav Global shares drag
 
-- Time: 2026-10-27 20:58 IST
+- Time: 2026-10-29 09:38 IST
 - Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-highlights-lampt-maruti-suzuki-bajaj-auto-tata-steel-vedanta-iron-waaree-acc-sail-sbi-star-health-mazagon-dock-cipla-united-breweries-ather-paytm-tata-consumer-results-27-october-20/article71626455.ece
-- Matched symbols: WAAREEENER, MARUTI, BAJAJ-AUTO, SBILIFE, CIPLA, LT (moving today: LT)
+- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-coal-india-asian-paints-indigo-trent-laurus-labs-ambuja-cements-godrej-welspun-corp-motilal-oswal-blue-star-strides-pharma-milky-mist-company-results-29-october-2026/article71635445.ece
+- Matched symbols: ASIANPAINT, ADANIPORTS, COALINDIA, INDIGO, TRENT
 - Keywords: results
-- Thesis match: waaree-q2-results (open)
-- Score: 13
-- Alert id: 0fc40d76741c
-- Second-order candidates: False match: earlier round-up versions already noted under 4fb679a9e48e and d9da5cf1b7b8 (also covers ce649ba1d774 and 267b4814af40, same blog family).
+- Thesis match: none
+- Score: 8
+- Alert id: d5a9bc21b7a8
+- Second-order candidates: 
 
-## 3. [13 HIGH] Q2 Results Today Live: Bajaj Auto Q2 PAT up 35%, Maruti Suzuki & Cipla profit down, ACC, Mazagon Dock PAT tumbles, Honeywell Automation PAT up, L&T, Vedanta Iron, Waaree Energies, SAIL, SBI Life, Tata Capital, Star Health, ABDL to announce Q2 results
+## 3. [8 HIGH] Q2 Results Highlights Oct 28: Adani Ports, Bandhan Bank, TVS Motor, HUL, JSW Energy, PVR Inox, KPIT Tech, Arvind log gains, Adani Enterprises, Hyundai Q2 profit down, Vedanta Q2 loss at ₹170 cr
 
-- Time: 2026-10-27 20:52 IST
+- Time: 2026-10-28 21:01 IST
 - Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-lampt-maruti-suzuki-bajaj-auto-tata-steel-vedanta-iron-waaree-acc-sail-sbi-star-health-mazagon-dock-cipla-united-breweries-ather-paytm-tata-consumer-results-27-october-20/article71626455.ece
-- Matched symbols: WAAREEENER, MARUTI, BAJAJ-AUTO, SBILIFE, CIPLA, LT (moving today: CIPLA)
+- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-adani-enterprises-adani-ports-tvs-motor-hyundai-pidilite-cholamandalam-hero-motocorp-meesho-united-spirits-vedanta-jsw-energy-results-28-october-2026/article71630853.ece
+- Matched symbols: ADANIENT, ADANIPORTS, HINDUNILVR
 - Keywords: results
-- Thesis match: waaree-q2-results (open)
-- Score: 13
-- Alert id: ce649ba1d774
-- Second-order candidates: False match: earlier round-up version already noted under 4fb679a9e48e and d9da5cf1b7b8.
+- Thesis match: none
+- Score: 8
+- Alert id: 8bd5dccb4af4
+- Second-order candidates: 
 
-## 4. [9 HIGH] Waaree Energies Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation
-
-- Time: 2026-10-28 00:26 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/ee210958-931a-4f2e-a92e-d07ebeeccdf2.pdf
-- Matched symbols: WAAREEENER
-- Keywords: results
-- Thesis match: waaree-q2-results (open)
-- Score: 9
-- Alert id: 1929053d8fb5
-- Second-order candidates: False match: results-day investor presentation for the same Q2 print covered under 3f1f524200ec; nothing new.
-
-## 5. [9 HIGH] Waaree Energies Limited: Acquisition.
-
-- Time: 2026-10-27 20:19 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/WAAREE_27102026200856_OutcomeofBoardMeeting.pdf
-- Matched symbols: WAAREEENER
-- Keywords: M&A
-- Thesis match: waaree-q2-results (open)
-- Score: 9
-- Alert id: 821be06eabaa
-- Second-order candidates: Winner: Waaree Energies if the target adds integrated capacity (cells/wafers/storage); details are only in the PDF, not read here. / Losers: none clear - target and counterparty unknown from the alert text. / Catalyst: surprise - acquisition announced with results on 2026-10-27 20:19 IST; terms unverified. / Thesis fit: open thesis waaree-q2-results: neutral, the thesis rule is to exit regardless of news.
-
-## 6. [9 HIGH] Waaree Energies Ltd: Announcement under Regulation 30 (LODR)-Acquisition
-
-- Time: 2026-10-27 20:19 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/56360524-54fa-4f5c-bc32-4843e7fa34ff.pdf
-- Matched symbols: WAAREEENER
-- Keywords: M&A
-- Thesis match: waaree-q2-results (open)
-- Score: 9
-- Alert id: c48818e18761
-- Second-order candidates: False match: BSE copy of the same acquisition intimation already noted under 821be06eabaa; nothing new.
-
-## 7. [9 HIGH] Waaree Energies Ltd: Outcome Of Board Meeting Held On October 27, 2026 For The Unaudited Financials Results Along With Limited Review Report For The Quarter And Half Year Ended September 30, 2026.
-
-- Time: 2026-10-27 20:15 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/d57a1f16-9907-4e3d-a5f4-c0e8a808bdc7.pdf
-- Matched symbols: WAAREEENER
-- Keywords: results
-- Thesis match: waaree-q2-results (open)
-- Score: 9
-- Alert id: 02ed4f66da31
-- Second-order candidates: False match: same Q2 print already noted under 3f1f524200ec; the open thesis waaree-q2-results keeps its exit rule regardless.
-
-## 8. [8 HIGH] Q2 Results Today Live: Adani Enterprises & Hyundai Q2 profit down, Adani Ports Q2 con. profit rise, TVS Motor, HUL, JSW Energy, PVR Inox, KPIT Tech, Arvind Q2 profit rise, Vedanta Q2 loss at ₹170 cr, Pidilite, Hero MotoCorp, Meesho, United Spirits to announce Q2 results
+## 4. [8 HIGH] Q2 Results Today Live: Adani Enterprises & Hyundai Q2 profit down, Adani Ports Q2 con. profit rise, TVS Motor, HUL, JSW Energy, PVR Inox, KPIT Tech, Arvind Q2 profit rise, Vedanta Q2 loss at ₹170 cr, Pidilite, Hero MotoCorp, Meesho, United Spirits to announce Q2 results
 
 - Time: 2026-10-28 15:22 IST
 - Source: BusinessLine
@@ -101,7 +53,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 1935e2c00bd3
 - Second-order candidates: False match: results-day round-up of many companies, no single-company mechanism to extract; same live blog as c2322be9613b and 295234ccfbbe.
 
-## 9. [8 HIGH] Q2 Results Today Live: Adani Enterprises Q2 PAT at ₹1,224.45 cr, Adani Ports Q2 con. profit rise, HUL, CarTrade, KPIT Tech, Arvind Q2 profit rise, Info Edge (Naukri) profit tumbles, TVS Motor, Hyundai, Pidilite, Hero MotoCorp, Meesho, United Spirits, Vedanta, JSW Energy share to announce Q2 results
+## 5. [8 HIGH] Q2 Results Today Live: Adani Enterprises Q2 PAT at ₹1,224.45 cr, Adani Ports Q2 con. profit rise, HUL, CarTrade, KPIT Tech, Arvind Q2 profit rise, Info Edge (Naukri) profit tumbles, TVS Motor, Hyundai, Pidilite, Hero MotoCorp, Meesho, United Spirits, Vedanta, JSW Energy share to announce Q2 results
 
 - Time: 2026-10-28 13:44 IST
 - Source: BusinessLine
@@ -113,7 +65,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 295234ccfbbe
 - Second-order candidates: False match: round-up blog of 28 Oct results day, later version of c2322be9613b and 89d7425f224c; no single-company mechanism to extract.
 
-## 10. [8 HIGH] Q2 Results Today Live: HUL Q2 profit up, Adani Enterprises, Adani Ports, TVS Motor, Hyundai, Pidilite, Cholamandalam, Hero MotoCorp, Meesho, United Spirits, Vedanta, JSW Energy share to announce Q2 results, Piramal Pharma, UBL, PG Electro, L&T, Bajaj Auto shares surge after Q2 results
+## 6. [8 HIGH] Q2 Results Today Live: HUL Q2 profit up, Adani Enterprises, Adani Ports, TVS Motor, Hyundai, Pidilite, Cholamandalam, Hero MotoCorp, Meesho, United Spirits, Vedanta, JSW Energy share to announce Q2 results, Piramal Pharma, UBL, PG Electro, L&T, Bajaj Auto shares surge after Q2 results
 
 - Time: 2026-10-28 11:41 IST
 - Source: BusinessLine
@@ -125,62 +77,110 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 89d7425f224c
 - Second-order candidates: False match: multi-company results round-up; no single-company mechanism or thesis link (no Waaree item), nothing to extract beyond the notes already written today.
 
-## 11. [8 HIGH] Stock Market LIVE: Sensex off lows, down 300 pts; Nifty near 22,700; L&T, BSE, SBI Life shine
+## 7. [7 HIGH] CoreWeave and other neocloud stocks drop after Microsoft capex comes in below expectations
 
-- Time: 2026-10-28 07:56 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/stock-market-live-oct-28-nse-bse-sensex-today-nifty-gift-nifty-us-iran-tension-iran-strikes-brent-crude-ipos-jio-listing-jio-share-price-it-stocks-maruti-share-price-q1-result-today-share-market-today-126102800114_1.html
-- Matched symbols: SBILIFE, LT (moving today: LT)
-- Keywords: none
+- Time: 2026-10-29 05:46 IST
+- Source: CNBC top news
+- Link: https://www.cnbc.com/2026/10/28/neocloud-stocks-drop-after-microsoft-revises-capex-down.html
+- Matched symbols: CRWV (moving today: CRWV)
+- Keywords: capex
 - Thesis match: none
-- Score: 8
-- Alert id: a65c59d81aa7
-- Second-order candidates: False match: intraday market blog from 07:56 IST with no company-specific event; nothing to extract.
+- Score: 7
+- Alert id: fd8ecbea46ed
+- Second-order candidates: 
 
-## 12. [8 HIGH] Stocks in news: Jio Platforms, RIL, Infosys, L&T, Tata Capital, Waaree Energies and Vedanta Iron
+## 8. [7 HIGH] Moschip Technologies Ltd: Board Meeting Outcome for Outcome Of Board Meeting Held On 28-10-2026
 
-- Time: 2026-10-28 06:00 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/stocks-in-news-jio-platforms-ril-infosys-lt-tata-capital-waaree-energies-and-vedanta-iron/articleshow/135245790.cms
-- Matched symbols: WAAREEENER, INFY, LT, RELIANCE (moving today: INFY, LT)
-- Keywords: round-up
-- Thesis match: waaree-q2-results (open)
-- Score: 8
-- Alert id: 391d01dec6f2
-- Second-order candidates: False match: ET morning round-up; the single items are noted under 6eb687e44d0d, 3f1f524200ec and others.
-
-## 13. [8 HIGH] Infosys draws four downgrades in a day on weaker annual sales outlook
-
-- Time: 2026-10-27 23:56 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/infosys-draws-four-downgrades-in-a-day-on-weaker-annual-sales-outlook-126102701883_1.html
-- Matched symbols: INFY (moving today: INFY)
-- Keywords: guidance, rating
-- Thesis match: none
-- Score: 8
-- Alert id: 6eb687e44d0d
-- Second-order candidates: Winner: none clear - brokerages cutting targets, not a company-specific beneficiary. / Losers: INFY directly; read-across to mid-cap IT with similar discretionary exposure (LTIM, Persistent, Coforge) if the weak outlook reflects client budget shifts to AI projects, as the Anthropic-IPO-day IT sell-off suggested (noted under 4dcbd3068a9d). / Catalyst: scheduled follow-through - downgrades after the Q2 guidance; next hard data is Q3 results in January. / Thesis fit: none (sentiment/estimate cuts, already priced into today's fall; not drafted)
-
-## 14. [8 HIGH] Larsen & Toubro Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome
-
-- Time: 2026-10-27 22:09 IST
+- Time: 2026-10-28 22:52 IST
 - Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/0e4c11c6-4c96-42c0-ac94-b2cb928c4f4f.pdf
-- Matched symbols: LT (moving today: LT)
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/0c1409c4-43ee-4447-ad77-d1b3f7013ef6.pdf
+- Matched symbols: none
+- Keywords: results, stake sale, M&A
+- Thesis match: none
+- Score: 7
+- Alert id: de53900ae058
+- Second-order candidates: 
+
+## 9. [7 HIGH] Adani Ports Q2 results: Net profit rises 18% YoY to Rs 3,682 crore; revenue jumps 24%, FY27 guidance raised
+
+- Time: 2026-10-28 13:54 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/earnings/adani-ports-q2-results-net-profit-rises-18-yoy-to-rs-3-682-crore-revenue-jumps-24-fy27-guidance-raised-14062325.html
+- Matched symbols: ADANIPORTS
+- Keywords: results, guidance
+- Thesis match: none
+- Score: 7
+- Alert id: 6c9a1016ffa4
+- Second-order candidates: 
+
+## 10. [7 HIGH] WAAREEENER volume 4.3x 20-day average (close 2238.0, bar 2026-10-28)
+
+- Time: 2026-10-28 13:54 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/WAAREEENER.NS
+- Matched symbols: WAAREEENER (moving today: WAAREEENER)
+- Keywords: volume spike
+- Thesis match: waaree-q2-results (open)
+- Score: 7
+- Alert id: 860efb86a6c1
+- Second-order candidates: 
+
+## 11. [6 HIGH] HUL stock rating: Brokerages bullish after Q2 results amid improving volumes, but cautious over margin pressure
+
+- Time: 2026-10-29 09:50 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/hul-stock-rating-brokerages-bullish-after-q2-results-amid-improving-volumes-but-cautious-over-margin-pressure-14063070.html
+- Matched symbols: HINDUNILVR
+- Keywords: results, rating
+- Thesis match: none
+- Score: 6
+- Alert id: b822c81bff82
+- Second-order candidates: 
+
+## 12. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on October 28, 2026 is Rs. 39.4151.
+
+- Time: 2026-10-29 07:00 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: RELIANCE
 - Keywords: results
 - Thesis match: none
-- Score: 8
-- Alert id: a8305e87a2eb
-- Second-order candidates: False match: routine post-results meet filing with no new fact in the alert; L&T move is covered by the results round-ups.
+- Score: 6
+- Alert id: a1539ce29c59
+- Second-order candidates: 
 
-## 15. [8 HIGH] Waaree Energies Q2 Results: Profit falls 15% YoY to Rs 719 crore, revenue rises 24%
+## 13. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on October 28, 2026 is Rs. 13.6585.
 
-- Time: 2026-10-27 20:56 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/earnings/waaree-energies-q2-results-profit-falls-15-yoy-to-rs-719-crore-revenue-rises-24/articleshow/135239084.cms
-- Matched symbols: WAAREEENER
+- Time: 2026-10-29 07:00 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: RELIANCE
 - Keywords: results
-- Thesis match: waaree-q2-results (open)
-- Score: 8
-- Alert id: 3f1f524200ec
-- Second-order candidates: Winner: none clear - profit fell while revenue grew, so margins compressed (module price pressure and cost mix are the likely mechanism; not verified from the filing). / Losers: none clear - peer read-across (Premier Energies PREMIERENE, Vikram Solar) depends on whether the margin squeeze is Waaree-specific or industry module pricing; no source checked. / Catalyst: scheduled, already happened - board meeting and results on 2026-10-27 (NSE/BSE outcome filing 20:15 IST), one day EARLIER than the thesis event_date of 2026-10-28. / Thesis fit: open thesis waaree-q2-results: event date has passed. post_event_rule says sell at the next open after results, i.e. 2026-10-28 open; event_date in the thesis file still reads 2026-10-28, so the engine may queue the exit a day late. Reviewer cannot edit existing theses; flagged for the user to set event_date to 2026-10-27.
+- Thesis match: none
+- Score: 6
+- Alert id: 41852bfb850d
+- Second-order candidates: 
+
+## 14. [6 HIGH] Cipla Limited: Please find enclosed newspaper intimation for unaudited financial results for the quarter and half year ended 30th September, 2026.
+
+- Time: 2026-10-28 15:52 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/CIPLA_28102026155232_Cipla_NewspaperAdvertisement_signed.pdf
+- Matched symbols: CIPLA
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 563a3fe4fcc7
+- Second-order candidates: 
+
+## 15. [6 HIGH] Cipla Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication
+
+- Time: 2026-10-28 15:48 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/ee4e9cfb-d4c9-49ee-a5ae-dd5da06382f4.pdf
+- Matched symbols: CIPLA
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: dac72b9fbded
+- Second-order candidates: 
