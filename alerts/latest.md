@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-10-30 12:03 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-10-30 13:48 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -15,7 +15,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 10
 - Alert id: e0ed77126455
-- Second-order candidates: 
+- Second-order candidates: False match: intraday market live blog covering many stocks; no single-company mechanism to extract. Trent's move is noted under its own alerts.
 
 ## 2. [10 HIGH] Q2 Results Today Live: Smartworks Q2 PAT up q-o-q, Reliance, Jio Platforms, Sun Pharma, Dixon, BEL, IOC, BoB, GAIL, GE Vernova, Lodha, Max Health, Delhivery, Aether, NTPC Green to announce Q2 results, Trent, IndiGo, Deepak Nitrite shares zoom, CAMS, Equitas SFB, Steamhouse, Suzlon, RPG Life shares fall after Q2
 
@@ -27,7 +27,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 10
 - Alert id: 248937c1075e
-- Second-order candidates: 
+- Second-order candidates: False match: updated edition of the multi-company results-day live blog (see 12ca59ecc8f2); no single-company mechanism to extract.
 
 ## 3. [10 HIGH] Trent shares zoom 7% after Q2 results, brokerages divided on outlook, price targets
 
@@ -39,7 +39,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 10
 - Alert id: c55ffa224366
-- Second-order candidates: 
+- Second-order candidates: Winner: Trent (TRENT) - same Q2 beat as 62706027b75c and b2d06dcc0c30; the new fact is that brokers are split on targets, so the 7% gap-up is contested rather than confirmed. / Losers: none clear - headline names no listed rival losing share and the article could not be opened (sandbox blocks it). / Catalyst: scheduled, already happened - Q2 results 2026-10-29; no further dated event, so no entry. / Thesis fit: none
 
 ## 4. [10 HIGH] Nasdaq Futures Fall 2% On Tech Pain | Crude Steady | RIL, IndiGo, Trent Results In Focus
 
@@ -89,19 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 750b638185c9
 - Second-order candidates: False match: earlier edition of the same 29 Oct live blog (see 071894f2cd89); no single-company mechanism to extract.
 
-## 8. [10 HIGH] Q2 Results Today Live: JSW Holdings Q2 PAT jumps, Coal India, Asian Paints, IndiGo, Trent, Laurus Labs, Ambuja Cements, Godrej Consumer, Welspun Corp, Blue Star, Strides Pharma, Milky Mist to announce Q2 results, Adani Ports, Hyundai, PVR Inox, Meesho, Satin Creditcare, Birlasoft, United Spirits gain
-
-- Time: 2026-10-29 12:56 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-coal-india-asian-paints-indigo-trent-laurus-labs-ambuja-cements-godrej-welspun-corp-motilal-oswal-blue-star-strides-pharma-milky-mist-company-results-29-october-2026/article71635445.ece
-- Matched symbols: ASIANPAINT, ADANIPORTS, COALINDIA, INDIGO, TRENT (moving today: ADANIPORTS)
-- Keywords: results
-- Thesis match: none
-- Score: 10
-- Alert id: 5e2f929294e8
-- Second-order candidates: False match: multi-company results-day live blog (same as 8dfa719709bb); no single-company mechanism to extract.
-
-## 9. [9 HIGH] Trade Spotlight: How should you trade Lodha Developers, Saregama India, Bajaj Finance, Zensar Tech, L&T Technology Services, and others on October 30?
+## 8. [9 HIGH] Trade Spotlight: How should you trade Lodha Developers, Saregama India, Bajaj Finance, Zensar Tech, L&T Technology Services, and others on October 30?
 
 - Time: 2026-10-30 09:58 IST
 - Source: Moneycontrol
@@ -113,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2328e82c1b7d
 - Second-order candidates: False match: daily list of technical trade ideas for many stocks; no event or mechanism. Bajaj Finance has an open thesis (bajaj-finance-rbi-december), but nothing here changes it.
 
-## 10. [9 HIGH] Asian Paints Limited: The Board of Directors at its meeting held today i.e., 29th October 2026, has, inter alia, approved the audited standalone and unaudited consolidated financial results of the Company for the quarter and half year ended 30th September 2026 and payment of interim dividend of Rs. 5.75 (Rupees five and paise seventy-five only) per equity share of the face value of Re. 1 each for the financial year ending 31st March 2027
+## 9. [9 HIGH] Asian Paints Limited: The Board of Directors at its meeting held today i.e., 29th October 2026, has, inter alia, approved the audited standalone and unaudited consolidated financial results of the Company for the quarter and half year ended 30th September 2026 and payment of interim dividend of Rs. 5.75 (Rupees five and paise seventy-five only) per equity share of the face value of Re. 1 each for the financial year ending 31st March 2027
 
 - Time: 2026-10-29 14:10 IST
 - Source: NSE announcements
@@ -124,6 +112,18 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 9
 - Alert id: dad8c76228ed
 - Second-order candidates: False match: formal outcome-of-board-meeting filing with no analysis; the result and dividend are noted under f6c4e201fbcf.
+
+## 10. [8 HIGH] Q2 Results Today Live: Ajanta Pharma, Aether, Smartworks Q2 PAT rise, Go Fashion profit falls, Reliance, Jio Platforms, Sun Pharma, Dixon, BEL, IOC, BoB, GAIL, GE Vernova, Lodha, Max Health, Delhivery, NTPC Green to announce Q2 results
+
+- Time: 2026-10-30 13:24 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-reliance-ind-jio-platforms-sun-pharma-dixon-bel-ioc-bob-gail-ge-vernova-lodha-developers-max-healthcare-ntpc-delhivery-aether-company-results-30-october-2026/article71640116.ece
+- Matched symbols: SUNPHARMA, RELIANCE, NTPC, BEL
+- Keywords: results
+- Thesis match: none
+- Score: 8
+- Alert id: fe9af4583f32
+- Second-order candidates: 
 
 ## 11. [8 HIGH] Q2 Results Highlights: Milky Mist, Coal India, IEX, Laurus Labs post profit growth; IndiGo loss narrows, Thyrocare profit falls
 
@@ -147,7 +147,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: de3cd3cc36a3
-- Second-order candidates: 
+- Second-order candidates: Winner: Adani Enterprises (ADANIENT), Adani Ports (ADANIPORTS) - results lifted the group; ports volumes/earnings are the driver per the headline, no detail seen. / Losers: none clear - no named competitor losing share, and the article could not be opened (sandbox blocks it). / Catalyst: scheduled, already happened - Q2 results 29 Oct; the rally is a day old (Adani Ports +5% on 30 Oct midday), so already priced in. / Thesis fit: none
 
 ## 13. [8 HIGH] Asian Paints Q2 Results: Net profit rises 7% YoY to Rs 1,068 crore; firm announces Rs 5.75/share dividend
 
@@ -173,14 +173,14 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9e3dc7452b10
 - Second-order candidates: False match: duplicate formal filing of the same results; see f6c4e201fbcf.
 
-## 15. [8 HIGH] Nifty climbs past 22,800 at midday; Adani Ports surges 5%, Trent slips 2.4%
+## 15. [7 HIGH] IndiGo jumps 4% as Q2 loss narrows; analysts say earnings outlook weak
 
-- Time: 2026-10-29 13:02 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/nifty-climbs-past-22800-at-midday-adani-ports-surges-5-trent-slips-24/article71639482.ece
-- Matched symbols: ADANIPORTS, TRENT (moving today: ADANIPORTS)
-- Keywords: none
+- Time: 2026-10-30 11:32 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/indigo-share-price-jumps-4-as-q2-loss-narrows-analysts-say-earnings-outlook-weak-126103000492_1.html
+- Matched symbols: INDIGO
+- Keywords: results, guidance
 - Thesis match: none
-- Score: 8
-- Alert id: c1d32264e8fe
-- Second-order candidates: False match: midday market round-up; Adani Ports move is covered under 6c9a1016ffa4, Trent's fall is price only with no cause stated.
+- Score: 7
+- Alert id: c36ad359e0fb
+- Second-order candidates: 
