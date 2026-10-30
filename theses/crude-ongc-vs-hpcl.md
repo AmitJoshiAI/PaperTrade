@@ -52,3 +52,4 @@ paper-short HPCL. Closes on 15 Oct 2026: ONGC Rs 224.64, HPCL Rs 348.50.
 - 2026-10-17 (opened by Claude): opened as the Indian version of the Meta / CoreWeave shape. Weekly:
   record Brent, USD/INR, and the ONGC-minus-HPCL return since entry.
 - 2026-10-23 (weekly review, Claude): Combined +Rs 2,116 (ONGC +1.8%, HINDPETRO short +1.6%). No policy break known; Brent not checked. Unchanged.
+- 2026-10-30 (weekly review, Claude): combined +Rs 1,120. Brent not reliably verifiable from this sandbox; no excise cut or windfall tax found. No change; rule due after 2026-12-15.
