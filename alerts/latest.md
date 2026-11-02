@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-02 17:07 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-02 17:46 IST. High score = 6+. Feeds OK: NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news. Failed: NSE announcements (ParseError: unclosed token: line 1, column 462701).
 Quotes: 55 symbols checked, 9 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -113,7 +113,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2600303761a2
 - Second-order candidates: 
 
-## 10. [7 HIGH] Sadhav Shipping Limited: the Compamy has entered Term Loan Facility Agreement with Bajaj Finance Limited
+## 10. [7 HIGH] Reliance shares jump as brokerages maintain bullish view after Q2 results
+
+- Time: 2026-11-02 16:28 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/reliance-shares-jump-7-as-brokerages-maintain-bullish-view-after-q2-results/article71655306.ece
+- Matched symbols: RELIANCE (moving today: RELIANCE)
+- Keywords: results
+- Thesis match: none
+- Score: 7
+- Alert id: 5e925d4fbfca
+- Second-order candidates: 
+
+## 11. [7 HIGH] Sadhav Shipping Limited: the Compamy has entered Term Loan Facility Agreement with Bajaj Finance Limited
 
 - Time: 2026-11-02 16:03 IST
 - Source: NSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: e195997c46c9
 - Second-order candidates: 
 
-## 11. [7 HIGH] Reliance shares surge to 6-yr high after Q2 results; this analyst sees further 33% upside
+## 12. [7 HIGH] Reliance shares surge to 6-yr high after Q2 results; this analyst sees further 33% upside
 
 - Time: 2026-11-02 14:03 IST
 - Source: Moneycontrol
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: e624a5e1f879
 - Second-order candidates: Winner: RELIANCE - O2C margin strength and Jio growth already in the price after the ~8% gap-up; a single broker target adds no new fact. / Losers: none clear - broker target is an opinion; round-up style follow-up of the Q2 story already noted. / Catalyst: scheduled, already happened - Q2 results; nothing dated ahead. / Thesis fit: none
 
-## 12. [7 HIGH] Reliance Industries' refining boom may extend into Q3; discounted crude to offset rising freight costs
+## 13. [7 HIGH] Reliance Industries' refining boom may extend into Q3; discounted crude to offset rising freight costs
 
 - Time: 2026-11-02 14:03 IST
 - Source: Moneycontrol
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5b6c44846730
 - Second-order candidates: Winner: RELIANCE - discounted crude feedstock keeps gross refining margins high, offsetting higher freight cost. / Losers: none clear - article not opened (sandbox blocks it); the implied loser (refiners paying full-price crude, e.g. HPCL/BPCL) is not named in the headline and would be speculation. See open thesis crude-ongc-vs-hpcl for the crude-price angle. / Catalyst: surprise - analyst view on Q3 margins, no dated event. / Thesis fit: none
 
-## 13. [7 HIGH] Reliance Industries m-cap tops Rs 17 lakh crore as shares surge over 8% after Q2 results; biggest gain in 6 yrs
+## 14. [7 HIGH] Reliance Industries m-cap tops Rs 17 lakh crore as shares surge over 8% after Q2 results; biggest gain in 6 yrs
 
 - Time: 2026-11-02 11:55 IST
 - Source: Moneycontrol
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 6af755c7ac26
 - Second-order candidates: Winner: Reliance (RELIANCE) - up 7-8% after Q2, m-cap above Rs 17 lakh crore, biggest one-day gain since Apr 2020, ~Rs 1 lakh crore added; Sensex +1,000 pts. / Losers: none clear - repeat coverage of the same results event already noted (dabe3a169a15, 691368ef6d3a); brokerages stay bullish but some pared targets. / Catalyst: scheduled, already happened - results priced in at the open; nothing dated ahead. / Thesis fit: none
 
-## 14. [7 HIGH] Sensex rises 1,000 pts, Nifty above 23,300: Strong RIL Q2 results among key factors behind market rally
+## 15. [7 HIGH] Sensex rises 1,000 pts, Nifty above 23,300: Strong RIL Q2 results among key factors behind market rally
 
 - Time: 2026-11-02 11:55 IST
 - Source: Moneycontrol
@@ -171,16 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 17abc9a666cf
-- Second-order candidates: 
-
-## 15. [7 HIGH] Reliance Industries shares jump nearly 8% after record Q2 results; top Nifty gainer, biggest index contributor
-
-- Time: 2026-11-02 11:55 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/reliance-industries-shares-jump-over-4-after-record-q2-results-top-nifty-gainer-biggest-index-contributor-14065973.html
-- Matched symbols: RELIANCE (moving today: RELIANCE)
-- Keywords: results
-- Thesis match: none
-- Score: 7
-- Alert id: b3530f303a9e
 - Second-order candidates: 
