@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-02 14:03 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 7 moving.
+Generated 2026-11-02 17:07 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 9 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -41,7 +41,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 83231dd9c3dc
 - Second-order candidates: Winner: Reliance (RELIANCE) - higher FY earnings estimates after the beat. / Losers: none clear - the new fact is brokers cutting targets (valuation, not earnings), so the rally is contested, not confirmed. / Catalyst: scheduled, already happened - Q2 results; nothing dated ahead. / Thesis fit: none
 
-## 4. [8 HIGH] Coal India Limited: Disclosure under Regulation 30 of SEBI LODR, 2015 - Filing of DRHP of South Eastern Coalfields Limited (SECL), a wholly owned Subsidiary of CIL, with SEBI
+## 4. [9 HIGH] South Eastern Coalfields files DRHP with SEBI for IPO; Coal India to offload 66.8 crore shares
+
+- Time: 2026-11-02 13:51 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/ipos/fpos/south-eastern-coalfields-files-drhp-with-sebi-for-ipo-coal-india-to-offload-66-8-crore-shares/articleshow/135451367.cms
+- Matched symbols: COALINDIA (moving today: COALINDIA)
+- Keywords: IPO, SEBI
+- Thesis match: none
+- Score: 9
+- Alert id: fb992e7d200b
+- Second-order candidates: 
+
+## 5. [8 HIGH] Coal India Limited: Disclosure under Regulation 30 of SEBI LODR, 2015 - Filing of DRHP of South Eastern Coalfields Limited (SECL), a wholly owned Subsidiary of CIL, with SEBI
 
 - Time: 2026-11-02 12:01 IST
 - Source: NSE announcements
@@ -51,9 +63,21 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 75f468bbef5e
+- Second-order candidates: Winner: COALINDIA - the formal Reg 30 filing confirms the SECL IPO route; parent keeps majority and gets a listed-subsidiary valuation mark. / Losers: none clear - DRHP is a filing, not an approval; no named competitor loses from it. / Catalyst: scheduled but undated - SEBI observations and listing date unknown, so no dated event to trade before. / Thesis fit: none (no draft: no dated catalyst)
+
+## 6. [8 HIGH] RELIANCE +11.6% vs previous close, volume 5.8x 20-day average (close 1300.0, bar 2026-11-02)
+
+- Time: 2026-11-02 09:46 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/RELIANCE.NS
+- Matched symbols: RELIANCE (moving today: RELIANCE)
+- Keywords: price move
+- Thesis match: none
+- Score: 8
+- Alert id: 68228cf1c293
 - Second-order candidates: 
 
-## 5. [8 HIGH] Markets open higher as AI selloff boosts anti-tech trade; Reliance, Tata Steel lead gains
+## 7. [8 HIGH] Markets open higher as AI selloff boosts anti-tech trade; Reliance, Tata Steel lead gains
 
 - Time: 2026-11-02 09:37 IST
 - Source: BusinessLine
@@ -65,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 4ef625bd2f6c
 - Second-order candidates: Winner: old-economy index heavyweights (RELIANCE, TATASTEEL) - money rotating out of AI/tech into cyclicals and energy; Reliance also has its own Q2 beat. / Losers: AI-infrastructure names (CRWV, NBIS) and Indian IT exporters (INFY, TCS, HCLTECH) that trade on US tech sentiment - the rotation is away from the AI trade (see notes 0be83300a674, 8ace2d36deb1). Mechanism for IT exporters is sentiment, not confirmed. / Catalyst: surprise - AI selloff driver not named in the headline; no dated event ahead. / Thesis fit: none (no draft: the cause of the selloff is unverified, so the legs would be a coin flip)
 
-## 6. [8 HIGH] Reliance Industries Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript
+## 8. [8 HIGH] Reliance Industries Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript
 
 - Time: 2026-11-01 23:05 IST
 - Source: BSE announcements
@@ -77,7 +101,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8e422d55c003
 - Second-order candidates: 
 
-## 7. [7 HIGH] Reliance shares surge to 6-yr high after Q2 results; this analyst sees further 33% upside
+## 9. [7 HIGH] ONGC +4.2% vs previous close (close 234.83, bar 2026-11-02)
+
+- Time: 2026-11-02 17:07 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/ONGC.NS
+- Matched symbols: ONGC (moving today: ONGC)
+- Keywords: price move
+- Thesis match: crude-ongc-vs-hpcl (open)
+- Score: 7
+- Alert id: 2600303761a2
+- Second-order candidates: 
+
+## 10. [7 HIGH] Sadhav Shipping Limited: the Compamy has entered Term Loan Facility Agreement with Bajaj Finance Limited
+
+- Time: 2026-11-02 16:03 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/SADHAV_02112026160303_Reg_30_Intimation_Borrowings_Nov_2026.pdf
+- Matched symbols: BAJFINANCE
+- Keywords: none
+- Thesis match: bajaj-finance-rbi-december (proposed)
+- Score: 7
+- Alert id: e195997c46c9
+- Second-order candidates: 
+
+## 11. [7 HIGH] Reliance shares surge to 6-yr high after Q2 results; this analyst sees further 33% upside
 
 - Time: 2026-11-02 14:03 IST
 - Source: Moneycontrol
@@ -87,9 +135,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: e624a5e1f879
-- Second-order candidates: 
+- Second-order candidates: Winner: RELIANCE - O2C margin strength and Jio growth already in the price after the ~8% gap-up; a single broker target adds no new fact. / Losers: none clear - broker target is an opinion; round-up style follow-up of the Q2 story already noted. / Catalyst: scheduled, already happened - Q2 results; nothing dated ahead. / Thesis fit: none
 
-## 8. [7 HIGH] Reliance Industries' refining boom may extend into Q3; discounted crude to offset rising freight costs
+## 12. [7 HIGH] Reliance Industries' refining boom may extend into Q3; discounted crude to offset rising freight costs
 
 - Time: 2026-11-02 14:03 IST
 - Source: Moneycontrol
@@ -99,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 5b6c44846730
-- Second-order candidates: 
+- Second-order candidates: Winner: RELIANCE - discounted crude feedstock keeps gross refining margins high, offsetting higher freight cost. / Losers: none clear - article not opened (sandbox blocks it); the implied loser (refiners paying full-price crude, e.g. HPCL/BPCL) is not named in the headline and would be speculation. See open thesis crude-ongc-vs-hpcl for the crude-price angle. / Catalyst: surprise - analyst view on Q3 margins, no dated event. / Thesis fit: none
 
-## 9. [7 HIGH] Reliance Industries m-cap tops Rs 17 lakh crore as shares surge over 8% after Q2 results; biggest gain in 6 yrs
+## 13. [7 HIGH] Reliance Industries m-cap tops Rs 17 lakh crore as shares surge over 8% after Q2 results; biggest gain in 6 yrs
 
 - Time: 2026-11-02 11:55 IST
 - Source: Moneycontrol
@@ -113,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 6af755c7ac26
 - Second-order candidates: Winner: Reliance (RELIANCE) - up 7-8% after Q2, m-cap above Rs 17 lakh crore, biggest one-day gain since Apr 2020, ~Rs 1 lakh crore added; Sensex +1,000 pts. / Losers: none clear - repeat coverage of the same results event already noted (dabe3a169a15, 691368ef6d3a); brokerages stay bullish but some pared targets. / Catalyst: scheduled, already happened - results priced in at the open; nothing dated ahead. / Thesis fit: none
 
-## 10. [7 HIGH] Sensex rises 1,000 pts, Nifty above 23,300: Strong RIL Q2 results among key factors behind market rally
+## 14. [7 HIGH] Sensex rises 1,000 pts, Nifty above 23,300: Strong RIL Q2 results among key factors behind market rally
 
 - Time: 2026-11-02 11:55 IST
 - Source: Moneycontrol
@@ -125,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 17abc9a666cf
 - Second-order candidates: 
 
-## 11. [7 HIGH] Reliance Industries shares jump nearly 8% after record Q2 results; top Nifty gainer, biggest index contributor
+## 15. [7 HIGH] Reliance Industries shares jump nearly 8% after record Q2 results; top Nifty gainer, biggest index contributor
 
 - Time: 2026-11-02 11:55 IST
 - Source: Moneycontrol
@@ -135,52 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: b3530f303a9e
-- Second-order candidates: 
-
-## 12. [7 HIGH] Coal India Limited: Newspaper publication on Tax on 2nd Interim Dividend for TY 2026-27.
-
-- Time: 2026-11-02 11:48 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/COALINDIA_02112026114828_NP0211.pdf
-- Matched symbols: COALINDIA (moving today: COALINDIA)
-- Keywords: dividend
-- Thesis match: none
-- Score: 7
-- Alert id: 989e7df77340
-- Second-order candidates: False match: routine compliance notice about TDS on an already-declared interim dividend; no new information.
-
-## 13. [7 HIGH] Coal India Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication
-
-- Time: 2026-11-02 11:46 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/2602948a-7f01-47d0-9975-a5ff75f45e69.pdf
-- Matched symbols: COALINDIA (moving today: COALINDIA)
-- Keywords: dividend
-- Thesis match: none
-- Score: 7
-- Alert id: b5104240acd1
-- Second-order candidates: 
-
-## 14. [7 HIGH] Coal India unit South Eastern Coalfields files for $800 million IPO
-
-- Time: 2026-11-02 11:14 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/companies/news/coal-india-unit-south-eastern-coalfields-files-for-800-million-ipo-126110200334_1.html
-- Matched symbols: COALINDIA (moving today: COALINDIA)
-- Keywords: IPO
-- Thesis match: none
-- Score: 7
-- Alert id: 224544aabddb
-- Second-order candidates: Winner: COALINDIA - a listed subsidiary can unlock value and raise cash for the parent; IPO proceeds mostly fund SECL itself. / Losers: none clear - a new listed coal supplier could draw some investor money from COALINDIA's own float, but that is speculative and unproven. / Catalyst: scheduled but undated - SEBI approval and listing date are not given; article not opened (sandbox blocks it), so no dated event to trade before. / Thesis fit: none (no draft: no dated catalyst)
-
-## 15. [7 HIGH] Reliance Industries shares set for biggest-single day jump since April 2020 as Q2 earnings spark Rs 1 lakh crore rally
-
-- Time: 2026-11-02 11:11 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/reliance-industries-shares-set-for-biggest-single-day-jump-since-april-2020-as-q2-earnings-spark-rs-1-lakh-crore-rally/articleshow/135447021.cms
-- Matched symbols: RELIANCE (moving today: RELIANCE)
-- Keywords: results
-- Thesis match: none
-- Score: 7
-- Alert id: 597a9f7f5384
 - Second-order candidates: 
