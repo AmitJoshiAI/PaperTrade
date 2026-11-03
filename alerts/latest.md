@@ -1,47 +1,23 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-02 17:46 IST. High score = 6+. Feeds OK: NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news. Failed: NSE announcements (ParseError: unclosed token: line 1, column 462701).
-Quotes: 55 symbols checked, 9 moving.
+Generated 2026-11-03 09:58 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [10 HIGH] Reliance Industries stock outlook bullish on strong O2C earnings, steady Jio growth; check target prices, upside
+## 1. [9 HIGH] Carnelian, HDFC AMC, L&T acquire 2.9% stake in EAAA India Alternatives on debut day
 
-- Time: 2026-11-02 09:46 IST
+- Time: 2026-11-03 09:58 IST
 - Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/reliance-industries-stock-outlook-bullish-on-strong-o2c-earnings-steady-jio-growth-check-target-prices-upside-14065968.html
-- Matched symbols: RELIANCE (moving today: RELIANCE)
-- Keywords: results, guidance, rating
+- Link: https://www.moneycontrol.com/news/business/markets/carnelian-hdfc-amc-l-t-acquire-2-9-stake-in-eaaa-india-alternatives-on-debut-day-14066708.html
+- Matched symbols: LT
+- Keywords: listing, stake sale, M&A
 - Thesis match: none
-- Score: 10
-- Alert id: dabe3a169a15
-- Second-order candidates: Winner: Reliance (RELIANCE) - refining/petchem (O2C) margins plus steady Jio subscriber growth drove a Q2 beat; the stock is the biggest Nifty contributor today. / Losers: none clear - headline names no rival losing share; article not opened (sandbox blocks it). / Catalyst: scheduled, already happened - Q2 results 2026-10-30/31 weekend call; no further dated event, so no entry after a 6% gap-up. / Thesis fit: none
+- Score: 9
+- Alert id: a66d8f3de17f
+- Second-order candidates: 
 
-## 2. [10 HIGH] Q2 Results Today Live: ITC, Marico, UPL, Petronet LNG, NLC, DOMS, Escorts Kubota, NALCO, MobiKwik, Wockhardt, Granules to announce Q2 results, Reliance Ind, Jio Platforms, NTPC, Quality Power, Zen Tech, Delhivery shares surge after Q2 results, Syrma declines
-
-- Time: 2026-11-02 09:37 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-itc-marico-upl-upl-petronet-lng-nlc-india-mobikwik-wockhardt-nalco-doms-ind-bosch-escorts-kubota-granules-lloyds-ril-jio-company-results-02-november-2026/article71652562.ece
-- Matched symbols: RELIANCE, NTPC, ITC (moving today: RELIANCE)
-- Keywords: results
-- Thesis match: none
-- Score: 10
-- Alert id: e80725ba712d
-- Second-order candidates: False match: multi-company results-day live blog; no single-company mechanism to extract.
-
-## 3. [10 HIGH] RIL's Q2 beat lifts earnings outlook, even as brokerages pare price targets
-
-- Time: 2026-11-02 09:28 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/ril-s-q2-beat-lifts-earnings-outlook-even-as-brokerages-pare-price-targets-126110200168_1.html
-- Matched symbols: RELIANCE (moving today: RELIANCE)
-- Keywords: results, guidance, rating
-- Thesis match: none
-- Score: 10
-- Alert id: 83231dd9c3dc
-- Second-order candidates: Winner: Reliance (RELIANCE) - higher FY earnings estimates after the beat. / Losers: none clear - the new fact is brokers cutting targets (valuation, not earnings), so the rally is contested, not confirmed. / Catalyst: scheduled, already happened - Q2 results; nothing dated ahead. / Thesis fit: none
-
-## 4. [9 HIGH] South Eastern Coalfields files DRHP with SEBI for IPO; Coal India to offload 66.8 crore shares
+## 2. [9 HIGH] South Eastern Coalfields files DRHP with SEBI for IPO; Coal India to offload 66.8 crore shares
 
 - Time: 2026-11-02 13:51 IST
 - Source: ET Markets
@@ -53,7 +29,43 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fb992e7d200b
 - Second-order candidates: 
 
-## 5. [8 HIGH] Coal India Limited: Disclosure under Regulation 30 of SEBI LODR, 2015 - Filing of DRHP of South Eastern Coalfields Limited (SECL), a wholly owned Subsidiary of CIL, with SEBI
+## 3. [8 HIGH] Trade Spotlight: How should you trade Tata Power, Godrej Properties, NALCO, PFC, UltraTech Cement, Adani Ports, and others on November 3?
+
+- Time: 2026-11-03 09:58 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/trade-spotlight-how-should-you-trade-tata-power-godrej-properties-nalco-pfc-ultratech-cement-adani-ports-and-others-on-november-3-14067168.html
+- Matched symbols: ULTRACEMCO, ADANIPORTS (moving today: ULTRACEMCO)
+- Keywords: none
+- Thesis match: none
+- Score: 8
+- Alert id: e00869e17c4b
+- Second-order candidates: 
+
+## 4. [8 HIGH] Q2 Results Today Live: SBI, NSE, Bajaj Finserv, Solar Ind, Fortis, Gujarat Fluoro, Bajaj Holdings, Lloyds Metals & Energy, Lupin, MCX, Emcure Pharma, AIA Engineering, Zydus Wellness to announce Q2 results, KRBL, ITC, MARICO, MobiKwik shares gain, Petronet LNG, Wockhardt, KEC International shares decline
+
+- Time: 2026-11-03 09:52 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-sbi-nse-bajaj-finserv-solar-ind-bajaj-holdings-lloyds-metals-lupin-mcx-emcure-aia-engineering-zydus-wellness-itc-marico-mobikwik-results-03-november-2026/article71656322.ece
+- Matched symbols: BAJAJFINSV, ITC, SBIN
+- Keywords: results
+- Thesis match: none
+- Score: 8
+- Alert id: 920f0d66cbb8
+- Second-order candidates: 
+
+## 5. [8 HIGH] Coal India files DRHP to sell 10% stake in subsidiary SECL through IPO
+
+- Time: 2026-11-02 18:47 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/companies/news/coal-india-files-drhp-to-sell-10-stake-in-subsidiary-secl-through-ipo-126110201248_1.html
+- Matched symbols: COALINDIA
+- Keywords: IPO, stake sale
+- Thesis match: none
+- Score: 8
+- Alert id: 902e52f99a33
+- Second-order candidates: 
+
+## 6. [8 HIGH] Coal India Limited: Disclosure under Regulation 30 of SEBI LODR, 2015 - Filing of DRHP of South Eastern Coalfields Limited (SECL), a wholly owned Subsidiary of CIL, with SEBI
 
 - Time: 2026-11-02 12:01 IST
 - Source: NSE announcements
@@ -65,40 +77,28 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 75f468bbef5e
 - Second-order candidates: Winner: COALINDIA - the formal Reg 30 filing confirms the SECL IPO route; parent keeps majority and gets a listed-subsidiary valuation mark. / Losers: none clear - DRHP is a filing, not an approval; no named competitor loses from it. / Catalyst: scheduled but undated - SEBI observations and listing date unknown, so no dated event to trade before. / Thesis fit: none (no draft: no dated catalyst)
 
-## 6. [8 HIGH] RELIANCE +11.6% vs previous close, volume 5.8x 20-day average (close 1300.0, bar 2026-11-02)
+## 7. [7 HIGH] Dividend alert! Last day to buy Asian Paints, Coal India and 6 more stocks for dividend payout worth nearly Rs 31. Do you own any?
 
-- Time: 2026-11-02 09:46 IST
-- Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/RELIANCE.NS
-- Matched symbols: RELIANCE (moving today: RELIANCE)
-- Keywords: price move
+- Time: 2026-11-03 08:07 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/dividend-alert-last-day-to-buy-asian-paints-coal-india-and-6-more-stocks-for-dividend-payout-worth-nearly-rs-31-do-you-own-any/articleshow/135479314.cms
+- Matched symbols: ASIANPAINT, COALINDIA
+- Keywords: dividend
 - Thesis match: none
-- Score: 8
-- Alert id: 68228cf1c293
+- Score: 7
+- Alert id: e6ee93bfbac9
 - Second-order candidates: 
 
-## 7. [8 HIGH] Markets open higher as AI selloff boosts anti-tech trade; Reliance, Tata Steel lead gains
+## 8. [7 HIGH] EAAA India draws HDFC MF, Carnelian Asset, and L&T in Rs 316 crore listing-day bulk deals
 
-- Time: 2026-11-02 09:37 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/markets-open-higher-as-ai-selloff-boosts-anti-tech-trade-reliance-tata-steel-lead-gains/article71655271.ece
-- Matched symbols: TATASTEEL, RELIANCE (moving today: TATASTEEL, RELIANCE)
-- Keywords: none
+- Time: 2026-11-02 21:15 IST
+- Source: ET Stocks
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/eaaa-india-draws-hdfc-mf-carnelian-asset-and-lt-in-rs-316-crore-listing-day-bulk-deals/articleshow/135466785.cms
+- Matched symbols: LT
+- Keywords: listing, block deal
 - Thesis match: none
-- Score: 8
-- Alert id: 4ef625bd2f6c
-- Second-order candidates: Winner: old-economy index heavyweights (RELIANCE, TATASTEEL) - money rotating out of AI/tech into cyclicals and energy; Reliance also has its own Q2 beat. / Losers: AI-infrastructure names (CRWV, NBIS) and Indian IT exporters (INFY, TCS, HCLTECH) that trade on US tech sentiment - the rotation is away from the AI trade (see notes 0be83300a674, 8ace2d36deb1). Mechanism for IT exporters is sentiment, not confirmed. / Catalyst: surprise - AI selloff driver not named in the headline; no dated event ahead. / Thesis fit: none (no draft: the cause of the selloff is unverified, so the legs would be a coin flip)
-
-## 8. [8 HIGH] Reliance Industries Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript
-
-- Time: 2026-11-01 23:05 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/8e997741-4d35-4188-933a-cf020fb9c816.pdf
-- Matched symbols: RELIANCE (moving today: RELIANCE)
-- Keywords: results
-- Thesis match: none
-- Score: 8
-- Alert id: 8e422d55c003
+- Score: 7
+- Alert id: 388e4549e7b7
 - Second-order candidates: 
 
 ## 9. [7 HIGH] ONGC +4.2% vs previous close (close 234.83, bar 2026-11-02)
