@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-03 16:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-03 17:21 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 5 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -101,7 +101,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 902e52f99a33
 - Second-order candidates: 
 
-## 9. [7 HIGH] Live: Nifty above 23,700; Capital market stocks gain, SBI falls after Q2 | Closing Bell
+## 9. [7 HIGH] Dreamfolks Services Limited: Board of Director of Dreamfolks Services Limited has approved the proposal to provide security by way of fixed deposits of INR 5.5 crore each to ICICI Bank Limited and AU Small Finance Bank Limited, to secure the obligations of Ten 11 Hospitality Private Limited (formerly known as Ten 11 Hospitality LLP ) ( Ten 11 ), subsidiary of the Company, in connection with overdraft facilities backed by Fixed Deposits to be availed by Ten 11, as per the facility documents.
+
+- Time: 2026-11-03 17:02 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/DREAMFOLKS24_03112026170159_DFSL_Outcome_BM_November_03_2026_Signed.pdf
+- Matched symbols: ICICIBANK
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 7
+- Alert id: b890379e2bbf
+- Second-order candidates: 
+
+## 10. [7 HIGH] Live: Nifty above 23,700; Capital market stocks gain, SBI falls after Q2 | Closing Bell
 
 - Time: 2026-11-03 16:46 IST
 - Source: Moneycontrol
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5252d5dad8c8
 - Second-order candidates: 
 
-## 10. [7 HIGH] SBI Q2 results: Net profit rises 14% to Rs 23,038 crore, aided by exceptional gain; NII beats estimates
+## 11. [7 HIGH] SBI Q2 results: Net profit rises 14% to Rs 23,038 crore, aided by exceptional gain; NII beats estimates
 
 - Time: 2026-11-03 16:46 IST
 - Source: Moneycontrol
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 71cb6aa81f09
 - Second-order candidates: 
 
-## 11. [7 HIGH] ICICI Bank Limited: Allotment of Securities
+## 12. [7 HIGH] ICICI Bank Limited: Allotment of Securities
 
 - Time: 2026-11-03 14:22 IST
 - Source: NSE announcements
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9f15cab446d1
 - Second-order candidates: Winner: none - routine allotment of equity shares (almost certainly employee stock options), a filing rather than news. / Losers: none clear - dilution of 62,879 shares is negligible against the share count. / Catalyst: unknown - routine filing, no event ahead. / Thesis fit: open thesis icici-bank-recovery: neither supports nor weakens (no effect on NPAs or flows)
 
-## 12. [7 HIGH] ITC shares gain modestly after Q2 results; analysts split on outlook
+## 13. [7 HIGH] ITC shares gain modestly after Q2 results; analysts split on outlook
 
 - Time: 2026-11-03 13:07 IST
 - Source: BusinessLine
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: d63a37ed6be1
 - Second-order candidates: Winner: ITC - cigarette volumes and pricing held up; the modest rise means results were largely priced in. / Losers: none clear - analyst split on outlook, no evidence of share loss by a named peer. / Catalyst: surprise (already happened) - results are out and priced in, nothing ahead to position for. / Thesis fit: none (no draft: priced-in result)
 
-## 13. [7 HIGH] ITC gains modestly after Q2 results; analysts split on outlook
+## 14. [7 HIGH] ITC gains modestly after Q2 results; analysts split on outlook
 
 - Time: 2026-11-03 12:49 IST
 - Source: BusinessLine
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: a2b34bfea3d0
 - Second-order candidates: Winner: ITC - cigarettes volume/pricing held up, but the muted move shows the result was largely priced in; no clear mechanism for a larger re-rating. / Losers: none clear - analysts split, no competitor named as losing share. / Catalyst: surprise (results already out) - event is past, nothing dated ahead. / Thesis fit: none
 
-## 14. [7 HIGH] ICICI Bank Limited: Allotment of 62879 Shares.
+## 15. [7 HIGH] ICICI Bank Limited: Allotment of 62879 Shares.
 
 - Time: 2026-11-03 10:24 IST
 - Source: NSE announcements
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 7
 - Alert id: a59fe8f80233
 - Second-order candidates: False match: routine ESOP allotment (about 0.001% of equity), no business information; not a catalyst. Open thesis icici-bank-recovery unaffected.
-
-## 15. [7 HIGH] Dividend alert! Last day to buy Asian Paints, Coal India and 6 more stocks for dividend payout worth nearly Rs 31. Do you own any?
-
-- Time: 2026-11-03 08:07 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/dividend-alert-last-day-to-buy-asian-paints-coal-india-and-6-more-stocks-for-dividend-payout-worth-nearly-rs-31-do-you-own-any/articleshow/135479314.cms
-- Matched symbols: ASIANPAINT, COALINDIA
-- Keywords: dividend
-- Thesis match: none
-- Score: 7
-- Alert id: e6ee93bfbac9
-- Second-order candidates: Winner: none - a cum-dividend date is mechanical; holders get the payout and the price drops by about that amount at ex-date, so no net gain. / Losers: none clear - the ex-date price adjustment is expected (COALINDIA, ASIANPAINT), not a loss caused by a new fact. / Catalyst: scheduled - ex-dividend date 4 Nov; nothing tradable beyond a known, priced-in adjustment. / Thesis fit: none
