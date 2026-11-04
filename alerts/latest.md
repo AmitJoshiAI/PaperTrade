@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-04 11:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 2 moving.
+Generated 2026-11-04 13:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -39,7 +39,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 06ad1ea46d52
-- Second-order candidates: 
+- Second-order candidates: False match: multi-company results live blog (same stream as 6bcae346555a); no single-company mechanism. Individual results to be noted when filed.
 
 ## 4. [8 HIGH] Q2 Results Today Live: BSE, Cummins, Zydus Lifesciences, Apollo, Lenskart, Nykaa, Aurobindo Pharma, NHPC, Dabur, Torrent Power, Biocon, Sundaram Finance, Premier Energies, Physicswallah Share to announce Q2 results, SBI, Emcure, Awfis shares gain after Q2 results, MCX, Bata decline, Bajaj Finserv, NSE flat
 
@@ -77,19 +77,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fb5b2bf73b55
 - Second-order candidates: False match: round-up live blog of many results (same stream as 5040b9b8e23e); SBI PAT +14% is the only item with a stated figure, and the SBI/Bajaj Finserv results are already out, so no pre-event position is possible.
 
-## 7. [8 HIGH] Q2 Results Today Live: Zydus Wellness shares up as Q2 profit rise, SBI, NSE, Bajaj Finserv, Solar Ind, Fortis, Gujarat Fluoro, Bajaj Holdings, Lloyds Metals, Lupin, MCX, Emcure Pharma, AIA Engineering to announce Q2 results
+## 7. [7 HIGH] HINDPETRO +4.0% vs previous close (close 362.1, bar 2026-11-04)
 
-- Time: 2026-11-03 12:45 IST
+- Time: 2026-11-04 13:53 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/HINDPETRO.NS
+- Matched symbols: HINDPETRO (moving today: HINDPETRO)
+- Keywords: price move
+- Thesis match: crude-ongc-vs-hpcl (open)
+- Score: 7
+- Alert id: ea1a5de6b1d4
+- Second-order candidates: 
+
+## 8. [7 HIGH] BEL shares climb 3% as brokerages back post-results recovery
+
+- Time: 2026-11-04 12:49 IST
 - Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-sbi-nse-bajaj-finserv-solar-ind-bajaj-holdings-lloyds-metals-lupin-mcx-emcure-aia-engineering-zydus-wellness-itc-marico-mobikwik-results-03-november-2026/article71656322.ece
-- Matched symbols: BAJAJFINSV, SBIN
+- Link: https://www.thehindubusinessline.com/markets/stock-markets/bel-shares-climb-3-as-brokerages-back-post-results-recovery/article71664488.ece
+- Matched symbols: BEL (moving today: BEL)
 - Keywords: results
 - Thesis match: none
-- Score: 8
-- Alert id: 5040b9b8e23e
-- Second-order candidates: False match: live-blog round-up of the same results day already noted under 920f0d66cbb8; no single company event to trade.
+- Score: 7
+- Alert id: bcc805d80bee
+- Second-order candidates: 
 
-## 8. [7 HIGH] SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off gains
+## 9. [7 HIGH] SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off gains
 
 - Time: 2026-11-04 09:58 IST
 - Source: Moneycontrol
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 54dce75a56fd
 - Second-order candidates: Winner: SBIN - brokerages cite margin and asset-quality improvement, offset by one-off gains in reported profit. / Losers: none clear - an outlook piece, no competitive shift. / Catalyst: surprise, already happened - post-results commentary; no further dated event. / Thesis fit: none
 
-## 9. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant, setting up of new businesses and ESOP scheme".
+## 10. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant, setting up of new businesses and ESOP scheme".
 
 - Time: 2026-11-04 00:23 IST
 - Source: NSE announcements
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 0d3da57eefa8
 - Second-order candidates: Winner: HEG - anode plant expansion moves it into battery materials, a business separate from graphite electrodes; details are in the PDF, not checked here. / Losers: none clear - no named competitor or listed anode supplier is identified in the headline. / Catalyst: surprise, already happened - announced 2026-11-04 00:23 IST; plant commissioning dates are not stated in the headline. / Thesis fit: none
 
-## 10. [7 HIGH] HEG Advanced Materials Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
+## 11. [7 HIGH] HEG Advanced Materials Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
 
 - Time: 2026-11-04 00:21 IST
 - Source: BSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5172fa70067f
 - Second-order candidates: False match: duplicate filings of the same HEG press release already noted under 0d3da57eefa8; nothing new.
 
-## 11. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant and setting up of new businesses.".
+## 12. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant and setting up of new businesses.".
 
 - Time: 2026-11-04 00:04 IST
 - Source: NSE announcements
@@ -135,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 5ca1c500e740
-- Second-order candidates: 
+- Second-order candidates: False match: duplicate filing of the HEG press release already noted under 0d3da57eefa8; nothing new.
 
-## 12. [7 HIGH] Dreamfolks Services Limited: Board of Director of Dreamfolks Services Limited has approved the proposal to provide security by way of fixed deposits of INR 5.5 crore each to ICICI Bank Limited and AU Small Finance Bank Limited, to secure the obligations of Ten 11 Hospitality Private Limited (formerly known as Ten 11 Hospitality LLP ) ( Ten 11 ), subsidiary of the Company, in connection with overdraft facilities backed by Fixed Deposits to be availed by Ten 11, as per the facility documents.
+## 13. [7 HIGH] Dreamfolks Services Limited: Board of Director of Dreamfolks Services Limited has approved the proposal to provide security by way of fixed deposits of INR 5.5 crore each to ICICI Bank Limited and AU Small Finance Bank Limited, to secure the obligations of Ten 11 Hospitality Private Limited (formerly known as Ten 11 Hospitality LLP ) ( Ten 11 ), subsidiary of the Company, in connection with overdraft facilities backed by Fixed Deposits to be availed by Ten 11, as per the facility documents.
 
 - Time: 2026-11-03 17:02 IST
 - Source: NSE announcements
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b890379e2bbf
 - Second-order candidates: False match: routine collateral for a subsidiary's overdraft facility; ICICI Bank is only the lender, no effect on the bank. Open thesis icici-bank-recovery unaffected.
 
-## 13. [7 HIGH] Live: Nifty above 23,700; Capital market stocks gain, SBI falls after Q2 | Closing Bell
+## 14. [7 HIGH] Live: Nifty above 23,700; Capital market stocks gain, SBI falls after Q2 | Closing Bell
 
 - Time: 2026-11-03 16:46 IST
 - Source: Moneycontrol
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5252d5dad8c8
 - Second-order candidates: False match: market-wide closing-bell video; the SBI Q2 event is already noted under 71cb6aa81f09, no new mechanism.
 
-## 14. [7 HIGH] SBI Q2 results: Net profit rises 14% to Rs 23,038 crore, aided by exceptional gain; NII beats estimates
+## 15. [7 HIGH] SBI Q2 results: Net profit rises 14% to Rs 23,038 crore, aided by exceptional gain; NII beats estimates
 
 - Time: 2026-11-03 16:46 IST
 - Source: Moneycontrol
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 7
 - Alert id: 71cb6aa81f09
 - Second-order candidates: Winner: SBIN - NII beat shows margin and loan-book strength, but the headline profit is flattered by an exceptional gain, which is why the stock fell on the day. / Losers: none clear - no competitor is named as losing share; peer PSU banks report separately. / Catalyst: surprise, already happened - results out 2026-11-03 and priced on the day; nothing dated ahead. / Thesis fit: none
-
-## 15. [7 HIGH] ICICI Bank Limited: Allotment of Securities
-
-- Time: 2026-11-03 14:22 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/ALTERATION_OF_CAPITAL_AND_FUND_RAISING_1606_WebXMLFile_20261103_142216083.xml
-- Matched symbols: ICICIBANK
-- Keywords: none
-- Thesis match: icici-bank-recovery (open)
-- Score: 7
-- Alert id: 9f15cab446d1
-- Second-order candidates: Winner: none - routine allotment of equity shares (almost certainly employee stock options), a filing rather than news. / Losers: none clear - dilution of 62,879 shares is negligible against the share count. / Catalyst: unknown - routine filing, no event ahead. / Thesis fit: open thesis icici-bank-recovery: neither supports nor weakens (no effect on NPAs or flows)
