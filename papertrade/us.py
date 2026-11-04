@@ -122,7 +122,7 @@ def _instrument(o) -> str:
 
 
 def needed_tickers(book: UsBook, orders: list) -> list[str]:
-    t = {REF_TICKER} | {p.underlying for p in book.positions.values()}
+    t = {REF_TICKER} | {p.underlying for p in book.positions.values()} | set(config.US_CANDIDATE_TICKERS)
     for o in orders:
         try:
             t.add(_ticker(o.get("underlying") or str(o.get("position", "")).split(":")[0]))
@@ -388,6 +388,15 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
             market.mark(p, market_day)
         except (NotYet, Reject) as e:
             warnings.append(f"{p.id}: not marked today ({e}); valued at its last mark {p.mark}")
+    cands = None
+    if do_update:               # candidates need live chains (candidates.py); an offline run keeps the last file
+        try:
+            from .candidates import build_us, save as save_cands
+            cands = build_us(market, book, market_day)
+            save_cands(config.US_CANDIDATES_FILE, cands)
+        except Exception as e:
+            log.exception("US candidates failed")
+            warnings.append(f"US candidates could not be built ({e})")
     warnings += market.warnings
     if book.start_date is None:
         book.start_date = market_day
@@ -406,7 +415,7 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
     except NotYet:
         pass
     return dict(date=market_day, book=book, fills=fills, notes=notes, warnings=warnings, equity=eq,
-                orders=keep, spots=spots)
+                orders=keep, spots=spots, candidates=cands, offline=not do_update)
 
 
 def journal_lines(s: dict) -> list[str]:

@@ -363,7 +363,7 @@
   "journal": {
     "date": "2026-11-04",
     "file": "journal/2026-11-04.md",
-    "markdown": "# Daily review - 2026-11-04\n\n## Scorecard\n\n| Metric | Value |\n|---|---|\n| Equity | Rs 512,427 |\n| Day P&L | Rs -961 |\n| Total P&L since start | Rs 12,427 |\n| Trading days recorded | 14 |\n| Avg P&L per day | Rs 888 (target pre-tax Rs 1,250, net Rs 1,000) |\n| Max drawdown | -2.85% |\n| Charges paid to date | Rs 1,280 |\n| Closed trades / win rate | 3 / 0% |\n| Cash / invested | Rs 1,202 / Rs 511,225 |\n\n## Open positions\n\n| Symbol | Qty | Avg cost | Close | Unrealised | Stop | Entry |\n|---|---|---|---|---|---|---|\n| KOTAKBANK | 221 | 449.45 | 459.40 | Rs 2,198 (+2.2%) | 417.50 | 2026-10-16 |\n| DRREDDY | 81 | 1,224.06 | 1,374.00 | Rs 12,145 (+12.2%) | 1,137.03 | 2026-10-16 |\n| TECHM | 53 | 1,840.50 | 1,783.00 | Rs -3,048 (-3.1%) | 1,709.64 | 2026-10-23 |\n| HCLTECH | 69 | 1,412.37 | 1,405.00 | Rs -509 (-0.5%) | 1,311.95 | 2026-10-27 |\n| ADANIPORTS | 56 | 1,745.94 | 1,910.00 | Rs 9,187 (+9.4%) | 1,621.80 | 2026-10-27 |\n\n## Fills today\n\nNo fills.\n\n## Orders proposed for next session (fill at next open)\n\nNo orders. Hold.\n\n## Market snapshot (top 10 by momentum, trend-filtered)\n\n| Rank | Symbol | Close | 63d return | SMA20 | SMA50 | Held |\n|---|---|---|---|---|---|---|\n| 1 | DRREDDY | 1,374.00 | +17.2% | 1,271 | 1,217 | yes |\n| 2 | KOTAKBANK | 459.40 | +15.4% | 445 | 427 | yes |\n| 3 | ADANIPORTS | 1,910.00 | +11.9% | 1,778 | 1,754 | yes |\n| 4 | ETERNAL | 344.50 | +10.3% | 327 | 327 |  |\n| 5 | TECHM | 1,783.00 | +8.2% | 1,703 | 1,619 | yes |\n| 6 | BHARTIARTL | 2,067.60 | +4.9% | 1,902 | 1,863 |  |\n| 7 | WIPRO | 194.55 | +4.4% | 182 | 174 |  |\n| 8 | HCLTECH | 1,405.00 | +2.6% | 1,360 | 1,304 | yes |\n| 9 | TCS | 2,436.00 | -1.0% | 2,388 | 2,275 |  |\n| 10 | TRENT | 3,060.00 | -1.5% | 2,910 | 2,836 |  |\n\nEligible names passing trend filter: 12 of 50.\n\n## Automatic observations\n\n- Only 14 trading day(s) recorded. Nothing here is statistically meaningful yet; the first honest read is at ~60 days.\n- Average P&L per trading day is Rs 888 against a pre-tax target of Rs 1,250 (gap Rs 362/day).\n- Reality check: Rs 1,250/day pre-tax on Rs 500,000 capital needs ~62% per year. Nifty's long-run average is ~12-14%.\n\n## Thesis sleeve\n\nSeparate book: Rs 500,000 starting capital, macro/economic theses held weeks to years. Weekly review every Friday (THESIS_REVIEW.md). Not part of the Rs 1,250/day target.\n\n| Metric | Value |\n|---|---|\n| Sleeve equity | Rs 495,119 |\n| Total P&L since start | Rs -4,881 (-0.98%) |\n| Cash / invested | Rs 394,752 / Rs 100,367 |\n| Charges paid / realised P&L | Rs 345 / Rs -5,201 |\n| Paper short notional | Rs 66,309 of Rs 247,559 limit (50% of capital). PAPER SHORT: needs F&O to execute |\n| Combined equity (momentum + thesis) | Rs 1,007,546 of Rs 1,000,000 paper capital |\n\n### Open theses\n\n| Thesis | Symbol | Qty | Avg cost | Close | Unrealised | Days held | Horizon | To target | To invalidation |\n|---|---|---|---|---|---|---|---|---|---|\n| icici-bank-recovery | ICICIBANK | 71 | 1,407.37 | 1,424.10 | Rs 1,188 (+1.2%) | 16 | 3-6 months | +12.4% (1,600.00) | -7.3% (1,320.00) |\n\nProposed, not yet bought: bajaj-finance-rbi-december (BAJFINANCE, close 994.00)\n\n### Second-order theses (winner vs losers)\n\n**crude-ongc-vs-hpcl** (open): Rising crude and a weak rupee lift the rupee realisation of an oil producer (ONGC) and squeeze the marketing margin of a refiner-marketer that cannot pass pump prices through quickly (HPCL). Long the winner, paper-short the loser.\n\nEvent: Crude price rise plus rupee weakness through September-October 2026 (analyst commentary, 3-15 Oct 2026); not a single-day event, so the rule is time-boxed on 2026-10-16 (19 days ago, rule due after 2026-12-15). Post-event rule: close both legs at the next open after 2026-12-15; close earlier if Brent falls back to its 15 Oct 2026 level for five consecutive sessions, or if HPCL wins back half of its underperformance versus ONGC since entry (the market has rejected the link). Applied: -.\n\n| Role | Leg | Side | Weight | Qty | Avg cost | Close | Unrealised | Realised | Rationale |\n|---|---|---|---|---|---|---|---|---|---|\n| winner | ONGC | LONG | 0.5 | 279 | 223.37 | 235.00 | Rs 3,243 (+5.2%) | Rs 0 | sells crude at prices linked to Brent; a higher dollar price and a weaker rupee both raise its rupee revenue per barrel |\n| loser | HINDPETRO | SHORT (PAPER SHORT: needs F&O to execute) | 0.5 | -181 | 343.63 | 366.35 | Rs -4,112 (-6.6%) | Rs 0 | buys crude in dollars and sells petrol and diesel at pump prices that move slowly; higher crude plus a weaker rupee compresses its marketing margin until prices are allowed to catch up. HINDPETRO is on the NSE F&O list, so this short could be executed with a stock future. |\n\nCombined P&L of the thesis: Rs -868 (unrealised Rs -868, realised Rs 0). Gross exposure Rs 131,874 (cap 25% of the sleeve).\n\n### Catalyst theses\n\n| Thesis | Symbol | Status | Event | Event date | Days to event | Post-event rule | Applied |\n|---|---|---|---|---|---|---|---|\n| bajaj-finance-rbi-december | BAJFINANCE | proposed | RBI Monetary Policy Committee decision, December 2026 meeting (exact date to be confirmed from the RBI calendar; estimated 4 Dec 2026) | 2026-12-04 | in 30 | hold if close on decision day > entry price, then trail stop 5% from the highest close; otherwise sell at next open | - |\n\n### Thesis fills today\n\nNo thesis fills.\n\n### Thesis orders queued for the next open\n\n| Side | Thesis | Qty / amount | Decided | Reason |\n|---|---|---|---|---|\n| BUY | bajaj-finance-rbi-december | Rs 75,000 | 2026-11-19 | opening catalyst: positioned two weeks before the December RBI decision |\n\n## India F&O sleeve\n\nSeparate book: Rs 500,000, NIFTY / BANKNIFTY and listed stock futures and options. Options and futures are mark-to-model (Black-Scholes / carry), not market quotes. Decisions by the daily reviewer (ROUTINE_PROMPT.md); limits in RISK_LIMITS.md.\n\n| Metric | Value |\n|---|---|\n| Sleeve equity | Rs 500,000.00 |\n| Day P&L | Rs 0.00 |\n| Total P&L since start | Rs 0.00 (+0.00%) |\n| Cash / margin used | Rs 500,000.00 / Rs 0.00 |\n| Charges paid / realised P&L | Rs 0.00 / Rs 0.00 |\n| Open positions | 0 of 5 |\n| Circuit breaker | off (trips on a day loss over 3% of starting capital) |\n| Market | NIFTY 23,960.60, BANKNIFTY 55,913.60, INDIAVIX 15.19 |\n\n### Positions\n\nNone. The sleeve is all cash.\n\n### Fills today\n\nNo fills.\n\n### Orders queued\n\nNone.\n\n## US sleeve\n\nSeparate book: Rs 500,000 = $5,289.62 at USD/INR 94.5248 (close of 2026-10-16). INR values use each day's USD/INR (Yahoo USDINR=X daily close, state/fx_rates.csv). US stocks/ETFs long and paper-short, US options priced from the real option chain (mid of bid/ask); a Black-Scholes fallback is labelled. US market date 2026-11-03 (US calendar). Every short stock: PAPER SHORT: not possible from India (LRS). Limits in RISK_LIMITS.md.\n\n| Metric | Value |\n|---|---|\n| Sleeve equity | $ 5,289.62 (Rs 501,061) |\n| Day P&L | $ -0.00 (Rs -0) |\n| Total P&L since start | $ 0.00 (+0.00%) |\n| USD/INR used today | 94.7254 (Yahoo USDINR=X close of 2026-11-03) |\n| Total P&L in INR | Rs 1,061.10, of which FX Rs 1,061.10 (start rate 94.5248) |\n| Day P&L in INR | Rs -950.01, of which FX Rs -950.02 |\n| Cash / margin used | $ 5,289.62 / $ 0.00 |\n| Charges paid / realised P&L | $ 0.00 / $ 0.00 |\n| Open positions | 0 of 5 |\n| Circuit breaker | off (trips on a day loss over 3% of starting capital) |\n| Market | SPY 754.35 |\n\n### Positions\n\nNone. The sleeve is all cash.\n\n### Fills today\n\nNo fills.\n\n### Orders queued\n\nNone.\n\n## All sleeves\n\n| Sleeve | Capital | Equity | P&L |\n|---|---|---|---|\n| Momentum | Rs 500,000 | Rs 512,427 | Rs +12,427 |\n| Thesis | Rs 500,000 | Rs 495,119 | Rs -4,881 |\n| India F&O | Rs 500,000 | Rs 500,000 | Rs +0 |\n| US (at USD/INR 94.7254, close of 2026-11-03) | Rs 500,000 | Rs 501,061 | Rs +1,061 |\n| **Combined** | Rs 2,000,000 | **Rs 2,008,607** | Rs +8,607 (+0.43%) |\n\nUSD/INR 94.7254: Yahoo USDINR=X close of 2026-11-03. Of the US sleeve's INR P&L, Rs +1,061.10 is FX (start rate 94.5248). Check against the RBI/FBIL reference rate (https://www.fbil.org.in/); they differ by a few paise.\n\n## Claude's review\n\n_To be filled by Claude after reading the numbers above: what went right, what went wrong, whether any rule should change, and what to watch tomorrow. Rule changes are logged in CHANGELOG.md, never applied silently._\n"
+    "markdown": "# Daily review - 2026-11-04\n\n## Scorecard\n\n| Metric | Value |\n|---|---|\n| Equity | Rs 512,427 |\n| Day P&L | Rs -961 |\n| Total P&L since start | Rs 12,427 |\n| Trading days recorded | 14 |\n| Avg P&L per day | Rs 888 (target pre-tax Rs 1,250, net Rs 1,000) |\n| Max drawdown | -2.85% |\n| Charges paid to date | Rs 1,280 |\n| Closed trades / win rate | 3 / 0% |\n| Cash / invested | Rs 1,202 / Rs 511,225 |\n\n## Open positions\n\n| Symbol | Qty | Avg cost | Close | Unrealised | Stop | Entry |\n|---|---|---|---|---|---|---|\n| KOTAKBANK | 221 | 449.45 | 459.40 | Rs 2,198 (+2.2%) | 417.50 | 2026-10-16 |\n| DRREDDY | 81 | 1,224.06 | 1,374.00 | Rs 12,145 (+12.2%) | 1,137.03 | 2026-10-16 |\n| TECHM | 53 | 1,840.50 | 1,783.00 | Rs -3,048 (-3.1%) | 1,709.64 | 2026-10-23 |\n| HCLTECH | 69 | 1,412.37 | 1,405.00 | Rs -509 (-0.5%) | 1,311.95 | 2026-10-27 |\n| ADANIPORTS | 56 | 1,745.94 | 1,910.00 | Rs 9,187 (+9.4%) | 1,621.80 | 2026-10-27 |\n\n## Fills today\n\nNo fills.\n\n## Orders proposed for next session (fill at next open)\n\nNo orders. Hold.\n\n## Market snapshot (top 10 by momentum, trend-filtered)\n\n| Rank | Symbol | Close | 63d return | SMA20 | SMA50 | Held |\n|---|---|---|---|---|---|---|\n| 1 | DRREDDY | 1,374.00 | +17.2% | 1,271 | 1,217 | yes |\n| 2 | KOTAKBANK | 459.40 | +15.4% | 445 | 427 | yes |\n| 3 | ADANIPORTS | 1,910.00 | +11.9% | 1,778 | 1,754 | yes |\n| 4 | ETERNAL | 344.50 | +10.3% | 327 | 327 |  |\n| 5 | TECHM | 1,783.00 | +8.2% | 1,703 | 1,619 | yes |\n| 6 | BHARTIARTL | 2,067.60 | +4.9% | 1,902 | 1,863 |  |\n| 7 | WIPRO | 194.55 | +4.4% | 182 | 174 |  |\n| 8 | HCLTECH | 1,405.00 | +2.6% | 1,360 | 1,304 | yes |\n| 9 | TCS | 2,436.00 | -1.0% | 2,388 | 2,275 |  |\n| 10 | TRENT | 3,060.00 | -1.5% | 2,910 | 2,836 |  |\n\nEligible names passing trend filter: 12 of 50.\n\n## Automatic observations\n\n- Only 14 trading day(s) recorded. Nothing here is statistically meaningful yet; the first honest read is at ~60 days.\n- Average P&L per trading day is Rs 888 against a pre-tax target of Rs 1,250 (gap Rs 362/day).\n- Reality check: Rs 1,250/day pre-tax on Rs 500,000 capital needs ~62% per year. Nifty's long-run average is ~12-14%.\n\n## Thesis sleeve\n\nSeparate book: Rs 500,000 starting capital, macro/economic theses held weeks to years. Weekly review every Friday (THESIS_REVIEW.md). Not part of the Rs 1,250/day target.\n\n| Metric | Value |\n|---|---|\n| Sleeve equity | Rs 495,119 |\n| Total P&L since start | Rs -4,881 (-0.98%) |\n| Cash / invested | Rs 394,752 / Rs 100,367 |\n| Charges paid / realised P&L | Rs 345 / Rs -5,201 |\n| Paper short notional | Rs 66,309 of Rs 247,559 limit (50% of capital). PAPER SHORT: needs F&O to execute |\n| Combined equity (momentum + thesis) | Rs 1,007,546 of Rs 1,000,000 paper capital |\n\n### Open theses\n\n| Thesis | Symbol | Qty | Avg cost | Close | Unrealised | Days held | Horizon | To target | To invalidation |\n|---|---|---|---|---|---|---|---|---|---|\n| icici-bank-recovery | ICICIBANK | 71 | 1,407.37 | 1,424.10 | Rs 1,188 (+1.2%) | 16 | 3-6 months | +12.4% (1,600.00) | -7.3% (1,320.00) |\n\nProposed, not yet bought: bajaj-finance-rbi-december (BAJFINANCE, close 994.00)\n\n### Second-order theses (winner vs losers)\n\n**crude-ongc-vs-hpcl** (open): Rising crude and a weak rupee lift the rupee realisation of an oil producer (ONGC) and squeeze the marketing margin of a refiner-marketer that cannot pass pump prices through quickly (HPCL). Long the winner, paper-short the loser.\n\nEvent: Crude price rise plus rupee weakness through September-October 2026 (analyst commentary, 3-15 Oct 2026); not a single-day event, so the rule is time-boxed on 2026-10-16 (19 days ago, rule due after 2026-12-15). Post-event rule: close both legs at the next open after 2026-12-15; close earlier if Brent falls back to its 15 Oct 2026 level for five consecutive sessions, or if HPCL wins back half of its underperformance versus ONGC since entry (the market has rejected the link). Applied: -.\n\n| Role | Leg | Side | Weight | Qty | Avg cost | Close | Unrealised | Realised | Rationale |\n|---|---|---|---|---|---|---|---|---|---|\n| winner | ONGC | LONG | 0.5 | 279 | 223.37 | 235.00 | Rs 3,243 (+5.2%) | Rs 0 | sells crude at prices linked to Brent; a higher dollar price and a weaker rupee both raise its rupee revenue per barrel |\n| loser | HINDPETRO | SHORT (PAPER SHORT: needs F&O to execute) | 0.5 | -181 | 343.63 | 366.35 | Rs -4,112 (-6.6%) | Rs 0 | buys crude in dollars and sells petrol and diesel at pump prices that move slowly; higher crude plus a weaker rupee compresses its marketing margin until prices are allowed to catch up. HINDPETRO is on the NSE F&O list, so this short could be executed with a stock future. |\n\nCombined P&L of the thesis: Rs -868 (unrealised Rs -868, realised Rs 0). Gross exposure Rs 131,874 (cap 25% of the sleeve).\n\n### Catalyst theses\n\n| Thesis | Symbol | Status | Event | Event date | Days to event | Post-event rule | Applied |\n|---|---|---|---|---|---|---|---|\n| bajaj-finance-rbi-december | BAJFINANCE | proposed | RBI Monetary Policy Committee decision, December 2026 meeting (exact date to be confirmed from the RBI calendar; estimated 4 Dec 2026) | 2026-12-04 | in 30 | hold if close on decision day > entry price, then trail stop 5% from the highest close; otherwise sell at next open | - |\n\n### Thesis fills today\n\nNo thesis fills.\n\n### Thesis orders queued for the next open\n\n| Side | Thesis | Qty / amount | Decided | Reason |\n|---|---|---|---|---|\n| BUY | bajaj-finance-rbi-december | Rs 75,000 | 2026-11-19 | opening catalyst: positioned two weeks before the December RBI decision |\n\n## India F&O sleeve\n\nSeparate book: Rs 500,000, NIFTY / BANKNIFTY and listed stock futures and options. Options and futures are mark-to-model (Black-Scholes / carry), not market quotes. Decisions by the daily reviewer (ROUTINE_PROMPT.md); limits in RISK_LIMITS.md.\n\n| Metric | Value |\n|---|---|\n| Sleeve equity | Rs 500,000.00 |\n| Day P&L | Rs 0.00 |\n| Total P&L since start | Rs 0.00 (+0.00%) |\n| Cash / margin used | Rs 500,000.00 / Rs 0.00 |\n| Charges paid / realised P&L | Rs 0.00 / Rs 0.00 |\n| Open positions | 0 of 5 |\n| Circuit breaker | off (trips on a day loss over 3% of starting capital) |\n| Market | NIFTY 23,960.60, BANKNIFTY 55,913.60, INDIAVIX 15.19 |\n\n### Positions\n\nNone. The sleeve is all cash.\n\n### Fills today\n\nNo fills.\n\n### Orders queued\n\nNone.\n\n## F&O candidates\n\nFor the reviewer (ROUTINE_PROMPT.md step 5c). Close of 2026-11-04. Sleeve equity Rs 500,000; the 10% per-order limit is Rs 50,000; free cash Rs 500,000; open positions 0 of 5; circuit breaker off; India VIX 15.17.\n\nPricing source on every row: **real NSE chain (mid)** = mid of NSE's best bid/ask at the chain's timestamp; **model (BS on NSE chain IV)** = one-sided quote, Black-Scholes on the chain's implied vol; **model (BS on VIX / realised vol)** = no chain today. These are close prices, not fills: an order fills at the next NSE open at the model price (Black-Scholes on the latest chain IV, +1% buy / -1% sell). Write the numeric strikes and the exact expiry date shown here in the order (\"ATM\" is re-resolved at the fill-day open). PASS/FAIL mirrors the engine's checks: each long leg's premium <= 10% of equity (the short leg of a debit spread is covered, margin 0), free cash covers the long premiums plus entry charges, the legs fit the free position slots. Max loss includes entry charges, not exit charges.\n\n- Built by candidates.build_fno directly, not by the daily run: Yahoo's daily bars ended 2026-11-03 at 00:10 IST 5 Nov, so 4 Nov spots come from Yahoo's 15-minute bars (they equal NSE's chain values).\n\n### NIFTY (index, lot 65)\n\nSpot 23,960.60 (Yahoo close 2026-11-04); NSE chain underlying 23,960.60 at 04-Nov-2026 15:40:00 (NSE option-chain-v3).\n\n**Weekly expiry 2026-11-09** (5 days), ATM 23,950, chain ATM IV 15.02%\n\n| Strike | CE / unit | CE per lot | CE % eq | PE / unit | PE per lot | PE % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 23,850 (ATM-2) | 194.78 | Rs 12,661 | 2.53% | 136.50 | Rs 8,872 | 1.77% | real NSE chain (mid) |\n| 23,900 (ATM-1) | 168.72 | Rs 10,967 | 2.19% | 160.30 | Rs 10,420 | 2.08% | real NSE chain (mid) |\n| 23,950 (ATM) | 146.00 | Rs 9,490 | 1.90% | 186.97 | Rs 12,153 | 2.43% | real NSE chain (mid) |\n| 24,000 (ATM+1) | 125.28 | Rs 8,143 | 1.63% | 215.95 | Rs 14,037 | 2.81% | real NSE chain (mid) |\n| 24,050 (ATM+2) | 106.55 | Rs 6,926 | 1.39% | 247.15 | Rs 16,065 | 3.21% | real NSE chain (mid) |\n\n| Structure (1 lot) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CE 23,950 + SELL CE 24,050 (2026-11-09) | Rs 2,564 | Rs 2,629 | Rs 3,871 | 23,989.45 | Rs 9,490 = 1.9% PASS | needs Rs 9,518 PASS | PASS (up to 5 lots) |\n| Bear put spread | BUY PE 23,950 + SELL PE 23,850 (2026-11-09) | Rs 3,281 | Rs 3,350 | Rs 3,150 | 23,899.53 | Rs 12,153 = 2.4% PASS | needs Rs 12,182 PASS | PASS (up to 4 lots) |\n| Long straddle | BUY CE 23,950 + BUY PE 23,950 (2026-11-09) | Rs 21,643 | Rs 21,700 | unlimited | 23,617.03 / 24,282.97 | Rs 12,153 = 2.4% PASS | needs Rs 21,700 PASS | PASS (up to 4 lots) |\n\n**Monthly expiry 2026-11-23** (19 days), ATM 23,950, chain ATM IV 13.22%\n\n| Strike | CE / unit | CE per lot | CE % eq | PE / unit | PE per lot | PE % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 23,850 (ATM-2) | 346.75 | Rs 22,539 | 4.51% | 245.75 | Rs 15,974 | 3.19% | real NSE chain (mid) |\n| 23,900 (ATM-1) | 317.80 | Rs 20,657 | 4.13% | 265.95 | Rs 17,287 | 3.46% | real NSE chain (mid) |\n| 23,950 (ATM) | 291.70 | Rs 18,960 | 3.79% | 288.95 | Rs 18,782 | 3.76% | real NSE chain (mid) |\n| 24,000 (ATM+1) | 264.90 | Rs 17,218 | 3.44% | 312.48 | Rs 20,311 | 4.06% | real NSE chain (mid) |\n| 24,050 (ATM+2) | 240.25 | Rs 15,616 | 3.12% | 337.95 | Rs 21,967 | 4.39% | real NSE chain (mid) |\n\n| Structure (1 lot) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CE 23,950 + SELL CE 24,050 (2026-11-23) | Rs 3,344 | Rs 3,430 | Rs 3,070 | 24,001.45 | Rs 18,960 = 3.8% PASS | needs Rs 18,993 PASS | PASS (up to 2 lots) |\n| Bear put spread | BUY PE 23,950 + SELL PE 23,850 (2026-11-23) | Rs 2,808 | Rs 2,894 | Rs 3,606 | 23,906.8 | Rs 18,782 = 3.8% PASS | needs Rs 18,814 PASS | PASS (up to 2 lots) |\n| Long straddle | BUY CE 23,950 + BUY PE 23,950 (2026-11-23) | Rs 37,742 | Rs 37,806 | unlimited | 23,369.35 / 24,530.65 | Rs 18,960 = 3.8% PASS | needs Rs 37,806 PASS | PASS (up to 2 lots) |\n\n### BANKNIFTY (index, lot 30)\n\nSpot 55,913.60 (Yahoo close 2026-11-04); NSE chain underlying 55,913.60 at 04-Nov-2026 15:40:00 (NSE option-chain-v3).\n\n**Monthly expiry 2026-11-23** (19 days), ATM 55,900, chain ATM IV 13.74%\n\n| Strike | CE / unit | CE per lot | CE % eq | PE / unit | PE per lot | PE % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 55,700 (ATM-2) | 867.50 | Rs 26,025 | 5.21% | 574.30 | Rs 17,229 | 3.45% | real NSE chain (mid) |\n| 55,800 (ATM-1) | 808.65 | Rs 24,260 | 4.85% | 618.20 | Rs 18,546 | 3.71% | real NSE chain (mid) |\n| 55,900 (ATM) | 753.50 | Rs 22,605 | 4.52% | 661.42 | Rs 19,843 | 3.97% | real NSE chain (mid) |\n| 56,000 (ATM+1) | 697.50 | Rs 20,925 | 4.18% | 702.00 | Rs 21,060 | 4.21% | real NSE chain (mid) |\n| 56,100 (ATM+2) | 644.90 | Rs 19,347 | 3.87% | 750.95 | Rs 22,528 | 4.51% | real NSE chain (mid) |\n\n| Structure (1 lot) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CE 55,900 + SELL CE 56,100 (2026-11-23) | Rs 3,258 | Rs 3,353 | Rs 2,647 | 56,008.6 | Rs 22,605 = 4.5% PASS | needs Rs 22,639 PASS | PASS (up to 2 lots) |\n| Bear put spread | BUY PE 55,900 + SELL PE 55,700 (2026-11-23) | Rs 2,614 | Rs 2,703 | Rs 3,297 | 55,812.88 | Rs 19,843 = 4.0% PASS | needs Rs 19,875 PASS | PASS (up to 2 lots) |\n| Long straddle | BUY CE 55,900 + BUY PE 55,900 (2026-11-23) | Rs 42,448 | Rs 42,514 | unlimited | 54,485.08 / 57,314.92 | Rs 22,605 = 4.5% PASS | needs Rs 42,514 PASS | PASS (up to 2 lots) |\n\n### ONGC (stock, lot 2250) - open thesis crude-ongc-vs-hpcl\n\nSpot 235.00 (Yahoo close 2026-11-04); NSE chain underlying 235.00 at 04-Nov-2026 15:40:00 (NSE option-chain-v3).\n\n**Monthly expiry 2026-11-23** (19 days), ATM 235, chain ATM IV 23.32%\n\n| Strike | CE / unit | CE per lot | CE % eq | PE / unit | PE per lot | PE % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 230 (ATM-2) | 7.85 | Rs 17,662 | 3.53% | 2.83 | Rs 6,368 | 1.27% | real NSE chain (mid) |\n| 232.5 (ATM-1) | 6.37 | Rs 14,332 | 2.87% | 3.76 | Rs 8,460 | 1.69% | real NSE chain (mid) |\n| 235 (ATM) | 5.02 | Rs 11,295 | 2.26% | 4.95 | Rs 11,138 | 2.23% | real NSE chain (mid) |\n| 237.5 (ATM+1) | 3.94 | Rs 8,865 | 1.77% | 6.23 | Rs 14,018 | 2.80% | real NSE chain (mid) |\n| 240 (ATM+2) | 3.06 | Rs 6,885 | 1.38% | 7.53 | Rs 16,942 | 3.39% | real NSE chain (mid) |\n\n| Structure (1 lot) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CE 235 + SELL CE 240 (2026-11-23) | Rs 4,410 | Rs 4,476 | Rs 6,774 | 236.96 | Rs 11,295 = 2.3% PASS | needs Rs 11,324 PASS | PASS (up to 4 lots) |\n| Bear put spread | BUY PE 235 + SELL PE 230 (2026-11-23) | Rs 4,770 | Rs 4,834 | Rs 6,416 | 232.88 | Rs 11,138 = 2.2% PASS | needs Rs 11,166 PASS | PASS (up to 4 lots) |\n| Long straddle | BUY CE 235 + BUY PE 235 (2026-11-23) | Rs 22,432 | Rs 22,490 | unlimited | 225.03 / 244.97 | Rs 11,295 = 2.3% PASS | needs Rs 22,490 PASS | PASS (up to 4 lots) |\n\n### HINDPETRO (stock, lot 2025) - open thesis crude-ongc-vs-hpcl\n\nSpot 366.35 (Yahoo close 2026-11-04); NSE chain underlying 366.35 at 04-Nov-2026 15:40:00 (NSE option-chain-v3).\n\n**Monthly expiry 2026-11-23** (19 days), ATM 365, chain ATM IV 25.99%\n\n| Strike | CE / unit | CE per lot | CE % eq | PE / unit | PE per lot | PE % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 355 (ATM-2) | 15.65 | Rs 31,691 | 6.34% | 4.28 | Rs 8,667 | 1.73% | real NSE chain (mid) |\n| 360 (ATM-1) | 12.07 | Rs 24,442 | 4.89% | 5.82 | Rs 11,786 | 2.36% | real NSE chain (mid) |\n| 365 (ATM) | 9.25 | Rs 18,731 | 3.75% | 7.78 | Rs 15,754 | 3.15% | real NSE chain (mid) |\n| 370 (ATM+1) | 6.75 | Rs 13,669 | 2.73% | 10.43 | Rs 21,121 | 4.22% | real NSE chain (mid) |\n| 375 (ATM+2) | 5.12 | Rs 10,368 | 2.07% | 13.47 | Rs 27,277 | 5.46% | real NSE chain (mid) |\n\n| Structure (1 lot) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CE 365 + SELL CE 375 (2026-11-23) | Rs 8,363 | Rs 8,439 | Rs 11,811 | 369.13 | Rs 18,731 = 3.8% PASS | needs Rs 18,763 PASS | PASS (up to 2 lots) |\n| Bear put spread | BUY PE 365 + SELL PE 355 (2026-11-23) | Rs 7,088 | Rs 7,158 | Rs 13,092 | 361.5 | Rs 15,754 = 3.1% PASS | needs Rs 15,785 PASS | PASS (up to 3 lots) |\n| Long straddle | BUY CE 365 + BUY PE 365 (2026-11-23) | Rs 34,486 | Rs 34,548 | unlimited | 347.97 / 382.03 | Rs 18,731 = 3.8% PASS | needs Rs 34,548 PASS | PASS (up to 2 lots) |\n\n### ICICIBANK (stock, lot 700) - open thesis icici-bank-recovery\n\nSpot 1,424.10 (Yahoo close 2026-11-04); NSE chain underlying 1,424.10 at 04-Nov-2026 15:40:00 (NSE option-chain-v3).\n\n**Monthly expiry 2026-11-23** (19 days), ATM 1,420, chain ATM IV 16.88%\n\n| Strike | CE / unit | CE per lot | CE % eq | PE / unit | PE per lot | PE % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 1,400 (ATM-2) | 36.73 | Rs 25,711 | 5.14% | 12.02 | Rs 8,414 | 1.68% | real NSE chain (mid) |\n| 1,410 (ATM-1) | 30.25 | Rs 21,175 | 4.23% | 15.43 | Rs 10,801 | 2.16% | real NSE chain (mid) |\n| 1,420 (ATM) | 24.32 | Rs 17,024 | 3.40% | 19.50 | Rs 13,650 | 2.73% | real NSE chain (mid) |\n| 1,430 (ATM+1) | 19.27 | Rs 13,489 | 2.70% | 24.32 | Rs 17,024 | 3.40% | real NSE chain (mid) |\n| 1,440 (ATM+2) | 15.00 | Rs 10,500 | 2.10% | 30.02 | Rs 21,014 | 4.20% | real NSE chain (mid) |\n\n| Structure (1 lot) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CE 1,420 + SELL CE 1,440 (2026-11-23) | Rs 6,524 | Rs 6,599 | Rs 7,401 | 1,429.32 | Rs 17,024 = 3.4% PASS | needs Rs 17,055 PASS | PASS (up to 2 lots) |\n| Bear put spread | BUY PE 1,420 + SELL PE 1,400 (2026-11-23) | Rs 5,236 | Rs 5,306 | Rs 8,694 | 1,412.52 | Rs 13,650 = 2.7% PASS | needs Rs 13,680 PASS | PASS (up to 3 lots) |\n| Long straddle | BUY CE 1,420 + BUY PE 1,420 (2026-11-23) | Rs 30,674 | Rs 30,735 | unlimited | 1,376.18 / 1,463.82 | Rs 17,024 = 3.4% PASS | needs Rs 30,735 PASS | PASS (up to 2 lots) |\n\n### BAJFINANCE (stock, lot 750) - queued thesis order bajaj-finance-rbi-december (BUY 2026-11-19)\n\nSpot 994.00 (Yahoo close 2026-11-04); NSE chain underlying 994.00 at 04-Nov-2026 15:40:00 (NSE option-chain-v3).\n\n**Monthly expiry 2026-11-23** (19 days), ATM 990, chain ATM IV 24.52%\n\n| Strike | CE / unit | CE per lot | CE % eq | PE / unit | PE per lot | PE % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 970 (ATM-2) | 36.17 | Rs 27,128 | 5.43% | 12.97 | Rs 9,728 | 1.95% | real NSE chain (mid) |\n| 980 (ATM-1) | 29.73 | Rs 22,298 | 4.46% | 16.38 | Rs 12,285 | 2.46% | real NSE chain (mid) |\n| 990 (ATM) | 23.95 | Rs 17,962 | 3.59% | 20.48 | Rs 15,360 | 3.07% | real NSE chain (mid) |\n| 1,000 (ATM+1) | 18.85 | Rs 14,138 | 2.83% | 25.60 | Rs 19,200 | 3.84% | real NSE chain (mid) |\n| 1,010 (ATM+2) | 14.73 | Rs 11,048 | 2.21% | 31.55 | Rs 23,662 | 4.73% | real NSE chain (mid) |\n\n| Structure (1 lot) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CE 990 + SELL CE 1,010 (2026-11-23) | Rs 6,915 | Rs 6,992 | Rs 8,008 | 999.22 | Rs 17,962 = 3.6% PASS | needs Rs 17,994 PASS | PASS (up to 2 lots) |\n| Bear put spread | BUY PE 990 + SELL PE 970 (2026-11-23) | Rs 5,632 | Rs 5,705 | Rs 9,295 | 982.49 | Rs 15,360 = 3.1% PASS | needs Rs 15,391 PASS | PASS (up to 3 lots) |\n| Long straddle | BUY CE 990 + BUY PE 990 (2026-11-23) | Rs 33,322 | Rs 33,385 | unlimited | 945.57 / 1,034.43 | Rs 17,962 = 3.6% PASS | needs Rs 33,385 PASS | PASS (up to 2 lots) |\n\n## US sleeve\n\nSeparate book: Rs 500,000 = $5,289.62 at USD/INR 94.5248 (close of 2026-10-16). INR values use each day's USD/INR (Yahoo USDINR=X daily close, state/fx_rates.csv). US stocks/ETFs long and paper-short, US options priced from the real option chain (mid of bid/ask); a Black-Scholes fallback is labelled. US market date 2026-11-03 (US calendar). Every short stock: PAPER SHORT: not possible from India (LRS). Limits in RISK_LIMITS.md.\n\n| Metric | Value |\n|---|---|\n| Sleeve equity | $ 5,289.62 (Rs 501,061) |\n| Day P&L | $ -0.00 (Rs -0) |\n| Total P&L since start | $ 0.00 (+0.00%) |\n| USD/INR used today | 94.7254 (Yahoo USDINR=X close of 2026-11-03) |\n| Total P&L in INR | Rs 1,061.10, of which FX Rs 1,061.10 (start rate 94.5248) |\n| Day P&L in INR | Rs -950.01, of which FX Rs -950.02 |\n| Cash / margin used | $ 5,289.62 / $ 0.00 |\n| Charges paid / realised P&L | $ 0.00 / $ 0.00 |\n| Open positions | 0 of 5 |\n| Circuit breaker | off (trips on a day loss over 3% of starting capital) |\n| Market | SPY 754.35 |\n\n### Positions\n\nNone. The sleeve is all cash.\n\n### Fills today\n\nNo fills.\n\n### Orders queued\n\nNone.\n\n## US candidates\n\nFor the reviewer (ROUTINE_PROMPT.md step 5c). US market date 2026-11-04, chains fetched 2026-11-05 00:06 IST. Sleeve equity $5,289.62; the 10% per-order limit is $528.96; free cash $5,289.62; open positions 0 of 5; circuit breaker off. One contract = 100 shares.\n\nPricing source on every row: **real yfinance chain (mid)** = mid of Yahoo's bid/ask (quotes of the latest US session); **model (BS on chain IV)** = no two-sided quote, Black-Scholes on Yahoo's implied vol; **no quote** = neither. An option order fills at the chain mid of the session after its decision_date. Expiry: the nearest monthly (third Friday) 14-42 days out; ATM = the listed strike nearest the close. PASS/FAIL as for F&O: each long leg's premium x 100 <= 10% of equity, free cash, slots.\n\n- Built directly (not by the daily run); quotes fetched 2026-11-05 00:06 IST, during the US session of 2026-11-04: intraday, not closing quotes. The next daily run replaces this.\n### SPY (US, contract 100)\n\nSpot 768.08 (Yahoo close 2026-11-04).\n\n**Monthly expiry 2026-11-20** (16 days), ATM 768\n\n| Strike | Call / unit | Call per contract | Call % eq | Put / unit | Put per contract | Put % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 766 (ATM-2) | 11.34 | $1,134.00 | 21.44% | 7.29 | $728.50 | 13.77% | real yfinance chain (mid) |\n| 767 (ATM-1) | 10.71 | $1,070.50 | 20.24% | 7.63 | $763.50 | 14.43% | real yfinance chain (mid) |\n| 768 (ATM) | 10.05 | $1,005.50 | 19.01% | 7.97 | $797.00 | 15.07% | real yfinance chain (mid) |\n| 769 (ATM+1) | 9.44 | $943.50 | 17.84% | 8.36 | $835.50 | 15.80% | real yfinance chain (mid) |\n| 770 (ATM+2) | 8.81 | $881.50 | 16.66% | 8.77 | $877.00 | 16.58% | real yfinance chain (mid) |\n\n| Structure (1 contract) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CALL 768 + SELL CALL 770 (2026-11-20) | $124.00 | $124.04 | $75.96 | 769.24 | $1,005.50 = 19.0% FAIL | needs $1,005.50 PASS | FAIL: long leg premium 1,006 is above the 10% limit 529 |\n| Bear put spread | BUY PUT 768 + SELL PUT 766 (2026-11-20) | $68.50 | $68.54 | $131.46 | 767.32 | $797.00 = 15.1% FAIL | needs $797.00 PASS | FAIL: long leg premium 797 is above the 10% limit 529 |\n| Long straddle | BUY CALL 768 + BUY PUT 768 (2026-11-20) | $1,802.50 | $1,802.50 | unlimited | 749.98 / 786.02 | $1,005.50 = 19.0% FAIL | needs $1,802.50 PASS | FAIL: long leg premium 1,006 is above the 10% limit 529 |\n\n### QQQ (US, contract 100)\n\nSpot 694.53 (Yahoo close 2026-11-04).\n\n**Monthly expiry 2026-11-20** (16 days), ATM 695\n\n| Strike | Call / unit | Call per contract | Call % eq | Put / unit | Put per contract | Put % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 693 (ATM-2) | 16.05 | $1,605.00 | 30.34% | 12.19 | $1,219.00 | 23.05% | real yfinance chain (mid) |\n| 694 (ATM-1) | 15.45 | $1,545.00 | 29.21% | 12.53 | $1,253.00 | 23.69% | real yfinance chain (mid) |\n| 695 (ATM) | 14.61 | $1,460.50 | 27.61% | 12.94 | $1,293.50 | 24.45% | real yfinance chain (mid) |\n| 696 (ATM+1) | 14.23 | $1,423.00 | 26.90% | 13.36 | $1,336.00 | 25.26% | real yfinance chain (mid) |\n| 697 (ATM+2) | 13.72 | $1,372.00 | 25.94% | 13.81 | $1,381.00 | 26.11% | real yfinance chain (mid) |\n\n| Structure (1 contract) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CALL 695 + SELL CALL 697 (2026-11-20) | $88.50 | $88.55 | $111.45 | 695.88 | $1,460.50 = 27.6% FAIL | needs $1,460.50 PASS | FAIL: long leg premium 1,460 is above the 10% limit 529 |\n| Bear put spread | BUY PUT 695 + SELL PUT 693 (2026-11-20) | $74.50 | $74.55 | $125.45 | 694.25 | $1,293.50 = 24.4% FAIL | needs $1,293.50 PASS | FAIL: long leg premium 1,294 is above the 10% limit 529 |\n| Long straddle | BUY CALL 695 + BUY PUT 695 (2026-11-20) | $2,754.00 | $2,754.00 | unlimited | 667.46 / 722.54 | $1,460.50 = 27.6% FAIL | needs $2,754.00 PASS | FAIL: long leg premium 1,460 is above the 10% limit 529 |\n\n### F (US, contract 100)\n\nSpot 12.78 (Yahoo close 2026-11-04).\n\n**Monthly expiry 2026-11-20** (16 days), ATM 13\n\n| Strike | Call / unit | Call per contract | Call % eq | Put / unit | Put per contract | Put % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 12 (ATM-2) | 0.87 | $87.00 | 1.64% | 0.14 | $14.00 | 0.26% | real yfinance chain (mid) |\n| 12.5 (ATM-1) | 0.47 | $47.50 | 0.90% | 0.29 | $29.00 | 0.55% | real yfinance chain (mid) |\n| 13 (ATM) | 0.23 | $23.50 | 0.44% | 0.57 | $57.50 | 1.09% | real yfinance chain (mid) |\n| 13.5 (ATM+1) | 0.10 | $10.00 | 0.19% | 0.94 | $93.50 | 1.77% | real yfinance chain (mid) |\n| 14 (ATM+2) | 0.04 | $3.50 | 0.07% | 1.39 | $138.50 | 2.62% | real yfinance chain (mid) |\n\n| Structure (1 contract) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CALL 13 + SELL CALL 14 (2026-11-20) | $20.00 | $20.02 | $79.98 | 13.2 | $23.50 = 0.4% PASS | needs $23.50 PASS | PASS (up to 22 contracts) |\n| Bear put spread | BUY PUT 13 + SELL PUT 12 (2026-11-20) | $43.50 | $43.52 | $56.48 | 12.56 | $57.50 = 1.1% PASS | needs $57.50 PASS | PASS (up to 9 contracts) |\n| Long straddle | BUY CALL 13 + BUY PUT 13 (2026-11-20) | $81.00 | $81.00 | unlimited | 12.19 / 13.81 | $57.50 = 1.1% PASS | needs $81.00 PASS | PASS (up to 9 contracts) |\n\n### PFE (US, contract 100)\n\nSpot 30.75 (Yahoo close 2026-11-04).\n\n**Monthly expiry 2026-11-20** (16 days), ATM 30.5\n\n| Strike | Call / unit | Call per contract | Call % eq | Put / unit | Put per contract | Put % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 29.5 (ATM-2) | 1.21 | $121.00 | 2.29% | 0.40 | $40.00 | 0.76% | real yfinance chain (mid) |\n| 30 (ATM-1) | 0.95 | $95.50 | 1.81% | 0.59 | $59.00 | 1.12% | real yfinance chain (mid) |\n| 30.5 (ATM) | 0.66 | $65.50 | 1.24% | 0.83 | $83.00 | 1.57% | real yfinance chain (mid) |\n| 31 (ATM+1) | 0.44 | $44.00 | 0.83% | 1.14 | $113.50 | 2.15% | real yfinance chain (mid) |\n| 31.5 (ATM+2) | 0.28 | $28.50 | 0.54% | 1.55 | $155.50 | 2.94% | real yfinance chain (mid) |\n\n| Structure (1 contract) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CALL 30.5 + SELL CALL 31.5 (2026-11-20) | $37.00 | $37.02 | $62.98 | 30.87 | $65.50 = 1.2% PASS | needs $65.50 PASS | PASS (up to 8 contracts) |\n| Bear put spread | BUY PUT 30.5 + SELL PUT 29.5 (2026-11-20) | $43.00 | $43.02 | $56.98 | 30.07 | $83.00 = 1.6% PASS | needs $83.00 PASS | PASS (up to 6 contracts) |\n| Long straddle | BUY CALL 30.5 + BUY PUT 30.5 (2026-11-20) | $148.50 | $148.50 | unlimited | 29.02 / 31.98 | $83.00 = 1.6% PASS | needs $148.50 PASS | PASS (up to 6 contracts) |\n\n### INTC (US, contract 100)\n\nSpot 58.36 (Yahoo close 2026-11-04).\n\n**Monthly expiry 2026-11-20** (16 days), ATM 57.5\n\n| Strike | Call / unit | Call per contract | Call % eq | Put / unit | Put per contract | Put % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 52.5 (ATM-2) | 7.15 | $715.00 | 13.52% | 1.17 | $117.00 | 2.21% | real yfinance chain (mid) |\n| 55 (ATM-1) | 5.35 | $535.00 | 10.11% | 1.90 | $189.50 | 3.58% | real yfinance chain (mid) |\n| 57.5 (ATM) | 3.83 | $382.50 | 7.23% | 2.90 | $290.00 | 5.48% | real yfinance chain (mid) |\n| 60 (ATM+1) | 2.68 | $268.00 | 5.07% | 4.17 | $417.50 | 7.89% | real yfinance chain (mid) |\n| 62.5 (ATM+2) | 1.78 | $178.00 | 3.37% | 5.85 | $585.00 | 11.06% | real yfinance chain (mid) |\n\n| Structure (1 contract) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CALL 57.5 + SELL CALL 62.5 (2026-11-20) | $204.50 | $204.52 | $295.48 | 59.55 | $382.50 = 7.2% PASS | needs $382.50 PASS | PASS (up to 1 contract) |\n| Bear put spread | BUY PUT 57.5 + SELL PUT 52.5 (2026-11-20) | $173.00 | $173.02 | $326.98 | 55.77 | $290.00 = 5.5% PASS | needs $290.00 PASS | PASS (up to 1 contract) |\n| Long straddle | BUY CALL 57.5 + BUY PUT 57.5 (2026-11-20) | $672.50 | $672.50 | unlimited | 50.77 / 64.22 | $382.50 = 7.2% PASS | needs $672.50 PASS | PASS (up to 1 contract) |\n\n### SOFI (US, contract 100)\n\nSpot 17.53 (Yahoo close 2026-11-04).\n\n**Monthly expiry 2026-11-20** (16 days), ATM 17.5\n\n| Strike | Call / unit | Call per contract | Call % eq | Put / unit | Put per contract | Put % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 16.5 (ATM-2) | 1.41 | $141.00 | 2.67% | 0.31 | $31.00 | 0.59% | real yfinance chain (mid) |\n| 17 (ATM-1) | 1.06 | $106.50 | 2.01% | 0.47 | $47.00 | 0.89% | real yfinance chain (mid) |\n| 17.5 (ATM) | 0.77 | $77.00 | 1.46% | 0.67 | $67.00 | 1.27% | real yfinance chain (mid) |\n| 18 (ATM+1) | 0.53 | $52.50 | 0.99% | 0.92 | $92.00 | 1.74% | real yfinance chain (mid) |\n| 18.5 (ATM+2) | 0.34 | $33.50 | 0.63% | 1.25 | $124.50 | 2.35% | real yfinance chain (mid) |\n\n| Structure (1 contract) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CALL 17.5 + SELL CALL 18.5 (2026-11-20) | $43.50 | $43.52 | $56.48 | 17.93 | $77.00 = 1.5% PASS | needs $77.00 PASS | PASS (up to 6 contracts) |\n| Bear put spread | BUY PUT 17.5 + SELL PUT 16.5 (2026-11-20) | $36.00 | $36.02 | $63.98 | 17.14 | $67.00 = 1.3% PASS | needs $67.00 PASS | PASS (up to 7 contracts) |\n| Long straddle | BUY CALL 17.5 + BUY PUT 17.5 (2026-11-20) | $144.00 | $144.00 | unlimited | 16.06 / 18.94 | $77.00 = 1.5% PASS | needs $144.00 PASS | PASS (up to 6 contracts) |\n\n### BAC (US, contract 100)\n\nSpot 51.17 (Yahoo close 2026-11-04).\n\n**Monthly expiry 2026-11-20** (16 days), ATM 51\n\n| Strike | Call / unit | Call per contract | Call % eq | Put / unit | Put per contract | Put % eq | Source |\n|---|---|---|---|---|---|---|---|\n| 49 (ATM-2) | 2.84 | $284.00 | 5.37% | 0.35 | $35.50 | 0.67% | real yfinance chain (mid) |\n| 50 (ATM-1) | 1.96 | $195.50 | 3.70% | 0.59 | $59.50 | 1.12% | real yfinance chain (mid) |\n| 51 (ATM) | 1.30 | $130.50 | 2.47% | 0.95 | $95.50 | 1.81% | real yfinance chain (mid) |\n| 52 (ATM+1) | 0.80 | $80.00 | 1.51% | 1.46 | $145.50 | 2.75% | real yfinance chain (mid) |\n| 52.5 (ATM+2) | 0.60 | $60.50 | 1.14% | 1.76 | $176.50 | 3.34% | real yfinance chain (mid) |\n\n| Structure (1 contract) | Legs: put these in the order | Net debit | Max loss | Max gain | Breakeven | 10% rule (long leg) | Free cash | Verdict |\n|---|---|---|---|---|---|---|---|---|\n| Bull call spread | BUY CALL 51 + SELL CALL 52.5 (2026-11-20) | $70.00 | $70.02 | $79.98 | 51.7 | $130.50 = 2.5% PASS | needs $130.50 PASS | PASS (up to 4 contracts) |\n| Bear put spread | BUY PUT 51 + SELL PUT 49 (2026-11-20) | $60.00 | $60.02 | $139.98 | 50.4 | $95.50 = 1.8% PASS | needs $95.50 PASS | PASS (up to 5 contracts) |\n| Long straddle | BUY CALL 51 + BUY PUT 51 (2026-11-20) | $226.00 | $226.00 | unlimited | 48.74 / 53.26 | $130.50 = 2.5% PASS | needs $226.00 PASS | PASS (up to 4 contracts) |\n\n## All sleeves\n\n| Sleeve | Capital | Equity | P&L |\n|---|---|---|---|\n| Momentum | Rs 500,000 | Rs 512,427 | Rs +12,427 |\n| Thesis | Rs 500,000 | Rs 495,119 | Rs -4,881 |\n| India F&O | Rs 500,000 | Rs 500,000 | Rs +0 |\n| US (at USD/INR 94.7254, close of 2026-11-03) | Rs 500,000 | Rs 501,061 | Rs +1,061 |\n| **Combined** | Rs 2,000,000 | **Rs 2,008,607** | Rs +8,607 (+0.43%) |\n\nUSD/INR 94.7254: Yahoo USDINR=X close of 2026-11-03. Of the US sleeve's INR P&L, Rs +1,061.10 is FX (start rate 94.5248). Check against the RBI/FBIL reference rate (https://www.fbil.org.in/); they differ by a few paise.\n\n## Claude's review\n\n### What happened today\n- Momentum: no fills. Equity Rs 512,427 (day -Rs 961, total +Rs 12,427). Five positions held; DRREDDY (+12.2%) and ADANIPORTS (+9.4%) carry the book, TECHM is -3.1%, HCLTECH -0.5%.\n- Thesis: no fills. Sleeve Rs 495,119 (-Rs 4,881, mostly the realised Waaree loss). ICICIBANK +1.2%; ONGC/HINDPETRO pair -Rs 868 combined (the short leg is -6.6%). BAJFINANCE catalyst BUY is dated 2026-11-19, not yet due.\n- India F&O: no positions, all cash (Rs 500,000). US: no positions; the +Rs 1,061 is purely USD/INR drift (94.5248 to 94.7254).\n\n### What looks right / what looks wrong\n- Journal equity (Rs 512,427) equals the last equity_curve row; day P&L -961 = 512,427 - 513,388. No fills, so no ledger or charge cross-check was needed; charges unchanged at Rs 1,280.\n- No rejected orders in any sleeve. Momentum proposes no orders; all five held names are in the top 10 by momentum except none weak (TCS/TRENT at negative 63-day return are not held).\n- Process note: the 17:30/18:00 IST runs had not produced today's journal by 18:39 IST, so I triggered the run by push; it completed.\n\n### Progress vs target\n- Momentum averages Rs 888/day over 14 days vs Rs 1,250 pre-tax (net Rs 1,000). Too early to judge. Combined all sleeves: +Rs 8,607 (+0.43%).\n\n### Decisions\nNone. No drafted thesis is ready (only BAJFINANCE, already scheduled), and no F&O or US setup justifies a position today; doing nothing is a valid decision.\n\n### Rule change proposals\nNone.\n\n### Watch tomorrow\n- TECHM stop 1,709.64 vs close 1,783.00 (about 4.1% away); HCLTECH stop 1,311.95 vs 1,405.00.\n- ICICIBANK invalidation 1,320 vs close 1,424.10.\n- ONGC/HINDPETRO pair: HINDPETRO strength (-6.6% on the short) versus the \"market has rejected the link\" clause; Brent versus its 15 Oct level.\n- USD/INR, the only driver of the US sleeve P&L.\n"
   },
   "dropped_symbols": [],
   "thesis": {
@@ -1428,5 +1428,3744 @@
     "usd_inr": 94.73,
     "fx_date": "2026-11-03",
     "fx_note": "Yahoo USDINR=X close of 2026-11-03"
+  },
+  "candidates": {
+    "fno": {
+      "date": "2026-11-04",
+      "currency": "INR",
+      "equity": 500000.0,
+      "cash": 500000.0,
+      "cap": 50000.0,
+      "open_positions": 0,
+      "max_positions": 5,
+      "breaker": null,
+      "notes": [
+        "Built by candidates.build_fno directly, not by the daily run: Yahoo's daily bars ended 2026-11-03 at 00:10 IST 5 Nov, so 4 Nov spots come from Yahoo's 15-minute bars (they equal NSE's chain values)."
+      ],
+      "underlyings": [
+        {
+          "underlying": "NIFTY",
+          "kind": "index",
+          "lot": 65,
+          "step": 50.0,
+          "why": [
+            "index"
+          ],
+          "spot": 23960.6,
+          "spot_date": "2026-11-04",
+          "chain": {
+            "timestamp": "04-Nov-2026 15:40:00",
+            "underlying": 23960.6,
+            "source": "NSE option-chain-v3"
+          },
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "weekly",
+              "expiry": "2026-11-09",
+              "days": 5,
+              "atm": 23950.0,
+              "atm_iv_pct": 15.02,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 23850.0,
+                  "CE": {
+                    "price": 194.78,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 10.61,
+                    "bid": 194.15,
+                    "ask": 195.4,
+                    "listed": true,
+                    "per_lot": 12660.7,
+                    "pct": 2.53
+                  },
+                  "PE": {
+                    "price": 136.5,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 17.46,
+                    "bid": 136.1,
+                    "ask": 136.9,
+                    "listed": true,
+                    "per_lot": 8872.5,
+                    "pct": 1.77
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 23900.0,
+                  "CE": {
+                    "price": 168.72,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 11.05,
+                    "bid": 168.2,
+                    "ask": 169.25,
+                    "listed": true,
+                    "per_lot": 10966.8,
+                    "pct": 2.19
+                  },
+                  "PE": {
+                    "price": 160.3,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 17.71,
+                    "bid": 159.8,
+                    "ask": 160.8,
+                    "listed": true,
+                    "per_lot": 10419.5,
+                    "pct": 2.08
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 23950.0,
+                  "CE": {
+                    "price": 146.0,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 11.65,
+                    "bid": 145.5,
+                    "ask": 146.5,
+                    "listed": true,
+                    "per_lot": 9490.0,
+                    "pct": 1.9
+                  },
+                  "PE": {
+                    "price": 186.97,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.04,
+                    "bid": 186.35,
+                    "ask": 187.6,
+                    "listed": true,
+                    "per_lot": 12153.05,
+                    "pct": 2.43
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 24000.0,
+                  "CE": {
+                    "price": 125.28,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 12.03,
+                    "bid": 125.0,
+                    "ask": 125.55,
+                    "listed": true,
+                    "per_lot": 8143.2,
+                    "pct": 1.63
+                  },
+                  "PE": {
+                    "price": 215.95,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.59,
+                    "bid": 215.25,
+                    "ask": 216.65,
+                    "listed": true,
+                    "per_lot": 14036.75,
+                    "pct": 2.81
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 24050.0,
+                  "CE": {
+                    "price": 106.55,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 12.29,
+                    "bid": 106.15,
+                    "ask": 106.95,
+                    "listed": true,
+                    "per_lot": 6925.75,
+                    "pct": 1.39
+                  },
+                  "PE": {
+                    "price": 247.15,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.74,
+                    "bid": 245.75,
+                    "ask": 248.55,
+                    "listed": true,
+                    "per_lot": 16064.75,
+                    "pct": 3.21
+                  },
+                  "source": "real NSE chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-09",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 23950.0,
+                      "price": 146.0,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 24050.0,
+                      "price": 106.55,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 65,
+                  "net_debit": 39.45,
+                  "net_debit_lot": 2564.25,
+                  "entry_charges": 64.77,
+                  "max_loss": 2629.02,
+                  "max_gain": 3870.98,
+                  "breakevens": [
+                    23989.45
+                  ],
+                  "long_leg_max": 9490.0,
+                  "long_leg_pct": 1.9,
+                  "rule_10pct": "PASS",
+                  "cash_need": 9517.87,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 5,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-09",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 23950.0,
+                      "price": 186.97,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 23850.0,
+                      "price": 136.5,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 65,
+                  "net_debit": 50.47,
+                  "net_debit_lot": 3280.55,
+                  "entry_charges": 69.71,
+                  "max_loss": 3350.26,
+                  "max_gain": 3149.74,
+                  "breakevens": [
+                    23899.53
+                  ],
+                  "long_leg_max": 12153.05,
+                  "long_leg_pct": 2.43,
+                  "rule_10pct": "PASS",
+                  "cash_need": 12182.12,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 4,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-09",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 23950.0,
+                      "price": 146.0,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 23950.0,
+                      "price": 186.97,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 65,
+                  "net_debit": 332.97,
+                  "net_debit_lot": 21643.05,
+                  "entry_charges": 56.94,
+                  "max_loss": 21699.99,
+                  "max_gain": null,
+                  "breakevens": [
+                    23617.03,
+                    24282.97
+                  ],
+                  "long_leg_max": 12153.05,
+                  "long_leg_pct": 2.43,
+                  "rule_10pct": "PASS",
+                  "cash_need": 21699.99,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 4,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            },
+            {
+              "label": "monthly",
+              "expiry": "2026-11-23",
+              "days": 19,
+              "atm": 23950.0,
+              "atm_iv_pct": 13.22,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 23850.0,
+                  "CE": {
+                    "price": 346.75,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 11.1,
+                    "bid": 346.0,
+                    "ask": 347.5,
+                    "listed": true,
+                    "per_lot": 22538.75,
+                    "pct": 4.51
+                  },
+                  "PE": {
+                    "price": 245.75,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.25,
+                    "bid": 245.0,
+                    "ask": 246.5,
+                    "listed": true,
+                    "per_lot": 15973.75,
+                    "pct": 3.19
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 23900.0,
+                  "CE": {
+                    "price": 317.8,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 11.16,
+                    "bid": 316.6,
+                    "ask": 319.0,
+                    "listed": true,
+                    "per_lot": 20657.0,
+                    "pct": 4.13
+                  },
+                  "PE": {
+                    "price": 265.95,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.25,
+                    "bid": 265.75,
+                    "ask": 266.15,
+                    "listed": true,
+                    "per_lot": 17286.75,
+                    "pct": 3.46
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 23950.0,
+                  "CE": {
+                    "price": 291.7,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 11.41,
+                    "bid": 290.15,
+                    "ask": 293.25,
+                    "listed": true,
+                    "per_lot": 18960.5,
+                    "pct": 3.79
+                  },
+                  "PE": {
+                    "price": 288.95,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.17,
+                    "bid": 288.1,
+                    "ask": 289.8,
+                    "listed": true,
+                    "per_lot": 18781.75,
+                    "pct": 3.76
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 24000.0,
+                  "CE": {
+                    "price": 264.9,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 11.2,
+                    "bid": 264.5,
+                    "ask": 265.3,
+                    "listed": true,
+                    "per_lot": 17218.5,
+                    "pct": 3.44
+                  },
+                  "PE": {
+                    "price": 312.48,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.28,
+                    "bid": 311.55,
+                    "ask": 313.4,
+                    "listed": true,
+                    "per_lot": 20311.2,
+                    "pct": 4.06
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 24050.0,
+                  "CE": {
+                    "price": 240.25,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 11.25,
+                    "bid": 239.5,
+                    "ask": 241.0,
+                    "listed": true,
+                    "per_lot": 15616.25,
+                    "pct": 3.12
+                  },
+                  "PE": {
+                    "price": 337.95,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.06,
+                    "bid": 333.95,
+                    "ask": 341.95,
+                    "listed": true,
+                    "per_lot": 21966.75,
+                    "pct": 4.39
+                  },
+                  "source": "real NSE chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 23950.0,
+                      "price": 291.7,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 24050.0,
+                      "price": 240.25,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 65,
+                  "net_debit": 51.45,
+                  "net_debit_lot": 3344.25,
+                  "entry_charges": 85.74,
+                  "max_loss": 3429.99,
+                  "max_gain": 3070.01,
+                  "breakevens": [
+                    24001.45
+                  ],
+                  "long_leg_max": 18960.5,
+                  "long_leg_pct": 3.79,
+                  "rule_10pct": "PASS",
+                  "cash_need": 18992.65,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 23950.0,
+                      "price": 288.95,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 23850.0,
+                      "price": 245.75,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 65,
+                  "net_debit": 43.2,
+                  "net_debit_lot": 2808.0,
+                  "entry_charges": 86.33,
+                  "max_loss": 2894.33,
+                  "max_gain": 3605.67,
+                  "breakevens": [
+                    23906.8
+                  ],
+                  "long_leg_max": 18781.75,
+                  "long_leg_pct": 3.76,
+                  "rule_10pct": "PASS",
+                  "cash_need": 18813.8,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 23950.0,
+                      "price": 291.7,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 23950.0,
+                      "price": 288.95,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 65,
+                  "net_debit": 580.65,
+                  "net_debit_lot": 37742.25,
+                  "entry_charges": 64.2,
+                  "max_loss": 37806.45,
+                  "max_gain": null,
+                  "breakevens": [
+                    23369.35,
+                    24530.65
+                  ],
+                  "long_leg_max": 18960.5,
+                  "long_leg_pct": 3.79,
+                  "rule_10pct": "PASS",
+                  "cash_need": 37806.45,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "BANKNIFTY",
+          "kind": "index",
+          "lot": 30,
+          "step": 100.0,
+          "why": [
+            "index"
+          ],
+          "spot": 55913.6,
+          "spot_date": "2026-11-04",
+          "chain": {
+            "timestamp": "04-Nov-2026 15:40:00",
+            "underlying": 55913.6,
+            "source": "NSE option-chain-v3"
+          },
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-23",
+              "days": 19,
+              "atm": 55900.0,
+              "atm_iv_pct": 13.74,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 55700.0,
+                  "CE": {
+                    "price": 867.5,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 12.86,
+                    "bid": 865.0,
+                    "ask": 870.0,
+                    "listed": true,
+                    "per_lot": 26025.0,
+                    "pct": 5.21
+                  },
+                  "PE": {
+                    "price": 574.3,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 14.97,
+                    "bid": 568.6,
+                    "ask": 580.0,
+                    "listed": true,
+                    "per_lot": 17229.0,
+                    "pct": 3.45
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 55800.0,
+                  "CE": {
+                    "price": 808.65,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 12.67,
+                    "bid": 803.45,
+                    "ask": 813.85,
+                    "listed": true,
+                    "per_lot": 24259.5,
+                    "pct": 4.85
+                  },
+                  "PE": {
+                    "price": 618.2,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 14.77,
+                    "bid": 611.5,
+                    "ask": 624.9,
+                    "listed": true,
+                    "per_lot": 18546.0,
+                    "pct": 3.71
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 55900.0,
+                  "CE": {
+                    "price": 753.5,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 12.84,
+                    "bid": 751.0,
+                    "ask": 756.0,
+                    "listed": true,
+                    "per_lot": 22605.0,
+                    "pct": 4.52
+                  },
+                  "PE": {
+                    "price": 661.42,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 14.74,
+                    "bid": 654.15,
+                    "ask": 668.7,
+                    "listed": true,
+                    "per_lot": 19842.6,
+                    "pct": 3.97
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 56000.0,
+                  "CE": {
+                    "price": 697.5,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 12.68,
+                    "bid": 695.0,
+                    "ask": 700.0,
+                    "listed": true,
+                    "per_lot": 20925.0,
+                    "pct": 4.18
+                  },
+                  "PE": {
+                    "price": 702.0,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 14.69,
+                    "bid": 696.05,
+                    "ask": 707.95,
+                    "listed": true,
+                    "per_lot": 21060.0,
+                    "pct": 4.21
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 56100.0,
+                  "CE": {
+                    "price": 644.9,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 12.76,
+                    "bid": 641.0,
+                    "ask": 648.8,
+                    "listed": true,
+                    "per_lot": 19347.0,
+                    "pct": 3.87
+                  },
+                  "PE": {
+                    "price": 750.95,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 14.75,
+                    "bid": 740.65,
+                    "ask": 761.25,
+                    "listed": true,
+                    "per_lot": 22528.5,
+                    "pct": 4.51
+                  },
+                  "source": "real NSE chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 55900.0,
+                      "price": 753.5,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 56100.0,
+                      "price": 644.9,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 30,
+                  "net_debit": 108.6,
+                  "net_debit_lot": 3258.0,
+                  "entry_charges": 94.53,
+                  "max_loss": 3352.53,
+                  "max_gain": 2647.47,
+                  "breakevens": [
+                    56008.6
+                  ],
+                  "long_leg_max": 22605.0,
+                  "long_leg_pct": 4.52,
+                  "rule_10pct": "PASS",
+                  "cash_need": 22638.78,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 55900.0,
+                      "price": 661.42,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 55700.0,
+                      "price": 574.3,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 30,
+                  "net_debit": 87.12,
+                  "net_debit_lot": 2613.6,
+                  "entry_charges": 89.22,
+                  "max_loss": 2702.82,
+                  "max_gain": 3297.18,
+                  "breakevens": [
+                    55812.88
+                  ],
+                  "long_leg_max": 19842.6,
+                  "long_leg_pct": 3.97,
+                  "rule_10pct": "PASS",
+                  "cash_need": 19875.14,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 55900.0,
+                      "price": 753.5,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 55900.0,
+                      "price": 661.42,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 30,
+                  "net_debit": 1414.92,
+                  "net_debit_lot": 42447.6,
+                  "entry_charges": 66.32,
+                  "max_loss": 42513.92,
+                  "max_gain": null,
+                  "breakevens": [
+                    54485.08,
+                    57314.92
+                  ],
+                  "long_leg_max": 22605.0,
+                  "long_leg_pct": 4.52,
+                  "rule_10pct": "PASS",
+                  "cash_need": 42513.92,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "ONGC",
+          "kind": "stock",
+          "lot": 2250,
+          "step": 2.5,
+          "why": [
+            "open thesis crude-ongc-vs-hpcl"
+          ],
+          "spot": 235.0,
+          "spot_date": "2026-11-04",
+          "chain": {
+            "timestamp": "04-Nov-2026 15:40:00",
+            "underlying": 235.0,
+            "source": "NSE option-chain-v3"
+          },
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-23",
+              "days": 19,
+              "atm": 235.0,
+              "atm_iv_pct": 23.32,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 230.0,
+                  "CE": {
+                    "price": 7.85,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 20.96,
+                    "bid": 7.8,
+                    "ask": 7.9,
+                    "listed": true,
+                    "per_lot": 17662.5,
+                    "pct": 3.53
+                  },
+                  "PE": {
+                    "price": 2.83,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 24.88,
+                    "bid": 2.77,
+                    "ask": 2.9,
+                    "listed": true,
+                    "per_lot": 6367.5,
+                    "pct": 1.27
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 232.5,
+                  "CE": {
+                    "price": 6.37,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 21.18,
+                    "bid": 6.29,
+                    "ask": 6.44,
+                    "listed": true,
+                    "per_lot": 14332.5,
+                    "pct": 2.87
+                  },
+                  "PE": {
+                    "price": 3.76,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 24.88,
+                    "bid": 3.67,
+                    "ask": 3.85,
+                    "listed": true,
+                    "per_lot": 8460.0,
+                    "pct": 1.69
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 235.0,
+                  "CE": {
+                    "price": 5.02,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 21.6,
+                    "bid": 5.0,
+                    "ask": 5.04,
+                    "listed": true,
+                    "per_lot": 11295.0,
+                    "pct": 2.26
+                  },
+                  "PE": {
+                    "price": 4.95,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 25.24,
+                    "bid": 4.9,
+                    "ask": 5.0,
+                    "listed": true,
+                    "per_lot": 11137.5,
+                    "pct": 2.23
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 237.5,
+                  "CE": {
+                    "price": 3.94,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 21.93,
+                    "bid": 3.88,
+                    "ask": 3.99,
+                    "listed": true,
+                    "per_lot": 8865.0,
+                    "pct": 1.77
+                  },
+                  "PE": {
+                    "price": 6.23,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 25.15,
+                    "bid": 6.04,
+                    "ask": 6.43,
+                    "listed": true,
+                    "per_lot": 14017.5,
+                    "pct": 2.8
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 240.0,
+                  "CE": {
+                    "price": 3.06,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 22.65,
+                    "bid": 3.02,
+                    "ask": 3.11,
+                    "listed": true,
+                    "per_lot": 6885.0,
+                    "pct": 1.38
+                  },
+                  "PE": {
+                    "price": 7.53,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 26.47,
+                    "bid": 7.01,
+                    "ask": 8.05,
+                    "listed": true,
+                    "per_lot": 16942.5,
+                    "pct": 3.39
+                  },
+                  "source": "real NSE chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 235.0,
+                      "price": 5.02,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 240.0,
+                      "price": 3.06,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 2250,
+                  "net_debit": 1.96,
+                  "net_debit_lot": 4410.0,
+                  "entry_charges": 65.51,
+                  "max_loss": 4475.51,
+                  "max_gain": 6774.49,
+                  "breakevens": [
+                    236.96
+                  ],
+                  "long_leg_max": 11295.0,
+                  "long_leg_pct": 2.26,
+                  "rule_10pct": "PASS",
+                  "cash_need": 11323.68,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 4,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 235.0,
+                      "price": 4.95,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 230.0,
+                      "price": 2.83,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 2250,
+                  "net_debit": 2.12,
+                  "net_debit_lot": 4770.0,
+                  "entry_charges": 64.44,
+                  "max_loss": 4834.44,
+                  "max_gain": 6415.56,
+                  "breakevens": [
+                    232.88
+                  ],
+                  "long_leg_max": 11137.5,
+                  "long_leg_pct": 2.23,
+                  "rule_10pct": "PASS",
+                  "cash_need": 11166.11,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 4,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 235.0,
+                      "price": 5.02,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 235.0,
+                      "price": 4.95,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 2250,
+                  "net_debit": 9.97,
+                  "net_debit_lot": 22432.5,
+                  "entry_charges": 57.29,
+                  "max_loss": 22489.79,
+                  "max_gain": null,
+                  "breakevens": [
+                    225.03,
+                    244.97
+                  ],
+                  "long_leg_max": 11295.0,
+                  "long_leg_pct": 2.26,
+                  "rule_10pct": "PASS",
+                  "cash_need": 22489.79,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 4,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "HINDPETRO",
+          "kind": "stock",
+          "lot": 2025,
+          "step": 5.0,
+          "why": [
+            "open thesis crude-ongc-vs-hpcl"
+          ],
+          "spot": 366.35,
+          "spot_date": "2026-11-04",
+          "chain": {
+            "timestamp": "04-Nov-2026 15:40:00",
+            "underlying": 366.35,
+            "source": "NSE option-chain-v3"
+          },
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-23",
+              "days": 19,
+              "atm": 365.0,
+              "atm_iv_pct": 25.99,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 355.0,
+                  "CE": {
+                    "price": 15.65,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 21.67,
+                    "bid": 14.85,
+                    "ask": 16.45,
+                    "listed": true,
+                    "per_lot": 31691.25,
+                    "pct": 6.34
+                  },
+                  "PE": {
+                    "price": 4.28,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 28.03,
+                    "bid": 4.1,
+                    "ask": 4.45,
+                    "listed": true,
+                    "per_lot": 8667.0,
+                    "pct": 1.73
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 360.0,
+                  "CE": {
+                    "price": 12.07,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 22.68,
+                    "bid": 11.75,
+                    "ask": 12.4,
+                    "listed": true,
+                    "per_lot": 24441.75,
+                    "pct": 4.89
+                  },
+                  "PE": {
+                    "price": 5.82,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 28.46,
+                    "bid": 5.55,
+                    "ask": 6.1,
+                    "listed": true,
+                    "per_lot": 11785.5,
+                    "pct": 2.36
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 365.0,
+                  "CE": {
+                    "price": 9.25,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 23.19,
+                    "bid": 9.05,
+                    "ask": 9.45,
+                    "listed": true,
+                    "per_lot": 18731.25,
+                    "pct": 3.75
+                  },
+                  "PE": {
+                    "price": 7.78,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 28.21,
+                    "bid": 7.25,
+                    "ask": 8.3,
+                    "listed": true,
+                    "per_lot": 15754.5,
+                    "pct": 3.15
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 370.0,
+                  "CE": {
+                    "price": 6.75,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 23.48,
+                    "bid": 6.6,
+                    "ask": 6.9,
+                    "listed": true,
+                    "per_lot": 13668.75,
+                    "pct": 2.73
+                  },
+                  "PE": {
+                    "price": 10.43,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 28.36,
+                    "bid": 10.05,
+                    "ask": 10.8,
+                    "listed": true,
+                    "per_lot": 21120.75,
+                    "pct": 4.22
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 375.0,
+                  "CE": {
+                    "price": 5.12,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 23.81,
+                    "bid": 4.7,
+                    "ask": 5.55,
+                    "listed": true,
+                    "per_lot": 10368.0,
+                    "pct": 2.07
+                  },
+                  "PE": {
+                    "price": 13.47,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 28.48,
+                    "bid": 13.0,
+                    "ask": 13.95,
+                    "listed": true,
+                    "per_lot": 27276.75,
+                    "pct": 5.46
+                  },
+                  "source": "real NSE chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 365.0,
+                      "price": 9.25,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 375.0,
+                      "price": 5.12,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 2025,
+                  "net_debit": 4.13,
+                  "net_debit_lot": 8363.25,
+                  "entry_charges": 75.54,
+                  "max_loss": 8438.79,
+                  "max_gain": 11811.21,
+                  "breakevens": [
+                    369.13
+                  ],
+                  "long_leg_max": 18731.25,
+                  "long_leg_pct": 3.75,
+                  "rule_10pct": "PASS",
+                  "cash_need": 18763.29,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 365.0,
+                      "price": 7.78,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 355.0,
+                      "price": 4.28,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 2025,
+                  "net_debit": 3.5,
+                  "net_debit_lot": 7087.5,
+                  "entry_charges": 70.95,
+                  "max_loss": 7158.45,
+                  "max_gain": 13091.55,
+                  "breakevens": [
+                    361.5
+                  ],
+                  "long_leg_max": 15754.5,
+                  "long_leg_pct": 3.15,
+                  "rule_10pct": "PASS",
+                  "cash_need": 15785.2,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 3,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 365.0,
+                      "price": 9.25,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 365.0,
+                      "price": 7.78,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 2025,
+                  "net_debit": 17.03,
+                  "net_debit_lot": 34485.75,
+                  "entry_charges": 62.74,
+                  "max_loss": 34548.49,
+                  "max_gain": null,
+                  "breakevens": [
+                    347.97,
+                    382.03
+                  ],
+                  "long_leg_max": 18731.25,
+                  "long_leg_pct": 3.75,
+                  "rule_10pct": "PASS",
+                  "cash_need": 34548.49,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "ICICIBANK",
+          "kind": "stock",
+          "lot": 700,
+          "step": 10.0,
+          "why": [
+            "open thesis icici-bank-recovery"
+          ],
+          "spot": 1424.1,
+          "spot_date": "2026-11-04",
+          "chain": {
+            "timestamp": "04-Nov-2026 15:40:00",
+            "underlying": 1424.1,
+            "source": "NSE option-chain-v3"
+          },
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-23",
+              "days": 19,
+              "atm": 1420.0,
+              "atm_iv_pct": 16.88,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 1400.0,
+                  "CE": {
+                    "price": 36.73,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 14.94,
+                    "bid": 36.35,
+                    "ask": 37.1,
+                    "listed": true,
+                    "per_lot": 25711.0,
+                    "pct": 5.14
+                  },
+                  "PE": {
+                    "price": 12.02,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.38,
+                    "bid": 11.95,
+                    "ask": 12.1,
+                    "listed": true,
+                    "per_lot": 8414.0,
+                    "pct": 1.68
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 1410.0,
+                  "CE": {
+                    "price": 30.25,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.15,
+                    "bid": 30.05,
+                    "ask": 30.45,
+                    "listed": true,
+                    "per_lot": 21175.0,
+                    "pct": 4.23
+                  },
+                  "PE": {
+                    "price": 15.43,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.41,
+                    "bid": 15.3,
+                    "ask": 15.55,
+                    "listed": true,
+                    "per_lot": 10801.0,
+                    "pct": 2.16
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 1420.0,
+                  "CE": {
+                    "price": 24.32,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.28,
+                    "bid": 24.25,
+                    "ask": 24.4,
+                    "listed": true,
+                    "per_lot": 17024.0,
+                    "pct": 3.4
+                  },
+                  "PE": {
+                    "price": 19.5,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.41,
+                    "bid": 19.35,
+                    "ask": 19.65,
+                    "listed": true,
+                    "per_lot": 13650.0,
+                    "pct": 2.73
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 1430.0,
+                  "CE": {
+                    "price": 19.27,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.3,
+                    "bid": 19.15,
+                    "ask": 19.4,
+                    "listed": true,
+                    "per_lot": 13489.0,
+                    "pct": 2.7
+                  },
+                  "PE": {
+                    "price": 24.32,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.09,
+                    "bid": 24.2,
+                    "ask": 24.45,
+                    "listed": true,
+                    "per_lot": 17024.0,
+                    "pct": 3.4
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 1440.0,
+                  "CE": {
+                    "price": 15.0,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 15.39,
+                    "bid": 14.9,
+                    "ask": 15.1,
+                    "listed": true,
+                    "per_lot": 10500.0,
+                    "pct": 2.1
+                  },
+                  "PE": {
+                    "price": 30.02,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 18.22,
+                    "bid": 29.85,
+                    "ask": 30.2,
+                    "listed": true,
+                    "per_lot": 21014.0,
+                    "pct": 4.2
+                  },
+                  "source": "real NSE chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 1420.0,
+                      "price": 24.32,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 1440.0,
+                      "price": 15.0,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 700,
+                  "net_debit": 9.32,
+                  "net_debit_lot": 6524.0,
+                  "entry_charges": 75.03,
+                  "max_loss": 6599.03,
+                  "max_gain": 7400.97,
+                  "breakevens": [
+                    1429.32
+                  ],
+                  "long_leg_max": 17024.0,
+                  "long_leg_pct": 3.4,
+                  "rule_10pct": "PASS",
+                  "cash_need": 17055.27,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 1420.0,
+                      "price": 19.5,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 1400.0,
+                      "price": 12.02,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 700,
+                  "net_debit": 7.48,
+                  "net_debit_lot": 5236.0,
+                  "entry_charges": 69.51,
+                  "max_loss": 5305.51,
+                  "max_gain": 8694.49,
+                  "breakevens": [
+                    1412.52
+                  ],
+                  "long_leg_max": 13650.0,
+                  "long_leg_pct": 2.73,
+                  "rule_10pct": "PASS",
+                  "cash_need": 13679.75,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 3,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 1420.0,
+                      "price": 24.32,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 1420.0,
+                      "price": 19.5,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 700,
+                  "net_debit": 43.82,
+                  "net_debit_lot": 30674.0,
+                  "entry_charges": 61.02,
+                  "max_loss": 30735.02,
+                  "max_gain": null,
+                  "breakevens": [
+                    1376.18,
+                    1463.82
+                  ],
+                  "long_leg_max": 17024.0,
+                  "long_leg_pct": 3.4,
+                  "rule_10pct": "PASS",
+                  "cash_need": 30735.02,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "BAJFINANCE",
+          "kind": "stock",
+          "lot": 750,
+          "step": 10.0,
+          "why": [
+            "queued thesis order bajaj-finance-rbi-december (BUY 2026-11-19)"
+          ],
+          "spot": 994.0,
+          "spot_date": "2026-11-04",
+          "chain": {
+            "timestamp": "04-Nov-2026 15:40:00",
+            "underlying": 994.0,
+            "source": "NSE option-chain-v3"
+          },
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-23",
+              "days": 19,
+              "atm": 990.0,
+              "atm_iv_pct": 24.52,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 970.0,
+                  "CE": {
+                    "price": 36.17,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 21.8,
+                    "bid": 35.85,
+                    "ask": 36.5,
+                    "listed": true,
+                    "per_lot": 27127.5,
+                    "pct": 5.43
+                  },
+                  "PE": {
+                    "price": 12.97,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 27.01,
+                    "bid": 12.85,
+                    "ask": 13.1,
+                    "listed": true,
+                    "per_lot": 9727.5,
+                    "pct": 1.95
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 980.0,
+                  "CE": {
+                    "price": 29.73,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 22.32,
+                    "bid": 29.45,
+                    "ask": 30.0,
+                    "listed": true,
+                    "per_lot": 22297.5,
+                    "pct": 4.46
+                  },
+                  "PE": {
+                    "price": 16.38,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 26.87,
+                    "bid": 16.25,
+                    "ask": 16.5,
+                    "listed": true,
+                    "per_lot": 12285.0,
+                    "pct": 2.46
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 990.0,
+                  "CE": {
+                    "price": 23.95,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 22.42,
+                    "bid": 23.75,
+                    "ask": 24.15,
+                    "listed": true,
+                    "per_lot": 17962.5,
+                    "pct": 3.59
+                  },
+                  "PE": {
+                    "price": 20.48,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 26.69,
+                    "bid": 20.35,
+                    "ask": 20.6,
+                    "listed": true,
+                    "per_lot": 15360.0,
+                    "pct": 3.07
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 1000.0,
+                  "CE": {
+                    "price": 18.85,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 22.32,
+                    "bid": 18.7,
+                    "ask": 19.0,
+                    "listed": true,
+                    "per_lot": 14137.5,
+                    "pct": 2.83
+                  },
+                  "PE": {
+                    "price": 25.6,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 26.36,
+                    "bid": 25.2,
+                    "ask": 26.0,
+                    "listed": true,
+                    "per_lot": 19200.0,
+                    "pct": 3.84
+                  },
+                  "source": "real NSE chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 1010.0,
+                  "CE": {
+                    "price": 14.73,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 22.19,
+                    "bid": 14.55,
+                    "ask": 14.9,
+                    "listed": true,
+                    "per_lot": 11047.5,
+                    "pct": 2.21
+                  },
+                  "PE": {
+                    "price": 31.55,
+                    "src": "real NSE chain (mid)",
+                    "iv_pct": 26.8,
+                    "bid": 30.8,
+                    "ask": 32.3,
+                    "listed": true,
+                    "per_lot": 23662.5,
+                    "pct": 4.73
+                  },
+                  "source": "real NSE chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 990.0,
+                      "price": 23.95,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 1010.0,
+                      "price": 14.73,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 750,
+                  "net_debit": 9.22,
+                  "net_debit_lot": 6915.0,
+                  "entry_charges": 76.51,
+                  "max_loss": 6991.51,
+                  "max_gain": 8008.49,
+                  "breakevens": [
+                    999.22
+                  ],
+                  "long_leg_max": 17962.5,
+                  "long_leg_pct": 3.59,
+                  "rule_10pct": "PASS",
+                  "cash_need": 17994.19,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 990.0,
+                      "price": 20.48,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 970.0,
+                      "price": 12.97,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 750,
+                  "net_debit": 7.51,
+                  "net_debit_lot": 5632.5,
+                  "entry_charges": 72.81,
+                  "max_loss": 5705.31,
+                  "max_gain": 9294.69,
+                  "breakevens": [
+                    982.49
+                  ],
+                  "long_leg_max": 15360.0,
+                  "long_leg_pct": 3.07,
+                  "rule_10pct": "PASS",
+                  "cash_need": 15390.53,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 3,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-23",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 990.0,
+                      "price": 23.95,
+                      "src": "real NSE chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 990.0,
+                      "price": 20.48,
+                      "src": "real NSE chain (mid)"
+                    }
+                  ],
+                  "units": 750,
+                  "net_debit": 44.43,
+                  "net_debit_lot": 33322.5,
+                  "entry_charges": 62.22,
+                  "max_loss": 33384.72,
+                  "max_gain": null,
+                  "breakevens": [
+                    945.57,
+                    1034.43
+                  ],
+                  "long_leg_max": 17962.5,
+                  "long_leg_pct": 3.59,
+                  "rule_10pct": "PASS",
+                  "cash_need": 33384.72,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 2,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "india_vix": 15.17,
+      "sources": [
+        "real NSE chain (mid)"
+      ]
+    },
+    "us": {
+      "date": "2026-11-04",
+      "currency": "USD",
+      "equity": 5289.62,
+      "cash": 5289.62,
+      "cap": 528.96,
+      "open_positions": 0,
+      "max_positions": 5,
+      "breaker": null,
+      "fetched_at": "2026-11-05 00:06 IST",
+      "usd_inr": 94.73,
+      "notes": [
+        "Built directly (not by the daily run); quotes fetched 2026-11-05 00:06 IST, during the US session of 2026-11-04: intraday, not closing quotes. The next daily run replaces this."
+      ],
+      "underlyings": [
+        {
+          "underlying": "SPY",
+          "spot": 768.08,
+          "spot_date": "2026-11-04",
+          "lot": 100,
+          "why": [],
+          "monthly": true,
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-20",
+              "days": 16,
+              "atm": 768.0,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 766.0,
+                  "CE": {
+                    "price": 11.34,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 15.59,
+                    "bid": 11.31,
+                    "ask": 11.37,
+                    "contract": "SPY261120C00766000",
+                    "per_lot": 1134.0,
+                    "pct": 21.44
+                  },
+                  "PE": {
+                    "price": 7.29,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 12.58,
+                    "bid": 7.26,
+                    "ask": 7.31,
+                    "contract": "SPY261120P00766000",
+                    "per_lot": 728.5,
+                    "pct": 13.77
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 767.0,
+                  "CE": {
+                    "price": 10.71,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 15.4,
+                    "bid": 10.68,
+                    "ask": 10.73,
+                    "contract": "SPY261120C00767000",
+                    "per_lot": 1070.5,
+                    "pct": 20.24
+                  },
+                  "PE": {
+                    "price": 7.63,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 12.39,
+                    "bid": 7.61,
+                    "ask": 7.66,
+                    "contract": "SPY261120P00767000",
+                    "per_lot": 763.5,
+                    "pct": 14.43
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 768.0,
+                  "CE": {
+                    "price": 10.05,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 15.18,
+                    "bid": 10.03,
+                    "ask": 10.08,
+                    "contract": "SPY261120C00768000",
+                    "per_lot": 1005.5,
+                    "pct": 19.01
+                  },
+                  "PE": {
+                    "price": 7.97,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 12.16,
+                    "bid": 7.94,
+                    "ask": 8.0,
+                    "contract": "SPY261120P00768000",
+                    "per_lot": 797.0,
+                    "pct": 15.07
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 769.0,
+                  "CE": {
+                    "price": 9.44,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 14.96,
+                    "bid": 9.42,
+                    "ask": 9.45,
+                    "contract": "SPY261120C00769000",
+                    "per_lot": 943.5,
+                    "pct": 17.84
+                  },
+                  "PE": {
+                    "price": 8.36,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 11.96,
+                    "bid": 8.33,
+                    "ask": 8.38,
+                    "contract": "SPY261120P00769000",
+                    "per_lot": 835.5,
+                    "pct": 15.8
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 770.0,
+                  "CE": {
+                    "price": 8.81,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 14.74,
+                    "bid": 8.8,
+                    "ask": 8.83,
+                    "contract": "SPY261120C00770000",
+                    "per_lot": 881.5,
+                    "pct": 16.66
+                  },
+                  "PE": {
+                    "price": 8.77,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 11.77,
+                    "bid": 8.75,
+                    "ask": 8.79,
+                    "contract": "SPY261120P00770000",
+                    "per_lot": 877.0,
+                    "pct": 16.58
+                  },
+                  "source": "real yfinance chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 768.0,
+                      "price": 10.05,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 770.0,
+                      "price": 8.81,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 1.24,
+                  "net_debit_lot": 124.0,
+                  "entry_charges": 0.04,
+                  "max_loss": 124.04,
+                  "max_gain": 75.96,
+                  "breakevens": [
+                    769.24
+                  ],
+                  "long_leg_max": 1005.5,
+                  "long_leg_pct": 19.01,
+                  "rule_10pct": "FAIL",
+                  "cash_need": 1005.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 0,
+                  "verdict": "FAIL",
+                  "why": "long leg premium 1,006 is above the 10% limit 529"
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 768.0,
+                      "price": 7.97,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 766.0,
+                      "price": 7.29,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.69,
+                  "net_debit_lot": 68.5,
+                  "entry_charges": 0.04,
+                  "max_loss": 68.54,
+                  "max_gain": 131.46,
+                  "breakevens": [
+                    767.32
+                  ],
+                  "long_leg_max": 797.0,
+                  "long_leg_pct": 15.07,
+                  "rule_10pct": "FAIL",
+                  "cash_need": 797.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 0,
+                  "verdict": "FAIL",
+                  "why": "long leg premium 797 is above the 10% limit 529"
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 768.0,
+                      "price": 10.05,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 768.0,
+                      "price": 7.97,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 18.02,
+                  "net_debit_lot": 1802.5,
+                  "entry_charges": 0.0,
+                  "max_loss": 1802.5,
+                  "max_gain": null,
+                  "breakevens": [
+                    749.98,
+                    786.02
+                  ],
+                  "long_leg_max": 1005.5,
+                  "long_leg_pct": 19.01,
+                  "rule_10pct": "FAIL",
+                  "cash_need": 1802.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 0,
+                  "verdict": "FAIL",
+                  "why": "long leg premium 1,006 is above the 10% limit 529"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "QQQ",
+          "spot": 694.53,
+          "spot_date": "2026-11-04",
+          "lot": 100,
+          "why": [],
+          "monthly": true,
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-20",
+              "days": 16,
+              "atm": 695.0,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 693.0,
+                  "CE": {
+                    "price": 16.05,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 25.65,
+                    "bid": 16.0,
+                    "ask": 16.1,
+                    "contract": "QQQ261120C00693000",
+                    "per_lot": 1605.0,
+                    "pct": 30.34
+                  },
+                  "PE": {
+                    "price": 12.19,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 21.74,
+                    "bid": 12.15,
+                    "ask": 12.23,
+                    "contract": "QQQ261120P00693000",
+                    "per_lot": 1219.0,
+                    "pct": 23.05
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 694.0,
+                  "CE": {
+                    "price": 15.45,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 25.49,
+                    "bid": 15.4,
+                    "ask": 15.5,
+                    "contract": "QQQ261120C00694000",
+                    "per_lot": 1545.0,
+                    "pct": 29.21
+                  },
+                  "PE": {
+                    "price": 12.53,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 21.47,
+                    "bid": 12.49,
+                    "ask": 12.57,
+                    "contract": "QQQ261120P00694000",
+                    "per_lot": 1253.0,
+                    "pct": 23.69
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 695.0,
+                  "CE": {
+                    "price": 14.61,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 24.88,
+                    "bid": 14.56,
+                    "ask": 14.65,
+                    "contract": "QQQ261120C00695000",
+                    "per_lot": 1460.5,
+                    "pct": 27.61
+                  },
+                  "PE": {
+                    "price": 12.94,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 21.27,
+                    "bid": 12.91,
+                    "ask": 12.96,
+                    "contract": "QQQ261120P00695000",
+                    "per_lot": 1293.5,
+                    "pct": 24.45
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 696.0,
+                  "CE": {
+                    "price": 14.23,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 25.05,
+                    "bid": 14.19,
+                    "ask": 14.27,
+                    "contract": "QQQ261120C00696000",
+                    "per_lot": 1423.0,
+                    "pct": 26.9
+                  },
+                  "PE": {
+                    "price": 13.36,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 21.14,
+                    "bid": 13.32,
+                    "ask": 13.4,
+                    "contract": "QQQ261120P00696000",
+                    "per_lot": 1336.0,
+                    "pct": 25.26
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 697.0,
+                  "CE": {
+                    "price": 13.72,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 24.98,
+                    "bid": 13.68,
+                    "ask": 13.76,
+                    "contract": "QQQ261120C00697000",
+                    "per_lot": 1372.0,
+                    "pct": 25.94
+                  },
+                  "PE": {
+                    "price": 13.81,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 20.98,
+                    "bid": 13.78,
+                    "ask": 13.84,
+                    "contract": "QQQ261120P00697000",
+                    "per_lot": 1381.0,
+                    "pct": 26.11
+                  },
+                  "source": "real yfinance chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 695.0,
+                      "price": 14.61,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 697.0,
+                      "price": 13.72,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.89,
+                  "net_debit_lot": 88.5,
+                  "entry_charges": 0.05,
+                  "max_loss": 88.55,
+                  "max_gain": 111.45,
+                  "breakevens": [
+                    695.88
+                  ],
+                  "long_leg_max": 1460.5,
+                  "long_leg_pct": 27.61,
+                  "rule_10pct": "FAIL",
+                  "cash_need": 1460.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 0,
+                  "verdict": "FAIL",
+                  "why": "long leg premium 1,460 is above the 10% limit 529"
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 695.0,
+                      "price": 12.94,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 693.0,
+                      "price": 12.19,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.74,
+                  "net_debit_lot": 74.5,
+                  "entry_charges": 0.05,
+                  "max_loss": 74.55,
+                  "max_gain": 125.45,
+                  "breakevens": [
+                    694.25
+                  ],
+                  "long_leg_max": 1293.5,
+                  "long_leg_pct": 24.45,
+                  "rule_10pct": "FAIL",
+                  "cash_need": 1293.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 0,
+                  "verdict": "FAIL",
+                  "why": "long leg premium 1,294 is above the 10% limit 529"
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 695.0,
+                      "price": 14.61,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 695.0,
+                      "price": 12.94,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 27.54,
+                  "net_debit_lot": 2754.0,
+                  "entry_charges": 0.0,
+                  "max_loss": 2754.0,
+                  "max_gain": null,
+                  "breakevens": [
+                    667.46,
+                    722.54
+                  ],
+                  "long_leg_max": 1460.5,
+                  "long_leg_pct": 27.61,
+                  "rule_10pct": "FAIL",
+                  "cash_need": 2754.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 0,
+                  "verdict": "FAIL",
+                  "why": "long leg premium 1,460 is above the 10% limit 529"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "F",
+          "spot": 12.78,
+          "spot_date": "2026-11-04",
+          "lot": 100,
+          "why": [],
+          "monthly": true,
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-20",
+              "days": 16,
+              "atm": 13.0,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 12.0,
+                  "CE": {
+                    "price": 0.87,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 36.72,
+                    "bid": 0.84,
+                    "ask": 0.9,
+                    "contract": "F261120C00012000",
+                    "per_lot": 87.0,
+                    "pct": 1.64
+                  },
+                  "PE": {
+                    "price": 0.14,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 40.63,
+                    "bid": 0.13,
+                    "ask": 0.15,
+                    "contract": "F261120P00012000",
+                    "per_lot": 14.0,
+                    "pct": 0.26
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 12.5,
+                  "CE": {
+                    "price": 0.47,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 30.47,
+                    "bid": 0.46,
+                    "ask": 0.49,
+                    "contract": "F261120C00012500",
+                    "per_lot": 47.5,
+                    "pct": 0.9
+                  },
+                  "PE": {
+                    "price": 0.29,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 40.04,
+                    "bid": 0.27,
+                    "ask": 0.31,
+                    "contract": "F261120P00012500",
+                    "per_lot": 29.0,
+                    "pct": 0.55
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 13.0,
+                  "CE": {
+                    "price": 0.23,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 30.47,
+                    "bid": 0.23,
+                    "ask": 0.24,
+                    "contract": "F261120C00013000",
+                    "per_lot": 23.5,
+                    "pct": 0.44
+                  },
+                  "PE": {
+                    "price": 0.57,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 45.31,
+                    "bid": 0.53,
+                    "ask": 0.62,
+                    "contract": "F261120P00013000",
+                    "per_lot": 57.5,
+                    "pct": 1.09
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 13.5,
+                  "CE": {
+                    "price": 0.1,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 32.03,
+                    "bid": 0.09,
+                    "ask": 0.11,
+                    "contract": "F261120C00013500",
+                    "per_lot": 10.0,
+                    "pct": 0.19
+                  },
+                  "PE": {
+                    "price": 0.94,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 49.41,
+                    "bid": 0.88,
+                    "ask": 0.99,
+                    "contract": "F261120P00013500",
+                    "per_lot": 93.5,
+                    "pct": 1.77
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 14.0,
+                  "CE": {
+                    "price": 0.04,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 32.03,
+                    "bid": 0.03,
+                    "ask": 0.04,
+                    "contract": "F261120C00014000",
+                    "per_lot": 3.5,
+                    "pct": 0.07
+                  },
+                  "PE": {
+                    "price": 1.39,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 50.59,
+                    "bid": 1.36,
+                    "ask": 1.41,
+                    "contract": "F261120P00014000",
+                    "per_lot": 138.5,
+                    "pct": 2.62
+                  },
+                  "source": "real yfinance chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 13.0,
+                      "price": 0.23,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 14.0,
+                      "price": 0.04,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.2,
+                  "net_debit_lot": 20.0,
+                  "entry_charges": 0.02,
+                  "max_loss": 20.02,
+                  "max_gain": 79.98,
+                  "breakevens": [
+                    13.2
+                  ],
+                  "long_leg_max": 23.5,
+                  "long_leg_pct": 0.44,
+                  "rule_10pct": "PASS",
+                  "cash_need": 23.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 22,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 13.0,
+                      "price": 0.57,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 12.0,
+                      "price": 0.14,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.43,
+                  "net_debit_lot": 43.5,
+                  "entry_charges": 0.02,
+                  "max_loss": 43.52,
+                  "max_gain": 56.48,
+                  "breakevens": [
+                    12.56
+                  ],
+                  "long_leg_max": 57.5,
+                  "long_leg_pct": 1.09,
+                  "rule_10pct": "PASS",
+                  "cash_need": 57.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 9,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 13.0,
+                      "price": 0.23,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 13.0,
+                      "price": 0.57,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.81,
+                  "net_debit_lot": 81.0,
+                  "entry_charges": 0.0,
+                  "max_loss": 81.0,
+                  "max_gain": null,
+                  "breakevens": [
+                    12.19,
+                    13.81
+                  ],
+                  "long_leg_max": 57.5,
+                  "long_leg_pct": 1.09,
+                  "rule_10pct": "PASS",
+                  "cash_need": 81.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 9,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "PFE",
+          "spot": 30.75,
+          "spot_date": "2026-11-04",
+          "lot": 100,
+          "why": [],
+          "monthly": true,
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-20",
+              "days": 16,
+              "atm": 30.5,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 29.5,
+                  "CE": {
+                    "price": 1.21,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 19.53,
+                    "bid": 1.07,
+                    "ask": 1.35,
+                    "contract": "PFE261120C00029500",
+                    "per_lot": 121.0,
+                    "pct": 2.29
+                  },
+                  "PE": {
+                    "price": 0.4,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 35.5,
+                    "bid": 0.37,
+                    "ask": 0.43,
+                    "contract": "PFE261120P00029500",
+                    "per_lot": 40.0,
+                    "pct": 0.76
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 30.0,
+                  "CE": {
+                    "price": 0.95,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 20.7,
+                    "bid": 0.92,
+                    "ask": 0.99,
+                    "contract": "PFE261120C00030000",
+                    "per_lot": 95.5,
+                    "pct": 1.81
+                  },
+                  "PE": {
+                    "price": 0.59,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 36.52,
+                    "bid": 0.55,
+                    "ask": 0.63,
+                    "contract": "PFE261120P00030000",
+                    "per_lot": 59.0,
+                    "pct": 1.12
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 30.5,
+                  "CE": {
+                    "price": 0.66,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 20.51,
+                    "bid": 0.64,
+                    "ask": 0.67,
+                    "contract": "PFE261120C00030500",
+                    "per_lot": 65.5,
+                    "pct": 1.24
+                  },
+                  "PE": {
+                    "price": 0.83,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 37.01,
+                    "bid": 0.8,
+                    "ask": 0.86,
+                    "contract": "PFE261120P00030500",
+                    "per_lot": 83.0,
+                    "pct": 1.57
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 31.0,
+                  "CE": {
+                    "price": 0.44,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 21.88,
+                    "bid": 0.42,
+                    "ask": 0.46,
+                    "contract": "PFE261120C00031000",
+                    "per_lot": 44.0,
+                    "pct": 0.83
+                  },
+                  "PE": {
+                    "price": 1.14,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 39.7,
+                    "bid": 1.08,
+                    "ask": 1.19,
+                    "contract": "PFE261120P00031000",
+                    "per_lot": 113.5,
+                    "pct": 2.15
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 31.5,
+                  "CE": {
+                    "price": 0.28,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 22.61,
+                    "bid": 0.27,
+                    "ask": 0.3,
+                    "contract": "PFE261120C00031500",
+                    "per_lot": 28.5,
+                    "pct": 0.54
+                  },
+                  "PE": {
+                    "price": 1.55,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 49.9,
+                    "bid": 1.36,
+                    "ask": 1.75,
+                    "contract": "PFE261120P00031500",
+                    "per_lot": 155.5,
+                    "pct": 2.94
+                  },
+                  "source": "real yfinance chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 30.5,
+                      "price": 0.66,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 31.5,
+                      "price": 0.28,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.37,
+                  "net_debit_lot": 37.0,
+                  "entry_charges": 0.02,
+                  "max_loss": 37.02,
+                  "max_gain": 62.98,
+                  "breakevens": [
+                    30.87
+                  ],
+                  "long_leg_max": 65.5,
+                  "long_leg_pct": 1.24,
+                  "rule_10pct": "PASS",
+                  "cash_need": 65.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 8,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 30.5,
+                      "price": 0.83,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 29.5,
+                      "price": 0.4,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.43,
+                  "net_debit_lot": 43.0,
+                  "entry_charges": 0.02,
+                  "max_loss": 43.02,
+                  "max_gain": 56.98,
+                  "breakevens": [
+                    30.07
+                  ],
+                  "long_leg_max": 83.0,
+                  "long_leg_pct": 1.57,
+                  "rule_10pct": "PASS",
+                  "cash_need": 83.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 6,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 30.5,
+                      "price": 0.66,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 30.5,
+                      "price": 0.83,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 1.49,
+                  "net_debit_lot": 148.5,
+                  "entry_charges": 0.0,
+                  "max_loss": 148.5,
+                  "max_gain": null,
+                  "breakevens": [
+                    29.02,
+                    31.98
+                  ],
+                  "long_leg_max": 83.0,
+                  "long_leg_pct": 1.57,
+                  "rule_10pct": "PASS",
+                  "cash_need": 148.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 6,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "INTC",
+          "spot": 58.36,
+          "spot_date": "2026-11-04",
+          "lot": 100,
+          "why": [],
+          "monthly": true,
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-20",
+              "days": 16,
+              "atm": 57.5,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 52.5,
+                  "CE": {
+                    "price": 7.15,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 72.8,
+                    "bid": 6.9,
+                    "ask": 7.4,
+                    "contract": "INTC261120C00052500",
+                    "per_lot": 715.0,
+                    "pct": 13.52
+                  },
+                  "PE": {
+                    "price": 1.17,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 69.34,
+                    "bid": 1.14,
+                    "ask": 1.2,
+                    "contract": "INTC261120P00052500",
+                    "per_lot": 117.0,
+                    "pct": 2.21
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 55.0,
+                  "CE": {
+                    "price": 5.35,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 70.12,
+                    "bid": 5.25,
+                    "ask": 5.45,
+                    "contract": "INTC261120C00055000",
+                    "per_lot": 535.0,
+                    "pct": 10.11
+                  },
+                  "PE": {
+                    "price": 1.9,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 67.77,
+                    "bid": 1.86,
+                    "ask": 1.93,
+                    "contract": "INTC261120P00055000",
+                    "per_lot": 189.5,
+                    "pct": 3.58
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 57.5,
+                  "CE": {
+                    "price": 3.83,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 67.9,
+                    "bid": 3.75,
+                    "ask": 3.9,
+                    "contract": "INTC261120C00057500",
+                    "per_lot": 382.5,
+                    "pct": 7.23
+                  },
+                  "PE": {
+                    "price": 2.9,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 66.38,
+                    "bid": 2.86,
+                    "ask": 2.94,
+                    "contract": "INTC261120P00057500",
+                    "per_lot": 290.0,
+                    "pct": 5.48
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 60.0,
+                  "CE": {
+                    "price": 2.68,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 67.63,
+                    "bid": 2.67,
+                    "ask": 2.69,
+                    "contract": "INTC261120C00060000",
+                    "per_lot": 268.0,
+                    "pct": 5.07
+                  },
+                  "PE": {
+                    "price": 4.17,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 64.53,
+                    "bid": 4.1,
+                    "ask": 4.25,
+                    "contract": "INTC261120P00060000",
+                    "per_lot": 417.5,
+                    "pct": 7.89
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 62.5,
+                  "CE": {
+                    "price": 1.78,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 66.72,
+                    "bid": 1.75,
+                    "ask": 1.81,
+                    "contract": "INTC261120C00062500",
+                    "per_lot": 178.0,
+                    "pct": 3.37
+                  },
+                  "PE": {
+                    "price": 5.85,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 64.99,
+                    "bid": 5.8,
+                    "ask": 5.9,
+                    "contract": "INTC261120P00062500",
+                    "per_lot": 585.0,
+                    "pct": 11.06
+                  },
+                  "source": "real yfinance chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 57.5,
+                      "price": 3.83,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 62.5,
+                      "price": 1.78,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 2.04,
+                  "net_debit_lot": 204.5,
+                  "entry_charges": 0.02,
+                  "max_loss": 204.52,
+                  "max_gain": 295.48,
+                  "breakevens": [
+                    59.55
+                  ],
+                  "long_leg_max": 382.5,
+                  "long_leg_pct": 7.23,
+                  "rule_10pct": "PASS",
+                  "cash_need": 382.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 1,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 57.5,
+                      "price": 2.9,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 52.5,
+                      "price": 1.17,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 1.73,
+                  "net_debit_lot": 173.0,
+                  "entry_charges": 0.02,
+                  "max_loss": 173.02,
+                  "max_gain": 326.98,
+                  "breakevens": [
+                    55.77
+                  ],
+                  "long_leg_max": 290.0,
+                  "long_leg_pct": 5.48,
+                  "rule_10pct": "PASS",
+                  "cash_need": 290.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 1,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 57.5,
+                      "price": 3.83,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 57.5,
+                      "price": 2.9,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 6.72,
+                  "net_debit_lot": 672.5,
+                  "entry_charges": 0.0,
+                  "max_loss": 672.5,
+                  "max_gain": null,
+                  "breakevens": [
+                    50.77,
+                    64.22
+                  ],
+                  "long_leg_max": 382.5,
+                  "long_leg_pct": 7.23,
+                  "rule_10pct": "PASS",
+                  "cash_need": 672.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 1,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "SOFI",
+          "spot": 17.53,
+          "spot_date": "2026-11-04",
+          "lot": 100,
+          "why": [],
+          "monthly": true,
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-20",
+              "days": 16,
+              "atm": 17.5,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 16.5,
+                  "CE": {
+                    "price": 1.41,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 53.71,
+                    "bid": 1.37,
+                    "ask": 1.45,
+                    "contract": "SOFI261120C00016500",
+                    "per_lot": 141.0,
+                    "pct": 2.67
+                  },
+                  "PE": {
+                    "price": 0.31,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 49.41,
+                    "bid": 0.3,
+                    "ask": 0.32,
+                    "contract": "SOFI261120P00016500",
+                    "per_lot": 31.0,
+                    "pct": 0.59
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 17.0,
+                  "CE": {
+                    "price": 1.06,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 51.76,
+                    "bid": 1.04,
+                    "ask": 1.09,
+                    "contract": "SOFI261120C00017000",
+                    "per_lot": 106.5,
+                    "pct": 2.01
+                  },
+                  "PE": {
+                    "price": 0.47,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 48.24,
+                    "bid": 0.46,
+                    "ask": 0.48,
+                    "contract": "SOFI261120P00017000",
+                    "per_lot": 47.0,
+                    "pct": 0.89
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 17.5,
+                  "CE": {
+                    "price": 0.77,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 50.59,
+                    "bid": 0.76,
+                    "ask": 0.78,
+                    "contract": "SOFI261120C00017500",
+                    "per_lot": 77.0,
+                    "pct": 1.46
+                  },
+                  "PE": {
+                    "price": 0.67,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 46.29,
+                    "bid": 0.66,
+                    "ask": 0.68,
+                    "contract": "SOFI261120P00017500",
+                    "per_lot": 67.0,
+                    "pct": 1.27
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 18.0,
+                  "CE": {
+                    "price": 0.53,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 48.34,
+                    "bid": 0.52,
+                    "ask": 0.53,
+                    "contract": "SOFI261120C00018000",
+                    "per_lot": 52.5,
+                    "pct": 0.99
+                  },
+                  "PE": {
+                    "price": 0.92,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 44.63,
+                    "bid": 0.9,
+                    "ask": 0.94,
+                    "contract": "SOFI261120P00018000",
+                    "per_lot": 92.0,
+                    "pct": 1.74
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 18.5,
+                  "CE": {
+                    "price": 0.34,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 47.27,
+                    "bid": 0.32,
+                    "ask": 0.35,
+                    "contract": "SOFI261120C00018500",
+                    "per_lot": 33.5,
+                    "pct": 0.63
+                  },
+                  "PE": {
+                    "price": 1.25,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 44.73,
+                    "bid": 1.21,
+                    "ask": 1.28,
+                    "contract": "SOFI261120P00018500",
+                    "per_lot": 124.5,
+                    "pct": 2.35
+                  },
+                  "source": "real yfinance chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 17.5,
+                      "price": 0.77,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 18.5,
+                      "price": 0.34,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.43,
+                  "net_debit_lot": 43.5,
+                  "entry_charges": 0.02,
+                  "max_loss": 43.52,
+                  "max_gain": 56.48,
+                  "breakevens": [
+                    17.93
+                  ],
+                  "long_leg_max": 77.0,
+                  "long_leg_pct": 1.46,
+                  "rule_10pct": "PASS",
+                  "cash_need": 77.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 6,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 17.5,
+                      "price": 0.67,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 16.5,
+                      "price": 0.31,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.36,
+                  "net_debit_lot": 36.0,
+                  "entry_charges": 0.02,
+                  "max_loss": 36.02,
+                  "max_gain": 63.98,
+                  "breakevens": [
+                    17.14
+                  ],
+                  "long_leg_max": 67.0,
+                  "long_leg_pct": 1.27,
+                  "rule_10pct": "PASS",
+                  "cash_need": 67.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 7,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 17.5,
+                      "price": 0.77,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 17.5,
+                      "price": 0.67,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 1.44,
+                  "net_debit_lot": 144.0,
+                  "entry_charges": 0.0,
+                  "max_loss": 144.0,
+                  "max_gain": null,
+                  "breakevens": [
+                    16.06,
+                    18.94
+                  ],
+                  "long_leg_max": 77.0,
+                  "long_leg_pct": 1.46,
+                  "rule_10pct": "PASS",
+                  "cash_need": 144.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 6,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "underlying": "BAC",
+          "spot": 51.17,
+          "spot_date": "2026-11-04",
+          "lot": 100,
+          "why": [],
+          "monthly": true,
+          "warnings": [],
+          "expiries": [
+            {
+              "label": "monthly",
+              "expiry": "2026-11-20",
+              "days": 16,
+              "atm": 51.0,
+              "rows": [
+                {
+                  "offset": -2,
+                  "strike": 49.0,
+                  "CE": {
+                    "price": 2.84,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 44.73,
+                    "bid": 2.48,
+                    "ask": 3.2,
+                    "contract": "BAC261120C00049000",
+                    "per_lot": 284.0,
+                    "pct": 5.37
+                  },
+                  "PE": {
+                    "price": 0.35,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 26.47,
+                    "bid": 0.34,
+                    "ask": 0.37,
+                    "contract": "BAC261120P00049000",
+                    "per_lot": 35.5,
+                    "pct": 0.67
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": -1,
+                  "strike": 50.0,
+                  "CE": {
+                    "price": 1.96,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 30.71,
+                    "bid": 1.91,
+                    "ask": 2.0,
+                    "contract": "BAC261120C00050000",
+                    "per_lot": 195.5,
+                    "pct": 3.7
+                  },
+                  "PE": {
+                    "price": 0.59,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 25.15,
+                    "bid": 0.58,
+                    "ask": 0.61,
+                    "contract": "BAC261120P00050000",
+                    "per_lot": 59.5,
+                    "pct": 1.12
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 0,
+                  "strike": 51.0,
+                  "CE": {
+                    "price": 1.3,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 28.08,
+                    "bid": 1.29,
+                    "ask": 1.32,
+                    "contract": "BAC261120C00051000",
+                    "per_lot": 130.5,
+                    "pct": 2.47
+                  },
+                  "PE": {
+                    "price": 0.95,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 24.12,
+                    "bid": 0.93,
+                    "ask": 0.98,
+                    "contract": "BAC261120P00051000",
+                    "per_lot": 95.5,
+                    "pct": 1.81
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 1,
+                  "strike": 52.0,
+                  "CE": {
+                    "price": 0.8,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 26.81,
+                    "bid": 0.78,
+                    "ask": 0.82,
+                    "contract": "BAC261120C00052000",
+                    "per_lot": 80.0,
+                    "pct": 1.51
+                  },
+                  "PE": {
+                    "price": 1.46,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 22.71,
+                    "bid": 1.43,
+                    "ask": 1.48,
+                    "contract": "BAC261120P00052000",
+                    "per_lot": 145.5,
+                    "pct": 2.75
+                  },
+                  "source": "real yfinance chain (mid)"
+                },
+                {
+                  "offset": 2,
+                  "strike": 52.5,
+                  "CE": {
+                    "price": 0.6,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 26.17,
+                    "bid": 0.59,
+                    "ask": 0.62,
+                    "contract": "BAC261120C00052500",
+                    "per_lot": 60.5,
+                    "pct": 1.14
+                  },
+                  "PE": {
+                    "price": 1.76,
+                    "src": "real yfinance chain (mid)",
+                    "iv_pct": 22.51,
+                    "bid": 1.72,
+                    "ask": 1.81,
+                    "contract": "BAC261120P00052500",
+                    "per_lot": 176.5,
+                    "pct": 3.34
+                  },
+                  "source": "real yfinance chain (mid)"
+                }
+              ],
+              "structures": [
+                {
+                  "name": "Bull call spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 51.0,
+                      "price": 1.3,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "CE",
+                      "strike": 52.5,
+                      "price": 0.6,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.7,
+                  "net_debit_lot": 70.0,
+                  "entry_charges": 0.02,
+                  "max_loss": 70.02,
+                  "max_gain": 79.98,
+                  "breakevens": [
+                    51.7
+                  ],
+                  "long_leg_max": 130.5,
+                  "long_leg_pct": 2.47,
+                  "rule_10pct": "PASS",
+                  "cash_need": 130.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 4,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Bear put spread",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 51.0,
+                      "price": 0.95,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "SELL",
+                      "right": "PE",
+                      "strike": 49.0,
+                      "price": 0.35,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 0.6,
+                  "net_debit_lot": 60.0,
+                  "entry_charges": 0.02,
+                  "max_loss": 60.02,
+                  "max_gain": 139.98,
+                  "breakevens": [
+                    50.4
+                  ],
+                  "long_leg_max": 95.5,
+                  "long_leg_pct": 1.81,
+                  "rule_10pct": "PASS",
+                  "cash_need": 95.5,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 5,
+                  "verdict": "PASS",
+                  "why": ""
+                },
+                {
+                  "name": "Long straddle",
+                  "expiry": "2026-11-20",
+                  "legs": [
+                    {
+                      "side": "BUY",
+                      "right": "CE",
+                      "strike": 51.0,
+                      "price": 1.3,
+                      "src": "real yfinance chain (mid)"
+                    },
+                    {
+                      "side": "BUY",
+                      "right": "PE",
+                      "strike": 51.0,
+                      "price": 0.95,
+                      "src": "real yfinance chain (mid)"
+                    }
+                  ],
+                  "units": 100,
+                  "net_debit": 2.26,
+                  "net_debit_lot": 226.0,
+                  "entry_charges": 0.0,
+                  "max_loss": 226.0,
+                  "max_gain": null,
+                  "breakevens": [
+                    48.74,
+                    53.26
+                  ],
+                  "long_leg_max": 130.5,
+                  "long_leg_pct": 2.47,
+                  "rule_10pct": "PASS",
+                  "cash_need": 226.0,
+                  "free_cash": "PASS",
+                  "slots": "PASS",
+                  "max_lots": 4,
+                  "verdict": "PASS",
+                  "why": ""
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": [
+        "real yfinance chain (mid)"
+      ]
+    }
   }
 }

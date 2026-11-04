@@ -4,16 +4,23 @@ A separate book (state/fno_*, decisions/fno_orders.json) run by engine.run_day a
 Accounting, risk rules and the circuit breaker are in derivbook.py; every limit is in RISK_LIMITS.md.
 
 Instruments: NIFTY (^NSEI), BANKNIFTY (^NSEBANK) and the stocks in config.FNO_STOCKS (an editable list,
-not the full NSE F&O list; lot sizes and strike steps there are examples to VERIFY on nseindia.com).
-Expiry: the last Tuesday of the month (config INDEX_EXPIRY_WEEKDAY / STOCK_EXPIRY_WEEKDAY; NSE changed
-expiry days in 2025, VERIFY). A holiday expiry settles on the last trading day on or before it.
+not the full NSE F&O list; lot sizes checked against NSE's fo_mktlots.csv on 4 Nov 2026).
+Expiry: the last Tuesday of the month (config INDEX_EXPIRY_WEEKDAY / STOCK_EXPIRY_WEEKDAY), snapped to NSE's
+listed expiry date when a chain cache exists (a holiday moves it to the trading day before: 24 Nov 2026 ->
+23 Nov). An exact YYYY-MM-DD (for example a NIFTY weekly) is taken as given, and must be listed when the
+list is known. With no cache, a holiday expiry settles on the last trading day on or before it.
 
-Pricing. Yahoo has no NSE futures or option quotes, so everything here is a model:
-  future = spot x (1 + CARRY_RATE x calendar days to expiry / 365)
-  option = Black-Scholes (European) on the spot, r = CARRY_RATE, vol = India VIX / 100 for index options,
-           1.5 x the stock's 30-day realised vol for stock options. MARK-TO-MODEL, NOT MARKET QUOTES: real
-           premiums differ (skew, the bid/ask spread, demand). Fills add 1% adverse slippage to the model
-           premium (FNO_OPT_SLIPPAGE_PCT) and 0.05% to futures (SLIPPAGE_PCT).
+Pricing. Real NSE option chains are fetched by the daily run (chains.py, cached in state/chains/):
+  marks    option at the chain's bid/ask MID at the day's close when the strike has a two-sided quote
+           ("real NSE chain (mid)"); otherwise Black-Scholes on the chain's IV for that strike or the ATM IV;
+           otherwise (no chain today) the model below.
+  fills    always the model, at the fill day's open spot, +/-1% slippage (FNO_OPT_SLIPPAGE_PCT): the chain
+           is a close snapshot, not the open. Its vol is the IV of the latest chain BEFORE the fill day (no
+           look-ahead), else the model vol.
+  model    future = spot x (1 + CARRY_RATE x calendar days to expiry / 365)
+           option = Black-Scholes (European) on the spot, r = CARRY_RATE, vol = India VIX / 100 for index
+           options, 1.5 x the stock's 30-day realised vol for stock options ("model (BS on VIX / realised
+           vol)"): no skew, no spread. Futures are always the carry model, with 0.05% slippage (SLIPPAGE_PCT).
 Fills at the underlying's first NSE open after the order's decision_date (spot = that open; VIX = that
 day's VIX open). Marks at the day's close. Futures margin = FUT_MARGIN_PCT (index 12%, stock 20%) of the
 fill notional, blocked until exit.
@@ -46,11 +53,12 @@ Orders, decisions/fno_orders.json, written by the reviewer (ROUTINE_PROMPT.md):
 from __future__ import annotations
 
 import logging
+import re
 from datetime import date as _date
 
 import pandas as pd
 
-from . import config, data
+from . import config, data, chains
 from .costs import charges, exercise_charges, Charges
 from .derivbook import (DerivBook, DPos, Reject, NotYet, bs_price, intrinsic, realised_vol, years_to,
                         monthly_expiry, strike_spec, position_id, run_orders, load_queue, save_queue,
@@ -58,7 +66,7 @@ from .derivbook import (DerivBook, DPos, Reject, NotYet, bs_price, intrinsic, re
 
 log = logging.getLogger(__name__)
 
-MODEL_LABEL = "mark-to-model (Black-Scholes / carry), not market quotes"
+MODEL_LABEL = "model (Black-Scholes / carry) unless a mark says real NSE chain (mid)"
 
 
 class FnoBook(DerivBook):
@@ -109,6 +117,9 @@ def needed_tickers(book: FnoBook, orders: list) -> list[str]:
             t.add(spec(o.get("underlying") or str(o.get("position", "")).split(":")[0])["yahoo"])
         except Reject:
             pass
+    from .candidates import fno_candidate_symbols
+    for u in fno_candidate_symbols()[0]:
+        t.add(spec(u)["yahoo"])
     return sorted(t)
 
 
@@ -136,10 +147,34 @@ def load_prices(main_prices: pd.DataFrame, tickers: list[str], do_update: bool) 
 class FnoMarket:
     """Prices and contract maths for one run. Spot and VIX come from the daily bars."""
 
-    def __init__(self, prices: pd.DataFrame, market_day: str, book: FnoBook):
+    def __init__(self, prices: pd.DataFrame, market_day: str, book: FnoBook, prior: dict | None = None,
+                 today: dict | None = None, listed: dict | None = None):
         self.market_day, self.book = market_day, book
         self.opens = data.pivot(prices, "open") if len(prices) else pd.DataFrame()
         self.closes = data.pivot(prices, "close") if len(prices) else pd.DataFrame()
+        self.prior = prior or {}       # {SYM: chain snapshot as cached BEFORE today's fetch}: fill IVs
+        self.today = today or {}       # {SYM: chain snapshot of the market date}: marks and candidates
+        self._listed = listed or {}    # {SYM: NSE's listed expiry dates}, from the newest snapshot of any date
+
+    def listed(self, sym) -> list:
+        return self._listed.get(sym) or (self.today.get(sym) or self.prior.get(sym) or {}).get("expiries") or []
+
+    def resolve_expiry(self, o_expiry, fill_day, sp) -> str:
+        listed = self.listed(sp["name"])
+        s = str(o_expiry or "current").strip().lower()
+        if s in ("current", "near"):
+            return chains.monthly_after(fill_day, sp["weekday"], listed)
+        if s in ("next", "far"):
+            return chains.monthly_after(fill_day, sp["weekday"], listed, skip=1)
+        if re.fullmatch(r"\d{4}-\d{2}", s):
+            e = chains.snap_to_listed(monthly_expiry(s, "1970-01-01", sp["weekday"]), listed)
+            if e <= fill_day:
+                raise Reject(f"expiry {e} is not after the fill day {fill_day}")
+            return e
+        e = monthly_expiry(s, fill_day, sp["weekday"])       # exact date (validates it is after the fill)
+        if listed and e not in listed:
+            raise Reject(f"expiry {e} is not listed on NSE for {sp['name']}; listed: {', '.join(listed[:6])}")
+        return e
 
     # --- raw series ---
     def _col(self, frame, ticker) -> pd.Series:
@@ -159,7 +194,24 @@ class FnoMarket:
             raise NotYet(f"no {ticker} close on or before {day}")
         return float(c.iloc[-1]), c.index[-1].strftime("%Y-%m-%d")
 
-    def sigma(self, sp: dict, day: str, at_open: bool) -> tuple[float, str]:
+    def sigma(self, sp: dict, day: str, at_open: bool, expiry: str | None = None, strike: float | None = None,
+              kind: str | None = None) -> tuple[float, str]:
+        if expiry and strike is not None and kind:
+            if at_open:
+                got = chains.fill_iv(sp["name"], self.prior.get(sp["name"]), day, expiry, strike, kind)
+                if got:
+                    return got
+            else:
+                snap = chains.usable(self.today.get(sp["name"]), day)
+                iv = chains.strike_iv(snap, expiry, strike, kind) if snap else None
+                if iv:
+                    return iv, f"NSE chain IV {iv*100:.2f}% at this strike (close of {day})"
+                iv = chains.atm_iv(snap, expiry if snap and expiry in snap.get("chains", {}) else None) if snap else None
+                if iv:
+                    return iv, f"NSE chain ATM IV {iv*100:.2f}% (close of {day})"
+        return self.model_sigma(sp, day, at_open)
+
+    def model_sigma(self, sp: dict, day: str, at_open: bool) -> tuple[float, str]:
         if sp["kind"] == "index":
             vix = config.FNO_VIX_SYMBOL
             if at_open:
@@ -204,7 +256,7 @@ class FnoMarket:
 
     def option_price(self, sp, kind, strike, expiry, day, at_open) -> tuple[float, str, float, float]:
         S = self.spot_open(sp["yahoo"], day) if at_open else self.spot_close(sp["yahoo"], day)[0]
-        sig, src = self.sigma(sp, day, at_open)
+        sig, src = self.sigma(sp, day, at_open, expiry, strike, kind)
         t = years_to(expiry, day)
         px = bs_price(S, strike, t, config.CARRY_RATE, sig, kind)
         days = round(t * 365)
@@ -215,7 +267,7 @@ class FnoMarket:
         kind = _instrument(o)
         lots = int(o.get("lots") or 0)
         try:
-            expiry = monthly_expiry(o.get("expiry"), fill_day, sp["weekday"])
+            expiry = self.resolve_expiry(o.get("expiry"), fill_day, sp)
         except ValueError as e:
             raise Reject(str(e))
         S = self.spot_open(sp["yahoo"], fill_day)
@@ -267,8 +319,16 @@ class FnoMarket:
             f, how = self.future_price(S, p.expiry, day)
             p.mark, p.pricing = round(f, 2), how + ("" if sday == day else f" (spot close of {sday})")
         else:
-            px, how, sig, _ = self.option_price(sp, p.kind, p.strike, p.expiry, day, at_open=False)
-            p.mark, p.iv, p.pricing = round(px, 2), sig, how + ("" if sday == day else f" (spot close of {sday})")
+            snap = chains.usable(self.today.get(p.underlying), day)
+            q = chains.quote(snap, p.expiry, p.strike, p.kind) if snap else None
+            m = chains.mid(q)
+            if m is not None:
+                p.mark, p.pricing = m, (f"{chains.CHAIN_LABEL}: bid {q['bid']:,.2f} / ask {q['ask']:,.2f} "
+                                        f"(NSE {snap['timestamp']})")
+                p.iv = round(q["iv"] / 100, 4) if q.get("iv", 0) > 0 else p.iv
+            else:
+                px, how, sig, _ = self.option_price(sp, p.kind, p.strike, p.expiry, day, at_open=False)
+                p.mark, p.iv, p.pricing = round(px, 2), sig, how + ("" if sday == day else f" (spot close of {sday})")
         p.spot, p.mark_date = round(S, 4), day
 
 
@@ -321,7 +381,12 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     tickers = needed_tickers(book, queue["orders"])
     prices = load_prices(main_prices, tickers, do_update)
     warnings = [f"No price data for {t}" for t in prices.attrs["dropped"]]
-    market = FnoMarket(prices, market_day, book)
+    try:
+        prior, today, listed, chain_notes = load_chains(book, queue["orders"], market_day, do_update)
+    except Exception as e:                 # fail soft: the sleeve runs on the model
+        log.exception("NSE option chains step failed")
+        prior, today, listed, chain_notes = {}, {}, {}, [f"NSE option chains step failed ({e}); model prices only"]
+    market = FnoMarket(prices, market_day, book, prior, today, listed)
 
     fills, notes, keep, executed = run_orders(book, queue["orders"], market, market_day)
     ex_fills, ex_notes, rolls = expire_positions(book, market, market_day)
@@ -350,6 +415,15 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     queue["orders"] = keep
     save_queue(config.FNO_ORDERS_FILE, queue)
     record_executed("fno", market_day, executed)
+    warnings += chain_notes
+    cands = None
+    try:
+        from .candidates import build_fno, save as save_cands
+        cands = build_fno(market, book, market_day, chain_notes)
+        save_cands(config.FNO_CANDIDATES_FILE, cands)
+    except Exception as e:
+        log.exception("F&O candidates failed")
+        warnings.append(f"F&O candidates could not be built ({e})")
     book.last_run = dict(date=market_day, notes=notes, warnings=warnings)
     book.save()
     spots = {}
@@ -363,7 +437,45 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     except NotYet:
         pass
     return dict(date=market_day, book=book, fills=fills, notes=notes, warnings=warnings, equity=eq,
-                orders=keep, spots=spots)
+                orders=keep, spots=spots, candidates=cands)
+
+
+def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool) -> tuple[dict, dict, dict, list[str]]:
+    """(prior, today, listed, notes). listed = NSE's listed expiry dates per underlying from the newest
+    snapshot of any date (an expiry list does not go stale with the quotes). prior = each underlying's
+    cached chain BEFORE today's fetch (fill IVs, no look-ahead); today = the snapshots whose timestamp is the market date (marks, candidates). An online run
+    fetches the candidates' and the open positions' underlyings from NSE (chains.refresh); offline reads the
+    cache only."""
+    from .candidates import fno_candidate_symbols
+    syms = list(fno_candidate_symbols()[0])
+    for p in book.positions.values():
+        syms.append(p.underlying)
+    for o in orders:
+        u = o.get("underlying") or str(o.get("position", "")).split(":")[0]
+        try:
+            syms.append(spec(u)["name"])
+        except Reject:
+            pass
+    syms = list(dict.fromkeys(syms))
+    specs = {u: dict(kind=spec(u)["kind"], weekday=spec(u)["weekday"], lot=spec(u)["lot"]) for u in syms}
+    prior = {u: s for u in syms if (s := chains.load(u))}
+    if do_update:
+        extra = {}
+        for p in book.positions.values():
+            if p.kind in OPTION_KINDS:
+                extra.setdefault(p.underlying, set()).add(p.expiry)
+        table = {u: dict(lot=spec(u)["lot"]) for u in list(config.FNO_INDEX) + list(config.FNO_STOCKS)}
+        fetched, notes = chains.refresh(specs, market_day, extra, weekly=set(config.FNO_WEEKLY_INDICES), lot_table=table)
+        snaps = {**prior, **fetched}
+    else:
+        snaps, notes = prior, ["offline run: no NSE chain fetch; cached chains are used only if they are of the market date"]
+    today = {u: s for u, s in snaps.items() if s.get("date") == market_day}
+    listed = {u: s.get("expiries") or [] for u, s in snaps.items()}
+    if do_update:
+        got = sorted(today)
+        notes.insert(0, f"NSE option chains for {market_day}: " + (", ".join(got) if got else "none")
+                     + f" of {len(syms)} ({', '.join(syms)})")
+    return prior, today, listed, notes
 
 
 # ---------- views ----------

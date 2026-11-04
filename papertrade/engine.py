@@ -9,7 +9,8 @@ One `run` does, in order:
   6. F&O, US  : the India F&O sleeve (fno.py, fills at the NSE open) and the US sleeve (us.py, fills at the US
                 open); each fills its queued orders, settles expiries, marks, checks its circuit breaker.
   7. review   : write journal/YYYY-MM-DD.md (momentum sections, "## Thesis sleeve", "## India F&O sleeve",
-                "## US sleeve", "## All sleeves").
+                "## F&O candidates", "## US sleeve", "## US candidates", "## All sleeves"). The candidates
+                (candidates.py) are what the cloud reviewer decides the F&O and US sleeves with.
 
 Claude (or you) may edit decisions/pending_orders.json between steps 4 and 2 of the next day.
 """
@@ -206,9 +207,21 @@ def run_day(do_update: bool = True) -> dict:
         log.exception("F&O sleeve step failed; the momentum and thesis sleeves completed and were saved.")
         thesis_section += ["", "## India F&O sleeve", "", "**The F&O sleeve step FAILED this run** (see the run log)."]
     try:
+        from . import candidates
+        thesis_section += [""] + candidates.fno_lines(fno_out.get("candidates") if fno_out else None)
+    except Exception:
+        log.exception("F&O candidates section failed")
+        thesis_section += ["", "## F&O candidates", "", "Not available this run (see the run log)."]
+    try:
         from . import us
         us_out = us.run_day(today, do_update)
         thesis_section += [""] + us.journal_lines(us_out)
+        try:
+            from . import candidates
+            thesis_section += [""] + candidates.us_lines(us_out.get("candidates"), offline=us_out.get("offline", False))
+        except Exception:
+            log.exception("US candidates section failed")
+            thesis_section += ["", "## US candidates", "", "Not available this run (see the run log)."]
     except StaleDataError as e:
         us_skipped = str(e)
         thesis_section += ["", "## US sleeve", "", f"**Skipped this run: {e}.** Nothing in the US sleeve was "

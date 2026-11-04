@@ -1,5 +1,44 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-04 - F&O and US candidates, real NSE option chains, 2026 charge rates, lot-size fixes
+
+- **Why**: in 12 daily reviews the F&O and US sleeves never traded. The journal gave the reviewer only
+  index levels, VIX and the SPY price: no premiums, expiries or structures, so it always decided "none".
+- **New journal sections** "## F&O candidates" (after "## India F&O sleeve") and "## US candidates" (after
+  "## US sleeve"), the same data in `docs/data.json` ("candidates") and two dashboard cards. Code:
+  `papertrade/candidates.py`. India: NIFTY, BANKNIFTY and every `FNO_STOCKS` symbol held by an open thesis
+  or named by a queued thesis order (today ONGC, HINDPETRO, ICICIBANK, BAJFINANCE); current monthly expiry
+  plus NIFTY's nearest weekly; ATM-2..ATM+2 CE/PE per unit, per lot and as % of sleeve equity; bull call
+  spread, bear put spread and long straddle with max loss / gain / breakeven and PASS/FAIL computed the way
+  `derivbook.check_open` will check the orders. US: SPY, QQQ, F, PFE, INTC, SOFI, BAC
+  (`config.US_CANDIDATE_TICKERS`), nearest monthly 14-42 days out, real yfinance chain mids. Every row is
+  labelled with its pricing source.
+- **Real NSE option chains** (`papertrade/chains.py`): the daily run fetches them with curl_cffi Chrome
+  impersonation and cookie priming (as scanner.py), caches each to `state/chains/<SYM>.json` (latest only,
+  committed). The endpoints the brief named (`option-chain-indices`, `option-chain-equities`) answered 404
+  and `{}` on 4 Nov 2026: NSE replaced them with `option-chain-contract-info` (expiry list) and
+  `option-chain-v3` (one expiry per call), which are used; the old ones are tried only as a fallback.
+  Effect on the F&O sleeve: option MARKS use the chain's bid/ask mid when two-sided (else Black-Scholes on
+  the chain's IV, else the old VIX / realised-vol model); FILLS stay on the model at the next open but use
+  the IV of the latest chain dated BEFORE the fill day (no look-ahead) instead of VIX. Expiry dates snap to
+  NSE's listed dates (a holiday moves an expiry a day earlier: 24 Nov 2026 -> 23 Nov). A failed fetch is
+  soft: the run continues on the model and the journal's F&O observations say why. The sleeve had no
+  positions or orders when this changed, so no past number moves.
+- **Charges** (`costs.py`): futures STT 0.02% -> 0.05% sell side (from 1 April 2026, Zerodha's bulletin;
+  verified in broker notes 4 Nov 2026). NSE transaction charges futures 0.00173% -> 0.00183% and options
+  0.03503% -> 0.03553% (2026 sources; NOT verified on NSE: VERIFY). Effect on the thesis sleeve: a new paper
+  SHORT pays 0.05% STT; the open HINDPETRO short's cover is a buy (no STT), so its exit cost changes only by
+  the 0.0001% txn difference (about Rs 0.07).
+- **Lot sizes** (`config.FNO_STOCKS`), checked against NSE's fo_mktlots.csv (NOV-26 series) on 4 Nov 2026:
+  HDFCBANK 550 -> 650 and TCS 175 -> 225 (both were wrong); BAJFINANCE added (lot 750, step 10) for the
+  queued Bajaj Finance thesis order. NIFTY 65, BANKNIFTY 30 and the rest confirmed. JAN-27 series changes
+  HDFCBANK to 750, INFY to 500, TCS to 250: update config then. The daily run re-checks the table against
+  NSE and warns on any mismatch. Tuesday expiries confirmed (broker notes, 4 Nov 2026, and NSE's list).
+- **Momentum and thesis sleeves**: no rule change. Evidence: see the 2026-11-04 commit message (journal and
+  state diffs of the same-date re-run).
+- **Revert if**: the NSE fetch breaks the daily run (it is wrapped: it should never), or chain marks prove
+  unreliable (for example one-sided quotes after hours); the model path is unchanged and is the fallback.
+
 ## 2026-10-17 - Thesis sleeve added (momentum sleeve unchanged)
 
 - **What**: a second, separate paper book for macro / economic-theme positions held weeks to years, each

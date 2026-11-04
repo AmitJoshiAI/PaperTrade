@@ -191,6 +191,14 @@ def build_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | Non
     except Exception:
         log.exception("US sleeve export failed; dashboard written without it.")
         out["us"] = None
+    # Option candidates for the F&O and US sleeves (written by the last online run; candidates.py)
+    try:
+        from . import candidates
+        out["candidates"] = dict(fno=candidates.load(config.FNO_CANDIDATES_FILE),
+                                 us=candidates.load(config.US_CANDIDATES_FILE))
+    except Exception:
+        log.exception("Candidates export failed; dashboard written without them.")
+        out["candidates"] = None
     try:
         out["combined"] = _combined(curve, out)
     except Exception:

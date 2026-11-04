@@ -10,7 +10,7 @@ and writes a daily journal for review. No real orders are ever placed.
 |---|---|---|---|---|
 | Momentum | Rs 5,00,000 | the daily rotation rules below; the Rs 1,000/day target applies here | `state/portfolio.json`, `trades.csv`, `equity_curve.csv`, `decisions/pending_orders.json` | daily (DAILY.md) |
 | Thesis | Rs 5,00,000 | (decided by Claude) one written thesis per position: `theme` (macro reason, weeks to years) or `catalyst` (positioned before a scheduled event such as results, Budget, IPO listing or RBI policy, days to weeks, with a pre-set post-event rule) or `second_order` (an event with the obvious winner held long and the non-obvious losers held as PAPER shorts, see `theses/_EXAMPLE_second_order.md`) | `theses/<slug>.md`, `state/thesis_*`, `decisions/thesis_orders.json` | weekly on Fridays; catalysts on the first trading day after the event (THESIS_REVIEW.md) |
-| India F&O | Rs 5,00,000 | (decided by Claude) NIFTY / BANKNIFTY and listed stock futures and options, in lots; futures priced spot x carry, options by Black-Scholes on India VIX (mark-to-model, not market quotes) | `papertrade/fno.py`, `state/fno_*`, `decisions/fno_orders.json` | daily |
+| India F&O | Rs 5,00,000 | (decided by Claude) NIFTY / BANKNIFTY and listed stock futures and options, in lots; futures priced spot x carry, options marked at the real NSE chain mid when fetched (else Black-Scholes, labelled) | `papertrade/fno.py`, `state/fno_*`, `decisions/fno_orders.json` | daily |
 | US | Rs 5,00,000 (about $5,290 at the start date's USD/INR) | (decided by Claude) US stocks/ETFs long and paper-short, US options at the mid of REAL Yahoo option chains | `papertrade/us.py`, `state/us_*`, `decisions/us_orders.json` | daily |
 
 Each sleeve was added on top of the original Rs 5,00,000 (CHANGELOG 2026-10-17), so the momentum
@@ -81,14 +81,16 @@ papertrade/        the package
   config.py        capital, targets, strategy parameters, paths  (edit parameters here only)
   universe.py      Nifty 50 symbol list
   data.py          Yahoo download -> data_cache/prices_daily.parquet
-  costs.py         Zerodha CNC/MIS/FUT charge model (FUT only for the thesis sleeve's paper shorts)
+  costs.py         Zerodha CNC/MIS/FUT/OPT charge model and US fees (FUT: thesis paper shorts and F&O futures)
   portfolio.py     cash, positions, trade ledger, equity curve
   strategy.py      momentum rotation rules
   thesis.py        thesis sleeve: ledger parsing (incl. second-order legs), thesis orders (BUY/SELL/SHORT/COVER),
                    paper shorts, invalidation and catalyst checks, journal section
   derivbook.py     shared by the F&O and US sleeves: Black-Scholes, expiries, margin/cash accounting,
                    the risk rules and the daily-loss circuit breaker, the order loop, ledgers
-  fno.py           India F&O sleeve: futures (carry model) and options (Black-Scholes), expiry and roll
+  fno.py           India F&O sleeve: futures (carry model) and options (NSE chain mid / Black-Scholes), expiry and roll
+  chains.py        real NSE option chains (curl_cffi), cache in state/chains/, lot-size check vs NSE
+  candidates.py    journal "## F&O candidates" / "## US candidates": premiums, structures, PASS/FAIL
   us.py            US sleeve: stocks/ETFs and options from real Yahoo chains
   engine.py        the daily cycle
   review.py        journal writer
@@ -177,11 +179,11 @@ sleeves' run. Orders are queued by the reviewer in `decisions/fno_orders.json` a
 
 | | India F&O | US |
 |---|---|---|
-| Instruments | NIFTY (^NSEI), BANKNIFTY (^NSEBANK), stocks in `config.FNO_STOCKS`; futures, CE, PE, in lots (NIFTY 65, BANKNIFTY 30: VERIFY) | any US ticker: stock/ETF (shares), CALL, PUT (100 shares per contract) |
+| Instruments | NIFTY (^NSEI), BANKNIFTY (^NSEBANK), stocks in `config.FNO_STOCKS`; futures, CE, PE, in lots (NIFTY 65, BANKNIFTY 30; checked against NSE fo_mktlots.csv daily) | any US ticker: stock/ETF (shares), CALL, PUT (100 shares per contract) |
 | Fill | first NSE open after decision_date | stock: first US open after decision_date; option: chain mid as of the latest US session, at the next daily run |
-| Price | future = spot x (1 + 6.5% x days/365); option = Black-Scholes on the spot, IV = India VIX (index) or 1.5x 30-day realised vol (stock). **Mark-to-model, not market quotes** | stock: Yahoo bars; option: mid of bid/ask of the real chain; with no two-sided quote, Black-Scholes on the chain's implied vol, labelled FALLBACK |
-| Expiry | last Tuesday of the month (NSE moved all equity derivatives to Tuesday in Sept 2025: VERIFY); futures settle at the spot close and roll to next month at the next open unless `"roll": false`; options settle at intrinsic | as listed in the chain; cash-settled at intrinsic |
-| Costs | Zerodha FUT and OPT (OPT: Rs 20/order, STT 0.15% on sell premium and on exercised intrinsic, NSE 0.03503%: VERIFY) | zero commission; SEC fee and FINRA TAF on sells |
+| Price | future = spot x (1 + 6.5% x days/365); option MARK = mid of the real NSE chain (fetched by the daily run, `state/chains/`), else Black-Scholes on the chain IV, else on India VIX (index) / 1.5x 30-day realised vol (stock), each labelled; option FILL = Black-Scholes at the next open on the latest prior chain IV, +/-1% | stock: Yahoo bars; option: mid of bid/ask of the real chain; with no two-sided quote, Black-Scholes on the chain's implied vol, labelled FALLBACK |
+| Expiry | last Tuesday of the month, snapped to NSE's listed date (a holiday moves it a day earlier); verified 4 Nov 2026; futures settle at the spot close and roll to next month at the next open unless `"roll": false`; options settle at intrinsic | as listed in the chain; cash-settled at intrinsic |
+| Costs | Zerodha FUT and OPT (FUT STT 0.05% sell; OPT: Rs 20/order, STT 0.15% on sell premium and on exercised intrinsic; NSE txn 0.00183% / 0.03553%: VERIFY) | zero commission; SEC fee and FINRA TAF on sells |
 | Shorts | futures and covered options only (no naked short options) | paper-short stock ("PAPER SHORT: not possible from India (LRS)"), covered options |
 
 Limits (code): 5 positions per sleeve, risk per order at most 10% of sleeve equity, no naked short

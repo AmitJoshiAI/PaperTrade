@@ -5,23 +5,21 @@ Delivery (CNC):  brokerage 0; STT 0.1% buy + 0.1% sell; NSE txn 0.00297%; SEBI 0
                  stamp duty 0.015% buy; GST 18% on (brokerage + txn + SEBI); DP charge on each sell.
 Intraday (MIS):  brokerage min(0.03%, Rs 20) per order; STT 0.025% sell only; NSE txn 0.00297%;
                  SEBI 0.0001%; stamp 0.003% buy; GST 18% on (brokerage + txn + SEBI); no DP charge.
-Futures (FUT):   brokerage min(0.03%, Rs 20) per order; STT 0.02% sell only; NSE txn 0.00173%;
-                 SEBI 0.0001%; stamp 0.002% buy; GST 18% on (brokerage + txn + SEBI); no DP charge.
-                 Used only for the thesis sleeve's PAPER shorts (a cash-market short must be squared off
-                 the same day in India, so holding a short needs a stock future). The FUT rates were
-                 written from the task brief, not read off zerodha.com: VERIFY AGAINST zerodha.com/charges
-                 (F&O tab) before relying on them. In particular futures STT was 0.02% after Oct 2024;
-                 check whether a later Budget changed it. Charges are on the whole contract turnover
-                 (qty x price). The F&O sleeve (fno.py) uses the same FUT rates for its futures.
-                 2026 NOTE: Zerodha's support pages and Budget 2026-27 reporting say futures STT rose to
-                 0.05% (sell) on 1 April 2026. STT_FUT_SELL below is still 0.02% because changing it
-                 changes the thesis sleeve's costs too; it is flagged for the user to decide.
-Options (OPT):   brokerage Rs 20 flat per order; STT 0.15% of premium on the sell side; NSE txn 0.03503% of
-                 premium; SEBI 0.0001%; stamp 0.003% of premium on buys; GST 18% on (brokerage + txn + SEBI).
-                 On a long option exercised at expiry: STT 0.15% of the intrinsic value (no other charge
-                 modelled). Turnover = premium x units. VERIFY AGAINST zerodha.com/charges (F&O tab): the
-                 brief that commissioned this said 0.1% sell STT (the pre-April-2026 rate, exercise 0.125%);
-                 0.15% for both follows Zerodha's STT support article as found on 2026-10-17.
+Futures (FUT):   brokerage min(0.03%, Rs 20) per order; STT 0.05% sell only (raised from 0.02% on 1 April 2026,
+                 Budget 2026-27, per Zerodha's bulletin); NSE txn 0.00183% (VERIFY against NSE's circular: the
+                 2026 sources quote 0.00183%, the earlier figure here was 0.00173%); SEBI 0.0001%; stamp 0.002%
+                 buy; GST 18% on (brokerage + txn + SEBI); no DP charge. Charges are on the whole contract
+                 turnover (qty x price). Used by the F&O sleeve (fno.py) for its futures and by the thesis
+                 sleeve for its PAPER shorts (a cash-market short must be squared off the same day in India, so
+                 holding a short needs a stock future): from 4 Nov 2026 a new thesis SHORT pays 0.05% STT (a
+                 COVER is a buy and pays no STT, so the open HINDPETRO short's exit cost is unchanged apart from
+                 the 0.0001% txn change).
+Options (OPT):   brokerage Rs 20 flat per order; STT 0.15% of premium on the sell side (from 1 April 2026; was
+                 0.1%); NSE txn 0.03553% of premium (VERIFY against NSE's circular: the 2026 sources quote
+                 0.03553%, the earlier figure here was 0.03503%); SEBI 0.0001%; stamp 0.003% of premium on buys;
+                 GST 18% on (brokerage + txn + SEBI). On a long option exercised at expiry: STT 0.15% of the
+                 intrinsic value (no other charge modelled). Turnover = premium x units.
+                 STT rates verified 4 Nov 2026 (broker notes); exchange transaction charges NOT verified on NSE.
 US (USD):        us_charges(): zero commission; SEC fee 0.0000278 x sell notional; FINRA TAF $0.000166 per
                  share sold, max $8.30 per trade (options: $0.00279 per contract sold). VERIFY: both fees
                  are reset by the SEC/FINRA, usually once a year. FX: the day's USD/INR (fx.py).
@@ -40,15 +38,15 @@ GST = 0.18
 DP_CHARGE_PER_SELL = 15.93          # Rs 13.5 + 18% GST, per scrip per day on delivery sells
 INTRADAY_BROKERAGE_PCT = 0.0003
 INTRADAY_BROKERAGE_CAP = 20.0
-STT_FUT_SELL = 0.0002               # VERIFY against zerodha.com/charges (see docstring)
-NSE_TXN_FUT = 0.0000173
+STT_FUT_SELL = 0.0005               # 0.05% sell side from 1 Apr 2026 (Zerodha bulletin; broker notes, 4 Nov 2026)
+NSE_TXN_FUT = 0.0000183            # 0.00183%: VERIFY against NSE (see docstring)
 STAMP_FUT_BUY = 0.00002
 FUT_BROKERAGE_PCT = 0.0003
 FUT_BROKERAGE_CAP = 20.0
-OPT_BROKERAGE_FLAT = 20.0           # VERIFY all OPT_* against zerodha.com/charges (see docstring)
-STT_OPT_SELL = 0.0015
-STT_OPT_EXERCISE = 0.0015
-NSE_TXN_OPT = 0.0003503
+OPT_BROKERAGE_FLAT = 20.0
+STT_OPT_SELL = 0.0015               # 0.15% of sell premium from 1 Apr 2026 (verified, broker notes 4 Nov 2026)
+STT_OPT_EXERCISE = 0.0015           # 0.15% of intrinsic value on exercise (verified, same source)
+NSE_TXN_OPT = 0.0003553            # 0.03553% of premium: VERIFY against NSE (see docstring)
 STAMP_OPT_BUY = 0.00003
 US_SEC_FEE = 0.0000278              # x sell notional (USD). VERIFY on sec.gov (Section 31 fee rate)
 US_FINRA_TAF_SHARE = 0.000166       # per share sold. VERIFY on finra.org

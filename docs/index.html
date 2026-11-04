@@ -187,6 +187,28 @@ footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--mut
 footer p { margin: 4px 0; }
 footer a { color: inherit; }
 .empty { color: var(--muted); font-size: 14px; }
+/* option candidates (F&O and US): what the reviewer decides with */
+.cand { padding: 0; }
+.cand > summary { list-style: none; padding: 12px 14px; display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 2px 10px; color: var(--ink); font-size: 15px; }
+.cand > summary::-webkit-details-marker { display: none; }
+.cand > summary .sym { font-weight: 650; font-size: 16px; }
+.cand > summary .meta { grid-column: 1 / -1; font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.cand > summary .chev { color: var(--muted); font-size: 12px; }
+.cand[open] > summary .chev { transform: rotate(180deg); }
+.cand .body { padding: 0 14px 12px; }
+.cand .exp { margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--ink-2); }
+.cand table { font-size: 12.5px; }
+.cand td .sub { display: block; font-size: 11px; color: var(--muted); }
+.cand td.atm { font-weight: 700; }
+.strat { border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; margin-top: 6px; font-size: 13px; }
+.strat .row { gap: 6px; }
+.strat .name { font-weight: 600; }
+.strat .legs { font-size: 12px; color: var(--ink-2); margin-top: 2px; overflow-wrap: anywhere; }
+.strat .nums { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.badge.pass { color: var(--up); background: color-mix(in srgb, var(--up) 12%, transparent); }
+.badge.fail { color: var(--down); background: color-mix(in srgb, var(--down) 12%, transparent); }
+.src { font-size: 11px; font-weight: 600; padding: 1px 6px; border-radius: 6px; background: var(--code-bg); color: var(--ink-2); white-space: nowrap; }
+.src.real { color: var(--up); }
 </style>
 </head>
 <body>
@@ -641,6 +663,79 @@ footer a { color: inherit; }
     app.appendChild(section(id, title + " (" + pos.length + " open)", kids));
   }
 
+  // ---------- option candidates (state/*_candidates.json via data.json "candidates") ----------
+  function srcShort(s) {
+    if (!s) return "n/a";
+    if (/^real /.test(s)) return "chain mid";
+    if (/chain IV/.test(s)) return "BS on chain IV";
+    if (/VIX/.test(s)) return "model (VIX / RV)";
+    return s;
+  }
+  function kFmt(v) { return isNum(v) ? (Math.round(v) === v ? v.toLocaleString("en-IN") : f2.format(v)) : "?"; }
+  function renderCandidates(app, id, title, c, unit) {
+    if (!c) return;
+    var ccy = c.currency, usd = ccy === "USD";
+    var money = function (v) { return cur(v, ccy, usd ? 2 : 0); };
+    var kids = [h("div", { class: "card small" }, [
+      h("div", { class: "kv num", style: "margin-top:0" }, [
+        h("div", null, [h("span", { text: "10% limit per order" }), money(c.cap)]),
+        h("div", null, [h("span", { text: "Free cash" }), money(c.cash)]),
+        h("div", null, [h("span", { text: "Positions" }), c.open_positions + " of " + c.max_positions]),
+        h("div", null, [h("span", { text: "Circuit breaker" }), c.breaker ? "ON" : "off"])
+      ]),
+      h("p", { class: "muted small", style: "margin:8px 0 0", text: "Close prices of " + dLong(c.date) + ", for the daily reviewer. " +
+        "Pricing: " + ((c.sources || []).join(" · ") || "n/a") + ". Orders fill at the next open (" +
+        (usd ? "chain mid" : "model on chain IV ±1%") + "), so put the exact strikes and expiry shown here in an order." })
+    ])];
+    (c.notes || []).forEach(function (n) { kids.push(h("div", { class: "banner", text: n })); });
+    (c.underlyings || []).forEach(function (u, idx) {
+      if (u.error) { kids.push(h("div", { class: "card small muted", style: "margin-top:8px", text: u.underlying + ": not available (" + u.error + ")" })); return; }
+      var exps = u.expiries || [];
+      var pass = 0, total = 0, real = false;
+      exps.forEach(function (e) { (e.structures || []).forEach(function (s) { total++; if (s.verdict === "PASS") pass++; });
+        (e.rows || []).forEach(function (r) { if (/^real /.test(r.source || "")) real = true; }); });
+      var first = exps.length ? exps[exps.length - 1] : null;
+      var summ = h("summary", null, [
+        h("span", null, [h("span", { class: "sym", text: u.underlying }), h("span", { class: "muted num", style: "margin-left:8px", text: (usd ? "$" : "") + f2.format(u.spot) })]),
+        h("span", null, [h("span", { class: "badge " + (pass ? "pass" : "fail"), text: pass + "/" + total + " pass" }), h("span", { class: "chev", style: "margin-left:6px", text: "▾" })]),
+        h("span", { class: "meta", text: (first ? dShort(first.expiry) + " · " + first.days + "d · " : "") + (real ? "real chain" : "model prices") +
+          (u.why && u.why.length ? " · " + u.why.join("; ") : "") })
+      ]);
+      var body = [];
+      (u.warnings || []).forEach(function (w) { body.push(h("div", { class: "banner", text: w })); });
+      exps.forEach(function (e) {
+        body.push(h("div", { class: "exp", text: e.label.charAt(0).toUpperCase() + e.label.slice(1) + " " + dLong(e.expiry) + " · " + e.days + " days · ATM " +
+          kFmt(e.atm) + (isNum(e.atm_iv_pct) ? " · IV " + e.atm_iv_pct.toFixed(1) + "%" : "") }));
+        var cell = function (q) {
+          if (!q || !isNum(q.price)) return h("td", { class: "r", text: "n/a" });
+          return h("td", { class: "r" }, [money(q.per_lot), h("span", { class: "sub", text: f2.format(q.price) + " · " + (isNum(q.pct) ? q.pct.toFixed(1) + "%" : "") })]);
+        };
+        body.push(h("div", { class: "table-scroll" }, [h("table", null, [
+          h("thead", null, [h("tr", null, [h("th", { text: "Strike" }), h("th", { class: "r", text: "Call / " + unit }), h("th", { class: "r", text: "Put / " + unit }), h("th", { text: "Source" })])]),
+          h("tbody", null, (e.rows || []).map(function (r) {
+            return h("tr", null, [h("td", { class: r.offset === 0 ? "atm" : "" }, [kFmt(r.strike), h("span", { class: "sub", text: r.offset === 0 ? "ATM" : "ATM" + (r.offset > 0 ? "+" : "") + r.offset })]),
+              cell(r.CE), cell(r.PE), h("td", null, [h("span", { class: "src" + (/^real /.test(r.source || "") ? " real" : ""), text: srcShort((r.CE || {}).src) + ((r.PE || {}).src !== (r.CE || {}).src ? " / " + srcShort((r.PE || {}).src) : "") })])]);
+          }))])]));
+        (e.structures || []).forEach(function (s) {
+          var legs = (s.legs || []).map(function (l) { return l.side + " " + (usd ? (l.right === "CE" ? "CALL" : "PUT") : l.right) + " " + kFmt(l.strike); }).join(" + ") + " · " + s.expiry;
+          var ok = s.verdict === "PASS";
+          body.push(h("div", { class: "strat" }, [
+            h("div", { class: "row" }, [h("span", { class: "name", text: s.name }), h("span", { class: "badge " + (ok ? "pass" : "fail"), text: s.verdict === "n/a" ? "N/A" : s.verdict })]),
+            h("div", { class: "legs", text: legs }),
+            s.verdict === "n/a" ? h("div", { class: "nums", text: s.why }) :
+            h("div", { class: "nums num", text: "Max loss " + money(s.max_loss) + " · max gain " + (s.max_gain == null ? "unlimited" : money(s.max_gain)) +
+              " · BE " + (s.breakevens || []).map(function (b) { return f2.format(b); }).join(" / ") +
+              " · long leg " + (isNum(s.long_leg_pct) ? s.long_leg_pct.toFixed(1) : "?") + "% of equity" + (ok ? " · up to " + s.max_lots + " " + unit + (s.max_lots === 1 ? "" : "s") : " · " + s.why) })
+          ]));
+        });
+      });
+      var d = h("details", { class: "card cand", style: "margin-top:8px" }, [summ, h("div", { class: "body" }, body)]);
+      if (idx === 0) d.setAttribute("open", "");
+      kids.push(d);
+    });
+    app.appendChild(section(id, title + " (" + dShort(c.date) + ")", kids));
+  }
+
   // ---------- alerts (catalyst scanner: docs/alerts.json, refreshed every 30 min in market hours) ----------
   function istTime(iso) {
     var d = iso ? new Date(iso) : null;
@@ -787,7 +882,7 @@ footer a { color: inherit; }
         h("strong", { text: rs(combinedEq) }), " of " + rs(combinedCap) + " paper capital."]));
     }
     hdr.appendChild(h("nav", { class: "jump", "aria-label": "Sections" }, [
-      ["#alerts", "Alerts"], ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis"], ["#fno", "F&O"], ["#us", "US"],
+      ["#alerts", "Alerts"], ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis"], ["#fno", "F&O"], ["#fno-cands", "F&O candidates"], ["#us", "US"], ["#us-cands", "US candidates"],
       ["#combined", "All sleeves"], ["#trades", "Trades"], ["#journal", "Journal"]
     ].map(function (p) { return h("a", { href: p[0], text: p[1] }); })));
     app.appendChild(hdr);
@@ -905,6 +1000,9 @@ footer a { color: inherit; }
     ].forEach(function (x) {
       if (d[x[0]]) renderDeriv(app, x[0], x[1], d[x[0]], x[2]);
       else if (x[0] in d) app.appendChild(section(x[0], x[1], [h("div", { class: "banner", text: x[1] + " data could not be exported this run (see the run log)." })]));
+      // the sleeve's candidates right under it: the reviewer's next step
+      var cd = (d.candidates || {})[x[0]];
+      if (cd) renderCandidates(app, x[0] + "-cands", x[0] === "fno" ? "F&O candidates" : "US candidates", cd, x[0] === "fno" ? "lot" : "contract");
     });
     if (cb && cb.equity_curve && cb.equity_curve.length) {
       var wrap3 = h("div", { class: "chart-wrap", tabindex: "0", "aria-label": "Equity of all four sleeves together. Use left and right arrows to step through days." });

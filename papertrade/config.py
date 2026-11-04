@@ -96,31 +96,54 @@ FUT_MARGIN_PCT = {"index": 0.12, "stock": 0.20}    # of notional at entry, block
 FNO_OPT_SLIPPAGE_PCT = 0.01           # 1% adverse on model option premiums (stands in for the bid/ask spread
                                       # a model price does not have); futures use SLIPPAGE_PCT like the other sleeves
 # Monthly expiry = the last <weekday> of the month (0 = Monday ... 3 = Thursday). NSE moved ALL its equity
-# derivatives (index AND stock) from Thursday to Tuesday in September 2025, so both are Tuesday here. The
-# brief that commissioned this sleeve said Thursday for stock futures; Tuesday follows the 2026 sources.
-# VERIFY on nseindia.com. A holiday expiry is handled by settling on the last trading day on or before it.
+# derivatives (index AND stock) from Thursday to Tuesday in September 2025: NIFTY weekly and monthly (last
+# Tuesday), BANKNIFTY and stock options monthly (last Tuesday). Verified: broker notes, 4 Nov 2026, and NSE's
+# own expiry list (option-chain-contract-info), which shows a holiday expiry moved to the trading day before
+# (24 Nov 2026 -> Mon 23 Nov 2026). When a chain cache exists (state/chains/<SYM>.json, written by the daily
+# run), fno.py snaps the computed Tuesday to NSE's listed date; without one, a holiday expiry settles on the
+# last trading day on or before it.
 INDEX_EXPIRY_WEEKDAY = 1
 STOCK_EXPIRY_WEEKDAY = 1
-# Underlyings. lot = contract lot size, step = option strike interval. VERIFY ON nseindia.com: NSE revises
-# lot sizes (NIFTY 75 -> 65 and BANKNIFTY 35 -> 30 from the January 2026 series, per 2026 broker notes) and
-# the F&O list itself. Only the symbols listed here can be traded in the sleeve; add a line to add one.
+# Underlyings. lot = contract lot size, step = option strike interval near the money. Lot sizes verified
+# against NSE's fo_mktlots.csv (NOV-26 and DEC-26 series) and broker notes, 4 Nov 2026: NIFTY 65, BANKNIFTY 30.
+# NSE revises lots twice a year; the JAN-27 series changes HDFCBANK to 750, INFY to 500 and TCS to 250 (the
+# others are unchanged): update these lines when the January 2027 series becomes the current expiry. The
+# daily run compares this table with fo_mktlots.csv and warns in the journal on any mismatch (chains.py).
+# Strike steps checked against NSE's listed strikes near the spot on 4 Nov 2026. Only the symbols listed here
+# can be traded in the sleeve; add a line to add one (it is not the full NSE F&O list).
 FNO_INDEX = {
     "NIFTY": {"yahoo": "^NSEI", "lot": 65, "step": 50},
     "BANKNIFTY": {"yahoo": "^NSEBANK", "lot": 30, "step": 100},
 }
-FNO_STOCKS = {                         # NSE symbol -> lot size and strike step. Examples only: VERIFY each.
+FNO_STOCKS = {                         # NSE symbol -> lot size and strike step
     "RELIANCE": {"lot": 500, "step": 10},
-    "HDFCBANK": {"lot": 550, "step": 10},
+    "HDFCBANK": {"lot": 650, "step": 10},      # was 550 (wrong); 750 from the JAN-27 series
     "ICICIBANK": {"lot": 700, "step": 10},
-    "INFY": {"lot": 400, "step": 20},
+    "INFY": {"lot": 400, "step": 20},          # 500 from the JAN-27 series
     "SBIN": {"lot": 750, "step": 10},
-    "TCS": {"lot": 175, "step": 20},
+    "TCS": {"lot": 225, "step": 20},           # was 175 (wrong); 250 from the JAN-27 series
     "ONGC": {"lot": 2250, "step": 2.5},
     "HINDPETRO": {"lot": 2025, "step": 5},
+    "BAJFINANCE": {"lot": 750, "step": 10},    # added 4 Nov 2026: the bajaj-finance-rbi-december thesis
 }
+# Daily F&O candidates (candidates.py, journal "## F&O candidates"): these indices always, plus every
+# FNO_STOCKS symbol held by an open thesis or named by a queued thesis order. NIFTY also shows its nearest
+# weekly expiry. Real NSE option chains are fetched by the daily run (chains.py) and cached in state/chains/.
+FNO_CANDIDATE_INDICES = ["NIFTY", "BANKNIFTY"]
+FNO_WEEKLY_INDICES = ["NIFTY"]
+CHAINS_DIR = STATE_DIR / "chains"
+FNO_CANDIDATES_FILE = STATE_DIR / "fno_candidates.json"
+US_CANDIDATES_FILE = STATE_DIR / "us_candidates.json"
+CHAIN_STRIKE_BAND = 0.15              # keep strikes within +/-15% of the spot in the cache (file size)
 
 # US sleeve. Options use REAL Yahoo option chains (mid of bid/ask); 100 shares per contract.
 US_CONTRACT_SIZE = 100
 US_SHORT_STOCK_MARGIN_PCT = 0.50      # paper short stock: 50% of notional blocked (Reg T initial margin)
 US_RISK_FREE_RATE = 0.04              # approximate US T-bill yield; used ONLY by the labelled Black-Scholes fallback
                                       # when a chain has no two-sided quote. VERIFY / update by hand.
+# US candidates (journal "## US candidates"): SPY and QQQ for reference (one ATM contract is usually above the
+# 10% limit at this size) and five liquid underlyings under about $60, so one contract's premium can fit
+# (about $529). Chosen 4 Nov 2026; edit freely. Expiry: the nearest monthly (third Friday) 14-42 days out.
+US_CANDIDATE_TICKERS = ["SPY", "QQQ", "F", "PFE", "INTC", "SOFI", "BAC"]
+US_CANDIDATE_MIN_DAYS = 14
+US_CANDIDATE_MAX_DAYS = 42

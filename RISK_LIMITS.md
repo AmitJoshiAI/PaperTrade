@@ -59,8 +59,10 @@ What the 10% rule means at this size (worked out 2026-10-17, NIFTY about 23,000)
 
 ## Things NOT modelled (read before trusting a number)
 
-- India options are mark-to-model (Black-Scholes on India VIX or 1.5x realised vol), not market quotes:
-  no skew, no real spread, no liquidity check. Futures are priced from the spot with a fixed 6.5% carry.
+- India options are marked at the real NSE chain's bid/ask mid when the daily run could fetch the chain
+  (papertrade/chains.py; labelled "real NSE chain (mid)"); otherwise Black-Scholes on the chain's IV, or on
+  India VIX / 1.5x realised vol (labelled model). FILLS are always the model at the next open (on the latest
+  prior chain IV, +/-1% slippage): no real spread, no liquidity check at the fill. Futures are priced from the spot with a fixed 6.5% carry.
 - Margin is fixed at entry (no daily SPAN recalculation, no margin calls); exchange MTM settlement is not
   modelled separately (it nets to the same equity).
 - US options are cash-settled at intrinsic on expiry; early exercise and assignment are not modelled.
@@ -68,5 +70,6 @@ What the 10% rule means at this size (worked out 2026-10-17, NIFTY about 23,000)
   circuit breaker work in USD, so a rupee move changes its INR value but never trips the breaker.
 - Tax is not modelled. The user is in the 30% slab: F&O profits (business income) and US short-term
   gains are taxed at the slab rate, so a gross paper profit is about 70% of that after tax.
-- Lot sizes, strike steps, expiry weekdays and charge rates are config values to VERIFY on nseindia.com
-  and zerodha.com (see the comments in `config.py` and `costs.py`).
+- Lot sizes (checked against NSE's fo_mktlots.csv on 4 Nov 2026 and re-checked by every daily run, warn
+  only), Tuesday expiries and STT rates are verified (broker notes, 4 Nov 2026). NSE exchange transaction
+  charges (futures 0.00183%, options 0.03553%) are NOT verified on NSE: see `costs.py`.
