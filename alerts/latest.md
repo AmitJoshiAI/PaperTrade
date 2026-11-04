@@ -1,35 +1,23 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-04 13:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 4 moving.
+Generated 2026-11-04 16:59 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 5 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [10 HIGH] Q2 Results Today Live: SBI Q2 PAT up 14%, Bajaj Finserv, Pfizer, Solar Ind, Rane (Madras), Yatharth, Emcure Pharma & Zydus Wellness Q2 profit rise, AIA Engineering profit declines, NSE, Fortis, Bajaj Holdings, Lloyds Metals, Lupin, MCX to announce Q2 results
+## 1. [9 HIGH] Bajaj Finance Limited: voting results.
 
-- Time: 2026-11-03 16:42 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-sbi-nse-bajaj-finserv-solar-ind-bajaj-holdings-lloyds-metals-lupin-mcx-emcure-aia-engineering-zydus-wellness-itc-marico-mobikwik-results-03-november-2026/article71656322.ece
-- Matched symbols: BAJAJFINSV, SBIN (moving today: SBIN)
+- Time: 2026-11-04 15:29 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/BAJFINANCE_04112026152849_SEintimationsScrutinizersReportSignedForUpload.pdf
+- Matched symbols: BAJFINANCE
 - Keywords: results
-- Thesis match: none
-- Score: 10
-- Alert id: 6bcae346555a
-- Second-order candidates: False match: multi-company results live blog (same stream as 920f0d66cbb8, noted 2026-11-03); no single-company mechanism.
-
-## 2. [9 HIGH] Nifty Private Bank index gains 2%; HDFC Bank, ICICI Bank, Axis Bank shine
-
-- Time: 2026-11-03 15:04 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/nifty-private-bank-index-gains-2-hdfc-bank-icici-bank-axis-bank-shine-126110300965_1.html
-- Matched symbols: ICICIBANK, AXISBANK, HDFCBANK
-- Keywords: none
-- Thesis match: icici-bank-recovery (open)
+- Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 9
-- Alert id: 215106705c61
-- Second-order candidates: Winner: large private banks (HDFCBANK, ICICIBANK, AXISBANK) - a sector-wide bid fits the liquidity-recovery mechanism (foreign selling easing) rather than a company event. / Losers: none clear - a broad index move, no competitor loses share from it. / Catalyst: surprise - sector rally of 2% on 2026-11-03 with no single named trigger in the headline; no dated event ahead. / Thesis fit: open thesis icici-bank-recovery: supports (sector recovery is the thesis; its invalidation of rising ICICI slippages is not touched)
+- Alert id: c4d54ca32a0f
+- Second-order candidates: 
 
-## 3. [8 HIGH] Q2 Results Today Live: BSE, Cummins, Zydus Lifesciences, Apollo, Lenskart, Nykaa, Aurobindo Pharma, NHPC, Dabur, Torrent Power, Biocon, Sundaram Finance, Premier Energies, Physicswallah Share to announce Q2 results, SBI, Emcure, Awfis, Bajaj Finserv shares gain after Q2 results, MCX, Bata decline, NSE flat
+## 2. [8 HIGH] Q2 Results Today Live: BSE, Cummins, Zydus Lifesciences, Apollo, Lenskart, Nykaa, Aurobindo Pharma, NHPC, Dabur, Torrent Power, Biocon, Sundaram Finance, Premier Energies, Physicswallah Share to announce Q2 results, SBI, Emcure, Awfis, Bajaj Finserv shares gain after Q2 results, MCX, Bata decline, NSE flat
 
 - Time: 2026-11-04 10:53 IST
 - Source: BusinessLine
@@ -41,7 +29,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 06ad1ea46d52
 - Second-order candidates: False match: multi-company results live blog (same stream as 6bcae346555a); no single-company mechanism. Individual results to be noted when filed.
 
-## 4. [8 HIGH] Q2 Results Today Live: BSE, Cummins, Zydus Lifesciences, Apollo, Lenskart, Nykaa, Aurobindo Pharma, NHPC, Dabur, Torrent Power, Biocon, Sundaram Finance, Premier Energies, Physicswallah Share to announce Q2 results, SBI, Emcure, Awfis shares gain after Q2 results, MCX, Bata decline, Bajaj Finserv, NSE flat
+## 3. [8 HIGH] Q2 Results Today Live: BSE, Cummins, Zydus Lifesciences, Apollo, Lenskart, Nykaa, Aurobindo Pharma, NHPC, Dabur, Torrent Power, Biocon, Sundaram Finance, Premier Energies, Physicswallah Share to announce Q2 results, SBI, Emcure, Awfis shares gain after Q2 results, MCX, Bata decline, Bajaj Finserv, NSE flat
 
 - Time: 2026-11-04 09:51 IST
 - Source: BusinessLine
@@ -53,7 +41,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 15d24f7b69e2
 - Second-order candidates: False match: multi-company results live blog; SBI and Bajaj Finserv matches are incidental.
 
-## 5. [8 HIGH] Q2 Results Highlights: SBI Q2 profit up 14%; Bajaj Finserv, Pfizer, Solar Industries Q2 earnings rise; NSE profit up 23%
+## 4. [8 HIGH] Q2 Results Highlights: SBI Q2 profit up 14%; Bajaj Finserv, Pfizer, Solar Industries Q2 earnings rise; NSE profit up 23%
 
 - Time: 2026-11-03 21:44 IST
 - Source: BusinessLine
@@ -65,19 +53,43 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b93dbeba256d
 - Second-order candidates: False match: results round-up of many companies, already out; nothing dated ahead to trade.
 
-## 6. [8 HIGH] Q2 Results Today Live: SBI Q2 PAT up 14%, Bajaj Finserv, Pfizer, Solar Ind, Yatharth, Emcure Pharma & Zydus Wellness Q2 profit rise, AIA Engineering profit declines, NSE, Fortis, Bajaj Holdings, Lloyds Metals, Lupin, MCX to announce Q2 results
+## 5. [7 HIGH] FSN E-Commerce Ventures Limited: a press release dated November 04, 2026, titled ""Unaudited Standalone and Consolidated Financial Results for the quarter and half year endedSeptember 30, 2026" and "Nykaa Accelerates Premium Cosmetics Play, Acquiring Majority Stake in Professional Makeup Brand Simply Nam Beauty Private Limited ( Simply Nam )".
 
-- Time: 2026-11-03 14:28 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-sbi-nse-bajaj-finserv-solar-ind-bajaj-holdings-lloyds-metals-lupin-mcx-emcure-aia-engineering-zydus-wellness-itc-marico-mobikwik-results-03-november-2026/article71656322.ece
-- Matched symbols: BAJAJFINSV, SBIN
+- Time: 2026-11-04 16:15 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/NYKAA_04112026161502_intimation_Press_release_final.pdf
+- Matched symbols: none
+- Keywords: results, stake sale, M&A
+- Thesis match: none
+- Score: 7
+- Alert id: 0224165d4552
+- Second-order candidates: 
+
+## 6. [7 HIGH] NLC India Limited: 'Offer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value ofRs.10 each held by the Company in NLC India Renewables Limited (NIRL), WhollyNLC India Limited( Navratna - Government of India Enterprise)Registered Office: No.135, EVR Periyar High Road, Kilpauk, Chennai-600 010.Corporate Office: Block-1, Neyveli-607 801, Cuddalore District, Tamil Nadu.CIN : L93090TN1956GOI003507, Website: www.nlcindia.inemail: cosec@nlcindia.in Phone: 044-28369139Owned Subsidiary, as part of the proposed Initial Public Offering (IPO) of NIRL,subject to compliance with the applicable provisions of the SEBI (Issue of Capital andDisclosure Requirements) Regulations, 2018, and other applicable statutory andregulatory requirements. The Board had earlier, at its meeting held on 12.01.2026,Offer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value ofRs.10 each held by the Company in NLC India Renewables Limited (NIRL), WhollyNLC India LimitedOffer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value of Rs.10 each held by the Company in NLC India Renewables Limited (NIRL), Wholly Owned Subsidiary, as part of the proposed Initial Public Offering (IPO) of NIRL, subject to compliance with the applicable provisions of the SEBI (Issue of Capital and Disclosure Requirements) Regulations, 2018, and other applicable statutory and regulatory requirements. The Board had earlier, at its meeting held on 12.01.2026, accorded in-principle approval for the listing of NIRL, which was duly intimated.'.
+
+- Time: 2026-11-04 14:25 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/NLCINDIA_04112026142212_573_BM_-_Outcome_04112026_Signed.pdf
+- Matched symbols: none
+- Keywords: IPO, listing, stake sale
+- Thesis match: none
+- Score: 7
+- Alert id: 14bbbe60ad34
+- Second-order candidates: 
+
+## 7. [7 HIGH] BEL stock rises 5% as order inflow optimism keeps MOFSL upbeat post Q2
+
+- Time: 2026-11-04 14:05 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/bel-stock-rises-5-as-order-inflow-optimism-keeps-mofsl-upbeat-post-q2-126110400886_1.html
+- Matched symbols: BEL (moving today: BEL)
 - Keywords: results
 - Thesis match: none
-- Score: 8
-- Alert id: fb5b2bf73b55
-- Second-order candidates: False match: round-up live blog of many results (same stream as 5040b9b8e23e); SBI PAT +14% is the only item with a stated figure, and the SBI/Bajaj Finserv results are already out, so no pre-event position is possible.
+- Score: 7
+- Alert id: 496b37445cdc
+- Second-order candidates: 
 
-## 7. [7 HIGH] HINDPETRO +4.0% vs previous close (close 362.1, bar 2026-11-04)
+## 8. [7 HIGH] HINDPETRO +4.0% vs previous close (close 362.1, bar 2026-11-04)
 
 - Time: 2026-11-04 13:53 IST
 - Source: Yahoo quotes
@@ -87,9 +99,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 7
 - Alert id: ea1a5de6b1d4
-- Second-order candidates: 
+- Second-order candidates: Winner: none identified - price alert only; refiner-marketers typically rally when crude eases or pump-price relief arrives, but no cause was confirmed. / Losers: none clear - the open crude-ongc-vs-hpcl short leg (HINDPETRO) is the one hurt by this move. / Catalyst: unknown - no news found (one search, nothing credible for 2026-11-04) / Thesis fit: open thesis crude-ongc-vs-hpcl: weakens if the rise persists (invalidation is HPCL margin relief; thesis rule also closes early if HPCL wins back half of its underperformance vs ONGC). No change proposed on one intraday move.
 
-## 8. [7 HIGH] BEL shares climb 3% as brokerages back post-results recovery
+## 9. [7 HIGH] BEL shares climb 3% as brokerages back post-results recovery
 
 - Time: 2026-11-04 12:49 IST
 - Source: BusinessLine
@@ -99,9 +111,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: bcc805d80bee
-- Second-order candidates: 
+- Second-order candidates: Winner: BEL - brokerage upgrades after results restore confidence in its defence order book and margin guidance (link could not be opened from this sandbox; headline only). / Losers: none clear - peers (HAL, BDL, Data Patterns) share the same defence-spending demand, no share loss is named. / Catalyst: surprise - post-results brokerage notes; no dated event ahead identified. / Thesis fit: none
 
-## 9. [7 HIGH] SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off gains
+## 10. [7 HIGH] SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off gains
 
 - Time: 2026-11-04 09:58 IST
 - Source: Moneycontrol
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 54dce75a56fd
 - Second-order candidates: Winner: SBIN - brokerages cite margin and asset-quality improvement, offset by one-off gains in reported profit. / Losers: none clear - an outlook piece, no competitive shift. / Catalyst: surprise, already happened - post-results commentary; no further dated event. / Thesis fit: none
 
-## 10. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant, setting up of new businesses and ESOP scheme".
+## 11. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant, setting up of new businesses and ESOP scheme".
 
 - Time: 2026-11-04 00:23 IST
 - Source: NSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 0d3da57eefa8
 - Second-order candidates: Winner: HEG - anode plant expansion moves it into battery materials, a business separate from graphite electrodes; details are in the PDF, not checked here. / Losers: none clear - no named competitor or listed anode supplier is identified in the headline. / Catalyst: surprise, already happened - announced 2026-11-04 00:23 IST; plant commissioning dates are not stated in the headline. / Thesis fit: none
 
-## 11. [7 HIGH] HEG Advanced Materials Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
+## 12. [7 HIGH] HEG Advanced Materials Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
 
 - Time: 2026-11-04 00:21 IST
 - Source: BSE announcements
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5172fa70067f
 - Second-order candidates: False match: duplicate filings of the same HEG press release already noted under 0d3da57eefa8; nothing new.
 
-## 12. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant and setting up of new businesses.".
+## 13. [7 HIGH] HEG Advanced Materials Limited: a press release dated November 03, 2026, relating to Q2 and H1 FY27 financial results and other matters relating to capacity expansion of Anode plant and setting up of new businesses.".
 
 - Time: 2026-11-04 00:04 IST
 - Source: NSE announcements
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5ca1c500e740
 - Second-order candidates: False match: duplicate filing of the HEG press release already noted under 0d3da57eefa8; nothing new.
 
-## 13. [7 HIGH] Dreamfolks Services Limited: Board of Director of Dreamfolks Services Limited has approved the proposal to provide security by way of fixed deposits of INR 5.5 crore each to ICICI Bank Limited and AU Small Finance Bank Limited, to secure the obligations of Ten 11 Hospitality Private Limited (formerly known as Ten 11 Hospitality LLP ) ( Ten 11 ), subsidiary of the Company, in connection with overdraft facilities backed by Fixed Deposits to be availed by Ten 11, as per the facility documents.
+## 14. [7 HIGH] Dreamfolks Services Limited: Board of Director of Dreamfolks Services Limited has approved the proposal to provide security by way of fixed deposits of INR 5.5 crore each to ICICI Bank Limited and AU Small Finance Bank Limited, to secure the obligations of Ten 11 Hospitality Private Limited (formerly known as Ten 11 Hospitality LLP ) ( Ten 11 ), subsidiary of the Company, in connection with overdraft facilities backed by Fixed Deposits to be availed by Ten 11, as per the facility documents.
 
 - Time: 2026-11-03 17:02 IST
 - Source: NSE announcements
@@ -161,26 +173,14 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b890379e2bbf
 - Second-order candidates: False match: routine collateral for a subsidiary's overdraft facility; ICICI Bank is only the lender, no effect on the bank. Open thesis icici-bank-recovery unaffected.
 
-## 14. [7 HIGH] Live: Nifty above 23,700; Capital market stocks gain, SBI falls after Q2 | Closing Bell
+## 15. [6 HIGH] Waaree Energies Limited: Transcript of Conference call for the Unaudited Financial Results (Standalone and Consolidated) for the Quarter and Half year ended September 30, 2026 held on Wednesday, October 28, 2026.
 
-- Time: 2026-11-03 16:46 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/videos/business/markets/live-nifty-above-23-700-capital-market-stocks-gain-sbi-falls-after-q2-closing-bell-14067684.html
-- Matched symbols: SBIN (moving today: SBIN)
+- Time: 2026-11-04 16:06 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/WAAREE_04112026160637_Transcripts_Merged_Signed.pdf
+- Matched symbols: WAAREEENER
 - Keywords: results
 - Thesis match: none
-- Score: 7
-- Alert id: 5252d5dad8c8
-- Second-order candidates: False match: market-wide closing-bell video; the SBI Q2 event is already noted under 71cb6aa81f09, no new mechanism.
-
-## 15. [7 HIGH] SBI Q2 results: Net profit rises 14% to Rs 23,038 crore, aided by exceptional gain; NII beats estimates
-
-- Time: 2026-11-03 16:46 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/earnings/sbi-q2-results-net-profit-rises-14-on-year-to-rs-23-038-crore-nii-climbs-to-rs-49-142-crore-14067572.html
-- Matched symbols: SBIN (moving today: SBIN)
-- Keywords: results
-- Thesis match: none
-- Score: 7
-- Alert id: 71cb6aa81f09
-- Second-order candidates: Winner: SBIN - NII beat shows margin and loan-book strength, but the headline profit is flattered by an exceptional gain, which is why the stock fell on the day. / Losers: none clear - no competitor is named as losing share; peer PSU banks report separately. / Catalyst: surprise, already happened - results out 2026-11-03 and priced on the day; nothing dated ahead. / Thesis fit: none
+- Score: 6
+- Alert id: bd7f5b02a2bf
+- Second-order candidates: 
