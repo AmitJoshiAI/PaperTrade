@@ -84,16 +84,35 @@ The repository is checked out for you. Work on branch main. Steps:
       (formats in `papertrade/fno.py` and `papertrade/us.py` docstrings, summary in RISK_LIMITS.md). Every
       OPEN order MUST have `"reason"` (why) and `"risk_check"` (the rules you checked, with numbers, e.g.
       "premium Rs 9,100 = 1.8% of equity Rs 4,98,000 (limit 10%); 2 of 5 positions; breaker off; long
-      option, no cover needed"). The engine rejects an OPEN without both. Notes:
-      - India options and futures are priced by a MODEL (Black-Scholes on India VIX / carry), not market
-        quotes. Treat their P&L as an estimate and say so.
+      option, no cover needed"). The engine rejects an OPEN without both.
+
+      What these two sleeves are FOR: expressing a view you already hold, with defined risk. A view comes
+      from (i) an open thesis in `theses/` (for example the ICICIBANK recovery, the ONGC/HINDPETRO pair, the
+      Bajaj Finance RBI catalyst) or (ii) a scheduled catalyst inside the next three weeks (results date,
+      RBI policy, Union Budget, US FOMC or CPI, a known listing). The instrument comes from the journal's
+      "## F&O candidates" and "## US candidates" sections (when present): they list, for the indices and for
+      every F&O stock held by an open thesis, the current-expiry ATM and ATM+/-2 call and put premiums per
+      lot, days to expiry, and pre-built defined-risk structures (bull call spread, bear put spread, long
+      straddle) with their max loss and a pass/fail against the 10% rule. Prefer a debit spread or a long
+      option over anything with open-ended risk; the engine rejects naked short options anyway.
+
+      No quota: never open a position to have one. But inaction must be earned: when you decide "none"
+      for F&O or US, write one line per candidate category (index spreads; thesis-stock options; US) saying
+      which view you considered and why the structure, the size or the timing did not fit. "No setup I can
+      verify" is not an acceptable line once the candidates section exists; if that section is missing,
+      say so and that is your line.
+
+      Notes:
+      - India options and futures are priced by a MODEL (Black-Scholes on India VIX / carry) unless the
+        candidates section says "real NSE chain". Treat model P&L as an estimate and say so.
       - At Rs 5,00,000 one NIFTY or BANKNIFTY future needs about Rs 1.8 lakh of margin, far above the
         10% per-order limit (about Rs 50,000), so index futures (and most stock futures) are rejected.
         Do not queue them. Long options and covered spreads fit.
       - A short option must be covered (same underlying and expiry): queue the cover in the same file;
         the engine fills covers before shorts.
       - US: the sleeve is about $5,290, so the 10% limit is about $529 per order: a single share of an
-        expensive stock or one ATM contract on a $300 stock may not fit. Check the premium x 100.
+        expensive stock or one ATM contract on a $300 stock may not fit. Check the premium x 100. The US
+        candidates section lists only what fits.
    d. **Close positions**: SELL / COVER in `decisions/thesis_orders.json` (thesis), `"action": "CLOSE"`
       with the position id from the journal in the F&O / US files.
 
