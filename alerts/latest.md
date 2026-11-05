@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-05 16:56 IST. High score = 6+. Feeds OK: NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news. Failed: NSE announcements (ParseError: no element found: line 1, column 620458).
+Generated 2026-11-05 17:43 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 13 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -65,7 +65,43 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 40fab5cd49cb
 - Second-order candidates: Winner: ONGC if realisations/production beat, which would support the long leg of crude-ongc-vs-hpcl; otherwise round-up with no single clear beneficiary. / Losers: none clear - this is a multi-company results round-up, not one event; check ONGC's own result for the thesis. / Catalyst: scheduled - Q2 results day, ONGC print is the one that matters for the open thesis. / Thesis fit: open thesis crude-ongc-vs-hpcl: neutral until ONGC's numbers are read
 
-## 6. [9 HIGH] ICICIBANK +5.3% vs previous close, volume 3.1x 20-day average (close 1500.0, bar 2026-11-05)
+## 6. [10 HIGH] Adani Ports and Special Economic Zone Limited: Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), regarding an agreement to acquire 100% stake in Evos B.V.
+
+- Time: 2026-11-05 15:09 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/rkbhagia_05112026150844_APSEZSEIntimation.pdf
+- Matched symbols: ADANIPORTS
+- Keywords: listing, SEBI, stake sale, M&A
+- Thesis match: none
+- Score: 10
+- Alert id: ab5c743a718d
+- Second-order candidates: 
+
+## 7. [9 HIGH] Oil and Natural Gas Corporation Ltd: Integrated Financial Results For The Quarter And Half Year Ended 30.09.2026.
+
+- Time: 2026-11-05 17:36 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f93ddf37-bf97-4686-8022-054c950f038a.pdf
+- Matched symbols: ONGC
+- Keywords: results
+- Thesis match: crude-ongc-vs-hpcl (open)
+- Score: 9
+- Alert id: 06a508a7dcb1
+- Second-order candidates: 
+
+## 8. [9 HIGH] ICICI Bank Limited: Allotment of Securities
+
+- Time: 2026-11-05 14:52 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/ALTERATION_OF_CAPITAL_AND_FUND_RAISING_1606_WebXMLFile_20261105_145234758.xml
+- Matched symbols: ICICIBANK (moving today: ICICIBANK)
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 9
+- Alert id: 9f15cab446d1
+- Second-order candidates: 
+
+## 9. [9 HIGH] ICICIBANK +5.3% vs previous close, volume 3.1x 20-day average (close 1500.0, bar 2026-11-05)
 
 - Time: 2026-11-05 14:46 IST
 - Source: Yahoo quotes
@@ -77,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8372310d3414
 - Second-order candidates: 
 
-## 7. [9 HIGH] BAJFINANCE +7.7% vs previous close, volume 3.5x 20-day average (close 1070.0, bar 2026-11-05)
+## 10. [9 HIGH] BAJFINANCE +7.7% vs previous close, volume 3.5x 20-day average (close 1070.0, bar 2026-11-05)
 
 - Time: 2026-11-05 09:58 IST
 - Source: Yahoo quotes
@@ -89,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: aeb23bc12841
 - Second-order candidates: Winner: BAJFINANCE - results season strength in lenders (Bajaj Finserv rose on Q2 yesterday, see 06ad1ea46d52) lifts the group; no Bajaj Finance-specific news matched. / Losers: none clear / Catalyst: unknown - no news found / Thesis fit: proposed thesis bajaj-finance-rbi-december: price is already above the 15 Oct reference (965.25), so a fill after 2026-11-19 would be a later, higher entry; late-entry answer needs revisiting before it is activated. Not activated.
 
-## 8. [9 HIGH] Sebi approves Mahanadi Coalfields IPO as Coal India plans 10% stake sale
+## 11. [9 HIGH] Sebi approves Mahanadi Coalfields IPO as Coal India plans 10% stake sale
 
 - Time: 2026-11-05 09:14 IST
 - Source: Business Standard
@@ -101,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 4b36fbf0195e
 - Second-order candidates: Winner: Coal India (COALINDIA) - unlocks value of a subsidiary and the 10% sale (offer for sale) brings cash; also read as a template for more PSU subsidiary listings. Same event as alerts 05ca5a9fdff0 and 18983f10ec1d. / Losers: none clear - an OFS by a parent adds supply of paper but no listed company loses its business to it; NLC India has a similar subsidiary IPO plan (NLCINDIA) so is a read-across, not a loser. / Catalyst: scheduled - IPO date and price band are still to be announced; SEBI nod only starts the clock - IPO launch is the next dated event. / Thesis fit: none
 
-## 9. [9 HIGH] Mahanadi Coalfields IPO gets SEBI approval; Coal India to sell 10% stake
+## 12. [9 HIGH] Mahanadi Coalfields IPO gets SEBI approval; Coal India to sell 10% stake
 
 - Time: 2026-11-05 08:34 IST
 - Source: BusinessLine
@@ -113,7 +149,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 05ca5a9fdff0
 - Second-order candidates: Winner: see 4b36fbf0195e (same event: Coal India unlocks subsidiary value via a 10% OFS). / Losers: none clear / Catalyst: scheduled - IPO date and price band still to be announced. / Thesis fit: none
 
-## 10. [8 HIGH] Maruti Infrastructure Ltd: Board Meeting Outcome for Unaudited Financial Result For Quarter And Half Year Ended 30.09.2026
+## 13. [8 HIGH] Oil and Natural Gas Corporation Ltd: Corporate Action-Board approves Dividend
+
+- Time: 2026-11-05 17:42 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/ee33adb8-23cc-4a29-93cc-b8b6342ffd45.pdf
+- Matched symbols: ONGC
+- Keywords: dividend
+- Thesis match: crude-ongc-vs-hpcl (open)
+- Score: 8
+- Alert id: 47ddd598ee99
+- Second-order candidates: 
+
+## 14. [8 HIGH] Maruti Infrastructure Ltd: Board Meeting Outcome for Unaudited Financial Result For Quarter And Half Year Ended 30.09.2026
 
 - Time: 2026-11-05 16:50 IST
 - Source: BSE announcements
@@ -125,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 0c759985d8ca
 - Second-order candidates: 
 
-## 11. [8 HIGH] Maruti Infrastructure Ltd: Unaudited Financial Result For The Quarter And Half Year Ended 30.09.2026
+## 15. [8 HIGH] Maruti Infrastructure Ltd: Unaudited Financial Result For The Quarter And Half Year Ended 30.09.2026
 
 - Time: 2026-11-05 16:47 IST
 - Source: BSE announcements
@@ -136,51 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 8
 - Alert id: a8571bb804d2
 - Second-order candidates: 
-
-## 12. [8 HIGH] ICICI Bank shares nears 52-week high amid employee scheme allotments
-
-- Time: 2026-11-05 16:17 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/icici-bank-shares-near-52-week-high-as-allotments-signal-employee-scheme-activity/article71668901.ece
-- Matched symbols: ICICIBANK (moving today: ICICIBANK)
-- Keywords: none
-- Thesis match: icici-bank-recovery (open)
-- Score: 8
-- Alert id: 60982c855334
-- Second-order candidates: 
-
-## 13. [8 HIGH] Sensex today | Stock Market Live: Sensex leaps 2,100 pts, Nifty tops 24,550; Bajaj Finance leads gainers
-
-- Time: 2026-11-05 14:18 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-5-november-2026/article71665358.ece
-- Matched symbols: BAJFINANCE (moving today: BAJFINANCE)
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 8
-- Alert id: 95db3bb57bbb
-- Second-order candidates: Winner: broad market rally with Bajaj Finance leading (see aeb23bc12841); the index-wide move suggests a macro driver (flows or a global/rate move) rather than Bajaj-specific news; cause not stated in the headline. / Losers: none clear - index-wide up move. / Catalyst: unknown - no news found in the headline; Bajaj Finance move already covered under aeb23bc12841. / Thesis fit: proposed thesis bajaj-finance-rbi-december: entry price keeps rising (+7.6% today vs the 15 Oct reference 965.25 basis), so late-entry answer must be revisited before any activation. Not activated.
-
-## 14. [8 HIGH] Mahindra & Mahindra Limited: a press release dated November 05, 2026, titled "Press Release on Unaudited Standalone and Consolidated Financial Results of the Company for the Second Quarter and Half Year ended 30th September 2026".
-
-- Time: 2026-11-05 13:01 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/ferozebaria_05112026130049_BoardMeetingPR05112026.pdf
-- Matched symbols: M&M (moving today: M&M)
-- Keywords: results
-- Thesis match: none
-- Score: 8
-- Alert id: 60a91b116074
-- Second-order candidates: Winner: M&M - same event as 6e69d24ca52a (the press release accompanying the filing). / Losers: none clear / Catalyst: scheduled - Q2 results, already out and priced in. / Thesis fit: none
-
-## 15. [8 HIGH] Mahindra & Mahindra Limited: Mahindra & Mahindra Limited has submitted to the Exchange, the Unaudited Standalone and Consolidated financial results for the Second Quarter and Half Year ended September 30, 2026.
-
-- Time: 2026-11-05 12:57 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/Pooja_05112026125638_Outcome5Nov.pdf
-- Matched symbols: M&M (moving today: M&M)
-- Keywords: results
-- Thesis match: none
-- Score: 8
-- Alert id: 6e69d24ca52a
-- Second-order candidates: Winner: M&M - results filing; stock up ~5-6% on the print (see a9e1907f9cd2); also feeds the broad auto rally in d48afee66913. / Losers: none clear - a company result, not a sector-changing event. / Catalyst: surprise/scheduled - the dated Q2 result itself, already out and being priced in today. / Thesis fit: none
