@@ -1,11 +1,23 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-05 09:58 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 55 symbols checked, 9 moving.
+Generated 2026-11-05 12:48 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 11 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [11 HIGH] Q2 Results Today Live: Bharti Airtel, LIC, Titan, M&M, ONGC, Samvardhana, Britannia, LG Electronics, Bharat Forge, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results, BSE, Lenskart, Premier Energies, Biocon, Apollo Tyres gain, Nykaa, Cummins India & PI Industries fall
+## 1. [13 HIGH] Q2 Results Today Live: LG Electronics & Amagi Media Q2 profit up, Bharti Airtel, LIC, Titan, M&M, ONGC, Samvardhana, Britannia, Bharat Forge, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results, BSE, Lenskart, Biocon, Apollo Tyres gain, Nykaa, Cummins India & PI Industries fall
+
+- Time: 2026-11-05 12:35 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-bharti-airtel-lic-titan-mm-ongc-samvardhana-britannia-lg-bharat-forge-prestige-fortis-abbott-india-bse-biocon-apollo-lesnkart-nykaacompany-results-05-november-2026/article71668559.ece
+- Matched symbols: BHARTIARTL, TITAN, ONGC, M&M (moving today: M&M)
+- Keywords: results
+- Thesis match: crude-ongc-vs-hpcl (open)
+- Score: 13
+- Alert id: 5642ca7652cf
+- Second-order candidates: 
+
+## 2. [11 HIGH] Q2 Results Today Live: Bharti Airtel, LIC, Titan, M&M, ONGC, Samvardhana, Britannia, LG Electronics, Bharat Forge, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results, BSE, Lenskart, Premier Energies, Biocon, Apollo Tyres gain, Nykaa, Cummins India & PI Industries fall
 
 - Time: 2026-11-05 09:41 IST
 - Source: BusinessLine
@@ -15,9 +27,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 11
 - Alert id: 40fab5cd49cb
-- Second-order candidates: 
+- Second-order candidates: Winner: ONGC if realisations/production beat, which would support the long leg of crude-ongc-vs-hpcl; otherwise round-up with no single clear beneficiary. / Losers: none clear - this is a multi-company results round-up, not one event; check ONGC's own result for the thesis. / Catalyst: scheduled - Q2 results day, ONGC print is the one that matters for the open thesis. / Thesis fit: open thesis crude-ongc-vs-hpcl: neutral until ONGC's numbers are read
 
-## 2. [9 HIGH] Sebi approves Mahanadi Coalfields IPO as Coal India plans 10% stake sale
+## 3. [9 HIGH] Sebi approves Mahanadi Coalfields IPO as Coal India plans 10% stake sale
 
 - Time: 2026-11-05 09:14 IST
 - Source: Business Standard
@@ -27,9 +39,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 9
 - Alert id: 4b36fbf0195e
-- Second-order candidates: 
+- Second-order candidates: Winner: Coal India (COALINDIA) - unlocks value of a subsidiary and the 10% sale (offer for sale) brings cash; also read as a template for more PSU subsidiary listings. Same event as alerts 05ca5a9fdff0 and 18983f10ec1d. / Losers: none clear - an OFS by a parent adds supply of paper but no listed company loses its business to it; NLC India has a similar subsidiary IPO plan (NLCINDIA) so is a read-across, not a loser. / Catalyst: scheduled - IPO date and price band are still to be announced; SEBI nod only starts the clock - IPO launch is the next dated event. / Thesis fit: none
 
-## 3. [9 HIGH] Mahanadi Coalfields IPO gets SEBI approval; Coal India to sell 10% stake
+## 4. [9 HIGH] Mahanadi Coalfields IPO gets SEBI approval; Coal India to sell 10% stake
 
 - Time: 2026-11-05 08:34 IST
 - Source: BusinessLine
@@ -41,7 +53,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 05ca5a9fdff0
 - Second-order candidates: 
 
-## 4. [9 HIGH] Bajaj Finance Limited: voting results.
+## 5. [9 HIGH] Bajaj Finance Limited: voting results.
 
 - Time: 2026-11-04 15:29 IST
 - Source: NSE announcements
@@ -51,33 +63,45 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 9
 - Alert id: c4d54ca32a0f
-- Second-order candidates: 
+- Second-order candidates: Winner: none - routine governance filing (resolutions passed), not a business event. / Losers: none clear / Catalyst: none - the real catalyst for BAJFINANCE is the RBI December policy (see thesis); the stock is up 4.8% today for reasons below. / Thesis fit: proposed thesis bajaj-finance-rbi-december: unaffected by this filing; today's price move is covered under aeb23bc12841
 
-## 5. [8 HIGH] RBI sets up panel for financial markets; includes SBI, Axis Bank, Citi executives
+## 6. [8 HIGH] Auto stocks rally: Ashok Leyland jumps 9%, Maruti, Tata Motors PV, M&M lead gains as Nifty Auto surges 3%
 
-- Time: 2026-11-04 12:27 IST
+- Time: 2026-11-05 12:48 IST
 - Source: Moneycontrol
-- Link: https://news.google.com/rss/articles/CBMi5gFBVV95cUxQNl9NVlhZS1d2cllCby1ZUXhyQ1VNX0tpNm5WVEkwQkN0TEcyZ3FyYzgtQS16LWlZUk45VUNIWXhKYlJRSTh0d1pXcnhoV2hWQm9wOGdBR1h0UC1wNFkyVndCNUNaZjBvNTVIaVVjX0xMd29JLWNTM2taa0pVYXZVdUIzLTFpRG40WkdDNWdzRDhsdlhoUjdiTkZqRXBiNWExYWtRdllYLTUzWGNXSEhNNDJ2ZFV0N3lYTERCV1VDRzZKTTFmRzNRR2wzS2w1Tkp4YURvMHo0R3lWSmQxNW1kZml5NUVSZ9IB6wFBVV95cUxQZ01JcTF3a25CSjI2R3QzMmY0amZ2ZXlRSV85c1Nyc0NZYUpNWUlSRmRVTWZkbFFSeUlhUERIVXlXTVdDZG5QdlNKaXdhWDQ3VWxvZXRzakpkRDF6M1d6ZWVEa2UzQkdILW1hSlNNeUlvc3ozdjFJY2NRVDVIcFRTTERtUUFNZ0VSNVo3VG0zSFh0TC1YS0V5bjBhU09LcmpJakZKZFRsVEhDc0FySGNPQWt3LUhIeHNQUUtGTDZiU0pCbHNKMnFoWkotU3M1QXowd3cyRVVGdzRpT1dEQ0RlR3J2c0FrcXVCZ3g0?oc=5
-- Matched symbols: AXISBANK, SBIN
-- Keywords: RBI
+- Link: https://www.moneycontrol.com/news/business/markets/auto-stocks-rally-ashok-leyland-jumps-9-maruti-tata-motors-pv-m-m-lead-gains-as-nifty-auto-surges-3-14071026.html
+- Matched symbols: TMPV, MARUTI, M&M (moving today: TMPV, MARUTI, M&M)
+- Keywords: none
 - Thesis match: none
 - Score: 8
-- Alert id: 7e88cac5a9a5
+- Alert id: d48afee66913
 - Second-order candidates: 
 
-## 6. [8 HIGH] Q2 Results Today Live: BSE, Cummins, Zydus Lifesciences, Apollo, Lenskart, Nykaa, Aurobindo Pharma, NHPC, Dabur, Torrent Power, Biocon, Sundaram Finance, Premier Energies, Physicswallah Share to announce Q2 results, SBI, Emcure, Awfis, Bajaj Finserv shares gain after Q2 results, MCX, Bata decline, NSE flat
+## 7. [8 HIGH] InterGlobe Aviation Limited: Transcripts - earnings or quarterly calls
 
-- Time: 2026-11-04 10:53 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-bse-cummins-zydus-apollo-lenskart-nykaa-aurobindo-nhpc-dabur-torrent-power-biocon-sundaram-premier-energies-physicswallah-nse-sbi-results-04-november-2026/article71660621.ece
-- Matched symbols: BAJAJFINSV, SBIN
+- Time: 2026-11-05 11:37 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_13226_WebXMLFile_20261105_113741519.xml
+- Matched symbols: INDIGO (moving today: INDIGO)
 - Keywords: results
 - Thesis match: none
 - Score: 8
-- Alert id: 06ad1ea46d52
-- Second-order candidates: False match: multi-company results live blog (same stream as 6bcae346555a); no single-company mechanism. Individual results to be noted when filed.
+- Alert id: 75a208d72667
+- Second-order candidates: 
 
-## 7. [7 HIGH] BAJFINANCE +4.8% vs previous close (close 1042.2, bar 2026-11-05)
+## 8. [7 HIGH] ICICI Bank Limited: Allotment of 36937 Shares.
+
+- Time: 2026-11-05 11:27 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/ICICIBANK1_05112026112709_LETTERTOSTOCKEXCHANGE.pdf
+- Matched symbols: ICICIBANK
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 7
+- Alert id: cb55c727b6d1
+- Second-order candidates: 
+
+## 9. [7 HIGH] BAJFINANCE +7.1% vs previous close (close 1064.2, bar 2026-11-05)
 
 - Time: 2026-11-05 09:58 IST
 - Source: Yahoo quotes
@@ -87,9 +111,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: bajaj-finance-rbi-december (proposed)
 - Score: 7
 - Alert id: aeb23bc12841
-- Second-order candidates: 
+- Second-order candidates: Winner: BAJFINANCE - results season strength in lenders (Bajaj Finserv rose on Q2 yesterday, see 06ad1ea46d52) lifts the group; no Bajaj Finance-specific news matched. / Losers: none clear / Catalyst: unknown - no news found / Thesis fit: proposed thesis bajaj-finance-rbi-december: price is already above the 15 Oct reference (965.25), so a fill after 2026-11-19 would be a later, higher entry; late-entry answer needs revisiting before it is activated. Not activated.
 
-## 8. [7 HIGH] HINDPETRO +6.2% vs previous close (close 388.9, bar 2026-11-05)
+## 10. [7 HIGH] HINDPETRO +4.3% vs previous close (close 382.1, bar 2026-11-05)
 
 - Time: 2026-11-05 09:58 IST
 - Source: Yahoo quotes
@@ -99,9 +123,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 7
 - Alert id: a8ac5d15c16a
-- Second-order candidates: 
+- Second-order candidates: Winner: HINDPETRO - second sharp rise in two days (+4.0% yesterday, ea1a5de6b1d4); typical OMC drivers are falling crude or pump-price relief, neither confirmed. / Losers: none clear - ONGC would lose relative performance only if crude fell; the open thesis short leg HINDPETRO is the one hurt. / Catalyst: unknown - no news found (one search, nothing credible for 2026-11-05) / Thesis fit: open thesis crude-ongc-vs-hpcl: weakens - HINDPETRO is up about 10% in two sessions against the short leg; the thesis rule closes early if HPCL wins back half of its underperformance versus ONGC. Flag for the user to review the leg; no change made.
 
-## 9. [7 HIGH] Sebi approves Coal India unit Mahanadi Coalfields IPO
+## 11. [7 HIGH] Sebi approves Coal India unit Mahanadi Coalfields IPO
 
 - Time: 2026-11-05 08:11 IST
 - Source: ET Markets
@@ -113,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 18983f10ec1d
 - Second-order candidates: 
 
-## 10. [7 HIGH] FSN E-Commerce Ventures Limited: a press release dated November 04, 2026, titled ""Unaudited Standalone and Consolidated Financial Results for the quarter and half year endedSeptember 30, 2026" and "Nykaa Accelerates Premium Cosmetics Play, Acquiring Majority Stake in Professional Makeup Brand Simply Nam Beauty Private Limited ( Simply Nam )".
+## 12. [7 HIGH] FSN E-Commerce Ventures Limited: a press release dated November 04, 2026, titled ""Unaudited Standalone and Consolidated Financial Results for the quarter and half year endedSeptember 30, 2026" and "Nykaa Accelerates Premium Cosmetics Play, Acquiring Majority Stake in Professional Makeup Brand Simply Nam Beauty Private Limited ( Simply Nam )".
 
 - Time: 2026-11-04 16:15 IST
 - Source: NSE announcements
@@ -123,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 0224165d4552
-- Second-order candidates: 
+- Second-order candidates: Winner: Nykaa (NYKAA) - buys a premium professional-makeup brand, extending its own-brand/premium cosmetics mix; the deal is small next to the group, so the Q2 print is the bigger driver. / Losers: none clear - rivals in premium beauty retail (e.g. Tata's and Reliance's beauty arms, Purplle, unlisted) face a better-stocked competitor, but no listed company loses revenue directly. / Catalyst: scheduled - Q2 results were filed 4 Nov after hours, so the reaction is today's session (round-up blogs show Nykaa falling); the acquisition is a minor surprise add-on. / Thesis fit: none
 
-## 11. [7 HIGH] NLC India Limited: 'Offer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value ofRs.10 each held by the Company in NLC India Renewables Limited (NIRL), WhollyNLC India Limited( Navratna - Government of India Enterprise)Registered Office: No.135, EVR Periyar High Road, Kilpauk, Chennai-600 010.Corporate Office: Block-1, Neyveli-607 801, Cuddalore District, Tamil Nadu.CIN : L93090TN1956GOI003507, Website: www.nlcindia.inemail: cosec@nlcindia.in Phone: 044-28369139Owned Subsidiary, as part of the proposed Initial Public Offering (IPO) of NIRL,subject to compliance with the applicable provisions of the SEBI (Issue of Capital andDisclosure Requirements) Regulations, 2018, and other applicable statutory andregulatory requirements. The Board had earlier, at its meeting held on 12.01.2026,Offer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value ofRs.10 each held by the Company in NLC India Renewables Limited (NIRL), WhollyNLC India LimitedOffer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value of Rs.10 each held by the Company in NLC India Renewables Limited (NIRL), Wholly Owned Subsidiary, as part of the proposed Initial Public Offering (IPO) of NIRL, subject to compliance with the applicable provisions of the SEBI (Issue of Capital and Disclosure Requirements) Regulations, 2018, and other applicable statutory and regulatory requirements. The Board had earlier, at its meeting held on 12.01.2026, accorded in-principle approval for the listing of NIRL, which was duly intimated.'.
+## 13. [7 HIGH] NLC India Limited: 'Offer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value ofRs.10 each held by the Company in NLC India Renewables Limited (NIRL), WhollyNLC India Limited( Navratna - Government of India Enterprise)Registered Office: No.135, EVR Periyar High Road, Kilpauk, Chennai-600 010.Corporate Office: Block-1, Neyveli-607 801, Cuddalore District, Tamil Nadu.CIN : L93090TN1956GOI003507, Website: www.nlcindia.inemail: cosec@nlcindia.in Phone: 044-28369139Owned Subsidiary, as part of the proposed Initial Public Offering (IPO) of NIRL,subject to compliance with the applicable provisions of the SEBI (Issue of Capital andDisclosure Requirements) Regulations, 2018, and other applicable statutory andregulatory requirements. The Board had earlier, at its meeting held on 12.01.2026,Offer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value ofRs.10 each held by the Company in NLC India Renewables Limited (NIRL), WhollyNLC India LimitedOffer for Sale (OFS) of up to 10,00,00,000 (Ten Crore) equity shares of face value of Rs.10 each held by the Company in NLC India Renewables Limited (NIRL), Wholly Owned Subsidiary, as part of the proposed Initial Public Offering (IPO) of NIRL, subject to compliance with the applicable provisions of the SEBI (Issue of Capital and Disclosure Requirements) Regulations, 2018, and other applicable statutory and regulatory requirements. The Board had earlier, at its meeting held on 12.01.2026, accorded in-principle approval for the listing of NIRL, which was duly intimated.'.
 
 - Time: 2026-11-04 14:25 IST
 - Source: NSE announcements
@@ -135,9 +159,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 14bbbe60ad34
-- Second-order candidates: 
+- Second-order candidates: Winner: NLC India (NLCINDIA) - monetises part of its renewables subsidiary and gets a listed valuation marker; same pattern as Coal India/Mahanadi today. / Losers: none clear - listed renewable developers (e.g. ADANIGREEN, NTPCGREEN) get a new competitor for investor money, but no revenue effect. / Catalyst: scheduled - the NIRL IPO date is still to be announced; SEBI approval stage not reported here. / Thesis fit: none
 
-## 12. [7 HIGH] BEL stock rises 5% as order inflow optimism keeps MOFSL upbeat post Q2
+## 14. [7 HIGH] BEL stock rises 5% as order inflow optimism keeps MOFSL upbeat post Q2
 
 - Time: 2026-11-04 14:05 IST
 - Source: Business Standard
@@ -147,9 +171,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 496b37445cdc
-- Second-order candidates: 
+- Second-order candidates: Winner: BEL - brokerage upgrade on order inflow after Q2 results; mechanism is a visible order pipeline, but the print is already out. / Losers: none clear - peers (HAL, BDL) share the same defence-order theme, so are read-across winners, not losers. / Catalyst: surprise - brokerage note after results; mostly priced-in post-results drift (see bcc805d80bee yesterday). / Thesis fit: none
 
-## 13. [7 HIGH] HINDPETRO +4.0% vs previous close (close 362.1, bar 2026-11-04)
+## 15. [7 HIGH] HINDPETRO +4.0% vs previous close (close 362.1, bar 2026-11-04)
 
 - Time: 2026-11-04 13:53 IST
 - Source: Yahoo quotes
@@ -160,27 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 7
 - Alert id: ea1a5de6b1d4
 - Second-order candidates: Winner: none identified - price alert only; refiner-marketers typically rally when crude eases or pump-price relief arrives, but no cause was confirmed. / Losers: none clear - the open crude-ongc-vs-hpcl short leg (HINDPETRO) is the one hurt by this move. / Catalyst: unknown - no news found (one search, nothing credible for 2026-11-04) / Thesis fit: open thesis crude-ongc-vs-hpcl: weakens if the rise persists (invalidation is HPCL margin relief; thesis rule also closes early if HPCL wins back half of its underperformance vs ONGC). No change proposed on one intraday move.
-
-## 14. [7 HIGH] BEL shares climb 3% as brokerages back post-results recovery
-
-- Time: 2026-11-04 12:49 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/bel-shares-climb-3-as-brokerages-back-post-results-recovery/article71664488.ece
-- Matched symbols: BEL (moving today: BEL)
-- Keywords: results
-- Thesis match: none
-- Score: 7
-- Alert id: bcc805d80bee
-- Second-order candidates: Winner: BEL - brokerage upgrades after results restore confidence in its defence order book and margin guidance (link could not be opened from this sandbox; headline only). / Losers: none clear - peers (HAL, BDL, Data Patterns) share the same defence-spending demand, no share loss is named. / Catalyst: surprise - post-results brokerage notes; no dated event ahead identified. / Thesis fit: none
-
-## 15. [7 HIGH] SBI share price outlook: Brokerages bullish post Q2 results on margins, asset quality, but flag one-off gains
-
-- Time: 2026-11-04 09:58 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/sbi-share-price-outlook-brokerages-bullish-post-q2-results-on-margins-asset-quality-but-flag-one-off-gains-14068568.html
-- Matched symbols: SBIN
-- Keywords: results, guidance
-- Thesis match: none
-- Score: 7
-- Alert id: 54dce75a56fd
-- Second-order candidates: Winner: SBIN - brokerages cite margin and asset-quality improvement, offset by one-off gains in reported profit. / Losers: none clear - an outlook piece, no competitive shift. / Catalyst: surprise, already happened - post-results commentary; no further dated event. / Thesis fit: none
