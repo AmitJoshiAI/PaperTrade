@@ -1,5 +1,5 @@
 {
- "date": "2026-11-04",
+ "date": "2026-11-05",
  "currency": "USD",
  "equity": 5289.62,
  "cash": 5289.62,
@@ -7,14 +7,16 @@
  "open_positions": 0,
  "max_positions": 5,
  "breaker": null,
- "fetched_at": "2026-11-05 18:39 IST",
- "usd_inr": 94.7484,
- "notes": [],
+ "fetched_at": "2026-11-06 18:48 IST",
+ "usd_inr": 94.5154,
+ "notes": [
+  "Above the $65 price bar, not shown: KRE $72.31, XLP $91.25, XLV $184.91, GDX $85.75, TLT $81.93"
+ ],
  "underlyings": [
   {
    "underlying": "SPY",
-   "spot": 766.81,
-   "spot_date": "2026-11-04",
+   "spot": 733.0,
+   "spot_date": "2026-11-05",
    "lot": 100,
    "why": [],
    "monthly": true,
@@ -23,131 +25,141 @@
     {
      "label": "monthly",
      "expiry": "2026-11-20",
-     "days": 16,
-     "atm": 767.0,
+     "days": 15,
+     "atm": 733.0,
      "rows": [
       {
        "offset": -2,
-       "strike": 765.0,
+       "strike": 731.0,
        "CE": {
-        "price": 10.775,
+        "price": 16.63,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 17.44,
-        "bid": 9.46,
-        "ask": 12.09,
-        "contract": "SPY261120C00765000",
-        "per_lot": 1077.5,
-        "pct": 20.37
+        "iv_pct": 28.42,
+        "bid": 15.42,
+        "ask": 17.84,
+        "last": 16.52,
+        "contract": "SPY261120C00731000",
+        "per_lot": 1663.0,
+        "pct": 31.44
        },
        "PE": {
-        "price": 7.055,
+        "price": 12.23,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 13.88,
-        "bid": 6.11,
-        "ask": 8.0,
-        "contract": "SPY261120P00765000",
-        "per_lot": 705.5,
-        "pct": 13.34
+        "iv_pct": 22.74,
+        "bid": 11.98,
+        "ask": 12.48,
+        "last": 13.55,
+        "contract": "SPY261120P00731000",
+        "per_lot": 1223.0,
+        "pct": 23.12
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": -1,
-       "strike": 766.0,
+       "strike": 732.0,
        "CE": {
-        "price": 10.3,
+        "price": 16.005,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 17.79,
-        "bid": 8.8,
-        "ask": 11.8,
-        "contract": "SPY261120C00766000",
-        "per_lot": 1030.0,
-        "pct": 19.47
+        "iv_pct": 28.27,
+        "bid": 14.76,
+        "ask": 17.25,
+        "last": 15.7,
+        "contract": "SPY261120C00732000",
+        "per_lot": 1600.5,
+        "pct": 30.26
        },
        "PE": {
-        "price": 7.72,
+        "price": 12.57,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 14.81,
-        "bid": 6.36,
-        "ask": 9.08,
-        "contract": "SPY261120P00766000",
-        "per_lot": 772.0,
-        "pct": 14.59
+        "iv_pct": 22.48,
+        "bid": 12.32,
+        "ask": 12.82,
+        "last": 14.11,
+        "contract": "SPY261120P00732000",
+        "per_lot": 1257.0,
+        "pct": 23.76
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": 0,
-       "strike": 767.0,
+       "strike": 733.0,
        "CE": {
-        "price": 9.57,
+        "price": 15.385,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 17.35,
-        "bid": 8.12,
-        "ask": 11.02,
-        "contract": "SPY261120C00767000",
-        "per_lot": 957.0,
-        "pct": 18.09
+        "iv_pct": 26.33,
+        "bid": 15.16,
+        "ask": 15.61,
+        "last": 15.2,
+        "contract": "SPY261120C00733000",
+        "per_lot": 1538.5,
+        "pct": 29.09
        },
        "PE": {
-        "price": 8.1,
+        "price": 12.9,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 14.72,
-        "bid": 6.68,
-        "ask": 9.52,
-        "contract": "SPY261120P00767000",
-        "per_lot": 810.0,
-        "pct": 15.31
+        "iv_pct": 22.24,
+        "bid": 12.62,
+        "ask": 13.18,
+        "last": 14.34,
+        "contract": "SPY261120P00733000",
+        "per_lot": 1290.0,
+        "pct": 24.39
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": 1,
-       "strike": 768.0,
+       "strike": 734.0,
        "CE": {
-        "price": 8.96,
+        "price": 14.775,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 17.17,
-        "bid": 7.5,
-        "ask": 10.42,
-        "contract": "SPY261120C00768000",
-        "per_lot": 896.0,
-        "pct": 16.94
+        "iv_pct": 26.05,
+        "bid": 14.59,
+        "ask": 14.96,
+        "last": 14.57,
+        "contract": "SPY261120C00734000",
+        "per_lot": 1477.5,
+        "pct": 27.93
        },
        "PE": {
-        "price": 8.22,
+        "price": 13.285,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 13.69,
-        "bid": 7.06,
-        "ask": 9.38,
-        "contract": "SPY261120P00768000",
-        "per_lot": 822.0,
-        "pct": 15.54
+        "iv_pct": 21.98,
+        "bid": 13.03,
+        "ask": 13.54,
+        "last": 14.68,
+        "contract": "SPY261120P00734000",
+        "per_lot": 1328.5,
+        "pct": 25.12
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": 2,
-       "strike": 769.0,
+       "strike": 735.0,
        "CE": {
-        "price": 8.34,
+        "price": 14.095,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 16.87,
-        "bid": 6.92,
-        "ask": 9.76,
-        "contract": "SPY261120C00769000",
-        "per_lot": 834.0,
-        "pct": 15.77
+        "iv_pct": 25.79,
+        "bid": 13.86,
+        "ask": 14.33,
+        "last": 13.8,
+        "contract": "SPY261120C00735000",
+        "per_lot": 1409.5,
+        "pct": 26.65
        },
        "PE": {
-        "price": 8.9,
+        "price": 13.625,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 14.32,
-        "bid": 7.48,
-        "ask": 10.32,
-        "contract": "SPY261120P00769000",
-        "per_lot": 890.0,
-        "pct": 16.83
+        "iv_pct": 21.81,
+        "bid": 13.28,
+        "ask": 13.97,
+        "last": 15.13,
+        "contract": "SPY261120P00735000",
+        "per_lot": 1362.5,
+        "pct": 25.76
        },
        "source": "real yfinance chain (mid)"
       }
@@ -160,36 +172,36 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 767.0,
-         "price": 9.57,
+         "strike": 733.0,
+         "price": 15.385,
          "src": "real yfinance chain (mid)"
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 769.0,
-         "price": 8.34,
+         "strike": 735.0,
+         "price": 14.095,
          "src": "real yfinance chain (mid)"
         }
        ],
        "units": 100,
-       "net_debit": 1.23,
-       "net_debit_lot": 123.0,
-       "entry_charges": 0.04,
-       "max_loss": 123.04,
-       "max_gain": 76.96,
+       "net_debit": 1.29,
+       "net_debit_lot": 129.0,
+       "entry_charges": 0.05,
+       "max_loss": 129.05,
+       "max_gain": 70.95,
        "breakevens": [
-        768.23
+        734.29
        ],
-       "long_leg_max": 957.0,
-       "long_leg_pct": 18.09,
+       "long_leg_max": 1538.5,
+       "long_leg_pct": 29.09,
        "rule_10pct": "FAIL",
-       "cash_need": 957.0,
+       "cash_need": 1538.5,
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "long leg premium 957 is above the 10% limit 529"
+       "why": "long leg premium 1,538 is above the 10% limit 529"
       },
       {
        "name": "Bear put spread",
@@ -198,297 +210,36 @@
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 767.0,
-         "price": 8.1,
+         "strike": 733.0,
+         "price": 12.9,
          "src": "real yfinance chain (mid)"
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 765.0,
-         "price": 7.055,
-         "src": "real yfinance chain (mid)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 1.045,
-       "net_debit_lot": 104.5,
-       "entry_charges": 0.03,
-       "max_loss": 104.53,
-       "max_gain": 95.47,
-       "breakevens": [
-        765.96
-       ],
-       "long_leg_max": 810.0,
-       "long_leg_pct": 15.31,
-       "rule_10pct": "FAIL",
-       "cash_need": 810.0,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 0,
-       "verdict": "FAIL",
-       "why": "long leg premium 810 is above the 10% limit 529"
-      },
-      {
-       "name": "Long straddle",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 767.0,
-         "price": 9.57,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 767.0,
-         "price": 8.1,
-         "src": "real yfinance chain (mid)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 17.67,
-       "net_debit_lot": 1767.0,
-       "entry_charges": 0.0,
-       "max_loss": 1767.0,
-       "max_gain": null,
-       "breakevens": [
-        749.33,
-        784.67
-       ],
-       "long_leg_max": 957.0,
-       "long_leg_pct": 18.09,
-       "rule_10pct": "FAIL",
-       "cash_need": 1767.0,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 0,
-       "verdict": "FAIL",
-       "why": "long leg premium 957 is above the 10% limit 529"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "underlying": "QQQ",
-   "spot": 691.95,
-   "spot_date": "2026-11-04",
-   "lot": 100,
-   "why": [],
-   "monthly": true,
-   "warnings": [],
-   "expiries": [
-    {
-     "label": "monthly",
-     "expiry": "2026-11-20",
-     "days": 16,
-     "atm": 692.0,
-     "rows": [
-      {
-       "offset": -2,
-       "strike": 690.0,
-       "CE": {
-        "price": 12.1,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 19.4,
-        "bid": 12.0,
-        "ask": 12.2,
-        "contract": "QQQ261120C00690000",
-        "per_lot": 1210.0,
-        "pct": 22.88
-       },
-       "PE": {
-        "price": 15.52,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 30.26,
-        "bid": 14.54,
-        "ask": 16.5,
-        "contract": "QQQ261120P00690000",
-        "per_lot": 1552.0,
-        "pct": 29.34
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": -1,
-       "strike": 691.0,
-       "CE": {
-        "price": 11.6,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 19.42,
-        "bid": 11.5,
-        "ask": 11.7,
-        "contract": "QQQ261120C00691000",
-        "per_lot": 1160.0,
-        "pct": 21.93
-       },
-       "PE": {
-        "price": 15.685,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 29.03,
-        "bid": 15.08,
-        "ask": 16.29,
-        "contract": "QQQ261120P00691000",
-        "per_lot": 1568.5,
-        "pct": 29.65
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 0,
-       "strike": 692.0,
-       "CE": {
-        "price": 11.06,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 19.35,
-        "bid": 10.96,
-        "ask": 11.16,
-        "contract": "QQQ261120C00692000",
-        "per_lot": 1106.0,
-        "pct": 20.91
-       },
-       "PE": {
-        "price": 16.19,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 29.05,
-        "bid": 15.57,
-        "ask": 16.81,
-        "contract": "QQQ261120P00692000",
-        "per_lot": 1619.0,
-        "pct": 30.61
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 1,
-       "strike": 693.0,
-       "CE": {
-        "price": 10.65,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 19.48,
-        "bid": 10.55,
-        "ask": 10.75,
-        "contract": "QQQ261120C00693000",
-        "per_lot": 1065.0,
-        "pct": 20.13
-       },
-       "PE": {
-        "price": 16.99,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 29.48,
-        "bid": 16.4,
-        "ask": 17.58,
-        "contract": "QQQ261120P00693000",
-        "per_lot": 1699.0,
-        "pct": 32.12
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 2,
-       "strike": 694.0,
-       "CE": {
-        "price": 10.21,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 19.51,
-        "bid": 10.12,
-        "ask": 10.3,
-        "contract": "QQQ261120C00694000",
-        "per_lot": 1021.0,
-        "pct": 19.3
-       },
-       "PE": {
-        "price": 17.235,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 29.07,
-        "bid": 16.6,
-        "ask": 17.87,
-        "contract": "QQQ261120P00694000",
-        "per_lot": 1723.5,
-        "pct": 32.58
-       },
-       "source": "real yfinance chain (mid)"
-      }
-     ],
-     "structures": [
-      {
-       "name": "Bull call spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 692.0,
-         "price": 11.06,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 694.0,
-         "price": 10.21,
-         "src": "real yfinance chain (mid)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 0.85,
-       "net_debit_lot": 85.0,
-       "entry_charges": 0.04,
-       "max_loss": 85.04,
-       "max_gain": 114.96,
-       "breakevens": [
-        692.85
-       ],
-       "long_leg_max": 1106.0,
-       "long_leg_pct": 20.91,
-       "rule_10pct": "FAIL",
-       "cash_need": 1106.0,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 0,
-       "verdict": "FAIL",
-       "why": "long leg premium 1,106 is above the 10% limit 529"
-      },
-      {
-       "name": "Bear put spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 692.0,
-         "price": 16.19,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 690.0,
-         "price": 15.52,
+         "strike": 731.0,
+         "price": 12.23,
          "src": "real yfinance chain (mid)"
         }
        ],
        "units": 100,
        "net_debit": 0.67,
        "net_debit_lot": 67.0,
-       "entry_charges": 0.06,
-       "max_loss": 67.06,
-       "max_gain": 132.94,
+       "entry_charges": 0.05,
+       "max_loss": 67.05,
+       "max_gain": 132.95,
        "breakevens": [
-        691.33
+        732.33
        ],
-       "long_leg_max": 1619.0,
-       "long_leg_pct": 30.61,
+       "long_leg_max": 1290.0,
+       "long_leg_pct": 24.39,
        "rule_10pct": "FAIL",
-       "cash_need": 1619.0,
+       "cash_need": 1290.0,
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "long leg premium 1,619 is above the 10% limit 529"
+       "why": "long leg premium 1,290 is above the 10% limit 529"
       },
       {
        "name": "Long straddle",
@@ -497,46 +248,47 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 692.0,
-         "price": 11.06,
+         "strike": 733.0,
+         "price": 15.385,
          "src": "real yfinance chain (mid)"
         },
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 692.0,
-         "price": 16.19,
+         "strike": 733.0,
+         "price": 12.9,
          "src": "real yfinance chain (mid)"
         }
        ],
        "units": 100,
-       "net_debit": 27.25,
-       "net_debit_lot": 2725.0,
+       "net_debit": 28.285,
+       "net_debit_lot": 2828.5,
        "entry_charges": 0.0,
-       "max_loss": 2725.0,
+       "max_loss": 2828.5,
        "max_gain": null,
        "breakevens": [
-        664.75,
-        719.25
+        704.72,
+        761.28
        ],
-       "long_leg_max": 1619.0,
-       "long_leg_pct": 30.61,
+       "long_leg_max": 1538.5,
+       "long_leg_pct": 29.09,
        "rule_10pct": "FAIL",
-       "cash_need": 2725.0,
+       "cash_need": 2828.5,
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "long leg premium 1,619 is above the 10% limit 529"
+       "why": "long leg premium 1,538 is above the 10% limit 529"
       }
-     ]
+     ],
+     "atm_iv_pct": 24.94
     }
    ]
   },
   {
-   "underlying": "F",
-   "spot": 12.67,
-   "spot_date": "2026-11-04",
+   "underlying": "QQQ",
+   "spot": 647.05,
+   "spot_date": "2026-11-05",
    "lot": 100,
    "why": [],
    "monthly": true,
@@ -545,131 +297,141 @@
     {
      "label": "monthly",
      "expiry": "2026-11-20",
-     "days": 16,
-     "atm": 12.5,
+     "days": 15,
+     "atm": 645.0,
      "rows": [
       {
        "offset": -2,
-       "strike": 11.5,
+       "strike": 635.0,
        "CE": {
-        "price": 2.4613,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 180.08,
-        "bid": null,
-        "ask": 4.9,
-        "contract": "F261120C00011500",
-        "per_lot": 246.13,
-        "pct": 4.65
+        "price": 34.34,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 53.85,
+        "bid": 32.66,
+        "ask": 36.02,
+        "last": 27.96,
+        "contract": "QQQ261120C00635000",
+        "per_lot": 3434.0,
+        "pct": 64.92
        },
        "PE": {
-        "price": 0.46,
+        "price": 11.21,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 92.38,
-        "bid": 0.03,
-        "ask": 0.89,
-        "contract": "F261120P00011500",
-        "per_lot": 46.0,
-        "pct": 0.87
+        "iv_pct": 32.16,
+        "bid": 11.09,
+        "ask": 11.33,
+        "last": 15.36,
+        "contract": "QQQ261120P00635000",
+        "per_lot": 1121.0,
+        "pct": 21.19
        },
-       "source": "CE: model (BS on chain IV); PE: real yfinance chain (mid)"
+       "source": "real yfinance chain (mid)"
       },
       {
        "offset": -1,
-       "strike": 12.0,
+       "strike": 640.0,
        "CE": {
-        "price": 0.575,
+        "price": 30.555,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 58.98,
-        "bid": 0.15,
-        "ask": 1.0,
-        "contract": "F261120C00012000",
-        "per_lot": 57.5,
-        "pct": 1.09
+        "iv_pct": 51.68,
+        "bid": 28.58,
+        "ask": 32.53,
+        "last": 25.52,
+        "contract": "QQQ261120C00640000",
+        "per_lot": 3055.5,
+        "pct": 57.76
        },
        "PE": {
-        "price": 0.785,
+        "price": 12.55,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 105.86,
-        "bid": 0.1,
-        "ask": 1.47,
-        "contract": "F261120P00012000",
-        "per_lot": 78.5,
-        "pct": 1.48
+        "iv_pct": 30.69,
+        "bid": 12.41,
+        "ask": 12.69,
+        "last": 17.42,
+        "contract": "QQQ261120P00640000",
+        "per_lot": 1255.0,
+        "pct": 23.73
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": 0,
-       "strike": 12.5,
+       "strike": 645.0,
        "CE": {
-        "price": 1.615,
+        "price": 27.07,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 145.9,
-        "bid": 0.08,
-        "ask": 3.15,
-        "contract": "F261120C00012500",
-        "per_lot": 161.5,
-        "pct": 3.05
+        "iv_pct": 53.6,
+        "bid": 25.11,
+        "ask": 29.03,
+        "last": 22.54,
+        "contract": "QQQ261120C00645000",
+        "per_lot": 2707.0,
+        "pct": 51.18
        },
        "PE": {
-        "price": 1.195,
+        "price": 14.09,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 121.88,
-        "bid": 0.05,
-        "ask": 2.34,
-        "contract": "F261120P00012500",
-        "per_lot": 119.5,
-        "pct": 2.26
+        "iv_pct": 29.11,
+        "bid": 13.98,
+        "ask": 14.2,
+        "last": 19.28,
+        "contract": "QQQ261120P00645000",
+        "per_lot": 1409.0,
+        "pct": 26.64
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": 1,
-       "strike": 13.0,
+       "strike": 650.0,
        "CE": {
-        "price": 0.275,
+        "price": 23.695,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 60.74,
-        "bid": 0.05,
-        "ask": 0.5,
-        "contract": "F261120C00013000",
-        "per_lot": 27.5,
-        "pct": 0.52
+        "iv_pct": 48.23,
+        "bid": 23.55,
+        "ask": 23.84,
+        "last": 19.4,
+        "contract": "QQQ261120C00650000",
+        "per_lot": 2369.5,
+        "pct": 44.8
        },
        "PE": {
-        "price": 0.445,
+        "price": 15.94,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 58.01,
-        "bid": 0.09,
-        "ask": 0.8,
-        "contract": "F261120P00013000",
-        "per_lot": 44.5,
-        "pct": 0.84
+        "iv_pct": 28.01,
+        "bid": 15.67,
+        "ask": 16.21,
+        "last": 21.31,
+        "contract": "QQQ261120P00650000",
+        "per_lot": 1594.0,
+        "pct": 30.13
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": 2,
-       "strike": 13.5,
+       "strike": 655.0,
        "CE": {
-        "price": 0.09,
+        "price": 20.54,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 41.02,
-        "bid": 0.03,
-        "ask": 0.15,
-        "contract": "F261120C00013500",
-        "per_lot": 9.0,
-        "pct": 0.17
+        "iv_pct": 46.43,
+        "bid": 20.41,
+        "ask": 20.67,
+        "last": 16.76,
+        "contract": "QQQ261120C00655000",
+        "per_lot": 2054.0,
+        "pct": 38.83
        },
        "PE": {
-        "price": 2.335,
+        "price": 17.885,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 174.02,
-        "bid": 0.17,
-        "ask": 4.5,
-        "contract": "F261120P00013500",
-        "per_lot": 233.5,
-        "pct": 4.41
+        "iv_pct": 26.47,
+        "bid": 17.5,
+        "ask": 18.27,
+        "last": 23.48,
+        "contract": "QQQ261120P00655000",
+        "per_lot": 1788.5,
+        "pct": 33.81
        },
        "source": "real yfinance chain (mid)"
       }
@@ -682,36 +444,36 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 12.5,
-         "price": 1.615,
+         "strike": 645.0,
+         "price": 27.07,
          "src": "real yfinance chain (mid)"
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 13.5,
-         "price": 0.09,
+         "strike": 655.0,
+         "price": 20.54,
          "src": "real yfinance chain (mid)"
         }
        ],
        "units": 100,
-       "net_debit": 1.525,
-       "net_debit_lot": 152.5,
-       "entry_charges": 0.02,
-       "max_loss": 152.52,
-       "max_gain": -52.52,
+       "net_debit": 6.53,
+       "net_debit_lot": 653.0,
+       "entry_charges": 0.07,
+       "max_loss": 653.07,
+       "max_gain": 346.93,
        "breakevens": [
-        14.03
+        651.53
        ],
-       "long_leg_max": 161.5,
-       "long_leg_pct": 3.05,
-       "rule_10pct": "PASS",
-       "cash_need": 161.5,
+       "long_leg_max": 2707.0,
+       "long_leg_pct": 51.18,
+       "rule_10pct": "FAIL",
+       "cash_need": 2707.0,
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 3,
-       "verdict": "PASS",
-       "why": ""
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "long leg premium 2,707 is above the 10% limit 529"
       },
       {
        "name": "Bear put spread",
@@ -720,36 +482,36 @@
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 12.5,
-         "price": 1.195,
+         "strike": 645.0,
+         "price": 14.09,
          "src": "real yfinance chain (mid)"
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 11.5,
-         "price": 0.46,
+         "strike": 635.0,
+         "price": 11.21,
          "src": "real yfinance chain (mid)"
         }
        ],
        "units": 100,
-       "net_debit": 0.735,
-       "net_debit_lot": 73.5,
-       "entry_charges": 0.02,
-       "max_loss": 73.52,
-       "max_gain": 26.48,
+       "net_debit": 2.88,
+       "net_debit_lot": 288.0,
+       "entry_charges": 0.05,
+       "max_loss": 288.05,
+       "max_gain": 711.95,
        "breakevens": [
-        11.77
+        642.12
        ],
-       "long_leg_max": 119.5,
-       "long_leg_pct": 2.26,
-       "rule_10pct": "PASS",
-       "cash_need": 119.5,
+       "long_leg_max": 1409.0,
+       "long_leg_pct": 26.64,
+       "rule_10pct": "FAIL",
+       "cash_need": 1409.0,
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 4,
-       "verdict": "PASS",
-       "why": ""
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "long leg premium 1,409 is above the 10% limit 529"
       },
       {
        "name": "Long straddle",
@@ -758,307 +520,47 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 12.5,
-         "price": 1.615,
+         "strike": 645.0,
+         "price": 27.07,
          "src": "real yfinance chain (mid)"
         },
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 12.5,
-         "price": 1.195,
+         "strike": 645.0,
+         "price": 14.09,
          "src": "real yfinance chain (mid)"
         }
        ],
        "units": 100,
-       "net_debit": 2.81,
-       "net_debit_lot": 281.0,
+       "net_debit": 41.16,
+       "net_debit_lot": 4116.0,
        "entry_charges": 0.0,
-       "max_loss": 281.0,
+       "max_loss": 4116.0,
        "max_gain": null,
        "breakevens": [
-        9.69,
-        15.31
+        603.84,
+        686.16
        ],
-       "long_leg_max": 161.5,
-       "long_leg_pct": 3.05,
-       "rule_10pct": "PASS",
-       "cash_need": 281.0,
+       "long_leg_max": 2707.0,
+       "long_leg_pct": 51.18,
+       "rule_10pct": "FAIL",
+       "cash_need": 4116.0,
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 3,
-       "verdict": "PASS",
-       "why": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "underlying": "PFE",
-   "spot": 30.79,
-   "spot_date": "2026-11-04",
-   "lot": 100,
-   "why": [],
-   "monthly": true,
-   "warnings": [],
-   "expiries": [
-    {
-     "label": "monthly",
-     "expiry": "2026-11-20",
-     "days": 16,
-     "atm": 31.0,
-     "rows": [
-      {
-       "offset": -2,
-       "strike": 30.0,
-       "CE": {
-        "price": 3.426,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 118.02,
-        "bid": null,
-        "ask": 3.4,
-        "contract": "PFE261120C00030000",
-        "per_lot": 342.6,
-        "pct": 6.48
-       },
-       "PE": {
-        "price": 0.5606,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 36.33,
-        "bid": null,
-        "ask": 0.58,
-        "contract": "PFE261120P00030000",
-        "per_lot": 56.06,
-        "pct": 1.06
-       },
-       "source": "model (BS on chain IV)"
-      },
-      {
-       "offset": -1,
-       "strike": 30.5,
-       "CE": {
-        "price": 2.8,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 103.81,
-        "bid": 0.3,
-        "ask": 5.3,
-        "contract": "PFE261120C00030500",
-        "per_lot": 280.0,
-        "pct": 5.29
-       },
-       "PE": {
-        "price": 1.4,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 60.25,
-        "bid": 0.6,
-        "ask": 2.2,
-        "contract": "PFE261120P00030500",
-        "per_lot": 140.0,
-        "pct": 2.65
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 0,
-       "strike": 31.0,
-       "CE": {
-        "price": 0.39,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 27.15,
-        "bid": 0.18,
-        "ask": 0.6,
-        "contract": "PFE261120C00031000",
-        "per_lot": 39.0,
-        "pct": 0.74
-       },
-       "PE": {
-        "price": 2.4193,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 90.92,
-        "bid": null,
-        "ask": 4.9,
-        "contract": "PFE261120P00031000",
-        "per_lot": 241.93,
-        "pct": 4.57
-       },
-       "source": "CE: real yfinance chain (mid); PE: model (BS on chain IV)"
-      },
-      {
-       "offset": 1,
-       "strike": 31.5,
-       "CE": {
-        "price": 2.56,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 111.82,
-        "bid": 0.07,
-        "ask": 5.05,
-        "contract": "PFE261120C00031500",
-        "per_lot": 256.0,
-        "pct": 4.84
-       },
-       "PE": {
-        "price": 3.5,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 120.7,
-        "bid": 1.0,
-        "ask": 6.0,
-        "contract": "PFE261120P00031500",
-        "per_lot": 350.0,
-        "pct": 6.62
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 2,
-       "strike": 32.0,
-       "CE": {
-        "price": 0.3352,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 29.79,
-        "bid": null,
-        "ask": 0.32,
-        "contract": "PFE261120C00032000",
-        "per_lot": 33.52,
-        "pct": 0.63
-       },
-       "PE": {
-        "price": 2.4153,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 67.97,
-        "bid": null,
-        "ask": 4.9,
-        "contract": "PFE261120P00032000",
-        "per_lot": 241.53,
-        "pct": 4.57
-       },
-       "source": "model (BS on chain IV)"
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "long leg premium 2,707 is above the 10% limit 529"
       }
      ],
-     "structures": [
-      {
-       "name": "Bull call spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 31.0,
-         "price": 0.39,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 32.0,
-         "price": 0.3352,
-         "src": "model (BS on chain IV)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 0.0548,
-       "net_debit_lot": 5.48,
-       "entry_charges": 0.02,
-       "max_loss": 5.5,
-       "max_gain": 94.5,
-       "breakevens": [
-        31.05
-       ],
-       "long_leg_max": 39.0,
-       "long_leg_pct": 0.74,
-       "rule_10pct": "PASS",
-       "cash_need": 39.0,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 13,
-       "verdict": "PASS",
-       "why": ""
-      },
-      {
-       "name": "Bear put spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 31.0,
-         "price": 2.4193,
-         "src": "model (BS on chain IV)"
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 30.0,
-         "price": 0.5606,
-         "src": "model (BS on chain IV)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 1.8587,
-       "net_debit_lot": 185.87,
-       "entry_charges": 0.02,
-       "max_loss": 185.89,
-       "max_gain": -85.89,
-       "breakevens": [
-        29.14
-       ],
-       "long_leg_max": 241.93,
-       "long_leg_pct": 4.57,
-       "rule_10pct": "PASS",
-       "cash_need": 241.93,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 2,
-       "verdict": "PASS",
-       "why": ""
-      },
-      {
-       "name": "Long straddle",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 31.0,
-         "price": 0.39,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 31.0,
-         "price": 2.4193,
-         "src": "model (BS on chain IV)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 2.8093,
-       "net_debit_lot": 280.93,
-       "entry_charges": 0.0,
-       "max_loss": 280.93,
-       "max_gain": null,
-       "breakevens": [
-        28.19,
-        33.81
-       ],
-       "long_leg_max": 241.93,
-       "long_leg_pct": 4.57,
-       "rule_10pct": "PASS",
-       "cash_need": 280.93,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 2,
-       "verdict": "PASS",
-       "why": ""
-      }
-     ]
+     "atm_iv_pct": 40.14
     }
    ]
   },
   {
-   "underlying": "INTC",
-   "spot": 58.27,
-   "spot_date": "2026-11-04",
+   "underlying": "XLF",
+   "spot": 57.5,
+   "spot_date": "2026-11-05",
    "lot": 100,
    "why": [],
    "monthly": true,
@@ -1067,56 +569,60 @@
     {
      "label": "monthly",
      "expiry": "2026-11-20",
-     "days": 16,
+     "days": 15,
      "atm": 57.5,
      "rows": [
       {
        "offset": -2,
-       "strike": 52.5,
+       "strike": 56.5,
        "CE": {
-        "price": 5.9,
+        "price": 1.99,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 80.71,
-        "bid": 4.5,
-        "ask": 7.3,
-        "contract": "INTC261120C00052500",
-        "per_lot": 590.0,
-        "pct": 11.15
+        "iv_pct": 66.75,
+        "bid": 0.38,
+        "ask": 3.6,
+        "last": null,
+        "contract": "XLF261120C00056500",
+        "per_lot": 199.0,
+        "pct": 3.76
        },
        "PE": {
-        "price": 1.53,
+        "price": 1.565,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 80.71,
-        "bid": 1.31,
-        "ask": 1.75,
-        "contract": "INTC261120P00052500",
-        "per_lot": 153.0,
-        "pct": 2.89
+        "iv_pct": 75.29,
+        "bid": 0.14,
+        "ask": 2.99,
+        "last": 0.69,
+        "contract": "XLF261120P00056500",
+        "per_lot": 156.5,
+        "pct": 2.96
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": -1,
-       "strike": 55.0,
+       "strike": 57.0,
        "CE": {
-        "price": 4.25,
+        "price": 1.77,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 75.78,
-        "bid": 3.05,
-        "ask": 5.45,
-        "contract": "INTC261120C00055000",
-        "per_lot": 425.0,
-        "pct": 8.03
+        "iv_pct": 65.77,
+        "bid": 0.24,
+        "ask": 3.3,
+        "last": 1.54,
+        "contract": "XLF261120C00057000",
+        "per_lot": 177.0,
+        "pct": 3.35
        },
        "PE": {
-        "price": 2.42,
+        "price": 1.675,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 81.2,
-        "bid": 2.19,
-        "ask": 2.65,
-        "contract": "INTC261120P00055000",
-        "per_lot": 242.0,
-        "pct": 4.58
+        "iv_pct": 74.46,
+        "bid": 0.15,
+        "ask": 3.2,
+        "last": 0.8,
+        "contract": "XLF261120P00057000",
+        "per_lot": 167.5,
+        "pct": 3.17
        },
        "source": "real yfinance chain (mid)"
       },
@@ -1124,76 +630,354 @@
        "offset": 0,
        "strike": 57.5,
        "CE": {
-        "price": 3.015,
+        "price": 1.625,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 54.05,
-        "bid": 2.68,
-        "ask": 3.35,
-        "contract": "INTC261120C00057500",
-        "per_lot": 301.5,
-        "pct": 5.7
+        "iv_pct": 64.55,
+        "bid": 0.25,
+        "ask": 3.0,
+        "last": 1.23,
+        "contract": "XLF261120C00057500",
+        "per_lot": 162.5,
+        "pct": 3.07
        },
        "PE": {
-        "price": 3.55,
+        "price": 1.8,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 81.25,
-        "bid": 3.3,
-        "ask": 3.8,
-        "contract": "INTC261120P00057500",
-        "per_lot": 355.0,
-        "pct": 6.71
+        "iv_pct": 73.19,
+        "bid": 0.2,
+        "ask": 3.4,
+        "last": 1.0,
+        "contract": "XLF261120P00057500",
+        "per_lot": 180.0,
+        "pct": 3.4
        },
        "source": "real yfinance chain (mid)"
       },
       {
        "offset": 1,
-       "strike": 60.0,
+       "strike": 58.0,
        "CE": {
-        "price": 2.005,
+        "price": 1.45,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 56.4,
-        "bid": 1.9,
-        "ask": 2.11,
-        "contract": "INTC261120C00060000",
-        "per_lot": 200.5,
-        "pct": 3.79
+        "iv_pct": 64.99,
+        "bid": 0.11,
+        "ask": 2.79,
+        "last": 0.94,
+        "contract": "XLF261120C00058000",
+        "per_lot": 145.0,
+        "pct": 2.74
        },
        "PE": {
-        "price": 5.075,
+        "price": 2.055,
         "src": "real yfinance chain (mid)",
-        "iv_pct": 84.18,
-        "bid": 4.6,
-        "ask": 5.55,
-        "contract": "INTC261120P00060000",
-        "per_lot": 507.5,
-        "pct": 9.59
+        "iv_pct": 73.83,
+        "bid": 0.41,
+        "ask": 3.7,
+        "last": 1.18,
+        "contract": "XLF261120P00058000",
+        "per_lot": 205.5,
+        "pct": 3.88
        },
        "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 2,
+       "strike": 59.0,
+       "CE": {
+        "price": 1.255,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 66.77,
+        "bid": 0.06,
+        "ask": 2.45,
+        "last": 0.5,
+        "contract": "XLF261120C00059000",
+        "per_lot": 125.5,
+        "pct": 2.37
+       },
+       "PE": {
+        "price": 2.46,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 75.44,
+        "bid": 0.57,
+        "ask": 4.35,
+        "last": 1.73,
+        "contract": "XLF261120P00059000",
+        "per_lot": 246.0,
+        "pct": 4.65
+       },
+       "source": "real yfinance chain (mid)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 57.5,
+         "price": 1.625,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 59.0,
+         "price": 1.255,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.37,
+       "net_debit_lot": 37.0,
+       "entry_charges": 0.02,
+       "max_loss": 37.02,
+       "max_gain": 112.98,
+       "breakevens": [
+        57.87
+       ],
+       "long_leg_max": 162.5,
+       "long_leg_pct": 3.07,
+       "rule_10pct": "PASS",
+       "cash_need": 162.5,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 57.5,
+         "price": 1.8,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 56.5,
+         "price": 1.565,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.235,
+       "net_debit_lot": 23.5,
+       "entry_charges": 0.02,
+       "max_loss": 23.52,
+       "max_gain": 76.48,
+       "breakevens": [
+        57.27
+       ],
+       "long_leg_max": 180.0,
+       "long_leg_pct": 3.4,
+       "rule_10pct": "PASS",
+       "cash_need": 180.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 2,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 57.5,
+         "price": 1.625,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 57.5,
+         "price": 1.8,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 3.425,
+       "net_debit_lot": 342.5,
+       "entry_charges": 0.0,
+       "max_loss": 342.5,
+       "max_gain": null,
+       "breakevens": [
+        54.08,
+        60.92
+       ],
+       "long_leg_max": 180.0,
+       "long_leg_pct": 3.4,
+       "rule_10pct": "PASS",
+       "cash_need": 342.5,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 2,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 24.24
+    }
+   ]
+  },
+  {
+   "underlying": "XLE",
+   "spot": 61.63,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 61.5,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 60.0,
+       "CE": {
+        "price": 2.7685,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 3.43,
+        "contract": "XLE261120C00060000",
+        "per_lot": 276.85,
+        "pct": 5.23
+       },
+       "PE": {
+        "price": 1.0399,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 0.92,
+        "contract": "XLE261120P00060000",
+        "per_lot": 103.99,
+        "pct": 1.97
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": -1,
+       "strike": 61.0,
+       "CE": {
+        "price": 2.1751,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 2.23,
+        "contract": "XLE261120C00061000",
+        "per_lot": 217.51,
+        "pct": 4.11
+       },
+       "PE": {
+        "price": 1.4449,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 1.31,
+        "contract": "XLE261120P00061000",
+        "per_lot": 144.49,
+        "pct": 2.73
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 0,
+       "strike": 61.5,
+       "CE": {
+        "price": 1.9115,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 2.58,
+        "contract": "XLE261120C00061500",
+        "per_lot": 191.15,
+        "pct": 3.61
+       },
+       "PE": {
+        "price": 1.6805,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 1.36,
+        "contract": "XLE261120P00061500",
+        "per_lot": 168.05,
+        "pct": 3.18
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 1,
+       "strike": 62.0,
+       "CE": {
+        "price": 1.67,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 1.67,
+        "contract": "XLE261120C00062000",
+        "per_lot": 167.0,
+        "pct": 3.16
+       },
+       "PE": {
+        "price": 1.9382,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 1.6,
+        "contract": "XLE261120P00062000",
+        "per_lot": 193.82,
+        "pct": 3.66
+       },
+       "source": "model (BS on IV implied by last trades)"
       },
       {
        "offset": 2,
        "strike": 62.5,
        "CE": {
-        "price": 1.36,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 59.81,
-        "bid": 1.16,
-        "ask": 1.56,
-        "contract": "INTC261120C00062500",
-        "per_lot": 136.0,
-        "pct": 2.57
+        "price": 1.4503,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 1.43,
+        "contract": "XLE261120C00062500",
+        "per_lot": 145.03,
+        "pct": 2.74
        },
        "PE": {
-        "price": 6.95,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 89.87,
-        "bid": 6.45,
-        "ask": 7.45,
-        "contract": "INTC261120P00062500",
-        "per_lot": 695.0,
-        "pct": 13.14
+        "price": 2.2177,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 36.06,
+        "bid": null,
+        "ask": null,
+        "last": 2.03,
+        "contract": "XLE261120P00062500",
+        "per_lot": 221.77,
+        "pct": 4.19
        },
-       "source": "real yfinance chain (mid)"
+       "source": "model (BS on IV implied by last trades)"
       }
      ],
      "structures": [
@@ -1204,522 +988,31 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 57.5,
-         "price": 3.015,
-         "src": "real yfinance chain (mid)"
+         "strike": 61.5,
+         "price": 1.9115,
+         "src": "model (BS on IV implied by last trades)"
         },
         {
          "side": "SELL",
          "right": "CE",
          "strike": 62.5,
-         "price": 1.36,
-         "src": "real yfinance chain (mid)"
+         "price": 1.4503,
+         "src": "model (BS on IV implied by last trades)"
         }
        ],
        "units": 100,
-       "net_debit": 1.655,
-       "net_debit_lot": 165.5,
+       "net_debit": 0.4612,
+       "net_debit_lot": 46.12,
        "entry_charges": 0.02,
-       "max_loss": 165.52,
-       "max_gain": 334.48,
+       "max_loss": 46.14,
+       "max_gain": 53.86,
        "breakevens": [
-        59.16
+        61.96
        ],
-       "long_leg_max": 301.5,
-       "long_leg_pct": 5.7,
+       "long_leg_max": 191.15,
+       "long_leg_pct": 3.61,
        "rule_10pct": "PASS",
-       "cash_need": 301.5,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 1,
-       "verdict": "PASS",
-       "why": ""
-      },
-      {
-       "name": "Bear put spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 57.5,
-         "price": 3.55,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 52.5,
-         "price": 1.53,
-         "src": "real yfinance chain (mid)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 2.02,
-       "net_debit_lot": 202.0,
-       "entry_charges": 0.02,
-       "max_loss": 202.02,
-       "max_gain": 297.98,
-       "breakevens": [
-        55.48
-       ],
-       "long_leg_max": 355.0,
-       "long_leg_pct": 6.71,
-       "rule_10pct": "PASS",
-       "cash_need": 355.0,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 1,
-       "verdict": "PASS",
-       "why": ""
-      },
-      {
-       "name": "Long straddle",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 57.5,
-         "price": 3.015,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 57.5,
-         "price": 3.55,
-         "src": "real yfinance chain (mid)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 6.565,
-       "net_debit_lot": 656.5,
-       "entry_charges": 0.0,
-       "max_loss": 656.5,
-       "max_gain": null,
-       "breakevens": [
-        50.94,
-        64.06
-       ],
-       "long_leg_max": 355.0,
-       "long_leg_pct": 6.71,
-       "rule_10pct": "PASS",
-       "cash_need": 656.5,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 1,
-       "verdict": "PASS",
-       "why": ""
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "underlying": "SOFI",
-   "spot": 17.38,
-   "spot_date": "2026-11-04",
-   "lot": 100,
-   "why": [],
-   "monthly": true,
-   "warnings": [],
-   "expiries": [
-    {
-     "label": "monthly",
-     "expiry": "2026-11-20",
-     "days": 16,
-     "atm": 17.5,
-     "rows": [
-      {
-       "offset": -2,
-       "strike": 16.5,
-       "CE": {
-        "price": null,
-        "src": "no quote",
-        "iv_pct": null,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120C00016500",
-        "per_lot": null,
-        "pct": null
-       },
-       "PE": {
-        "price": 0.0,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 6.25,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120P00016500",
-        "per_lot": 0.0,
-        "pct": 0.0
-       },
-       "source": "CE: no quote; PE: model (BS on chain IV)"
-      },
-      {
-       "offset": -1,
-       "strike": 17.0,
-       "CE": {
-        "price": null,
-        "src": "no quote",
-        "iv_pct": null,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120C00017000",
-        "per_lot": null,
-        "pct": null
-       },
-       "PE": {
-        "price": 0.0,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 3.13,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120P00017000",
-        "per_lot": 0.0,
-        "pct": 0.0
-       },
-       "source": "CE: no quote; PE: model (BS on chain IV)"
-      },
-      {
-       "offset": 0,
-       "strike": 17.5,
-       "CE": {
-        "price": 0.0014,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 1.56,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120C00017500",
-        "per_lot": 0.14,
-        "pct": 0.0
-       },
-       "PE": {
-        "price": null,
-        "src": "no quote",
-        "iv_pct": null,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120P00017500",
-        "per_lot": null,
-        "pct": null
-       },
-       "source": "CE: model (BS on chain IV); PE: no quote"
-      },
-      {
-       "offset": 1,
-       "strike": 18.0,
-       "CE": {
-        "price": 0.0004,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 6.25,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120C00018000",
-        "per_lot": 0.04,
-        "pct": 0.0
-       },
-       "PE": {
-        "price": null,
-        "src": "no quote",
-        "iv_pct": null,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120P00018000",
-        "per_lot": null,
-        "pct": null
-       },
-       "source": "CE: model (BS on chain IV); PE: no quote"
-      },
-      {
-       "offset": 2,
-       "strike": 18.5,
-       "CE": {
-        "price": 0.0,
-        "src": "model (BS on chain IV)",
-        "iv_pct": 6.25,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120C00018500",
-        "per_lot": 0.0,
-        "pct": 0.0
-       },
-       "PE": {
-        "price": null,
-        "src": "no quote",
-        "iv_pct": null,
-        "bid": null,
-        "ask": null,
-        "contract": "SOFI261120P00018500",
-        "per_lot": null,
-        "pct": null
-       },
-       "source": "CE: model (BS on chain IV); PE: no quote"
-      }
-     ],
-     "structures": [
-      {
-       "name": "Bull call spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 17.5,
-         "price": 0.0014,
-         "src": "model (BS on chain IV)"
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 18.5,
-         "price": 0.0,
-         "src": "model (BS on chain IV)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 0.0014,
-       "net_debit_lot": 0.14,
-       "entry_charges": 0.01,
-       "max_loss": 0.15,
-       "max_gain": 99.85,
-       "breakevens": [
-        17.5
-       ],
-       "long_leg_max": 0.14,
-       "long_leg_pct": 0.0,
-       "rule_10pct": "PASS",
-       "cash_need": 0.14,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 3778,
-       "verdict": "PASS",
-       "why": ""
-      },
-      {
-       "name": "Bear put spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 17.5,
-         "price": null,
-         "src": "no quote"
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 16.5,
-         "price": 0.0,
-         "src": "model (BS on chain IV)"
-        }
-       ],
-       "units": 100,
-       "verdict": "n/a",
-       "why": "a leg has no price"
-      },
-      {
-       "name": "Long straddle",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 17.5,
-         "price": 0.0014,
-         "src": "model (BS on chain IV)"
-        },
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 17.5,
-         "price": null,
-         "src": "no quote"
-        }
-       ],
-       "units": 100,
-       "verdict": "n/a",
-       "why": "a leg has no price"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "underlying": "BAC",
-   "spot": 51.63,
-   "spot_date": "2026-11-04",
-   "lot": 100,
-   "why": [],
-   "monthly": true,
-   "warnings": [],
-   "expiries": [
-    {
-     "label": "monthly",
-     "expiry": "2026-11-20",
-     "days": 16,
-     "atm": 52.0,
-     "rows": [
-      {
-       "offset": -2,
-       "strike": 50.0,
-       "CE": {
-        "price": 2.905,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 99.95,
-        "bid": 0.71,
-        "ask": 5.1,
-        "contract": "BAC261120C00050000",
-        "per_lot": 290.5,
-        "pct": 5.49
-       },
-       "PE": {
-        "price": 0.675,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 47.17,
-        "bid": 0.06,
-        "ask": 1.29,
-        "contract": "BAC261120P00050000",
-        "per_lot": 67.5,
-        "pct": 1.28
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": -1,
-       "strike": 51.0,
-       "CE": {
-        "price": 2.22,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 92.92,
-        "bid": 0.14,
-        "ask": 4.3,
-        "contract": "BAC261120C00051000",
-        "per_lot": 222.0,
-        "pct": 4.2
-       },
-       "PE": {
-        "price": 0.875,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 45.51,
-        "bid": 0.1,
-        "ask": 1.65,
-        "contract": "BAC261120P00051000",
-        "per_lot": 87.5,
-        "pct": 1.65
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 0,
-       "strike": 52.0,
-       "CE": {
-        "price": 1.995,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 50.29,
-        "bid": 0.39,
-        "ask": 3.6,
-        "contract": "BAC261120C00052000",
-        "per_lot": 199.5,
-        "pct": 3.77
-       },
-       "PE": {
-        "price": 1.475,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 62.7,
-        "bid": 0.05,
-        "ask": 2.9,
-        "contract": "BAC261120P00052000",
-        "per_lot": 147.5,
-        "pct": 2.79
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 1,
-       "strike": 52.5,
-       "CE": {
-        "price": 0.975,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 37.94,
-        "bid": 0.7,
-        "ask": 1.25,
-        "contract": "BAC261120C00052500",
-        "per_lot": 97.5,
-        "pct": 1.84
-       },
-       "PE": {
-        "price": 2.025,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 61.96,
-        "bid": 0.9,
-        "ask": 3.15,
-        "contract": "BAC261120P00052500",
-        "per_lot": 202.5,
-        "pct": 3.83
-       },
-       "source": "real yfinance chain (mid)"
-      },
-      {
-       "offset": 2,
-       "strike": 53.0,
-       "CE": {
-        "price": 1.635,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 51.61,
-        "bid": 0.22,
-        "ask": 3.05,
-        "contract": "BAC261120C00053000",
-        "per_lot": 163.5,
-        "pct": 3.09
-       },
-       "PE": {
-        "price": 1.87,
-        "src": "real yfinance chain (mid)",
-        "iv_pct": 60.89,
-        "bid": 0.34,
-        "ask": 3.4,
-        "contract": "BAC261120P00053000",
-        "per_lot": 187.0,
-        "pct": 3.54
-       },
-       "source": "real yfinance chain (mid)"
-      }
-     ],
-     "structures": [
-      {
-       "name": "Bull call spread",
-       "expiry": "2026-11-20",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 52.0,
-         "price": 1.995,
-         "src": "real yfinance chain (mid)"
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 53.0,
-         "price": 1.635,
-         "src": "real yfinance chain (mid)"
-        }
-       ],
-       "units": 100,
-       "net_debit": 0.36,
-       "net_debit_lot": 36.0,
-       "entry_charges": 0.02,
-       "max_loss": 36.02,
-       "max_gain": 63.98,
-       "breakevens": [
-        52.36
-       ],
-       "long_leg_max": 199.5,
-       "long_leg_pct": 3.77,
-       "rule_10pct": "PASS",
-       "cash_need": 199.5,
+       "cash_need": 191.15,
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 2,
@@ -1733,31 +1026,31 @@
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 52.0,
-         "price": 1.475,
-         "src": "real yfinance chain (mid)"
+         "strike": 61.5,
+         "price": 1.6805,
+         "src": "model (BS on IV implied by last trades)"
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 50.0,
-         "price": 0.675,
-         "src": "real yfinance chain (mid)"
+         "strike": 60.0,
+         "price": 1.0399,
+         "src": "model (BS on IV implied by last trades)"
         }
        ],
        "units": 100,
-       "net_debit": 0.8,
-       "net_debit_lot": 80.0,
+       "net_debit": 0.6406,
+       "net_debit_lot": 64.06,
        "entry_charges": 0.02,
-       "max_loss": 80.02,
-       "max_gain": 119.98,
+       "max_loss": 64.08,
+       "max_gain": 85.92,
        "breakevens": [
-        51.2
+        60.86
        ],
-       "long_leg_max": 147.5,
-       "long_leg_pct": 2.79,
+       "long_leg_max": 168.05,
+       "long_leg_pct": 3.18,
        "rule_10pct": "PASS",
-       "cash_need": 147.5,
+       "cash_need": 168.05,
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 3,
@@ -1771,48 +1064,2470 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 52.0,
-         "price": 1.995,
-         "src": "real yfinance chain (mid)"
+         "strike": 61.5,
+         "price": 1.9115,
+         "src": "model (BS on IV implied by last trades)"
         },
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 52.0,
-         "price": 1.475,
-         "src": "real yfinance chain (mid)"
+         "strike": 61.5,
+         "price": 1.6805,
+         "src": "model (BS on IV implied by last trades)"
         }
        ],
        "units": 100,
-       "net_debit": 3.47,
-       "net_debit_lot": 347.0,
+       "net_debit": 3.592,
+       "net_debit_lot": 359.2,
        "entry_charges": 0.0,
-       "max_loss": 347.0,
+       "max_loss": 359.2,
        "max_gain": null,
        "breakevens": [
-        48.53,
-        55.47
+        57.91,
+        65.09
        ],
-       "long_leg_max": 199.5,
-       "long_leg_pct": 3.77,
+       "long_leg_max": 191.15,
+       "long_leg_pct": 3.61,
        "rule_10pct": "PASS",
-       "cash_need": 347.0,
+       "cash_need": 359.2,
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 2,
        "verdict": "PASS",
        "why": ""
       }
-     ]
+     ],
+     "atm_iv_pct": 36.06
+    }
+   ]
+  },
+  {
+   "underlying": "XLU",
+   "spot": 43.3,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 43.5,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 42.5,
+       "CE": {
+        "price": 1.1635,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 1.29,
+        "contract": "XLU261120C00042500",
+        "per_lot": 116.35,
+        "pct": 2.2
+       },
+       "PE": {
+        "price": 0.2937,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.38,
+        "contract": "XLU261120P00042500",
+        "per_lot": 29.37,
+        "pct": 0.56
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": -1,
+       "strike": 43.0,
+       "CE": {
+        "price": 0.8423,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.79,
+        "contract": "XLU261120C00043000",
+        "per_lot": 84.23,
+        "pct": 1.59
+       },
+       "PE": {
+        "price": 0.4717,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.56,
+        "contract": "XLU261120P00043000",
+        "per_lot": 47.17,
+        "pct": 0.89
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 0,
+       "strike": 43.5,
+       "CE": {
+        "price": 0.5814,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.53,
+        "contract": "XLU261120C00043500",
+        "per_lot": 58.14,
+        "pct": 1.1
+       },
+       "PE": {
+        "price": 0.71,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.71,
+        "contract": "XLU261120P00043500",
+        "per_lot": 71.0,
+        "pct": 1.34
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 1,
+       "strike": 44.0,
+       "CE": {
+        "price": 0.3814,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.39,
+        "contract": "XLU261120C00044000",
+        "per_lot": 38.14,
+        "pct": 0.72
+       },
+       "PE": {
+        "price": 1.0091,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.94,
+        "contract": "XLU261120P00044000",
+        "per_lot": 100.91,
+        "pct": 1.91
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 2,
+       "strike": 44.5,
+       "CE": {
+        "price": 0.2369,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": 0.3,
+        "contract": "XLU261120C00044500",
+        "per_lot": 23.69,
+        "pct": 0.45
+       },
+       "PE": {
+        "price": 1.3638,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 18.36,
+        "bid": null,
+        "ask": null,
+        "last": null,
+        "contract": "XLU261120P00044500",
+        "per_lot": 136.38,
+        "pct": 2.58
+       },
+       "source": "model (BS on IV implied by last trades)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 43.5,
+         "price": 0.5814,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 44.5,
+         "price": 0.2369,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.3445,
+       "net_debit_lot": 34.45,
+       "entry_charges": 0.02,
+       "max_loss": 34.47,
+       "max_gain": 65.53,
+       "breakevens": [
+        43.84
+       ],
+       "long_leg_max": 58.14,
+       "long_leg_pct": 1.1,
+       "rule_10pct": "PASS",
+       "cash_need": 58.14,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 9,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 43.5,
+         "price": 0.71,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 42.5,
+         "price": 0.2937,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.4163,
+       "net_debit_lot": 41.63,
+       "entry_charges": 0.02,
+       "max_loss": 41.65,
+       "max_gain": 58.35,
+       "breakevens": [
+        43.08
+       ],
+       "long_leg_max": 71.0,
+       "long_leg_pct": 1.34,
+       "rule_10pct": "PASS",
+       "cash_need": 71.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 7,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 43.5,
+         "price": 0.5814,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 43.5,
+         "price": 0.71,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 1.2914,
+       "net_debit_lot": 129.14,
+       "entry_charges": 0.0,
+       "max_loss": 129.14,
+       "max_gain": null,
+       "breakevens": [
+        42.21,
+        44.79
+       ],
+       "long_leg_max": 71.0,
+       "long_leg_pct": 1.34,
+       "rule_10pct": "PASS",
+       "cash_need": 129.14,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 7,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 18.36
+    }
+   ]
+  },
+  {
+   "underlying": "SLV",
+   "spot": 46.93,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 47.0,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 46.0,
+       "CE": {
+        "price": 2.2749,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 2.32,
+        "contract": "SLV261120C00046000",
+        "per_lot": 227.49,
+        "pct": 4.3
+       },
+       "PE": {
+        "price": 1.2694,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 1.37,
+        "contract": "SLV261120P00046000",
+        "per_lot": 126.94,
+        "pct": 2.4
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": -1,
+       "strike": 46.5,
+       "CE": {
+        "price": 2.0,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 2.0,
+        "contract": "SLV261120C00046500",
+        "per_lot": 200.0,
+        "pct": 3.78
+       },
+       "PE": {
+        "price": 1.4936,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 1.34,
+        "contract": "SLV261120P00046500",
+        "per_lot": 149.36,
+        "pct": 2.82
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 0,
+       "strike": 47.0,
+       "CE": {
+        "price": 1.748,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 1.66,
+        "contract": "SLV261120C00047000",
+        "per_lot": 174.8,
+        "pct": 3.3
+       },
+       "PE": {
+        "price": 1.7408,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 1.76,
+        "contract": "SLV261120P00047000",
+        "per_lot": 174.08,
+        "pct": 3.29
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 1,
+       "strike": 47.5,
+       "CE": {
+        "price": 1.5186,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 1.39,
+        "contract": "SLV261120C00047500",
+        "per_lot": 151.86,
+        "pct": 2.87
+       },
+       "PE": {
+        "price": 2.0106,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 2.07,
+        "contract": "SLV261120P00047500",
+        "per_lot": 201.06,
+        "pct": 3.8
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 2,
+       "strike": 48.0,
+       "CE": {
+        "price": 1.3114,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 1.2,
+        "contract": "SLV261120C00048000",
+        "per_lot": 131.14,
+        "pct": 2.48
+       },
+       "PE": {
+        "price": 2.3026,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 45.98,
+        "bid": null,
+        "ask": null,
+        "last": 2.14,
+        "contract": "SLV261120P00048000",
+        "per_lot": 230.26,
+        "pct": 4.35
+       },
+       "source": "model (BS on IV implied by last trades)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 47.0,
+         "price": 1.748,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 48.0,
+         "price": 1.3114,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.4366,
+       "net_debit_lot": 43.66,
+       "entry_charges": 0.02,
+       "max_loss": 43.68,
+       "max_gain": 56.32,
+       "breakevens": [
+        47.44
+       ],
+       "long_leg_max": 174.8,
+       "long_leg_pct": 3.3,
+       "rule_10pct": "PASS",
+       "cash_need": 174.8,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 47.0,
+         "price": 1.7408,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 46.0,
+         "price": 1.2694,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.4714,
+       "net_debit_lot": 47.14,
+       "entry_charges": 0.02,
+       "max_loss": 47.16,
+       "max_gain": 52.84,
+       "breakevens": [
+        46.53
+       ],
+       "long_leg_max": 174.08,
+       "long_leg_pct": 3.29,
+       "rule_10pct": "PASS",
+       "cash_need": 174.08,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 47.0,
+         "price": 1.748,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 47.0,
+         "price": 1.7408,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 3.4888,
+       "net_debit_lot": 348.88,
+       "entry_charges": 0.0,
+       "max_loss": 348.88,
+       "max_gain": null,
+       "breakevens": [
+        43.51,
+        50.49
+       ],
+       "long_leg_max": 174.8,
+       "long_leg_pct": 3.3,
+       "rule_10pct": "PASS",
+       "cash_need": 348.88,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 45.98
+    }
+   ]
+  },
+  {
+   "underlying": "EWZ",
+   "spot": 31.76,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 32.0,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 30.0,
+       "CE": {
+        "price": 2.0277,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 2.61,
+        "contract": "EWZ261120C00030000",
+        "per_lot": 202.77,
+        "pct": 3.83
+       },
+       "PE": {
+        "price": 0.2184,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 0.23,
+        "contract": "EWZ261120P00030000",
+        "per_lot": 21.84,
+        "pct": 0.41
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": -1,
+       "strike": 31.0,
+       "CE": {
+        "price": 1.307,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 1.35,
+        "contract": "EWZ261120C00031000",
+        "per_lot": 130.7,
+        "pct": 2.47
+       },
+       "PE": {
+        "price": 0.4961,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 0.49,
+        "contract": "EWZ261120P00031000",
+        "per_lot": 49.61,
+        "pct": 0.94
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 0,
+       "strike": 32.0,
+       "CE": {
+        "price": 0.763,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 0.75,
+        "contract": "EWZ261120C00032000",
+        "per_lot": 76.3,
+        "pct": 1.44
+       },
+       "PE": {
+        "price": 0.9504,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 1.0,
+        "contract": "EWZ261120P00032000",
+        "per_lot": 95.04,
+        "pct": 1.8
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 1,
+       "strike": 32.5,
+       "CE": {
+        "price": 0.56,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 0.56,
+        "contract": "EWZ261120C00032500",
+        "per_lot": 56.0,
+        "pct": 1.06
+       },
+       "PE": {
+        "price": 1.2466,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 1.23,
+        "contract": "EWZ261120P00032500",
+        "per_lot": 124.66,
+        "pct": 2.36
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 2,
+       "strike": 33.0,
+       "CE": {
+        "price": 0.3998,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 0.41,
+        "contract": "EWZ261120C00033000",
+        "per_lot": 39.98,
+        "pct": 0.76
+       },
+       "PE": {
+        "price": 1.5856,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 33.13,
+        "bid": null,
+        "ask": null,
+        "last": 1.71,
+        "contract": "EWZ261120P00033000",
+        "per_lot": 158.56,
+        "pct": 3.0
+       },
+       "source": "model (BS on IV implied by last trades)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 32.0,
+         "price": 0.763,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 33.0,
+         "price": 0.3998,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.3632,
+       "net_debit_lot": 36.32,
+       "entry_charges": 0.02,
+       "max_loss": 36.34,
+       "max_gain": 63.66,
+       "breakevens": [
+        32.36
+       ],
+       "long_leg_max": 76.3,
+       "long_leg_pct": 1.44,
+       "rule_10pct": "PASS",
+       "cash_need": 76.3,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 6,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 32.0,
+         "price": 0.9504,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 30.0,
+         "price": 0.2184,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.732,
+       "net_debit_lot": 73.2,
+       "entry_charges": 0.02,
+       "max_loss": 73.22,
+       "max_gain": 126.78,
+       "breakevens": [
+        31.27
+       ],
+       "long_leg_max": 95.04,
+       "long_leg_pct": 1.8,
+       "rule_10pct": "PASS",
+       "cash_need": 95.04,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 5,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 32.0,
+         "price": 0.763,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 32.0,
+         "price": 0.9504,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 1.7134,
+       "net_debit_lot": 171.34,
+       "entry_charges": 0.0,
+       "max_loss": 171.34,
+       "max_gain": null,
+       "breakevens": [
+        30.29,
+        33.71
+       ],
+       "long_leg_max": 95.04,
+       "long_leg_pct": 1.8,
+       "rule_10pct": "PASS",
+       "cash_need": 171.34,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 5,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 33.13
+    }
+   ]
+  },
+  {
+   "underlying": "EEM",
+   "spot": 58.05,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 58.0,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 57.0,
+       "CE": {
+        "price": 2.3795,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": null,
+        "contract": "EEM261120C00057000",
+        "per_lot": 237.95,
+        "pct": 4.5
+       },
+       "PE": {
+        "price": 1.2359,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.12,
+        "contract": "EEM261120P00057000",
+        "per_lot": 123.59,
+        "pct": 2.34
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": -1,
+       "strike": 57.5,
+       "CE": {
+        "price": 2.0971,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 2.14,
+        "contract": "EEM261120C00057500",
+        "per_lot": 209.71,
+        "pct": 3.96
+       },
+       "PE": {
+        "price": 1.4527,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.31,
+        "contract": "EEM261120P00057500",
+        "per_lot": 145.27,
+        "pct": 2.75
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 0,
+       "strike": 58.0,
+       "CE": {
+        "price": 1.8373,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.95,
+        "contract": "EEM261120C00058000",
+        "per_lot": 183.73,
+        "pct": 3.47
+       },
+       "PE": {
+        "price": 1.6921,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.43,
+        "contract": "EEM261120P00058000",
+        "per_lot": 169.21,
+        "pct": 3.2
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 1,
+       "strike": 58.5,
+       "CE": {
+        "price": 1.6,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.6,
+        "contract": "EEM261120C00058500",
+        "per_lot": 160.0,
+        "pct": 3.02
+       },
+       "PE": {
+        "price": 1.9539,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.56,
+        "contract": "EEM261120P00058500",
+        "per_lot": 195.39,
+        "pct": 3.69
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 2,
+       "strike": 59.0,
+       "CE": {
+        "price": 1.3848,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.57,
+        "contract": "EEM261120C00059000",
+        "per_lot": 138.48,
+        "pct": 2.62
+       },
+       "PE": {
+        "price": 2.2379,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 37.62,
+        "bid": null,
+        "ask": null,
+        "last": 1.93,
+        "contract": "EEM261120P00059000",
+        "per_lot": 223.79,
+        "pct": 4.23
+       },
+       "source": "model (BS on IV implied by last trades)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 58.0,
+         "price": 1.8373,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 59.0,
+         "price": 1.3848,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.4525,
+       "net_debit_lot": 45.25,
+       "entry_charges": 0.02,
+       "max_loss": 45.27,
+       "max_gain": 54.73,
+       "breakevens": [
+        58.45
+       ],
+       "long_leg_max": 183.73,
+       "long_leg_pct": 3.47,
+       "rule_10pct": "PASS",
+       "cash_need": 183.73,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 2,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 58.0,
+         "price": 1.6921,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 57.0,
+         "price": 1.2359,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.4562,
+       "net_debit_lot": 45.62,
+       "entry_charges": 0.02,
+       "max_loss": 45.64,
+       "max_gain": 54.36,
+       "breakevens": [
+        57.54
+       ],
+       "long_leg_max": 169.21,
+       "long_leg_pct": 3.2,
+       "rule_10pct": "PASS",
+       "cash_need": 169.21,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 58.0,
+         "price": 1.8373,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 58.0,
+         "price": 1.6921,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 3.5294,
+       "net_debit_lot": 352.94,
+       "entry_charges": 0.0,
+       "max_loss": 352.94,
+       "max_gain": null,
+       "breakevens": [
+        54.47,
+        61.53
+       ],
+       "long_leg_max": 183.73,
+       "long_leg_pct": 3.47,
+       "rule_10pct": "PASS",
+       "cash_need": 352.94,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 2,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 37.62
+    }
+   ]
+  },
+  {
+   "underlying": "F",
+   "spot": 12.53,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 12.5,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 11.5,
+       "CE": {
+        "price": 2.459,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 195.9,
+        "bid": null,
+        "ask": 4.9,
+        "last": 0.93,
+        "contract": "F261120C00011500",
+        "per_lot": 245.9,
+        "pct": 4.65
+       },
+       "PE": {
+        "price": 0.075,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 44.53,
+        "bid": 0.05,
+        "ask": 0.1,
+        "last": 0.11,
+        "contract": "F261120P00011500",
+        "per_lot": 7.5,
+        "pct": 0.14
+       },
+       "source": "CE: model (BS on chain IV); PE: real yfinance chain (mid)"
+      },
+      {
+       "offset": -1,
+       "strike": 12.0,
+       "CE": {
+        "price": 0.57,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 71.09,
+        "bid": 0.14,
+        "ask": 1.0,
+        "last": 0.65,
+        "contract": "F261120C00012000",
+        "per_lot": 57.0,
+        "pct": 1.08
+       },
+       "PE": {
+        "price": 0.145,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 48.44,
+        "bid": 0.03,
+        "ask": 0.26,
+        "last": 0.22,
+        "contract": "F261120P00012000",
+        "per_lot": 14.5,
+        "pct": 0.27
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 0,
+       "strike": 12.5,
+       "CE": {
+        "price": 1.36,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 133.2,
+        "bid": 0.04,
+        "ask": 2.68,
+        "last": 0.34,
+        "contract": "F261120C00012500",
+        "per_lot": 136.0,
+        "pct": 2.57
+       },
+       "PE": {
+        "price": 1.41,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 141.21,
+        "bid": 0.06,
+        "ask": 2.76,
+        "last": 0.47,
+        "contract": "F261120P00012500",
+        "per_lot": 141.0,
+        "pct": 2.67
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 1,
+       "strike": 13.0,
+       "CE": {
+        "price": 0.185,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 40.04,
+        "bid": 0.15,
+        "ask": 0.22,
+        "last": 0.16,
+        "contract": "F261120C00013000",
+        "per_lot": 18.5,
+        "pct": 0.35
+       },
+       "PE": {
+        "price": 1.895,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 160.55,
+        "bid": 0.19,
+        "ask": 3.6,
+        "last": 0.76,
+        "contract": "F261120P00013000",
+        "per_lot": 189.5,
+        "pct": 3.58
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 2,
+       "strike": 13.5,
+       "CE": {
+        "price": 0.055,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 39.65,
+        "bid": 0.01,
+        "ask": 0.1,
+        "last": 0.07,
+        "contract": "F261120C00013500",
+        "per_lot": 5.5,
+        "pct": 0.1
+       },
+       "PE": {
+        "price": 2.4359,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 184.18,
+        "bid": null,
+        "ask": 4.9,
+        "last": 1.24,
+        "contract": "F261120P00013500",
+        "per_lot": 243.59,
+        "pct": 4.61
+       },
+       "source": "CE: real yfinance chain (mid); PE: model (BS on chain IV)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 12.5,
+         "price": 1.36,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 13.5,
+         "price": 0.055,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "verdict": "n/a",
+       "why": "inconsistent prices: net debit 1.31 is outside 0..1 (strike gap)"
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 12.5,
+         "price": 1.41,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 11.5,
+         "price": 0.075,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "verdict": "n/a",
+       "why": "inconsistent prices: net debit 1.33 is outside 0..1 (strike gap)"
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 12.5,
+         "price": 1.36,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 12.5,
+         "price": 1.41,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 2.77,
+       "net_debit_lot": 277.0,
+       "entry_charges": 0.0,
+       "max_loss": 277.0,
+       "max_gain": null,
+       "breakevens": [
+        9.73,
+        15.27
+       ],
+       "long_leg_max": 141.0,
+       "long_leg_pct": 2.67,
+       "rule_10pct": "PASS",
+       "cash_need": 277.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 44.57
+    }
+   ]
+  },
+  {
+   "underlying": "PFE",
+   "spot": 29.88,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 30.0,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 29.0,
+       "CE": {
+        "price": 1.84,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 56.93,
+        "bid": 0.75,
+        "ask": 2.93,
+        "last": 1.0,
+        "contract": "PFE261120C00029000",
+        "per_lot": 184.0,
+        "pct": 3.48
+       },
+       "PE": {
+        "price": 1.45,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 78.08,
+        "bid": 0.15,
+        "ask": 2.75,
+        "last": 0.49,
+        "contract": "PFE261120P00029000",
+        "per_lot": 145.0,
+        "pct": 2.74
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": -1,
+       "strike": 29.5,
+       "CE": {
+        "price": 2.7037,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 103.71,
+        "bid": null,
+        "ask": 2.68,
+        "last": 0.8,
+        "contract": "PFE261120C00029500",
+        "per_lot": 270.37,
+        "pct": 5.11
+       },
+       "PE": {
+        "price": 1.4764,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 70.17,
+        "bid": null,
+        "ask": 3.0,
+        "last": 0.63,
+        "contract": "PFE261120P00029500",
+        "per_lot": 147.64,
+        "pct": 2.79
+       },
+       "source": "model (BS on chain IV)"
+      },
+      {
+       "offset": 0,
+       "strike": 30.0,
+       "CE": {
+        "price": 1.2732,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 54.1,
+        "bid": null,
+        "ask": 2.5,
+        "last": 0.5,
+        "contract": "PFE261120C00030000",
+        "per_lot": 127.32,
+        "pct": 2.41
+       },
+       "PE": {
+        "price": 1.6481,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 66.7,
+        "bid": null,
+        "ask": 3.35,
+        "last": 0.95,
+        "contract": "PFE261120P00030000",
+        "per_lot": 164.81,
+        "pct": 3.12
+       },
+       "source": "model (BS on chain IV)"
+      },
+      {
+       "offset": 1,
+       "strike": 30.5,
+       "CE": {
+        "price": 1.2004,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 60.21,
+        "bid": null,
+        "ask": 2.36,
+        "last": 0.33,
+        "contract": "PFE261120C00030500",
+        "per_lot": 120.04,
+        "pct": 2.27
+       },
+       "PE": {
+        "price": 1.9408,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 67.29,
+        "bid": null,
+        "ask": 1.97,
+        "last": 0.96,
+        "contract": "PFE261120P00030500",
+        "per_lot": 194.08,
+        "pct": 3.67
+       },
+       "source": "model (BS on chain IV)"
+      },
+      {
+       "offset": 2,
+       "strike": 31.0,
+       "CE": {
+        "price": 0.8178,
+        "src": "model (BS on chain IV)",
+        "iv_pct": 52.15,
+        "bid": null,
+        "ask": 0.8,
+        "last": 0.21,
+        "contract": "PFE261120C00031000",
+        "per_lot": 81.78,
+        "pct": 1.55
+       },
+       "PE": {
+        "price": 2.11,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 60.25,
+        "bid": 0.12,
+        "ask": 4.1,
+        "last": 1.35,
+        "contract": "PFE261120P00031000",
+        "per_lot": 211.0,
+        "pct": 3.99
+       },
+       "source": "CE: model (BS on chain IV); PE: real yfinance chain (mid)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 30.0,
+         "price": 1.2732,
+         "src": "model (BS on chain IV)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 31.0,
+         "price": 0.8178,
+         "src": "model (BS on chain IV)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.4554,
+       "net_debit_lot": 45.54,
+       "entry_charges": 0.02,
+       "max_loss": 45.56,
+       "max_gain": 54.44,
+       "breakevens": [
+        30.46
+       ],
+       "long_leg_max": 127.32,
+       "long_leg_pct": 2.41,
+       "rule_10pct": "PASS",
+       "cash_need": 127.32,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 4,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 30.0,
+         "price": 1.6481,
+         "src": "model (BS on chain IV)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 29.0,
+         "price": 1.45,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.1981,
+       "net_debit_lot": 19.81,
+       "entry_charges": 0.02,
+       "max_loss": 19.83,
+       "max_gain": 80.17,
+       "breakevens": [
+        29.8
+       ],
+       "long_leg_max": 164.81,
+       "long_leg_pct": 3.12,
+       "rule_10pct": "PASS",
+       "cash_need": 164.81,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 30.0,
+         "price": 1.2732,
+         "src": "model (BS on chain IV)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 30.0,
+         "price": 1.6481,
+         "src": "model (BS on chain IV)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 2.9213,
+       "net_debit_lot": 292.13,
+       "entry_charges": 0.0,
+       "max_loss": 292.13,
+       "max_gain": null,
+       "breakevens": [
+        27.08,
+        32.92
+       ],
+       "long_leg_max": 164.81,
+       "long_leg_pct": 3.12,
+       "rule_10pct": "PASS",
+       "cash_need": 292.13,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 26.02
+    }
+   ]
+  },
+  {
+   "underlying": "INTC",
+   "spot": 52.25,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 52.5,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 47.0,
+       "CE": {
+        "price": 9.425,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 161.91,
+        "bid": 7.85,
+        "ask": 11.0,
+        "last": 8.71,
+        "contract": "INTC261120C00047000",
+        "per_lot": 942.5,
+        "pct": 17.82
+       },
+       "PE": {
+        "price": 1.11,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 75.93,
+        "bid": 0.75,
+        "ask": 1.47,
+        "last": 1.71,
+        "contract": "INTC261120P00047000",
+        "per_lot": 111.0,
+        "pct": 2.1
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": -1,
+       "strike": 50.0,
+       "CE": {
+        "price": 6.975,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 140.28,
+        "bid": 6.3,
+        "ask": 7.65,
+        "last": 5.1,
+        "contract": "INTC261120C00050000",
+        "per_lot": 697.5,
+        "pct": 13.19
+       },
+       "PE": {
+        "price": 1.66,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 63.77,
+        "bid": 1.35,
+        "ask": 1.97,
+        "last": 2.9,
+        "contract": "INTC261120P00050000",
+        "per_lot": 166.0,
+        "pct": 3.14
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 0,
+       "strike": 52.5,
+       "CE": {
+        "price": 4.9,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 118.9,
+        "bid": 4.6,
+        "ask": 5.2,
+        "last": 3.77,
+        "contract": "INTC261120C00052500",
+        "per_lot": 490.0,
+        "pct": 9.26
+       },
+       "PE": {
+        "price": 2.6,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 58.4,
+        "bid": 2.1,
+        "ask": 3.1,
+        "last": 3.95,
+        "contract": "INTC261120P00052500",
+        "per_lot": 260.0,
+        "pct": 4.92
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 1,
+       "strike": 55.0,
+       "CE": {
+        "price": 3.575,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 111.52,
+        "bid": 3.2,
+        "ask": 3.95,
+        "last": 2.64,
+        "contract": "INTC261120C00055000",
+        "per_lot": 357.5,
+        "pct": 6.76
+       },
+       "PE": {
+        "price": 3.425,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 50.93,
+        "bid": 3.0,
+        "ask": 3.85,
+        "last": 5.32,
+        "contract": "INTC261120P00055000",
+        "per_lot": 342.5,
+        "pct": 6.47
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 2,
+       "strike": 57.5,
+       "CE": {
+        "price": 2.615,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 108.2,
+        "bid": 2.13,
+        "ask": 3.1,
+        "last": 1.8,
+        "contract": "INTC261120C00057500",
+        "per_lot": 261.5,
+        "pct": 4.94
+       },
+       "PE": {
+        "price": 4.95,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 43.85,
+        "bid": 4.3,
+        "ask": 5.6,
+        "last": 7.0,
+        "contract": "INTC261120P00057500",
+        "per_lot": 495.0,
+        "pct": 9.36
+       },
+       "source": "real yfinance chain (mid)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 52.5,
+         "price": 4.9,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 57.5,
+         "price": 2.615,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 2.285,
+       "net_debit_lot": 228.5,
+       "entry_charges": 0.02,
+       "max_loss": 228.52,
+       "max_gain": 271.48,
+       "breakevens": [
+        54.78
+       ],
+       "long_leg_max": 490.0,
+       "long_leg_pct": 9.26,
+       "rule_10pct": "PASS",
+       "cash_need": 490.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 1,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 52.5,
+         "price": 2.6,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 47.0,
+         "price": 1.11,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 1.49,
+       "net_debit_lot": 149.0,
+       "entry_charges": 0.02,
+       "max_loss": 149.02,
+       "max_gain": 400.98,
+       "breakevens": [
+        51.01
+       ],
+       "long_leg_max": 260.0,
+       "long_leg_pct": 4.92,
+       "rule_10pct": "PASS",
+       "cash_need": 260.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 2,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 52.5,
+         "price": 4.9,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 52.5,
+         "price": 2.6,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 7.5,
+       "net_debit_lot": 750.0,
+       "entry_charges": 0.0,
+       "max_loss": 750.0,
+       "max_gain": null,
+       "breakevens": [
+        45.0,
+        60.0
+       ],
+       "long_leg_max": 490.0,
+       "long_leg_pct": 9.26,
+       "rule_10pct": "PASS",
+       "cash_need": 750.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 1,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 91.51
+    }
+   ]
+  },
+  {
+   "underlying": "SOFI",
+   "spot": 16.04,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 16.0,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 15.0,
+       "CE": {
+        "price": 1.4481,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 1.53,
+        "contract": "SOFI261120C00015000",
+        "per_lot": 144.81,
+        "pct": 2.74
+       },
+       "PE": {
+        "price": 0.3834,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 0.42,
+        "contract": "SOFI261120P00015000",
+        "per_lot": 38.34,
+        "pct": 0.72
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": -1,
+       "strike": 15.5,
+       "CE": {
+        "price": 1.1332,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 1.15,
+        "contract": "SOFI261120C00015500",
+        "per_lot": 113.32,
+        "pct": 2.14
+       },
+       "PE": {
+        "price": 0.5678,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 0.6,
+        "contract": "SOFI261120P00015500",
+        "per_lot": 56.78,
+        "pct": 1.07
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 0,
+       "strike": 16.0,
+       "CE": {
+        "price": 0.8663,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 0.84,
+        "contract": "SOFI261120C00016000",
+        "per_lot": 86.63,
+        "pct": 1.64
+       },
+       "PE": {
+        "price": 0.8,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 0.8,
+        "contract": "SOFI261120P00016000",
+        "per_lot": 80.0,
+        "pct": 1.51
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 1,
+       "strike": 16.5,
+       "CE": {
+        "price": 0.6468,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 0.61,
+        "contract": "SOFI261120C00016500",
+        "per_lot": 64.68,
+        "pct": 1.22
+       },
+       "PE": {
+        "price": 1.0797,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 1.07,
+        "contract": "SOFI261120P00016500",
+        "per_lot": 107.97,
+        "pct": 2.04
+       },
+       "source": "model (BS on IV implied by last trades)"
+      },
+      {
+       "offset": 2,
+       "strike": 17.0,
+       "CE": {
+        "price": 0.4717,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 0.42,
+        "contract": "SOFI261120C00017000",
+        "per_lot": 47.17,
+        "pct": 0.89
+       },
+       "PE": {
+        "price": 1.4038,
+        "src": "model (BS on IV implied by last trades)",
+        "iv_pct": 64.37,
+        "bid": null,
+        "ask": null,
+        "last": 1.36,
+        "contract": "SOFI261120P00017000",
+        "per_lot": 140.38,
+        "pct": 2.65
+       },
+       "source": "model (BS on IV implied by last trades)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 16.0,
+         "price": 0.8663,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 17.0,
+         "price": 0.4717,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.3946,
+       "net_debit_lot": 39.46,
+       "entry_charges": 0.02,
+       "max_loss": 39.48,
+       "max_gain": 60.52,
+       "breakevens": [
+        16.39
+       ],
+       "long_leg_max": 86.63,
+       "long_leg_pct": 1.64,
+       "rule_10pct": "PASS",
+       "cash_need": 86.63,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 6,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 16.0,
+         "price": 0.8,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 15.0,
+         "price": 0.3834,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.4166,
+       "net_debit_lot": 41.66,
+       "entry_charges": 0.02,
+       "max_loss": 41.68,
+       "max_gain": 58.32,
+       "breakevens": [
+        15.58
+       ],
+       "long_leg_max": 80.0,
+       "long_leg_pct": 1.51,
+       "rule_10pct": "PASS",
+       "cash_need": 80.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 6,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 16.0,
+         "price": 0.8663,
+         "src": "model (BS on IV implied by last trades)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 16.0,
+         "price": 0.8,
+         "src": "model (BS on IV implied by last trades)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 1.6663,
+       "net_debit_lot": 166.63,
+       "entry_charges": 0.0,
+       "max_loss": 166.63,
+       "max_gain": null,
+       "breakevens": [
+        14.33,
+        17.67
+       ],
+       "long_leg_max": 86.63,
+       "long_leg_pct": 1.64,
+       "rule_10pct": "PASS",
+       "cash_need": 166.63,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 6,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 64.37
+    }
+   ]
+  },
+  {
+   "underlying": "BAC",
+   "spot": 49.76,
+   "spot_date": "2026-11-05",
+   "lot": 100,
+   "why": [],
+   "monthly": true,
+   "warnings": [],
+   "expiries": [
+    {
+     "label": "monthly",
+     "expiry": "2026-11-20",
+     "days": 15,
+     "atm": 50.0,
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 48.0,
+       "CE": {
+        "price": 2.54,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 95.12,
+        "bid": 0.38,
+        "ask": 4.7,
+        "last": 2.69,
+        "contract": "BAC261120C00048000",
+        "per_lot": 254.0,
+        "pct": 4.8
+       },
+       "PE": {
+        "price": 1.44,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 55.91,
+        "bid": 0.13,
+        "ask": 2.75,
+        "last": 0.6,
+        "contract": "BAC261120P00048000",
+        "per_lot": 144.0,
+        "pct": 2.72
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": -1,
+       "strike": 49.0,
+       "CE": {
+        "price": 2.2,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 90.43,
+        "bid": 0.4,
+        "ask": 4.0,
+        "last": 1.93,
+        "contract": "BAC261120C00049000",
+        "per_lot": 220.0,
+        "pct": 4.16
+       },
+       "PE": {
+        "price": 1.65,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 50.29,
+        "bid": 0.25,
+        "ask": 3.05,
+        "last": 0.9,
+        "contract": "BAC261120P00049000",
+        "per_lot": 165.0,
+        "pct": 3.12
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 0,
+       "strike": 50.0,
+       "CE": {
+        "price": 1.76,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 87.35,
+        "bid": 0.12,
+        "ask": 3.4,
+        "last": 1.26,
+        "contract": "BAC261120C00050000",
+        "per_lot": 176.0,
+        "pct": 3.33
+       },
+       "PE": {
+        "price": 1.835,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 83.84,
+        "bid": 0.17,
+        "ask": 3.5,
+        "last": 1.25,
+        "contract": "BAC261120P00050000",
+        "per_lot": 183.5,
+        "pct": 3.47
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 1,
+       "strike": 51.0,
+       "CE": {
+        "price": 1.54,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 51.61,
+        "bid": 0.14,
+        "ask": 2.94,
+        "last": 0.82,
+        "contract": "BAC261120C00051000",
+        "per_lot": 154.0,
+        "pct": 2.91
+       },
+       "PE": {
+        "price": 2.775,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 51.51,
+        "bid": 1.5,
+        "ask": 4.05,
+        "last": 1.81,
+        "contract": "BAC261120P00051000",
+        "per_lot": 277.5,
+        "pct": 5.25
+       },
+       "source": "real yfinance chain (mid)"
+      },
+      {
+       "offset": 2,
+       "strike": 52.0,
+       "CE": {
+        "price": 1.355,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 56.01,
+        "bid": 0.1,
+        "ask": 2.61,
+        "last": 0.51,
+        "contract": "BAC261120C00052000",
+        "per_lot": 135.5,
+        "pct": 2.56
+       },
+       "PE": {
+        "price": 2.73,
+        "src": "real yfinance chain (mid)",
+        "iv_pct": 85.6,
+        "bid": 0.71,
+        "ask": 4.75,
+        "last": 2.27,
+        "contract": "BAC261120P00052000",
+        "per_lot": 273.0,
+        "pct": 5.16
+       },
+       "source": "real yfinance chain (mid)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 50.0,
+         "price": 1.76,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 52.0,
+         "price": 1.355,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.405,
+       "net_debit_lot": 40.5,
+       "entry_charges": 0.02,
+       "max_loss": 40.52,
+       "max_gain": 159.48,
+       "breakevens": [
+        50.41
+       ],
+       "long_leg_max": 176.0,
+       "long_leg_pct": 3.33,
+       "rule_10pct": "PASS",
+       "cash_need": 176.0,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 3,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Bear put spread",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 50.0,
+         "price": 1.835,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 48.0,
+         "price": 1.44,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 0.395,
+       "net_debit_lot": 39.5,
+       "entry_charges": 0.02,
+       "max_loss": 39.52,
+       "max_gain": 160.48,
+       "breakevens": [
+        49.6
+       ],
+       "long_leg_max": 183.5,
+       "long_leg_pct": 3.47,
+       "rule_10pct": "PASS",
+       "cash_need": 183.5,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 2,
+       "verdict": "PASS",
+       "why": ""
+      },
+      {
+       "name": "Long straddle",
+       "expiry": "2026-11-20",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 50.0,
+         "price": 1.76,
+         "src": "real yfinance chain (mid)"
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 50.0,
+         "price": 1.835,
+         "src": "real yfinance chain (mid)"
+        }
+       ],
+       "units": 100,
+       "net_debit": 3.595,
+       "net_debit_lot": 359.5,
+       "entry_charges": 0.0,
+       "max_loss": 359.5,
+       "max_gain": null,
+       "breakevens": [
+        46.41,
+        53.59
+       ],
+       "long_leg_max": 183.5,
+       "long_leg_pct": 3.47,
+       "rule_10pct": "PASS",
+       "cash_need": 359.5,
+       "free_cash": "PASS",
+       "slots": "PASS",
+       "max_lots": 2,
+       "verdict": "PASS",
+       "why": ""
+      }
+     ],
+     "atm_iv_pct": 32.39
     }
    ]
   }
  ],
+ "reference": [
+  "SPY",
+  "QQQ"
+ ],
  "sources": [
-  "CE: model (BS on chain IV); PE: no quote",
   "CE: model (BS on chain IV); PE: real yfinance chain (mid)",
-  "CE: no quote; PE: model (BS on chain IV)",
   "CE: real yfinance chain (mid); PE: model (BS on chain IV)",
+  "model (BS on IV implied by last trades)",
   "model (BS on chain IV)",
   "real yfinance chain (mid)"
  ]

@@ -2,13 +2,6 @@
   "note": "Written by Claude on 2026-10-17. Fills at the first open after each decision_date. Bajaj Finance is deliberately dated 2026-11-19 (two weeks before the December RBI meeting). 2026-10-28: Waaree SELL added by the daily reviewer (post-event rule).",
   "orders": [
     {
-      "thesis": "bajaj-finance-rbi-december",
-      "side": "BUY",
-      "amount": 75000,
-      "decision_date": "2026-11-19",
-      "reason": "opening catalyst: positioned two weeks before the December RBI decision"
-    },
-    {
       "thesis": "crude-ongc-vs-hpcl",
       "leg": "ONGC",
       "side": "SELL",
@@ -21,6 +14,13 @@
       "side": "COVER",
       "decision_date": "2026-11-06",
       "reason": "post-event rule triggered: Brent below 15 Oct level for five sessions; close both legs together"
+    },
+    {
+      "thesis": "bajaj-finance-rbi-december",
+      "side": "BUY",
+      "amount": 75000,
+      "decision_date": "2026-11-19",
+      "reason": "opening catalyst: positioned two weeks before the December RBI decision"
     }
   ]
 }
