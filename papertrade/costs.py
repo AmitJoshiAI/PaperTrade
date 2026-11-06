@@ -20,7 +20,7 @@ Options (OPT):   brokerage Rs 20 flat per order; STT 0.15% of premium on the sel
                  GST 18% on (brokerage + txn + SEBI). On a long option exercised at expiry: STT 0.15% of the
                  intrinsic value (no other charge modelled). Turnover = premium x units.
                  STT rates verified 4 Nov 2026 (broker notes); exchange transaction charges NOT verified on NSE.
-US (USD):        us_charges(): zero commission; SEC fee 0.0000278 x sell notional; FINRA TAF $0.000166 per
+US (USD):        us_charges(): zero commission; SEC fee 0.0000206 x sell notional (verified sec.gov 6 Nov 2026); FINRA TAF $0.000166 per
                  share sold, max $8.30 per trade (options: $0.00279 per contract sold). VERIFY: both fees
                  are reset by the SEC/FINRA, usually once a year. FX: the day's USD/INR (fx.py).
 """
@@ -48,7 +48,7 @@ STT_OPT_SELL = 0.0015               # 0.15% of sell premium from 1 Apr 2026 (ver
 STT_OPT_EXERCISE = 0.0015           # 0.15% of intrinsic value on exercise (verified, same source)
 NSE_TXN_OPT = 0.0003553            # 0.03553% of premium: VERIFY against NSE (see docstring)
 STAMP_OPT_BUY = 0.00003
-US_SEC_FEE = 0.0000278              # x sell notional (USD). VERIFY on sec.gov (Section 31 fee rate)
+US_SEC_FEE = 0.0000206              # x sell notional (USD): $20.60 per million from 4 Apr 2026 (sec.gov fee rate advisory 2026-2, read 6 Nov 2026)
 US_FINRA_TAF_SHARE = 0.000166       # per share sold. VERIFY on finra.org
 US_FINRA_TAF_CAP = 8.30
 US_FINRA_TAF_CONTRACT = 0.00279     # per option contract sold

@@ -1,5 +1,14 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-06 - US SEC Section 31 fee 0.0000278 -> 0.0000206 (structural: wrong constant)
+
+- **Why**: the first weekly strategist review found the code carried the old $27.80 per million; the SEC
+  advisory for fiscal 2026 sets $20.60 per million from 4 April 2026. Read directly on sec.gov
+  (rules-regulations/fee-rate-advisories/2026-2) on 6 Nov 2026; the advisories index (updated 21 Aug 2026)
+  shows no newer Section 31 advisory. No past figure changes: the US sleeve has not traded.
+- **Revert**: if a later Section 31 advisory sets a different rate (the rate lasts until 60 days after the
+  fiscal 2027 appropriation is enacted).
+
 ## 2026-11-06 - US candidates: macro ETFs, PASS-only tables, pre-market pricing
 
 - **Why**: the 5 Nov review found the US 10% per-order limit (about $529) binding: one SPY / QQQ contract
