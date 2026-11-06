@@ -1,5 +1,14 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-07: Zerodha Kite Connect, data only (design)
+
+Decision: subscribe to Kite Connect on the user's own account and use it for DATA ONLY: option chains with
+depth, the broker's official open/close for a daily fill check against Yahoo, and basket margins. No order,
+modify or cancel call may exist in the code (test-enforced). Static IP not bought: SEBI's April 2026 rule
+needs it only for API order placement. Design, phases and the user's setup steps: KITE_SETUP.md. Phase 1
+changes no fill, mark, rule or prompt; it measures. Revert condition: if the fill check shows Yahoo and
+Zerodha opens within 5 bps on 20 trading days, phase 2 is not needed and the subscription can be dropped.
+
 ## 2026-11-06 - F&O candidates: event expiry when a catalyst falls after the current monthly expiry
 
 - **Why** (DEFERRED.md #12): the Bajaj Finance thesis is built around the RBI decision of 4 Dec 2026, but the
