@@ -38,6 +38,12 @@ jobs:
 
       - name: Run the daily cycle
         id: run
+        # Zerodha Kite Connect, DATA ONLY (KITE_SETUP.md): the token is written each weekday morning by
+        # tools/kite_login.py on the user's PC. Missing or expired: the run falls back to Yahoo + the NSE
+        # scrape and the journal says "Kite: no token". Only this step sees the two secrets.
+        env:
+          KITE_API_KEY: ${{ secrets.KITE_API_KEY }}
+          KITE_ACCESS_TOKEN: ${{ secrets.KITE_ACCESS_TOKEN }}
         # Exit code 3 = Yahoo's prices end BEFORE the last recorded date (papertrade/staleness.py): the run
         # wrote nothing, so this is a clean skip, not a failure. Any other non-zero code fails the job here,
         # and the commit step below (which runs only on success) never runs: no partial commit.

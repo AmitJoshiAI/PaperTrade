@@ -197,6 +197,10 @@ def run_day(do_update: bool = True) -> dict:
         log.exception("Thesis sleeve step failed; the momentum sleeve run completed and was saved.")
         thesis_section = ["## Thesis sleeve", "", "**The thesis sleeve step FAILED this run** (see the run log). "
                           "The momentum sleeve above is unaffected."]
+    # Fill check, Yahoo vs Zerodha (fillcheck.py, KITE_SETUP.md phase 1): measurement only, after the momentum
+    # and thesis fills; fills are unchanged. Without a Kite token it is one "Kite: no token" journal line.
+    from . import fillcheck
+    fill_check = fillcheck.run(today, pf, shown_fills, thesis_out, prices, do_update)
     # India F&O and US sleeves: two more separate books, run after the thesis sleeve, each isolated the same way.
     fno_out, us_out, us_skipped = None, None, None
     try:
@@ -231,7 +235,7 @@ def run_day(do_update: bool = True) -> dict:
         thesis_section += ["", "## US sleeve", "", "**The US sleeve step FAILED this run** (see the run log)."]
     thesis_section += [""] + combined_lines(eq_row, thesis_out, fno_out, us_out)
     report_path = review.write_daily_review(pf, prices, shown_fills, proposals, dropped=prices.attrs.get("dropped", []),
-                                            extra_sections=thesis_section)
+                                            extra_sections=fill_check + [""] + thesis_section)
     # Dashboard export is read-only and runs after state is saved. A failure here must not fail the run:
     # in GitHub Actions a failed run is not committed, and the fills above would be lost.
     try:

@@ -55,6 +55,7 @@ TIMEOUT = 20
 PAUSE = 0.35                     # seconds between NSE calls (be polite; NSE rate-limits bursts)
 
 CHAIN_LABEL = "real NSE chain (mid)"
+ZERODHA_CHAIN_LABEL = "real Zerodha chain (mid)"   # a snapshot with source "zerodha" (papertrade/kite.py)
 CHAIN_IV_LABEL = "model (BS on NSE chain IV)"
 MODEL_LABEL = "model (BS on VIX / realised vol)"
 
@@ -110,6 +111,42 @@ def event_expiry(event_day: str, weekday: int, listed=None) -> str:
 def nearest_after(after: str, listed) -> str | None:
     later = sorted(e for e in (listed or []) if e > after)
     return later[0] if later else None
+
+
+def is_zerodha(snap: dict | None) -> bool:
+    return bool(snap) and snap.get("source") == "zerodha"
+
+
+def chain_label(snap: dict | None) -> str:
+    """The pricing label for a mid taken from this snapshot: Zerodha's quotes or NSE's scrape."""
+    return ZERODHA_CHAIN_LABEL if is_zerodha(snap) else CHAIN_LABEL
+
+
+def source_name(snap: dict | None) -> str:
+    """'Zerodha' or 'NSE', for journal text such as "NSE chain IV 14.20%"."""
+    return "Zerodha" if is_zerodha(snap) else "NSE"
+
+
+def expiry_picker(sym: str, sp: dict, market_day: str, weekly=(), extra_expiries: dict | None = None,
+                  event_dates: dict | None = None):
+    """pick(listed ISO expiries) -> the ISO expiries to fetch for one underlying: the current monthly expiry,
+    the nearest listed expiry for the symbols in `weekly`, any listed expiry in extra_expiries[sym] (open
+    positions), and the event expiry (event_expiry) of each date in event_dates[sym]. Shared by the NSE
+    refresh and the Zerodha snapshot (fno.load_chains) so both fetch the same expiries."""
+    extra_expiries, event_dates = extra_expiries or {}, event_dates or {}
+
+    def pick(listed):
+        want = {monthly_after(market_day, sp["weekday"], listed)}
+        if sym in weekly:
+            n = nearest_after(market_day, listed)
+            if n:
+                want.add(n)
+        want |= {e for e in extra_expiries.get(sym, ()) if e in listed}
+        # only a listed expiry: an event months out maps to a date NSE has not opened yet, and asking v3
+        # for it would fail the whole symbol (its current monthly chain too)
+        want |= {e for d in event_dates.get(sym, ()) if (e := event_expiry(d, sp["weekday"], listed)) in listed}
+        return sorted(want)
+    return pick
 
 
 # ---------- the session ----------
@@ -328,33 +365,23 @@ def lot_check(client: NseClient, specs: dict, market_day: str) -> list[str]:
 
 
 def refresh(specs: dict, market_day: str, extra_expiries: dict | None = None, weekly=(),
-            lot_table: dict | None = None, event_dates: dict | None = None) -> tuple[dict, list[str]]:
+            lot_table: dict | None = None, event_dates: dict | None = None, no_save=()) -> tuple[dict, list[str]]:
     """Fetch and cache a snapshot for each underlying. specs: {SYM: {"kind", "weekday", "lot"}}. Fetches the
     current monthly expiry, the nearest listed expiry for the symbols in `weekly`, any expiry in
     extra_expiries[SYM] (open positions), and the event expiry (event_expiry) of each ISO date in
     event_dates[SYM] (catalysts after the current monthly expiry, candidates.fno_event_dates). The event
-    expiry is resolved here, against NSE's own list, because a holiday can move it. Returns ({SYM: snapshot},
-    journal notes). Never raises."""
+    expiry is resolved here, against NSE's own list, because a holiday can move it. Symbols in `no_save` are
+    fetched but not written to state/chains/ (the Zerodha snapshot of the same symbol owns the file that day).
+    Returns ({SYM: snapshot}, journal notes). Never raises."""
     client, snaps, notes = NseClient(), {}, []
     extra_expiries, event_dates = extra_expiries or {}, event_dates or {}
     for sym, sp in specs.items():
         old = load(sym)
-
-        def pick(listed, sym=sym, sp=sp):
-            want = {monthly_after(market_day, sp["weekday"], listed)}
-            if sym in weekly:
-                n = nearest_after(market_day, listed)
-                if n:
-                    want.add(n)
-            want |= {e for e in extra_expiries.get(sym, ()) if e in listed}
-            # only a listed expiry: an event months out maps to a date NSE has not opened yet, and asking v3
-            # for it would fail the whole symbol (its current monthly chain too)
-            want |= {e for d in event_dates.get(sym, ()) if (e := event_expiry(d, sp["weekday"], listed)) in listed}
-            return sorted(want)
-
+        pick = expiry_picker(sym, sp, market_day, weekly, extra_expiries, event_dates)
         try:
             snap = fetch_snapshot(client, sym, sp["kind"], pick)
-            save(snap, old)
+            if sym not in no_save:
+                save(snap, old)
             snaps[sym] = snap
             if snap["date"] != market_day:
                 notes.append(f"NSE chain {sym}: timestamp {snap['timestamp']} is not the market date {market_day}; "

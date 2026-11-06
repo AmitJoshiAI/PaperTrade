@@ -91,6 +91,8 @@ papertrade/        the package
   fno.py           India F&O sleeve: futures (carry model) and options (NSE chain mid / Black-Scholes), expiry and roll
   chains.py        real NSE option chains (curl_cffi), cache in state/chains/, lot-size check vs NSE
   candidates.py    journal "## F&O candidates" / "## US candidates": premiums, structures, PASS/FAIL
+  kite.py          Zerodha Kite Connect, READ ONLY (KITE_SETUP.md): chains, official day candles, basket margin
+  fillcheck.py     journal "### Fill check (Yahoo vs Zerodha)" and state/fill_check.csv (needs a Kite token)
   us.py            US sleeve: stocks/ETFs and options from real Yahoo chains
   engine.py        the daily cycle
   review.py        journal writer
@@ -99,7 +101,7 @@ papertrade/        the package
   cli.py           command line
 state/             portfolio.json, trades.csv, equity_curve.csv; thesis_portfolio.json, thesis_trades.csv,
                    thesis_equity_curve.csv (thesis sleeve); fno_portfolio.json, fno_trades.csv, fno_equity_curve.csv;
-                   us_portfolio.json, us_trades.csv, us_equity_curve.csv
+                   us_portfolio.json, us_trades.csv, us_equity_curve.csv; fill_check.csv (Yahoo vs Zerodha)
 decisions/         pending_orders.json (next session's orders), executed_YYYY-MM-DD.json (what filled);
                    thesis_orders.json, thesis_executed_YYYY-MM-DD.json (thesis sleeve); fno_orders.json,
                    us_orders.json and their fno_ / us_executed_YYYY-MM-DD.json
@@ -115,6 +117,10 @@ docs/              index.html (mobile dashboard), data.json (written by run/expo
                    the scanner), .nojekyll
 .github/workflows/ daily.yml (scheduled cloud run), scanner.yml (catalyst scanner, every 30 min)
 requirements.txt   pinned dependencies
+tools/kite_login.py  daily Kite Connect login on the user's PC -> GitHub secret KITE_ACCESS_TOKEN (KITE_SETUP.md)
+tests/test_no_orders.py  guard: fails if an order method name appears in papertrade/ or tools/
+                   (python -m unittest discover -s tests)
+KITE_SETUP.md      Zerodha Kite Connect for data only: design, phases, the user's one-time setup steps
 DAILY.md           the daily routine
 THESIS_REVIEW.md   the weekly thesis-sleeve review
 RISK_LIMITS.md     every limit of every sleeve in one place, and what is not modelled

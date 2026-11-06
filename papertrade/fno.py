@@ -205,10 +205,10 @@ class FnoMarket:
                 snap = chains.usable(self.today.get(sp["name"]), day)
                 iv = chains.strike_iv(snap, expiry, strike, kind) if snap else None
                 if iv:
-                    return iv, f"NSE chain IV {iv*100:.2f}% at this strike (close of {day})"
+                    return iv, f"{chains.source_name(snap)} chain IV {iv*100:.2f}% at this strike (close of {day})"
                 iv = chains.atm_iv(snap, expiry if snap and expiry in snap.get("chains", {}) else None) if snap else None
                 if iv:
-                    return iv, f"NSE chain ATM IV {iv*100:.2f}% (close of {day})"
+                    return iv, f"{chains.source_name(snap)} chain ATM IV {iv*100:.2f}% (close of {day})"
         return self.model_sigma(sp, day, at_open)
 
     def model_sigma(self, sp: dict, day: str, at_open: bool) -> tuple[float, str]:
@@ -323,8 +323,8 @@ class FnoMarket:
             q = chains.quote(snap, p.expiry, p.strike, p.kind) if snap else None
             m = chains.mid(q)
             if m is not None:
-                p.mark, p.pricing = m, (f"{chains.CHAIN_LABEL}: bid {q['bid']:,.2f} / ask {q['ask']:,.2f} "
-                                        f"(NSE {snap['timestamp']})")
+                p.mark, p.pricing = m, (f"{chains.chain_label(snap)}: bid {q['bid']:,.2f} / ask {q['ask']:,.2f} "
+                                        f"({chains.source_name(snap)} {snap['timestamp']})")
                 p.iv = round(q["iv"] / 100, 4) if q.get("iv", 0) > 0 else p.iv
             else:
                 px, how, sig, _ = self.option_price(sp, p.kind, p.strike, p.expiry, day, at_open=False)
@@ -382,7 +382,7 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     prices = load_prices(main_prices, tickers, do_update)
     warnings = [f"No price data for {t}" for t in prices.attrs["dropped"]]
     try:
-        prior, today, listed, chain_notes = load_chains(book, queue["orders"], market_day, do_update)
+        prior, today, listed, chain_notes = load_chains(book, queue["orders"], market_day, do_update, prices)
     except Exception as e:                 # fail soft: the sleeve runs on the model
         log.exception("NSE option chains step failed")
         prior, today, listed, chain_notes = {}, {}, {}, [f"NSE option chains step failed ({e}); model prices only"]
@@ -419,7 +419,7 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     cands = None
     try:
         from .candidates import build_fno, save as save_cands
-        cands = build_fno(market, book, market_day, chain_notes)
+        cands = build_fno(market, book, market_day, chain_notes, use_kite=do_update)
         save_cands(config.FNO_CANDIDATES_FILE, cands)
     except Exception as e:
         log.exception("F&O candidates failed")
@@ -440,12 +440,20 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
                 orders=keep, spots=spots, candidates=cands)
 
 
-def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool) -> tuple[dict, dict, dict, list[str]]:
+def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool,
+                prices: pd.DataFrame | None = None) -> tuple[dict, dict, dict, list[str]]:
     """(prior, today, listed, notes). listed = NSE's listed expiry dates per underlying from the newest
     snapshot of any date (an expiry list does not go stale with the quotes). prior = each underlying's
     cached chain BEFORE today's fetch (fill IVs, no look-ahead); today = the snapshots whose timestamp is the market date (marks, candidates). An online run
     fetches the candidates' and the open positions' underlyings from NSE (chains.refresh); offline reads the
-    cache only."""
+    cache only.
+
+    Zerodha (papertrade/kite.py, KITE_SETUP.md phase 1): when kite.available(), each underlying's snapshot is
+    taken from Kite first, for the same expiries the NSE path picks (chains.expiry_picker on Kite's listed
+    expiries), and saved to state/chains/ (source "zerodha", marks labelled chains.ZERODHA_CHAIN_LABEL). The
+    NSE scrape still runs; it owns the file only where Kite failed or is not of the market date, and on days
+    both exist the journal compares their ATM mids per expiry. No token or any Kite error: the NSE path
+    exactly as before, plus a "Kite: <why>, NSE scrape used" line."""
     from .candidates import fno_candidate_symbols, fno_event_dates, fno_events_for
     syms = list(fno_candidate_symbols()[0])
     for p in book.positions.values():
@@ -467,8 +475,14 @@ def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool) -
         table = {u: dict(lot=spec(u)["lot"]) for u in list(config.FNO_INDEX) + list(config.FNO_STOCKS)}
         events = fno_event_dates(market_day)      # the candidates' event expiries, so they get real quotes
         ev_dates = {u: [ev["date"] for ev in fno_events_for(u, events)] for u in syms}
-        fetched, notes = chains.refresh(specs, market_day, extra, weekly=set(config.FNO_WEEKLY_INDICES), lot_table=table,
-                                        event_dates=ev_dates)
+        weekly = set(config.FNO_WEEKLY_INDICES)
+        kite_snaps, kite_notes = _kite_chains(specs, market_day, extra, weekly, ev_dates, prices)
+        fetched, notes = chains.refresh(specs, market_day, extra, weekly=weekly, lot_table=table,
+                                        event_dates=ev_dates, no_save=set(kite_snaps))
+        kite_notes += _compare_chains(kite_snaps, fetched)
+        for u, ks in kite_snaps.items():
+            chains.save(ks, prior.get(u))           # the Zerodha snapshot owns state/chains/<SYM>.json today
+        fetched = {**fetched, **kite_snaps}
         snaps = {**prior, **fetched}
     else:
         snaps, notes = prior, ["offline run: no NSE chain fetch; cached chains are used only if they are of the market date"]
@@ -478,7 +492,88 @@ def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool) -
         got = sorted(today)
         notes.insert(0, f"NSE option chains for {market_day}: " + (", ".join(got) if got else "none")
                      + f" of {len(syms)} ({', '.join(syms)})")
+        notes[1:1] = kite_notes
     return prior, today, listed, notes
+
+
+def _spot(prices: pd.DataFrame | None, ticker: str, market_day: str) -> float | None:
+    if prices is None or not len(prices):
+        return None
+    c = prices[(prices["symbol"] == ticker) & (prices["date"] <= pd.Timestamp(market_day))].dropna(subset=["close"])
+    return float(c.sort_values("date")["close"].iloc[-1]) if len(c) else None
+
+
+def _kite_chains(specs: dict, market_day: str, extra: dict, weekly, ev_dates: dict, prices) -> tuple[dict, list[str]]:
+    """{SYM: Zerodha snapshot} for the underlyings Kite could price today, and journal notes. Never raises.
+    A snapshot is kept only if it is of the market date and has at least one two-sided quote (after the
+    close Kite may show an empty book; then the NSE scrape is the better source that day)."""
+    from . import kite
+    if not kite.available():
+        return {}, [f"Kite: {kite.reason}, NSE scrape used"]
+    out, notes = {}, []
+    try:
+        nfo = kite.instruments("NFO")
+    except Exception as e:
+        return {}, [f"Kite: instruments dump failed ({type(e).__name__}: {e}), NSE scrape used"]
+    for u, sp in specs.items():
+        try:
+            opt = nfo[(nfo["name"] == u) & nfo["instrument_type"].isin(["CE", "PE"])]
+            listed = sorted({e for e in opt["expiry"] if e})
+            if not listed:
+                raise RuntimeError("no options listed on Kite")
+            S = _spot(prices, spec(u)["yahoo"], market_day)
+            if not S:
+                raise RuntimeError("no Yahoo close to centre the strikes on")
+            pick = chains.expiry_picker(u, sp, market_day, weekly, extra, ev_dates)
+            snap = kite.chain_snapshot(u, sp["kind"], pick(listed), S)
+            if snap["date"] != market_day:
+                raise RuntimeError(f"quotes are of {snap['date']} ({snap['timestamp']}), not the market date {market_day}")
+            two = sum(1 for rows in snap["chains"].values() for r in rows.values() for q in r.values()
+                      if chains.mid(q) is not None)
+            if not two:
+                raise RuntimeError("no two-sided quote in the book")
+            out[u] = snap
+        except Exception as e:
+            notes.append(f"Kite: {u} chain not used ({e}); NSE scrape for it")
+            log.warning("Kite chain %s: %s", u, e)
+    if out:
+        notes.insert(0, f"Chains: real Zerodha ({len(out)} underlyings: {', '.join(out)})")
+    return out, notes
+
+
+def _atm_mids(snap: dict, expiry: str, S: float):
+    rows = (snap.get("chains") or {}).get(expiry) or {}
+    if not rows:
+        return None
+    k = min(rows, key=lambda x: abs(float(x) - S))
+    r = rows[k]
+    return k, chains.mid(r.get("CE")), chains.mid(r.get("PE"))
+
+
+def _compare_chains(kite_snaps: dict, nse_snaps: dict) -> list[str]:
+    """One journal line per underlying with both a Zerodha and an NSE snapshot of the same date: the ATM
+    call and put mid per common expiry from each source (ATM = the strike nearest Zerodha's underlying)."""
+    out = []
+    fmt = lambda v: "n/a" if v is None else f"{v:,.2f}"
+    for u, ks in kite_snaps.items():
+        ns = nse_snaps.get(u)
+        if not ns or ns.get("date") != ks.get("date"):
+            continue
+        S = ks.get("underlying_value") or ns.get("underlying_value") or 0
+        parts = []
+        for e in sorted(set(ks.get("chains", {})) & set(ns.get("chains", {}))):
+            a, b = _atm_mids(ks, e, S), _atm_mids(ns, e, S)
+            if not a or not b or a[0] != b[0]:
+                continue
+            cells = []
+            for side, x, y in (("CE", a[1], b[1]), ("PE", a[2], b[2])):
+                d = f" (diff {x - y:+,.2f})" if x is not None and y is not None else ""
+                cells.append(f"{side} {fmt(x)} vs {fmt(y)}{d}")
+            parts.append(f"{e} ATM {a[0]}: " + ", ".join(cells))
+        if parts:
+            out.append(f"Chain check {u}, mid Zerodha vs NSE (Zerodha {ks['timestamp']}, NSE {ns['timestamp']}): "
+                       + "; ".join(parts))
+    return out
 
 
 # ---------- views ----------

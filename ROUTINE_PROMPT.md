@@ -110,7 +110,7 @@ The repository is checked out for you. Work on branch main. Steps:
 
       Notes:
       - India options and futures are priced by a MODEL (Black-Scholes on India VIX / carry) unless the
-        candidates section says "real NSE chain". Treat model P&L as an estimate and say so.
+        candidates section says "real NSE chain" or "real Zerodha chain". Treat model P&L as an estimate and say so.
       - At Rs 5,00,000 one NIFTY or BANKNIFTY future needs about Rs 1.8 lakh of margin, far above the
         10% per-order limit (about Rs 50,000), so index futures (and most stock futures) are rejected.
         Do not queue them. Long options and covered spreads fit.

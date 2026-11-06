@@ -15,6 +15,8 @@ strikes, the same structures per contract (x100).
 
 Every price says where it came from:
   "real NSE chain (mid)" / "real yfinance chain (mid)"   mid of a two-sided bid/ask at the close
+  "real Zerodha chain (mid)"                             the same from Kite Connect quotes (kite.py), when a
+                                                         token is present (KITE_SETUP.md)
   "model (BS on NSE chain IV)" / "model (BS on chain IV)" Black-Scholes with the chain's implied vol (the
                                                          strike's own, else the ATM IV): one-sided quote
   "model (BS on VIX / realised vol)"                     no chain today: India VIX (index) or 1.5x 30-day
@@ -210,8 +212,10 @@ def _src_text(r: dict) -> str:
 
 
 # ---------- India ----------
-def build_fno(market, book, market_day: str, chain_notes=()) -> dict:
-    """Candidates from the F&O sleeve's market (fno.FnoMarket, after the day's fetch) and book."""
+def build_fno(market, book, market_day: str, chain_notes=(), use_kite: bool = False) -> dict:
+    """Candidates from the F&O sleeve's market (fno.FnoMarket, after the day's fetch) and book. use_kite (an
+    online run): when kite.available(), each PASS structure gets "zerodha_margin", Kite's basket margin for
+    its legs (read only), shown as a "Zerodha margin" column; otherwise a "Kite: <why>" note."""
     from .fno import spec
     eq, cash = book.equity(), book.cash
     cap = config.DERIV_MAX_ORDER_RISK_PCT * eq
@@ -238,7 +242,31 @@ def build_fno(market, book, market_day: str, chain_notes=()) -> dict:
             out["underlyings"].append(dict(underlying=u, error=str(e), why=why.get(u, [])))
     srcs = {r.get("source") for x in out["underlyings"] for ex in x.get("expiries", []) for r in ex.get("rows", [])}
     out["sources"] = sorted(s for s in srcs if s)
+    _zerodha_margins(out, use_kite)
     return out
+
+
+def _zerodha_margins(out: dict, use_kite: bool) -> None:
+    from . import kite
+    if not use_kite:
+        out["notes"].append("Kite: not used (offline run); no Zerodha margin column")
+        return
+    if not kite.available():
+        out["notes"].append(f"Kite: {kite.reason}; no Zerodha margin column")
+        return
+    out["zerodha_margin"] = True
+    missing = 0
+    for x in out["underlyings"]:
+        for ex in x.get("expiries", []):
+            for st in ex.get("structures", []):
+                if st.get("verdict") != "PASS":
+                    continue
+                legs = [dict(underlying=x["underlying"], expiry=ex["expiry"], strike=l["strike"], right=l["right"],
+                             side=l["side"], units=st["units"]) for l in st["legs"]]
+                st["zerodha_margin"] = kite.basket_margin(legs)
+                missing += st["zerodha_margin"] is None
+    if missing:
+        out["notes"].append(f"Kite: basket margin not returned for {missing} structure(s) (blank in the Zerodha margin column)")
 
 
 def _fno_one(market, sp, market_day, eq, cash, cap, free, breaker, why, events=()) -> dict:
@@ -274,7 +302,7 @@ def _fno_one(market, sp, market_day, eq, cash, cap, free, breaker, why, events=(
                chain=dict(timestamp=snap["timestamp"], underlying=snap.get("underlying_value"), source=snap.get("source"))
                if snap else None, warnings=unlisted, expiries=[])
     if snap and snap.get("underlying_value") and abs(snap["underlying_value"] / S - 1) > 0.005:
-        res["warnings"].append(f"NSE chain underlying {snap['underlying_value']:,.2f} differs from the Yahoo close "
+        res["warnings"].append(f"{chains.source_name(snap)} chain underlying {snap['underlying_value']:,.2f} differs from the Yahoo close "
                                f"{S:,.2f} by more than 0.5%")
     for label, e in exps:
         t = years_to(e, market_day)
@@ -292,7 +320,7 @@ def _fno_one(market, sp, market_day, eq, cash, cap, free, breaker, why, events=(
                 q = chains.quote(snap, e, K, right) if has_chain else None
                 m = chains.mid(q)
                 if m is not None:
-                    price, src, iv = m, chains.CHAIN_LABEL, (q["iv"] / 100 if q.get("iv", 0) > 0 else None)
+                    price, src, iv = m, chains.chain_label(snap), (q["iv"] / 100 if q.get("iv", 0) > 0 else None)
                 else:
                     iv = (chains.strike_iv(snap, e, K, right) or chains.atm_iv(snap, e, S)) if has_chain else None
                     if iv:
@@ -504,7 +532,8 @@ def _lines_common(c: dict, ccy: str, unit_word: str) -> list[str]:
         ch = x.get("chain")
         sp = f"Spot {x['spot']:,.2f} (Yahoo close {x['spot_date']})"
         if ch:
-            sp += f"; NSE chain underlying {ch['underlying']:,.2f} at {ch['timestamp']} ({ch['source']})"
+            sp += (f"; {'Zerodha' if ch['source'] == 'zerodha' else 'NSE'} chain underlying {ch['underlying']:,.2f} "
+                   f"at {ch['timestamp']} ({ch['source']})")
         elif ccy == "INR":
             sp += "; no NSE chain of this date (model prices)"
         lines += [sp + ".", ""]
@@ -540,16 +569,18 @@ def _lines_common(c: dict, ccy: str, unit_word: str) -> list[str]:
                 lines.append(f"| {_k(r['strike'])} ({tag}) | {cells(ce)} | {cells(pe)} | {r['source']} |")
             if hidden:
                 lines.append(f"\n{hidden} strike(s) of ATM-2..ATM+2 omitted: both premiums above the {_m(cap, ccy)} limit.")
+            zm = bool(c.get("zerodha_margin"))       # Kite token present: Kite's basket margin per structure
             lines += ["", f"| Structure (1 {unit_word}) | Legs: put these in the order | Net debit | Max loss | Max gain | "
-                          "Breakeven | 10% rule (long leg) | Free cash | Verdict |",
-                      "|---|---|---|---|---|---|---|---|---|"]
+                          "Breakeven | 10% rule (long leg) | Free cash | Verdict |" + (" Zerodha margin |" if zm else ""),
+                      "|---|---|---|---|---|---|---|---|---|" + ("---|" if zm else "")]
             for st in passing:
                 mg = "unlimited" if st["max_gain"] is None else _m(st["max_gain"], ccy)
                 be = " / ".join(_k(v) for v in st["breakevens"])
                 v = f"PASS (up to {st['max_lots']} {unit_word}{'' if st['max_lots'] == 1 else 's'})"
+                zc = (f" {_m(st['zerodha_margin'], ccy) if st.get('zerodha_margin') is not None else ''} |" if zm else "")
                 lines.append(f"| {st['name']} | {_legs_text(st, ccy == 'USD')} | {_m(st['net_debit_lot'], ccy)} | {_m(st['max_loss'], ccy)} | {mg} | "
                              f"{be} | {_m(st['long_leg_max'], ccy)} = {st['long_leg_pct']:.1f}% {st['rule_10pct']} | "
-                             f"needs {_m(st['cash_need'], ccy)} {st['free_cash']} | {v} |")
+                             f"needs {_m(st['cash_need'], ccy)} {st['free_cash']} | {v} |" + zc)
             fails = [st for st in ex["structures"] if st.get("verdict") != "PASS"]
             if fails:
                 lines += [""] + [f"- {_fail_line(st)}" for st in fails]
@@ -575,7 +606,11 @@ def fno_lines(c: dict | None) -> list[str]:
               "the fill-day open). PASS/FAIL mirrors the engine's checks: each long leg's premium <= 10% of equity "
               "(the short leg of a debit spread is covered, margin 0), free cash covers the long premiums plus entry "
               "charges, the legs fit the free position slots. Max loss includes entry charges, not exit charges. Only what "
-              "passes is tabled; each failing structure is one line.", ""]
+              "passes is tabled; each failing structure is one line."
+              + (" **real Zerodha chain (mid)** = the same mid from Zerodha Kite Connect quotes (IV solved from the mid); "
+                 "**Zerodha margin** = Kite's basket margin for the structure's legs (the broker's own number, read only; "
+                 "the sleeve's own risk check above is unchanged)."
+                 if (c.get("zerodha_margin") or chains.ZERODHA_CHAIN_LABEL in " ".join(c.get("sources") or [])) else ""), ""]
     lines += [f"- {n}" for n in c.get("notes", [])]
     if c.get("notes"):
         lines.append("")

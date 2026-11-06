@@ -858,7 +858,7 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     if held_without:
         warnings.append(f"Held with no open thesis file: {', '.join(held_without)}. Write or reopen the thesis.")
     return dict(date=market_day, pf=pf, theses=theses, last=last, closes=closes, fills=fills, notes=notes,
-                hits=hits, warnings=warnings, equity=eq_row, orders=load_orders()["orders"])
+                hits=hits, warnings=warnings, equity=eq_row, orders=load_orders()["orders"], prices=prices)
 
 
 # ---------- views shared by the journal and the dashboard ----------
