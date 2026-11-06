@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-06 09:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via nse_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
+Generated 2026-11-06 11:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -15,7 +15,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 13
 - Alert id: 25dda475232b
-- Second-order candidates: 
+- Second-order candidates: False match: multi-company results-day live blog; no single-company mechanism. Single-company items are noted under their own alerts.
 
 ## 2. [13 HIGH] Q2 Results Today Highlights: M&M, NBCC, IPCA Lab, Bharat Forge, LG Electronics, Uno Minda & Amagi Media Q2 profit up, Samvardhana Motherson profit down q-o-q, Bharti Airtel, LIC, Titan, ONGC, Britannia, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results
 
@@ -27,7 +27,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 13
 - Alert id: 2dbd34ab4f1a
-- Second-order candidates: 
+- Second-order candidates: False match: round-up of many results (same blog family as 25dda475232b); no single-company mechanism.
 
 ## 3. [13 HIGH] Q2 Results Today Live: M&M, NBCC, IPCA Lab, Bharat Forge, LG Electronics, Uno Minda & Amagi Media Q2 profit up, Samvardhana Motherson profit down q-o-q, Bharti Airtel, LIC, Titan, ONGC, Britannia, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results
 
@@ -39,7 +39,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 13
 - Alert id: 758a8374fe62
-- Second-order candidates: 
+- Second-order candidates: False match: earlier edition of the multi-company results live blog (see 25dda475232b); no single-company mechanism.
 
 ## 4. [13 HIGH] Q2 Results Today Live: M&M, IPCA Lab, Bharat Forge, LG Electronics, Uno Minda & Amagi Media Q2 profit up, Bharti Airtel, LIC, Titan, ONGC, Samvardhana, Britannia, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results
 
@@ -87,7 +87,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 10
 - Alert id: ab5c743a718d
-- Second-order candidates: 
+- Second-order candidates: Winner: Adani Ports (ADANIPORTS) - buys a Europe-based oil/liquids tank-storage terminal operator, extending its ports-and-logistics reach beyond India; the deal is a strategic add, value depends on price and funding, which the filing headline does not state. / Losers: none clear - no listed Indian peer loses a contract because of an overseas acquisition; the real risk sits with Adani Ports itself (leverage if debt-funded). / Catalyst: surprise - an undated board-level acquisition agreement; next dated events are regulatory approvals and closing, not yet announced. / Thesis fit: none (price and funding terms not available, so no thesis drafted)
 
 ## 8. [9 HIGH] Oil and Natural Gas Corporation Ltd: Integrated Financial Results For The Quarter And Half Year Ended 30.09.2026.
 
@@ -99,7 +99,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 9
 - Alert id: 06a508a7dcb1
-- Second-order candidates: 
+- Second-order candidates: Winner: ONGC - higher realised crude and gas prices flow straight into upstream profit, the same mechanism as the open ONGC leg; the board also approved a dividend. / Losers: HINDPETRO (HPCL) - buys crude in dollars and cannot raise pump prices quickly, so the same price rise that lifts ONGC squeezes refiner-marketer margin; the print itself says nothing new about HPCL, whose own results are the next check. / Catalyst: scheduled, already out - Q2 results 2026-11-05; thesis time-box runs to 2026-12-15, no new dated event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (ONGC leg earnings confirm the realisation mechanism; HPCL leg still unproven until its own Q2 margin is seen)
 
 ## 9. [9 HIGH] ICICI Bank Limited: Allotment of Securities
 
@@ -111,7 +111,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 9
 - Alert id: 9f15cab446d1
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - routine capital-alteration filing (most likely employee stock options exercised); adds a few shares, no mechanism. / Losers: none clear / Catalyst: none - routine filing. / Thesis fit: open thesis icici-bank-recovery: neutral
 
 ## 10. [9 HIGH] ICICIBANK +5.3% vs previous close, volume 3.1x 20-day average (close 1500.0, bar 2026-11-05)
 
@@ -123,7 +123,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 9
 - Alert id: 8372310d3414
-- Second-order candidates: 
+- Second-order candidates: Winner: ICICI Bank - the heavy volume on the up-move suggests institutional buying; the cause is not named in the alert and the likely driver is the broad rally in financials that day (Sensex +2,100 pts, Bajaj Finance leading, see 95db3bb57bbb). / Losers: none clear - market-wide move, no named share-loser. / Catalyst: unknown - no news found for a stock-specific cause. / Thesis fit: open thesis icici-bank-recovery: supports (price and volume move in the thesis direction); no change proposed.
 
 ## 11. [9 HIGH] Diwali stock picks 2026: Reliance Industries, ICICI Bank, Tata Steel, Eternal among 30 stocks to buy for...
 
@@ -135,21 +135,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 9
 - Alert id: 33cdb25a3abe
-- Second-order candidates: 
+- Second-order candidates: False match: duplicate of 54f348641dcb (brokerage Diwali picks list); seasonal content, no event or mechanism.
 
-## 12. [9 HIGH] BAJFINANCE +7.7% vs previous close, volume 3.5x 20-day average (close 1070.0, bar 2026-11-05)
-
-- Time: 2026-11-05 09:58 IST
-- Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/BAJFINANCE.NS
-- Matched symbols: BAJFINANCE (moving today: BAJFINANCE)
-- Keywords: price move
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 9
-- Alert id: aeb23bc12841
-- Second-order candidates: Winner: BAJFINANCE - results season strength in lenders (Bajaj Finserv rose on Q2 yesterday, see 06ad1ea46d52) lifts the group; no Bajaj Finance-specific news matched. / Losers: none clear / Catalyst: unknown - no news found / Thesis fit: proposed thesis bajaj-finance-rbi-december: price is already above the 15 Oct reference (965.25), so a fill after 2026-11-19 would be a later, higher entry; late-entry answer needs revisiting before it is activated. Not activated.
-
-## 13. [8 HIGH] ONGC net profit jumps 57% on higher oil, gas prices
+## 12. [8 HIGH] ONGC net profit jumps 57% on higher oil, gas prices
 
 - Time: 2026-11-05 19:17 IST
 - Source: Moneycontrol
@@ -159,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 8
 - Alert id: bc5fbf59dbc9
-- Second-order candidates: 
+- Second-order candidates: Winner: ONGC - higher realised crude and gas prices flow straight into upstream profit (same mechanism as the open ONGC leg). / Losers: HINDPETRO (HPCL) - buys crude in dollars and cannot pass on a price rise quickly, so refiner-marketer margin is squeezed; HPCL's own Q2 is the next check. / Catalyst: scheduled, already out - Q2 results 2026-11-05; see the full note under 06a508a7dcb1, no new dated event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (ONGC leg only; HPCL leg unproven)
 
-## 14. [8 HIGH] Oil and Natural Gas Corporation Ltd: Corporate Action-Board approves Dividend
+## 13. [8 HIGH] Oil and Natural Gas Corporation Ltd: Corporate Action-Board approves Dividend
 
 - Time: 2026-11-05 17:42 IST
 - Source: BSE announcements
@@ -171,9 +159,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 8
 - Alert id: 47ddd598ee99
-- Second-order candidates: 
+- Second-order candidates: Winner: ONGC holders - dividend is a cash return alongside the profit jump; it adds to the case but is not a new mechanism. / Losers: none clear - a dividend names no listed loser. / Catalyst: scheduled - record date follows the board decision (date not checked); minor, the profit print was the real event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (weakly)
 
-## 15. [8 HIGH] Maruti Infrastructure Ltd: Board Meeting Outcome for Unaudited Financial Result For Quarter And Half Year Ended 30.09.2026
+## 14. [8 HIGH] Maruti Infrastructure Ltd: Board Meeting Outcome for Unaudited Financial Result For Quarter And Half Year Ended 30.09.2026
 
 - Time: 2026-11-05 16:50 IST
 - Source: BSE announcements
@@ -183,4 +171,16 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 0c759985d8ca
+- Second-order candidates: False match: Maruti Infrastructure Ltd is an unrelated small company, not Maruti Suzuki (MARUTI); no read-across.
+
+## 15. [8 HIGH] Maruti Infrastructure Ltd: Unaudited Financial Result For The Quarter And Half Year Ended 30.09.2026
+
+- Time: 2026-11-05 16:47 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f0c6beb1-05f7-40d3-a266-ce7b41910a32.pdf
+- Matched symbols: MARUTI (moving today: MARUTI)
+- Keywords: results
+- Thesis match: none
+- Score: 8
+- Alert id: a8571bb804d2
 - Second-order candidates: 
