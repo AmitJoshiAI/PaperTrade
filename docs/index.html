@@ -696,7 +696,8 @@ footer a { color: inherit; }
       var pass = 0, total = 0, real = false;
       exps.forEach(function (e) { (e.structures || []).forEach(function (s) { total++; if (s.verdict === "PASS") pass++; });
         (e.rows || []).forEach(function (r) { if (/^real /.test(r.source || "")) real = true; }); });
-      var first = exps.length ? exps[exps.length - 1] : null;
+      // summary line: the current monthly expiry (an "event:" expiry, when there is one, comes after it)
+      var first = exps.filter(function (e) { return e.label === "monthly"; })[0] || (exps.length ? exps[exps.length - 1] : null);
       if (!pass) {     // nothing fits the 10% limit: one line, not a card
         var cheap = null;
         exps.forEach(function (e) { (e.rows || []).forEach(function (r) { [r.CE, r.PE].forEach(function (q) {

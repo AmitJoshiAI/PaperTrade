@@ -446,7 +446,7 @@ def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool) -
     cached chain BEFORE today's fetch (fill IVs, no look-ahead); today = the snapshots whose timestamp is the market date (marks, candidates). An online run
     fetches the candidates' and the open positions' underlyings from NSE (chains.refresh); offline reads the
     cache only."""
-    from .candidates import fno_candidate_symbols
+    from .candidates import fno_candidate_symbols, fno_event_dates, fno_events_for
     syms = list(fno_candidate_symbols()[0])
     for p in book.positions.values():
         syms.append(p.underlying)
@@ -465,7 +465,10 @@ def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool) -
             if p.kind in OPTION_KINDS:
                 extra.setdefault(p.underlying, set()).add(p.expiry)
         table = {u: dict(lot=spec(u)["lot"]) for u in list(config.FNO_INDEX) + list(config.FNO_STOCKS)}
-        fetched, notes = chains.refresh(specs, market_day, extra, weekly=set(config.FNO_WEEKLY_INDICES), lot_table=table)
+        events = fno_event_dates(market_day)      # the candidates' event expiries, so they get real quotes
+        ev_dates = {u: [ev["date"] for ev in fno_events_for(u, events)] for u in syms}
+        fetched, notes = chains.refresh(specs, market_day, extra, weekly=set(config.FNO_WEEKLY_INDICES), lot_table=table,
+                                        event_dates=ev_dates)
         snaps = {**prior, **fetched}
     else:
         snaps, notes = prior, ["offline run: no NSE chain fetch; cached chains are used only if they are of the market date"]

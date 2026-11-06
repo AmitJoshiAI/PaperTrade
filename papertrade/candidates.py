@@ -6,9 +6,10 @@ State: state/fno_candidates.json and state/us_candidates.json (latest run only; 
 
 India (fno.run_day): NIFTY and BANKNIFTY always (config.FNO_CANDIDATE_INDICES), plus every config.FNO_STOCKS
 symbol that an open thesis holds or a queued thesis order names. For the current monthly expiry (and the
-nearest listed expiry for config.FNO_WEEKLY_INDICES): spot, days to expiry, ATM strike (the engine's: spot
-rounded to the config strike step) and ATM-2..ATM+2 calls and puts per unit and per lot, then three
-1-lot structures. US (us.run_day): config.US_CANDIDATE_TICKERS, the nearest monthly expiry (third Friday)
+nearest listed expiry for config.FNO_WEEKLY_INDICES, and an "event:" expiry, the first monthly expiry on or
+after a thesis event that the current one ends before; see fno_event_dates): spot, days to expiry, ATM strike
+(the engine's: spot rounded to the config strike step) and ATM-2..ATM+2 calls and puts per unit and per lot,
+then three 1-lot structures. US (us.run_day): config.US_CANDIDATE_TICKERS, the nearest monthly expiry (third Friday)
 14-42 days after the US market date, ATM = the listed strike nearest the last close, ATM-2..ATM+2 listed
 strikes, the same structures per contract (x100).
 
@@ -111,6 +112,37 @@ def fno_candidate_symbols() -> tuple[list[str], list[str], dict]:
     return list(why), notes, why
 
 
+def fno_event_dates(market_day: str) -> list[dict]:
+    """[{slug, date, symbols}] for every proposed or open catalyst / second_order thesis whose event_date (or
+    rule_due_date, if later) is after the market date. Why: the current monthly expiry can end before the
+    event (23 Nov 2026 vs the RBI decision of 4 Dec 2026), and a structure that expires first never sees it.
+    A thesis whose post_event_applied is filled in is skipped: its rule has fired and it is being exited, so
+    there is nothing left to hold through (crude-ongc-vs-hpcl on 6 Nov 2026: rule applied, its rule_due_date
+    of 15 Dec is only the time box). Never raises: a thesis typo must not stop the candidates."""
+    out = []
+    try:
+        from . import thesis
+        theses, _w = thesis.load_theses()
+        for slug, t in theses.items():
+            if t.status not in ("proposed", "open") or t.type not in thesis.EVENT_TYPES:
+                continue
+            if str(t.get("post_event_applied", "")).strip():
+                continue
+            ds = [d for d in (t.event_date, t.rule_due_date) if d]
+            if not ds or max(ds).isoformat() <= market_day:
+                continue
+            out.append(dict(slug=slug, date=max(ds).isoformat(), symbols=sorted({l.symbol for l in t.legs})))
+    except Exception as e:
+        log.warning("thesis event dates for the F&O candidates not read: %s", e)
+    return sorted(out, key=lambda ev: (ev["date"], ev["slug"]))
+
+
+def fno_events_for(sym: str, events: list[dict]) -> list[dict]:
+    """The events an underlying's candidates must hold through: every one for an index (a policy day moves the
+    index too), only its own theses' events for a stock."""
+    return [ev for ev in events if sym in config.FNO_CANDIDATE_INDICES or sym in ev["symbols"]]
+
+
 # ---------- shared maths ----------
 def _structures(rows: dict, units: int, cap: float, cash: float, free_slots: int, breaker: bool,
                 charge_fn, expiry: str) -> list[dict]:
@@ -187,6 +219,7 @@ def build_fno(market, book, market_day: str, chain_notes=()) -> dict:
     nxt = (_date.fromisoformat(market_day) + timedelta(days=1)).isoformat()
     breaker = book.blocked(nxt)
     syms, notes, why = fno_candidate_symbols()
+    events = fno_event_dates(market_day)
     out = dict(date=market_day, currency="INR", equity=round(eq, 2), cash=round(cash, 2), cap=round(cap, 2),
                open_positions=len(book.positions), max_positions=config.DERIV_MAX_POSITIONS,
                breaker=book.breaker_text() if breaker else None, notes=list(notes), underlyings=[])
@@ -198,7 +231,8 @@ def build_fno(market, book, market_day: str, chain_notes=()) -> dict:
     out["india_vix"] = vix
     for u in syms:
         try:
-            out["underlyings"].append(_fno_one(market, spec(u), market_day, eq, cash, cap, free, breaker, why.get(u, [])))
+            out["underlyings"].append(_fno_one(market, spec(u), market_day, eq, cash, cap, free, breaker, why.get(u, []),
+                                               fno_events_for(u, events)))
         except Exception as e:
             log.exception("F&O candidates for %s failed", u)
             out["underlyings"].append(dict(underlying=u, error=str(e), why=why.get(u, [])))
@@ -207,7 +241,7 @@ def build_fno(market, book, market_day: str, chain_notes=()) -> dict:
     return out
 
 
-def _fno_one(market, sp, market_day, eq, cash, cap, free, breaker, why) -> dict:
+def _fno_one(market, sp, market_day, eq, cash, cap, free, breaker, why, events=()) -> dict:
     u = sp["name"]
     S, sday = market.spot_close(sp["yahoo"], market_day)
     snap = chains.usable(market.today.get(u), market_day)
@@ -224,9 +258,21 @@ def _fno_one(market, sp, market_day, eq, cash, cap, free, breaker, why) -> dict:
         if w and w != monthly:
             exps.append(("weekly", w))
     exps.append(("monthly", monthly))
+    # an event after the current monthly expiry: also the first monthly expiry that holds through it, so the
+    # reviewer can price a structure that is still open on the event day. Events sharing an expiry share a row.
+    by_exp, unlisted = {}, []
+    for ev in events:
+        e = chains.event_expiry(ev["date"], sp["weekday"], listed)
+        if e in {x for _l, x in exps}:
+            continue                    # the event is before an expiry already shown
+        if listed and e not in listed:  # stocks list ~3 monthlies: an order for it would be rejected today
+            unlisted.append(f"event {ev['slug']} {ev['date']}: its expiry {e} is not listed on NSE yet")
+            continue
+        by_exp.setdefault(e, []).append(f"{ev['slug']} {ev['date']}")
+    exps += [("event: " + "; ".join(evs), e) for e, evs in sorted(by_exp.items())]
     res = dict(underlying=u, kind=sp["kind"], lot=sp["lot"], step=sp["step"], why=why, spot=round(S, 2), spot_date=sday,
                chain=dict(timestamp=snap["timestamp"], underlying=snap.get("underlying_value"), source=snap.get("source"))
-               if snap else None, warnings=[], expiries=[])
+               if snap else None, warnings=unlisted, expiries=[])
     if snap and snap.get("underlying_value") and abs(snap["underlying_value"] / S - 1) > 0.005:
         res["warnings"].append(f"NSE chain underlying {snap['underlying_value']:,.2f} differs from the Yahoo close "
                                f"{S:,.2f} by more than 0.5%")
@@ -415,6 +461,12 @@ def _legs_text(s, us: bool = False) -> str:
     return " + ".join(f"{l['side']} {name(l['right'])} {_k(l['strike'])}" for l in s["legs"]) + f" ({s['expiry']})"
 
 
+def _heading(label: str) -> str:
+    """First letter up only (as the dashboard does): "Monthly", "Event: bajaj-finance-rbi-december 2026-12-04"
+    (str.title() would mangle the thesis slug)."""
+    return label[:1].upper() + label[1:]
+
+
 def _fits(q: dict, cap: float) -> bool:
     return bool(q) and q.get("per_lot") is not None and q["per_lot"] <= cap + 1e-9
 
@@ -463,12 +515,12 @@ def _lines_common(c: dict, ccy: str, unit_word: str) -> list[str]:
         for ex in x["expiries"]:
             passing = [st for st in ex["structures"] if st.get("verdict") == "PASS"]
             if not passing:
-                lines += [f"**{ex['label'].title()} expiry {ex['expiry']}**: no structure fits: "
+                lines += [f"**{_heading(ex['label'])} expiry {ex['expiry']}**: no structure fits: "
                           + "; ".join(_fail_line(st) for st in ex["structures"]) + ".", ""]
                 continue
             iv = (f", {'IV from last trades' if ccy == 'USD' else 'chain ATM IV'} {ex['atm_iv_pct']:.2f}%"
                   if ex.get("atm_iv_pct") else "")
-            lines += [f"**{ex['label'].title()} expiry {ex['expiry']}** ({ex['days']} days), ATM {_k(ex['atm'])}{iv}", ""]
+            lines += [f"**{_heading(ex['label'])} expiry {ex['expiry']}** ({ex['days']} days), ATM {_k(ex['atm'])}{iv}", ""]
             c_, p_ = ("Call", "Put") if ccy == "USD" else ("CE", "PE")
             lines += [f"| Strike | {c_} / unit | {c_} per {unit_word} | {c_} % eq | {p_} / unit | {p_} per {unit_word} | {p_} % eq | Source |",
                       "|---|---|---|---|---|---|---|---|"]

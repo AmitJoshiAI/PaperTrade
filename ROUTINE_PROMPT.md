@@ -97,7 +97,9 @@ The repository is checked out for you. Work on branch main. Steps:
       "## F&O candidates" and "## US candidates" sections (when present): they list, for the indices and for
       every F&O stock held by an open thesis, the current-expiry ATM and ATM+/-2 call and put premiums per
       lot, days to expiry, and pre-built defined-risk structures (bull call spread, bear put spread, long
-      straddle) with their max loss and a pass/fail against the 10% rule. Prefer a debit spread or a long
+      straddle) with their max loss and a pass/fail against the 10% rule. When a thesis event falls after
+      the current expiry, an "Event: <thesis> <date>" expiry is added: the first monthly expiry that is still
+      open on the event day (use it for a structure meant to hold through the event). Prefer a debit spread or a long
       option over anything with open-ended risk; the engine rejects naked short options anyway.
 
       No quota: never open a position to have one. But inaction must be earned: when you decide "none"

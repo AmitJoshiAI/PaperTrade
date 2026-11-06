@@ -1,5 +1,36 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-06 - F&O candidates: event expiry when a catalyst falls after the current monthly expiry
+
+- **Why** (DEFERRED.md #12): the Bajaj Finance thesis is built around the RBI decision of 4 Dec 2026, but the
+  candidates listed only the 23 Nov monthly expiry (plus NIFTY's weekly), so the reviewer could not price any
+  structure still open on the event day.
+- **What changed**: `candidates.fno_event_dates(market_day)` lists every proposed or open catalyst /
+  second_order thesis whose event_date (or rule_due_date, if later) is after the market date and whose
+  post_event_applied is empty. For each, the first monthly expiry ON or after the event
+  (`chains.event_expiry`, holiday shifts from NSE's list) is added to the candidates as
+  "event: <slug> <date>" (journal heading "Event: bajaj-finance-rbi-december 2026-12-04 expiry 2026-12-29").
+  NIFTY and BANKNIFTY get it for every such event; a stock only for its own theses' events. It is skipped
+  when it is an expiry already shown (event before the current monthly expiry), and replaced by a warning
+  when NSE does not list it yet (stocks list about three monthlies). The daily fetch asks NSE for the same
+  expiry (`chains.refresh(..., event_dates=)`, resolved against the listed dates, only if listed) so the rows
+  are real chain mids, not the model. On 6 Nov: NIFTY, BANKNIFTY and BAJFINANCE get 2026-12-29; ONGC,
+  HINDPETRO and ICICIBANK do not. Journal headings now capitalise the first letter only (`.title()` mangled
+  the slug); the dashboard card's summary line keeps showing the monthly expiry. ROUTINE_PROMPT.md step 5c
+  tells the reviewer what the "Event:" expiry is.
+- **Deliberate exclusion**: crude-ongc-vs-hpcl has rule_due_date 2026-12-15 (its time box) but its rule fired
+  on 6 Nov (post_event_applied filled, exits queued), so it adds no event expiry. Drop that check and ONGC and
+  HINDPETRO would get 2026-12-29 too.
+- **Evidence**: a fetch from a home connection on 6 Nov 2026 21:08 IST returned BANKNIFTY 2026-12-29 (146
+  strikes in the +/- band, 225 two-sided quotes, ATM IV 14.0%); the cached snapshot (same date) was rewritten
+  with it, the 23 Nov bid/ask/IV unchanged. Most December strikes off the 500-point grid had bid/ask spreads of
+  Rs 400-640 (59,100 CE 1,021 / 1,658), so those mids are rough.
+- **Not changed**: the current monthly and weekly expiries and their labels, `resolve_expiry` ("current" /
+  "next"), marks, fills, the US candidates (except "Nearest in range" heading capitalisation). The reviewer
+  still writes the exact expiry date shown in an order.
+- **Revert if**: the extra expiry fetch makes the NSE step fail or time out on the runner, or the event rows
+  mislead (for example a far-month structure passes on wide-spread mids that the fill does not get).
+
 ## 2026-11-06 - US SEC Section 31 fee 0.0000278 -> 0.0000206 (structural: wrong constant)
 
 - **Why**: the first weekly strategist review found the code carried the old $27.80 per million; the SEC

@@ -99,6 +99,14 @@ def monthly_after(after: str, weekday: int, listed=None, skip: int = 0) -> str:
     raise ValueError(f"no monthly expiry after {after}")
 
 
+def event_expiry(event_day: str, weekday: int, listed=None) -> str:
+    """The first monthly expiry ON or after `event_day` (an option expiring that day still holds through a
+    policy announcement made in the morning). Shared by the fetch (refresh) and the candidates table so the
+    two always name the same date."""
+    before = (_date.fromisoformat(event_day) - timedelta(days=1)).isoformat()
+    return monthly_after(before, weekday, listed)
+
+
 def nearest_after(after: str, listed) -> str | None:
     later = sorted(e for e in (listed or []) if e > after)
     return later[0] if later else None
@@ -320,12 +328,15 @@ def lot_check(client: NseClient, specs: dict, market_day: str) -> list[str]:
 
 
 def refresh(specs: dict, market_day: str, extra_expiries: dict | None = None, weekly=(),
-            lot_table: dict | None = None) -> tuple[dict, list[str]]:
+            lot_table: dict | None = None, event_dates: dict | None = None) -> tuple[dict, list[str]]:
     """Fetch and cache a snapshot for each underlying. specs: {SYM: {"kind", "weekday", "lot"}}. Fetches the
-    current monthly expiry, the nearest listed expiry for the symbols in `weekly`, and any expiry in
-    extra_expiries[SYM] (open positions). Returns ({SYM: snapshot}, journal notes). Never raises."""
+    current monthly expiry, the nearest listed expiry for the symbols in `weekly`, any expiry in
+    extra_expiries[SYM] (open positions), and the event expiry (event_expiry) of each ISO date in
+    event_dates[SYM] (catalysts after the current monthly expiry, candidates.fno_event_dates). The event
+    expiry is resolved here, against NSE's own list, because a holiday can move it. Returns ({SYM: snapshot},
+    journal notes). Never raises."""
     client, snaps, notes = NseClient(), {}, []
-    extra_expiries = extra_expiries or {}
+    extra_expiries, event_dates = extra_expiries or {}, event_dates or {}
     for sym, sp in specs.items():
         old = load(sym)
 
@@ -336,6 +347,9 @@ def refresh(specs: dict, market_day: str, extra_expiries: dict | None = None, we
                 if n:
                     want.add(n)
             want |= {e for e in extra_expiries.get(sym, ()) if e in listed}
+            # only a listed expiry: an event months out maps to a date NSE has not opened yet, and asking v3
+            # for it would fail the whole symbol (its current monthly chain too)
+            want |= {e for d in event_dates.get(sym, ()) if (e := event_expiry(d, sp["weekday"], listed)) in listed}
             return sorted(want)
 
         try:
