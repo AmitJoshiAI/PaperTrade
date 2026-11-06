@@ -119,6 +119,9 @@ DAILY.md           the daily routine
 THESIS_REVIEW.md   the weekly thesis-sleeve review
 RISK_LIMITS.md     every limit of every sleeve in one place, and what is not modelled
 SCANNER_PROMPT.md  the hourly cloud routine that writes second-order notes on high-score alerts
+STRATEGIST_PROMPT.md  the Saturday cloud routine (Opus): week in numbers, 3-week catalyst calendar, theses,
+                   rule-change proposals under an evidence policy, fee verification; writes strategy_reviews/
+DEFERRED.md        open proposals, code tasks and unverified figures, owned by the strategist
 CHANGELOG.md       every rule change, with reasoning
 ```
 

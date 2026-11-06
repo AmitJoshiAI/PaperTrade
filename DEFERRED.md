@@ -1,0 +1,17 @@
+# DEFERRED - proposals, code tasks and open verifications (owned by the weekly strategist)
+
+Rows are never deleted: a finished item is marked done with the date, a rejected one dropped with the reason.
+Owner: `session` = the user's Claude session (code changes, implemented by Opus, reviewed by Fable);
+`strategist` = the Saturday routine (research, verification); `reviewer` = the weekday routine (a decision).
+
+| # | Added | Item | Why / evidence so far | What would settle it | Owner | Status |
+|---|---|---|---|---|---|---|
+| 1 | 2026-10-30 | Catalyst event-date warning: flag a catalyst thesis when the company files results earlier than `event_date` | Waaree Q2 results came before the date in the thesis; the post-event rule then ran late | Daily run compares the NSE/BSE announcement feed (scanner notes) with each catalyst thesis' `event_date` and prints a warning in the journal | session | open |
+| 2 | 2026-10-30 | Five-day re-entry cooldown in the momentum sleeve | A name sold on a stop can be re-bought the next day if it re-ranks; churn and charges | Count of re-entries within 5 days in `state/trades.csv` once 20 closed trades exist | session | deferred until 20 closed trades |
+| 3 | 2026-11-06 | Absolute relative-performance stop for second-order pairs | Crude pair (ONGC long / HINDPETRO paper short) lost about Rs 5,500 because the "HPCL wins back half the underperformance" exit never armed: HPCL outperformed from day one | A rule in the thesis template: close the pair when the short leg outperforms the long leg by X% from entry, X written in the thesis | session (template + thesis.py check) | open |
+| 4 | 2026-11-06 | US sleeve pre-market fills and marks | Daily run at 17:33 IST is US pre-market; Yahoo shows bid = ask = 0, so US option fills and marks fall back to stored IV (candidates tables already use last-trade IV) | Move US fills/marks to the same last-trade IV fallback, or run a second US-only mark after the US close | session | open |
+| 5 | 2026-11-06 | Confirm the December 2026 RBI MPC meeting date | Bajaj Finance thesis has BUY queued for 2026-11-19 on an estimated 4 Dec meeting | RBI press release with the 2026-27 MPC schedule; correct `event_date` in `theses/bajaj-finance-rbi-december.md` | strategist | open |
+| 6 | 2026-11-04 | VERIFY NSE futures transaction charge (0.00183% in code) and options (0.03553% of premium) | Taken from 2026 broker pages, not the NSE circular | NSE circular on transaction charges in force, URL and figure | strategist | open |
+| 7 | 2026-11-04 | VERIFY SEC Section 31 fee rate (0.0000278 in code) and FINRA TAF ($0.000166/share, cap $8.30; $0.00279/contract) | Reset by the regulators yearly | sec.gov fee rate advisory and finra.org TAF schedule, URL and figure | strategist | open |
+| 8 | 2026-11-06 | Momentum positive-63-day-return entry gate: revert check | Made on 3 closed trades (all three losers had negative momentum at entry; DRREDDY the counterexample) | At 20 closed trades compare entries that the gate blocked with those it allowed; revert if blocked names did better | strategist | review at 20 closed trades |
+| 9 | 2026-11-06 | Does WebSearch / WebFetch work inside the cloud routine sandbox | Feed downloads returned 403 from the sandbox; the reviewer did not confirm FOMC/CPI dates on 6 Nov | First strategist run reports under "## Research access" | strategist | open |

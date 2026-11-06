@@ -54,6 +54,10 @@ The repository is checked out for you. Work on branch main. Steps:
    journal appears in its ledger (`state/trades.csv`, `state/thesis_trades.csv`, `state/fno_trades.csv`,
    `state/us_trades.csv`); momentum charges are roughly 0.12% of turnover for a buy and 0.12% plus
    Rs 15.93 for a sell. Read every REJECTED order in the F&O / US / thesis observations and why.
+   Also read the newest `strategy_reviews/<date>.md` (the Saturday strategist's weekly review, see
+   STRATEGIST_PROMPT.md), in particular its "## For Monday's daily reviewer" and "## Calendar" sections.
+   It advises; you decide under step 5 with the day's data, and say in your review which of its items
+   you acted on and which you did not, and why.
 
 4. Write the "## Claude's review" section at the bottom of that journal file, replacing the
    placeholder paragraph that begins "_To be filled by Claude". Plain English with numbers, under
