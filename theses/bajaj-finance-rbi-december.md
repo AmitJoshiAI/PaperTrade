@@ -40,3 +40,4 @@ reaction is held with a trailing stop; an unfavourable one is sold the next morn
 
 - 2026-10-17 (opened by Claude as proposed): entry deliberately delayed to 2026-11-19. Reviewer:
   confirm the December MPC date from rbi.org.in and set event_date to it.
+- 2026-11-06 (weekly review, Claude): still proposed; BUY Rs 75,000 dated 2026-11-19 unchanged. Confirm the December MPC date from rbi.org.in before the buy.
