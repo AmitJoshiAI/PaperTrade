@@ -4,7 +4,8 @@ Rules (evaluated on the latest close, orders fill at the NEXT open):
   Universe filter : at least MIN_HISTORY_DAYS of data.
   Trend filter    : close > SMA_SLOW and SMA_FAST > SMA_SLOW.
   Rank            : LOOKBACK_MOMENTUM-day return, highest first, among trend-filtered names.
-  Entry           : if positions < MAX_POSITIONS, buy the best-ranked names not yet held, equal weight
+  Entry           : if positions < MAX_POSITIONS, buy the best-ranked names not yet held whose
+                    LOOKBACK_MOMENTUM return is positive (since 2026-11-06), equal weight
                     (cash / free slots).
   Exit            : stop-loss (close < entry * (1 - STOP_LOSS_PCT)), or close < SMA_SLOW,
                     or rank falls below RANK_EXIT.
@@ -75,7 +76,9 @@ def propose(closes: pd.DataFrame, pf: Portfolio) -> list[dict]:
 
     # Entries
     if free_slots > 0:
-        candidates = tbl[tbl["eligible"] & (tbl["rank"] <= config.RANK_ENTRY)]
+        # Entry needs positive 63-day momentum (CHANGELOG 2026-11-06): a name that passes the trend filter
+        # but has fallen over the lookback is the absence of momentum, not momentum. Exits are unchanged.
+        candidates = tbl[tbl["eligible"] & (tbl["rank"] <= config.RANK_ENTRY) & (tbl["momentum"] > 0)]
         for sym, row in candidates.iterrows():
             if free_slots == 0:
                 break

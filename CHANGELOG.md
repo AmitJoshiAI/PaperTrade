@@ -265,3 +265,19 @@
 
 ## 2026-10-28 (daily reviewer)
 - Applied the Waaree catalyst post-event rule one day after the results (reported 27 Oct evening; estimated date was 28 Oct). Set event_date to 2026-10-27 as the thesis rule allows. PROPOSAL (not applied): have the engine/scanner flag a catalyst thesis when its company files results before the estimated event_date. Evidence: Waaree exit one day late.
+
+## 2026-11-06 (orchestrator, Claude)
+- **Momentum entry rule**: a buy now also requires a positive 63-day return (`strategy.propose`, entry
+  candidates only; the trend filter, ranking and all exits are unchanged). Old value: any rank <= 5 name
+  passing the trend filter; new value: the same, and `momentum > 0`.
+- **Why**: a momentum strategy that buys names with a negative lookback return because only 3-5 names pass
+  the trend filter is buying the absence of momentum. Evidence (small sample, 3 closed trades): all three
+  closed trades were entries with a negative 63-day return and all three lost (COALINDIA -1,827, HDFCLIFE
+  -3,041, ADANIPORTS -2,679); the five current holdings all have positive 63-day returns today. Counter-
+  example: DRREDDY was bought at -0.5% and is +12%. Proposed by the daily reviewer on 19, 21, 22 and 23 Oct.
+- **Side effect checked**: the gate is on entries only, so no held name is force-sold; verified on 6 Nov
+  closes that all five holdings have positive 63-day returns (+7.9% to +21.8%).
+- **Revert if**: after 20 closed trades the gated strategy's average closed P&L is below the ungated one on a
+  paper replay, or the sleeve sits in cash for more than 15 consecutive trading days while the Nifty rises.
+- **Deferred**: the 5-day re-entry cooldown after a trend-break sell (one case, ADANIPORTS; subsumed by this
+  gate since that re-entry was at -0.9%).
