@@ -37,6 +37,8 @@ from __future__ import annotations
 import json
 import logging
 import math
+
+import pandas as pd
 from datetime import date as _date, timedelta
 
 from . import config, chains
@@ -47,6 +49,31 @@ log = logging.getLogger(__name__)
 
 US_CHAIN_LABEL = "real yfinance chain (mid)"
 US_IV_LABEL = "model (BS on chain IV)"
+US_LT_LABEL = "model (BS on IV implied by last trades)"
+
+
+def _implied_vol(price, S, K, t, r, kind) -> float | None:
+    """Black-Scholes implied vol by bisection, or None if the price is outside the no-arbitrage range."""
+    lo, hi = 0.01, 5.0
+    if t <= 0 or price <= bs_price(S, K, t, r, lo, kind) or price >= bs_price(S, K, t, r, hi, kind):
+        return None
+    for _ in range(80):
+        mid = (lo + hi) / 2
+        if bs_price(S, K, t, r, mid, kind) < price:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
+def _traded_since(q, md) -> bool:
+    """True if the contract's last trade was in the latest US session (Yahoo shows bid = ask = 0 and IV 0.00001
+    outside US hours, which is when the 17:33 IST run happens; the last trade is then the only real price)."""
+    try:
+        lp, ltd = float(q.get("lastPrice") or 0), q.get("lastTradeDate")
+        return lp > 0 and ltd is not None and pd.Timestamp(ltd).date() >= md
+    except Exception:
+        return False
 OFFSETS = (-2, -1, 0, 1, 2)
 
 
@@ -104,6 +131,12 @@ def _structures(rows: dict, units: int, cap: float, cash: float, free_slots: int
             out.append(s)
             continue
         debit = sum((l["price"] if l["side"] == "BUY" else -l["price"]) for l in legs)
+        if name != "Long straddle":
+            gap = abs(legs[1]["strike"] - legs[0]["strike"])
+            if not 0 < debit < gap:
+                s.update(verdict="n/a", why=f"inconsistent prices: net debit {debit:.2f} is outside 0..{gap:g} (strike gap)")
+                out.append(s)
+                continue
         ch = sum(charge_fn(l["side"], units, l["price"]) for l in legs)
         long_prem = [l["price"] * units for l in legs if l["side"] == "BUY"]
         need = sum(long_prem) + sum(charge_fn("BUY", units, l["price"]) for l in legs if l["side"] == "BUY")
@@ -257,12 +290,24 @@ def build_us(market, book, market_day: str) -> dict:
                open_positions=len(book.positions), max_positions=config.DERIV_MAX_POSITIONS,
                breaker=book.breaker_text() if breaker else None, fetched_at=market.fetched_at, usd_inr=book.fx(),
                notes=[], underlyings=[])
+    over = []
     for t in config.US_CANDIDATE_TICKERS:
+        if t not in config.US_CANDIDATE_REFERENCE:
+            try:
+                px, _d = market.last_close(t)
+                if px > config.US_CANDIDATE_MAX_PRICE:
+                    over.append(f"{t} ${px:,.2f}")
+                    continue
+            except Exception:
+                pass                       # no close: _us_one reports it
         try:
             out["underlyings"].append(_us_one(market, t, market_day, eq, cash, cap, free, breaker))
         except Exception as e:
             log.warning("US candidates for %s: %s", t, e)
             out["underlyings"].append(dict(underlying=t, error=str(e)))
+    if over:
+        out["notes"].append(f"Above the ${config.US_CANDIDATE_MAX_PRICE:g} price bar, not shown: " + ", ".join(over))
+    out["reference"] = list(config.US_CANDIDATE_REFERENCE)
     srcs = {r.get("source") for x in out["underlyings"] for ex in x.get("expiries", []) for r in ex.get("rows", [])}
     out["sources"] = sorted(s for s in srcs if s)
     return out
@@ -285,28 +330,49 @@ def _us_one(market, t, market_day, eq, cash, cap, free, breaker) -> dict:
     strikes = sorted({float(k) for k in calls["strike"]} & {float(k) for k in puts["strike"]})
     i = min(range(len(strikes)), key=lambda j: abs(strikes[j] - S))
     tt = years_to(e, sday)
-    rows, table = {}, []
+    raw = {}
     for off in OFFSETS:
         if not 0 <= i + off < len(strikes):
             continue
         K = strikes[i + off]
-        r = dict(offset=off, strike=K)
-        for right, frame, kind in (("CE", calls, "CALL"), ("PE", puts, "PUT")):
+        for right, frame in (("CE", calls), ("PE", puts)):
             row = frame[(frame["strike"] - K).abs() < 1e-6]
-            q = row.iloc[0] if len(row) else None
+            raw[(off, right)] = (K, row.iloc[0] if len(row) else None)
+    # Outside US hours (the 17:33 IST run is US pre-market) Yahoo shows bid = ask = 0 and a meaningless IV
+    # (0.00001 or a few %). Then one IV for the underlying is backed out of the latest session's last trades
+    # near the money (median), and every strike is priced from it, so the structures are consistent.
+    lt_ivs = []
+    for (off, right), (K, q) in raw.items():
+        if abs(off) <= 1 and q is not None and _traded_since(q, md):
+            v = _implied_vol(float(q.get("lastPrice")), S, K, tt, config.US_RISK_FREE_RATE, "CALL" if right == "CE" else "PUT")
+            if v:
+                lt_ivs.append(v)
+    lt_iv = sorted(lt_ivs)[len(lt_ivs) // 2] if lt_ivs else None
+    rows, table = {}, []
+    for off in OFFSETS:
+        if (off, "CE") not in raw:
+            continue
+        r = dict(offset=off, strike=raw[(off, "CE")][0])
+        for right, kind in (("CE", "CALL"), ("PE", "PUT")):
+            K, q = raw[(off, right)]
             bid = float(q.get("bid") or 0) if q is not None else 0.0
             ask = float(q.get("ask") or 0) if q is not None else 0.0
             civ = q.get("impliedVolatility") if q is not None else None
-            civ = float(civ) if civ is not None and civ == civ and float(civ) >= 0.01 else None
+            civ = float(civ) if (bid > 0 or ask > 0) and civ is not None and civ == civ and float(civ) >= 0.01 else None
+            used_iv = civ
             if bid > 0 and ask > 0 and ask >= bid:
                 price, src = round((bid + ask) / 2, 4), US_CHAIN_LABEL
             elif civ:
                 price, src = round(bs_price(S, K, tt, config.US_RISK_FREE_RATE, civ, kind), 4), US_IV_LABEL
+            elif lt_iv:
+                used_iv = lt_iv
+                price, src = round(bs_price(S, K, tt, config.US_RISK_FREE_RATE, lt_iv, kind), 4), US_LT_LABEL
             else:
                 price, src = None, "no quote"
             per = None if price is None else round(price * config.US_CONTRACT_SIZE, 2)
-            r[right] = dict(price=price, src=src, iv_pct=round(civ * 100, 2) if civ else None, bid=bid or None, ask=ask or None,
-                            contract=str(q.get("contractSymbol", "")) if q is not None else "",
+            last = float(q.get("lastPrice") or 0) if q is not None and _traded_since(q, md) else None
+            r[right] = dict(price=price, src=src, iv_pct=round(used_iv * 100, 2) if used_iv else None, bid=bid or None,
+                            ask=ask or None, last=last, contract=str(q.get("contractSymbol", "")) if q is not None else "",
                             per_lot=per, pct=round(per / eq * 100, 2) if per is not None and eq else None)
         r["source"] = _src_text(r)
         rows[off] = r
@@ -316,7 +382,8 @@ def _us_one(market, t, market_day, eq, cash, cap, free, breaker) -> dict:
     return dict(underlying=t, spot=round(S, 2), spot_date=sday, lot=config.US_CONTRACT_SIZE, why=[],
                 monthly=bool(monthly), warnings=[] if monthly else [f"no third-Friday expiry in range; using {e}"],
                 expiries=[dict(label="monthly" if monthly else "nearest in range", expiry=e,
-                               days=(_date.fromisoformat(e) - md).days, atm=strikes[i], rows=table, structures=st)])
+                               days=(_date.fromisoformat(e) - md).days, atm=strikes[i], rows=table, structures=st,
+                               atm_iv_pct=round(lt_iv * 100, 2) if lt_iv else None)])
 
 
 # ---------- state ----------
@@ -348,12 +415,34 @@ def _legs_text(s, us: bool = False) -> str:
     return " + ".join(f"{l['side']} {name(l['right'])} {_k(l['strike'])}" for l in s["legs"]) + f" ({s['expiry']})"
 
 
+def _fits(q: dict, cap: float) -> bool:
+    return bool(q) and q.get("per_lot") is not None and q["per_lot"] <= cap + 1e-9
+
+
+def _fail_line(s: dict) -> str:
+    return f"{s['name']} FAIL ({s['why']})" if s.get("verdict") == "FAIL" else f"{s['name']} n/a ({s.get('why', '')})"
+
+
 def _lines_common(c: dict, ccy: str, unit_word: str) -> list[str]:
-    lines = []
+    """Only what PASSES is tabled: strike rows where at least one side's premium per lot / contract fits the
+    10% limit, and structures with verdict PASS. Each FAIL structure is one line; an underlying where nothing
+    fits (or no data) is one line in "Did not fit" at the end."""
+    cap = c.get("cap") or 0.0
+    lines, nofit = [], []
+    ref = set(c.get("reference") or [])
     for x in c.get("underlyings", []):
         name = x["underlying"]
         if x.get("error"):
-            lines += [f"### {name}", "", f"Not available today: {x['error']}.", ""]
+            nofit.append(f"**{name}**: not available today ({x['error']})")
+            continue
+        exps = [ex for ex in x["expiries"] if any(st.get("verdict") == "PASS" for st in ex["structures"])]
+        if not exps:
+            ex = x["expiries"][0] if x["expiries"] else None
+            cheapest = min((q["per_lot"] for r in (ex or {}).get("rows", []) for q in (r.get("CE"), r.get("PE"))
+                            if q and q.get("per_lot") is not None), default=None)
+            nofit.append(f"**{name}** {x['spot']:,.2f}" + (" (reference)" if name in ref else "") +
+                         (f", {ex['expiry']}: cheapest ATM+/-2 premium {_m(cheapest, ccy)} per {unit_word} vs the "
+                          f"{_m(cap, ccy)} limit; " + "; ".join(_fail_line(st) for st in ex["structures"]) if ex else ""))
             continue
         head = f"### {name} ({x.get('kind', 'US')}, {unit_word} {x['lot']})"
         why = [w for w in x.get("why") or [] if w != "index"]
@@ -372,31 +461,49 @@ def _lines_common(c: dict, ccy: str, unit_word: str) -> list[str]:
         if x.get("warnings"):
             lines.append("")
         for ex in x["expiries"]:
-            iv = f", chain ATM IV {ex['atm_iv_pct']:.2f}%" if ex.get("atm_iv_pct") else ""
+            passing = [st for st in ex["structures"] if st.get("verdict") == "PASS"]
+            if not passing:
+                lines += [f"**{ex['label'].title()} expiry {ex['expiry']}**: no structure fits: "
+                          + "; ".join(_fail_line(st) for st in ex["structures"]) + ".", ""]
+                continue
+            iv = (f", {'IV from last trades' if ccy == 'USD' else 'chain ATM IV'} {ex['atm_iv_pct']:.2f}%"
+                  if ex.get("atm_iv_pct") else "")
             lines += [f"**{ex['label'].title()} expiry {ex['expiry']}** ({ex['days']} days), ATM {_k(ex['atm'])}{iv}", ""]
             c_, p_ = ("Call", "Put") if ccy == "USD" else ("CE", "PE")
             lines += [f"| Strike | {c_} / unit | {c_} per {unit_word} | {c_} % eq | {p_} / unit | {p_} per {unit_word} | {p_} % eq | Source |",
                       "|---|---|---|---|---|---|---|---|"]
+            hidden = 0
             for r in ex["rows"]:
                 ce, pe = r.get("CE") or {}, r.get("PE") or {}
+                if not (_fits(ce, cap) or _fits(pe, cap)):
+                    hidden += 1
+                    continue
                 tag = "ATM" if r["offset"] == 0 else f"ATM{r['offset']:+d}"
-                f = lambda q, k, dp=2: "n/a" if q.get(k) is None else f"{q[k]:,.{dp}f}"
-                lines.append(f"| {_k(r['strike'])} ({tag}) | {f(ce, 'price')} | {_m(ce.get('per_lot'), ccy)} | {f(ce, 'pct')}% | "
-                             f"{f(pe, 'price')} | {_m(pe.get('per_lot'), ccy)} | {f(pe, 'pct')}% | {r['source']} |")
+
+                def cells(q):
+                    if q.get("price") is None:
+                        return "n/a | n/a | n/a"
+                    over = "" if _fits(q, cap) else " (over limit)"
+                    return f"{q['price']:,.2f} | {_m(q.get('per_lot'), ccy)}{over} | {q['pct']:,.2f}%"
+                lines.append(f"| {_k(r['strike'])} ({tag}) | {cells(ce)} | {cells(pe)} | {r['source']} |")
+            if hidden:
+                lines.append(f"\n{hidden} strike(s) of ATM-2..ATM+2 omitted: both premiums above the {_m(cap, ccy)} limit.")
             lines += ["", f"| Structure (1 {unit_word}) | Legs: put these in the order | Net debit | Max loss | Max gain | "
                           "Breakeven | 10% rule (long leg) | Free cash | Verdict |",
                       "|---|---|---|---|---|---|---|---|---|"]
-            for s in ex["structures"]:
-                if s.get("verdict") == "n/a":
-                    lines.append(f"| {s['name']} | {_legs_text(s, ccy == 'USD')} | - | - | - | - | - | - | n/a ({s['why']}) |")
-                    continue
-                mg = "unlimited" if s["max_gain"] is None else _m(s["max_gain"], ccy)
-                be = " / ".join(_k(b) for b in s["breakevens"])
-                v = s["verdict"] + (f" (up to {s['max_lots']} {unit_word}{'' if s['max_lots'] == 1 else 's'})" if s["verdict"] == "PASS" else f": {s['why']}")
-                lines.append(f"| {s['name']} | {_legs_text(s, ccy == 'USD')} | {_m(s['net_debit_lot'], ccy)} | {_m(s['max_loss'], ccy)} | {mg} | "
-                             f"{be} | {_m(s['long_leg_max'], ccy)} = {s['long_leg_pct']:.1f}% {s['rule_10pct']} | "
-                             f"needs {_m(s['cash_need'], ccy)} {s['free_cash']} | {v} |")
+            for st in passing:
+                mg = "unlimited" if st["max_gain"] is None else _m(st["max_gain"], ccy)
+                be = " / ".join(_k(v) for v in st["breakevens"])
+                v = f"PASS (up to {st['max_lots']} {unit_word}{'' if st['max_lots'] == 1 else 's'})"
+                lines.append(f"| {st['name']} | {_legs_text(st, ccy == 'USD')} | {_m(st['net_debit_lot'], ccy)} | {_m(st['max_loss'], ccy)} | {mg} | "
+                             f"{be} | {_m(st['long_leg_max'], ccy)} = {st['long_leg_pct']:.1f}% {st['rule_10pct']} | "
+                             f"needs {_m(st['cash_need'], ccy)} {st['free_cash']} | {v} |")
+            fails = [st for st in ex["structures"] if st.get("verdict") != "PASS"]
+            if fails:
+                lines += [""] + [f"- {_fail_line(st)}" for st in fails]
             lines.append("")
+    if nofit:
+        lines += ["### Did not fit the 10% limit (one line each)", ""] + [f"- {n}" for n in nofit] + [""]
     return lines
 
 
@@ -415,7 +522,8 @@ def fno_lines(c: dict | None) -> list[str]:
               "Write the numeric strikes and the exact expiry date shown here in the order (\"ATM\" is re-resolved at "
               "the fill-day open). PASS/FAIL mirrors the engine's checks: each long leg's premium <= 10% of equity "
               "(the short leg of a debit spread is covered, margin 0), free cash covers the long premiums plus entry "
-              "charges, the legs fit the free position slots. Max loss includes entry charges, not exit charges.", ""]
+              "charges, the legs fit the free position slots. Max loss includes entry charges, not exit charges. Only what "
+              "passes is tabled; each failing structure is one line.", ""]
     lines += [f"- {n}" for n in c.get("notes", [])]
     if c.get("notes"):
         lines.append("")
@@ -440,7 +548,11 @@ def us_lines(c: dict | None, offline: bool = False) -> list[str]:
               "US session); **model (BS on chain IV)** = no two-sided quote, Black-Scholes on Yahoo's implied vol; "
               "**no quote** = neither. An option order fills at the chain mid of the session after its decision_date. "
               "Expiry: the nearest monthly (third Friday) 14-42 days out; ATM = the listed strike nearest the close. "
-              "PASS/FAIL as for F&O: each long leg's premium x 100 <= 10% of equity, free cash, slots.", ""]
+              "PASS/FAIL as for F&O: each long leg's premium x 100 <= 10% of equity, free cash, slots. Only what "
+              "passes is tabled; SPY and QQQ are reference only (one contract is above the limit at this size). "
+              "**model (BS on IV implied by last trades)** = outside US hours (the 17:33 IST run is US pre-market) Yahoo "
+              "shows no bid/ask, so one IV is backed out of the latest session's near-the-money last trades and every "
+              "strike is priced from it: an estimate, not a quote; the fill will be at the next session's mid.", ""]
     lines += [f"- {n}" for n in c.get("notes", [])]
     lines += _lines_common(c, "USD", "contract")
     while lines and lines[-1] == "":

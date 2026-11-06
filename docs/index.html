@@ -668,6 +668,7 @@ footer a { color: inherit; }
     if (!s) return "n/a";
     if (/^real /.test(s)) return "chain mid";
     if (/chain IV/.test(s)) return "BS on chain IV";
+    if (/last trades/.test(s)) return "BS on last-trade IV";
     if (/VIX/.test(s)) return "model (VIX / RV)";
     return s;
   }
@@ -688,13 +689,22 @@ footer a { color: inherit; }
         (usd ? "chain mid" : "model on chain IV ±1%") + "), so put the exact strikes and expiry shown here in an order." })
     ])];
     (c.notes || []).forEach(function (n) { kids.push(h("div", { class: "banner", text: n })); });
-    (c.underlyings || []).forEach(function (u, idx) {
-      if (u.error) { kids.push(h("div", { class: "card small muted", style: "margin-top:8px", text: u.underlying + ": not available (" + u.error + ")" })); return; }
+    var nofit = [], shown = 0;
+    (c.underlyings || []).forEach(function (u) {
+      if (u.error) { nofit.push(u.underlying + ": not available (" + u.error + ")"); return; }
       var exps = u.expiries || [];
       var pass = 0, total = 0, real = false;
       exps.forEach(function (e) { (e.structures || []).forEach(function (s) { total++; if (s.verdict === "PASS") pass++; });
         (e.rows || []).forEach(function (r) { if (/^real /.test(r.source || "")) real = true; }); });
       var first = exps.length ? exps[exps.length - 1] : null;
+      if (!pass) {     // nothing fits the 10% limit: one line, not a card
+        var cheap = null;
+        exps.forEach(function (e) { (e.rows || []).forEach(function (r) { [r.CE, r.PE].forEach(function (q) {
+          if (q && isNum(q.per_lot) && (cheap === null || q.per_lot < cheap)) cheap = q.per_lot; }); }); });
+        nofit.push(u.underlying + " " + (usd ? "$" : "") + f2.format(u.spot) + ((c.reference || []).indexOf(u.underlying) >= 0 ? " (reference)" : "") +
+          (cheap !== null ? ": cheapest premium " + money(cheap) + " per " + unit + " vs " + money(c.cap) + " limit" : ": no usable quotes"));
+        return;
+      }
       var summ = h("summary", null, [
         h("span", null, [h("span", { class: "sym", text: u.underlying }), h("span", { class: "muted num", style: "margin-left:8px", text: (usd ? "$" : "") + f2.format(u.spot) })]),
         h("span", null, [h("span", { class: "badge " + (pass ? "pass" : "fail"), text: pass + "/" + total + " pass" }), h("span", { class: "chev", style: "margin-left:6px", text: "▾" })]),
@@ -712,13 +722,17 @@ footer a { color: inherit; }
         };
         body.push(h("div", { class: "table-scroll" }, [h("table", null, [
           h("thead", null, [h("tr", null, [h("th", { text: "Strike" }), h("th", { class: "r", text: "Call / " + unit }), h("th", { class: "r", text: "Put / " + unit }), h("th", { text: "Source" })])]),
-          h("tbody", null, (e.rows || []).map(function (r) {
+          h("tbody", null, (e.rows || []).filter(function (r) {
+            var fit = function (q) { return q && isNum(q.per_lot) && q.per_lot <= c.cap + 1e-9; };
+            return fit(r.CE) || fit(r.PE);
+          }).map(function (r) {
             return h("tr", null, [h("td", { class: r.offset === 0 ? "atm" : "" }, [kFmt(r.strike), h("span", { class: "sub", text: r.offset === 0 ? "ATM" : "ATM" + (r.offset > 0 ? "+" : "") + r.offset })]),
               cell(r.CE), cell(r.PE), h("td", null, [h("span", { class: "src" + (/^real /.test(r.source || "") ? " real" : ""), text: srcShort((r.CE || {}).src) + ((r.PE || {}).src !== (r.CE || {}).src ? " / " + srcShort((r.PE || {}).src) : "") })])]);
           }))])]));
         (e.structures || []).forEach(function (s) {
           var legs = (s.legs || []).map(function (l) { return l.side + " " + (usd ? (l.right === "CE" ? "CALL" : "PUT") : l.right) + " " + kFmt(l.strike); }).join(" + ") + " · " + s.expiry;
           var ok = s.verdict === "PASS";
+          if (!ok) { body.push(h("div", { class: "nums muted", style: "margin-top:6px;font-size:12px", text: s.name + ": " + (s.verdict === "n/a" ? "n/a" : "FAIL") + " (" + s.why + ")" })); return; }
           body.push(h("div", { class: "strat" }, [
             h("div", { class: "row" }, [h("span", { class: "name", text: s.name }), h("span", { class: "badge " + (ok ? "pass" : "fail"), text: s.verdict === "n/a" ? "N/A" : s.verdict })]),
             h("div", { class: "legs", text: legs }),
@@ -730,9 +744,12 @@ footer a { color: inherit; }
         });
       });
       var d = h("details", { class: "card cand", style: "margin-top:8px" }, [summ, h("div", { class: "body" }, body)]);
-      if (idx === 0) d.setAttribute("open", "");
+      if (shown++ === 0) d.setAttribute("open", "");
       kids.push(d);
     });
+    if (nofit.length) kids.push(h("div", { class: "card small", style: "margin-top:8px" }, [
+      h("div", { class: "muted", text: "Did not fit the 10% limit" }),
+      h("ul", { style: "padding-left:18px;margin:4px 0 0" }, nofit.map(function (n) { return h("li", { text: n }); }))]));
     app.appendChild(section(id, title + " (" + dShort(c.date) + ")", kids));
   }
 

@@ -1,5 +1,24 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-06 - US candidates: macro ETFs, PASS-only tables, pre-market pricing
+
+- **Why**: the 5 Nov review found the US 10% per-order limit (about $529) binding: one SPY / QQQ contract
+  costs $800-1,600. The fix is instrument choice, not a looser limit.
+- **Universe** (`config.US_CANDIDATE_TICKERS`): SPY and QQQ kept for reference; added XLF, KRE, XLE, XLU,
+  XLP, XLV, GDX, SLV, EWZ, EEM, TLT; the five cheap stocks stay. Non-reference tickers are shown only while
+  their close is <= `US_CANDIDATE_MAX_PRICE` ($65); the rest are named in one line. On 6 Nov that kept XLF,
+  XLE, XLU, SLV, EWZ, EEM and left out KRE, XLP, XLV, GDX, TLT.
+- **Tables list only what passes** (both candidates sections and the dashboard cards): strike rows where at
+  least one side fits the 10% limit, PASS structures; each failing structure is one line; an underlying
+  where nothing fits is one line under "Did not fit".
+- **Pre-market pricing**: at 17:33 IST (US pre-market) Yahoo shows bid = ask = 0 and a meaningless IV on every
+  contract, so the 5 Nov candidates were mostly "no quote". Yahoo's IV is now trusted only with a bid or ask;
+  otherwise one IV is backed out of the latest session's near-the-money last trades (median) and every strike
+  is priced from it, labelled "model (BS on IV implied by last trades)". A spread whose debit falls outside
+  0..strike gap is shown n/a (inconsistent prices) instead of PASS.
+- **Not changed**: the US sleeve's own fills and marks (us.py quote()) still need a two-sided quote or the
+  stored IV; pre-market they fall back the same way as before.
+
 ## 2026-11-04 - F&O and US candidates, real NSE option chains, 2026 charge rates, lot-size fixes
 
 - **Why**: in 12 daily reviews the F&O and US sleeves never traded. The journal gave the reviewer only

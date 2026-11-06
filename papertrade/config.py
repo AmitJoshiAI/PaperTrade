@@ -141,9 +141,16 @@ US_CONTRACT_SIZE = 100
 US_SHORT_STOCK_MARGIN_PCT = 0.50      # paper short stock: 50% of notional blocked (Reg T initial margin)
 US_RISK_FREE_RATE = 0.04              # approximate US T-bill yield; used ONLY by the labelled Black-Scholes fallback
                                       # when a chain has no two-sided quote. VERIFY / update by hand.
-# US candidates (journal "## US candidates"): SPY and QQQ for reference (one ATM contract is usually above the
-# 10% limit at this size) and five liquid underlyings under about $60, so one contract's premium can fit
-# (about $529). Chosen 4 Nov 2026; edit freely. Expiry: the nearest monthly (third Friday) 14-42 days out.
-US_CANDIDATE_TICKERS = ["SPY", "QQQ", "F", "PFE", "INTC", "SOFI", "BAC"]
+# US candidates (journal "## US candidates"). SPY and QQQ are listed for reference only (one ATM contract,
+# $800-1,600, is above the 10% limit of about $529 at this size). The sector / country / commodity / bond ETFs
+# let the reviewer express a macro view inside the limit (financials XLF, regional banks KRE, energy XLE,
+# utilities XLU, staples XLP, health XLV, gold miners GDX, silver SLV, Brazil EWZ, emerging markets EEM,
+# long Treasuries TLT); the five stocks are cheap, liquid single names. Every ticker except the reference ones
+# is shown only while its last close is at or below US_CANDIDATE_MAX_PRICE (checked each run, so the list
+# follows the prices); the ones above it are named in one line. Edit freely. Added ETFs 6 Nov 2026.
+US_CANDIDATE_REFERENCE = ["SPY", "QQQ"]
+US_CANDIDATE_TICKERS = ["SPY", "QQQ", "XLF", "KRE", "XLE", "XLU", "XLP", "XLV", "GDX", "SLV", "EWZ", "EEM", "TLT",
+                        "F", "PFE", "INTC", "SOFI", "BAC"]
+US_CANDIDATE_MAX_PRICE = 65.0         # "under about $60": a little headroom so XLE / EEM do not flicker in and out
 US_CANDIDATE_MIN_DAYS = 14
 US_CANDIDATE_MAX_DAYS = 42
