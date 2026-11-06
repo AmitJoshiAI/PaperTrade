@@ -609,9 +609,9 @@ footer a { color: inherit; }
         h("div", null, [h("span", { text: "Charges paid" }), cur(sd.costs_paid, ccy, 2)]),
         usd ? h("div", { class: "wide" }, [h("span", { text: "INR P&L since start" }),
           rsSigned(sd.total_pnl_inr, 2) + ", of which FX " + rsSigned(sd.fx_pnl_inr, 2)]) : null,
-        usd ? h("div", { class: "wide muted" }, [h("span", { text: "USD/INR used" }),
-          (isNum(sd.usd_inr) ? sd.usd_inr.toFixed(2) : "n/a") + " · " + (sd.fx_note || "") +
-          (isNum(sd.start_fx) ? " · start rate " + sd.start_fx.toFixed(2) + " (" + (sd.start_fx_date || "") + ")" : "")]) : null
+        usd ? h("div", { class: "wide" }, [h("span", { text: "USD/INR used today" }),
+          (isNum(sd.usd_inr) ? sd.usd_inr.toFixed(2) : "n/a") + (sd.fx_date ? " (Yahoo close of " + dShort(sd.fx_date) + ")" : ""),
+          h("div", { class: "muted small", text: isNum(sd.start_fx) ? "Funded at " + sd.start_fx.toFixed(2) + " on " + dLong(sd.start_fx_date) : "" })]) : null
       ]),
       h("p", { class: "muted small", style: "margin:10px 0 0", text: blurb }),
       h("p", { class: "muted small", style: "margin:6px 0 0", text: "Limits: max " + sd.max_positions + " positions, risk per order ≤ " +
@@ -996,7 +996,7 @@ footer a { color: inherit; }
 
     // (e3) India F&O and US sleeves, then all four sleeves on one chart
     [["fno", "India F&O sleeve", "NIFTY / BANKNIFTY and listed stock futures and options. Futures are priced spot x (1 + 6.5% x days/365); options with Black-Scholes on India VIX (index) or 1.5x 30-day realised vol (stocks). Mark-to-model, not market quotes."],
-     ["us", "US sleeve", "US stocks and ETFs (long; shorts are paper only) and US options priced at the mid of the real Yahoo option chain (a Black-Scholes fallback is labelled). Rs 5,00,000 converted at the USD/INR of the start date; INR values use each day's Yahoo USDINR=X close, so a rupee move shows up as P&L (shown as FX)."]
+     ["us", "US sleeve", "US stocks and ETFs (long; shorts are paper only) and US options priced at the mid of the real Yahoo option chain (a Black-Scholes fallback is labelled). INR values use each day's Yahoo USDINR=X close (today's rate and its date below; the Rs 5,00,000 was converted at the start date's rate), so a rupee move shows up as P&L (shown as FX). US marks are one session behind: the US session closes after the 17:33 IST run."]
     ].forEach(function (x) {
       if (d[x[0]]) renderDeriv(app, x[0], x[1], d[x[0]], x[2]);
       else if (x[0] in d) app.appendChild(section(x[0], x[1], [h("div", { class: "banner", text: x[1] + " data could not be exported this run (see the run log)." })]));

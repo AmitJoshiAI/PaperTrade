@@ -421,14 +421,15 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
 def journal_lines(s: dict) -> list[str]:
     book = s["book"]
     e = s["equity"]
-    intro = (f"Separate book: Rs {config.US_CAPITAL:,.0f} = ${book.starting_capital:,.2f} at USD/INR "
-             f"{book.start_fx:.4f} (close of {book.start_fx_date}). INR values use each day's USD/INR "
-             f"(Yahoo USDINR=X daily close, state/fx_rates.csv). US stocks/ETFs long and paper-short, US options "
-             f"priced from the {CHAIN_LABEL}; a Black-Scholes fallback is labelled. US market date {s['date']} "
-             f"(US calendar). Every short stock: {PAPER_SHORT_US}. Limits in RISK_LIMITS.md.")
+    intro = (f"USD/INR used today {book.fx():.2f}, {book.fx_note} (the US market date's rate); the sleeve was funded at {book.start_fx:.4f} on "
+             f"{book.start_fx_date} (Rs {config.US_CAPITAL:,.0f} = ${book.starting_capital:,.2f}). INR values use "
+             f"each day's rate (state/fx_rates.csv). Separate book: US stocks/ETFs long and paper-short, US options "
+             f"priced from the {CHAIN_LABEL}; a Black-Scholes fallback is labelled. US market date {s['date']}: "
+             f"the US session closes after the 17:33 IST run, so US marks are one session behind. Every short stock: "
+             f"{PAPER_SHORT_US}. Limits in RISK_LIMITS.md.")
     rows = [f"| USD/INR used today | {book.fx():.4f} ({book.fx_note}) |",
             f"| Total P&L in INR | Rs {e['total_pnl_inr']:,.2f}, of which FX Rs {e['fx_pnl_inr']:,.2f} "
-            f"(start rate {book.start_fx:.4f}) |",
+            f"(funded at {book.start_fx:.4f} on {book.start_fx_date}) |",
             f"| Day P&L in INR | Rs {e['day_pnl_inr']:,.2f}, of which FX Rs {e['day_fx_pnl_inr']:,.2f} |"]
     return _journal_lines(s, title="## US sleeve", ccy="$", label=CHAIN_LABEL, intro=intro, inr_note=True,
                           extra_rows=rows)

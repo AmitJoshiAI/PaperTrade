@@ -259,7 +259,8 @@ def combined_lines(eq_row: dict, thesis_out, fno_out, us_out) -> list[str]:
         tot = sum(r[2] for r in rows)
         lines.append(f"| **Combined** | Rs {cap:,.0f} | **Rs {tot:,.0f}** | Rs {tot - cap:+,.0f} ({(tot / cap - 1) * 100:+.2f}%) |")
     if us_out:
-        lines += ["", f"USD/INR {us_out['book'].fx():.4f}: {us_out['book'].fx_note}. Of the US sleeve's INR P&L, "
-                      f"Rs {us_out['equity']['fx_pnl_inr']:+,.2f} is FX (start rate {us_out['book'].start_fx:.4f}). "
+        b = us_out["book"]
+        lines += ["", f"USD/INR used today for the US sleeve {b.fx():.2f}, {b.fx_note}. Of the US sleeve's INR P&L, "
+                      f"Rs {us_out['equity']['fx_pnl_inr']:+,.2f} is FX (funded at {b.start_fx:.4f} on {b.start_fx_date}). "
                       f"Check against the RBI/FBIL reference rate (https://www.fbil.org.in/); they differ by a few paise."]
     return lines
