@@ -9,7 +9,7 @@ invalidation_price: 0
 size_cap_pct: 15
 status: proposed
 type: catalyst
-event: RBI Monetary Policy Committee decision, December 2026 meeting (exact date to be confirmed from the RBI calendar; estimated 4 Dec 2026)
+event: RBI Monetary Policy Committee decision, December 2026 meeting (2-4 Dec 2026, decision 4 Dec; RBI press release prid=62422, confirmed 2026-11-06)
 event_date: 2026-12-04
 post_event_rule: hold if close on decision day > entry price, then trail stop 5% from the highest close; otherwise sell at next open
 post_event_applied:
@@ -41,3 +41,4 @@ reaction is held with a trailing stop; an unfavourable one is sold the next morn
 - 2026-10-17 (opened by Claude as proposed): entry deliberately delayed to 2026-11-19. Reviewer:
   confirm the December MPC date from rbi.org.in and set event_date to it.
 - 2026-11-06 (weekly review, Claude): still proposed; BUY Rs 75,000 dated 2026-11-19 unchanged. Confirm the December MPC date from rbi.org.in before the buy.
+- 2026-11-06 (weekly strategist, Claude): MPC date confirmed 2-4 Dec 2026, decision 4 Dec (RBI release prid=62422 via search; rbi.org.in fetch blocked); event_date unchanged. Macro: RBI hiked 25 bp to 5.50% on 7 Oct and moved to calibrated tightening, so the December outcome is genuinely uncertain. BUY Rs 75,000 dated 2026-11-19 unchanged; post-event rule unchanged.

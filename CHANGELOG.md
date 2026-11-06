@@ -300,3 +300,14 @@
   paper replay, or the sleeve sits in cash for more than 15 consecutive trading days while the Nifty rises.
 - **Deferred**: the 5-day re-entry cooldown after a trend-break sell (one case, ADANIPORTS; subsumed by this
   gate since that re-entry was at -0.9%).
+
+## PROPOSAL (2026-11-06) - US sleeve: SEC Section 31 fee rate (weekly strategist; not applied)
+
+- **Old -> new**: `US_SEC_FEE = 0.0000278` ($27.80 per million of sell notional) -> `0.0000206` ($20.60 per million).
+- **Evidence (structural: a cost error)**: SEC Fee Rate Advisory 2026-2 (https://www.sec.gov/rules-regulations/fee-rate-advisories/2026-2,
+  issued 27 Feb 2026): fiscal 2026 rate $20.60 per million from 4 April 2026, in force until 60 days after the FY2027 appropriation
+  is enacted; FINRA Information Notice 3/17/26 repeats it. Read via WebSearch excerpts (WebFetch blocked in the routine sandbox).
+- **Expected effect**: US sell-side regulatory fees about 26% lower (a $500 sale: $0.0139 -> $0.0103). No past number changes:
+  the US sleeve has never traded.
+- **Revert if**: the sec.gov page, read directly by the user's session, shows a different rate in force.
+
