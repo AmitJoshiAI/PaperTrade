@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-06 13:54 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
-Quotes: 55 symbols checked, 7 moving.
+Generated 2026-11-06 16:55 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 6 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -29,55 +29,43 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2dbd34ab4f1a
 - Second-order candidates: False match: round-up of many results (same blog family as 25dda475232b); no single-company mechanism.
 
-## 3. [13 HIGH] Q2 Results Today Live: M&M, NBCC, IPCA Lab, Bharat Forge, LG Electronics, Uno Minda & Amagi Media Q2 profit up, Samvardhana Motherson profit down q-o-q, Bharti Airtel, LIC, Titan, ONGC, Britannia, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results
+## 3. [12 HIGH] Diwali stock picks 2026: Titan, ICICI Bank, HDFC Bank, BSE, Eternal among 25 stocks with up to 46% upside for Samvat 2083; check target prices
 
-- Time: 2026-11-05 16:45 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-bharti-airtel-lic-titan-mm-ongc-samvardhana-britannia-lg-bharat-forge-prestige-fortis-abbott-india-bse-biocon-apollo-lesnkart-nykaacompany-results-05-november-2026/article71668559.ece
-- Matched symbols: BHARTIARTL, TITAN, ONGC, M&M (moving today: M&M)
-- Keywords: results
-- Thesis match: crude-ongc-vs-hpcl (open)
-- Score: 13
-- Alert id: 758a8374fe62
-- Second-order candidates: False match: earlier edition of the multi-company results live blog (see 25dda475232b); no single-company mechanism.
-
-## 4. [13 HIGH] Q2 Results Today Live: M&M, IPCA Lab, Bharat Forge, LG Electronics, Uno Minda & Amagi Media Q2 profit up, Bharti Airtel, LIC, Titan, ONGC, Samvardhana, Britannia, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results
-
-- Time: 2026-11-05 14:35 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-bharti-airtel-lic-titan-mm-ongc-samvardhana-britannia-lg-bharat-forge-prestige-fortis-abbott-india-bse-biocon-apollo-lesnkart-nykaacompany-results-05-november-2026/article71668559.ece
-- Matched symbols: BHARTIARTL, TITAN, ONGC, M&M (moving today: M&M)
-- Keywords: results
-- Thesis match: crude-ongc-vs-hpcl (open)
-- Score: 13
-- Alert id: 3bfbfbd042b6
-- Second-order candidates: Winner: none single - round-up; M&M and Bharat Forge prints are the only ones reported so far (see M&M notes below). ONGC print still pending and is the one that matters for the open thesis. / Losers: none clear - round-up, not one event. / Catalyst: scheduled - Q2 results day; ONGC's crude realisation and production are the dated event for crude-ongc-vs-hpcl, not yet out in this update. / Thesis fit: open thesis crude-ongc-vs-hpcl: neutral until ONGC's numbers are read
-
-## 5. [11 HIGH] Diwali stock picks 2026: Reliance Industries, ICICI Bank, Tata Steel, Eternal among 30 stocks to buy for Samvat 2083; brokerages see up to 38% upside
-
-- Time: 2026-11-05 14:46 IST
+- Time: 2026-11-06 16:55 IST
 - Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/diwali-stock-picks-2026-reliance-industries-icici-bank-tata-steel-eternal-among-30-stocks-to-buy-for-samvat-2083-brokerages-see-up-to-38-upside-14071428.html
-- Matched symbols: RELIANCE, ICICIBANK, TATASTEEL (moving today: ICICIBANK)
-- Keywords: none
+- Link: https://www.moneycontrol.com/news/business/markets/diwali-stock-picks-2026-titan-icici-bank-hdfc-bank-bse-eternal-among-25-stocks-with-up-to-46-upside-for-samvat-2083-check-target-prices-14072831.html
+- Matched symbols: ICICIBANK, HDFCBANK, TITAN (moving today: ICICIBANK, TITAN)
+- Keywords: rating
 - Thesis match: icici-bank-recovery (open)
-- Score: 11
-- Alert id: 54f348641dcb
-- Second-order candidates: Winner: none - a listicle of brokerage recommendations; no event or mechanism, only sentiment around Muhurat trading. / Losers: none clear / Catalyst: none - recurring seasonal content, not new information. / Thesis fit: open thesis icici-bank-recovery: neutral (a brokerage pick adds no new evidence for or against the thesis)
+- Score: 12
+- Alert id: dcfa33cc591e
+- Second-order candidates: 
 
-## 6. [10 HIGH] Adani Ports and Special Economic Zone Limited: Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), regarding an agreement to acquire 100% stake in Evos B.V.
+## 4. [9 HIGH] Adani Ports and Special Economic Zone Limited: 'Transcript of Analysts/Investors Call pertaining to agreement to acquire 100% stake in Evos B.V.'.
 
-- Time: 2026-11-05 15:09 IST
+- Time: 2026-11-06 16:52 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/rkbhagia_05112026150844_APSEZSEIntimation.pdf
+- Link: https://nsearchives.nseindia.com/corporate/rkbhagia_06112026165120_Letter14.pdf
 - Matched symbols: ADANIPORTS
-- Keywords: listing, SEBI, stake sale, M&A
+- Keywords: stake sale, M&A
 - Thesis match: none
-- Score: 10
-- Alert id: ab5c743a718d
-- Second-order candidates: Winner: Adani Ports (ADANIPORTS) - buys a Europe-based oil/liquids tank-storage terminal operator, extending its ports-and-logistics reach beyond India; the deal is a strategic add, value depends on price and funding, which the filing headline does not state. / Losers: none clear - no listed Indian peer loses a contract because of an overseas acquisition; the real risk sits with Adani Ports itself (leverage if debt-funded). / Catalyst: surprise - an undated board-level acquisition agreement; next dated events are regulatory approvals and closing, not yet announced. / Thesis fit: none (price and funding terms not available, so no thesis drafted)
+- Score: 9
+- Alert id: 987e0f5af4ce
+- Second-order candidates: 
 
-## 7. [9 HIGH] Oil and Natural Gas Corporation Ltd: Integrated Financial Results For The Quarter And Half Year Ended 30.09.2026.
+## 5. [9 HIGH] Adani Ports and Special Economic Zone Ltd: Transcript Of Analysts/Investors Call Pertaining To Agreement To Acquire 100% Stake In Evos B.V.
+
+- Time: 2026-11-06 16:47 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/c1ad64a7-d93f-4a53-95bf-73cfc5276772.pdf
+- Matched symbols: ADANIPORTS
+- Keywords: stake sale, M&A
+- Thesis match: none
+- Score: 9
+- Alert id: ac47647511ea
+- Second-order candidates: 
+
+## 6. [9 HIGH] Oil and Natural Gas Corporation Ltd: Integrated Financial Results For The Quarter And Half Year Ended 30.09.2026.
 
 - Time: 2026-11-05 17:36 IST
 - Source: BSE announcements
@@ -89,31 +77,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 06a508a7dcb1
 - Second-order candidates: Winner: ONGC - higher realised crude and gas prices flow straight into upstream profit, the same mechanism as the open ONGC leg; the board also approved a dividend. / Losers: HINDPETRO (HPCL) - buys crude in dollars and cannot raise pump prices quickly, so the same price rise that lifts ONGC squeezes refiner-marketer margin; the print itself says nothing new about HPCL, whose own results are the next check. / Catalyst: scheduled, already out - Q2 results 2026-11-05; thesis time-box runs to 2026-12-15, no new dated event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (ONGC leg earnings confirm the realisation mechanism; HPCL leg still unproven until its own Q2 margin is seen)
 
-## 8. [9 HIGH] ICICI Bank Limited: Allotment of Securities
+## 7. [8 HIGH] Mahindra & Mahindra Limited: Acquisition (including agreement to acquire)
 
-- Time: 2026-11-05 14:52 IST
+- Time: 2026-11-06 16:26 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/ALTERATION_OF_CAPITAL_AND_FUND_RAISING_1606_WebXMLFile_20261105_145234758.xml
-- Matched symbols: ICICIBANK (moving today: ICICIBANK)
-- Keywords: none
-- Thesis match: icici-bank-recovery (open)
-- Score: 9
-- Alert id: 9f15cab446d1
-- Second-order candidates: Winner: none clear - routine capital-alteration filing (most likely employee stock options exercised); adds a few shares, no mechanism. / Losers: none clear / Catalyst: none - routine filing. / Thesis fit: open thesis icici-bank-recovery: neutral
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_679_WebXMLFile_20261106_162619362.xml
+- Matched symbols: M&M (moving today: M&M)
+- Keywords: M&A
+- Thesis match: none
+- Score: 8
+- Alert id: ec6c0fb35c01
+- Second-order candidates: 
 
-## 9. [9 HIGH] ICICIBANK +5.3% vs previous close, volume 3.1x 20-day average (close 1500.0, bar 2026-11-05)
+## 8. [8 HIGH] Mahindra & Mahindra Limited: Acquisition
 
-- Time: 2026-11-05 14:46 IST
-- Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/ICICIBANK.NS
-- Matched symbols: ICICIBANK (moving today: ICICIBANK)
-- Keywords: price move
-- Thesis match: icici-bank-recovery (open)
-- Score: 9
-- Alert id: 8372310d3414
-- Second-order candidates: Winner: ICICI Bank - the heavy volume on the up-move suggests institutional buying; the cause is not named in the alert and the likely driver is the broad rally in financials that day (Sensex +2,100 pts, Bajaj Finance leading, see 95db3bb57bbb). / Losers: none clear - market-wide move, no named share-loser. / Catalyst: unknown - no news found for a stock-specific cause. / Thesis fit: open thesis icici-bank-recovery: supports (price and volume move in the thesis direction); no change proposed.
+- Time: 2026-11-06 15:36 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/AmitDodani_06112026153559_SEIntimationSMLRightsIssue.pdf
+- Matched symbols: M&M (moving today: M&M)
+- Keywords: M&A
+- Thesis match: none
+- Score: 8
+- Alert id: e5ef50fcd882
+- Second-order candidates: 
 
-## 10. [8 HIGH] ONGC net profit jumps 57% on higher oil, gas prices
+## 9. [8 HIGH] ONGC net profit jumps 57% on higher oil, gas prices
 
 - Time: 2026-11-05 19:17 IST
 - Source: Moneycontrol
@@ -125,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: bc5fbf59dbc9
 - Second-order candidates: Winner: ONGC - higher realised crude and gas prices flow straight into upstream profit (same mechanism as the open ONGC leg). / Losers: HINDPETRO (HPCL) - buys crude in dollars and cannot pass on a price rise quickly, so refiner-marketer margin is squeezed; HPCL's own Q2 is the next check. / Catalyst: scheduled, already out - Q2 results 2026-11-05; see the full note under 06a508a7dcb1, no new dated event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (ONGC leg only; HPCL leg unproven)
 
-## 11. [8 HIGH] Oil and Natural Gas Corporation Ltd: Corporate Action-Board approves Dividend
+## 10. [8 HIGH] Oil and Natural Gas Corporation Ltd: Corporate Action-Board approves Dividend
 
 - Time: 2026-11-05 17:42 IST
 - Source: BSE announcements
@@ -137,50 +125,62 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 47ddd598ee99
 - Second-order candidates: Winner: ONGC holders - dividend is a cash return alongside the profit jump; it adds to the case but is not a new mechanism. / Losers: none clear - a dividend names no listed loser. / Catalyst: scheduled - record date follows the board decision (date not checked); minor, the profit print was the real event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (weakly)
 
-## 12. [8 HIGH] Maruti Infrastructure Ltd: Board Meeting Outcome for Unaudited Financial Result For Quarter And Half Year Ended 30.09.2026
+## 11. [7 HIGH] ICICIBANK +4.8% vs previous close (close 1571.2, bar 2026-11-06)
 
-- Time: 2026-11-05 16:50 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/590d5918-db23-4b70-8eda-d5317af60ec9.pdf
-- Matched symbols: MARUTI (moving today: MARUTI)
-- Keywords: results
-- Thesis match: none
-- Score: 8
-- Alert id: 0c759985d8ca
-- Second-order candidates: False match: Maruti Infrastructure Ltd is an unrelated small company, not Maruti Suzuki (MARUTI); no read-across.
-
-## 13. [8 HIGH] Maruti Infrastructure Ltd: Unaudited Financial Result For The Quarter And Half Year Ended 30.09.2026
-
-- Time: 2026-11-05 16:47 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f0c6beb1-05f7-40d3-a266-ce7b41910a32.pdf
-- Matched symbols: MARUTI (moving today: MARUTI)
-- Keywords: results
-- Thesis match: none
-- Score: 8
-- Alert id: a8571bb804d2
-- Second-order candidates: False match: Maruti Infrastructure Ltd is an unrelated small company, not Maruti Suzuki (MARUTI); same filer as 0c759985d8ca, no read-across.
-
-## 14. [8 HIGH] ICICI Bank shares nears 52-week high amid employee scheme allotments
-
-- Time: 2026-11-05 16:17 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/icici-bank-shares-near-52-week-high-as-allotments-signal-employee-scheme-activity/article71668901.ece
+- Time: 2026-11-06 16:55 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/ICICIBANK.NS
 - Matched symbols: ICICIBANK (moving today: ICICIBANK)
-- Keywords: none
+- Keywords: price move
 - Thesis match: icici-bank-recovery (open)
-- Score: 8
-- Alert id: 60982c855334
+- Score: 7
+- Alert id: 19ce7b518f18
 - Second-order candidates: 
 
-## 15. [8 HIGH] Sensex today | Stock Market Live: Sensex leaps 2,100 pts, Nifty tops 24,550; Bajaj Finance leads gainers
+## 12. [7 HIGH] Q2 Results Today Live: Hindalco Q2 profit zooms, Bosch, Coromandel International & Honasa profit down, Siemens, Aster DM, Gland Pharma, Voltas to announce Q2 results
 
-- Time: 2026-11-05 14:18 IST
+- Time: 2026-11-06 15:58 IST
 - Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-5-november-2026/article71665358.ece
-- Matched symbols: BAJFINANCE (moving today: BAJFINANCE)
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 8
-- Alert id: 95db3bb57bbb
-- Second-order candidates: Winner: broad market rally with Bajaj Finance leading (see aeb23bc12841); the index-wide move suggests a macro driver (flows or a global/rate move) rather than Bajaj-specific news; cause not stated in the headline. / Losers: none clear - index-wide up move. / Catalyst: unknown - no news found in the headline; Bajaj Finance move already covered under aeb23bc12841. / Thesis fit: proposed thesis bajaj-finance-rbi-december: entry price keeps rising (+7.6% today vs the 15 Oct reference 965.25 basis), so late-entry answer must be revisited before any activation. Not activated.
+- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-hindalco-ind-bosch-siemens-aster-dm-coromandel-intl-gland-pharma-voltas-nuvama-wealth-3m-india-airtel-lic-titan-mahindra-ongc-company-results-06-november-2026/article71669522.ece
+- Matched symbols: HINDALCO (moving today: HINDALCO)
+- Keywords: results
+- Thesis match: none
+- Score: 7
+- Alert id: 3e593e230e14
+- Second-order candidates: 
+
+## 13. [7 HIGH] Mahindra & Mahindra Financial Services Limited: Credit rating
+
+- Time: 2026-11-06 15:06 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/content/debt/WDM/M_MFIN_06112026150606_credit_rating.pdf
+- Matched symbols: M&M (moving today: M&M)
+- Keywords: rating
+- Thesis match: none
+- Score: 7
+- Alert id: 8dcec974cf77
+- Second-order candidates: 
+
+## 14. [7 HIGH] Titan surges 2.5% on strong Q2 results; brokerages divided on upside
+
+- Time: 2026-11-06 13:19 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/stock-markets/titan-surges-25-on-strong-q2-results-brokerages-divided-on-upside/article71673406.ece
+- Matched symbols: TITAN (moving today: TITAN)
+- Keywords: results
+- Thesis match: none
+- Score: 7
+- Alert id: 5c4d092d4623
+- Second-order candidates: 
+
+## 15. [7 HIGH] M&M shares surge 5% after Q2 results, brokerages maintain bullish outlook
+
+- Time: 2026-11-06 11:43 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/mm-shares-surge-5-after-q2-results-brokerages-maintain-bullish-outlook/article71673042.ece
+- Matched symbols: M&M
+- Keywords: results, guidance
+- Thesis match: none
+- Score: 7
+- Alert id: 6b8308563b92
+- Second-order candidates: 
