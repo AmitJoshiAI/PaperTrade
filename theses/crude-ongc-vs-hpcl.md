@@ -6,7 +6,7 @@ event: Crude price rise plus rupee weakness through September-October 2026 (anal
 event_date: 2026-10-16
 rule_due_date: 2026-12-15
 post_event_rule: close both legs at the next open after 2026-12-15; close earlier if Brent falls back to its 15 Oct 2026 level for five consecutive sessions, or if HPCL wins back half of its underperformance versus ONGC since entry (the market has rejected the link)
-post_event_applied:
+post_event_applied: 2026-11-06 rule triggered (Brent 15 Oct close 105.92; 2-6 Nov closes 104.77, 103.60, 94.62, 98.29, 98.69, all below); SELL ONGC + COVER HINDPETRO queued for the next open
 horizon: 2 months
 size_cap_pct: 25
 invalidation: Government cuts excise duty or allows pump price hikes that restore HPCL's marketing margin; or a windfall tax on upstream producers removes ONGC's benefit from higher crude
@@ -53,3 +53,4 @@ paper-short HPCL. Closes on 15 Oct 2026: ONGC Rs 224.64, HPCL Rs 348.50.
   record Brent, USD/INR, and the ONGC-minus-HPCL return since entry.
 - 2026-10-23 (weekly review, Claude): Combined +Rs 2,116 (ONGC +1.8%, HINDPETRO short +1.6%). No policy break known; Brent not checked. Unchanged.
 - 2026-10-30 (weekly review, Claude): combined +Rs 1,120. Brent not reliably verifiable from this sandbox; no excise cut or windfall tax found. No change; rule due after 2026-12-15.
+- 2026-11-06 (Claude, orchestrator): Brent (BZ=F) fell from 117.64 on 30 Oct to 94.62 on 4 Nov and has closed below the 15 Oct reference (105.92) for five straight sessions, which is the first early-exit condition of the post-event rule. Since entry ONGC is +3.0% and HINDPETRO +11.1% (the loser outperformed the winner by 8.1 points): the market read falling crude as good for the refiner, the opposite of the thesis premise. Combined P&L about Rs -4,700. Both legs queued to close at the Monday 9 Nov open. Lesson for the next pair: the second exit condition ("HPCL wins back half of its underperformance") assumed the trade would first go our way and never armed; future pairs need an absolute relative-performance stop (e.g. close if the loser outperforms the winner by 5 points since entry).
