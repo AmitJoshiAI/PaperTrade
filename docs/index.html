@@ -174,14 +174,20 @@ td { font-variant-numeric: tabular-nums; }
 .more { margin-top: 10px; width: 100%; font: inherit; font-size: 14px; padding: 10px; border-radius: 10px; border: 1px solid var(--border);
   background: var(--surface); color: var(--ink-2); cursor: pointer; }
 
-/* four-sleeve strip in the header: each tile jumps to its sleeve */
+/* four sleeve cards in the header: each card jumps to its sleeve */
 .sleeves { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
 @media (min-width: 640px) { .sleeves { grid-template-columns: repeat(4, 1fr); } }
-.sleeve { display: flex; flex-direction: column; gap: 1px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px;
+.sleeve { display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px;
   text-decoration: none; color: var(--ink); background: var(--page); min-width: 0; }
-.sleeve .label { font-size: 12px; color: var(--ink-2); }
-.sleeve .num { font-weight: 600; font-size: 15px; overflow-wrap: anywhere; }
-.sleeve .num.small { font-size: 12px; font-weight: 500; }
+.sleeve .name { font-size: 14px; font-weight: 650; }
+.sleeve .desc { font-size: 12px; line-height: 1.3; color: var(--muted); overflow-wrap: anywhere;
+  }
+.sleeve .spark { display: block; width: 100%; height: 36px; margin: 4px 0 2px; overflow: visible; }
+.sleeve .pl { display: flex; justify-content: space-between; align-items: baseline; gap: 4px; font-size: 12px; min-width: 0; }
+.sleeve .pl .k { color: var(--ink-2); }
+.sleeve .pl .num { font-weight: 600; font-size: 13px; overflow-wrap: anywhere; text-align: right; }
+.sleeve .eq { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+.momline { margin: 0 0 8px; }
 
 footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--muted); }
 footer p { margin: 4px 0; }
@@ -344,6 +350,24 @@ footer a { color: inherit; }
     for (var k in attrs) el.setAttribute(k, attrs[k]);
     if (text != null) el.textContent = text;
     return el;
+  }
+  // sleeve sparkline: equity line plus a dotted baseline at capital; no axes, colours via CSS variables
+  function sparkline(vals, base) {
+    var W = 100, H = 36, pad = 3;
+    var svg = s("svg", { class: "spark", viewBox: "0 0 " + W + " " + H, preserveAspectRatio: "none", "aria-hidden": "true", focusable: "false" });
+    if (!vals.length) return svg;
+    var all = vals.concat(isNum(base) ? [base] : []);
+    var lo = Math.min.apply(null, all), hi = Math.max.apply(null, all);
+    var y = function (v) { return hi === lo ? H / 2 : pad + (hi - v) / (hi - lo) * (H - 2 * pad); };
+    var pts = vals.length < 2 ? [vals[0], vals[0]] : vals;
+    var x = function (i) { return i / (pts.length - 1) * W; };
+    if (isNum(base)) svg.appendChild(s("line", { x1: 0, x2: W, y1: y(base), y2: y(base), "stroke-dasharray": "1 3",
+      "vector-effect": "non-scaling-stroke", style: "stroke:var(--axis);stroke-width:1.5" }));
+    var dd = pts.map(function (v, i) { return (i ? "L" : "M") + x(i).toFixed(2) + " " + y(v).toFixed(2); }).join(" ");
+    var last = vals[vals.length - 1];
+    svg.appendChild(s("path", { d: dd, fill: "none", "vector-effect": "non-scaling-stroke", "stroke-linejoin": "round", "stroke-linecap": "round",
+      style: "stroke:" + (!isNum(base) || last >= base ? "var(--up)" : "var(--down)") + ";stroke-width:1.75" }));
+    return svg;
   }
   // y-axis tick label in lakh/crore with just enough decimals to be exact (2.5K steps -> 5.025L, not 5.03L)
   function tickFmt(v, step, hi) {
@@ -859,19 +883,32 @@ footer a { color: inherit; }
     var totalPct = start ? perf.total_pnl / start * 100 : null;
     var prevEq = curve.length > 1 ? curve[curve.length - 2].equity : null;
     var dayPct = prevEq ? perf.day_pnl / prevEq * 100 : null;
+    var th = d.thesis, cb = d.combined;
+    var cbCurve = cb && cb.equity_curve ? cb.equity_curve : [];
 
-    // (a) header
+    // (a) header: all four sleeves combined when available, else the momentum sleeve (older data.json)
+    var hero = { label: "Momentum sleeve equity", eq: perf.equity, day: perf.day_pnl, dayPct: dayPct,
+      total: perf.total_pnl, totalPct: totalPct, since: pf.start_date };
+    if (cb && cb.sleeves && isNum(cb.equity)) {
+      var cn = cbCurve.length, cPrev = cn > 1 ? cbCurve[cn - 2].equity : null, cLast = cn ? cbCurve[cn - 1].equity : null;
+      var cDay = isNum(cPrev) && isNum(cLast) ? cLast - cPrev : null;
+      var starts = [pf.start_date, th && th.start_date, d.fno && d.fno.start_date, d.us && d.us.start_date]
+        .filter(function (x) { return typeof x === "string" && x; }).sort();
+      hero = { label: "All four sleeves, paper money", eq: cb.equity, day: cDay, dayPct: isNum(cDay) && cPrev ? cDay / cPrev * 100 : null,
+        total: isNum(cb.capital) ? cb.equity - cb.capital : null, since: starts[0] || (cn ? cbCurve[0].date : null) };
+      hero.totalPct = isNum(hero.total) && cb.capital ? hero.total / cb.capital * 100 : null;
+    }
     var hdr = h("header", { class: "card" }, [
       h("div", { class: "top" }, [h("h1", { text: "PaperTrade" }), h("span", { class: "muted small", text: "As of " + dLong(d.as_of) })]),
-      h("div", { class: "hero-label", text: "Momentum sleeve equity" }),
-      h("div", { class: "hero", text: rs(perf.equity) }),
+      h("div", { class: "hero-label", text: hero.label }),
+      h("div", { class: "hero", text: rs(hero.eq) }),
       h("div", { class: "pair" }, [
         h("div", { class: "stat" }, [h("div", { class: "label", text: "Day P&L" }),
-          h("div", { class: "value " + tone(perf.day_pnl), text: rsSigned(perf.day_pnl) }),
-          h("div", { class: "sub", text: dayPct == null ? "first day" : pct(dayPct) })]),
+          h("div", { class: "value " + tone(hero.day), text: rsSigned(hero.day) }),
+          h("div", { class: "sub", text: hero.dayPct == null ? "first day" : pct(hero.dayPct) })]),
         h("div", { class: "stat" }, [h("div", { class: "label", text: "Total P&L" }),
-          h("div", { class: "value " + tone(perf.total_pnl), text: rsSigned(perf.total_pnl) }),
-          h("div", { class: "sub", text: (totalPct == null ? "" : pct(totalPct)) + " since " + dShort(pf.start_date) })])
+          h("div", { class: "value " + tone(hero.total), text: rsSigned(hero.total) }),
+          h("div", { class: "sub", text: (hero.totalPct == null ? "" : pct(hero.totalPct)) + " since " + dShort(hero.since) })])
       ])
     ]);
     // stale-data warning: the next step when the cloud run failed is to look at Actions
@@ -879,20 +916,35 @@ footer a { color: inherit; }
       var age = Math.floor((Date.now() - new Date(d.as_of + "T12:00:00Z").getTime()) / 86400000);
       if (age > 4) hdr.appendChild(h("div", { class: "banner", text: "Data is " + age + " days old. Check the latest run in the repo's Actions tab." }));
     }
-    var th = d.thesis, cb = d.combined;
     if (cb && cb.sleeves) {
-      // all four sleeves in one glance, each a link to its own section
-      var names = { momentum: ["Momentum", "#positions"], thesis: ["Thesis", "#thesis"], fno: ["India F&O", "#fno"], us: ["US", "#us"] };
-      hdr.appendChild(h("div", { class: "sleeves" }, cb.sleeves.map(function (s) {
-        var nm = names[s.name] || [s.name, "#"];
-        return h("a", { class: "sleeve", href: nm[1] }, [h("span", { class: "label", text: nm[0] }),
-          h("span", { class: "num", text: isNum(s.equity) ? rs(s.equity) : "n/a" }),
-          h("span", { class: "num small " + tone(s.pnl), text: isNum(s.pnl) ? rsSigned(s.pnl) : "" })]);
+      // all four sleeves in one glance: what each does, a sparkline, day and total P&L; each card links to its section
+      var names = {
+        momentum: ["Momentum", "#positions", "Rules in code: holds the 5 strongest Nifty 50 stocks, sells on a 7% stop or a trend break. Carries the Rs 1,000/day target."],
+        thesis: ["Thesis", "#thesis", "Claude's macro bets, weeks to months. Each has a written reason, a catalyst date and an exit rule."],
+        fno: ["India F&O", "#fno", "Nifty, Bank Nifty and stock options around scheduled events. Defined-risk spreads only."],
+        us: ["US", "#us", "US ETFs and options, under a $529 per-order cap, priced from real chains. Shown in rupees at the day's rate."]
+      };
+      hdr.appendChild(h("div", { class: "sleeves" }, cb.sleeves.map(function (sl) {
+        var nm = names[sl.name] || [sl.name, "#", ""];
+        var ser = cbCurve.map(function (r) { return r[sl.name]; }).filter(isNum);
+        var sDay = ser.length > 1 ? ser[ser.length - 1] - ser[ser.length - 2] : null;
+        var sPct = isNum(sl.pnl) && sl.capital ? sl.pnl / sl.capital * 100 : null;
+        var dayTxt = sDay == null ? "first day" : rsSigned(sDay);
+        var totTxt = isNum(sl.pnl) ? rsSigned(sl.pnl) + (sPct == null ? "" : " (" + pct(sPct) + ")") : "n/a";
+        var eqTxt = isNum(sl.equity) ? rs(sl.equity) : "n/a";
+        var trend = ser.length && isNum(sl.capital) ? (ser[ser.length - 1] >= sl.capital ? "at or above" : "below") + " its " + rs(sl.capital) + " capital" : "";
+        return h("a", { class: "sleeve", href: nm[1], title: nm[2] || null,
+          "aria-label": nm[0] + " sleeve. " + (nm[2] ? nm[2] + " " : "") + "Equity " + eqTxt + (trend ? ", " + trend : "") +
+            ". Day " + dayTxt + ". Total " + totTxt + "." }, [
+          h("span", { class: "name", text: nm[0] }),
+          nm[2] ? h("span", { class: "desc", text: nm[2] }) : null,
+          sparkline(ser, sl.capital),
+          h("span", { class: "pl" }, [h("span", { class: "k", text: "Day" }), h("span", { class: "num " + tone(sDay), text: dayTxt })]),
+          h("span", { class: "pl" }, [h("span", { class: "k", text: "Total" }), h("span", { class: "num " + tone(sl.pnl), text: totTxt })]),
+          h("span", { class: "eq num", text: "Equity " + eqTxt })]);
       })));
-      hdr.appendChild(h("p", { class: "muted small", style: "margin:8px 0 0" }, ["All sleeves ",
-        h("strong", { text: isNum(cb.equity) ? rs(cb.equity) : "n/a" }), " of " + rs(cb.capital) + " paper capital" +
-        (isNum(cb.equity) && cb.capital ? " (" + pct((cb.equity / cb.capital - 1) * 100) + ")" : "") + ". US at Rs " +
-        (isNum(cb.usd_inr) ? cb.usd_inr.toFixed(2) : "n/a") + "/$" + (cb.fx_date ? " (Yahoo USDINR=X close of " + dShort(cb.fx_date) + ")" : "") + "."]));
+      if (isNum(cb.usd_inr)) hdr.appendChild(h("p", { class: "muted small", style: "margin:8px 0 0", text: "US at Rs " + cb.usd_inr.toFixed(2) + "/$" +
+        (cb.fx_date ? " (Yahoo USDINR=X close of " + dShort(cb.fx_date) + ")" : "") + "." }));
     } else if (th) {
       var combinedEq = (perf.equity || 0) + (th.equity || 0), combinedCap = th.combined_capital || 0;
       hdr.appendChild(h("p", { class: "muted small", style: "margin:10px 0 0" }, [
@@ -916,7 +968,12 @@ footer a { color: inherit; }
     var avgSub = isNum(avg) && avg > 0
       ? Math.round(fill * 100) + "% of pre-tax target. About " + rs(avg * (1 - taxRate)) + " net vs " + rs(net) + " net target."
       : "Target " + rs(target) + " pre-tax / " + rs(net) + " net per day.";
-    app.appendChild(section("progress", "Progress vs target", [h("div", { class: "tiles" }, [
+    app.appendChild(section("progress", "Momentum: progress vs target", [
+      h("p", { class: "muted small momline num" }, ["Momentum sleeve ", h("strong", { style: "color:var(--ink)", text: rs(perf.equity) }), " \u00b7 Day ",
+        h("span", { class: tone(perf.day_pnl), text: rsSigned(perf.day_pnl) + (dayPct == null ? " (first day)" : " (" + pct(dayPct) + ")") }), " \u00b7 Total ",
+        h("span", { class: tone(perf.total_pnl), text: rsSigned(perf.total_pnl) + (totalPct == null ? "" : " (" + pct(totalPct) + ")") }),
+        pf.start_date ? " since " + dShort(pf.start_date) : ""]),
+      h("div", { class: "tiles" }, [
       h("div", { class: "card stat wide" }, [
         h("div", { class: "label", text: "Avg P&L per trading day" }),
         h("div", { class: "value " + tone(avg), text: rsSigned(avg) + " / " + rs(target) }),
@@ -950,7 +1007,7 @@ footer a { color: inherit; }
       h("div", { class: "table-scroll" }, [h("table", null, [h("thead", null, [h("tr", null, ["Date", "Equity", "Change", "Cash", "Pos."].map(function (c, i) {
         return h("th", { class: i ? "r" : null, text: c }); }))]), tbody])])])]
       : [h("p", { class: "empty", text: "No equity rows yet." })]);
-    app.appendChild(section("equity", "Equity curve", [chartCard]));
+    app.appendChild(section("equity", "Momentum equity curve", [chartCard]));
     if (curve.length) {
       drawChart(wrap, curve, start);
       if (window.ResizeObserver) {
