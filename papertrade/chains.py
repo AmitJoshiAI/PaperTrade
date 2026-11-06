@@ -417,10 +417,10 @@ def fill_iv(sym: str, prior: dict | None, day: str, expiry: str, strike: float, 
     if prior and lo <= prior.get("date", "") < day:
         iv = strike_iv(prior, expiry, strike, right)
         if iv:
-            return iv, f"NSE chain IV {iv*100:.2f}% at this strike (close of {prior['date']})"
+            return iv, f"{source_name(prior)} chain IV {iv*100:.2f}% at this strike (close of {prior['date']})"
         iv = atm_iv(prior, expiry if expiry in prior.get("chains", {}) else None)
         if iv:
-            return iv, f"NSE chain ATM IV {iv*100:.2f}% (close of {prior['date']})"
+            return iv, f"{source_name(prior)} chain ATM IV {iv*100:.2f}% (close of {prior['date']})"
     prev = (prior or {}).get("previous") or {}
     if prev and lo <= prev.get("date", "") < day:
         ivs = prev.get("iv") or {}
