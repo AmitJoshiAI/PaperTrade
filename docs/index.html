@@ -919,10 +919,10 @@ footer a { color: inherit; }
     if (cb && cb.sleeves) {
       // all four sleeves in one glance: what each does, a sparkline, day and total P&L; each card links to its section
       var names = {
-        momentum: ["Momentum", "#positions", "Rules in code: holds the 5 strongest Nifty 50 stocks, sells on a 7% stop or a trend break. Carries the Rs 1,000/day target."],
-        thesis: ["Thesis", "#thesis", "Claude's macro bets, weeks to months. Each has a written reason, a catalyst date and an exit rule."],
-        fno: ["India F&O", "#fno", "Nifty, Bank Nifty and stock options around scheduled events. Defined-risk spreads only."],
-        us: ["US", "#us", "US ETFs and options, under a $529 per-order cap, priced from real chains. Shown in rupees at the day's rate."]
+        momentum: ["Momentum", "#positions", "Holds the 5 strongest Nifty 50 stocks and rotates as leaders change. Sells on a 7% stop or a trend break. Carries the Rs 1,000/day target."],
+        thesis: ["Thesis", "#thesis", "Big-picture bets held for weeks to months, around a known event or trend. Each has a written reason and an exit rule."],
+        fno: ["India F&O", "#fno", "Nifty, Bank Nifty and stock options around scheduled events, as spreads with a fixed maximum loss."],
+        us: ["US", "#us", "US funds and options, small trades with a fixed maximum loss. Shown in rupees at the day's exchange rate."]
       };
       hdr.appendChild(h("div", { class: "sleeves" }, cb.sleeves.map(function (sl) {
         var nm = names[sl.name] || [sl.name, "#", ""];
