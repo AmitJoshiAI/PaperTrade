@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-06T16:55+05:30",
+ "generated_at": "2026-11-06T17:30+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 1688,
+   "items": 1874,
    "error": null,
    "optional": false,
-   "seconds": 0.8
+   "seconds": 0.6
   },
   {
    "id": "nse_results",
@@ -17,18 +17,21 @@
    "items": 3,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.4
   },
   {
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 97,
+   "items": 20,
    "error": null,
    "optional": false,
-   "path": "cffi_api",
-   "skipped": [],
-   "seconds": 1.9
+   "path": "nse_api",
+   "skipped": [
+    "cffi_api: Timeout: Failed to perform, curl: (28) Operation timed out after 12002 milliseconds with 0 bytes received. Se",
+    "urllib_api: HTTPError: HTTP Error 403: Forbidden"
+   ],
+   "seconds": 15.3
   },
   {
    "id": "et_markets",
@@ -37,7 +40,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "et_stocks",
@@ -46,7 +49,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bs_markets",
@@ -55,7 +58,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bl_markets",
@@ -64,7 +67,7 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "moneycontrol",
@@ -77,7 +80,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 2.1
+   "seconds": 1.7
   },
   {
    "id": "cnbc",
@@ -86,16 +89,16 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.2
   }
  ],
  "optional_unavailable": [],
- "quotes_checked": 55,
+ "quotes_checked": 54,
  "movers": 6,
  "quotes_error": null,
- "new_alerts": 340,
+ "new_alerts": 91,
  "high_score": 6,
- "seconds": 8.2,
+ "seconds": 16.8,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -122,6 +125,1754 @@
  ],
  "watchlist_size": 55,
  "alerts": [
+  {
+   "id": "72323b9f2dd8",
+   "kind": "news",
+   "time": "2026-11-06T17:29+05:30",
+   "source": "NSE announcements",
+   "headline": "GLOBE ENTERPRISES (INDIA) LIMITED: a press release dated November 06, 2026, titled \"Press Release on Unaudited Financial Results of Globe Enterprises (India) Limited for the quarter and half year ended September 30, 2026\".",
+   "summary": "GLOBE ENTERPRISES (INDIA) LIMITED has informed the Exchange regarding a press release dated November 06, 2026, titled \"Press Release on Unaudited Financial Results of Globe Enterprises (India) Limited for the quarter and half year ended Sep",
+   "link": "https://nsearchives.nseindia.com/corporate/GLOBE_06112026172907_0611_Press_Release_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "6aca80178acf",
+   "kind": "news",
+   "time": "2026-11-06T17:29+05:30",
+   "source": "NSE announcements",
+   "headline": "PTC India Limited: Transcripts - earnings or quarterly calls",
+   "summary": "PTC India Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_2179_WebXMLFile_20261106_172912853.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "25f6cfc86374",
+   "kind": "news",
+   "time": "2026-11-06T17:29+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "GLOBE ENTERPRISES (INDIA) LIMITED: Press Release",
+   "summary": "GLOBE ENTERPRISES (INDIA) LIMITED has informed the Exchange regarding a press release dated November 06, 2026, titled \"Press Release on Unaudited Financial Results of Globe Enterprises (India) Limited for the quarter and half year ended Sep",
+   "link": "https://nsearchives.nseindia.com/corporate/GLOBE_06112026172907_0611_Press_Release_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "ea0f11993be5",
+   "kind": "news",
+   "time": "2026-11-06T17:28+05:30",
+   "source": "NSE announcements",
+   "headline": "Aarti Industries Limited: Transcript of Q2 FY27 Earnings Conference Call",
+   "summary": "Aarti Industries Limited has informed the Exchange about Transcript of Q2 FY27 Earnings Conference Call |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/AARTIIND_06112026172747_AARTIIND_Transcript.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "12dca8c1aa43",
+   "kind": "news",
+   "time": "2026-11-06T17:28+05:30",
+   "source": "NSE announcements",
+   "headline": "Neuland Laboratories Limited: Transcripts - earnings or quarterly calls",
+   "summary": "NEULAND LABORATORIES LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_465_WebXMLFile_20261106_172808850.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "b0402eab0bde",
+   "kind": "news",
+   "time": "2026-11-06T17:28+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Aarti Industries Limited: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "summary": "Aarti Industries Limited has informed the Exchange about Transcript of Q2 FY27 Earnings Conference Call",
+   "link": "https://nsearchives.nseindia.com/corporate/AARTIIND_06112026172747_AARTIIND_Transcript.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "728098785d36",
+   "kind": "news",
+   "time": "2026-11-06T17:27+05:30",
+   "source": "NSE announcements",
+   "headline": "PTC India Limited: Transcript of Investors/Analyst call held on 3rd November 2026 on financial results for quarter and half year ended 30th September 2026.",
+   "summary": "PTC India Limited has informed the Exchange about Transcript of Investors/Analyst call held on 3rd November 2026 on financial results for quarter and half year ended 30th September 2026. |SUBJECT: Analysts/Institutional Investor Meet/Con. C",
+   "link": "https://nsearchives.nseindia.com/corporate/PTC_06112026172658_letterfortranscript-signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "8a233ad8b993",
+   "kind": "news",
+   "time": "2026-11-06T17:27+05:30",
+   "source": "NSE announcements",
+   "headline": "GMR Power and Urban Infra Limited: Acquisition (including agreement to acquire)",
+   "summary": "GMR POWER AND URBAN INFRA LIMITED has informed the Exchange regarding Acquisition (including agreement to acquire) |SUBJECT: Acquisition (including agreement to acquire)-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_20444_WebXMLFile_20261106_172701951.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "07ac0af8a3a9",
+   "kind": "news",
+   "time": "2026-11-06T17:27+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "PTC India Limited: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "summary": "PTC India Limited has informed the Exchange about Transcript of Investors/Analyst call held on 3rd November 2026 on financial results for quarter and half year ended 30th September 2026.",
+   "link": "https://nsearchives.nseindia.com/corporate/PTC_06112026172658_letterfortranscript-signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "6f50dbb17d32",
+   "kind": "news",
+   "time": "2026-11-06T17:26+05:30",
+   "source": "CNBC top news",
+   "headline": "Moderna raises 2026 outlook as CEO says newer vaccines are gaining traction",
+   "summary": "The biotech company now expects 2026 revenue growth of 15% to 25%, up from its previous guidance of up to 10%.",
+   "link": "https://www.cnbc.com/2026/11/06/moderna-mrna-earnings-q3-2026.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "059699b2892b",
+   "kind": "news",
+   "time": "2026-11-06T17:25+05:30",
+   "source": "NSE announcements",
+   "headline": "United Drilling Tools Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "United Drilling Tools Limited has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_18742_WebXMLFile_20261106_172533512.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "5bcfeb1ac718",
+   "kind": "news",
+   "time": "2026-11-06T17:25+05:30",
+   "source": "NSE announcements",
+   "headline": "Aditya Birla Lifestyle Brands Limited: Transcripts - earnings or quarterly calls",
+   "summary": "ADITYA BIRLA LIFESTYLE BRANDS LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_26118_WebXMLFile_20261106_172504891.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "7415e8ef1b4f",
+   "kind": "news",
+   "time": "2026-11-06T17:24+05:30",
+   "source": "NSE announcements",
+   "headline": "Eros International Media Limited: Board Meeting to be held on 13-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "EROS INTERNATIONAL MEDIA LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_3606_WebXMLFile_20261106_172443895.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "e5ab5c2416ed",
+   "kind": "news",
+   "time": "2026-11-06T17:23+05:30",
+   "source": "NSE announcements",
+   "headline": "Finolex Industries Limited: Transcripts - earnings or quarterly calls",
+   "summary": "FINOLEX INDUSTRIES LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1236_WebXMLFile_20261106_172335876.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "002783522279",
+   "kind": "news",
+   "time": "2026-11-06T17:23+05:30",
+   "source": "NSE announcements",
+   "headline": "Coromandel International Limited: a press release dated November 06, 2026, titled \"Coromandel International Limited Posts Q2 FY27 Results \".",
+   "summary": "Coromandel International Limited has informed the Exchange regarding a press release dated November 06, 2026, titled \"Coromandel International Limited Posts Q2 FY27 Results \". |SUBJECT: Press Release",
+   "link": "https://nsearchives.nseindia.com/corporate/COROMANDELINT_06112026172114_CILPRESSRELEASE06112026_SD.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "f4b26e6c1873",
+   "kind": "news",
+   "time": "2026-11-06T17:23+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Coromandel International Limited: Press Release",
+   "summary": "Coromandel International Limited has informed the Exchange regarding a press release dated November 06, 2026, titled \"Coromandel International Limited Posts Q2 FY27 Results \".",
+   "link": "https://nsearchives.nseindia.com/corporate/COROMANDELINT_06112026172114_CILPRESSRELEASE06112026_SD.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "7b89ce42945a",
+   "kind": "news",
+   "time": "2026-11-06T17:22+05:30",
+   "source": "NSE announcements",
+   "headline": "Xelpmoc Design And Tech Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "XELPMOC DESIGN AND TECH LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: B",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17188_WebXMLFile_20261106_172257874.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "389df79be2bc",
+   "kind": "news",
+   "time": "2026-11-06T17:22+05:30",
+   "source": "NSE announcements",
+   "headline": "Aditya Birla Lifestyle Brands Limited: Transcript of Earnings Call for Q2FY27 Results.",
+   "summary": "Transcript of Earnings Call for Q2FY27 Results. |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/ABLBL_06112026172228_SE_Intimation.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "c94bf121f3b5",
+   "kind": "news",
+   "time": "2026-11-06T17:22+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Aditya Birla Lifestyle Brands Limited: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "summary": "Transcript of Earnings Call for Q2FY27 Results.",
+   "link": "https://nsearchives.nseindia.com/corporate/ABLBL_06112026172228_SE_Intimation.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "c4fc9473debf",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Pritika Auto Industries Limited: a press release dated November 06, 2026, titled \"Media Release Unaudited Financial Results of the Company for the quarter ended September 30, 2026\".",
+   "summary": "Pritika Auto Industries Limited has informed the Exchange regarding a press release dated November 06, 2026, titled \"Media Release Unaudited Financial Results of the Company for the quarter ended September 30, 2026\". |SUBJECT: Press Release",
+   "link": "https://nsearchives.nseindia.com/corporate/PRITIKAUTO_06112026172131_mediareleasepail06nov2026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "1c13da0d26d4",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Andhra Cements Limited: 'Submission of NSE observation letter with regard to the proposed Merger'.",
+   "summary": "Andhra Cements Limited has informed the Exchange regarding 'Submission of NSE observation letter with regard to the proposed Merger'. |SUBJECT: Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/ANDHRACEMENT_06112026172144_NSEobservationletter06112026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "9eae361eb8ee",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Neuland Laboratories Limited: Transcript of the Earnings Call conducted on November 3, 2026",
+   "summary": "Transcript of the Earnings Call conducted on November 3, 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/NEULANDLAB_06112026171924_SignedSEIntimationTranscript.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "71f06b9b6080",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Aster DM Quality Care Limited: a press release dated November 06, 2026, titled \"Press release on the unaudited financial results for the quarter and half year ended 30 September 2026\"\".",
+   "summary": "Aster DM Quality Care Limited has informed the Exchange regarding a press release dated November 06, 2026, titled \"Press release on the unaudited financial results for the quarter and half year ended 30 September 2026\"\". |SUBJECT: Press Rel",
+   "link": "https://nsearchives.nseindia.com/corporate/ASTERDM2_06112026172136_PressRealease.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "41585049085e",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Cummins India Limited: Copy of Newspaper Publication regarding unaudited financial results of the Company for quarter and half-year ended September 30, 2026.",
+   "summary": "Cummins India Limited has informed the Exchange about Copy of Newspaper Publication regarding unaudited financial results of the Company for quarter and half-year ended September 30, 2026. |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/CUMMINSIND_06112026172100_SEIntimationNewspaperFRfinal.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "fbaad743f2fa",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Jyothy Labs Limited: 'Submission of Public Announcement and certified true copy of resolutions for the Buyback of Equity Shares of the Company'.",
+   "summary": "Jyothy Labs Limited has informed the Exchange regarding 'Submission of Public Announcement and certified true copy of resolutions for the Buyback of Equity Shares of the Company'. |SUBJECT: Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/JYOTHYLAB_06112026172120_SE_Intimation_PA_Resolution.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "buyback"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "508c86af1314",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "PPAP Automotive Limited: Outcome of Board Meeting held on 06-Nov-2026 for Dividend",
+   "summary": "PPAP Automotive Limited has informed the Exchange regarding Outcome of Board Meeting held on 06-Nov-2026 for Dividend |SUBJECT: Outcome of Board Meeting-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/OUTCOME_2706_WebXMLFile_20261106_172120430.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "dividend"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "661842a8c992",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Team India Guaranty Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+   "summary": "TEAM INDIA GUARANTY LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board M",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_2018_WebXMLFile_20261106_172100653.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "938eca1af253",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Pritika Auto Industries Limited: Press Release",
+   "summary": "Pritika Auto Industries Limited has informed the Exchange regarding a press release dated November 06, 2026, titled \"Media Release Unaudited Financial Results of the Company for the quarter ended September 30, 2026\".",
+   "link": "https://nsearchives.nseindia.com/corporate/PRITIKAUTO_06112026172131_mediareleasepail06nov2026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "23a9952566aa",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Andhra Cements Limited: Updates",
+   "summary": "Andhra Cements Limited has informed the Exchange regarding 'Submission of NSE observation letter with regard to the proposed Merger'.",
+   "link": "https://nsearchives.nseindia.com/corporate/ANDHRACEMENT_06112026172144_NSEobservationletter06112026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "e31e6a00eeea",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Neuland Laboratories Limited: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "summary": "Transcript of the Earnings Call conducted on November 3, 2026",
+   "link": "https://nsearchives.nseindia.com/corporate/NEULANDLAB_06112026171924_SignedSEIntimationTranscript.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "e80755b67ad3",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Aster DM Quality Care Limited: Press Release",
+   "summary": "Aster DM Quality Care Limited has informed the Exchange regarding a press release dated November 06, 2026, titled \"Press release on the unaudited financial results for the quarter and half year ended 30 September 2026\"\".",
+   "link": "https://nsearchives.nseindia.com/corporate/ASTERDM2_06112026172136_PressRealease.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "c54459d52bdc",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Cummins India Limited: Copy of Newspaper Publication",
+   "summary": "Cummins India Limited has informed the Exchange about Copy of Newspaper Publication regarding unaudited financial results of the Company for quarter and half-year ended September 30, 2026.",
+   "link": "https://nsearchives.nseindia.com/corporate/CUMMINSIND_06112026172100_SEIntimationNewspaperFRfinal.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "6dcef3779e8e",
+   "kind": "news",
+   "time": "2026-11-06T17:21+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Jyothy Labs Limited: Updates",
+   "summary": "Jyothy Labs Limited has informed the Exchange regarding 'Submission of Public Announcement and certified true copy of resolutions for the Buyback of Equity Shares of the Company'.",
+   "link": "https://nsearchives.nseindia.com/corporate/JYOTHYLAB_06112026172120_SE_Intimation_PA_Resolution.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "buyback"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "3982960f389b",
+   "kind": "news",
+   "time": "2026-11-06T17:20+05:30",
+   "source": "NSE announcements",
+   "headline": "Marico Limited: Please find attached an intimation under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+   "summary": "Please find attached an intimation under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 |SUBJECT: Acquisition",
+   "link": "https://nsearchives.nseindia.com/corporate/marico_06112026171755_SEIntimation.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "c0b83a122611",
+   "kind": "news",
+   "time": "2026-11-06T17:20+05:30",
+   "source": "NSE announcements",
+   "headline": "Vishwas Agri Seeds Limited: Vishwas Agri Seeds Limited has submitted to the Exchange that a meeting of the Board of Directors of the Company was held today i.e. Friday, 06th November, 2026. Pursuant to Regulation 30 read with Para A of Part A of Schedule III and Regulation 33 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, as amended from time to time, please note that the Board of Directors of the Company at its meeting held today has, inter alia, considered and approved the Unaudited Financial Results for the Half-year ended September 30, 2026, along with the Limited Review Report issued by the Statutory Auditors which have been duly reviewed and recommended by the Audit Committee.",
+   "summary": "Vishwas Agri Seeds Limited has submitted to the Exchange that a meeting of the Board of Directors of the Company was held today i.e. Friday, 06th November, 2026. Pursuant to Regulation 30 read with Para A of Part A of Schedule III and Regul",
+   "link": "https://nsearchives.nseindia.com/corporate/VISHWAS_06112026171915_Outcome_VASL_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "c162d7d1c7c7",
+   "kind": "news",
+   "time": "2026-11-06T17:20+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Marico Limited: Acquisition",
+   "summary": "Please find attached an intimation under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+   "link": "https://nsearchives.nseindia.com/corporate/marico_06112026171755_SEIntimation.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "80e53f07a77c",
+   "kind": "news",
+   "time": "2026-11-06T17:19+05:30",
+   "source": "NSE announcements",
+   "headline": "Finolex Industries Limited: Transcript of the Earnings Call held on Monday, November 2, 2026",
+   "summary": "Finolex Industries Limited has informed the Exchange about Transcript of the Earnings Call held on Monday, November 2, 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/FINPIPE2_06112026171334_SEsigned.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "218006dd5828",
+   "kind": "news",
+   "time": "2026-11-06T17:19+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Finolex Industries Limited: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "summary": "Finolex Industries Limited has informed the Exchange about Transcript of the Earnings Call held on Monday, November 2, 2026",
+   "link": "https://nsearchives.nseindia.com/corporate/FINPIPE2_06112026171334_SEsigned.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "44590d9a515e",
+   "kind": "news",
+   "time": "2026-11-06T17:18+05:30",
+   "source": "NSE announcements",
+   "headline": "Agi Infra Limited: Agi Infra Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Agi Infra Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/AGIINFRA_06112026171503_FinancialResults30092026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "021a91121d86",
+   "kind": "news",
+   "time": "2026-11-06T17:18+05:30",
+   "source": "NSE announcements",
+   "headline": "Gujarat Narmada Valley Fertilizers and Chemicals Limited: Voting Results of Postal Ballot process conducted through Remote e-voting.",
+   "summary": "Gujarat Narmada Valley Fertilizers and Chemicals Limited has informed the Exchange about Voting Results of Postal Ballot process conducted through Remote e-voting. |SUBJECT: General Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/rajeshpillai8741_06112026171822_FSE_PB_06112026_Signed2.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "53bf7b699d18",
+   "kind": "news",
+   "time": "2026-11-06T17:18+05:30",
+   "source": "NSE announcements",
+   "headline": "Lancor Holdings Limited: Board Meeting to be held on 12-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "LANCOR HOLDINGS LIMITED has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUBJEC",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22427_WebXMLFile_20261106_171800756.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "f2d699e20218",
+   "kind": "news",
+   "time": "2026-11-06T17:17+05:30",
+   "source": "NSE announcements",
+   "headline": "Religare Enterprises Limited: credit rating of Religare Housing Development Finance Corporation Limited, a step down subsidiary of Religare Enterprises Limited",
+   "summary": "Religare Enterprises Limited has informed the Exchange about credit rating of Religare Housing Development Finance Corporation Limited, a step down subsidiary of Religare Enterprises Limited |SUBJECT: General Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/RELIGARE_06112026171725_RELUPDATE2026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "56f8b87c75cb",
+   "kind": "news",
+   "time": "2026-11-06T17:16+05:30",
+   "source": "NSE announcements",
+   "headline": "Shri Techtex Limited: Shri Techtex Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026 along with other matters discussed at the meeting, as detailed in the enclosed outcome.",
+   "summary": "Shri Techtex Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026 along with other matters discussed at the meeting, as detailed in the enclosed outcome. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/SHRITECH_06112026171138_Board_Meeting_Outcome.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "f2f8536c5d92",
+   "kind": "news",
+   "time": "2026-11-06T17:16+05:30",
+   "source": "NSE announcements",
+   "headline": "PPAP Automotive Limited: Board of Directors at its meeting held on November 06, 2026, declared Interim Dividend of Rs. 1.5 per equity share.",
+   "summary": "PPAP Automotive Limited has informed the Exchange that Board of Directors at its meeting held on November 06, 2026, declared Interim Dividend of Rs. 1.5 per equity share. |SUBJECT: Dividend",
+   "link": "https://nsearchives.nseindia.com/corporate/PPAP_06112026171544_Outcome_of_BM.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "dividend"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "568ab0624ca0",
+   "kind": "news",
+   "time": "2026-11-06T17:16+05:30",
+   "source": "NSE announcements",
+   "headline": "Gujarat Narmada Valley Fertilizers and Chemicals Limited: voting results.",
+   "summary": "Gujarat Narmada Valley Fertilizers and Chemicals Limited has submitted the Exchange a copy Srutinizers report of Postal Ballot. Further, the company has informed the Exchange regarding voting results. |SUBJECT: Shareholders meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/rajeshpillai8741_06112026171619_FSE_PB_06112026_Signed2.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "df27852d1115",
+   "kind": "news",
+   "time": "2026-11-06T17:15+05:30",
+   "source": "NSE announcements",
+   "headline": "Fedbank Financial Services Limited: Credit Rating",
+   "summary": "Fedbank Financial Services Limited has informed the Exchange about Credit Rating |SUBJECT: Credit Rating",
+   "link": "https://nsearchives.nseindia.com/corporate/FEDFINA_06112026171346_Credit_Rating_Intimation_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "07f08cfdea1c",
+   "kind": "news",
+   "time": "2026-11-06T17:15+05:30",
+   "source": "NSE announcements",
+   "headline": "Laser Power & Infra Limited: Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+   "summary": "LASER POWER & INFRA LIMITED has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board M",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_27025_WebXMLFile_20261106_171505036.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "2475cb67e72b",
+   "kind": "news",
+   "time": "2026-11-06T17:15+05:30",
+   "source": "NSE announcements",
+   "headline": "Aditya Ultra Steel Limited: Aditya Ultra Steel Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Aditya Ultra Steel Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/ADITYAULTRA_06112026171351_Outcome.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "cd1b4797759e",
+   "kind": "news",
+   "time": "2026-11-06T17:13+05:30",
+   "source": "NSE announcements",
+   "headline": "Precision Camshafts Limited: Precision Camshafts Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Precision Camshafts Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/PRECAMS_06112026171232_PCL_FS_Q2_FY_26-27.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "d7fa6193f014",
+   "kind": "news",
+   "time": "2026-11-06T17:13+05:30",
+   "source": "NSE announcements",
+   "headline": "PPAP Automotive Limited: PPAP Automotive Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "PPAP Automotive Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/PPAP_06112026170913_Outcome_of_BM.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "50a931588f52",
+   "kind": "news",
+   "time": "2026-11-06T17:13+05:30",
+   "source": "NSE announcements",
+   "headline": "Solar Industries India Limited: Transcripts - earnings or quarterly calls",
+   "summary": "Solar Industries India Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_2384_WebXMLFile_20261106_171328719.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "692c474dd081",
+   "kind": "news",
+   "time": "2026-11-06T17:13+05:30",
+   "source": "NSE announcements",
+   "headline": "Filatex India Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "FILATEX INDIA LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeti",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_5166_WebXMLFile_20261106_171321080.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "3532bac6097d",
+   "kind": "news",
+   "time": "2026-11-06T17:12+05:30",
+   "source": "NSE announcements",
+   "headline": "Clix Capital Services Private Limited: Financial Results Updates",
+   "summary": "Financial Results Updates |SUBJECT: Financial Results Updates",
+   "link": "https://nsearchives.nseindia.com/content/debt/WDM/CLIXCAPITAL_06112026171206_BMOutcome06Nov2026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "9fef3df54bfb",
+   "kind": "news",
+   "time": "2026-11-06T17:11+05:30",
+   "source": "NSE announcements",
+   "headline": "Housing & Urban Development Corporation Limited: Link of Recording - Audio link of Earnings Conference Call held on 06.11.2026, for Unaudited Financial Results for the quarter and half year ended 30.09.2026",
+   "summary": "Housing & Urban Development Corporation Limited has informed the Exchange about Link of Recording - Audio link of Earnings Conference Call held on 06.11.2026, for Unaudited Financial Results for the quarter and half year ended 30.09.2026 |S",
+   "link": "https://nsearchives.nseindia.com/corporate/HUDCO_06112026171110_NSEBSEReg3006112026_Audio.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "1a6a6804de3f",
+   "kind": "news",
+   "time": "2026-11-06T17:11+05:30",
+   "source": "NSE announcements",
+   "headline": "NCL Industries Limited: Board Meeting to be held on 12-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "NCL INDUSTRIES LIMITED has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUBJE",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_2568_WebXMLFile_20261106_171059750.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "9c48e390a2f4",
+   "kind": "news",
+   "time": "2026-11-06T17:10+05:30",
+   "source": "NSE announcements",
+   "headline": "Usha Martin Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "USHA MARTIN LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_1938_WebXMLFile_20261106_171020961.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "fd7c5e657079",
+   "kind": "news",
+   "time": "2026-11-06T17:09+05:30",
+   "source": "NSE announcements",
+   "headline": "Madhya Bharat Agro Products Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "MADHYA BHARAT AGRO PRODUCTS LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other bus",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_14179_WebXMLFile_20261106_170950605.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "ffb6fa2ffa33",
+   "kind": "news",
+   "time": "2026-11-06T17:08+05:30",
+   "source": "NSE announcements",
+   "headline": "Shyam Century Ferrous Limited: Copy of Newspaper Publication for the Financial Result for the period ended 30th Sept 2026.",
+   "summary": "Shyam Century Ferrous Limited has informed the Exchange about Copy of Newspaper Publication for the Financial Result for the period ended 30th Sept 2026. |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/SHYAMCENT_06112026170837_SCFL_Newspaper_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "4d8e766e4818",
+   "kind": "news",
+   "time": "2026-11-06T17:08+05:30",
+   "source": "NSE announcements",
+   "headline": "Ashapuri Gold Ornament Limited: Ashapuri Gold Ornament Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Ashapuri Gold Ornament Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/ASHAPURI_06112026170647_Outcome_of_Board_Meeting.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "d56de9ae18aa",
+   "kind": "news",
+   "time": "2026-11-06T17:08+05:30",
+   "source": "NSE announcements",
+   "headline": "ADF Foods Limited: Pursuant to Regulation 30 and 47 of SEBI (LODR) Regulations, 2015, please find enclosed intimation of newspaper publication of Unaudited Standalone and Consolidated Financial Results for the Quarter and Half Year ended 30th September, 2026.",
+   "summary": "Pursuant to Regulation 30 and 47 of SEBI (LODR) Regulations, 2015, please find enclosed intimation of newspaper publication of Unaudited Standalone and Consolidated Financial Results for the Quarter and Half Year ended 30th September, 2026.",
+   "link": "https://nsearchives.nseindia.com/corporate/ADFFOODS1_06112026170737_ADFNewspaperPublicationResults.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "7e171c71af1b",
+   "kind": "news",
+   "time": "2026-11-06T17:07+05:30",
+   "source": "NSE announcements",
+   "headline": "Banco Products (I) Limited: Banco Products (I) Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Banco Products (I) Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/BANCOINDIA_06112026170610_Outcome_of_Board_Meeting_sd.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "779e26b7578b",
+   "kind": "news",
+   "time": "2026-11-06T17:06+05:30",
+   "source": "NSE announcements",
+   "headline": "Tankup Engineers Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "TANKUP ENGINEERS LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Me",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_24380_WebXMLFile_20261106_170651162.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "e0a62fd780cf",
+   "kind": "news",
+   "time": "2026-11-06T17:05+05:30",
+   "source": "NSE announcements",
+   "headline": "SIGMA ADVANCED SYSTEMS LIMITED: a press release dated November 06, 2026, titled \"Press Release on the Financial Results for the Quarter and Half Yearly ended September 30, 2026\".",
+   "summary": "SIGMA ADVANCED SYSTEMS LIMITED has informed the Exchange regarding a press release dated November 06, 2026, titled \"Press Release on the Financial Results for the Quarter and Half Yearly ended September 30, 2026\". |SUBJECT: Press Release",
+   "link": "https://nsearchives.nseindia.com/corporate/MEGASOFT_06112026170513_Press_release_intimation_06112026_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "a0a1361994b9",
+   "kind": "news",
+   "time": "2026-11-06T17:05+05:30",
+   "source": "NSE announcements",
+   "headline": "Vaibhav Vyapaar Limited: Board Meeting to be held on 10-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "Vaibhav Vyapaar Limited has informed the Exchange about Board Meeting to be held on 10-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Mee",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_28883_WebXMLFile_20261106_170510867.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "e9e052ed4f2a",
+   "kind": "news",
+   "time": "2026-11-06T17:04+05:30",
+   "source": "NSE announcements",
+   "headline": "Gland Pharma Limited: a press release dated November 06, 2026, titled \"Press Release on Q2FY27 Financial Results \".",
+   "summary": "Gland Pharma Limited has informed the Exchange regarding a press release dated November 06, 2026, titled \"Press Release on Q2FY27 Financial Results \". |SUBJECT: Press Release",
+   "link": "https://nsearchives.nseindia.com/corporate/GLAND_06112026170413_PressReleaseQ2FY27_Final.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "6eb74029ec6a",
+   "kind": "news",
+   "time": "2026-11-06T17:04+05:30",
+   "source": "NSE announcements",
+   "headline": "Ahluwalia Contracts (India) Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2027 .",
+   "summary": "AHLUWALIA CONTRACTS (INDIA) LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2027 . |SUBJECT:",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_3005_WebXMLFile_20261106_170414169.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "b6251d58ac1f",
+   "kind": "news",
+   "time": "2026-11-06T17:04+05:30",
+   "source": "NSE announcements",
+   "headline": "Sahana System Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "Sahana System Limited has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUBJEC",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_21303_WebXMLFile_20261106_170405596.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "df64dfef82f4",
+   "kind": "news",
+   "time": "2026-11-06T17:03+05:30",
+   "source": "NSE announcements",
+   "headline": "Delta Autocorp Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "DELTA AUTOCORP LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meet",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_24143_WebXMLFile_20261106_170355884.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "7a89cdfd7026",
+   "kind": "news",
+   "time": "2026-11-06T17:02+05:30",
+   "source": "NSE announcements",
+   "headline": "Ravinder Heights Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "Ravinder Heights Limited has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Me",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_19008_WebXMLFile_20261106_170252028.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "5014c3fe8e6c",
+   "kind": "news",
+   "time": "2026-11-06T17:02+05:30",
+   "source": "NSE announcements",
+   "headline": "Safe Enterprises Retail Fixtures Limited: Safe Enterprises Retail Fixtures Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Safe Enterprises Retail Fixtures Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/SAFEENTERPRISES_06112026170028_Outcome_Board_Meeting_06112026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "eb4358ce1cc1",
+   "kind": "news",
+   "time": "2026-11-06T17:02+05:30",
+   "source": "NSE announcements",
+   "headline": "Andhra Cements Limited: 'Obervation letter received from BSE for the proposed Merger'.",
+   "summary": "Andhra Cements Limited has informed the Exchange regarding 'Obervation letter received from BSE for the proposed Merger'. |SUBJECT: Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/ANDHRACEMENT_06112026170154_Mergerletter06112026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "0f945c7567ec",
+   "kind": "news",
+   "time": "2026-11-06T17:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Religare Enterprises Limited: Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+   "summary": "Religare Enterprises Limited has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board ",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_2677_WebXMLFile_20261106_170139611.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "0801a5bafd16",
+   "kind": "news",
+   "time": "2026-11-06T17:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Remus Pharmaceuticals Limited: Transcripts - earnings or quarterly calls",
+   "summary": "REMUS PHARMACEUTICALS LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_21750_WebXMLFile_20261106_170137806.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "16856988b709",
+   "kind": "news",
+   "time": "2026-11-06T17:00+05:30",
+   "source": "NSE announcements",
+   "headline": "Purple United Sales Limited: Purple United Sales Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Purple United Sales Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/PURPLEUNITED_06112026165900_OutcomeofBoardMeeting.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "604c759d8281",
+   "kind": "news",
+   "time": "2026-11-06T17:00+05:30",
+   "source": "ET Markets",
+   "headline": "British Airways parent profit drops on higher fuel costs",
+   "summary": "IAG, the owner of British Airways and Iberia, said Friday that its net profit dropped more than 12 percent in the third quarter on soaring fuel costs and flight disruptions caused by the Middle East conflict. The group said its overall flig",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/british-airways-parent-profit-drops-on-higher-fuel-costs/articleshow/135605804.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "d7ef1dbe7093",
+   "kind": "news",
+   "time": "2026-11-06T16:59+05:30",
+   "source": "NSE announcements",
+   "headline": "TVS Supply Chain Solutions Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "TVS Supply Chain Solutions Limited has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_20486_WebXMLFile_20261106_165957404.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "57240cc32cf1",
+   "kind": "news",
+   "time": "2026-11-06T16:59+05:30",
+   "source": "NSE announcements",
+   "headline": "Foce India Limited: Board Meeting to be held on 13-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "Foce India Limited has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUBJECT: ",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_19997_WebXMLFile_20261106_165956977.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "f6892c6c6dd6",
+   "kind": "news",
+   "time": "2026-11-06T16:59+05:30",
+   "source": "NSE announcements",
+   "headline": "Voltas Limited: Voltas Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Voltas Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/VOLTAS_RB_06112026165511_01_Financial_Results_signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "7aa8533c6c5b",
+   "kind": "news",
+   "time": "2026-11-06T16:59+05:30",
+   "source": "NSE announcements",
+   "headline": "Larsen & Toubro Limited: Schedule of Analysts or Institutional Investors Meet",
+   "summary": "LARSEN & TOUBRO LIMITED has informed the Exchange about Schedule of Analysts or Institutional Investors Meet |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_2203_WebXMLFile_20261106_165900127.xml",
+   "symbols": [
+    "LT"
+   ],
+   "symbol_keys": [
+    "LT"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "f8bca2f7a383",
+   "kind": "news",
+   "time": "2026-11-06T16:58+05:30",
+   "source": "NSE announcements",
+   "headline": "Carraro India Limited: a press release dated November 06, 2026, titled Q2 & H1 FY27 Consolidated Results Press Release\".",
+   "summary": "Carraro India Limited has informed the Exchange regarding a press release dated November 06, 2026, titled Q2 & H1 FY27 Consolidated Results Press Release\". |SUBJECT: Press Release",
+   "link": "https://nsearchives.nseindia.com/corporate/CARRARO_06112026165811_CILQ2FY26IntimationofPressReleaseS.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "ca65427720db",
+   "kind": "news",
+   "time": "2026-11-06T16:58+05:30",
+   "source": "NSE announcements",
+   "headline": "D. P. Abhushan Limited: D. P. Abhushan Limited has submitted to the Exchange, the financial results for the quarter ended September 30, 2026.",
+   "summary": "D. P. Abhushan Limited has submitted to the Exchange, the financial results for the quarter ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/DPABHUSHAN_06112026165450_Outcome_06112026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "9a4b7cebd8b4",
+   "kind": "news",
+   "time": "2026-11-06T16:58+05:30",
+   "source": "ET Markets",
+   "headline": "Trump Media's investors lost $2.2 billion while Trump holds $460 million stake",
+   "summary": "Ske Jarzenske and other Trump Media investors are facing severe losses as the company's stock value has plummeted. Many investors had high hopes for the social media platform, believing in its potential profitability under Trump's leadershi",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/trump-medias-investors-lost-2-2-billion-while-trump-holds-460-million-stake/articleshow/135605723.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "stake sale"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "26408d033cb1",
+   "kind": "news",
+   "time": "2026-11-06T16:57+05:30",
+   "source": "NSE announcements",
+   "headline": "Marico Limited: Pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, copy of transcript of the earnings conference call held on Monday, November 2, 2026 on the un-audited financial results and operations of the Company for the quarter and half year ended September 30, 2026, is enclosed. The said transcript is also available on the Company s website",
+   "summary": "Pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, copy of transcript of the earnings conference call held on Monday, November 2, 2026 on the un-audited financial results and operation",
+   "link": "https://nsearchives.nseindia.com/corporate/marico_06112026165447_SEtranscript.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "a663616a4b17",
+   "kind": "news",
+   "time": "2026-11-06T16:57+05:30",
+   "source": "NSE announcements",
+   "headline": "Electrosteel Castings Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
+   "summary": "ELECTROSTEEL CASTINGS LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_780_WebXMLFile_20261106_165734603.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "71c8ff93553c",
+   "kind": "news",
+   "time": "2026-11-06T16:56+05:30",
+   "source": "NSE announcements",
+   "headline": "Aster DM Quality Care Limited: Aster DM Quality Care Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Aster DM Quality Care Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/ASTERDM2_06112026165600_q2UFRs.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "7da80028eb2a",
+   "kind": "news",
+   "time": "2026-11-06T16:56+05:30",
+   "source": "NSE announcements",
+   "headline": "Titan Company Limited: Newspaper publication for Unaudited financial results for the second quarter and halfyear ended 30th September 2026",
+   "summary": "Newspaper publication for Unaudited financial results for the second quarter and halfyear ended 30th September 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/TITAN_06112026165556_SEnewspaperadresultQ2-combined.pdf",
+   "symbols": [
+    "TITAN"
+   ],
+   "symbol_keys": [
+    "TITAN"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [
+    "TITAN"
+   ],
+   "score": 8,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "2899056830f6",
+   "kind": "news",
+   "time": "2026-11-06T16:56+05:30",
+   "source": "NSE announcements",
+   "headline": "Indo Amines Limited: Indo Amines Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Indo Amines Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/INDOAMINES_06112026165421_Financials_Results_for_the_Sept_2026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
   {
    "id": "14f894ec520e",
    "kind": "news",
@@ -405,6 +2156,66 @@
    "first_seen": "2026-11-06T16:55+05:30"
   },
   {
+   "id": "466762d4a0e6",
+   "kind": "news",
+   "time": "2026-11-06T16:55+05:30",
+   "source": "NSE announcements",
+   "headline": "S.A.L. Steel Limited: S.A.L. Steel Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "S.A.L. Steel Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/SALSTEEL_06112026165445_BM_Outcomes_06112026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "4333c49ba2a4",
+   "kind": "news",
+   "time": "2026-11-06T16:55+05:30",
+   "source": "NSE announcements",
+   "headline": "AVSL Industries Limited: AVSL Industries Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "AVSL Industries Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/AVSL_06112026165410_Outcome_Final-signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
+   "id": "efc01694efb3",
+   "kind": "news",
+   "time": "2026-11-06T16:55+05:30",
+   "source": "NSE announcements",
+   "headline": "GTL Limited: Copy of Newspaper Publication petaining to financial results of the Company for the quarter and half year ended September 30, 2026.",
+   "summary": "GTL Limited has informed the Exchange about Copy of Newspaper Publication petaining to financial results of the Company for the quarter and half year ended September 30, 2026. |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/GTLSH_06112026165456_GTL_SE_Reg47_202601106.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
+  },
+  {
    "id": "637d3fbbc10a",
    "kind": "news",
    "time": "2026-11-06T16:54+05:30",
@@ -423,6 +2234,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-11-06T16:55+05:30"
+  },
+  {
+   "id": "4a0d38b2055d",
+   "kind": "news",
+   "time": "2026-11-06T16:54+05:30",
+   "source": "NSE announcements",
+   "headline": "NIBE Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
+   "summary": "NIBE LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeting Intima",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_24772_WebXMLFile_20261106_165449654.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-06T17:30+05:30"
   },
   {
    "id": "17cb8be65b0c",
@@ -1342,1842 +3173,6 @@
    "headline": "Alembic Limited: Alembic Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
    "summary": "Alembic Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
    "link": "https://nsearchives.nseindia.com/corporate/ALEMBICLTD_06112026164308_AL_BM_Outcome_06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "bd93b271d250",
-   "kind": "news",
-   "time": "2026-11-06T16:45+05:30",
-   "source": "BSE announcements",
-   "headline": "Pace E-Commerce Ventures Ltd: Results - Financial Results As On 30/09/2026",
-   "summary": "Result. Pursuant to the provisions of Regulations 30 & 33 of SEBI (LODR) Regulations, 2015, the Board at its meeting held today inter-alia discussed and approved the following business: Consider ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3ed4d869-5859-4836-a0a3-897910683093.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "38d12c484416",
-   "kind": "news",
-   "time": "2026-11-06T16:44+05:30",
-   "source": "NSE announcements",
-   "headline": "The Great Eastern Shipping Company Limited: The Great Eastern Shipping Company Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "The Great Eastern Shipping Company Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/GESHIP_06112026164308_resultstobefiled.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "c5ded299ec00",
-   "kind": "news",
-   "time": "2026-11-06T16:44+05:30",
-   "source": "BSE announcements",
-   "headline": "Great Eastern Shipping Company Ltd: Financial Results For The Quarter And Half Year Ended September 30, 2026",
-   "summary": "Result. The Board at its meeting held today i.e. November 06, 2026, have considered and approved the unaudited financial results (provisional) for the quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/13d15eba-65e8-405c-9f82-2b07335552b1.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "fe107a8c7a92",
-   "kind": "news",
-   "time": "2026-11-06T16:43+05:30",
-   "source": "BSE announcements",
-   "headline": "Syrma SGS Technology Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Earnings call transcript of the Investors conference call held for the unaudited financial results (Consolidated and Standalone) of the Company for the quarter and half year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/57d2288c-61ce-4573-b2ea-d6140b9b2eac.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "9a2e3ca42bb6",
-   "kind": "news",
-   "time": "2026-11-06T16:43+05:30",
-   "source": "BSE announcements",
-   "headline": "Smart Finsec Ltd: Board Meeting Intimation for Consideration And Approval Of Unaudited Standalone Financial Results For The Quarter And Half Year Ended September 30, 2026.",
-   "summary": "Board Meeting. Smart Finsec Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve Unaudited Standalone Financial ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/73e23490-3aa7-408a-b555-1f75682a2985.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "e55bd51874ff",
-   "kind": "news",
-   "time": "2026-11-06T16:42+05:30",
-   "source": "NSE announcements",
-   "headline": "Jyoti CNC Automation Limited: Transcripts - earnings or quarterly calls",
-   "summary": "Jyoti CNC Automation Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_22466_WebXMLFile_20261106_164228665.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "2f619099346c",
-   "kind": "news",
-   "time": "2026-11-06T16:42+05:30",
-   "source": "BSE announcements",
-   "headline": "BCC Fuba India Ltd: Board Meeting Outcome for Outcome Of Board Meeting For Approval Of Financial Results For Quarter Ended 30 Sep 2026",
-   "summary": "Board Meeting. Outcome of Board Meeting for approval of financial Results for quarter ended 30 September 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3ca37fdd-92b9-4697-a27b-bc4a48f6f09b.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "9ed788c54dd7",
-   "kind": "news",
-   "time": "2026-11-06T16:42+05:30",
-   "source": "BSE announcements",
-   "headline": "Contil India Ltd: Result- Financial Results For The Quarter And Half Year Ending September 30, 2026",
-   "summary": "Result. Results - Unaudited Financial Results for the Quarter and Half year ending September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f7d79b8a-176e-4980-9f0d-21cd176d8d16.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "34d840c54191",
-   "kind": "news",
-   "time": "2026-11-06T16:41+05:30",
-   "source": "NSE announcements",
-   "headline": "Vraj Iron and Steel Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend.",
-   "summary": "VRAJ IRON AND STEEL LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Dividend. |SUBJECT:",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_23019_WebXMLFile_20261106_164135489.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "dividend"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "80821989be24",
-   "kind": "news",
-   "time": "2026-11-06T16:40+05:30",
-   "source": "BSE announcements",
-   "headline": "Shiva Suitings Ltd: Board Meeting Intimation for To Consider And Approve The Un-Audited Financial Results For The Quarter Ended 30Th September, 2026.",
-   "summary": "Board Meeting. Shiva Suitings Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve To consider and approve the ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/730b831f-2ef9-411a-8a1c-bedfb2d221b9.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "58c40dfc8d6a",
-   "kind": "news",
-   "time": "2026-11-06T16:40+05:30",
-   "source": "BSE announcements",
-   "headline": "Jyoti CNC Automation Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Earning Call Transcript for financial results of the quarter ended on September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/87077f47-ba45-41df-b41a-0e2a7604870e.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "2f7fa1f230c1",
-   "kind": "news",
-   "time": "2026-11-06T16:39+05:30",
-   "source": "NSE announcements",
-   "headline": "Krishana Phoschem Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
-   "summary": "KRISHANA PHOSCHEM LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SU",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_14570_WebXMLFile_20261106_163904062.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "a6a051c91955",
-   "kind": "news",
-   "time": "2026-11-06T16:39+05:30",
-   "source": "BSE announcements",
-   "headline": "TVS Supply Chain Solutions Ltd: Board Meeting Intimation for Consideration And Approval Of Unaudited Standalone And Consolidated Financial Results Of The Company For The Quarter And Half Year Ended September 30, 2026.",
-   "summary": "Board Meeting. TVS Supply Chain Solutions Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve unaudited standalone ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/70850da5-5903-4a21-a347-befa3fbefb3f.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "0927a4000532",
-   "kind": "news",
-   "time": "2026-11-06T16:38+05:30",
-   "source": "NSE announcements",
-   "headline": "Samvardhana Motherson International Limited: Copy of Newspaper Publication of unaudited financial results for the second quarter and half year ended September 30, 2026.",
-   "summary": "Samvardhana Motherson International Limited has informed the Exchange about Copy of Newspaper Publication of unaudited financial results for the second quarter and half year ended September 30, 2026. |SUBJECT: Copy of Newspaper Publication",
-   "link": "https://nsearchives.nseindia.com/corporate/MOTHERSON_06112026163759_Newspaper_Publication.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "337644844ce5",
-   "kind": "news",
-   "time": "2026-11-06T16:38+05:30",
-   "source": "BSE announcements",
-   "headline": "Welterman International Ltd: Unaudited Financial Results For The Quarter And Half Year Ended 30Th September, 2026",
-   "summary": "Result. Unaudited Financial Results for the quarter and half year ended 30th September, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/49c89e8e-13b6-4499-ae38-0e77e563e186.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "0151326f7941",
-   "kind": "news",
-   "time": "2026-11-06T16:38+05:30",
-   "source": "BSE announcements",
-   "headline": "S.A.L. Steel Ltd: Board Meeting Outcome for For Outcomes Of Board Meeting Held On November 6, 2026",
-   "summary": "Board Meeting. The Board of Director of the company in its Meeting held on Today i.e Friday November 06, 2026 has consider and taken on records the Un-Audited Financial Results for the Quarter and Half ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cf6c4c8f-264a-48a0-92e5-6c6af5e1cfc8.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "f6b2f65cb1e3",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "NSE announcements",
-   "headline": "Shreeji Shipping Global Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Stock split/Other business.",
-   "summary": "SHREEJI SHIPPING GLOBAL LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Stock split/O",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_25314_WebXMLFile_20261106_163755327.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "98df7d96f21c",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "NSE announcements",
-   "headline": "DOMS Industries Limited: Transcripts - earnings or quarterly calls",
-   "summary": "DOMS INDUSTRIES LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_22419_WebXMLFile_20261106_163724874.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "ac158392aab6",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "NSE announcements",
-   "headline": "Gujarat Alkalies and Chemicals Limited: Copy of Newspaper Publication of the extract of Standalone & Consolidated Un- audited (Provisional) Financial Results for the Second Quarter and Half Year ended 30th September, 2026.",
-   "summary": "Gujarat Alkalies and Chemicals Limited has informed the Exchange about Copy of Newspaper Publication of the extract of Standalone & Consolidated Un- audited (Provisional) Financial Results for the Second Quarter and Half Year ended 30th Sep",
-   "link": "https://nsearchives.nseindia.com/corporate/KAMLESH_MUNDRA_06112026163707_SE.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "f48eca465516",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "BSE announcements",
-   "headline": "Zenlabs Ethica Ltd: Board Meeting Intimation for Approval Of The Unaudited Financial Results For The Quarter Ended 30Th September, 2026",
-   "summary": "Board Meeting. Zenlabs Ethica Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 12/11/2026 ,inter alia, to consider and approve 1. Un-audited Financial Results ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3546b530-e928-4b33-890f-ec6025798d0a.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "75a59f152c07",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "BSE announcements",
-   "headline": "Palred Technologies Ltd: Board Meeting Intimation for Approving Un-Audited Finanicial Statements For The Quarter And Half Year Ended 30.09.2026",
-   "summary": "Board Meeting. Palred Technologies Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve Un audited financial results ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9a92648c-7e3f-40f1-9a73-b86f4ebf4ecc.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "192838353ff5",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "BSE announcements",
-   "headline": "Sarthak Industries Ltd: Board Meeting Intimation for Intimation Of Board Meeting",
-   "summary": "Board Meeting. Sarthak Industries Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve Financial Results for the ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7003fcb5-a6d9-4b9d-bc8f-1a6b36389198.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "9eaa4be52ccb",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "BSE announcements",
-   "headline": "Shree Rajiv Lochan Oil Extraction Ltd: Board Meeting Outcome for Outcome Of Board Meeting Held Today And Financial Results For Sep 30, 2026",
-   "summary": "Board Meeting. Outcome of the Board Meeting held today and Financial Results for Sep 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6c484032-67d2-482f-9632-6be85a54c8e2.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "ad042181ec22",
-   "kind": "news",
-   "time": "2026-11-06T16:37+05:30",
-   "source": "BSE announcements",
-   "headline": "NIBE Ltd: Board Meeting Intimation for Considering And Approving The Unaudited Standalone And Consolidated Financial Results Of The Company For The Quarter And Half Year Ended September 30, 2026",
-   "summary": "Board Meeting. NIBE Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 14/11/2026 ,inter alia, to consider and approve the Unaudited Standalone and Consolidated ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/98edb73f-a291-425f-a127-bb93965b8566.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "502259950b42",
-   "kind": "news",
-   "time": "2026-11-06T16:36+05:30",
-   "source": "NSE announcements",
-   "headline": "Shiv Aum Steels Limited: Board Meeting to be held on 13-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Stock split/Other business.",
-   "summary": "Shiv Aum Steels Limited has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to consider and approve the Quarterly Unaudited Financial results of the Company for the period ended September 2026 and Stock split/Other busin",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17601_WebXMLFile_20261106_163633202.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "aa48f00c0a85",
-   "kind": "news",
-   "time": "2026-11-06T16:36+05:30",
-   "source": "BSE announcements",
-   "headline": "Sumedha Fiscal Services Ltd: Board Meeting Intimation for Consideration And Approval Of Unaudited Financial Results For The Quarter And Half-Year Ended September 30, 2026",
-   "summary": "Board Meeting. Sumedha Fiscal Services Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 12/11/2026 ,inter alia, to consider and approve standalone and consolidated ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/03ac739d-3427-4753-b001-d2b11c060002.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "e259464fce80",
-   "kind": "news",
-   "time": "2026-11-06T16:36+05:30",
-   "source": "BSE announcements",
-   "headline": "Moneyboxx Finance Ltd: Approval Of Financial Results For The Quarter And Half Year September 30, 2026",
-   "summary": "Result. Please find attached herewith the approval of financial results for the quarter and half year September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/14d2cdae-9200-4527-b6f4-365fd9e39c43.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "609f7531e968",
-   "kind": "news",
-   "time": "2026-11-06T16:36+05:30",
-   "source": "BSE announcements",
-   "headline": "Jujhar Logistics Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press Release relating to delivery of Stellar Financial Performance in Q2 of FY 27.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c2f5ca61-beac-458b-bec2-15b8f8973f18.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "e49251b37091",
-   "kind": "news",
-   "time": "2026-11-06T16:36+05:30",
-   "source": "BSE announcements",
-   "headline": "Samvardhana Motherson International Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper clipping of unaudited financial results for the second quarter and half year ended September 30, 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8224852c-d060-400d-bf28-97be14748697.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "80c55189d770",
-   "kind": "news",
-   "time": "2026-11-06T16:35+05:30",
-   "source": "NSE announcements",
-   "headline": "Chamunda Electrical Limited: Chamunda Electrical Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Chamunda Electrical Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/CHAMUNDA_06112026163409_Outcome_of_BM_.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "05e423b06574",
-   "kind": "news",
-   "time": "2026-11-06T16:35+05:30",
-   "source": "BSE announcements",
-   "headline": "Contil India Ltd: Board Meeting Outcome for Outcome Of Board Meeting",
-   "summary": "Board Meeting. Outcome of Board Meeting held on Friday, November 06, 2026 inter to consider and approve unaudited Standalone Financial Results for the Quarter and Half Year ended September 30, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/062de515-32a8-4a34-95a1-58a3c78e8a04.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "5ec0dd520a76",
-   "kind": "news",
-   "time": "2026-11-06T16:35+05:30",
-   "source": "BSE announcements",
-   "headline": "Zodiac Energy Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Investor Presentation for Q2 FY 2026-27 Earning Update",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/61f6006d-e571-40cc-ae3b-ff7df8ba5b47.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "dabd397e683c",
-   "kind": "news",
-   "time": "2026-11-06T16:35+05:30",
-   "source": "BSE announcements",
-   "headline": "Artefact Projects Ltd: Board Meeting Intimation for Declaration Of Financial Result For Quarter And Half Year Ended 30Th September, 2026.",
-   "summary": "Board Meeting. Artefact Projects Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 12/11/2026 ,inter alia, to consider and approve Declaration of Financial ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a46bf5e3-0ce5-4932-9415-a538c30145e3.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "24a5247865c5",
-   "kind": "news",
-   "time": "2026-11-06T16:34+05:30",
-   "source": "NSE announcements",
-   "headline": "Service Care Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "SERVICE CARE LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meetin",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22011_WebXMLFile_20261106_163426813.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "80eb8ad00dfe",
-   "kind": "news",
-   "time": "2026-11-06T16:34+05:30",
-   "source": "NSE announcements",
-   "headline": "DOMS Industries Limited: Transcript of Investor Conference Call on the unaudited Financial Results for the quarter and six months ended on September 30, 2026",
-   "summary": "DOMS Industries Limited has informed the Exchange about Transcript of Investor Conference Call on the unaudited Financial Results for the quarter and six months ended on September 30, 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con.",
-   "link": "https://nsearchives.nseindia.com/corporate/RAHULBS35_06112026163343_IntimationOfTranscript.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "e6ece9680dbf",
-   "kind": "news",
-   "time": "2026-11-06T16:34+05:30",
-   "source": "BSE announcements",
-   "headline": "Prithvi Exchange (India) Ltd: Board Meeting Intimation for Approving Un-Audited Standalone And Consolidated Financial Results For 2Nd Quarter And Half-Year Ended September 30, 2026",
-   "summary": "Board Meeting. Prithvi Exchange (India) Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 14/11/2026 ,inter alia, to consider and approve un-audited standalone ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4e5ef9b4-91e1-40bb-85eb-1673b04f3625.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "24d467f362d9",
-   "kind": "news",
-   "time": "2026-11-06T16:34+05:30",
-   "source": "BSE announcements",
-   "headline": "Pentokey Organy India Ltd: Board Meeting Intimation for Approval Of Unaudited Standalone Financial Result For The Quarter And Half Year Ended 30Th September, 2026",
-   "summary": "Board Meeting. Pentokey Organy India Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 12/11/2026 ,inter alia, to consider and approve Unaudited standalone ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31932fd0-0a68-4504-9d9f-f8555753df00.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "66cdc2f8ecf4",
-   "kind": "news",
-   "time": "2026-11-06T16:34+05:30",
-   "source": "BSE announcements",
-   "headline": "Lambodhara Textile Ltd-$: Unaudited Financial Results Of The Company For The Quarter And Half Year Ended 30Th September 2026",
-   "summary": "Result. We enclose herewith the unaudited financial results of the Company for the quarter and half year ended 30th September 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/69786335-452a-4c92-bebd-c9bcddd42e0e.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "1c0762fa52f9",
-   "kind": "news",
-   "time": "2026-11-06T16:33+05:30",
-   "source": "NSE announcements",
-   "headline": "Mahanagar Gas Limited: Transcripts - earnings or quarterly calls",
-   "summary": "MAHANAGAR GAS LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_13963_WebXMLFile_20261106_163351853.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "893ec6612da8",
-   "kind": "news",
-   "time": "2026-11-06T16:33+05:30",
-   "source": "NSE announcements",
-   "headline": "Gland Pharma Limited: Gland Pharma Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Gland Pharma Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/GLAND_06112026162953_OutcomeBMQ2FY27_Final.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "c03648bbbe8c",
-   "kind": "news",
-   "time": "2026-11-06T16:33+05:30",
-   "source": "NSE announcements",
-   "headline": "Integrity Infrabuild Developers Limited: Integrity Infrabuild Developers Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Integrity Infrabuild Developers Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/INTEGRITY_06112026163142_Outcome_of_BM.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "84576319bfff",
-   "kind": "news",
-   "time": "2026-11-06T16:33+05:30",
-   "source": "NSE announcements",
-   "headline": "On Door Concepts Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
-   "summary": "ON DOOR CONCEPTS LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUB",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22154_WebXMLFile_20261106_163320811.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "8f9ac4563b04",
-   "kind": "news",
-   "time": "2026-11-06T16:33+05:30",
-   "source": "NSE announcements",
-   "headline": "E To E Transportation Infrastructure Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "E To E Transportation Infrastructure Limited has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 ",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_27050_WebXMLFile_20261106_163313847.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "36daccac23f3",
-   "kind": "news",
-   "time": "2026-11-06T16:33+05:30",
-   "source": "NSE announcements",
-   "headline": "Britannia Industries Limited: Pursuant to Regulation 30 read with Clause 15 of Para A of Part A of Schedule III of the SEBI Listing Regulations, 2015, please find the link for the Audio Recording of Investors/Analysts Conference Call held today, pertaining to the financial results and operations of the Company for the quarter and half year ended 30 September 2026.",
-   "summary": "Pursuant to Regulation 30 read with Clause 15 of Para A of Part A of Schedule III of the SEBI Listing Regulations, 2015, please find the link for the Audio Recording of Investors/Analysts Conference Call held today, pertaining to the financ",
-   "link": "https://nsearchives.nseindia.com/corporate/BRITANNIA1_06112026163138_Intimation_Signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "931e4e35a9e9",
-   "kind": "news",
-   "time": "2026-11-06T16:32+05:30",
-   "source": "NSE announcements",
-   "headline": "Jullundur Motor Agency (Delhi) Limited: Board Meeting to be held on 12-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Buyback.",
-   "summary": "Jullundur Motor Agency (Delhi) Limited has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Buybac",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_11641_WebXMLFile_20261106_163244458.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "buyback"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "db5ae63fb9de",
-   "kind": "news",
-   "time": "2026-11-06T16:32+05:30",
-   "source": "NSE announcements",
-   "headline": "Plada Infotech Services Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "PLADA INFOTECH SERVICES LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: B",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22160_WebXMLFile_20261106_163231160.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "402d5217e13f",
-   "kind": "news",
-   "time": "2026-11-06T16:29+05:30",
-   "source": "NSE announcements",
-   "headline": "Kingfa Science & Technology (India) Limited: Newspaper publication for unaudited financial results for quarter and half year ended 30.09.2026 & navigation path for accessing the details regarding Special window for Re-lodgement of Physical Certificates at Company's website",
-   "summary": "Kingfa Science & Technology (India) Limited has informed the Exchange about Newspaper publication for unaudited financial results for quarter and half year ended 30.09.2026 & navigation path for accessing the details regarding Special windo",
-   "link": "https://nsearchives.nseindia.com/corporate/KINGFA_06112026162858_NP_Intimation.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "7fbb708f7a90",
-   "kind": "news",
-   "time": "2026-11-06T16:27+05:30",
-   "source": "NSE announcements",
-   "headline": "IRB Infrastructure Developers Limited: Copy of Newspaper extract of the unaudited financial results (consolidated and standalone) for the quarter and six months ended September 30, 2026.",
-   "summary": "IRB Infrastructure Developers Limited has informed the Exchange about Copy of Newspaper extract of the unaudited financial results (consolidated and standalone) for the quarter and six months ended September 30, 2026. |SUBJECT: Copy of News",
-   "link": "https://nsearchives.nseindia.com/corporate/IRB_06112026162516_IRBIDL_Newspaper_Advertisement.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "3441d3e2523a",
-   "kind": "news",
-   "time": "2026-11-06T16:26+05:30",
-   "source": "NSE announcements",
-   "headline": "Veto Switchgears And Cables Limited: Veto Switchgears And Cables Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Veto Switchgears And Cables Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/VETO_06112026162601_fiancialresultsep2026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "ec6c0fb35c01",
-   "kind": "news",
-   "time": "2026-11-06T16:26+05:30",
-   "source": "NSE announcements",
-   "headline": "Mahindra & Mahindra Limited: Acquisition (including agreement to acquire)",
-   "summary": "Mahindra & Mahindra Limited has informed the Exchange regarding Acquisition (including agreement to acquire) |SUBJECT: Acquisition (including agreement to acquire)-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_679_WebXMLFile_20261106_162619362.xml",
-   "symbols": [
-    "M&M"
-   ],
-   "symbol_keys": [
-    "M&M"
-   ],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [
-    "M&M"
-   ],
-   "score": 8,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "844b42685e4f",
-   "kind": "news",
-   "time": "2026-11-06T16:25+05:30",
-   "source": "NSE announcements",
-   "headline": "Dabur India Limited: Administrative warning letter received from SEBI",
-   "summary": "Dabur India Limited has informed the Exchange about Administrative warning letter received from SEBI |SUBJECT: Action(s) taken or orders passed",
-   "link": "https://nsearchives.nseindia.com/corporate/DABURA_06112026162506_Letter.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "945b9108b815",
-   "kind": "news",
-   "time": "2026-11-06T16:25+05:30",
-   "source": "NSE announcements",
-   "headline": "Felix Industries Limited: Board Meeting to be held on 13-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
-   "summary": "FELIX INDUSTRIES LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUB",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_15600_WebXMLFile_20261106_162517996.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "dc4c5c26c7d7",
-   "kind": "news",
-   "time": "2026-11-06T16:24+05:30",
-   "source": "NSE announcements",
-   "headline": "TTK Prestige Limited: TTK Prestige Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "TTK Prestige Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/TTKPRESTIG1_06112026162223_OutcomeoftheBM_November062026_Combined_Signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "3a7fb079c59f",
-   "kind": "news",
-   "time": "2026-11-06T16:24+05:30",
-   "source": "NSE announcements",
-   "headline": "Jaykay Enterprises Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "JAYKAY ENTERPRISES LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board ",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_25540_WebXMLFile_20261106_162431262.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "424f20cab7c0",
-   "kind": "news",
-   "time": "2026-11-06T16:23+05:30",
-   "source": "NSE announcements",
-   "headline": "Kriti Nutrients Limited: Copy of Newspaper Publication - Newspaper clippings Press Release of Unaudited Standalone and Consolidated Financial Results for the Quarter and half year ended 30th September, 2026.",
-   "summary": "Kriti Nutrients Limited has informed the Exchange about Copy of Newspaper Publication - Newspaper clippings Press Release of Unaudited Standalone and Consolidated Financial Results for the Quarter and half year ended 30th September, 2026. |",
-   "link": "https://nsearchives.nseindia.com/corporate/KRITINUTRIENTS_06112026162339_KNL_SE_NP_06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "f2143aabcc41",
-   "kind": "news",
-   "time": "2026-11-06T16:23+05:30",
-   "source": "NSE announcements",
-   "headline": "Shaily Engineering Plastics Limited: Acquisition of to be incorporated companies",
-   "summary": "Shaily Engineering Plastics Limited has informed the Exchange regarding Acquisition of to be incorporated companies |SUBJECT: Acquisition of 'to be incorporated companies'-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_19072_WebXMLFile_20261106_162342655.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "07869c063528",
-   "kind": "news",
-   "time": "2026-11-06T16:23+05:30",
-   "source": "NSE announcements",
-   "headline": "Ishan International Limited: Ishan International Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Ishan International Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/ISHANINTERNATIONAL_06112026162052_NSEFILE.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "883f8a664acf",
-   "kind": "news",
-   "time": "2026-11-06T16:23+05:30",
-   "source": "NSE announcements",
-   "headline": "Nagreeka Capital & Infrastructure Limited: Nagreeka Capital & Infrastructure Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Nagreeka Capital & Infrastructure Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/NAGREEKCAP_06112026162246_Final_ocr.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "1fd657dfb10e",
-   "kind": "news",
-   "time": "2026-11-06T16:22+05:30",
-   "source": "NSE announcements",
-   "headline": "The Ramco Cements Limited: Copy of Newspaper Publication - Newspaper Publication of Financial Results for the quarter ended 30th September 2026",
-   "summary": "The Ramco Cements Limited has informed the Exchange about Copy of Newspaper Publication - Newspaper Publication of Financial Results for the quarter ended 30th September 2026 |SUBJECT: Copy of Newspaper Publication",
-   "link": "https://nsearchives.nseindia.com/corporate/RAMCOCEM_06112026162247_sesnewspaper.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "59f49ff2ba13",
-   "kind": "news",
-   "time": "2026-11-06T16:22+05:30",
-   "source": "NSE announcements",
-   "headline": "C P S Shapers Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "C P S SHAPERS LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeti",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22300_WebXMLFile_20261106_162233487.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "193a88ecd134",
-   "kind": "news",
-   "time": "2026-11-06T16:22+05:30",
-   "source": "NSE announcements",
-   "headline": "Scoda Tubes Limited: Scoda Tubes Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Scoda Tubes Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/SCODA_06112026162020_Outcome__06-11-2026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "9c716c905220",
-   "kind": "news",
-   "time": "2026-11-06T16:21+05:30",
-   "source": "NSE announcements",
-   "headline": "Kridhan Infra Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "KRIDHAN INFRA LIMITED has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Meeti",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_13277_WebXMLFile_20261106_162146043.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "9df3ef1b562a",
-   "kind": "news",
-   "time": "2026-11-06T16:21+05:30",
-   "source": "NSE announcements",
-   "headline": "BF Utilities Limited: update on consolidated financial results for the quarter and half year ended September 30, 2026",
-   "summary": "BF Utilities Limited has informed the Exchange about update on consolidated financial results for the quarter and half year ended September 30, 2026 |SUBJECT: General Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/BFUTILITIE_06112026162109_Update_Consolidated_financials_06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "e3e61e930687",
-   "kind": "news",
-   "time": "2026-11-06T16:21+05:30",
-   "source": "NSE announcements",
-   "headline": "Vineet Laboratories Limited: Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "Vineet Laboratories Limited has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board M",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_19540_WebXMLFile_20261106_162113879.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "e0899cb4d0b3",
-   "kind": "news",
-   "time": "2026-11-06T16:21+05:30",
-   "source": "NSE announcements",
-   "headline": "Swaraj Suiting Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "SWARAJ SUITING LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board Meetin",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_20487_WebXMLFile_20261106_162106531.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "51e9be1295fb",
-   "kind": "news",
-   "time": "2026-11-06T16:21+05:30",
-   "source": "BusinessLine",
-   "headline": "Thermax shares fall 20% to 52-week low on weak Q2, JM Financial maintains sell",
-   "summary": "The company reported a net profit of ₹114.54 crore in Q2FY27, down from ₹119.66 crore in Q2FY26.",
-   "link": "https://www.thehindubusinessline.com/markets/thermax-shares-fall-20-to-52-week-low-after-q2-results-jm-financial-maintains-sell/article71673760.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "211ed44ceb9c",
-   "kind": "news",
-   "time": "2026-11-06T16:20+05:30",
-   "source": "NSE announcements",
-   "headline": "Lambodhara Textiles Limited: Lambodhara Textiles Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Lambodhara Textiles Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/LAMBODHARA_06112026161829_BMOUTCOME_06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "2fe74b870149",
-   "kind": "news",
-   "time": "2026-11-06T16:20+05:30",
-   "source": "NSE announcements",
-   "headline": "HCL Infosystems Limited: the Copy of Newspaper Publication on the unaudited standalone and consolidated financial results for the quarter and half year ended September 30, 2026.",
-   "summary": "HCL Infosystems Limited has informed the Exchange about the Copy of Newspaper Publication on the unaudited standalone and consolidated financial results for the quarter and half year ended September 30, 2026. |SUBJECT: Copy of Newspaper Pub",
-   "link": "https://nsearchives.nseindia.com/corporate/HCL-INSYS1_06112026162022_HCLI.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "89602ec14271",
-   "kind": "news",
-   "time": "2026-11-06T16:20+05:30",
-   "source": "NSE announcements",
-   "headline": "Arham Technologies Limited: Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and ESOP.",
-   "summary": "ARHAM TECHNOLOGIES LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and ESOP. |SUBJECT: Bo",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_21099_WebXMLFile_20261106_162026986.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "0128238e272e",
-   "kind": "news",
-   "time": "2026-11-06T16:19+05:30",
-   "source": "NSE announcements",
-   "headline": "Muthoot Capital Services Limited: Link of Audio Recording of concall held on November 06. 2026, to discuss on the unaudited Financial results for the quarter and Half-year ended September 30, 2026",
-   "summary": "Muthoot Capital Services Limited has informed the Exchange about Link of Audio Recording of concall held on November 06. 2026, to discuss on the unaudited Financial results for the quarter and Half-year ended September 30, 2026 |SUBJECT: An",
-   "link": "https://nsearchives.nseindia.com/corporate/MUTHOOTCAPS_06112026161530_Final.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "b598cec3e6ec",
-   "kind": "news",
-   "time": "2026-11-06T16:19+05:30",
-   "source": "NSE announcements",
-   "headline": "UFO Moviez India Limited: Transcript for the Q2&H1FY27 Earnings Conference Call held on November 4, 2026.",
-   "summary": "UFO Moviez India Limited has informed the Exchange about Transcript for the Q2&H1FY27 Earnings Conference Call held on November 4, 2026. |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/UFO_06112026161506_EarningscallTranscript30092026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "76a09119c32e",
-   "kind": "news",
-   "time": "2026-11-06T16:18+05:30",
-   "source": "NSE announcements",
-   "headline": "Travel Food Services Limited: Schedule of meet to discuss the Un-audited Financial Results for quarter and half year ended September 30, 2026",
-   "summary": "Travel Food Services Limited has informed the Exchange about Schedule of meet to discuss the Un-audited Financial Results for quarter and half year ended September 30, 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/TRAVELFOOD_06112026161410_TFSLEarningCallIntimation06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "6b02bb88d1a6",
-   "kind": "news",
-   "time": "2026-11-06T16:18+05:30",
-   "source": "NSE announcements",
-   "headline": "Kriti Industries (India) Limited: Copy of Newspaper Publication-Newspaper clippings Press Release of Unaudited Standalone and Consolidated Financial Results for the Quarter and half year ended 30th September, 2026.",
-   "summary": "Kriti Industries (India) Limited has informed the Exchange about Copy of Newspaper Publication-Newspaper clippings Press Release of Unaudited Standalone and Consolidated Financial Results for the Quarter and half year ended 30th September, ",
-   "link": "https://nsearchives.nseindia.com/corporate/KRITI_06112026161710_KIIL_SE_NP_06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "77b715b2d18c",
-   "kind": "news",
-   "time": "2026-11-06T16:17+05:30",
-   "source": "NSE announcements",
-   "headline": "Vinsys IT Services India Limited: Vinsys It Services India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Vinsys It Services India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/VINSYS_06112026161555_BMOutcome.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "747c50e91e40",
-   "kind": "news",
-   "time": "2026-11-06T16:15+05:30",
-   "source": "NSE announcements",
-   "headline": "Nomura Fixed Income Securities Limited: Financial Results Updates",
-   "summary": "Financial Results Updates |SUBJECT: Financial Results Updates",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/NFIS_06112026161403_Board_meeting_outcome.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "7e7d59e0b120",
-   "kind": "news",
-   "time": "2026-11-06T16:15+05:30",
-   "source": "NSE announcements",
-   "headline": "Ramkrishna Forgings Limited: Q2 & H1 FY27 Earnings Call Transcript held on 30 October, 2026",
-   "summary": "Ramkrishna Forgings Limited has informed the Exchange about Q2 & H1 FY27 Earnings Call Transcript held on 30 October, 2026 |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/RKFORGE_06112026161508_STExchQ2FY27EarningsCallTranscript.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "ebb27ae94ddf",
-   "kind": "news",
-   "time": "2026-11-06T16:14+05:30",
-   "source": "NSE announcements",
-   "headline": "TPL Plastech Limited: Copy of Newspaper Advertisement for Publication of Unaudited Financial Results (Consolidated & Standalone) for the Quarter and Half Year ended September 30, 2026",
-   "summary": "TPL Plastech Limited has informed the Exchange about Copy of Newspaper Advertisement for Publication of Unaudited Financial Results (Consolidated & Standalone) for the Quarter and Half Year ended September 30, 2026 |SUBJECT: Copy of Newspap",
-   "link": "https://nsearchives.nseindia.com/corporate/TPLPLASTEH_06112026161408_TPLNewspaperAdvt.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "5847df894506",
-   "kind": "news",
-   "time": "2026-11-06T16:14+05:30",
-   "source": "NSE announcements",
-   "headline": "Deutsche Investments India Private Limited: Financial Results Updates",
-   "summary": "Financial Results Updates |SUBJECT: Financial Results Updates",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/KDDIIPL_06112026161421_Financial_Results.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "8dd581c0bd7b",
-   "kind": "news",
-   "time": "2026-11-06T16:14+05:30",
-   "source": "NSE announcements",
-   "headline": "Dynamatic Technologies Limited: Outcome of Board Meeting held on 06-Nov-2026 for Dividend",
-   "summary": "Dynamatic Technologies Limited has informed the Exchange regarding Outcome of Board Meeting held on 06-Nov-2026 for Dividend |SUBJECT: Outcome of Board Meeting-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/OUTCOME_1497_WebXMLFile_20261106_161414529.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "b054b0d08b27",
-   "kind": "news",
-   "time": "2026-11-06T16:14+05:30",
-   "source": "NSE announcements",
-   "headline": "Modern Threads (India) Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "MODERN THREADS (INDIA) LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Boar",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_702_WebXMLFile_20261106_161407296.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "0b7bcce20481",
-   "kind": "news",
-   "time": "2026-11-06T16:13+05:30",
-   "source": "NSE announcements",
-   "headline": "Transteel Seating Technologies Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "Transteel Seating Technologies Limited has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUB",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22156_WebXMLFile_20261106_161355425.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "0f18f0277b22",
-   "kind": "news",
-   "time": "2026-11-06T16:13+05:30",
-   "source": "NSE announcements",
-   "headline": "Thomas Scott (India) Limited: Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "Thomas Scott (India) Limited has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Boar",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_5530_WebXMLFile_20261106_161347825.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "7a3c39a50897",
-   "kind": "news",
-   "time": "2026-11-06T16:13+05:30",
-   "source": "NSE announcements",
-   "headline": "Vivo Collaboration Solutions Limited: Vivo Collaboration Solutions Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Vivo Collaboration Solutions Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/VIVO_06112026161122_OUTCOME_RESULT.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "c8b61c2e7ef8",
-   "kind": "news",
-   "time": "2026-11-06T16:13+05:30",
-   "source": "NSE announcements",
-   "headline": "Nityas Gems and Jewellery Limited: Nityas Gems and Jewellery Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Nityas Gems and Jewellery Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/NITYAS2026_06112026161030_Outcome_of_Board_Meeting.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "f95b552bc7f8",
-   "kind": "news",
-   "time": "2026-11-06T16:13+05:30",
-   "source": "NSE announcements",
-   "headline": "Bharti Airtel Limited: Audio Recording/Video Recording",
-   "summary": "Bharti Airtel Limited has informed the Exchange about Audio Recording/Video Recording |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_2002_WebXMLFile_20261106_161304693.xml",
-   "symbols": [
-    "BHARTIARTL"
-   ],
-   "symbol_keys": [
-    "BHARTIARTL"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "64f0c0925c7d",
-   "kind": "news",
-   "time": "2026-11-06T16:12+05:30",
-   "source": "NSE announcements",
-   "headline": "HDFC Bank Limited: Change in Directors/KMP/SMP/Auditor/RTA",
-   "summary": "HDFC BANK LIMITED has informed the Exchange about Change in Directors/KMP/SMP/Auditor/RTA |SUBJECT: Change in Directors/KMP/SMP/Auditor/RTA",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/CIM_797_WebXMLFile_20261106_161252898.xml",
-   "symbols": [
-    "HDFCBANK"
-   ],
-   "symbol_keys": [
-    "HDFCBANK"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "7de16ab157a6",
-   "kind": "news",
-   "time": "2026-11-06T16:12+05:30",
-   "source": "NSE announcements",
-   "headline": "Dynamatic Technologies Limited: Record date for the purpose of Dividend is 13-Nov-2026.",
-   "summary": "Dynamatic Technologies Limited has informed the Exchange that Record date for the purpose of Dividend is 13-Nov-2026. |SUBJECT: Record Date",
-   "link": "https://nsearchives.nseindia.com/corporate/DYNAMATICH_06112026161121_BoardMeetingOutcome06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "fb9d21876d9c",
-   "kind": "news",
-   "time": "2026-11-06T16:11+05:30",
-   "source": "NSE announcements",
-   "headline": "Bharti Airtel Limited: Link of Recording",
-   "summary": "Bharti Airtel Limited has informed the Exchange about Link of Recording |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_06112026160637_BhartiAirtelSTXdisclosure.pdf",
-   "symbols": [
-    "BHARTIARTL"
-   ],
-   "symbol_keys": [
-    "BHARTIARTL"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "2a409642fa45",
-   "kind": "news",
-   "time": "2026-11-06T16:09+05:30",
-   "source": "NSE announcements",
-   "headline": "Jay Bee Laminations Limited: a press release dated November 06, 2026, for the \"Financial Results For The Half Year Ended September 30, 2026\".",
-   "summary": "Jay Bee Laminations Limited has informed the Exchange regarding a press release dated November 06, 2026, for the \"Financial Results For The Half Year Ended September 30, 2026\". |SUBJECT: Press Release",
-   "link": "https://nsearchives.nseindia.com/corporate/JAYBEE_06112026160933_Intimation_of_Press_release.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "c71a782601c7",
-   "kind": "news",
-   "time": "2026-11-06T16:09+05:30",
-   "source": "NSE announcements",
-   "headline": "Precision Wires India Limited: Precision Wires India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Precision Wires India Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/PRECWIRE_06112026160814_Outcome06112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-06T16:55+05:30"
-  },
-  {
-   "id": "17ecb76dadbf",
-   "kind": "news",
-   "time": "2026-11-06T16:09+05:30",
-   "source": "NSE announcements",
-   "headline": "BF Utilities Limited: BF Utilities Limited has submitted to the Exchange, the Unaudited Standalone financial results for the quarter and half year ended September 30, 2026.",
-   "summary": "BF Utilities Limited has submitted to the Exchange, the Unaudited Standalone financial results for the quarter and half year ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/BFUTILITIE_06112026160836_BFUL_Standalone_Unaudited_Results_Sept_2026_06112026.pdf",
    "symbols": [],
    "symbol_keys": [],
    "keywords": [
