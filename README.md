@@ -236,7 +236,7 @@ Rates in `papertrade/costs.py`, checked 2026-10-17. Re-check after any budget or
 | DP charge | Rs 15.93 per scrip per sell day | none |
 
 Example: 100 shares at Rs 1,200 delivery costs Rs 142.48 to buy and Rs 140.41 to sell. A round
-trip is Rs 282.61, or about 0.24% of turnover. That is the break-even move.
+trip is Rs 282.89, or about 0.24% of turnover. That is the break-even move.
 
 Each buy's charges are added to the position's average cost. A sell's realised P&L is net proceeds
 minus average cost times quantity, so realised P&L is after all charges.
