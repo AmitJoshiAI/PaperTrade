@@ -21,9 +21,10 @@ Options (OPT):   brokerage Rs 20 flat per order; STT 0.15% of premium on the sel
                  STT rates verified 4 Nov 2026 (broker notes); NSE transaction charges for cash, futures and options
                  verified 7 Nov 2026 against NSE/FA/73061 (https://nsearchives.nseindia.com/content/circulars/FA73061.pdf):
                  each figure is the total outflow (transaction charge + Re 0.01 IPFT) which Zerodha passes on.
-US (USD):        us_charges(): zero commission; SEC fee 0.0000206 x sell notional (verified sec.gov 6 Nov 2026); FINRA TAF $0.000166 per
-                 share sold, max $8.30 per trade (options: $0.00279 per contract sold). VERIFY: both fees
-                 are reset by the SEC/FINRA, usually once a year. FX: the day's USD/INR (fx.py).
+US (USD):        us_charges(): zero commission; SEC fee 0.0000206 x sell notional (verified sec.gov 6 Nov 2026); FINRA TAF by calendar year
+                 (US_FINRA_TAF_BY_YEAR; 2026: $0.000195 per share sold, max $9.79 per trade, $0.00329 per option
+                 contract sold; steps up each 1 Jan to 2029; finra.org schedule read 7 Nov 2026). The SEC rate is
+                 reset by the SEC, usually in April: re-read sec.gov each year. FX: the day's USD/INR (fx.py).
 """
 from __future__ import annotations
 import math
@@ -50,9 +51,26 @@ STT_OPT_EXERCISE = 0.0015           # 0.15% of intrinsic value on exercise (veri
 NSE_TXN_OPT = 0.0003553            # 0.03553% of premium: Rs 3,553 per crore each side (NSE/FA/73061, read 7 Nov 2026)
 STAMP_OPT_BUY = 0.00003
 US_SEC_FEE = 0.0000206              # x sell notional (USD): $20.60 per million from 4 Apr 2026 (sec.gov fee rate advisory 2026-2, read 6 Nov 2026)
-US_FINRA_TAF_SHARE = 0.000166       # per share sold. VERIFY on finra.org
-US_FINRA_TAF_CAP = 8.30
-US_FINRA_TAF_CONTRACT = 0.00279     # per option contract sold
+# FINRA Trading Activity Fee by calendar year (effective 1 Jan of each year): (per share sold, max per trade,
+# per option contract sold). finra.org SR-FINRA-2024-019 fee adjustment schedule, read directly 7 Nov 2026.
+# Years after the last row keep the last row's rates until the schedule is re-read.
+US_FINRA_TAF_BY_YEAR = {
+    2025: (0.000166, 8.30, 0.00279),
+    2026: (0.000195, 9.79, 0.00329),
+    2027: (0.000232, 11.61, 0.00390),
+    2028: (0.000240, 12.05, 0.00404),
+    2029: (0.000249, 12.50, 0.00420),
+}
+
+
+def finra_taf(year: int | None = None) -> tuple[float, float, float]:
+    """(per share, cap per trade, per contract) for a calendar year; default = today's year."""
+    import datetime as _dt
+    y = year or _dt.date.today().year
+    return US_FINRA_TAF_BY_YEAR[max(k for k in US_FINRA_TAF_BY_YEAR if k <= y)] if y >= min(US_FINRA_TAF_BY_YEAR)         else US_FINRA_TAF_BY_YEAR[min(US_FINRA_TAF_BY_YEAR)]
+
+
+US_FINRA_TAF_SHARE, US_FINRA_TAF_CAP, US_FINRA_TAF_CONTRACT = finra_taf()   # this year's rates
 
 
 @dataclass
@@ -129,7 +147,8 @@ def us_charges(side: str, qty: int, price: float, option: bool = False) -> Charg
     if side.upper() == "SELL":
         notional = qty * price * (100 if option else 1)
         c.sebi = notional * US_SEC_FEE                     # the 'sebi' slot holds the regulator's fee (SEC)
-        c.exchange = qty * US_FINRA_TAF_CONTRACT if option else min(qty * US_FINRA_TAF_SHARE, US_FINRA_TAF_CAP)
+        taf_share, taf_cap, taf_contract = finra_taf()
+        c.exchange = qty * taf_contract if option else min(qty * taf_share, taf_cap)
     for k in ("sebi", "exchange"):         # both fees are rounded UP to the next cent
         v = getattr(c, k)
         setattr(c, k, math.ceil(round(v * 100, 6)) / 100 if v > 0 else 0.0)

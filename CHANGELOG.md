@@ -1,5 +1,16 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-07: FINRA TAF 2024-25 rates -> dated table 2025-2029 (structural: fee error)
+
+Old: $0.000166 per share sold (max $8.30), $0.00279 per option contract (the 2024-25 rates). New: a table by
+calendar year from finra.org's SR-FINRA-2024-019 fee adjustment schedule (read directly 7 Nov 2026): 2026
+$0.000195 / $9.79 / $0.00329; 2027 $0.000232 / $11.61 / $0.00390; 2028 and 2029 as listed. Picked by the
+year of the run, so the 1 Jan steps apply themselves. Proposed by the strategist's fourth run today
+(PROPOSAL 2026-11-07, DEFERRED 20). Effect: a few cents per US sell; the US sleeve has not traded, nothing is
+restated. The fortnight limit in the change policy is for strategy rules, not for corrections of a published
+fee to its source; this is the second such US correction in a week and both are closed. Revert: a new FINRA
+filing.
+
 ## 2026-11-07: NSE cash transaction charge 0.00297% -> 0.00307% (structural: fee error)
 
 Old: `NSE_TXN = 0.0000297` (Rs 297/crore, the pre-March transaction charge without the IPFT contribution).
