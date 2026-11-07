@@ -369,3 +369,19 @@ Zerodha opens within 5 bps on 20 trading days, phase 2 is not needed and the sub
   the US sleeve has never traded.
 - **Revert if**: the sec.gov page, read directly by the user's session, shows a different rate in force.
 
+
+## PROPOSAL (2026-11-07) - US sleeve: FINRA Trading Activity Fee 2026 rates (weekly strategist; not applied)
+
+- **Old -> new**: `US_FINRA_TAF_SHARE` 0.000166 -> **0.000195**; `US_FINRA_TAF_CAP` 8.30 -> **9.79**;
+  `US_FINRA_TAF_CONTRACT` 0.00279 -> **0.00329** (rates effective 1 Jan 2026).
+- **Evidence (structural: a cost error)**: FINRA SR-FINRA-2024-019 fee adjustment schedule, fetched directly 7 Nov 2026
+  (https://www.finra.org/rules-guidance/rule-filings/sr-finra-2024-019/fee-adjustment-schedule): 2024 and 2025 $0.000166/share
+  (max $8.30) and $0.00279/contract; **2026 $0.000195/share (max $9.79), $0.00329/contract**; 2027 $0.000232 (max $11.61),
+  $0.00390; 2028 $0.000240 (max $12.05), $0.00404; 2029 $0.000249 (max $12.50), $0.00420; "fee increases take effect on
+  January 1 of the year stated". The code holds the 2024-25 figures. (The finra.org rulebook page still displays the old
+  footnote by default; its 2026 version was not opened.)
+- **Suggested shape**: a small dated table so the 1 Jan 2027 step ($0.000232 / $11.61 / $0.00390) applies by itself.
+- **Expected effect**: about 17% higher TAF on US sells (100 shares: $0.0166 -> $0.0195). No past number changes: the US sleeve has never traded.
+- **Fortnight rule**: this is the second US-sleeve cost correction within 14 days (SEC fee, 6 Nov). Both are data
+  corrections, not strategy rules; the user's session decides whether the policy's one-per-fortnight limit applies to them.
+- **Revert if**: the finra.org Schedule A version dated 1 Jan 2026 shows different figures.
