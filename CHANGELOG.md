@@ -1,5 +1,14 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-07: NSE cash transaction charge 0.00297% -> 0.00307% (structural: fee error)
+
+Old: `NSE_TXN = 0.0000297` (Rs 297/crore, the pre-March transaction charge without the IPFT contribution).
+New: `NSE_TXN = 0.0000307` (Rs 307/crore each side). Evidence: NSE circular NSE/FA/73061 dated 27 Feb 2026,
+effective 1 Mar 2026, read directly (https://nsearchives.nseindia.com/content/circulars/FA73061.pdf), and
+zerodha.com/charges shows 0.00307%. Futures (Rs 183/crore) and options (Rs 3,553/crore of premium) in the
+same circular match the code; DEFERRED 6 and 19 closed. Effect: Rs 1 per Rs 10 lakh traded per side plus GST,
+about Rs 0.14 on a Rs 1.2 lakh round trip; no past trade is restated. Revert condition: a later NSE circular.
+
 ## 2026-11-07: Zerodha Kite Connect, data only (design)
 
 Decision: subscribe to Kite Connect on the user's own account and use it for DATA ONLY: option chains with

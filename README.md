@@ -192,7 +192,7 @@ sleeves' run. Orders are queued by the reviewer in `decisions/fno_orders.json` a
 | Fill | first NSE open after decision_date | stock: first US open after decision_date; option: chain mid as of the latest US session, at the next daily run |
 | Price | future = spot x (1 + 6.5% x days/365); option MARK = mid of the real NSE chain (fetched by the daily run, `state/chains/`), else Black-Scholes on the chain IV, else on India VIX (index) / 1.5x 30-day realised vol (stock), each labelled; option FILL = Black-Scholes at the next open on the latest prior chain IV, +/-1% | stock: Yahoo bars; option: mid of bid/ask of the real chain; with no two-sided quote, Black-Scholes on the chain's implied vol, labelled FALLBACK |
 | Expiry | last Tuesday of the month, snapped to NSE's listed date (a holiday moves it a day earlier); verified 4 Nov 2026; futures settle at the spot close and roll to next month at the next open unless `"roll": false`; options settle at intrinsic | as listed in the chain; cash-settled at intrinsic |
-| Costs | Zerodha FUT and OPT (FUT STT 0.05% sell; OPT: Rs 20/order, STT 0.15% on sell premium and on exercised intrinsic; NSE txn 0.00183% / 0.03553%: VERIFY) | zero commission; SEC fee and FINRA TAF on sells |
+| Costs | Zerodha FUT and OPT (FUT STT 0.05% sell; OPT: Rs 20/order, STT 0.15% on sell premium and on exercised intrinsic; NSE txn 0.00183% / 0.03553%, NSE/FA/73061) | zero commission; SEC fee and FINRA TAF on sells |
 | Shorts | futures and covered options only (no naked short options) | paper-short stock ("PAPER SHORT: not possible from India (LRS)"), covered options |
 
 Limits (code): 5 positions per sleeve, risk per order at most 10% of sleeve equity, no naked short
@@ -229,13 +229,13 @@ Rates in `papertrade/costs.py`, checked 2026-10-17. Re-check after any budget or
 |---|---|---|
 | Brokerage | 0 | min(0.03%, Rs 20) per order |
 | STT | 0.1% buy and sell | 0.025% sell only |
-| NSE transaction | 0.00297% | 0.00297% |
+| NSE transaction | 0.00307% | 0.00307% |
 | SEBI | 0.0001% | 0.0001% |
 | Stamp duty | 0.015% buy | 0.003% buy |
 | GST | 18% of (brokerage + transaction + SEBI) | same |
 | DP charge | Rs 15.93 per scrip per sell day | none |
 
-Example: 100 shares at Rs 1,200 delivery costs Rs 142.34 to buy and Rs 140.27 to sell. A round
+Example: 100 shares at Rs 1,200 delivery costs Rs 142.48 to buy and Rs 140.41 to sell. A round
 trip is Rs 282.61, or about 0.24% of turnover. That is the break-even move.
 
 Each buy's charges are added to the position's average cost. A sell's realised P&L is net proceeds
