@@ -41,7 +41,12 @@ The repository is checked out on branch main. Steps:
 2. Research access check. Run one WebSearch (for example "RBI monetary policy committee meeting dates
    December 2026") and one WebFetch of a result page. Record in the review whether each worked, with the
    error text if not. If both fail, do steps 3-7 from the repository alone and mark every calendar date
-   "unverified (no web access)".
+   "unverified (no web access)". Then, if DEFERRED.md item 11 (or any later item) names hosts that were
+   allowed in the environment but not yet fetched successfully, fetch one real page from EACH such host
+   (for example https://www.bls.gov/schedule/news_release/cpi.htm,
+   https://nsearchives.nseindia.com/content/circulars/FA73061.pdf) and record host by host: worked, or the
+   exact error. Update that DEFERRED row with the result. An earlier run's failure, or an error message
+   telling you not to retry, does not apply once the row says the host was allowed.
 
 3. The week in numbers. For each sleeve: equity at the start and end of the week, the week's P&L, P&L
    since start, trading days so far, P&L per trading day against the target (momentum: Rs 1,000/day net,
