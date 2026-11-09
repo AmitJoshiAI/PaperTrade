@@ -1,7 +1,7 @@
 ---
 thesis: Rising crude and a weak rupee lift the rupee realisation of an oil producer (ONGC) and squeeze the marketing margin of a refiner-marketer that cannot pass pump prices through quickly (HPCL). Long the winner, paper-short the loser.
 type: second_order
-status: open
+status: closed
 event: Crude price rise plus rupee weakness through September-October 2026 (analyst commentary, 3-15 Oct 2026); not a single-day event, so the rule is time-boxed
 event_date: 2026-10-16
 rule_due_date: 2026-12-15
@@ -20,6 +20,7 @@ legs:
     side: SHORT
     weight: 0.5
     rationale: buys crude in dollars and sells petrol and diesel at pump prices that move slowly; higher crude plus a weaker rupee compresses its marketing margin until prices are allowed to catch up. HINDPETRO is on the NSE F&O list, so this short could be executed with a stock future.
+exit_date: 2026-11-09
 ---
 
 ## The second-order checklist, filled in

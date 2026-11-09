@@ -1,0 +1,60 @@
+[
+  {
+    "order": {
+      "thesis": "crude-ongc-vs-hpcl",
+      "leg": "ONGC",
+      "side": "SELL",
+      "decision_date": "2026-11-06",
+      "reason": "post-event rule triggered: Brent closed below its 15 Oct 2026 level (105.92) for five consecutive sessions (2-6 Nov: 104.77, 103.60, 94.62, 98.29, 98.69); close both legs"
+    },
+    "status": "filled",
+    "detail": "SELL 279 ONGC @ 235.88",
+    "fill": {
+      "date": "2026-11-09",
+      "symbol": "ONGC",
+      "side": "SELL",
+      "qty": 279,
+      "price": 235.88,
+      "gross": 65810.52,
+      "charges": 84.21,
+      "net_cash": 65726.31,
+      "product": "CNC",
+      "reason": "thesis crude-ongc-vs-hpcl: post-event rule triggered: Brent closed below its 15 Oct 2026 level (105.92) for five consecutive sessions (2-6 Nov: 104.77, 103.60, 94.62, 98.29, 98.69); close both legs",
+      "realised_pnl": 3404.78,
+      "thesis": "crude-ongc-vs-hpcl",
+      "leg_side": "LONG",
+      "currency": "INR",
+      "fx": 1.0,
+      "label": ""
+    }
+  },
+  {
+    "order": {
+      "thesis": "crude-ongc-vs-hpcl",
+      "leg": "HINDPETRO",
+      "side": "COVER",
+      "decision_date": "2026-11-06",
+      "reason": "post-event rule triggered: Brent below 15 Oct level for five sessions; close both legs together"
+    },
+    "status": "filled",
+    "detail": "COVER 181 HINDPETRO @ 386.19  PAPER SHORT: needs F&O to execute",
+    "fill": {
+      "date": "2026-11-09",
+      "symbol": "HINDPETRO",
+      "side": "COVER",
+      "qty": 181,
+      "price": 386.19,
+      "gross": 69900.39,
+      "charges": 26.59,
+      "net_cash": -69926.98,
+      "product": "FUT",
+      "reason": "PAPER SHORT: needs F&O to execute | thesis crude-ongc-vs-hpcl: post-event rule triggered: Brent below 15 Oct level for five sessions; close both legs together",
+      "realised_pnl": -7729.58,
+      "thesis": "crude-ongc-vs-hpcl",
+      "leg_side": "SHORT",
+      "currency": "INR",
+      "fx": 1.0,
+      "label": "PAPER SHORT: needs F&O to execute"
+    }
+  }
+]
