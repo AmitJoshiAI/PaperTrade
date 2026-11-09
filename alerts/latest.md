@@ -1,186 +1,186 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-06 17:30 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via nse_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 6 moving.
+Generated 2026-11-09 09:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 55 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [13 HIGH] Q2 Results Today Live: Hindalco, Bosch, Siemens, Aster DM, Coromandel Intl, Gland Pharma, Voltas, Nuvama Wealth, 3M India to announce Q2 results, Bharti Airtel, Titan, M&M shares gain, ONGC, LIC, Thermax, Prestige, Schneider Electric, Protean eGov, Astral drag after Q2
+## 1. [10 HIGH] Seamec Ltd: Announcement Under Regulation 30 Of SEBI (LODR) Regulations, 2015 - Updates
 
-- Time: 2026-11-06 09:37 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-hindalco-ind-bosch-siemens-aster-dm-coromandel-intl-gland-pharma-voltas-nuvama-wealth-3m-india-airtel-lic-titan-mahindra-ongc-company-results-06-november-2026/article71669522.ece
-- Matched symbols: BHARTIARTL, HINDALCO, TITAN, ONGC, M&M (moving today: M&M)
-- Keywords: results
+- Time: 2026-11-08 13:37 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/da98569e-b9c1-4bd3-8b1d-bd8981ae0f69.pdf
+- Matched symbols: ONGC, LT
+- Keywords: none
 - Thesis match: crude-ongc-vs-hpcl (open)
-- Score: 13
-- Alert id: 25dda475232b
-- Second-order candidates: False match: multi-company results-day live blog; no single-company mechanism. Single-company items are noted under their own alerts.
+- Score: 10
+- Alert id: 04804ecb7312
+- Second-order candidates: 
 
-## 2. [13 HIGH] Q2 Results Today Highlights: M&M, NBCC, IPCA Lab, Bharat Forge, LG Electronics, Uno Minda & Amagi Media Q2 profit up, Samvardhana Motherson profit down q-o-q, Bharti Airtel, LIC, Titan, ONGC, Britannia, Prestige Estates, Fortis Healthcare, Abbott to announce Q2 results
+## 2. [6 HIGH] Trade Spotlight: How should you trade Motilal Oswal, Adani Green Energy, ITC, SBI, Va Tech Wabag, Groww, and others on Muhurat Trading?
 
-- Time: 2026-11-05 21:38 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-highlights-bharti-airtel-lic-titan-mm-ongc-samvardhana-britannia-lg-bharat-forge-prestige-fortis-abbott-india-bse-biocon-apollo-lesnkart-nykaacompany-results-05-november-2026/article71668559.ece
-- Matched symbols: BHARTIARTL, TITAN, ONGC, M&M (moving today: M&M)
-- Keywords: results
-- Thesis match: crude-ongc-vs-hpcl (open)
-- Score: 13
-- Alert id: 2dbd34ab4f1a
-- Second-order candidates: False match: round-up of many results (same blog family as 25dda475232b); no single-company mechanism.
-
-## 3. [12 HIGH] Diwali stock picks 2026: Titan, ICICI Bank, HDFC Bank, BSE, Eternal among 25 stocks with up to 46% upside for Samvat 2083; check target prices
-
-- Time: 2026-11-06 16:55 IST
+- Time: 2026-11-09 09:46 IST
 - Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/diwali-stock-picks-2026-titan-icici-bank-hdfc-bank-bse-eternal-among-25-stocks-with-up-to-46-upside-for-samvat-2083-check-target-prices-14072831.html
-- Matched symbols: ICICIBANK, HDFCBANK, TITAN (moving today: ICICIBANK, TITAN)
-- Keywords: rating
+- Link: https://www.moneycontrol.com/news/business/markets/trade-spotlight-how-should-you-trade-motilal-oswal-adani-green-energy-itc-sbi-va-tech-wabag-groww-and-others-on-muhurat-trading-14074847.html
+- Matched symbols: ITC, SBIN
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 66dde9adc783
+- Second-order candidates: 
+
+## 3. [6 HIGH] Angel One flags Nifty hurdle at 25,150; bullish on ITC, SBI, Force Motors
+
+- Time: 2026-11-09 07:45 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/stock-to-buy-angel-one-flags-nifty-hurdle-at-25-150-bullish-on-itc-sbi-force-motors-126110900057_1.html
+- Matched symbols: ITC, SBIN
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: f9ed3f79a287
+- Second-order candidates: 
+
+## 4. [6 HIGH] Stocks in focus: SBI, L&T, Alkem Lab, Adani Enterprises, BEL, GRSE, BHEL, Waaree Renewable among others
+
+- Time: 2026-11-09 07:34 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/stock-markets/stocks-in-focus-sbi-lt-alkem-lab-adani-enterprises-bel-grse-bhel-waaree-renewable-among-others/article71681276.ece
+- Matched symbols: ADANIENT, WAAREEENER, BEL, LT, SBIN
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 9051c4fff0db
+- Second-order candidates: 
+
+## 5. [6 HIGH] Jubilant Ingrevia Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
+
+- Time: 2026-11-08 19:28 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/8c38614e-402a-4d97-8f62-1ad6b76ab248.pdf
+- Matched symbols: none
+- Keywords: stake sale, M&A
+- Thesis match: none
+- Score: 6
+- Alert id: 8170ab88eb41
+- Second-order candidates: 
+
+## 6. [6 HIGH] Adani Enterprises Ltd: Announcement under Regulation 30 (LODR)-Acquisition
+
+- Time: 2026-11-08 17:27 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/5143cb57-7f56-4ad6-8714-61aa677d1cb2.pdf
+- Matched symbols: ADANIENT
+- Keywords: M&A
+- Thesis match: none
+- Score: 6
+- Alert id: 58ba9ec87f08
+- Second-order candidates: 
+
+## 7. [6 HIGH] ICICI Bank, Divi's among 14 NSE 500 stocks hit new highs in Muhurat session
+
+- Time: 2026-11-08 15:10 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/icici-bank-divi-s-among-14-nse-500-stocks-hit-new-highs-in-muhurat-session-126110800329_1.html
+- Matched symbols: ICICIBANK
+- Keywords: none
 - Thesis match: icici-bank-recovery (open)
-- Score: 12
-- Alert id: dcfa33cc591e
+- Score: 6
+- Alert id: fc78fc70bcfe
 - Second-order candidates: 
 
-## 4. [9 HIGH] Adani Ports and Special Economic Zone Limited: 'Transcript of Analysts/Investors Call pertaining to agreement to acquire 100% stake in Evos B.V.'.
+## 8. [6 HIGH] Muhurat Trading Close: Sensex dips 29 pts, Nifty ends at 24,986; Sun Pharma, Tata Steel shine
 
-- Time: 2026-11-06 16:52 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/rkbhagia_06112026165120_Letter14.pdf
-- Matched symbols: ADANIPORTS
-- Keywords: stake sale, M&A
+- Time: 2026-11-08 13:32 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/stock-market-live-november-8-muhurat-trading-live-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-today-samvat-2083-tata-steel-share-price-126110800267_1.html
+- Matched symbols: SUNPHARMA, TATASTEEL
+- Keywords: none
 - Thesis match: none
-- Score: 9
-- Alert id: 987e0f5af4ce
+- Score: 6
+- Alert id: f142d19c4c01
 - Second-order candidates: 
 
-## 5. [9 HIGH] Adani Ports and Special Economic Zone Ltd: Transcript Of Analysts/Investors Call Pertaining To Agreement To Acquire 100% Stake In Evos B.V.
+## 9. [5] Tata Steel spurts 3% in Muhurat trading session post steady Q2 earnings
 
-- Time: 2026-11-06 16:47 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/c1ad64a7-d93f-4a53-95bf-73cfc5276772.pdf
-- Matched symbols: ADANIPORTS
-- Keywords: stake sale, M&A
-- Thesis match: none
-- Score: 9
-- Alert id: ac47647511ea
-- Second-order candidates: 
-
-## 6. [9 HIGH] Oil and Natural Gas Corporation Ltd: Integrated Financial Results For The Quarter And Half Year Ended 30.09.2026.
-
-- Time: 2026-11-05 17:36 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f93ddf37-bf97-4686-8022-054c950f038a.pdf
-- Matched symbols: ONGC
-- Keywords: results
-- Thesis match: crude-ongc-vs-hpcl (open)
-- Score: 9
-- Alert id: 06a508a7dcb1
-- Second-order candidates: Winner: ONGC - higher realised crude and gas prices flow straight into upstream profit, the same mechanism as the open ONGC leg; the board also approved a dividend. / Losers: HINDPETRO (HPCL) - buys crude in dollars and cannot raise pump prices quickly, so the same price rise that lifts ONGC squeezes refiner-marketer margin; the print itself says nothing new about HPCL, whose own results are the next check. / Catalyst: scheduled, already out - Q2 results 2026-11-05; thesis time-box runs to 2026-12-15, no new dated event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (ONGC leg earnings confirm the realisation mechanism; HPCL leg still unproven until its own Q2 margin is seen)
-
-## 7. [8 HIGH] Titan Company Limited: Newspaper publication for Unaudited financial results for the second quarter and halfyear ended 30th September 2026
-
-- Time: 2026-11-06 16:56 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/TITAN_06112026165556_SEnewspaperadresultQ2-combined.pdf
-- Matched symbols: TITAN (moving today: TITAN)
+- Time: 2026-11-08 14:47 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/tata-steel-spurts-3-in-muhurat-trading-session-post-steady-q2-earnings-126110800313_1.html
+- Matched symbols: TATASTEEL
 - Keywords: results
 - Thesis match: none
-- Score: 8
-- Alert id: 7da80028eb2a
+- Score: 5
+- Alert id: fed0caeb2b1d
 - Second-order candidates: 
 
-## 8. [8 HIGH] Mahindra & Mahindra Limited: Acquisition (including agreement to acquire)
+## 10. [4] CRWV +6.3% vs previous close (close 46.4, bar 2026-11-06)
 
-- Time: 2026-11-06 16:26 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_679_WebXMLFile_20261106_162619362.xml
-- Matched symbols: M&M (moving today: M&M)
-- Keywords: M&A
-- Thesis match: none
-- Score: 8
-- Alert id: ec6c0fb35c01
-- Second-order candidates: 
-
-## 9. [8 HIGH] Mahindra & Mahindra Limited: Acquisition
-
-- Time: 2026-11-06 15:36 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/AmitDodani_06112026153559_SEIntimationSMLRightsIssue.pdf
-- Matched symbols: M&M (moving today: M&M)
-- Keywords: M&A
-- Thesis match: none
-- Score: 8
-- Alert id: e5ef50fcd882
-- Second-order candidates: 
-
-## 10. [8 HIGH] ONGC net profit jumps 57% on higher oil, gas prices
-
-- Time: 2026-11-05 19:17 IST
-- Source: Moneycontrol
-- Link: https://news.google.com/rss/articles/CBMitgFBVV95cUxOU2IyQlFPU21GV1ZzRVJYTGdvbk1jVlpOeFlOazk3VnQtRllCSWNPSUtBeldOMF9sLWZ3dVJac0YtUURsVzVubzA4SEpsSGpaaS1ROVFZNEp6cWVoU0JrZE9tY1JxU3lSU3FVeHZDbkM5UTZEbzlsampVRHNnRV8tRmM4Q1JsbGJxeVNRN1FsWHlsLTZfcWJKby1uYXRkRU5FMXFnQ053YzdhU2I1cmxXRzlOeExwQdIBuwFBVV95cUxPc3RneFdJZThFUkN5WjBhaVJOWmVNR1Q0SVZuX2xnLWtSMFFlc281VVdPeUlGWXNBUndmRlRmU3FLTmQ0cm9iTnU2QXVfb2NHanR5UjlwbDNYcENEcDlWMHd3QnE3SzN3SHFueGtKNGxOeWh2Z1lVMFBLbEY3TG1uM20zMU12UXpNQnZRTE9sVGVnTXotN1FVY1JyN1doV25mLWVOdjl2VVEtaDBRTWt0MHNkeEV6TXdKWWxv?oc=5
-- Matched symbols: ONGC
-- Keywords: results
-- Thesis match: crude-ongc-vs-hpcl (open)
-- Score: 8
-- Alert id: bc5fbf59dbc9
-- Second-order candidates: Winner: ONGC - higher realised crude and gas prices flow straight into upstream profit (same mechanism as the open ONGC leg). / Losers: HINDPETRO (HPCL) - buys crude in dollars and cannot pass on a price rise quickly, so refiner-marketer margin is squeezed; HPCL's own Q2 is the next check. / Catalyst: scheduled, already out - Q2 results 2026-11-05; see the full note under 06a508a7dcb1, no new dated event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (ONGC leg only; HPCL leg unproven)
-
-## 11. [8 HIGH] Oil and Natural Gas Corporation Ltd: Corporate Action-Board approves Dividend
-
-- Time: 2026-11-05 17:42 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/ee33adb8-23cc-4a29-93cc-b8b6342ffd45.pdf
-- Matched symbols: ONGC
-- Keywords: dividend
-- Thesis match: crude-ongc-vs-hpcl (open)
-- Score: 8
-- Alert id: 47ddd598ee99
-- Second-order candidates: Winner: ONGC holders - dividend is a cash return alongside the profit jump; it adds to the case but is not a new mechanism. / Losers: none clear - a dividend names no listed loser. / Catalyst: scheduled - record date follows the board decision (date not checked); minor, the profit print was the real event. / Thesis fit: open thesis crude-ongc-vs-hpcl: supports (weakly)
-
-## 12. [7 HIGH] ICICIBANK +4.8% vs previous close (close 1571.2, bar 2026-11-06)
-
-- Time: 2026-11-06 16:55 IST
+- Time: 2026-11-09 09:46 IST
 - Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/ICICIBANK.NS
-- Matched symbols: ICICIBANK (moving today: ICICIBANK)
+- Link: https://finance.yahoo.com/quote/CRWV
+- Matched symbols: CRWV (moving today: CRWV)
 - Keywords: price move
-- Thesis match: icici-bank-recovery (open)
-- Score: 7
-- Alert id: 19ce7b518f18
-- Second-order candidates: 
-
-## 13. [7 HIGH] Q2 Results Today Live: Hindalco Q2 profit zooms, Bosch, Coromandel International & Honasa profit down, Siemens, Aster DM, Gland Pharma, Voltas to announce Q2 results
-
-- Time: 2026-11-06 15:58 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/q2-results-today-live-updates-hindalco-ind-bosch-siemens-aster-dm-coromandel-intl-gland-pharma-voltas-nuvama-wealth-3m-india-airtel-lic-titan-mahindra-ongc-company-results-06-november-2026/article71669522.ece
-- Matched symbols: HINDALCO (moving today: HINDALCO)
-- Keywords: results
 - Thesis match: none
-- Score: 7
-- Alert id: 3e593e230e14
+- Score: 4
+- Alert id: 29065138601e
 - Second-order candidates: 
 
-## 14. [7 HIGH] Mahindra & Mahindra Financial Services Limited: Credit rating
+## 11. [4] NBIS +7.6% vs previous close (close 129.49, bar 2026-11-06)
 
-- Time: 2026-11-06 15:06 IST
+- Time: 2026-11-09 09:46 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/NBIS
+- Matched symbols: NBIS (moving today: NBIS)
+- Keywords: price move
+- Thesis match: none
+- Score: 4
+- Alert id: d3790084b98e
+- Second-order candidates: 
+
+## 12. [4] SBI Gold ETF: the Net Asset Value (per unit) of SBI-ETF Gold as on November 08, 2026 is Rs. 119.6575.
+
+- Time: 2026-11-09 07:00 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/content/debt/WDM/M_MFIN_06112026150606_credit_rating.pdf
-- Matched symbols: M&M (moving today: M&M)
-- Keywords: rating
+- Link: 
+- Matched symbols: SBIN
+- Keywords: none
 - Thesis match: none
-- Score: 7
-- Alert id: 8dcec974cf77
+- Score: 4
+- Alert id: 406221c278e5
 - Second-order candidates: 
 
-## 15. [7 HIGH] Titan surges 2.5% on strong Q2 results; brokerages divided on upside
+## 13. [4] SBI Nifty Next 50 ETF: the Net Asset Value (per unit) of SBI-ETF Nifty Next 50 as on November 08, 2026 is Rs. 769.3691.
 
-- Time: 2026-11-06 13:19 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/titan-surges-25-on-strong-q2-results-brokerages-divided-on-upside/article71673406.ece
-- Matched symbols: TITAN (moving today: TITAN)
-- Keywords: results
+- Time: 2026-11-09 07:00 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: SBIN
+- Keywords: none
 - Thesis match: none
-- Score: 7
-- Alert id: 5c4d092d4623
+- Score: 4
+- Alert id: 9d2026743a44
+- Second-order candidates: 
+
+## 14. [4] SBI Nifty IT ETF: the Net Asset Value (per unit) of SBI Mutual Fund-SBI ETF IT as on November 08, 2026 is Rs. 366.8176.
+
+- Time: 2026-11-09 07:00 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: SBIN
+- Keywords: none
+- Thesis match: none
+- Score: 4
+- Alert id: 00dd7ee750bc
+- Second-order candidates: 
+
+## 15. [4] SBI Nifty Private Bank ETF: the Net Asset Value (per unit) of SBI Mutual Fund - SBI ETF Private Bank - SBI ETF Private Bank as on November 08, 2026 is Rs. 301.8033.
+
+- Time: 2026-11-09 07:00 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: SBIN
+- Keywords: none
+- Thesis match: none
+- Score: 4
+- Alert id: ebf65629720d
 - Second-order candidates: 
