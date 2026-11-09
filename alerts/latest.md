@@ -1,11 +1,35 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-09 13:57 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
+Generated 2026-11-09 17:30 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [7 HIGH] ICICI Bank Limited: Disclosure under Regulation 30 read with para A of Schedule III and Regulation 46(2) of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015
+## 1. [7 HIGH] ICICI Bank Limited: Schedule of Analysts or Institutional Investors Meet
+
+- Time: 2026-11-09 14:28 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1606_WebXMLFile_20261109_142826657.xml
+- Matched symbols: ICICIBANK
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 7
+- Alert id: 86d732dd167f
+- Second-order candidates: 
+
+## 2. [7 HIGH] Tata Steel Limited: newspaper Advertisement Disclosure under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations )
+
+- Time: 2026-11-09 14:16 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_09112026141442_BSENSE_Signed.pdf
+- Matched symbols: TATASTEEL
+- Keywords: listing, SEBI
+- Thesis match: none
+- Score: 7
+- Alert id: 863d7039f279
+- Second-order candidates: 
+
+## 3. [7 HIGH] ICICI Bank Limited: Disclosure under Regulation 30 read with para A of Schedule III and Regulation 46(2) of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015
 
 - Time: 2026-11-09 13:44 IST
 - Source: NSE announcements
@@ -15,9 +39,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 7
 - Alert id: 90abd3cf651b
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - the disclosure text could not be read from this sandbox, so no mechanism can be stated; Regulation 30/Schedule III filings cover many routine items. / Losers: none clear / Catalyst: unknown - filing content unverified; nothing here changes the icici-bank-recovery invalidation tests (Nifty level, rising slippages in results). / Thesis fit: open thesis icici-bank-recovery: neither supports nor weakens until the filing is read
 
-## 2. [7 HIGH] ICICI Bank Ltd: Disclosure Under Regulation 30 Read With Para A Of Schedule III And Regulation 46(2) Of The Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015
+## 4. [7 HIGH] ICICI Bank Ltd: Disclosure Under Regulation 30 Read With Para A Of Schedule III And Regulation 46(2) Of The Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015
 
 - Time: 2026-11-09 13:32 IST
 - Source: BSE announcements
@@ -27,9 +51,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 7
 - Alert id: 791cda79132c
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear - duplicate of 90abd3cf651b, see that note. / Losers: none clear / Catalyst: unknown - content unverified / Thesis fit: open thesis icici-bank-recovery: no change
 
-## 3. [7 HIGH] Larsen & Toubro Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
+## 5. [7 HIGH] Larsen & Toubro Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
 
 - Time: 2026-11-09 10:35 IST
 - Source: BSE announcements
@@ -41,7 +65,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 66fce81348e9
 - Second-order candidates: Winner: L&T (LT) - order inflow adds to the backlog; size and category not verified (BSE PDF not readable from this sandbox). / Losers: none clear - orders are won in competitive bids, and without the contract details no specific rival can be named. / Catalyst: surprise - order intimations arrive unscheduled; value band and segment decide whether it matters. / Thesis fit: none
 
-## 4. [6 HIGH] Buy ONGC; target of Rs 285: Motilal Oswal
+## 6. [6 HIGH] Buy ONGC; target of Rs 285: Motilal Oswal
 
 - Time: 2026-11-09 12:11 IST
 - Source: Moneycontrol
@@ -51,9 +75,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: crude-ongc-vs-hpcl (open)
 - Score: 6
 - Alert id: 7cc84bb01b49
-- Second-order candidates: 
+- Second-order candidates: Winner: ONGC - broker upgrade/target is a view on realisations and volumes, not a new event; article body not read. / Losers: none clear - a broker rating names no one who loses. / Catalyst: unknown - research note, no scheduled trigger. / Thesis fit: open thesis crude-ongc-vs-hpcl: neutral (thesis already hit its post_event_rule on 2026-11-06 and the exit is queued)
 
-## 5. [6 HIGH] Eicher Motors Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
+## 7. [6 HIGH] Eicher Motors Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
 
 - Time: 2026-11-09 11:45 IST
 - Source: BSE announcements
@@ -65,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2a7a87e0c723
 - Second-order candidates: Winner: none clear - a meeting intimation is routine disclosure, not news. / Losers: none clear / Catalyst: scheduled - analyst meet date is set by the company, likely around its results/earnings call; date not verified (PDF unreadable here). / Thesis fit: none
 
-## 6. [6 HIGH] Trade Spotlight: How should you trade Motilal Oswal, Adani Green Energy, ITC, SBI, Va Tech Wabag, Groww, and others on Muhurat Trading?
+## 8. [6 HIGH] Trade Spotlight: How should you trade Motilal Oswal, Adani Green Energy, ITC, SBI, Va Tech Wabag, Groww, and others on Muhurat Trading?
 
 - Time: 2026-11-09 09:46 IST
 - Source: Moneycontrol
@@ -77,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 66dde9adc783
 - Second-order candidates: False match: round-up of trading ideas for many stocks, no single-company mechanism.
 
-## 7. [6 HIGH] Angel One flags Nifty hurdle at 25,150; bullish on ITC, SBI, Force Motors
+## 9. [6 HIGH] Angel One flags Nifty hurdle at 25,150; bullish on ITC, SBI, Force Motors
 
 - Time: 2026-11-09 07:45 IST
 - Source: Business Standard
@@ -89,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: f9ed3f79a287
 - Second-order candidates: False match: broker technical view / stock-pick round-up, no event or mechanism.
 
-## 8. [6 HIGH] Stocks in focus: SBI, L&T, Alkem Lab, Adani Enterprises, BEL, GRSE, BHEL, Waaree Renewable among others
+## 10. [6 HIGH] Stocks in focus: SBI, L&T, Alkem Lab, Adani Enterprises, BEL, GRSE, BHEL, Waaree Renewable among others
 
 - Time: 2026-11-09 07:34 IST
 - Source: BusinessLine
@@ -101,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9051c4fff0db
 - Second-order candidates: False match: multi-company round-up; single-company items are noted under their own alerts.
 
-## 9. [6 HIGH] Jubilant Ingrevia Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
+## 11. [6 HIGH] Jubilant Ingrevia Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
 
 - Time: 2026-11-08 19:28 IST
 - Source: BSE announcements
@@ -113,74 +137,50 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8170ab88eb41
 - Second-order candidates: Winner: Jubilant Ingrevia if the acquisition adds capacity or products; filing PDF not readable from this sandbox, so terms are unverified. / Losers: none clear / Catalyst: unknown - acquisition update with no readable terms; no listed counterparty identified / Thesis fit: none
 
-## 10. [6 HIGH] Adani Enterprises Ltd: Announcement under Regulation 30 (LODR)-Acquisition
+## 12. [5] HSBC upgrades Indian stocks to ‘overweight’, downgrades China to ‘neutral’ amid improving earnings outlook
 
-- Time: 2026-11-08 17:27 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/5143cb57-7f56-4ad6-8714-61aa677d1cb2.pdf
-- Matched symbols: ADANIENT
-- Keywords: M&A
-- Thesis match: none
-- Score: 6
-- Alert id: 58ba9ec87f08
-- Second-order candidates: Winner: Adani Enterprises (new business or asset), terms unverified; filing PDF not readable from this sandbox. / Losers: none clear / Catalyst: unknown - target and price not visible here / Thesis fit: none
-
-## 11. [6 HIGH] ICICI Bank, Divi's among 14 NSE 500 stocks hit new highs in Muhurat session
-
-- Time: 2026-11-08 15:10 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/icici-bank-divi-s-among-14-nse-500-stocks-hit-new-highs-in-muhurat-session-126110800329_1.html
-- Matched symbols: ICICIBANK
-- Keywords: none
-- Thesis match: icici-bank-recovery (open)
-- Score: 6
-- Alert id: fc78fc70bcfe
-- Second-order candidates: False match: market-wrap list of stocks at new highs, no company-specific mechanism (ICICI Bank strength is background for open thesis icici-bank-recovery, not new evidence).
-
-## 12. [5] Kotak Nifty Bank ETF: the Net Asset Value (per unit) of Kotak Mahindra MF - Kotak Banking ETF - Dividend Payout Option as on November 06, 2026 is Rs. 61.3963.
-
-- Time: 2026-11-09 12:48 IST
-- Source: NSE announcements
-- Link: 
-- Matched symbols: KOTAKBANK
-- Keywords: dividend
+- Time: 2026-11-09 17:30 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/hsbc-upgrades-indian-stocks-to-overweight-downgrades-china-to-neutral-14075534.html
+- Matched symbols: none
+- Keywords: results, guidance, rating
 - Thesis match: none
 - Score: 5
-- Alert id: beb359e3a51a
+- Alert id: 45e64aa8b893
 - Second-order candidates: 
 
-## 13. [5] Hindalco trades higher after record Q2; analysts hold Buy ratings despite target cuts
+## 13. [5] Tata Steel shares down 3% post-Q2 results, brokerages cautious about UK operations' growth
 
-- Time: 2026-11-09 12:19 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/hindalco-trades-higher-after-record-q2-analysts-hold-buy-ratings-despite-target-cuts/article71681663.ece
-- Matched symbols: HINDALCO
-- Keywords: results
-- Thesis match: none
-- Score: 5
-- Alert id: bf57826ffaa8
-- Second-order candidates: 
-
-## 14. [5] Airtel dips 1.2% post-results as Citi flags ₹299 plan reversal; analysts hold Buy
-
-- Time: 2026-11-09 11:58 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/airtel-dips-12-post-results-as-citi-flags-299-plan-reversal-analysts-hold-buy/article71681616.ece
-- Matched symbols: BHARTIARTL
-- Keywords: results
-- Thesis match: none
-- Score: 5
-- Alert id: 682ec11a3a03
-- Second-order candidates: 
-
-## 15. [5] Tata Steel slides 2.75% at open despite in-line Q2 results; analysts divided on recovery path
-
-- Time: 2026-11-09 11:54 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-slides-275-at-open-despite-in-line-q2-results-analysts-divided-on-recovery-path/article71681592.ece
+- Time: 2026-11-09 17:30 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/tata-steel-shares-down-3-post-q2-results-brokerages-cautious-about-uk-operations-growth-14075524.html
 - Matched symbols: TATASTEEL
 - Keywords: results
 - Thesis match: none
 - Score: 5
-- Alert id: 5b4b60b6acbc
+- Alert id: 369e29bf8917
+- Second-order candidates: 
+
+## 14. [5] Shriram Finance Limited: 'Payment of Interim Dividend for FY 2026-27'.
+
+- Time: 2026-11-09 16:06 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/Mathew_09112026160603_BSENSE_InterimDividend_2026_27.pdf
+- Matched symbols: SHRIRAMFIN
+- Keywords: dividend
+- Thesis match: none
+- Score: 5
+- Alert id: 05e499ce9a48
+- Second-order candidates: 
+
+## 15. [5] Shriram Finance Ltd: Announcement under Regulation 30 (LODR)-Dividend Updates
+
+- Time: 2026-11-09 16:03 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/60737d9b-9abf-4596-941f-afd0b4a0dcee.pdf
+- Matched symbols: SHRIRAMFIN
+- Keywords: dividend
+- Thesis match: none
+- Score: 5
+- Alert id: 9ba8060e5b93
 - Second-order candidates: 
