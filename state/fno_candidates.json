@@ -19,8 +19,8 @@
    "why": [
     "index"
    ],
-   "spot": 25044.65,
-   "spot_date": "2026-11-09",
+   "spot": 25030.35,
+   "spot_date": "2026-11-06",
    "chain": {
     "timestamp": "09-Nov-2026 15:40:00",
     "underlying": 25044.65,
@@ -791,144 +791,146 @@
    "why": [
     "index"
    ],
-   "spot": 59741.25,
-   "spot_date": "2026-11-09",
+   "spot": 59086.0,
+   "spot_date": "2026-11-06",
    "chain": {
     "timestamp": "09-Nov-2026 15:40:00",
     "underlying": 59741.25,
     "source": "NSE option-chain-v3"
    },
-   "warnings": [],
+   "warnings": [
+    "NSE chain underlying 59,741.25 differs from the Yahoo close 59,086.00 by more than 0.5%"
+   ],
    "expiries": [
     {
      "label": "monthly",
      "expiry": "2026-11-23",
      "days": 14,
-     "atm": 59700.0,
-     "atm_iv_pct": 16.82,
+     "atm": 59100.0,
+     "atm_iv_pct": 16.47,
      "rows": [
       {
        "offset": -2,
-       "strike": 59500.0,
+       "strike": 58900.0,
        "CE": {
-        "price": 840.5,
+        "price": 1204.07,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.59,
-        "bid": 836.0,
-        "ask": 845.0,
+        "iv_pct": 12.56,
+        "bid": 1188.55,
+        "ask": 1219.6,
         "listed": true,
-        "per_lot": 25215.0,
-        "pct": 5.04
+        "per_lot": 36122.1,
+        "pct": 7.22
        },
        "PE": {
-        "price": 734.1,
+        "price": 503.75,
         "src": "real NSE chain (mid)",
-        "iv_pct": 19.69,
-        "bid": 731.2,
-        "ask": 737.0,
+        "iv_pct": 19.77,
+        "bid": 499.0,
+        "ask": 508.5,
         "listed": true,
-        "per_lot": 22023.0,
-        "pct": 4.4
+        "per_lot": 15112.5,
+        "pct": 3.02
        },
        "source": "real NSE chain (mid)"
       },
       {
        "offset": -1,
-       "strike": 59600.0,
+       "strike": 59000.0,
        "CE": {
-        "price": 789.67,
+        "price": 1136.33,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.55,
-        "bid": 783.0,
-        "ask": 796.35,
+        "iv_pct": 12.83,
+        "bid": 1132.75,
+        "ask": 1139.9,
         "listed": true,
-        "per_lot": 23690.1,
-        "pct": 4.74
+        "per_lot": 34089.9,
+        "pct": 6.82
        },
        "PE": {
-        "price": 779.08,
+        "price": 533.5,
         "src": "real NSE chain (mid)",
-        "iv_pct": 19.82,
-        "bid": 773.25,
-        "ask": 784.9,
+        "iv_pct": 19.58,
+        "bid": 532.0,
+        "ask": 535.0,
         "listed": true,
-        "per_lot": 23372.4,
-        "pct": 4.67
+        "per_lot": 16005.0,
+        "pct": 3.2
        },
        "source": "real NSE chain (mid)"
       },
       {
        "offset": 0,
-       "strike": 59700.0,
+       "strike": 59100.0,
        "CE": {
-        "price": 737.92,
+        "price": 1072.1,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.64,
-        "bid": 732.0,
-        "ask": 743.85,
+        "iv_pct": 13.42,
+        "bid": 1060.6,
+        "ask": 1083.6,
         "listed": true,
-        "per_lot": 22137.6,
-        "pct": 4.43
+        "per_lot": 32163.0,
+        "pct": 6.43
        },
        "PE": {
-        "price": 830.23,
+        "price": 572.25,
         "src": "real NSE chain (mid)",
-        "iv_pct": 19.67,
-        "bid": 826.45,
-        "ask": 834.0,
+        "iv_pct": 19.56,
+        "bid": 568.5,
+        "ask": 576.0,
         "listed": true,
-        "per_lot": 24906.9,
-        "pct": 4.98
+        "per_lot": 17167.5,
+        "pct": 3.43
        },
        "source": "real NSE chain (mid)"
       },
       {
        "offset": 1,
-       "strike": 59800.0,
+       "strike": 59200.0,
        "CE": {
-        "price": 694.2,
+        "price": 1010.88,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.76,
-        "bid": 690.0,
-        "ask": 698.4,
+        "iv_pct": 13.11,
+        "bid": 1007.65,
+        "ask": 1014.1,
         "listed": true,
-        "per_lot": 20826.0,
-        "pct": 4.17
+        "per_lot": 30326.4,
+        "pct": 6.07
        },
        "PE": {
-        "price": 885.5,
+        "price": 607.9,
         "src": "real NSE chain (mid)",
-        "iv_pct": 19.8,
-        "bid": 880.0,
-        "ask": 891.0,
+        "iv_pct": 19.68,
+        "bid": 604.8,
+        "ask": 611.0,
         "listed": true,
-        "per_lot": 26565.0,
-        "pct": 5.31
+        "per_lot": 18237.0,
+        "pct": 3.65
        },
        "source": "real NSE chain (mid)"
       },
       {
        "offset": 2,
-       "strike": 59900.0,
+       "strike": 59300.0,
        "CE": {
-        "price": 645.75,
+        "price": 956.05,
         "src": "real NSE chain (mid)",
-        "iv_pct": 14.04,
-        "bid": 640.15,
-        "ask": 651.35,
+        "iv_pct": 13.33,
+        "bid": 948.65,
+        "ask": 963.45,
         "listed": true,
-        "per_lot": 19372.5,
-        "pct": 3.87
+        "per_lot": 28681.5,
+        "pct": 5.74
        },
        "PE": {
-        "price": 935.7,
+        "price": 646.95,
         "src": "real NSE chain (mid)",
-        "iv_pct": 19.85,
-        "bid": 927.9,
-        "ask": 943.5,
+        "iv_pct": 19.68,
+        "bid": 644.1,
+        "ask": 649.8,
         "listed": true,
-        "per_lot": 28071.0,
-        "pct": 5.61
+        "per_lot": 19408.5,
+        "pct": 3.88
        },
        "source": "real NSE chain (mid)"
       }
@@ -941,34 +943,34 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 59700.0,
-         "price": 737.92,
+         "strike": 59100.0,
+         "price": 1072.1,
          "src": "real NSE chain (mid)"
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 59900.0,
-         "price": 645.75,
+         "strike": 59300.0,
+         "price": 956.05,
          "src": "real NSE chain (mid)"
         }
        ],
        "units": 30,
-       "net_debit": 92.17,
-       "net_debit_lot": 2765.1,
-       "entry_charges": 94.37,
-       "max_loss": 2859.47,
-       "max_gain": 3140.53,
+       "net_debit": 116.05,
+       "net_debit_lot": 3481.5,
+       "entry_charges": 116.76,
+       "max_loss": 3598.26,
+       "max_gain": 2401.74,
        "breakevens": [
-        59792.17
+        59216.05
        ],
-       "long_leg_max": 22137.6,
-       "long_leg_pct": 4.43,
+       "long_leg_max": 32163.0,
+       "long_leg_pct": 6.43,
        "rule_10pct": "PASS",
-       "cash_need": 22171.17,
+       "cash_need": 32201.08,
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 2,
+       "max_lots": 1,
        "verdict": "PASS",
        "why": ""
       },
@@ -979,31 +981,31 @@
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 59700.0,
-         "price": 830.23,
+         "strike": 59100.0,
+         "price": 572.25,
          "src": "real NSE chain (mid)"
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 59500.0,
-         "price": 734.1,
+         "strike": 58900.0,
+         "price": 503.75,
          "src": "real NSE chain (mid)"
         }
        ],
        "units": 30,
-       "net_debit": 96.13,
-       "net_debit_lot": 2883.9,
-       "entry_charges": 100.7,
-       "max_loss": 2984.6,
-       "max_gain": 3015.4,
+       "net_debit": 68.5,
+       "net_debit_lot": 2055.0,
+       "entry_charges": 83.97,
+       "max_loss": 2138.97,
+       "max_gain": 3861.03,
        "breakevens": [
-        59603.87
+        59031.5
        ],
-       "long_leg_max": 24906.9,
-       "long_leg_pct": 4.98,
+       "long_leg_max": 17167.5,
+       "long_leg_pct": 3.43,
        "rule_10pct": "PASS",
-       "cash_need": 24941.72,
+       "cash_need": 17198.84,
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 2,
@@ -1017,35 +1019,35 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 59700.0,
-         "price": 737.92,
+         "strike": 59100.0,
+         "price": 1072.1,
          "src": "real NSE chain (mid)"
         },
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 59700.0,
-         "price": 830.23,
+         "strike": 59100.0,
+         "price": 572.25,
          "src": "real NSE chain (mid)"
         }
        ],
        "units": 30,
-       "net_debit": 1568.15,
-       "net_debit_lot": 47044.5,
-       "entry_charges": 68.39,
-       "max_loss": 47112.89,
+       "net_debit": 1644.35,
+       "net_debit_lot": 49330.5,
+       "entry_charges": 69.42,
+       "max_loss": 49399.92,
        "max_gain": null,
        "breakevens": [
-        58131.85,
-        61268.15
+        57455.65,
+        60744.35
        ],
-       "long_leg_max": 24906.9,
-       "long_leg_pct": 4.98,
+       "long_leg_max": 32163.0,
+       "long_leg_pct": 6.43,
        "rule_10pct": "PASS",
-       "cash_need": 47112.89,
+       "cash_need": 49399.92,
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 2,
+       "max_lots": 1,
        "verdict": "PASS",
        "why": ""
       }
@@ -1055,131 +1057,131 @@
      "label": "event: bajaj-finance-rbi-december 2026-12-04",
      "expiry": "2026-12-29",
      "days": 50,
-     "atm": 59700.0,
-     "atm_iv_pct": 14.58,
+     "atm": 59100.0,
+     "atm_iv_pct": 14.55,
      "rows": [
       {
        "offset": -2,
-       "strike": 59500.0,
+       "strike": 58900.0,
        "CE": {
-        "price": 1578.72,
+        "price": 1906.55,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.2,
-        "bid": 1570.05,
-        "ask": 1587.4,
+        "iv_pct": 12.95,
+        "bid": 1845.2,
+        "ask": 1967.9,
         "listed": true,
-        "per_lot": 47361.6,
-        "pct": 9.47
+        "per_lot": 57196.5,
+        "pct": 11.44
        },
        "PE": {
-        "price": 1063.1,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 16.09,
-        "bid": 1053.25,
-        "ask": 1072.95,
+        "price": 1065.31,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.04,
+        "bid": 811.1,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 31893.0,
-        "pct": 6.38
+        "per_lot": 31959.3,
+        "pct": 6.39
        },
-       "source": "real NSE chain (mid)"
+       "source": "CE: real NSE chain (mid); PE: model (BS on NSE chain IV)"
       },
       {
        "offset": -1,
-       "strike": 59600.0,
+       "strike": 59000.0,
        "CE": {
-        "price": 1525.75,
+        "price": 1878.03,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.09,
-        "bid": 1501.55,
-        "ask": 1549.95,
+        "iv_pct": 13.25,
+        "bid": 1865.5,
+        "ask": 1890.55,
         "listed": true,
-        "per_lot": 45772.5,
-        "pct": 9.15
+        "per_lot": 56340.9,
+        "pct": 11.27
        },
        "PE": {
-        "price": 1105.17,
+        "price": 867.23,
         "src": "real NSE chain (mid)",
         "iv_pct": 16.08,
-        "bid": 1051.35,
-        "ask": 1159.0,
+        "bid": 865.0,
+        "ask": 869.45,
         "listed": true,
-        "per_lot": 33155.1,
-        "pct": 6.63
+        "per_lot": 26016.9,
+        "pct": 5.2
        },
        "source": "real NSE chain (mid)"
       },
       {
        "offset": 0,
-       "strike": 59700.0,
+       "strike": 59100.0,
        "CE": {
-        "price": 1459.7,
+        "price": 1796.35,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.51,
-        "bid": 1447.3,
-        "ask": 1472.1,
+        "iv_pct": 13.27,
+        "bid": 1742.3,
+        "ask": 1850.4,
         "listed": true,
-        "per_lot": 43791.0,
-        "pct": 8.76
+        "per_lot": 53890.5,
+        "pct": 10.78
        },
        "PE": {
-        "price": 1116.81,
-        "src": "model (BS on NSE chain IV)",
-        "iv_pct": 15.76,
-        "bid": 1115.05,
-        "ask": 0.0,
+        "price": 959.1,
+        "src": "real NSE chain (mid)",
+        "iv_pct": 16.21,
+        "bid": 892.3,
+        "ask": 1025.9,
         "listed": true,
-        "per_lot": 33504.3,
-        "pct": 6.7
+        "per_lot": 28773.0,
+        "pct": 5.75
        },
-       "source": "CE: real NSE chain (mid); PE: model (BS on NSE chain IV)"
+       "source": "real NSE chain (mid)"
       },
       {
        "offset": 1,
-       "strike": 59800.0,
+       "strike": 59200.0,
        "CE": {
-        "price": 1405.88,
+        "price": 1763.05,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.21,
-        "bid": 1389.7,
-        "ask": 1422.05,
+        "iv_pct": 12.81,
+        "bid": 1740.35,
+        "ask": 1785.75,
         "listed": true,
-        "per_lot": 42176.4,
-        "pct": 8.44
+        "per_lot": 52891.5,
+        "pct": 10.58
        },
        "PE": {
-        "price": 1171.75,
+        "price": 1098.67,
         "src": "real NSE chain (mid)",
-        "iv_pct": 15.75,
-        "bid": 1160.05,
-        "ask": 1183.45,
+        "iv_pct": 15.94,
+        "bid": 915.25,
+        "ask": 1282.1,
         "listed": true,
-        "per_lot": 35152.5,
-        "pct": 7.03
+        "per_lot": 32960.1,
+        "pct": 6.59
        },
        "source": "real NSE chain (mid)"
       },
       {
        "offset": 2,
-       "strike": 59900.0,
+       "strike": 59300.0,
        "CE": {
-        "price": 1367.97,
+        "price": 1702.97,
         "src": "real NSE chain (mid)",
-        "iv_pct": 13.28,
-        "bid": 1360.0,
-        "ask": 1375.95,
+        "iv_pct": 13.33,
+        "bid": 1680.4,
+        "ask": 1725.55,
         "listed": true,
-        "per_lot": 41039.1,
-        "pct": 8.21
+        "per_lot": 51089.1,
+        "pct": 10.22
        },
        "PE": {
-        "price": 1412.65,
+        "price": 1079.22,
         "src": "real NSE chain (mid)",
-        "iv_pct": 15.64,
-        "bid": 1196.05,
-        "ask": 1629.25,
+        "iv_pct": 15.78,
+        "bid": 958.45,
+        "ask": 1200.0,
         "listed": true,
-        "per_lot": 42379.5,
-        "pct": 8.48
+        "per_lot": 32376.6,
+        "pct": 6.48
        },
        "source": "real NSE chain (mid)"
       }
@@ -1192,36 +1194,36 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 59700.0,
-         "price": 1459.7,
+         "strike": 59100.0,
+         "price": 1796.35,
          "src": "real NSE chain (mid)"
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 59900.0,
-         "price": 1367.97,
+         "strike": 59300.0,
+         "price": 1702.97,
          "src": "real NSE chain (mid)"
         }
        ],
        "units": 30,
-       "net_debit": 91.73,
-       "net_debit_lot": 2751.9,
-       "entry_charges": 145.73,
-       "max_loss": 2897.63,
-       "max_gain": 3102.37,
+       "net_debit": 93.38,
+       "net_debit_lot": 2801.4,
+       "entry_charges": 169.59,
+       "max_loss": 2970.99,
+       "max_gain": 3029.01,
        "breakevens": [
-        59791.73
+        59193.38
        ],
-       "long_leg_max": 43791.0,
-       "long_leg_pct": 8.76,
-       "rule_10pct": "PASS",
-       "cash_need": 43834.32,
+       "long_leg_max": 53890.5,
+       "long_leg_pct": 10.78,
+       "rule_10pct": "FAIL",
+       "cash_need": 53938.38,
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 1,
-       "verdict": "PASS",
-       "why": ""
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "long leg premium 53,890 is above the 10% limit 50,000"
       },
       {
        "name": "Bear put spread",
@@ -1230,36 +1232,21 @@
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 59700.0,
-         "price": 1116.81,
-         "src": "model (BS on NSE chain IV)"
+         "strike": 59100.0,
+         "price": 959.1,
+         "src": "real NSE chain (mid)"
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 59500.0,
-         "price": 1063.1,
-         "src": "real NSE chain (mid)"
+         "strike": 58900.0,
+         "price": 1065.31,
+         "src": "model (BS on NSE chain IV)"
         }
        ],
        "units": 30,
-       "net_debit": 53.71,
-       "net_debit_lot": 1611.3,
-       "entry_charges": 123.54,
-       "max_loss": 1734.84,
-       "max_gain": 4265.16,
-       "breakevens": [
-        59646.29
-       ],
-       "long_leg_max": 33504.3,
-       "long_leg_pct": 6.7,
-       "rule_10pct": "PASS",
-       "cash_need": 33542.99,
-       "free_cash": "PASS",
-       "slots": "PASS",
-       "max_lots": 1,
-       "verdict": "PASS",
-       "why": ""
+       "verdict": "n/a",
+       "why": "inconsistent prices: net debit -106.21 is outside 0..200 (strike gap)"
       },
       {
        "name": "Long straddle",
@@ -1268,37 +1255,37 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 59700.0,
-         "price": 1459.7,
+         "strike": 59100.0,
+         "price": 1796.35,
          "src": "real NSE chain (mid)"
         },
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 59700.0,
-         "price": 1116.81,
-         "src": "model (BS on NSE chain IV)"
+         "strike": 59100.0,
+         "price": 959.1,
+         "src": "real NSE chain (mid)"
         }
        ],
        "units": 30,
-       "net_debit": 2576.51,
-       "net_debit_lot": 77295.3,
-       "entry_charges": 82.01,
-       "max_loss": 77377.31,
+       "net_debit": 2755.45,
+       "net_debit_lot": 82663.5,
+       "entry_charges": 84.44,
+       "max_loss": 82747.94,
        "max_gain": null,
        "breakevens": [
-        57123.49,
-        62276.51
+        56344.55,
+        61855.45
        ],
-       "long_leg_max": 43791.0,
-       "long_leg_pct": 8.76,
-       "rule_10pct": "PASS",
-       "cash_need": 77377.31,
+       "long_leg_max": 53890.5,
+       "long_leg_pct": 10.78,
+       "rule_10pct": "FAIL",
+       "cash_need": 82747.94,
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 1,
-       "verdict": "PASS",
-       "why": ""
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "long leg premium 53,890 is above the 10% limit 50,000"
       }
      ]
     }
@@ -2096,7 +2083,7 @@
    ]
   }
  ],
- "india_vix": 17.420000076293945,
+ "india_vix": 17.469999313354492,
  "sources": [
   "CE: real NSE chain (mid); PE: model (BS on NSE chain IV)",
   "real NSE chain (mid)"
