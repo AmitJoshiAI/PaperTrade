@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-09 17:30 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-09 18:16 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 55 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -65,7 +65,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 66fce81348e9
 - Second-order candidates: Winner: L&T (LT) - order inflow adds to the backlog; size and category not verified (BSE PDF not readable from this sandbox). / Losers: none clear - orders are won in competitive bids, and without the contract details no specific rival can be named. / Catalyst: surprise - order intimations arrive unscheduled; value band and segment decide whether it matters. / Thesis fit: none
 
-## 6. [6 HIGH] Buy ONGC; target of Rs 285: Motilal Oswal
+## 6. [6 HIGH] Nifty IT index falls over 1% as global AI stocks stage recovery; Mphasis, HCL Tech, Infosys down 2-3%
+
+- Time: 2026-11-09 18:16 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/nifty-it-index-falls-over-1-as-global-ai-stocks-stage-recovery-mphasis-hcl-tech-infosys-down-2-3-14075649.html
+- Matched symbols: HCLTECH, INFY
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: d026f3247aeb
+- Second-order candidates: 
+
+## 7. [6 HIGH] Adroit Infotech Ltd: Board Meeting Intimation for Pursuant To Regulation 29 Of SEBI (LODR) Reg. 2015 Preferential Issue Of Convertible Equity Share Warrants, Change Of Company Name, Proposed Acquisition Of 60% Stake In Verso Altima Group, Croatia, And Convening Of Extra-Ordinary General Meeting
+
+- Time: 2026-11-09 17:40 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/280457af-68a2-4ba6-9343-ef194fbafb73.pdf
+- Matched symbols: none
+- Keywords: stake sale, M&A
+- Thesis match: none
+- Score: 6
+- Alert id: fa03c9e40098
+- Second-order candidates: 
+
+## 8. [6 HIGH] Buy ONGC; target of Rs 285: Motilal Oswal
 
 - Time: 2026-11-09 12:11 IST
 - Source: Moneycontrol
@@ -77,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 7cc84bb01b49
 - Second-order candidates: Winner: ONGC - broker upgrade/target is a view on realisations and volumes, not a new event; article body not read. / Losers: none clear - a broker rating names no one who loses. / Catalyst: unknown - research note, no scheduled trigger. / Thesis fit: open thesis crude-ongc-vs-hpcl: neutral (thesis already hit its post_event_rule on 2026-11-06 and the exit is queued)
 
-## 7. [6 HIGH] Eicher Motors Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
+## 9. [6 HIGH] Eicher Motors Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
 
 - Time: 2026-11-09 11:45 IST
 - Source: BSE announcements
@@ -89,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2a7a87e0c723
 - Second-order candidates: Winner: none clear - a meeting intimation is routine disclosure, not news. / Losers: none clear / Catalyst: scheduled - analyst meet date is set by the company, likely around its results/earnings call; date not verified (PDF unreadable here). / Thesis fit: none
 
-## 8. [6 HIGH] Trade Spotlight: How should you trade Motilal Oswal, Adani Green Energy, ITC, SBI, Va Tech Wabag, Groww, and others on Muhurat Trading?
+## 10. [6 HIGH] Trade Spotlight: How should you trade Motilal Oswal, Adani Green Energy, ITC, SBI, Va Tech Wabag, Groww, and others on Muhurat Trading?
 
 - Time: 2026-11-09 09:46 IST
 - Source: Moneycontrol
@@ -101,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 66dde9adc783
 - Second-order candidates: False match: round-up of trading ideas for many stocks, no single-company mechanism.
 
-## 9. [6 HIGH] Angel One flags Nifty hurdle at 25,150; bullish on ITC, SBI, Force Motors
+## 11. [6 HIGH] Angel One flags Nifty hurdle at 25,150; bullish on ITC, SBI, Force Motors
 
 - Time: 2026-11-09 07:45 IST
 - Source: Business Standard
@@ -113,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: f9ed3f79a287
 - Second-order candidates: False match: broker technical view / stock-pick round-up, no event or mechanism.
 
-## 10. [6 HIGH] Stocks in focus: SBI, L&T, Alkem Lab, Adani Enterprises, BEL, GRSE, BHEL, Waaree Renewable among others
+## 12. [6 HIGH] Stocks in focus: SBI, L&T, Alkem Lab, Adani Enterprises, BEL, GRSE, BHEL, Waaree Renewable among others
 
 - Time: 2026-11-09 07:34 IST
 - Source: BusinessLine
@@ -125,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9051c4fff0db
 - Second-order candidates: False match: multi-company round-up; single-company items are noted under their own alerts.
 
-## 11. [6 HIGH] Jubilant Ingrevia Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
+## 13. [6 HIGH] Jubilant Ingrevia Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
 
 - Time: 2026-11-08 19:28 IST
 - Source: BSE announcements
@@ -137,50 +161,26 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8170ab88eb41
 - Second-order candidates: Winner: Jubilant Ingrevia if the acquisition adds capacity or products; filing PDF not readable from this sandbox, so terms are unverified. / Losers: none clear / Catalyst: unknown - acquisition update with no readable terms; no listed counterparty identified / Thesis fit: none
 
-## 12. [5] HSBC upgrades Indian stocks to ‘overweight’, downgrades China to ‘neutral’ amid improving earnings outlook
+## 14. [5] Chembond Chemicals Limited: Nirmal V. Shah has Submitted to the Exchange a copy of Disclosure under Regulation 29 (2) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.
 
-- Time: 2026-11-09 17:30 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/hsbc-upgrades-indian-stocks-to-overweight-downgrades-china-to-neutral-14075534.html
-- Matched symbols: none
-- Keywords: results, guidance, rating
-- Thesis match: none
-- Score: 5
-- Alert id: 45e64aa8b893
-- Second-order candidates: 
-
-## 13. [5] Tata Steel shares down 3% post-Q2 results, brokerages cautious about UK operations' growth
-
-- Time: 2026-11-09 17:30 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/tata-steel-shares-down-3-post-q2-results-brokerages-cautious-about-uk-operations-growth-14075524.html
-- Matched symbols: TATASTEEL
-- Keywords: results
-- Thesis match: none
-- Score: 5
-- Alert id: 369e29bf8917
-- Second-order candidates: 
-
-## 14. [5] Shriram Finance Limited: 'Payment of Interim Dividend for FY 2026-27'.
-
-- Time: 2026-11-09 16:06 IST
+- Time: 2026-11-09 18:10 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/Mathew_09112026160603_BSENSE_InterimDividend_2026_27.pdf
-- Matched symbols: SHRIRAMFIN
-- Keywords: dividend
+- Link: https://nsearchives.nseindia.com/corporate/team_bbodade_09112026163402_SAST0811.pdf
+- Matched symbols: none
+- Keywords: SEBI, M&A
 - Thesis match: none
 - Score: 5
-- Alert id: 05e499ce9a48
+- Alert id: 741bbb8f27c4
 - Second-order candidates: 
 
-## 15. [5] Shriram Finance Ltd: Announcement under Regulation 30 (LODR)-Dividend Updates
+## 15. [5] Master Trust Limited: Harneesh Kaur Arora has Submitted to the Exchange a copy of Disclosure under Regulation 31(1) and 31 (2) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.
 
-- Time: 2026-11-09 16:03 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/60737d9b-9abf-4596-941f-afd0b4a0dcee.pdf
-- Matched symbols: SHRIRAMFIN
-- Keywords: dividend
+- Time: 2026-11-09 18:07 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/team_bbodade_09112026161715_HKA.pdf
+- Matched symbols: none
+- Keywords: SEBI, M&A
 - Thesis match: none
 - Score: 5
-- Alert id: 9ba8060e5b93
+- Alert id: 8798eeb88dfa
 - Second-order candidates: 
