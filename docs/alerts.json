@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-10T09:46+05:30",
+ "generated_at": "2026-11-10T11:50+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
-   "ok": true,
-   "items": 184,
-   "error": null,
+   "ok": false,
+   "items": 0,
+   "error": "ParseError: no element found: line 1, column 93637",
    "optional": false,
-   "seconds": 0.4
+   "seconds": 1.4
   },
   {
    "id": "nse_results",
@@ -17,18 +17,18 @@
    "items": 3,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.4
   },
   {
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 55,
+   "items": 52,
    "error": null,
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.1
+   "seconds": 0.9
   },
   {
    "id": "et_markets",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.1
+   "seconds": 0.2
   },
   {
    "id": "bs_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.4
   },
   {
    "id": "bl_markets",
@@ -64,7 +64,7 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.1
+   "seconds": 0.2
   },
   {
    "id": "moneycontrol",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.4
+   "seconds": 1.8
   },
   {
    "id": "cnbc",
@@ -86,16 +86,16 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   }
  ],
  "optional_unavailable": [],
  "quotes_checked": 54,
  "movers": 3,
  "quotes_error": null,
- "new_alerts": 92,
+ "new_alerts": 33,
  "high_score": 6,
- "seconds": 5.6,
+ "seconds": 3.3,
  "theses": [
   {
    "slug": "bajaj-finance-rbi-december",
@@ -115,6 +115,669 @@
  "watchlist_size": 54,
  "alerts": [
   {
+   "id": "219d921b028d",
+   "kind": "news",
+   "time": "2026-11-10T11:48+05:30",
+   "source": "BSE announcements",
+   "headline": "Global Health Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Announcement under Regulation 30 of SEBI Listing Regulations, 2015 for Earning Conference Call Transcript.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0ef79fd6-fd64-4635-96fd-3e8f240e4da9.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "599ac39d4d84",
+   "kind": "news",
+   "time": "2026-11-10T11:47+05:30",
+   "source": "BSE announcements",
+   "headline": "Piramal Finance Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Intimation of Schedule of Analyst/Investor Meeting under SEBI Listing Regulations - Avendus Spark INDX : Annual Investor Conference",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9d4eb11e-af38-48d6-9656-02425194e065.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "38f5f6ee2e35",
+   "kind": "news",
+   "time": "2026-11-10T11:45+05:30",
+   "source": "BSE announcements",
+   "headline": "Aksh Optifibre Ltd: Board Meeting Intimation for Consideration And Approval Of Un-Audited (Standalone & Consolidated) Financial Results For The Quarter And Half Year Ended September 30, 2026 And Other Related Matters",
+   "summary": "Board Meeting. Aksh Optifibre Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve Un-audited (Standalone & Consolidated) ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/48c0beeb-c2ef-4409-b8e7-b44727b7ae5b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "18100d73ed57",
+   "kind": "news",
+   "time": "2026-11-10T11:43+05:30",
+   "source": "BSE announcements",
+   "headline": "Jyothy Labs Ltd: Addendum To Public Announcement - Buyback Of Equity Shares Of The Company",
+   "summary": "Company Update. Addendum to Public Announcement - Buyback of Equity Shares of the Company",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/803489bd-c4d8-42b8-9270-5854b225be50.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "buyback"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "b7b06f429890",
+   "kind": "news",
+   "time": "2026-11-10T11:43+05:30",
+   "source": "BusinessLine",
+   "headline": "India launches probe into dumping of aluminium products from China, Malaysia, Vietnam",
+   "summary": "The DGTR has suo motu initiated an investigation into alleged dumping of aluminium products, following concerns that a surge in cheap imports is hurting domestic manufacturers, particularly MSME units.",
+   "link": "https://www.thehindubusinessline.com/economy/india-launches-probe-into-dumping-of-aluminium-products-from-china-malaysia-vietnam/article71685102.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "b93f63305d1c",
+   "kind": "news",
+   "time": "2026-11-10T11:40+05:30",
+   "source": "BSE announcements",
+   "headline": "Jyothy Labs Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Addendum to Public Announcement - Buyback of Equity Shares of the Company",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c6c11345-d268-416d-b487-abd5da2b6ab5.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "buyback"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "97fb67a4f172",
+   "kind": "news",
+   "time": "2026-11-10T11:39+05:30",
+   "source": "BSE announcements",
+   "headline": "EMS Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Intimation of Schedule of Earnings Conference call on Financial Performance of the company for the 2nd Quarter and Half Year ended September 30, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bc85bf21-e100-4c78-80ee-6c7740446bf7.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "4945184dd4c7",
+   "kind": "news",
+   "time": "2026-11-10T11:36+05:30",
+   "source": "BSE announcements",
+   "headline": "Vishnu Chemicals Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "summary": "Company Update. Q2FY27 and H1FY27 Earnings Release is enclosed.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0c161ee7-d34a-4993-a6ab-cd63115af582.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "220a69192f5d",
+   "kind": "news",
+   "time": "2026-11-10T11:35+05:30",
+   "source": "BSE announcements",
+   "headline": "Pritika Auto Industries Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Revised intimation of Schedule of Earnings Conference Call under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6b61be7d-e4c6-47ec-bc93-2eedb94707f1.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "69271efac933",
+   "kind": "news",
+   "time": "2026-11-10T11:35+05:30",
+   "source": "BSE announcements",
+   "headline": "Usha Martin Education & Solutions Ltd: Board Meeting Intimation for Consider And Approve Unaudited Financial Results (Standalone And Consolidated) For Second Quarter Ended Sept 30, 2026",
+   "summary": "Board Meeting. Usha Martin Education & Solutions Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve consider ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/55d1c3a1-bf48-44fd-861d-9f93040a8683.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "e852f4592c1b",
+   "kind": "news",
+   "time": "2026-11-10T11:35+05:30",
+   "source": "BSE announcements",
+   "headline": "Pasura Industries Ltd: Board Meeting Intimation for Meeting To Be Held On 14.11.2026",
+   "summary": "Board Meeting. Pasura Industries Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 14/11/2026 ,inter alia, to consider and approve 1. Un-Audited Financial Results ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/905a9416-cf93-4516-a98f-729acd21b693.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "7552d00cd146",
+   "kind": "news",
+   "time": "2026-11-10T11:30+05:30",
+   "source": "BSE announcements",
+   "headline": "SPML Infra Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Intimation for Earnings call for Q2 FY 2026-27",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/11e6e6d7-abee-4f6a-a648-6b97c5913838.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "50d633e29465",
+   "kind": "news",
+   "time": "2026-11-10T11:29+05:30",
+   "source": "BSE announcements",
+   "headline": "Equitas Small Finance Bank Ltd: Environment, Social And Governance ('ESG') Ratings By CRISIL ESG Ratings & Analytics Limited",
+   "summary": "Company Update. Equitas Small Finance Bank Limited has informed the Exchanges regarding the ESG rating by CRISIL ESG Ratings and Analytics Limited",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e70ec55b-5286-4f78-af73-867c492e3d27.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "0e2829c15530",
+   "kind": "news",
+   "time": "2026-11-10T11:26+05:30",
+   "source": "BSE announcements",
+   "headline": "Chatha Foods Ltd: Board Meeting Intimation for Pursuant To Regulation 29 Intimation Regarding Meeting Of The Board Of Directors To Approve The Unaudited (Standalone And Consolidated) Financial Results For The Half Year Ended September 30, 2026",
+   "summary": "Board Meeting. Chatha Foods Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 14/11/2026 ,inter alia, to consider and approve Pursuant to Regulation 29 and ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4e14b502-5847-4a93-8f5c-c1b7732d48aa.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "4aeb56d3134e",
+   "kind": "news",
+   "time": "2026-11-10T11:26+05:30",
+   "source": "BusinessLine",
+   "headline": "Easing oil, bond yields to support bank margins, RBI rate hikes likely in Dec: Jefferies",
+   "summary": "The brokerage expects bank credit growth to ease to 14-16 per cent by March 2027 and around 13 per cent by March 2028.",
+   "link": "https://www.thehindubusinessline.com/money-and-banking/easing-oil-bond-yields-to-support-bank-margins-rbi-rate-hikes-likely-in-dec-jefferies/article71685084.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "RBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "c7eda4e61841",
+   "kind": "news",
+   "time": "2026-11-10T11:24+05:30",
+   "source": "BSE announcements",
+   "headline": "Indo Farm Equipment Ltd: Board Meeting Intimation for Rescheduling Of Board Meeting, Scheduled For November 12, 2026, Stands Postponed To 13Th November 2026 For Consideration Of Un-Audited Financial Results For The Quarter And Half Year Ended September 30, 2026.",
+   "summary": "Company Update. Indo Farm Equipment Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve Rescheduling of Board Meeting, ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/92a3ecc7-8843-415f-9e14-d62a3736c572.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "8115cfa82d9d",
+   "kind": "news",
+   "time": "2026-11-10T11:24+05:30",
+   "source": "BSE announcements",
+   "headline": "G R Infraprojects Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Transcript of an Earning call held on 05th November 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d9d787f5-59a2-485d-832e-824b69173387.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "bcf9fb207f74",
+   "kind": "news",
+   "time": "2026-11-10T11:23+05:30",
+   "source": "BSE announcements",
+   "headline": "Stallion India Fluorochemicals Ltd: Board Meeting Intimation for Intimation Of Board Meeting To Consider, Approve & Take On Record The Unaudited Financial Results Of The Company For The Quarter Ended 30Th September, 2026.",
+   "summary": "Board Meeting. Stallion India Fluorochemicals Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve As per attachment.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8a96bd9c-20ab-495c-ad8e-c2730fa6dead.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "1bdb1986992d",
+   "kind": "news",
+   "time": "2026-11-10T11:17+05:30",
+   "source": "BSE announcements",
+   "headline": "Kalyani Forge Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Transcript of Investor Meet held on November 06, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/243d6a1d-44a2-498c-9b10-0ef1c88e37e6.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "859194885ab3",
+   "kind": "news",
+   "time": "2026-11-10T11:08+05:30",
+   "source": "BSE announcements",
+   "headline": "Nisus Finance Services Co Ltd: Intimation Of Credit Rating By Rating Agency",
+   "summary": "Company Update. We wish to inform that CARE Rating Limited has reaffirmed the rating of the issuer on November 6, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e43e653e-696c-4585-94cf-23829b6d404e.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "rating"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "8e3ac0ddd33d",
+   "kind": "news",
+   "time": "2026-11-10T11:04+05:30",
+   "source": "BSE announcements",
+   "headline": "GPT Infraprojects Ltd: GPTINFRA Wholly Owned Subsidiary Being Declared As L1 (First Lowest) In Order Valued At Rs. 103.58 Crore",
+   "summary": "Company Update. Please find enclosed herewith intimation for Alcon Builders & Engineers Private Limited (WOS) of GPT Infraprojects Limited for being declared as L1 (Lowest First) in order valued at Rs. 103.58 Crore.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/75d62751-dde8-4e49-be81-749102d87838.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "042382b2b723",
+   "kind": "news",
+   "time": "2026-11-10T11:00+05:30",
+   "source": "BSE announcements",
+   "headline": "Ranjit Securities Ltd: Board Meeting Intimation for Board Meeting For Declaration Of Quarterly And Half Yearly Results For The Period Ended 30Th Sep 2026",
+   "summary": "Board Meeting. Ranjit Securities Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 14/11/2026 ,inter alia, to consider and approve Board Meeting is scheduled ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/18b97d62-51fa-4a7c-ad22-a8b0f998f307.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "95f98baffaec",
+   "kind": "news",
+   "time": "2026-11-10T10:58+05:30",
+   "source": "BSE announcements",
+   "headline": "Sri Ramakrishna Mills Coimbatore Ltd-$: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. NEWSPAPER CUTTING REG PUBLICATION OF STANDALONE UNAUDITED FINANCIAL RESULTS FOR THE QUARTER 30.09.2026 ENCLOSED.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e5331e02-befe-41c8-81f9-7decfd668444.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "3738c0d068a5",
+   "kind": "news",
+   "time": "2026-11-10T10:57+05:30",
+   "source": "BSE announcements",
+   "headline": "Rollatainers Ltd: Board Meeting Intimation for Prior Intimation For Board Meeting Scheduled To Be Held On Friday, November 13, 2026.",
+   "summary": "Board Meeting. Rollatainers Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve Un-Audited Financial Results along ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a5a40416-9f89-44ba-842a-bca834b1bdc2.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "8a0b3d3c032b",
+   "kind": "news",
+   "time": "2026-11-10T10:47+05:30",
+   "source": "BSE announcements",
+   "headline": "Visagar Financial Services Ltd: Board Meeting Intimation for Consider And Approve Unaudited Financial Results Of The Company For The Quarter And Half Year Ended On September 30, 2026",
+   "summary": "Board Meeting. Visagar Financial Services Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 14/11/2026 ,inter alia, to consider and approve unaudited Financial ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/30be2f35-fca6-4e27-ade3-ff1ade9b9508.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "c1d78aad4549",
+   "kind": "news",
+   "time": "2026-11-10T10:43+05:30",
+   "source": "BSE announcements",
+   "headline": "Mukka Proteins Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "summary": "Company Update. Intimation of Investor Presentation - Q2 & FY-27.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e4a711e4-f96f-4cb9-a0c3-cf3ae99f51cb.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "499a901e2444",
+   "kind": "news",
+   "time": "2026-11-10T10:39+05:30",
+   "source": "BSE announcements",
+   "headline": "Vardhman Textiles Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Please find enclosed herewith transcript of the Earnings Conference Call of the Company held on 06.11.2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a9deab1c-9664-4d97-b6c1-d0ed2ce24377.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "cc8f6758634f",
+   "kind": "news",
+   "time": "2026-11-10T10:35+05:30",
+   "source": "BSE announcements",
+   "headline": "Shipwaves Online Ltd: Board Meeting Intimation for Declaration Of Unaudited Financial Results For The Half Year Ended 30Th September 2026.",
+   "summary": "Board Meeting. Shipwaves Online Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve the unaudited financial results ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1a73c672-1086-4553-b7e8-ed01ae814afd.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "5874ffc99577",
+   "kind": "news",
+   "time": "2026-11-10T10:32+05:30",
+   "source": "BSE announcements",
+   "headline": "Platinum Industries Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Enclosed herewith transcript of Earnings call for Unaudited financial results for quarter and half year ended 30th september 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/35320df5-6911-4988-aec5-e8029e11d422.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "bc2e148f43e3",
+   "kind": "news",
+   "time": "2026-11-10T09:59+05:30",
+   "source": "BSE announcements",
+   "headline": "Data Patterns (India) Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
+   "summary": "Company Update. Pursuant to Regulation 30(6) of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015, we wish to inform that Audio Recording of the Earnings Conference Call held on ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/824bff6a-efed-4217-aa87-639e61eb75d6.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "8b26d3bb068e",
+   "kind": "news",
+   "time": "2026-11-10T09:54+05:30",
+   "source": "BSE announcements",
+   "headline": "Mangalore Refinery and Petrochemicals Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Transcript of Conference call held with Analysts and Investors to discuss the MRPL Q2 financial results for FY 2026-27.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d4e4c60d-5544-49e3-8707-b66eb6aed787.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "58a772f7d69b",
+   "kind": "news",
+   "time": "2026-11-10T09:54+05:30",
+   "source": "ET Markets",
+   "headline": "Anthropic plans IPO live stream with Amodei, JPMorgan CEO Dimon",
+   "summary": "Anthropic PBC is preparing for a live-streamed event featuring CEO Dario Amodei and JPMorgan Chase CEO Jamie Dimon. This event is aimed at marketing their upcoming initial public offering, which might break records. The IPO is set to begin ",
+   "link": "https://economictimes.indiatimes.com/markets/us-stocks/news/anthropic-plans-ipo-live-stream-with-amodei-jpmorgan-ceo-dimon/articleshow/135699137.cms",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
+   "id": "24c85714508c",
+   "kind": "news",
+   "time": "2026-11-10T09:52+05:30",
+   "source": "BSE announcements",
+   "headline": "Royal Orchid Hotels Ltd: Board Meeting Intimation for Considering And Approving, Inter-Alia, The Unaudited Financial Results Of The Company For The Quarter And Half-Year Ended September 30, 2026.",
+   "summary": "Board Meeting. Royal Orchid Hotels Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve the unaudited financial ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a6ec693f-ed3e-4363-8a3c-49df69d62411.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-10T11:50+05:30"
+  },
+  {
    "id": "d113ed107828",
    "kind": "news",
    "time": null,
@@ -132,7 +795,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: none clear - a stake sale by a financial investor is supply of stock, not a business event; buyer not identified.",
+    "Losers: MK Sons Fine Jewels (small-cap, listed) - overhang while a large holder exits; no listed peer named.",
+    "Catalyst: surprise - bulk-deal disclosure, unscheduled; further selling by the same holder is the risk.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-10T09:46+05:30"
   },
   {
@@ -235,7 +903,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: NBIS - moves with the AI-infrastructure group (CRWV peer) as global AI stocks recover, per the Nifty IT item today.",
+    "Losers: none clear - no news found for the cause (one search done, nothing for November 2026; US names are outside the India sleeves).",
+    "Catalyst: unknown - no news found",
+    "Thesis fit: none"
+   ],
    "change_pct": 9.24,
    "volume_x": 0.75,
    "first_seen": "2026-11-10T09:46+05:30"
@@ -1241,7 +1914,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: mutual-fund NAV notice matched to RELIANCE by name; not Reliance Industries and no event."
+   ],
    "first_seen": "2026-11-10T09:46+05:30"
   },
   {
@@ -1265,7 +1940,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: mutual-fund NAV notice matched to RELIANCE by name; duplicate of 5d3766759edc."
+   ],
    "first_seen": "2026-11-10T09:46+05:30"
   },
   {
@@ -1691,7 +2368,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: Max Healthcare (MAXHEALTH) - transcript is a follow-up to results already out; no new information unless guidance in it surprises (not read).",
+    "Losers: none clear - no peer named without reading the transcript.",
+    "Catalyst: unknown - post-results disclosure, no scheduled trigger.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-10T09:46+05:30"
   },
   {
@@ -2078,7 +2760,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: AI-infrastructure and AI-model names globally - capital rotating back into them.",
+    "Losers: Indian IT services (INFY, HCLTECH, MPHASIS) - the market prices AI as substituting for billable services work, so AI recoveries pull IT services down; the link is the market's reading, not a company filing.",
+    "Catalyst: surprise - sentiment-driven; no dated trigger (next relevant dates are US-IT results/guidance commentary).",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-09T18:16+05:30"
   },
   {
@@ -2585,681 +3272,6 @@
    ],
    "moving": [],
    "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "94b3fad26891",
-   "kind": "news",
-   "time": "2026-11-09T17:55+05:30",
-   "source": "NSE announcements",
-   "headline": "Invicta Diagnostic Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "INVICTA DIAGNOSTIC LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board ",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_24209_WebXMLFile_20261109_175527194.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "468add33ee18",
-   "kind": "news",
-   "time": "2026-11-09T17:55+05:30",
-   "source": "BSE announcements",
-   "headline": "NGL Fine Chem Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper Publication - Financial Results.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc6645a2-89a5-4a68-b03a-caee252578a2.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "c6e9cb19729c",
-   "kind": "news",
-   "time": "2026-11-09T17:55+05:30",
-   "source": "BSE announcements",
-   "headline": "CFF Fluid Control Ltd: Board Meeting Intimation for Meeting To Be Held On November 13, 2026",
-   "summary": "Board Meeting. CFF Fluid Control Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve The Unaudited Financial Results ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1096b54a-11a3-43cc-8e47-31e5cf93318c.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "465294998c0a",
-   "kind": "news",
-   "time": "2026-11-09T17:53+05:30",
-   "source": "NSE announcements",
-   "headline": "Rail Vikas Nigam Limited: Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "Rail Vikas Nigam Limited has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: Board Me",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_17412_WebXMLFile_20261109_175334777.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "dbedb1410ad4",
-   "kind": "news",
-   "time": "2026-11-09T17:53+05:30",
-   "source": "BSE announcements",
-   "headline": "Aastamangalam Finance Ltd: Board Meeting Intimation for To Consider The Unaudited Results For Quarter Ended 30.09.2026",
-   "summary": "Board Meeting. Aastamangalam Finance Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve To consider the unaudited ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fa55e33c-5220-4cb3-8c93-2dced4b9376b.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "e8839217999b",
-   "kind": "news",
-   "time": "2026-11-09T17:49+05:30",
-   "source": "NSE announcements",
-   "headline": "My Mudra Fincorp Limited: Board Meeting to be held on 12-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Fund raising/Other business.",
-   "summary": "MY MUDRA FINCORP LIMITED has informed the Exchange about Board Meeting to be held on 12-Nov-2026 to consider and approve the Half Yearly Unaudited Financial results of the Company for the period ended September 2026 and Fund raising/Other b",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_24027_WebXMLFile_20261109_174956057.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "b523a9c4565f",
-   "kind": "news",
-   "time": "2026-11-09T17:49+05:30",
-   "source": "NSE announcements",
-   "headline": "DSP NIFTY 1D Rate Liquid ETF: the Net Asset Value (per unit) of DSP BlackRock Mutual Fund - DSP BlackRock Liquid ETF - Daily Dividend as on November 08, 2026 is Rs. 1000.",
-   "summary": "LIQUIDETF : DSP Asset Managers Private Limited has informed the Exchange that the Net Asset Value (per unit) of DSP BlackRock Mutual Fund - DSP BlackRock Liquid ETF - Daily Dividend as on November 08, 2026 is Rs. 1000. |SUBJECT: Declaration",
-   "link": "",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "0fa6d0984943",
-   "kind": "news",
-   "time": "2026-11-09T17:48+05:30",
-   "source": "NSE announcements",
-   "headline": "Sun Pharma Advanced Research Company Limited: Significant increase in volume has been observed in Sun Pharma Advanced Research Company Limited. The Exchange, in order to ensure that investors have latest relevant information about the company and to inform the market place so that the interest of the investors is safeguarded, has written to the company. The response from the company is awaited.",
-   "summary": "Significant increase in volume has been observed in Sun Pharma Advanced Research Company Limited. The Exchange, in order to ensure that investors have latest relevant information about the company and to inform the market place so that the ",
-   "link": "",
-   "symbols": [
-    "SUNPHARMA"
-   ],
-   "symbol_keys": [
-    "SUNPHARMA"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "7f2aa57a1fa4",
-   "kind": "news",
-   "time": "2026-11-09T17:48+05:30",
-   "source": "BSE announcements",
-   "headline": "Thrive Future Habitats Ltd: Financial Results For The Quarter And Half Year Ended September 30, 2026",
-   "summary": "Result. Unaudited (Standalone & Consolidated) Financial Results for the quarter and half year ended September 30, 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1465dc0f-c2b6-4412-99fb-8fcf9ebf9205.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "cd6c2f6c3d61",
-   "kind": "news",
-   "time": "2026-11-09T17:47+05:30",
-   "source": "NSE announcements",
-   "headline": "Happiest Minds Technologies Limited: Transcripts - earnings or quarterly calls",
-   "summary": "HAPPIEST MINDS TECHNOLOGIES LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_17994_WebXMLFile_20261109_174755243.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "5400258c251e",
-   "kind": "news",
-   "time": "2026-11-09T17:46+05:30",
-   "source": "NSE announcements",
-   "headline": "Innovision Limited: Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 .",
-   "summary": "Innovision Limited has informed the Exchange about Board Meeting to be held on 13-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Quarterly ended September 2026 . |SUBJECT: Board Meeting In",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_24293_WebXMLFile_20261109_174615107.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "ea07ca882f00",
-   "kind": "news",
-   "time": "2026-11-09T17:46+05:30",
-   "source": "BSE announcements",
-   "headline": "Sudarshan Pharma Industries Ltd: Announcement under Regulation 30 (LODR)-Resignation of Company Secretary / Compliance Officer",
-   "summary": "Company Update. Pursuant to Regulation 30 and other applicable Regulations, if any, of the SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 (''SEBI Listing Regulations''), we inform ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e9591a27-f3a0-4138-8caa-caeec536dceb.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "87d5c492a6a8",
-   "kind": "news",
-   "time": "2026-11-09T17:45+05:30",
-   "source": "NSE announcements",
-   "headline": "Milky Mist Dairy Food Limited: Proceedings of Postal Ballot. Further, the company has submitted the Exchange a copy of Srutinizers report along with voting results.",
-   "summary": "Milky Mist Dairy Food Limited has informed the Exchange regarding Proceedings of Postal Ballot. Further, the company has submitted the Exchange a copy of Srutinizers report along with voting results. |SUBJECT: Shareholders meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/MILKYMIST_09112026174521_intimationonpostalballotresults9112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "2ab75ca58c81",
-   "kind": "news",
-   "time": "2026-11-09T17:45+05:30",
-   "source": "BSE announcements",
-   "headline": "National Stock Exchange of India Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Transcript of conference call with analyst/ institutional investors held on November 3, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bfdc4d1c-1e9f-47e9-8aa7-c6c2e006c3f0.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "b265b8ab1bdc",
-   "kind": "news",
-   "time": "2026-11-09T17:42+05:30",
-   "source": "NSE announcements",
-   "headline": "Happiest Minds Technologies Limited: Transcript of Earnings Call held on November 03, 2026.",
-   "summary": "Happiest Minds Technologies Limited has informed the Exchange regarding Transcript of Earnings Call held on November 03, 2026. |SUBJECT: Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/suhask_09112026174128_EarningsCallTranscript9112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "3ad6c2d30d23",
-   "kind": "news",
-   "time": "2026-11-09T17:42+05:30",
-   "source": "NSE announcements",
-   "headline": "Net Avenue Technologies Limited: Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 .",
-   "summary": "NET AVENUE TECHNOLOGIES LIMITED has informed the Exchange about Board Meeting to be held on 14-Nov-2026 to inter-alia consider and approve the Unaudited Financial results of the Company for the Half Yearly ended September 2026 . |SUBJECT: B",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_22593_WebXMLFile_20261109_174215896.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "69ce84f6792a",
-   "kind": "news",
-   "time": "2026-11-09T17:41+05:30",
-   "source": "BSE announcements",
-   "headline": "Milky Mist Dairy Food Ltd: Shareholder Meeting / Postal Ballot-Outcome of Postal Ballot",
-   "summary": "AGM/EGM. Results of Postal Ballot through Remote E-voting process and the Scrutinizer''s Report",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/31df5167-f504-408e-96c9-0a7065e49c78.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "1a6818f19b18",
-   "kind": "news",
-   "time": "2026-11-09T17:40+05:30",
-   "source": "BSE announcements",
-   "headline": "Happiest Minds Technologies Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Transcript of Earnings Call held on November 03, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b5afda31-bbe6-465e-876e-48c8774ccacd.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "fa03c9e40098",
-   "kind": "news",
-   "time": "2026-11-09T17:40+05:30",
-   "source": "BSE announcements",
-   "headline": "Adroit Infotech Ltd: Board Meeting Intimation for Pursuant To Regulation 29 Of SEBI (LODR) Reg. 2015 Preferential Issue Of Convertible Equity Share Warrants, Change Of Company Name, Proposed Acquisition Of 60% Stake In Verso Altima Group, Croatia, And Convening Of Extra-Ordinary General Meeting",
-   "summary": "Board Meeting. Adroit Infotech Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 17/11/2026 ,inter alia, to consider and approve 1.To consider and approve the ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/280457af-68a2-4ba6-9343-ef194fbafb73.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "stake sale",
-    "M&A"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "c29e39e03186",
-   "kind": "news",
-   "time": "2026-11-09T17:39+05:30",
-   "source": "NSE announcements",
-   "headline": "Whirlpool of India Limited: a press release dated November 09, 2026, titled \"KEY HIGHLIGHTS OF Q2 2026-27\".",
-   "summary": "Whirlpool of India Limited has informed the Exchange regarding a press release dated November 09, 2026, titled \"KEY HIGHLIGHTS OF Q2 2026-27\". |SUBJECT: Press Release",
-   "link": "https://nsearchives.nseindia.com/corporate/WHIRLPOOL_09112026173915_PR_signed.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "10ccfdc00a61",
-   "kind": "news",
-   "time": "2026-11-09T17:39+05:30",
-   "source": "BSE announcements",
-   "headline": "Milky Mist Dairy Food Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
-   "summary": "AGM/EGM. Results of Postal Ballot through Remote E-voting and the Scrutinizer''s Report",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/052db8e1-7139-44b5-a656-ef38db47ec28.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "8e8ab9205a9d",
-   "kind": "news",
-   "time": "2026-11-09T17:36+05:30",
-   "source": "NSE announcements",
-   "headline": "Net Avenue Technologies Limited: 'Board meeting on 14.11.2026 to consider the unaudited financial results for half year ended 30.09.2026'.",
-   "summary": "Net Avenue Technologies Limited has informed the Exchange regarding 'Board meeting on 14.11.2026 to consider the unaudited financial results for half year ended 30.09.2026'. |SUBJECT: Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/NATL_09112026173605_NATL_BM_14112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "17e1744e6df7",
-   "kind": "news",
-   "time": "2026-11-09T17:36+05:30",
-   "source": "BSE announcements",
-   "headline": "Accel Ltd: Board Meeting Intimation for Board Meeting Intimation For Board Meeting Intimation For Considering And To Take On Record The Standalone And Consolidated Unaudited Financial Results For The Quarter And Half Year Ended 30Th September, 2026.",
-   "summary": "Board Meeting. Accel Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 13/11/2026 ,inter alia, to consider and approve Accel Ltd has informed BSE that the meeting ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0b59664f-bb82-4346-91a4-33b46c3ac6be.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "52389f30f2cf",
-   "kind": "news",
-   "time": "2026-11-09T17:33+05:30",
-   "source": "NSE announcements",
-   "headline": "Arvind Fashions Limited: Transcripts - earnings or quarterly calls",
-   "summary": "ARVIND FASHIONS LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_17278_WebXMLFile_20261109_173312652.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "3309274de3a4",
-   "kind": "news",
-   "time": "2026-11-09T17:32+05:30",
-   "source": "BSE announcements",
-   "headline": "Balaji Amines Ltd-$: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Submission of Earning Call Transcript under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/11739dcb-b35d-482e-85a2-bec4deecb183.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "7da3bb0d3262",
-   "kind": "news",
-   "time": null,
-   "source": "Moneycontrol",
-   "headline": "SAT upholds SEBI fraud findings against former Ricoh India CEO Takano, cuts penalty to Rs 10 lakh",
-   "summary": "Tribunal finds Takano involved in fraudulent transactions with FDSL and related entities that contributed to Rs 1,123 crore losses at Ricoh India",
-   "link": "https://www.moneycontrol.com/news/business/markets/sat-upholds-sebi-fraud-findings-against-former-ricoh-india-ceo-takano-cuts-penalty-to-rs-10-lakh-14075566.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T17:30+05:30"
-  },
-  {
-   "id": "45e64aa8b893",
-   "kind": "news",
-   "time": null,
-   "source": "Moneycontrol",
-   "headline": "HSBC upgrades Indian stocks to ‘overweight’, downgrades China to ‘neutral’ amid improving earnings outlook",
-   "summary": "In its latest Asia-Pacific equity strategy report, HSBC said Indian equities offer an attractive investment opportunity, s",
-   "link": "https://www.moneycontrol.com/news/business/markets/hsbc-upgrades-indian-stocks-to-overweight-downgrades-china-to-neutral-14075534.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "guidance",
-    "rating"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T17:30+05:30"
-  },
-  {
-   "id": "369e29bf8917",
-   "kind": "news",
-   "time": null,
-   "source": "Moneycontrol",
-   "headline": "Tata Steel shares down 3% post-Q2 results, brokerages cautious about UK operations' growth",
-   "summary": "Brokerage firm Nuvama Institutional Equities upgraded its rating on Tata Steel to ‘Buy’ from ‘Hold’ and revised the target price to Rs 219 from Rs 209.",
-   "link": "https://www.moneycontrol.com/news/business/markets/tata-steel-shares-down-3-post-q2-results-brokerages-cautious-about-uk-operations-growth-14075524.html",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T17:30+05:30"
-  },
-  {
-   "id": "31985ffdbe2a",
-   "kind": "news",
-   "time": null,
-   "source": "Moneycontrol",
-   "headline": "Data Patterns shares rally 9% despite weak Q2 results; management says confident on meeting FY27 targets",
-   "summary": "The company announced its earnings for September quarter of FY27 post-market hours on Friday.",
-   "link": "https://www.moneycontrol.com/news/business/markets/data-patterns-shares-rally-9-despite-weak-q2-results-management-says-confident-on-meeting-fy27-targets-14075447.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T17:30+05:30"
-  },
-  {
-   "id": "5d1ee4fdf73a",
-   "kind": "news",
-   "time": null,
-   "source": "Moneycontrol",
-   "headline": "Jubilant FoodWorks shares fall 4.5% as Q2 net profit declines 43%; brokerages give mixed outlook",
-   "summary": "Reduction in losses on new formats is tracking ahead of expectations but stiff fuel and wage inflation have stalled margin progression for Domino's, says JPMorgan",
-   "link": "https://www.moneycontrol.com/news/business/markets/jubilant-foodworks-shares-fall-4-5-as-q2-net-profit-declines-43-brokerages-give-mixed-outlook-14075357.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "guidance"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T17:30+05:30"
-  },
-  {
-   "id": "82a6d14f1e9f",
-   "kind": "news",
-   "time": "2026-11-09T17:30+05:30",
-   "source": "NSE announcements",
-   "headline": "Medico Remedies Limited: Medico Remedies Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
-   "summary": "Medico Remedies Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/MEDICO_09112026172921_Outcome_of_Board_Meeting.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "65743d5a662c",
-   "kind": "news",
-   "time": "2026-11-09T17:30+05:30",
-   "source": "BSE announcements",
-   "headline": "Arvind Fashions Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Arvind Fashions Limited has informed the Exchange about Transcript.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4ab9c50b-8bc2-4e5b-941c-415ae4352ee4.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-09T18:16+05:30"
-  },
-  {
-   "id": "86349541d95b",
-   "kind": "news",
-   "time": "2026-11-09T17:30+05:30",
-   "source": "CNBC top news",
-   "headline": "CoreWeave confronts 'doom cycle' narrative as neocloud credit risk overshadows growth",
-   "summary": "Leading neoclouds CoreWeave and Nebius have both lost about half their value in the past month as they get set for earnings reports this week.",
-   "link": "https://www.cnbc.com/2026/11/09/coreweave-debt-credit-risk-neoclouds.html",
-   "symbols": [
-    "CRWV"
-   ],
-   "symbol_keys": [
-    "US:CRWV"
-   ],
-   "keywords": [],
-   "moving": [
-    "CRWV"
-   ],
-   "score": 5,
    "high": false,
    "theses": [],
    "second_order_candidates": [],
