@@ -18,6 +18,12 @@ Prices:
                 (or the chain cannot be fetched), it is priced with Black-Scholes on the latest close using
                 the chain's last implied vol (or the vol stored at the last good quote), and labelled so.
                 An offline run never fills options (no chain) and marks them with that stored vol.
+  late run      GitHub often starts the scheduled run hours late, while a US session is open. A bar for
+                today's New York date fetched before 16:20 New York (close + Yahoo's delay) is a partial
+                day: it is dropped (us_unfinished_date / drop_unfinished_session), so the market date is
+                the last completed session. In that state the chain is live intraday, so option orders
+                do not fill, options are marked with the stored-vol fallback and the US candidates file is
+                not rewritten; stock orders still fill at the open of a completed session.
   expiry        options settle at intrinsic value on the close of their expiry day, in cash (real US
                 equity options are American and deliver shares; early exercise is not modelled).
 Costs (costs.us_charges): zero commission; SEC fee and FINRA TAF on sells, rounded up to the cent.
@@ -48,8 +54,9 @@ from __future__ import annotations
 import logging
 import math
 from dataclasses import dataclass
-from datetime import date as _date, datetime, timezone, timedelta
+from datetime import date as _date, datetime, time as _time, timezone, timedelta
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 
@@ -64,6 +71,35 @@ log = logging.getLogger(__name__)
 PAPER_SHORT_US = "PAPER SHORT: not possible from India (LRS)"
 CHAIN_LABEL = "real option chain (mid of bid/ask)"
 REF_TICKER = "SPY"          # always downloaded: fixes the US market date even with nothing held
+NEW_YORK = ZoneInfo("America/New_York")
+SESSION_DONE = _time(16, 20)  # 16:00 close + a buffer for Yahoo's delay; no holiday / early-close logic
+SESSION_WAIT = "US session in progress at run time; option orders fill on the next run after the close"
+
+
+def us_unfinished_date(now: datetime | None = None) -> str | None:
+    """Today's New York date (YYYY-MM-DD) if it is before 16:20 New York, else None: a daily bar for that
+    date, if Yahoo has one, is not a finished session. `now` is an aware datetime (tests); default the clock.
+    On a holiday no bar exists for the date; an early close only makes the run one session conservative."""
+    ny = (now or datetime.now(timezone.utc)).astimezone(NEW_YORK)
+    return ny.date().isoformat() if ny.time() < SESSION_DONE else None
+
+
+def drop_unfinished_session(px: pd.DataFrame, now: datetime | None = None) -> pd.DataFrame:
+    """`px` without rows dated on or after the unfinished New York date. Sets attrs "session_in_progress"
+    (that date, only if a row was actually dropped, else None) and "session_seen_at" (New York HH:MM)."""
+    ny = (now or datetime.now(timezone.utc)).astimezone(NEW_YORK)
+    cut = us_unfinished_date(ny)
+    attrs = dict(px.attrs)
+    if cut is not None and len(px):
+        keep = px["date"] < pd.Timestamp(cut)
+        dropped = not bool(keep.all())
+        px = px[keep].copy()
+    else:
+        dropped = False
+    px.attrs.update(attrs)
+    px.attrs["session_in_progress"] = cut if dropped else None
+    px.attrs["session_seen_at"] = ny.strftime("%H:%M")
+    return px
 
 
 @dataclass
@@ -131,11 +167,15 @@ def needed_tickers(book: UsBook, orders: list) -> list[str]:
     return sorted(t)
 
 
-def load_prices(tickers: list[str], do_update: bool) -> pd.DataFrame:
+def load_prices(tickers: list[str], do_update: bool, now: datetime | None = None) -> pd.DataFrame:
+    """US daily bars, without a partial bar of a New York session still in progress (dropped BEFORE the
+    cache is written, so a later offline run cannot read it back as a close). attrs: "dropped" (tickers
+    with no data), "session_in_progress" (the dropped date or None), "session_seen_at" (New York HH:MM)."""
     px = None
     if do_update:
         px = data.download_tickers(tickers, period="1y")
         if not px.empty:
+            px = drop_unfinished_session(px, now)
             config.CACHE_DIR.mkdir(parents=True, exist_ok=True)
             px.to_parquet(config.US_PRICES_FILE, index=False)
     elif config.US_PRICES_FILE.exists():
@@ -143,6 +183,10 @@ def load_prices(tickers: list[str], do_update: bool) -> pd.DataFrame:
     out = px if px is not None and not px.empty else pd.DataFrame(
         columns=["date", "open", "high", "low", "close", "volume", "symbol"])
     out = out[out["date"] <= pd.Timestamp(_date.today())]
+    in_progress = px.attrs.get("session_in_progress") if px is not None and do_update else None
+    out = drop_unfinished_session(out, now)
+    if in_progress and not out.attrs["session_in_progress"]:
+        out.attrs["session_in_progress"] = in_progress   # dropped before the cache write above
     present = set(out["symbol"].unique())
     out.attrs["dropped"] = [t for t in tickers if t not in present]
     return out
@@ -154,6 +198,9 @@ class UsMarket:
         self.opens = data.pivot(prices, "open") if len(prices) else pd.DataFrame()
         self.closes = data.pivot(prices, "close") if len(prices) else pd.DataFrame()
         self.latest = self.closes.index.max().strftime("%Y-%m-%d") if len(self.closes) else None
+        # a New York session was in progress at run time (its partial bar was dropped by load_prices): the
+        # chain would be live intraday quotes, so it is not used for fills or marks in this run
+        self.session_in_progress = prices.attrs.get("session_in_progress")
         self._chains, self._expiries = {}, {}
         self.warnings = []
         self.fetched_at = datetime.now(timezone(timedelta(hours=5, minutes=30))).strftime("%Y-%m-%d %H:%M IST")
@@ -194,8 +241,10 @@ class UsMarket:
         return None if c is None else c[kind]
 
     def quote(self, p: DPos, day: str) -> tuple[float, str, str, float | None]:
-        """(price, pricing text, label, implied vol) for an option at the latest session."""
-        ch = self.chain(p.underlying, p.expiry, p.kind) if self.online else None
+        """(price, pricing text, label, implied vol) for an option at the latest session. The chain is used
+        only when no US session is in progress, so its quotes are those of the latest completed session."""
+        use_chain = self.online and not self.session_in_progress
+        ch = self.chain(p.underlying, p.expiry, p.kind) if use_chain else None
         iv = p.iv
         if ch is not None:
             row = ch[(ch["strike"] - p.strike).abs() < 1e-6]
@@ -223,7 +272,10 @@ class UsMarket:
         S, sday = self.last_close(p.underlying, day)
         t = years_to(p.expiry, sday)
         px = bs_price(S, p.strike, t, config.US_RISK_FREE_RATE, iv, p.kind)
-        how = src or (f"stored IV {iv*100:.2f}% ({'offline run' if not self.online else 'chain unavailable'})")
+        why = ("offline run" if not self.online else
+               f"US session of {self.session_in_progress} in progress at run time" if self.session_in_progress
+               else "chain unavailable" if ch is None else "no usable quote or IV in the chain")
+        how = src or f"stored IV {iv*100:.2f}% ({why})"
         return (round(px, 4), f"FALLBACK Black-Scholes: spot {S:,.2f} ({sday}), {how}, r {config.US_RISK_FREE_RATE*100:g}%, "
                 f"T {round(t*365)}/365", "Black-Scholes fallback (labelled), not a market quote", iv)
 
@@ -242,6 +294,8 @@ class UsMarket:
         if kind in OPTION_KINDS:
             if not self.online:
                 raise NotYet("options need a live chain; an offline run does not fill them")
+            if self.session_in_progress:
+                raise NotYet(SESSION_WAIT)
             return self.latest if self.latest and pd.Timestamp(self.latest) > dd else None
         c = self._col(self.opens, und)
         later = c.index[c.index > dd]
@@ -347,15 +401,21 @@ def expire_positions(book: UsBook, market: UsMarket, market_day: str) -> tuple[l
     return fills, notes
 
 
-def run_day(fallback_day: str, do_update: bool) -> dict:
-    """US part of the daily run. Its market date is the latest US session, not the NSE date."""
+def run_day(fallback_day: str, do_update: bool, now: datetime | None = None) -> dict:
+    """US part of the daily run. Its market date is the latest completed US session, not the NSE date.
+    `now` (aware datetime) is for tests only."""
     book = UsBook.load()
     queue = load_queue(config.US_ORDERS_FILE)
     tickers = needed_tickers(book, queue["orders"])
-    prices = load_prices(tickers, do_update)
+    prices = load_prices(tickers, do_update, now)
     warnings = [f"No price data for {t}" for t in prices.attrs["dropped"]]
     market = UsMarket(prices, book, online=do_update)
     market_day = market.latest or fallback_day
+    waiting = market.session_in_progress
+    if waiting:
+        warnings.append(f"US session of {waiting} was in progress at run time ({prices.attrs['session_seen_at']} "
+                        f"New York; a bar counts as final from 16:20): that day's bar ignored; marks are of "
+                        f"{market_day}; option orders and candidates wait for the next run after the close.")
     # its own calendar: never mark as of a date before the last US row (raises before any US write)
     from .staleness import ensure_not_older, last_date
     ensure_not_older(market_day, last_date(UsBook.equity_curve()), "state/us_equity_curve.csv")
@@ -389,7 +449,11 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
         except (NotYet, Reject) as e:
             warnings.append(f"{p.id}: not marked today ({e}); valued at its last mark {p.mark}")
     cands = None
-    if do_update:               # candidates need live chains (candidates.py); an offline run keeps the last file
+    if do_update and waiting:   # the chains are intraday mid-session: keep the last file, as an offline run does
+        cands = {"not_refreshed": f"Not refreshed: the US session of {waiting} was in progress at run time, so "
+                                  f"Yahoo's chains were live intraday quotes. The last candidates (after a close) "
+                                  f"are in state/us_candidates.json; the next run after the close rebuilds them."}
+    elif do_update:             # candidates need live chains (candidates.py); an offline run keeps the last file
         try:
             from .candidates import build_us, save as save_cands
             cands = build_us(market, book, market_day)
@@ -415,7 +479,7 @@ def run_day(fallback_day: str, do_update: bool) -> dict:
     except NotYet:
         pass
     return dict(date=market_day, book=book, fills=fills, notes=notes, warnings=warnings, equity=eq,
-                orders=keep, spots=spots, candidates=cands, offline=not do_update)
+                orders=keep, spots=spots, candidates=cands, offline=not do_update, session_in_progress=waiting)
 
 
 def journal_lines(s: dict) -> list[str]:
@@ -425,7 +489,7 @@ def journal_lines(s: dict) -> list[str]:
              f"{book.start_fx_date} (Rs {config.US_CAPITAL:,.0f} = ${book.starting_capital:,.2f}). INR values use "
              f"each day's rate (state/fx_rates.csv). Separate book: US stocks/ETFs long and paper-short, US options "
              f"priced from the {CHAIN_LABEL}; a Black-Scholes fallback is labelled. US market date {s['date']}: "
-             f"the US session closes after the 17:33 IST run, so US marks are one session behind. Every short stock: "
+             f"the latest completed US session (a session still open at run time is ignored). Every short stock: "
              f"{PAPER_SHORT_US}. Limits in RISK_LIMITS.md.")
     rows = [f"| USD/INR used today | {book.fx():.4f} ({book.fx_note}) |",
             f"| Total P&L in INR | Rs {e['total_pnl_inr']:,.2f}, of which FX Rs {e['fx_pnl_inr']:,.2f} "

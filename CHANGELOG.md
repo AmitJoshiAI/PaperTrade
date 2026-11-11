@@ -1,5 +1,20 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-11: US sleeve ignores an unfinished US session (structural: data error)
+
+Old: the US market date was the newest daily bar Yahoo returned. GitHub starts the scheduled 17:33 IST run 5-10
+hours late (Actions log: 23:00-04:10 IST on every weekday since 22 Oct), so some runs land while New York is
+open; the run of 01:08-01:28 IST on 11 Nov recorded "US market date 2026-11-10" from a partial bar and wrote a
+2026-11-10 row to state/us_equity_curve.csv. New: a bar for today's New York date fetched before 16:20 New York
+is dropped before the cache is written; the market date is the last completed session. While a session is open,
+option orders wait (the chain is intraday), options are marked by the labelled Black-Scholes fallback, the US
+candidates file is not rewritten, and the journal says so in one line. Stock orders still fill at the open of a
+completed session. Evidence: real Yahoo bars with the clock set to 14:58 New York on 10 Nov give market date
+2026-11-09, and at 16:30 give 2026-11-10; 20 unit tests pass. Not yet seen on a live mid-session run. Nothing is
+restated: the US sleeve has never traded, and the next run after a close rewrites the 2026-11-10 row. Cron
+times are unchanged. Open gaps are DEFERRED 22. Revert: none expected; remove if the daily run is moved to a
+trigger that cannot land in US hours.
+
 ## 2026-11-07: FINRA TAF 2024-25 rates -> dated table 2025-2029 (structural: fee error)
 
 Old: $0.000166 per share sold (max $8.30), $0.00279 per option contract (the 2024-25 rates). New: a table by

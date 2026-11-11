@@ -627,6 +627,8 @@ def us_lines(c: dict | None, offline: bool = False) -> list[str]:
                         "are in state/us_candidates.json."]
     if not c:
         return lines + ["Not available this run (see the run log)."]
+    if c.get("not_refreshed"):      # us.run_day: a US session was in progress at run time
+        return lines + [c["not_refreshed"]]
     lines += [f"For the reviewer (ROUTINE_PROMPT.md step 5c). US market date {c['date']}, chains fetched "
               f"{c['fetched_at']}. Sleeve equity {_m(c['equity'], 'USD')}; the 10% per-order limit is "
               f"{_m(c['cap'], 'USD')}; free cash {_m(c['cash'], 'USD')}; open positions {c['open_positions']} of "

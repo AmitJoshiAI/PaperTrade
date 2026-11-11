@@ -312,8 +312,11 @@ Things to know:
 
 - **Permissions.** The workflow asks for `contents: write`. If the push step fails with a 403, go to
   Settings > Actions > General > Workflow permissions and choose "Read and write permissions".
-- **Schedules are best effort.** GitHub often starts cron jobs late at busy times (minutes, sometimes
-  more) and occasionally drops one. Schedules only run on the default branch (`main`).
+- **Schedules are best effort.** GitHub has been starting this cron job 5-10 hours late (23:00-04:10 IST,
+  Oct-Nov 2026) and occasionally drops one; the reviewer routine's push to `triggers/daily` is the run
+  that matters. Schedules only run on the default branch (`main`). A late run can land while a US
+  session is open: the US sleeve then ignores that day's partial bar, marks as of the last completed
+  session, and leaves option orders and US candidates for the next run after the close.
 - **Holidays and late data.** On an NSE holiday, or if Yahoo has not published today's bar by 17:30,
   the run re-processes the previous market date. That is safe: orders do not fill until a later trading
   day exists, the equity row is replaced rather than duplicated, and a review already written in that

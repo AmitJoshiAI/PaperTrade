@@ -4,11 +4,15 @@
 name: Daily run
 
 on:
+  # The cron times below are requests, not guarantees: GitHub has been starting these scheduled runs 5-10
+  # hours late (observed 23:00-04:10 IST, Oct-Nov 2026). The run that matters is the one the reviewer
+  # routine starts by pushing triggers/daily (the push trigger below). A late run can land while a US
+  # session is open; papertrade/us.py ignores that unfinished session's partial bar.
   schedule:
     - cron: "3 12 * * 1-5"    # 12:03 UTC = 17:33 IST, Monday-Friday, after the NSE close (off the :00 slot)
     - cron: "33 12 * * 1-5"   # 12:33 UTC = 18:03 IST retry: a same-date re-run only replaces that day's rows and keeps any review
   workflow_dispatch:          # manual "Run workflow" button in the Actions tab
-  push:                       # reliable fallback: any push that touches triggers/daily starts a run
+  push:                       # the reliable trigger: any push that touches triggers/daily starts a run
     paths: ["triggers/daily"]
 
 permissions:
