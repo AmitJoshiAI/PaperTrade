@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-11 16:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-11 17:19 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -101,7 +101,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: f64adf54daa9
 - Second-order candidates: False match: live-blog round-up of index levels and gainers; no company-specific event, the IndiGo mention is the same crude-slump move noted under [5214318df6da].
 
-## 9. [7 HIGH] Netweb, E2E Networks, other AI-related stocks rise up to 9% as Anthropic IPO, CoreWeave earnings lift global AI sentiment
+## 9. [7 HIGH] Bajaj Finance Limited: outcome of QIP 2026 - Special Committee meeting
+
+- Time: 2026-11-11 17:13 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/BAJFINANCE_11112026171309_SEintimationopeningofissue.pdf
+- Matched symbols: BAJFINANCE
+- Keywords: none
+- Thesis match: bajaj-finance-rbi-december (proposed)
+- Score: 7
+- Alert id: e2c9b88bea6a
+- Second-order candidates: 
+
+## 10. [7 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Meeting Updates
+
+- Time: 2026-11-11 17:06 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/4dc63132-8d0c-4836-b74b-f289525d6384.pdf
+- Matched symbols: BAJFINANCE
+- Keywords: none
+- Thesis match: bajaj-finance-rbi-december (proposed)
+- Score: 7
+- Alert id: 48582700453e
+- Second-order candidates: 
+
+## 11. [7 HIGH] Netweb, E2E Networks, other AI-related stocks rise up to 9% as Anthropic IPO, CoreWeave earnings lift global AI sentiment
 
 - Time: 2026-11-11 16:53 IST
 - Source: Moneycontrol
@@ -113,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: cad5c4aee6c9
 - Second-order candidates: 
 
-## 10. [7 HIGH] IndiGo shares surge past analyst target as falling crude, Q2 beat draw buyers
+## 12. [7 HIGH] IndiGo shares surge past analyst target as falling crude, Q2 beat draw buyers
 
 - Time: 2026-11-11 15:17 IST
 - Source: BusinessLine
@@ -125,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: f1429f077e71
 - Second-order candidates: 
 
-## 11. [7 HIGH] IndiGo surges past analyst target as crude slide and Q2 beat draw buyers
+## 13. [7 HIGH] IndiGo surges past analyst target as crude slide and Q2 beat draw buyers
 
 - Time: 2026-11-11 13:07 IST
 - Source: BusinessLine
@@ -137,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 7d06e1c10133
 - Second-order candidates: Winner: IndiGo - ATF is its largest cost, so a crude slide widens margins on top of the Q2 beat; the stock is through analyst targets, so much of this is priced in. / Losers: none clear (upstream producers such as ONGC/OIL lose per-barrel realisation, but that is the crude move already covered under [5214318df6da], not a new fact from this article). / Catalyst: surprise - Q2 beat plus crude slide; both already public and the stock has moved ~5%, so late entry. Not checked against the article body (links not fetchable here). / Thesis fit: none. No draft: already priced in, coin flip.
 
-## 12. [7 HIGH] Netweb, E2E Networks, other AI-related stocks rise up to 9% as Anthropic IPO, CoreWeave earnings lift...
+## 14. [7 HIGH] Netweb, E2E Networks, other AI-related stocks rise up to 9% as Anthropic IPO, CoreWeave earnings lift...
 
 - Time: 2026-11-11 12:18 IST
 - Source: Moneycontrol
@@ -149,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 478c50b10daf
 - Second-order candidates: Winner: Indian AI-infrastructure names (Netweb, E2E Networks) - sentiment read-across from CoreWeave earnings and AI IPO news to GPU server/cloud demand. / Losers: none clear - sentiment-driven read-across, no mechanism that hurts a named listed company. / Catalyst: surprise - overseas earnings/IPO headlines; sentiment may fade quickly and the article is a round-up (Google News link, not opened). / Thesis fit: none. No draft: sentiment move, coin flip.
 
-## 13. [6 HIGH] Mahindra & Mahindra Financial Services Limited: Issuance of securities
+## 15. [6 HIGH] Mahindra & Mahindra Financial Services Limited: Issuance of securities
 
 - Time: 2026-11-11 15:59 IST
 - Source: NSE announcements
@@ -159,28 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: c203f0dd577d
-- Second-order candidates: 
-
-## 14. [6 HIGH] Mahindra & Mahindra Financial Services Limited: Issue of Securities
-
-- Time: 2026-11-11 15:42 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/content/debt/WDM/M_MFIN_11112026154242_Reg30_NCDFinal-1_signed.pdf
-- Matched symbols: M&M (moving today: M&M)
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: 5162e1171690
-- Second-order candidates: 
-
-## 15. [6 HIGH] Mahindra & Mahindra Financial Services Limited: issue of Non- Convertible Debentures on Private Placement basis.
-
-- Time: 2026-11-11 15:41 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/M_MFIN_11112026153953_Reg30_NCDFinal-1_signed.pdf
-- Matched symbols: M&M (moving today: M&M)
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: b10cf7f4507a
 - Second-order candidates: 
