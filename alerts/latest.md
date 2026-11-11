@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-10 18:01 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-11 09:48 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -89,7 +89,43 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: df16574ec290
 - Second-order candidates: Duplicate filing of the same event, see note [b73438974a0a]. / Thesis fit: open thesis bajaj-finance-rbi-december: see main note
 
-## 8. [6 HIGH] Bajaj Finserv Limited: Transcripts - earnings or quarterly calls
+## 8. [6 HIGH] Hindalco, Airtel among 2 stock recommendations by Kotak's Shrikant Chouhan
+
+- Time: 2026-11-11 07:40 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/stocks-to-buy-today-hindalco-airtel-among-2-stock-recommendations-by-kotak-s-shrikant-chouhan-126111100077_1.html
+- Matched symbols: HINDALCO, BHARTIARTL, KOTAKBANK
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 70b61a347a0d
+- Second-order candidates: 
+
+## 9. [6 HIGH] Fusion CX Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
+
+- Time: 2026-11-10 23:03 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/7aef282e-b2cf-4263-b090-af7020e42f3a.pdf
+- Matched symbols: none
+- Keywords: results, listing, SEBI
+- Thesis match: none
+- Score: 6
+- Alert id: d17b7215375f
+- Second-order candidates: 
+
+## 10. [6 HIGH] Matrimony.com to acquire 50% stake in astrology tech firm Astro-Vision, reports Q2 PAT up nearly 3X
+
+- Time: 2026-11-10 18:27 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/companies/matrimonycom-to-acquire-50-stake-in-astrology-tech-firm-astro-vision-reports-q2-pat-up-nearly-3x/article71686170.ece
+- Matched symbols: none
+- Keywords: results, stake sale, M&A
+- Thesis match: none
+- Score: 6
+- Alert id: 574da8bc725d
+- Second-order candidates: 
+
+## 11. [6 HIGH] Bajaj Finserv Limited: Transcripts - earnings or quarterly calls
 
 - Time: 2026-11-10 16:26 IST
 - Source: NSE announcements
@@ -101,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 0795b8976ef3
 - Second-order candidates: 
 
-## 9. [6 HIGH] Bajaj Finance issues 5.74 crore warrants to promoter for Rs 5,799 crore
+## 12. [6 HIGH] Bajaj Finance issues 5.74 crore warrants to promoter for Rs 5,799 crore
 
 - Time: 2026-11-10 16:22 IST
 - Source: ET Markets
@@ -113,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 34b6e576d3be
 - Second-order candidates: 
 
-## 10. [6 HIGH] Bajaj Finserv Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome
+## 13. [6 HIGH] Bajaj Finserv Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome
 
 - Time: 2026-11-10 16:09 IST
 - Source: BSE announcements
@@ -125,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 3e33a4b8c77b
 - Second-order candidates: 
 
-## 11. [6 HIGH] One Point One Solutions Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome
+## 14. [6 HIGH] One Point One Solutions Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome
 
 - Time: 2026-11-10 12:02 IST
 - Source: BSE announcements
@@ -137,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9cac97b0d645
 - Second-order candidates: False match: small-cap BPO company's routine investor-meet outcome, no listed symbol matched and no event or mechanism.
 
-## 12. [6 HIGH] Maruti Suzuki India Limited: Reference to the Financial Results issued by Suzuki Motor Corporation
+## 15. [6 HIGH] Maruti Suzuki India Limited: Reference to the Financial Results issued by Suzuki Motor Corporation
 
 - Time: 2026-11-10 11:56 IST
 - Source: NSE announcements
@@ -148,39 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 67b3b7c087b3
 - Second-order candidates: Winner: Maruti Suzuki (parent Suzuki's India commentary supports volumes and export plans); read-through only, the filing refers to the parent's results and is not Maruti's own. / Losers: none clear / Catalyst: surprise - none; parent results are a read-through and Maruti's own results are separate, likely priced in. / Thesis fit: none
-
-## 13. [6 HIGH] Maruti Suzuki India Ltd: Reference To The Financial Results Issued By Suzuki Motor Corporation
-
-- Time: 2026-11-10 11:55 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/2b74a7fe-194c-4a61-8cf6-dbba26573f57.pdf
-- Matched symbols: MARUTI
-- Keywords: results
-- Thesis match: none
-- Score: 6
-- Alert id: bcc116415662
-- Second-order candidates: Duplicate filing of the same event, see note [67b3b7c087b3]. / Thesis fit: none
-
-## 14. [6 HIGH] Global Health Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript
-
-- Time: 2026-11-10 11:48 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/0ef79fd6-fd64-4635-96fd-3e8f240e4da9.pdf
-- Matched symbols: none
-- Keywords: results, listing, SEBI
-- Thesis match: none
-- Score: 6
-- Alert id: 219d921b028d
-- Second-order candidates: Winner: none clear - routine transcript of the already-reported quarter; any read-through is to hospital peers' occupancy and ARPOB commentary, not a new event. / Losers: none clear / Catalyst: surprise - none; transcript of an already-public results call, so likely priced in. / Thesis fit: none
-
-## 15. [6 HIGH] Goldman Sachs pares stake in MK Sons Fine Jewels through bulk deal
-
-- Time: 2026-11-10 09:46 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/goldman-sachs-pares-stake-in-mk-sons-fine-jewels-through-bulk-deal-14075805.html
-- Matched symbols: none
-- Keywords: block deal, stake sale
-- Thesis match: none
-- Score: 6
-- Alert id: d113ed107828
-- Second-order candidates: Winner: none clear - a stake sale by a financial investor is supply of stock, not a business event; buyer not identified. / Losers: MK Sons Fine Jewels (small-cap, listed) - overhang while a large holder exits; no listed peer named. / Catalyst: surprise - bulk-deal disclosure, unscheduled; further selling by the same holder is the risk. / Thesis fit: none
