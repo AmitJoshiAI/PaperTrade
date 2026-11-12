@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-12 17:14 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-12 18:05 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -77,7 +77,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: e8605347630c
 - Second-order candidates: Winner: Bajaj Finance (capital) and QIP allottees; same event as [bb39a831f2e4]. / Losers: none clear beyond the dilution already listed under [bb39a831f2e4]. / Catalyst: scheduled - QIP issue dates as above; floor price Rs 992.25 is a fact from the filing headline. / Thesis fit: open thesis bajaj-finance-rbi-december: neutral. Duplicate of [bb39a831f2e4].
 
-## 7. [7 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
+## 7. [7 HIGH] Nebius handily beats Q3 revenue expectations but shares fall
+
+- Time: 2026-11-12 18:00 IST
+- Source: CNBC top news
+- Link: https://www.cnbc.com/2026/11/12/nebius-q3-earnings-report-2026.html
+- Matched symbols: NBIS (moving today: NBIS)
+- Keywords: results
+- Thesis match: none
+- Score: 7
+- Alert id: 873e41d546ff
+- Second-order candidates: 
+
+## 8. [7 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
 
 - Time: 2026-11-12 16:48 IST
 - Source: BSE announcements
@@ -89,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 25e0f8141783
 - Second-order candidates: 
 
-## 8. [7 HIGH] BAJFINANCE +4.3% vs previous close (close 1110.8, bar 2026-11-12)
+## 9. [7 HIGH] BAJFINANCE +4.3% vs previous close (close 1110.8, bar 2026-11-12)
 
 - Time: 2026-11-12 11:50 IST
 - Source: Yahoo quotes
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5f36dd9706ba
 - Second-order candidates: 
 
-## 9. [7 HIGH] CoreWeave soars more than 24% for best day since April 2025 after strong Q3 report
+## 10. [7 HIGH] CoreWeave soars more than 24% for best day since April 2025 after strong Q3 report
 
 - Time: 2026-11-12 02:41 IST
 - Source: CNBC top news
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 3bf4961de9b1
 - Second-order candidates: Winner: CoreWeave (CRWV) - strong Q3 and outlook ease worries that AI data-centre demand is rolling over; AI-infrastructure names (Netweb, E2E Networks on NSE, already noted under [478c50b10daf]) benefit by sentiment. / Losers: none clear - rival GPU clouds (Nebius NBIS) likely rise in sympathy rather than lose; a "loser" would be AI-spending bears, not a company. Rental pricing effects not checked. / Catalyst: surprise (earnings beat/outlook); the 24% move is already in prices, so late entry for the US market and for the Indian proxies by the 12 Nov open. / Thesis fit: none. No draft: result is priced in, no clean tradable pair, and the US sleeve is off limits for this routine.
 
-## 10. [7 HIGH] US stocks: S&P 500, Nasdaq rise as CoreWeave results ease AI spending concerns
+## 11. [7 HIGH] US stocks: S&P 500, Nasdaq rise as CoreWeave results ease AI spending concerns
 
 - Time: 2026-11-11 20:26 IST
 - Source: ET Markets
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 31fcb1175569
 - Second-order candidates: False match: US market round-up; the only company-specific fact is the CoreWeave result already noted under [3bf4961de9b1].
 
-## 11. [7 HIGH] Nasdaq futures rise nearly 2% as CoreWeave earnings calm AI spending fears
+## 12. [7 HIGH] Nasdaq futures rise nearly 2% as CoreWeave earnings calm AI spending fears
 
 - Time: 2026-11-11 18:43 IST
 - Source: ET Markets
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c1a1318ec077
 - Second-order candidates: False match: index-futures round-up; same CoreWeave driver as [3bf4961de9b1]. Nothing new for an Indian second-order trade.
 
-## 12. [7 HIGH] US stocks end higher as CoreWeave results ease AI spending worries: Stock Market Highlights
+## 13. [7 HIGH] US stocks end higher as CoreWeave results ease AI spending worries: Stock Market Highlights
 
 - Time: 2026-11-11 18:42 IST
 - Source: ET Markets
@@ -149,38 +161,26 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 422a9d323a89
 - Second-order candidates: False match: live-blog round-up of US index moves; CoreWeave is covered under [3bf4961de9b1].
 
-## 13. [6 HIGH] Has Lifestyle Ltd: Board Meeting Outcome for Outcome Of The Board Meeting Held On November 12, 2026 - Approval Of Unaudited Financial Results For The Half Year Ended September 30, 2026
+## 14. [6 HIGH] Emami Realty Ltd: Board Meeting Outcome for Outcome Of Board Meeting Of Emami Realty Limited ('The Company') Held On 12Th November, 2026 In Terms Of Regulation 30 Of SEBI Listing Regulations, 2015
 
-- Time: 2026-11-12 16:50 IST
+- Time: 2026-11-12 17:56 IST
 - Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/bc0008f8-cdb9-4333-a572-b055b295344b.pdf
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/9988c592-9e20-46ac-a675-a823a7c3f9df.pdf
 - Matched symbols: none
 - Keywords: results, listing, SEBI
 - Thesis match: none
 - Score: 6
-- Alert id: 275a47a7a131
+- Alert id: bf8fdbc3b9b7
 - Second-order candidates: 
 
-## 14. [6 HIGH] HDFC Life Insurance Company Limited: Allotment of Securities
+## 15. [6 HIGH] Turtlemint Fintech Solutions Limited: Pursuant to the provisions of Regulations 30 and 33 read with Schedule III of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), we would like to inform you that the Board of Directors of the Company at their meeting held today i.e., Thursday, November 12, 2026, which commenced at 3:00 P.M. (IST) and concluded at 4:02 P.M. (IST), have inter alia, has considered and approved the Unaudited Standalone and Consolidated Financial Results of the Company for the quarter and half year ended September 30, 2026.Unaudited Financial Results (standalone and consolidated), along with Limited Review Report issued by S. R. Batliboi & Co. LLP, Statutory Auditors thereon are attached herewith and the investor update is being sent separately.We request you to take the above information on record.
 
-- Time: 2026-11-12 16:33 IST
+- Time: 2026-11-12 17:47 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/ALTERATION_OF_CAPITAL_AND_FUND_RAISING_15574_WebXMLFile_20261112_163305356.xml
-- Matched symbols: HDFCLIFE (moving today: HDFCLIFE)
-- Keywords: none
+- Link: https://nsearchives.nseindia.com/corporate/TURTLEMINT_12112026174612_Outcome_of_Board_Meeting_12112026.pdf
+- Matched symbols: none
+- Keywords: results, listing, SEBI
 - Thesis match: none
 - Score: 6
-- Alert id: 42ad932da7a8
-- Second-order candidates: 
-
-## 15. [6 HIGH] HDFC Life Insurance Company Limited: allotment of 125977 securities pursuant to ESOP on November 12, 2026
-
-- Time: 2026-11-12 16:16 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/HDFCLIFE2_12112026161453_SE_Intimation_-_ESOP_Allotment.pdf
-- Matched symbols: HDFCLIFE (moving today: HDFCLIFE)
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: 2c380ca2a3f9
+- Alert id: 6aefc94be2c5
 - Second-order candidates: 
