@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-12 14:46 IST. High score = 6+. Feeds OK: NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news. Failed: NSE announcements (ParseError: no element found: line 1, column 317519).
-Quotes: 54 symbols checked, 3 moving.
+Generated 2026-11-12 17:14 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 54 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -39,7 +39,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: b4858ad872a2
-- Second-order candidates: 
+- Second-order candidates: Winner: Coal India (COALINDIA) - 10% offer for sale of subsidiary monetises value and sets a listed marker; same event already noted on 5 Nov (4b36fbf0195e). / Losers: none clear - an OFS adds paper supply but no listed company loses business; NLCINDIA is a read-across (similar subsidiary IPO), not a loser. / Catalyst: scheduled - IPO opening date and price band are still the next dated event; no date in the alert, so too early to take a position before it. / Thesis fit: none (no draft: no dated event or price band yet)
 
 ## 4. [8 HIGH] Bajaj Finance unveils share sale to raise up to $1.25 billion
 
@@ -77,17 +77,17 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: e8605347630c
 - Second-order candidates: Winner: Bajaj Finance (capital) and QIP allottees; same event as [bb39a831f2e4]. / Losers: none clear beyond the dilution already listed under [bb39a831f2e4]. / Catalyst: scheduled - QIP issue dates as above; floor price Rs 992.25 is a fact from the filing headline. / Thesis fit: open thesis bajaj-finance-rbi-december: neutral. Duplicate of [bb39a831f2e4].
 
-## 7. [8 HIGH] Bajaj Finance may launch Rs 11,700-crore QIP to fund growth; shares trade higher
+## 7. [7 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
 
-- Time: 2026-11-11 16:53 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/bajaj-finance-may-launch-rs-11-700-crore-qip-to-fund-growth-shares-trade-higher-14077107.html
-- Matched symbols: BAJFINANCE
-- Keywords: enters/launches business
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 8
-- Alert id: c26d90329870
-- Second-order candidates: Winner: Bajaj Finance - stock traded higher into the launch (pre-announcement report), so the raise was partly anticipated. / Losers: none clear; the pre-launch pop means late entry for anyone chasing it. Dilution burden is covered under [58a4e14d9d53]. / Catalyst: scheduled - superseded by the actual launch on 11 Nov evening ([bb39a831f2e4]). / Thesis fit: open thesis bajaj-finance-rbi-december: neutral. Earlier version of the same story.
+- Time: 2026-11-12 16:48 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/fcd5e6ba-794e-420b-ae7a-17a4c8df68e3.pdf
+- Matched symbols: TATASTEEL
+- Keywords: listing, SEBI
+- Thesis match: none
+- Score: 7
+- Alert id: 25e0f8141783
+- Second-order candidates: 
 
 ## 8. [7 HIGH] BAJFINANCE +4.3% vs previous close (close 1110.8, bar 2026-11-12)
 
@@ -149,38 +149,38 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 422a9d323a89
 - Second-order candidates: False match: live-blog round-up of US index moves; CoreWeave is covered under [3bf4961de9b1].
 
-## 13. [7 HIGH] Bajaj Finance Limited: outcome of QIP 2026 - Special Committee meeting
+## 13. [6 HIGH] Has Lifestyle Ltd: Board Meeting Outcome for Outcome Of The Board Meeting Held On November 12, 2026 - Approval Of Unaudited Financial Results For The Half Year Ended September 30, 2026
 
-- Time: 2026-11-11 17:13 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/BAJFINANCE_11112026171309_SEintimationopeningofissue.pdf
-- Matched symbols: BAJFINANCE
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 7
-- Alert id: e2c9b88bea6a
-- Second-order candidates: Winner: Bajaj Finance (capital raise) and QIP allottees; procedural filing for the issue in [bb39a831f2e4]. / Losers: none clear beyond the dilution already listed under [bb39a831f2e4]. / Catalyst: scheduled - issue opening/closing and allotment dates follow from this filing. Filing PDF not fetched in this sandbox. / Thesis fit: open thesis bajaj-finance-rbi-december: neutral. Duplicate of [bb39a831f2e4].
-
-## 14. [7 HIGH] Bajaj Finance Ltd: Announcement under Regulation 30 (LODR)-Meeting Updates
-
-- Time: 2026-11-11 17:06 IST
+- Time: 2026-11-12 16:50 IST
 - Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/4dc63132-8d0c-4836-b74b-f289525d6384.pdf
-- Matched symbols: BAJFINANCE
-- Keywords: none
-- Thesis match: bajaj-finance-rbi-december (proposed)
-- Score: 7
-- Alert id: 48582700453e
-- Second-order candidates: Winner: Bajaj Finance; the same QIP process as [bb39a831f2e4]. / Losers: none clear. / Catalyst: scheduled - QIP steps as above. Filing PDF not fetched in this sandbox. / Thesis fit: open thesis bajaj-finance-rbi-december: neutral. Duplicate.
-
-## 15. [7 HIGH] Netweb, E2E Networks, other AI-related stocks rise up to 9% as Anthropic IPO, CoreWeave earnings lift global AI sentiment
-
-- Time: 2026-11-11 16:53 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/netweb-e2e-networks-other-ai-related-stocks-rise-up-to-9-as-anthropic-ipo-coreweave-earnings-lift-global-ai-sentiment-14077042.html
-- Matched symbols: CRWV
-- Keywords: results, IPO
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/bc0008f8-cdb9-4333-a572-b055b295344b.pdf
+- Matched symbols: none
+- Keywords: results, listing, SEBI
 - Thesis match: none
-- Score: 7
-- Alert id: cad5c4aee6c9
+- Score: 6
+- Alert id: 275a47a7a131
+- Second-order candidates: 
+
+## 14. [6 HIGH] HDFC Life Insurance Company Limited: Allotment of Securities
+
+- Time: 2026-11-12 16:33 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/ALTERATION_OF_CAPITAL_AND_FUND_RAISING_15574_WebXMLFile_20261112_163305356.xml
+- Matched symbols: HDFCLIFE (moving today: HDFCLIFE)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 42ad932da7a8
+- Second-order candidates: 
+
+## 15. [6 HIGH] HDFC Life Insurance Company Limited: allotment of 125977 securities pursuant to ESOP on November 12, 2026
+
+- Time: 2026-11-12 16:16 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/HDFCLIFE2_12112026161453_SE_Intimation_-_ESOP_Allotment.pdf
+- Matched symbols: HDFCLIFE (moving today: HDFCLIFE)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 2c380ca2a3f9
 - Second-order candidates: 
