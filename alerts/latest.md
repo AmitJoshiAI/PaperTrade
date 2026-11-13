@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-13 11:54 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 2 moving.
+Generated 2026-11-13 13:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 53 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -15,7 +15,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: fdbd04045b29
-- Second-order candidates: 
+- Second-order candidates: False match: live round-up of many results announcements, no single company event to analyse; results will be noted from their own alerts once numbers are out.
 
 ## 2. [8 HIGH] Mahanadi Coalfields IPO: Coal India to divest up to 10% stake; here's everything you should know
 
@@ -65,7 +65,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 25e0f8141783
 - Second-order candidates: Winner: none - routine Reg 30 notice of an analyst meet; no new fact about orders, prices or capacity. / Losers: none clear. / Catalyst: scheduled - the meet date is in the PDF only; a routine post-results call, not a trade trigger. / Thesis fit: none
 
-## 6. [6 HIGH] Sensex today | Stock Market Live: Sensex down 150 pts, Nifty slips near 25,200; M&M, HDFC Bank lead losers
+## 6. [6 HIGH] Sensex today | Stock Market Live: Sensex down 440 pts, Nifty slips to 25,115 pts; Bharti Airtel, Eicher Motors lead losers
+
+- Time: 2026-11-13 12:37 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/sensex-nifty50-today-stock-market-live-updates-13-november-2026/article71693403.ece
+- Matched symbols: BHARTIARTL, EICHERMOT
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 73b7f729786c
+- Second-order candidates: 
+
+## 7. [6 HIGH] Sensex today | Stock Market Live: Sensex down 150 pts, Nifty slips near 25,200; M&M, HDFC Bank lead losers
 
 - Time: 2026-11-13 11:08 IST
 - Source: BusinessLine
@@ -75,9 +87,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 3dfbb7c5dd5b
-- Second-order candidates: 
+- Second-order candidates: False match: index live blog; HDFC Bank and M&M are just named as top losers, no company-specific catalyst.
 
-## 7. [6 HIGH] NBIS -16.8% vs previous close (close 128.64, bar 2026-11-12)
+## 8. [6 HIGH] NBIS -16.8% vs previous close (close 128.64, bar 2026-11-12)
 
 - Time: 2026-11-13 09:45 IST
 - Source: Yahoo quotes
@@ -89,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: dc704312c9b1
 - Second-order candidates: 
 
-## 8. [6 HIGH] Stock Market Live Updates: Sensex slides over 600 pts, Nifty below 25,100; Trent, Bajaj Finance among top drags
+## 9. [6 HIGH] Stock Market Live Updates: Sensex slides over 600 pts, Nifty below 25,100; Trent, Bajaj Finance among top drags
 
 - Time: 2026-11-13 07:10 IST
 - Source: ET Markets
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5294b1acf2be
 - Second-order candidates: False match: market round-up/live blog, not a company event; Bajaj Finance and Trent are only named among index drags. Bajaj Finance QIP context is in [3911b74267a6]; open thesis bajaj-finance-rbi-december is unchanged.
 
-## 9. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 12, 2026 is Rs. 39.5113.
+## 10. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 12, 2026 is Rs. 39.5113.
 
 - Time: 2026-11-13 07:00 IST
 - Source: NSE announcements
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 88d47b01c1f3
 - Second-order candidates: False match: a mutual fund NAV notice matched on the word "Reliance"; it has nothing to do with Reliance Industries.
 
-## 10. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 12, 2026 is Rs. 13.6919.
+## 11. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 12, 2026 is Rs. 13.6919.
 
 - Time: 2026-11-13 07:00 IST
 - Source: NSE announcements
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 68b596456d69
 - Second-order candidates: False match: same as [88d47b01c1f3], a fund NAV notice, not Reliance Industries.
 
-## 11. [6 HIGH] Emami Realty Ltd: Board Meeting Outcome for Outcome Of Board Meeting Of Emami Realty Limited ('The Company') Held On 12Th November, 2026 In Terms Of Regulation 30 Of SEBI Listing Regulations, 2015
+## 12. [6 HIGH] Emami Realty Ltd: Board Meeting Outcome for Outcome Of Board Meeting Of Emami Realty Limited ('The Company') Held On 12Th November, 2026 In Terms Of Regulation 30 Of SEBI Listing Regulations, 2015
 
 - Time: 2026-11-12 17:56 IST
 - Source: BSE announcements
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: bf8fdbc3b9b7
 - Second-order candidates: Winner: none clear - routine Reg 30 board outcome; filing text not checked, no matched listed symbol. / Losers: none clear / Catalyst: unknown - filing content not reviewed, no tradable read-across found / Thesis fit: none
 
-## 12. [6 HIGH] Turtlemint Fintech Solutions Limited: Pursuant to the provisions of Regulations 30 and 33 read with Schedule III of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), we would like to inform you that the Board of Directors of the Company at their meeting held today i.e., Thursday, November 12, 2026, which commenced at 3:00 P.M. (IST) and concluded at 4:02 P.M. (IST), have inter alia, has considered and approved the Unaudited Standalone and Consolidated Financial Results of the Company for the quarter and half year ended September 30, 2026.Unaudited Financial Results (standalone and consolidated), along with Limited Review Report issued by S. R. Batliboi & Co. LLP, Statutory Auditors thereon are attached herewith and the investor update is being sent separately.We request you to take the above information on record.
+## 13. [6 HIGH] Turtlemint Fintech Solutions Limited: Pursuant to the provisions of Regulations 30 and 33 read with Schedule III of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), we would like to inform you that the Board of Directors of the Company at their meeting held today i.e., Thursday, November 12, 2026, which commenced at 3:00 P.M. (IST) and concluded at 4:02 P.M. (IST), have inter alia, has considered and approved the Unaudited Standalone and Consolidated Financial Results of the Company for the quarter and half year ended September 30, 2026.Unaudited Financial Results (standalone and consolidated), along with Limited Review Report issued by S. R. Batliboi & Co. LLP, Statutory Auditors thereon are attached herewith and the investor update is being sent separately.We request you to take the above information on record.
 
 - Time: 2026-11-12 17:47 IST
 - Source: NSE announcements
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 6aefc94be2c5
 - Second-order candidates: Winner: none identified from the headline; the figures are in the attached PDF, which I did not read. Newly listed insurance distributor, so results are the main event. / Losers: none clear. / Catalyst: surprise - results already out; any reaction happens at the next open. / Thesis fit: none
 
-## 13. [6 HIGH] Has Lifestyle Ltd: Board Meeting Outcome for Outcome Of The Board Meeting Held On November 12, 2026 - Approval Of Unaudited Financial Results For The Half Year Ended September 30, 2026
+## 14. [6 HIGH] Has Lifestyle Ltd: Board Meeting Outcome for Outcome Of The Board Meeting Held On November 12, 2026 - Approval Of Unaudited Financial Results For The Half Year Ended September 30, 2026
 
 - Time: 2026-11-12 16:50 IST
 - Source: BSE announcements
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 275a47a7a131
 - Second-order candidates: Winner: none clear - small-cap half-year results filing, no matched symbol. / Losers: none clear / Catalyst: surprise - results already out; no mechanism for a second-order trade / Thesis fit: none
 
-## 14. [6 HIGH] HDFC Life Insurance Company Limited: Allotment of Securities
+## 15. [6 HIGH] HDFC Life Insurance Company Limited: Allotment of Securities
 
 - Time: 2026-11-12 16:33 IST
 - Source: NSE announcements
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 42ad932da7a8
 - Second-order candidates: Winner: none clear - routine allotment (likely ESOP shares), small dilution, not a business event. / Losers: none clear / Catalyst: unknown - capital alteration filing, no news behind it / Thesis fit: none
-
-## 15. [6 HIGH] HDFC Life Insurance Company Limited: allotment of 125977 securities pursuant to ESOP on November 12, 2026
-
-- Time: 2026-11-12 16:16 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/HDFCLIFE2_12112026161453_SE_Intimation_-_ESOP_Allotment.pdf
-- Matched symbols: HDFCLIFE (moving today: HDFCLIFE)
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: 2c380ca2a3f9
-- Second-order candidates: 
