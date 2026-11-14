@@ -411,3 +411,14 @@ Zerodha opens within 5 bps on 20 trading days, phase 2 is not needed and the sub
 - **Fortnight rule**: this is the second US-sleeve cost correction within 14 days (SEC fee, 6 Nov). Both are data
   corrections, not strategy rules; the user's session decides whether the policy's one-per-fortnight limit applies to them.
 - **Revert if**: the finra.org Schedule A version dated 1 Jan 2026 shows different figures.
+
+## PROPOSAL (2026-11-14) - Delivery DP charge 15.93 -> 15.34 (weekly strategist; not applied)
+
+- **Old -> new**: `DP_CHARGE_PER_SELL` 15.93 -> **15.34** (Rs per scrip per delivery sell day, GST included).
+- **Evidence (structural: a cost error)**: https://zerodha.com/charges, fetched directly 14 Nov 2026: "DP charges: Rs 15.34
+  per scrip (Rs 3.5 CDSL fee + Rs 9.5 Zerodha fee + Rs 2.34 GST)". The code comment says Rs 13.5 + 18% GST = 15.93. The
+  rest of the delivery and options rows on the same page match `costs.py`.
+- **Expected effect**: Rs 0.59 less per delivery sell (momentum SELLs, thesis SELLs); about Rs 6 over the 4 + 3 sells to
+  date. Past trades are not restated.
+- **Fortnight rule**: a fee correction to its published source, like the NSE, SEC and FINRA fixes (CHANGELOG 2026-11-07).
+- **Revert if**: a Zerodha contract note or a newer charges page shows Rs 15.93.
