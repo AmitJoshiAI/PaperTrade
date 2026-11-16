@@ -1,11 +1,11 @@
 {
- "generated_at": "2026-11-16T11:54+05:30",
+ "generated_at": "2026-11-16T13:51+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 282,
+   "items": 501,
    "error": null,
    "optional": false,
    "seconds": 0.5
@@ -17,7 +17,7 @@
    "items": 3,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.4
   },
   {
    "id": "bse",
@@ -28,10 +28,10 @@
    "optional": false,
    "path": "nse_api",
    "skipped": [
-    "cffi_api: JSONDecodeError: Expecting value: line 3 column 1 (char 4)",
+    "cffi_api: Timeout: Failed to perform, curl: (28) Operation timed out after 12002 milliseconds with 0 bytes received. Se",
     "urllib_api: HTTPError: HTTP Error 403: Forbidden"
    ],
-   "seconds": 3.9
+   "seconds": 15.2
   },
   {
    "id": "et_markets",
@@ -67,7 +67,7 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.1
   },
   {
    "id": "moneycontrol",
@@ -93,12 +93,12 @@
   }
  ],
  "optional_unavailable": [],
- "quotes_checked": 54,
+ "quotes_checked": 53,
  "movers": 5,
  "quotes_error": null,
- "new_alerts": 61,
+ "new_alerts": 71,
  "high_score": 6,
- "seconds": 5.2,
+ "seconds": 15.6,
  "theses": [
   {
    "slug": "icici-bank-recovery",
@@ -110,6 +110,1315 @@
  ],
  "watchlist_size": 54,
  "alerts": [
+  {
+   "id": "d817359f4093",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Jefferies sees up to 19% upside in Paytm stock, says RBI nod for PPI services ‘avenue for monetisation’",
+   "summary": "Jefferies raised its price target to Rs 2,300 from Rs 2,150 while maintaining its 'buy' rating.",
+   "link": "https://www.moneycontrol.com/news/business/markets/jefferies-sees-up-to-19-upside-in-paytm-says-rbi-nod-for-ppi-services-avenue-for-monetisation-14081133.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "RBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "c4ae886697a4",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Hitachi Energy: Strong execution, power sector tailwinds fuel growth outlook",
+   "summary": "A robust project pipeline, rising export orders, and capacity expansion strengthen earnings visibility",
+   "link": "https://www.moneycontrol.com/news/business/earnings/hitachi-energy-strong-execution-power-sector-tailwinds-fuel-growth-outlook-14081057.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "1b3e80a4ea9b",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "SEBI may pitch raising FPI beneficial ownership threshold to 25 percent to ease compliance",
+   "summary": "SEBI may propose raising the beneficial ownership threshold for foreign portfolio investors from 10% to 25%, easing disclosure requirements. The change would require amendments to PMLA rules.",
+   "link": "https://www.moneycontrol.com/news/business/markets/sebi-may-ease-rules-for-foreign-investors-raise-fpi-beneficial-ownership-threshold-to-25-14080892.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "a5e05bdfc0f4",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Avadhut Sathe moves SAT challenging SEBI order directing more than Rs 600 crore disgorgement",
+   "summary": "The academy has challenged SEBI’s direction to refund Rs 546.17 crore to participants and deposit Rs 67.87 crore in interest, with its counsel seeking an urgent hearing before SAT.",
+   "link": "https://www.moneycontrol.com/news/business/markets/avadhut-sathe-moves-sat-challenging-sebi-order-directing-more-than-rs-600-crore-disgorgement-14081017.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "345b55b8e49d",
+   "kind": "news",
+   "time": "2026-11-16T13:45+05:30",
+   "source": "NSE announcements",
+   "headline": "Ahluwalia Contracts (India) Limited: a press release dated November 15, 2026, titled \"Q2 Results 30-09-2026 News Paper Cutting\".",
+   "summary": "Ahluwalia Contracts (India) Limited has informed the Exchange regarding a press release dated November 15, 2026, titled \"Q2 Results 30-09-2026 News Paper Cutting\". |SUBJECT: Press Release",
+   "link": "https://nsearchives.nseindia.com/corporate/532811_16112026134538_NewsPaperCuttingQ2Results_BARCODE.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "80147727d884",
+   "kind": "news",
+   "time": "2026-11-16T13:45+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Ahluwalia Contracts (India) Limited: Press Release",
+   "summary": "Ahluwalia Contracts (India) Limited has informed the Exchange regarding a press release dated November 15, 2026, titled \"Q2 Results 30-09-2026 News Paper Cutting\".",
+   "link": "https://nsearchives.nseindia.in/corporate/532811_16112026134538_NewsPaperCuttingQ2Results_BARCODE.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "db6cc4d5462f",
+   "kind": "news",
+   "time": "2026-11-16T13:45+05:30",
+   "source": "BusinessLine",
+   "headline": "India Inc posts broad-based earnings beat in Q2FY27; Nifty PAT hits 17-quarter high",
+   "summary": "The MOFSL Universe of 398 companies reported sales, EBITDA, and PAT growth of 25 per cent, 23 per cent, and 32 per cent year-on-year respectively, surpassing estimates of 19 per cent, 17 per cent, and 21 per cent.",
+   "link": "https://www.thehindubusinessline.com/markets/india-inc-posts-broad-based-earnings-beat-in-q2fy27-nifty-pat-hits-17-quarter-high/article71707196.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "b4857ef98365",
+   "kind": "news",
+   "time": "2026-11-16T13:40+05:30",
+   "source": "NSE announcements",
+   "headline": "Capital Infra Trust: 'Press Release for Q2 & H1 FY27 Results'.",
+   "summary": "Capital Infra Trust has informed the Exchange regarding 'Press Release for Q2 & H1 FY27 Results'. |SUBJECT: Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/CAPINVIT_16112026133916_SE_PressRelease.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "7b5bb25af605",
+   "kind": "news",
+   "time": "2026-11-16T13:40+05:30",
+   "source": "BusinessLine",
+   "headline": "Piccadily Agro posts 19% revenue growth in Q2 FY27, shares trade flat",
+   "summary": "For the first half of FY2026-27, total income came in at ₹552.5 crore, up 19.1% year-on-year, while EBITDA stood at ₹100.3 crore, up 14.5%",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/piccadily-agro-posts-19-revenue-growth-in-q2-fy27-shares-trade-flat/article71707190.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "d387cd4f2cf5",
+   "kind": "news",
+   "time": "2026-11-16T13:36+05:30",
+   "source": "NSE announcements",
+   "headline": "Adani Enterprises Limited: Record Date Updates",
+   "summary": "Record Date Updates |SUBJECT: Record Date Updates",
+   "link": "https://nsearchives.nseindia.com/content/debt/WDM/nishant_joshi_adani_com_16112026133545_AELRecordDate12122026.pdf",
+   "symbols": [
+    "ADANIENT"
+   ],
+   "symbol_keys": [
+    "ADANIENT"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "e19041cd477d",
+   "kind": "news",
+   "time": "2026-11-16T13:33+05:30",
+   "source": "NSE announcements",
+   "headline": "Exicom Tele-Systems Limited: Transcripts - earnings or quarterly calls",
+   "summary": "Exicom Tele-Systems Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_22581_WebXMLFile_20261116_133336072.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "7fe3be63745c",
+   "kind": "news",
+   "time": "2026-11-16T13:32+05:30",
+   "source": "Business Standard",
+   "headline": "Patanjali Foods dips 4% as Q2 profit slips but analysts upbeat; here's why",
+   "summary": "Jefferies said that Patanjali Foods' Q2 miss was driven by a shift in festive-season timing and edible-oil margin pressure from the import duty cut.",
+   "link": "https://www.business-standard.com/markets/news/patanjali-foods-share-price-dips-4-as-q2-profit-slips-but-analysts-upbeat-here-s-why-126111601051_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "84fe7f62577d",
+   "kind": "news",
+   "time": "2026-11-16T13:31+05:30",
+   "source": "NSE announcements",
+   "headline": "Sree Rayalaseema Hi-Strength Hypo Limited: Copy of Newspaper Publication with regard to extract of unaudited financial results for quarter ending 30th September,2026",
+   "summary": "Sree Rayalaseema Hi-Strength Hypo Limited has informed the Exchange about Copy of Newspaper Publication with regard to extract of unaudited financial results for quarter ending 30th September,2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/SRHHYPOLTD_16112026133115_Newspaper_Pub.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "fd5e2395a824",
+   "kind": "news",
+   "time": "2026-11-16T13:31+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Sree Rayalaseema Hi-Strength Hypo Limited: Copy of Newspaper Publication",
+   "summary": "Sree Rayalaseema Hi-Strength Hypo Limited has informed the Exchange about Copy of Newspaper Publication with regard to extract of unaudited financial results for quarter ending 30th September,2026",
+   "link": "https://nsearchives.nseindia.in/corporate/SRHHYPOLTD_16112026133115_Newspaper_Pub.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "591b9a98979e",
+   "kind": "news",
+   "time": "2026-11-16T13:29+05:30",
+   "source": "NSE announcements",
+   "headline": "Jeena Sikho Lifecare Limited: Submission of Newspaper Publication Clipping of Extract of the Unaudited (Standalone and Consolidated) Financial Results for the Quarter and Half Year Ended September 30, 2026",
+   "summary": "Jeena Sikho Lifecare Limited has informed the Exchange about Submission of Newspaper Publication Clipping of Extract of the Unaudited (Standalone and Consolidated) Financial Results for the Quarter and Half Year Ended September 30, 2026 |SU",
+   "link": "https://nsearchives.nseindia.com/corporate/JEENASIKHO_16112026132720_Intimation_Newspaper_Advt-_Sign.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "5963fcb5f87d",
+   "kind": "news",
+   "time": "2026-11-16T13:29+05:30",
+   "source": "NSE filings (BSE substitute)",
+   "headline": "Jeena Sikho Lifecare Limited: Copy of Newspaper Publication",
+   "summary": "Jeena Sikho Lifecare Limited has informed the Exchange about Submission of Newspaper Publication Clipping of Extract of the Unaudited (Standalone and Consolidated) Financial Results for the Quarter and Half Year Ended September 30, 2026",
+   "link": "https://nsearchives.nseindia.in/corporate/JEENASIKHO_16112026132720_Intimation_Newspaper_Advt-_Sign.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "cc8259f7113e",
+   "kind": "news",
+   "time": "2026-11-16T13:23+05:30",
+   "source": "Business Standard",
+   "headline": "Hospital stocks in focus: Max Healthcare, Aster DM, Fortis surge up to 7%",
+   "summary": "Share price of Max Healthcare soared 7% to ₹1,007.70 on the BSE in Monday's intraday trade, bouncing back 26% from its 52-week low of ₹797 touched on October 22, 2026.",
+   "link": "https://www.business-standard.com/markets/news/hospital-stocks-in-focus-max-healthcare-aster-dm-fortis-surge-up-to-7-126111600992_1.html",
+   "symbols": [
+    "MAXHEALTH"
+   ],
+   "symbol_keys": [
+    "MAXHEALTH"
+   ],
+   "keywords": [],
+   "moving": [
+    "MAXHEALTH"
+   ],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "55c093fdd45c",
+   "kind": "news",
+   "time": "2026-11-16T13:21+05:30",
+   "source": "NSE announcements",
+   "headline": "QVC Exports Limited: QVC Exports Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "QVC Exports Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/QVCEL_16112026131450_QEL_FINANCIALRESULTS-30092026__1_.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "3fe5901d49b5",
+   "kind": "news",
+   "time": "2026-11-16T13:20+05:30",
+   "source": "BusinessLine",
+   "headline": "Nifty holds 0.45% gains at noon; Bank Nifty hits all-time high, TMPV slumps 8%",
+   "summary": "Bank Nifty was the standout performer during the session, scaling a fresh all-time high in intraday trade. PSU bank stocks led sectoral gains, rising more than 1%",
+   "link": "https://www.thehindubusinessline.com/markets/nifty-holds-045-gains-at-noon-bank-nifty-hits-all-time-high-tmpv-slumps-8/article71707144.ece",
+   "symbols": [
+    "TMPV"
+   ],
+   "symbol_keys": [
+    "TMPV"
+   ],
+   "keywords": [],
+   "moving": [
+    "TMPV"
+   ],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "fa76048211b5",
+   "kind": "news",
+   "time": "2026-11-16T13:19+05:30",
+   "source": "NSE announcements",
+   "headline": "M.V.K. Agro Food Product Limited: Copy of Newspaper Publication of unaudited standalone and consolidated financial results of the Company for Quarter and Half year ended September 30, 2026",
+   "summary": "M.V.K. Agro Food Product Limited has informed the Exchange about Copy of Newspaper Publication of unaudited standalone and consolidated financial results of the Company for Quarter and Half year ended September 30, 2026 |SUBJECT: Copy of Ne",
+   "link": "https://nsearchives.nseindia.com/corporate/MVKAGRO_16112026131655_Intimation_Newspaper_Advt.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "eda5d47a7fd5",
+   "kind": "news",
+   "time": "2026-11-16T13:17+05:30",
+   "source": "NSE announcements",
+   "headline": "Dhansa Labs Limited: Newspaper advertisement for the Un-Audited Financial Results (Standalone andConsolidated) for the quarter and half year ended 30 September 2026.",
+   "summary": "Newspaper advertisement for the Un-Audited Financial Results (Standalone andConsolidated) for the quarter and half year ended 30 September 2026. |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/AMBEY_16112026131644_Newspaper_Publication.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "34bbf96ab813",
+   "kind": "news",
+   "time": "2026-11-16T13:12+05:30",
+   "source": "NSE announcements",
+   "headline": "Vraj Iron and Steel Limited: Copy of Newspaper Publication of financial results of the company for the quarter and half year ended September 30, 2026.",
+   "summary": "Vraj Iron and Steel Limited has informed the Exchange about Copy of Newspaper Publication of financial results of the company for the quarter and half year ended September 30, 2026. |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/VISL_16112026131119_Newpaper_Publication.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "3c4611489cbc",
+   "kind": "news",
+   "time": "2026-11-16T13:03+05:30",
+   "source": "NSE announcements",
+   "headline": "ShreeOswal Seeds And Chemicals Limited: Copy of Newspaper Publication for publication of financial result",
+   "summary": "ShreeOswal Seeds And Chemicals Limited has informed the Exchange about Copy of Newspaper Publication for publication of financial result |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/OSWALSEEDS_16112026130318_NPP_2026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "274e728666b2",
+   "kind": "news",
+   "time": "2026-11-16T12:57+05:30",
+   "source": "Business Standard",
+   "headline": "Mahanadi IPO explained: Valuation, reserves, risks and Coal India strategy",
+   "summary": "Mahanadi Coalfields, Coal India's largest coal-producing subsidiary, is set to enter the stock market through an offer for sale of a 10% stake",
+   "link": "https://www.business-standard.com/markets/ipo/mahanadi-ipo-explained-valuation-reserves-risks-and-coal-india-strategy-126111600933_1.html",
+   "symbols": [
+    "COALINDIA"
+   ],
+   "symbol_keys": [
+    "COALINDIA"
+   ],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "c5182f852a01",
+   "kind": "news",
+   "time": "2026-11-16T12:52+05:30",
+   "source": "NSE announcements",
+   "headline": "Aqylon Nexus Limited: Copy of Newspaper Publication for the Financial Results for the quarter ended 30th September 2026",
+   "summary": "Aqylon Nexus Limited has informed the Exchange about Copy of Newspaper Publication for the Financial Results for the quarter ended 30th September 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/SABTNL_16112026125203_Newspaper_Publication.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "cc12ac14d4b6",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Eastern Silk Industries Limited: 'Newspaper Clippings of Publication of Un-Audited Financial Results under Regulation 47 of the SEBI (Listing Obligations & Disclosure Requirements) Regulations, 2015'.",
+   "summary": "Eastern Silk Industries Limited has informed the Exchange regarding 'Newspaper Clippings of Publication of Un-Audited Financial Results under Regulation 47 of the SEBI (Listing Obligations & Disclosure Requirements) Regulations, 2015'. |SUB",
+   "link": "https://nsearchives.nseindia.com/corporate/EASTSILK_16112026124831_Newspaper_signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "b488a2cf54cf",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty PSU Bank ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund as on November 13, 2026 is Rs. 92.6224.",
+   "summary": "PSUBANK : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund as on November 13, 2026 is Rs. 92.6224. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "cc27291af2bf",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mutual Fund - Gold Exchange Traded Fund: the Net Asset Value (per unit) of Kotak Mutual Fund - Gold Exchange Traded Fund as on November 13, 2026 is Rs. 112.8501.",
+   "summary": "GOLD1 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mutual Fund - Gold Exchange Traded Fund as on November 13, 2026 is Rs. 112.8501. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "e2b3daebdd47",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty 50 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund-Kotak Nifty ETF as on November 13, 2026 is Rs. 279.5937.",
+   "summary": "NIFTY1 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund-Kotak Nifty ETF as on November 13, 2026 is Rs. 279.5937. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "93a37a54f499",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty Bank ETF: the Net Asset Value (per unit) of Kotak Mahindra MF - Kotak Banking ETF - Dividend Payout Option as on November 13, 2026 is Rs. 63.4187.",
+   "summary": "Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra MF - Kotak Banking ETF - Dividend Payout Option as on November 13, 2026 is Rs. 63.4187. |SUBJECT: Declaration of",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [
+    "dividend"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "50f5ce98f06a",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty 50 value 20 ETF: the Net Asset Value (per unit) of Kotak Mahindra MF - Kotak NV 20 ETF - DPO as on November 13, 2026 is Rs. 14.5651.",
+   "summary": "NV20 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra MF - Kotak NV 20 ETF - DPO as on November 13, 2026 is Rs. 14.5651. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "68e85f0e843d",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty 200 Momentum 30 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 200 Momentum 30 ETF as on November 13, 2026 is Rs. 30.786.",
+   "summary": "Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 200 Momentum 30 ETF as on November 13, 2026 is Rs. 30.786. |SUBJECT: Declaration of NA",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "f1c86b29dd8f",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty 100 Low Volatility 30 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 100 Low Vol 30 ETF as on November 13, 2026 is Rs. 21.2936.",
+   "summary": "LOWVOL1 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 100 Low Vol 30 ETF as on November 13, 2026 is Rs. 21.2936. |SUBJECT: Declara",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "89dce680ffae",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak MSCI India ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak MSCI India ETF as on November 13, 2026 is Rs. 30.655.",
+   "summary": "MSCIINDIA : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak MSCI India ETF as on November 13, 2026 is Rs. 30.655. |SUBJECT: Declaration of N",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "1ff181d73b37",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty MNC ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty MNC ETF as on November 13, 2026 is Rs. 31.6293.",
+   "summary": "MNC : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty MNC ETF as on November 13, 2026 is Rs. 31.6293. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "410816c78e7d",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty 100 Equal Weight ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 100 Equal Weight ETF as on November 13, 2026 is Rs. 35.372.",
+   "summary": "Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 100 Equal Weight ETF as on November 13, 2026 is Rs. 35.372. |SUBJECT: Declaration of N",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "97d54b44e38b",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty India Consumption ETF: the Net Asset Value (per unit) of Kotak Nifty India Consumption ETF as on November 13, 2026 is Rs. 12.3415.",
+   "summary": "CONS : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Nifty India Consumption ETF as on November 13, 2026 is Rs. 12.3415. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "49d6be6b8922",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty IT ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - KOTAK IT ETF - Kotak IT ETF as on November 13, 2026 is Rs. 35.6104.",
+   "summary": "IT : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - KOTAK IT ETF - Kotak IT ETF as on November 13, 2026 is Rs. 35.6104. |SUBJECT: Declaration of ",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "45b875407977",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty Alpha 50 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Alpha 50 ETF as on November 13, 2026 is Rs. 52.1744.",
+   "summary": "ALPHA : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Alpha 50 ETF as on November 13, 2026 is Rs. 52.1744. |SUBJECT: Declaration of ",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "228bc26d02a9",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty 1D Rate Liquid ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 1D Rate Liquid ETF as on November 13, 2026 is Rs. 1131.7083.",
+   "summary": "LIQUID1 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty 1D Rate Liquid ETF as on November 13, 2026 is Rs. 1131.7083. |SUBJECT: Decla",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "369e62c60ffb",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty Midcap 150 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Midcap 150 ETF as on November 13, 2026 is Rs. 23.087.",
+   "summary": "MID150 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Midcap 150 ETF as on November 13, 2026 is Rs. 23.087. |SUBJECT: Declaration o",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "ca327606a4c4",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty Chemicals ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Chemicals ETF as on November 13, 2026 is Rs. 28.547.",
+   "summary": "CHEMICAL : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Chemicals ETF as on November 13, 2026 is Rs. 28.547. |SUBJECT: Declaration ",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "3aed6f25f1ce",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty200 Quality 30 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty200 Quality 30 ETF as on November 13, 2026 is Rs. 20.147.",
+   "summary": "QUALITY30 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty200 Quality 30 ETF as on November 13, 2026 is Rs. 20.147. |SUBJECT: Declara",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "6bb25cd9127f",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty Private Bank ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Private Bank ETF as on November 13, 2026 is Rs. 30.056.",
+   "summary": "PVTBANK : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Private Bank ETF as on November 13, 2026 is Rs. 30.056. |SUBJECT: Declaratio",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "29e2e717da64",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Nifty Midcap 50 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Midcap 50 ETF - Kotak Midcap 50 ETF as on November 13, 2026 is Rs. 18.279.",
+   "summary": "MIDCAP : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Midcap 50 ETF - Kotak Midcap 50 ETF as on November 13, 2026 is Rs. 18.279. |SUBJECT",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "83a55a024417",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Nifty Next 50 ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Next 50 ETF as on November 13, 2026 is Rs. 73.52.",
+   "summary": "NEXT50ETF : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Nifty Next 50 ETF as on November 13, 2026 is Rs. 73.52. |SUBJECT: Declaration of",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "6bb6c9d929cb",
+   "kind": "news",
+   "time": "2026-11-16T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Kotak Mahindra Mutual Fund - Kotak Silver ETF: the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Silver ETF as on November 13, 2026 is Rs. 17.1338.",
+   "summary": "SILVER1 : Kotak Mahindra Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Kotak Mahindra Mutual Fund - Kotak Silver ETF as on November 13, 2026 is Rs. 17.1338. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "7e1ebe58e62d",
+   "kind": "news",
+   "time": "2026-11-16T12:44+05:30",
+   "source": "NSE announcements",
+   "headline": "Mahindra & Mahindra Financial Services Limited: Allotment of Securities",
+   "summary": "Allotment of Securities |SUBJECT: Allotment of Securities",
+   "link": "https://nsearchives.nseindia.com/content/debt/WDM/M_MFIN_16112026124422_20261116-SEs_Intimation.pdf",
+   "symbols": [
+    "M&M"
+   ],
+   "symbol_keys": [
+    "M&M"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "9636c2e6a1ed",
+   "kind": "news",
+   "time": "2026-11-16T12:42+05:30",
+   "source": "NSE announcements",
+   "headline": "Kridhan Infra Limited: Copy of Newspaper Publication for Unaudited Financial Results for the quarter ended September 30, 2026",
+   "summary": "Copy of Newspaper Publication for Unaudited Financial Results for the quarter ended September 30, 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/KRIDHANINF_16112026124044_Newspaper_publication.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "83af5e1e9ab6",
+   "kind": "news",
+   "time": "2026-11-16T12:41+05:30",
+   "source": "NSE announcements",
+   "headline": "Mahindra & Mahindra Financial Services Limited: allotment of 87,600 NCDs at its meeting held on November 16, 2026",
+   "summary": "Mahindra & Mahindra Financial Services Limited has informed the Exchange regarding allotment of 87,600 NCDs at its meeting held on November 16, 2026 |SUBJECT: Allotment of Securities",
+   "link": "https://nsearchives.nseindia.com/corporate/M_MFIN_16112026124126_20261116-SEs_Intimation.pdf",
+   "symbols": [
+    "M&M"
+   ],
+   "symbol_keys": [
+    "M&M"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "d6f4b488a512",
+   "kind": "news",
+   "time": "2026-11-16T12:38+05:30",
+   "source": "NSE announcements",
+   "headline": "CMM Infraprojects Limited: CMM Infraprojects Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "CMM Infraprojects Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/CMMIPL_16112026123650_BM_outcome_05112026_OCR.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "57760ebf23d3",
+   "kind": "news",
+   "time": "2026-11-16T12:24+05:30",
+   "source": "BusinessLine",
+   "headline": "TMPV shares slide 8% as JLR guidance cut rattles investors",
+   "summary": "The stock opened at ₹272.10, touched a low of ₹260.35, and is approaching its 52-week low of ₹259.10 hit on October 28. Sell orders dominate order flow, with 54.81 per cent of queued quantity on the sell side",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/tmpv-shares-slide-8-as-jlr-guidance-cut-rattles-investors/article71707035.ece",
+   "symbols": [
+    "TMPV"
+   ],
+   "symbol_keys": [
+    "TMPV"
+   ],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [
+    "TMPV"
+   ],
+   "score": 7,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "c6cb84468c5d",
+   "kind": "news",
+   "time": "2026-11-16T12:15+05:30",
+   "source": "NSE announcements",
+   "headline": "Vipul Limited: Proceedings of Annual General Meeting held on November 12, 2026. Further, the company has submitted the Exchange a copy of Srutinizers report along with voting results.",
+   "summary": "Vipul Limited has informed the Exchange regarding Proceedings of Annual General Meeting held on November 12, 2026. Further, the company has submitted the Exchange a copy of Srutinizers report along with voting results. |SUBJECT: Shareholder",
+   "link": "https://nsearchives.nseindia.com/corporate/VIPULLTD_16112026121502_ResultAGM2026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "41daad24e2f7",
+   "kind": "news",
+   "time": "2026-11-16T12:15+05:30",
+   "source": "NSE announcements",
+   "headline": "J.Kumar Infraprojects Limited: In accordance with the SEBI Regulations, 2015, please find enclosed herewith the Newspaper advertisement for Un-Audited Financial Results for the second quarter and half year ended as on September 30, 2026",
+   "summary": "In accordance with the SEBI Regulations, 2015, please find enclosed herewith the Newspaper advertisement for Un-Audited Financial Results for the second quarter and half year ended as on September 30, 2026 |SUBJECT: Copy of Newspaper Public",
+   "link": "https://nsearchives.nseindia.com/corporate/JKInfra_16112026121513_FORpublicadvt.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "7f22db5023be",
+   "kind": "news",
+   "time": "2026-11-16T12:11+05:30",
+   "source": "NSE announcements",
+   "headline": "Caliber Mining and Logistics Limited: Copy of Newspaper Publication regarding financial results for quarter and half year ended September 30, 2026",
+   "summary": "Caliber Mining and Logistics Limited has informed the Exchange about Copy of Newspaper Publication regarding financial results for quarter and half year ended September 30, 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/CMLL_16112026120810_Newspaper_Publication_Q2_13112026.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "aa7536ac458c",
+   "kind": "news",
+   "time": "2026-11-16T12:10+05:30",
+   "source": "NSE announcements",
+   "headline": "Capital Infra Trust: 'Investor Presentationfor Q2 & H1 FY26 results'",
+   "summary": "Capital Infra Trust has informed the Exchange regarding 'Investor Presentationfor Q2 & H1 FY26 results' |SUBJECT: Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/CAPINVIT_16112026121001_SE_Intimation_IP.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "9f29d6520446",
+   "kind": "news",
+   "time": "2026-11-16T12:08+05:30",
+   "source": "NSE announcements",
+   "headline": "Visaman Global Sales Limited: Visaman Global Sales Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026.",
+   "summary": "Visaman Global Sales Limited has submitted to the Exchange, the financial results for the period ended September 30, 2026. |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/VISAMAN2019_16112026120120_Final_Outcome_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "875fddfcaae6",
+   "kind": "news",
+   "time": "2026-11-16T12:07+05:30",
+   "source": "NSE announcements",
+   "headline": "Advani Hotels & Resorts (India) Limited: a press release dated November 12, 2026, titled \"Company Delivers Healthy Growth in Q2 and H1 FY27 with Total Income Rising 8.8% and 7.0% YOY, respetively\".",
+   "summary": "Advani Hotels & Resorts (India) Limited has informed the Exchange regarding a press release dated November 12, 2026, titled \"Company Delivers Healthy Growth in Q2 and H1 FY27 with Total Income Rising 8.8% and 7.0% YOY, respetively\". |SUBJEC",
+   "link": "https://nsearchives.nseindia.com/corporate/ADVANIHOTR_16112026120638_20261116_PressReleaseOnSep2026UFR.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "1c9164fa71c5",
+   "kind": "news",
+   "time": "2026-11-16T12:02+05:30",
+   "source": "NSE announcements",
+   "headline": "TV Vision Limited: reasons for Delayed/Non-submission of Financial Results",
+   "summary": "TV Vision Limited has informed the Exchange about reasons for Delayed/Non-submission of Financial Results |SUBJECT: Reasons for Delayed/Non-submission of Financial Results",
+   "link": "https://nsearchives.nseindia.com/corporate/TVVISION_16112026120140_Intimation_of_non_Submission_sd.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "aeaee1c39dce",
+   "kind": "news",
+   "time": "2026-11-16T12:02+05:30",
+   "source": "NSE announcements",
+   "headline": "S A Tech Software India Limited: Schedule of Earnings Call",
+   "summary": "S A Tech Software India Limited has informed the Exchange about Schedule of Earnings Call |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/SATECH_16112026120159_SATech_concall_invite_annoumcenemt_sign.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "d261a5631da5",
+   "kind": "news",
+   "time": "2026-11-16T11:58+05:30",
+   "source": "NSE announcements",
+   "headline": "Runwal Enterprises Limited: Pursuant to Regulation 47 and Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015, please find enclosed copies of newspaper publication of the Unaudited financial results of the Company for the quarter and half year ended September 30, 2026, published by the company in Financial Express (English Newspaper) and Navshakti (Marathi Newspaper). The above newspapers contain a \"Quick Response Code\" and the details of the webpage where complete financial results of the Company are available.This intimation is also being uploaded on the Company s website at https://runwalenterprises.com/investor-relations.",
+   "summary": "Pursuant to Regulation 47 and Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015, please find enclosed copies of newspaper publication of the Unaudited financial r",
+   "link": "https://nsearchives.nseindia.com/corporate/RUNWAL1978_16112026115808_Reg47NewspaperIntimation.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
+   "id": "44b6d7ed75a5",
+   "kind": "news",
+   "time": "2026-11-16T11:55+05:30",
+   "source": "BusinessLine",
+   "headline": "Kaynes Technology shares crash 12%, hit fresh 52-week low after weak Q2 results",
+   "summary": "Heavy selling followed a sharp earnings miss, rising finance costs and margin pressure, even as the company’s order book expanded",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/kaynes-technology-shares-crash-12-hit-fresh-52-week-low-after-weak-q2-results/article71706984.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
   {
    "id": "7867d25e2484",
    "kind": "news",
@@ -211,7 +1520,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: a brokerage sector view repeating existing picks, not a catalyst."
+   ],
    "first_seen": "2026-11-16T11:54+05:30"
   },
   {
@@ -298,7 +1609,12 @@
    "score": 7,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: Indian PV rivals M&M and Maruti Suzuki (MARUTI) in relative terms, since the cut is JLR margin and guidance driven and does not shift domestic share; weak mechanism, no clean winner. Price alert 02a3e655b186 (TMPV -8.3%, volume 4.1x average) and alerts e5071834b562, 7a3156bc6b8d report the same event. Pages not opened from this sandbox; headlines agree.",
+    "Losers: Samvardhana Motherson (MOTHERSON) and other JLR-linked suppliers, since a lowered JLR volume and margin outlook means lower orders and pricing pressure down the chain; TMPV itself.",
+    "Catalyst: surprise - guidance cut inside results; follow-up is brokerage target cuts, no dated event.",
+    "Thesis fit: none (JLR-supplier loser leg not verified against order data; no draft, and MOTHERSON is not confirmed on the F&O list)"
+   ],
    "first_seen": "2026-11-16T11:54+05:30"
   },
   {
@@ -326,7 +1642,7 @@
    "kind": "price",
    "time": "2026-11-16T11:54+05:30",
    "source": "Yahoo quotes",
-   "headline": "WAAREEENER -4.0% vs previous close (close 2443.7, bar 2026-11-16)",
+   "headline": "WAAREEENER -4.4% vs previous close (close 2432.9, bar 2026-11-16)",
    "summary": "No matching headline in this run's feeds.",
    "link": "https://finance.yahoo.com/quote/WAAREEENER.NS",
    "symbols": [
@@ -345,8 +1661,8 @@
    "high": false,
    "theses": [],
    "second_order_candidates": [],
-   "change_pct": -4.02,
-   "volume_x": 0.6,
+   "change_pct": -4.44,
+   "volume_x": 0.78,
    "first_seen": "2026-11-16T11:54+05:30"
   },
   {
@@ -390,6 +1706,26 @@
    "first_seen": "2026-11-16T11:54+05:30"
   },
   {
+   "id": "eec678521a6f",
+   "kind": "news",
+   "time": "2026-11-16T11:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Gufic Biosciences Limited: Newspaper advertisement of Unaudited Financial Results (Standalone and Consolidated) for the quarter and half year ended September 30, 2026",
+   "summary": "Gufic Biosciences Limited has informed the Exchange about Newspaper advertisement of Unaudited Financial Results (Standalone and Consolidated) for the quarter and half year ended September 30, 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/GUFIC_16112026114716_finalintimation.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
    "id": "5e63597261b9",
    "kind": "news",
    "time": "2026-11-16T11:47+05:30",
@@ -408,6 +1744,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-11-16T11:54+05:30"
+  },
+  {
+   "id": "a1e4cf5ec102",
+   "kind": "news",
+   "time": "2026-11-16T11:47+05:30",
+   "source": "NSE announcements",
+   "headline": "Plaza Wires Limited: Copy of Newspaper Publication of the Un-audited financial results for the quarter and half year ended on 30th september, 2026.",
+   "summary": "Plaza Wires Limited has informed the Exchange about Copy of Newspaper Publication of the Un-audited financial results for the quarter and half year ended on 30th september, 2026. |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/PLAZAWIRES_16112026114653_Covering_letter_with_newspaper_advertisment.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
   },
   {
    "id": "702fa449cb81",
@@ -430,6 +1786,26 @@
    "first_seen": "2026-11-16T11:54+05:30"
   },
   {
+   "id": "9e7b7f2731c4",
+   "kind": "news",
+   "time": "2026-11-16T11:46+05:30",
+   "source": "NSE announcements",
+   "headline": "Generic Engineering Construction and Projects Limited: Copy of Newspaper Publication for the financial result for the Quarter & Half Year ended 30, September 2026",
+   "summary": "Generic Engineering Construction and Projects Limited has informed the Exchange about Copy of Newspaper Publication for the financial result for the Quarter & Half Year ended 30, September 2026 |SUBJECT: Copy of Newspaper Publication",
+   "link": "https://nsearchives.nseindia.com/corporate/GENCON_16112026114556_Covering_Reg_47_News_paper_add__1_.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
+  },
+  {
    "id": "7a27a5119260",
    "kind": "news",
    "time": "2026-11-16T11:45+05:30",
@@ -448,6 +1824,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-11-16T11:54+05:30"
+  },
+  {
+   "id": "46d68c42c610",
+   "kind": "news",
+   "time": "2026-11-16T11:45+05:30",
+   "source": "NSE announcements",
+   "headline": "Supreme Infrastructure India Limited: Copy of Newspaper Publication of Unaudited Financial Results (Standalone & Consolidated) for the quarter & half year ended September 30, 2026.",
+   "summary": "Supreme Infrastructure India Limited has informed the Exchange about Copy of Newspaper Publication of Unaudited Financial Results (Standalone & Consolidated) for the quarter & half year ended September 30, 2026. |SUBJECT: Copy of Newspaper ",
+   "link": "https://nsearchives.nseindia.com/corporate/SUPREMEINF_16112026114501_reg47.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
   },
   {
    "id": "6e2f2406f486",
@@ -469,6 +1865,27 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-11-16T11:54+05:30"
+  },
+  {
+   "id": "bad828ca636b",
+   "kind": "news",
+   "time": "2026-11-16T11:44+05:30",
+   "source": "NSE announcements",
+   "headline": "Mangalam Global Enterprise Limited: Vipin Prakash Mangal has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations, 2011.",
+   "summary": "Vipin Prakash Mangal has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations,",
+   "link": "https://nsearchives.nseindia.com/corporate/team_sandeshc_16112026111011_DISCLOSURE.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI",
+    "M&A"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
   },
   {
    "id": "e04198ecaf43",
@@ -529,6 +1946,26 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-11-16T11:54+05:30"
+  },
+  {
+   "id": "68e0dc353b48",
+   "kind": "news",
+   "time": "2026-11-16T11:42+05:30",
+   "source": "Business Standard",
+   "headline": "NSE stock market-cap crosses ₹5 trillion; scrip up 16% from IPO price",
+   "summary": "With a ₹5.11 trillion market-cap on Monday, NSE stood at the 10th position in the overall market cap ranking among BSE listed companies, surpassing LIC, data shows.",
+   "link": "https://www.business-standard.com/markets/news/nse-stock-market-cap-crosses-5-trillion-scrip-up-16-from-ipo-price-126111600849_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-16T13:51+05:30"
   },
   {
    "id": "34118bccbb6e",
@@ -998,7 +2435,12 @@
      "type": "theme"
     }
    ],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: none, this is a routine ESOP allotment, not an event (about 0.05% dilution).",
+    "Losers: none clear.",
+    "Catalyst: unknown - routine filing, high score is from the symbol match.",
+    "Thesis fit: open thesis icici-bank-recovery: neutral, no effect"
+   ],
    "first_seen": "2026-11-16T11:54+05:30"
   },
   {
@@ -1386,8 +2828,8 @@
    "kind": "price",
    "time": "2026-11-16T09:52+05:30",
    "source": "Yahoo quotes",
-   "headline": "MAXHEALTH +6.0% vs previous close (close 1003.75, bar 2026-11-16)",
-   "summary": "No matching headline in this run's feeds.",
+   "headline": "MAXHEALTH +6.0% vs previous close (close 1003.45, bar 2026-11-16)",
+   "summary": "Headlines this run: Hospital stocks in focus: Max Healthcare, Aster DM, Fortis surge up to 7%",
    "link": "https://finance.yahoo.com/quote/MAXHEALTH.NS",
    "symbols": [
     "MAXHEALTH"
@@ -1405,8 +2847,8 @@
    "high": false,
    "theses": [],
    "second_order_candidates": [],
-   "change_pct": 5.98,
-   "volume_x": 1.46,
+   "change_pct": 5.95,
+   "volume_x": 1.84,
    "first_seen": "2026-11-16T09:52+05:30"
   },
   {
@@ -1414,8 +2856,8 @@
    "kind": "price",
    "time": "2026-11-16T09:52+05:30",
    "source": "Yahoo quotes",
-   "headline": "TMPV -8.3% vs previous close, volume 4.1x 20-day average (close 263.55, bar 2026-11-16)",
-   "summary": "Headlines this run: Tata Motors PV shares plunge 9% after Q2 results; brokerages cut target | Stocks to watch: Ashok Leyland, BEL, Hero Moto, Coal India, Tata Motors PV | Tata Motors PV falls 7.5% after lowering JLR outlook",
+   "headline": "TMPV -8.3% vs previous close, volume 4.8x 20-day average (close 263.45, bar 2026-11-16)",
+   "summary": "Headlines this run: Tata Motors PV Share Price Live Updates: Tata Motors PV Faces Decline in Market Performance | Tata Motors PV Share Price Live Updates: Tata Motors PV trades below its 20-day Simple Moving Average | Tata Motors PV shares plunge 9% after Q2 results; brokerages cut target",
    "link": "https://finance.yahoo.com/quote/TMPV.NS",
    "symbols": [
     "TMPV"
@@ -1433,8 +2875,8 @@
    "high": true,
    "theses": [],
    "second_order_candidates": [],
-   "change_pct": -8.3,
-   "volume_x": 4.08,
+   "change_pct": -8.33,
+   "volume_x": 4.75,
    "first_seen": "2026-11-16T09:52+05:30"
   },
   {
@@ -1860,1026 +3302,6 @@
    ],
    "moving": [],
    "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "6564d1272e5e",
-   "kind": "news",
-   "time": "2026-11-16T09:16+05:30",
-   "source": "BSE announcements",
-   "headline": "Magellanic Cloud Ltd: Investor Presentation On The Unaudited Financial Results For The Quarter And Half Year Ended September 30, 2026",
-   "summary": "Company Update. Attached herewith the Investor Presentation on the Unaudited Financial Result for the quarter and half year ended September 30,2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1656cd90-8880-4b68-b839-bdda2756e39b.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "4f98aa4ebc44",
-   "kind": "news",
-   "time": "2026-11-16T09:16+05:30",
-   "source": "BusinessLine",
-   "headline": "Coal India unit Mahanadi seeks $9.6 billion valuation in IPO",
-   "summary": "The company will open the IPO ‌for subscription from November 19 to November 23",
-   "link": "https://www.thehindubusinessline.com/markets/stock-markets/coal-india-unit-mahanadi-seeks-96-billion-valuation-in-ipo/article71706709.ece",
-   "symbols": [
-    "COALINDIA"
-   ],
-   "symbol_keys": [
-    "COALINDIA"
-   ],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "15c4252c4a27",
-   "kind": "news",
-   "time": "2026-11-16T09:11+05:30",
-   "source": "Business Standard",
-   "headline": "Coal India's Mahanadi Coalfields seeks $9.55 billion valuation in IPO",
-   "summary": "The ‌company, the third subsidiary of state-run Coal India to go public this year, is seeking a ​valuation of up to ₹90,001 crore ($9.55 billion)",
-   "link": "https://www.business-standard.com/companies/news/coal-india-s-mahanadi-coalfields-seeks-9-55-billion-valuation-in-ipo-126111600061_1.html",
-   "symbols": [
-    "COALINDIA"
-   ],
-   "symbol_keys": [
-    "COALINDIA"
-   ],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "11e51ed3e181",
-   "kind": "news",
-   "time": "2026-11-16T08:45+05:30",
-   "source": "NSE announcements",
-   "headline": "Nippon India ETF Nifty Dividend Opportunities 50: the Net Asset Value (per unit) of NIPPON INDIA ETF DIVIDEND OPPORTUNITIES as on November 13, 2026 is Rs. 77.839.",
-   "summary": "Nippon Life India Asset Management Limited has informed the Exchange that the Net Asset Value (per unit) of NIPPON INDIA ETF DIVIDEND OPPORTUNITIES as on November 13, 2026 is Rs. 77.839. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "1427909734c1",
-   "kind": "news",
-   "time": "2026-11-16T08:45+05:30",
-   "source": "BSE announcements",
-   "headline": "Kalpataru Projects International Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)",
-   "summary": "Others. Press Release - KPIL SECURES NEW ORDER OF RS. 2610 CRORES",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dcdbf085-ee75-4b15-bb5c-54d097ef68aa.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "order win"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "ea6cb6cfe48c",
-   "kind": "news",
-   "time": "2026-11-16T08:40+05:30",
-   "source": "NSE announcements",
-   "headline": "Glenmark Pharmaceuticals Limited: a press release dated November 16, 2026, titled \"Glenmark Pharmaceuticals Inc., USA Launches Authorized Generic of INLYTA® (axitinib) Tablets, 1 mg and 5 mg\".",
-   "summary": "Glenmark Pharmaceuticals Limited has informed the Exchange regarding a press release dated November 16, 2026, titled \"Glenmark Pharmaceuticals Inc., USA Launches Authorized Generic of INLYTA® (axitinib) Tablets, 1 mg and 5 mg\". |SUBJECT: Pr",
-   "link": "https://nsearchives.nseindia.com/corporate/GLENMARK_16112026083849_SE_Press_Release_16112026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "fe4c87133ea0",
-   "kind": "news",
-   "time": "2026-11-16T08:40+05:30",
-   "source": "BSE announcements",
-   "headline": "Glenmark Pharmaceuticals Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Glenmark Pharmaceuticals Inc., USA Launches Authorised Generic of INLYTA (axitinib) Tablets, 1 mg and 5mg",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/63b9623e-b411-4355-8f2a-cf9971181284.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "c318897f967a",
-   "kind": "news",
-   "time": "2026-11-16T08:36+05:30",
-   "source": "NSE announcements",
-   "headline": "Rapid Fleet Management Services Limited: investor presentation on the unaudited financial results for the half year ended 30th September, 2026",
-   "summary": "Rapid Fleet Management Services Limited has informed the Exchange about investor presentation on the unaudited financial results for the half year ended 30th September, 2026 |SUBJECT: General Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/RAPIDFLEET_16112026083501_Business_update_30_sept_2026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "36c8673b4ab3",
-   "kind": "news",
-   "time": "2026-11-16T08:25+05:30",
-   "source": "ET Markets",
-   "headline": "ICICI Bank Share Price Live Updates: ICICI Bank Stock Details",
-   "summary": "",
-   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/icici-bank-stock-price-live-updates-16-nov-2026/liveblog/135870794.cms",
-   "symbols": [
-    "ICICIBANK"
-   ],
-   "symbol_keys": [
-    "ICICIBANK"
-   ],
-   "keywords": [
-    "round-up"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [
-    {
-     "slug": "icici-bank-recovery",
-     "status": "open",
-     "type": "theme"
-    }
-   ],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T11:54+05:30"
-  },
-  {
-   "id": "747a255ccfef",
-   "kind": "news",
-   "time": "2026-11-16T08:24+05:30",
-   "source": "NSE announcements",
-   "headline": "Globe Civil Projects Limited: a press release dated November 16, 2026, titled \"PRESS RELEASE DATED NOVEMBER 16, 2026 FOR UN-AUDITED FINANCIAL RESULTS FOR THE QUARTER/HALF YEAR ENDED SEPTEMBER 30, 2026\".",
-   "summary": "Globe Civil Projects Limited has informed the Exchange regarding a press release dated November 16, 2026, titled \"PRESS RELEASE DATED NOVEMBER 16, 2026 FOR UN-AUDITED FINANCIAL RESULTS FOR THE QUARTER/HALF YEAR ENDED SEPTEMBER 30, 2026\". |S",
-   "link": "https://nsearchives.nseindia.com/corporate/GLOBE2024_16112026082424_Intimation_-_Press_Release.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "6fb8a75b134d",
-   "kind": "news",
-   "time": "2026-11-16T08:20+05:30",
-   "source": "BSE announcements",
-   "headline": "Globe Civil Projects Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press release dated 16.11.2026 with respect to Un-Audited Financial Results for the Quarter/Half year ended 30.09.2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/95a5d547-becd-44d2-88ac-e6e77786afd8.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "da1fd174a79a",
-   "kind": "news",
-   "time": "2026-11-16T08:17+05:30",
-   "source": "BSE announcements",
-   "headline": "VA Tech Wabag Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Transcript of the ''Q2 & H1 FY27 Results Conference Call''",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c8a0024b-1f14-4ee2-9b1b-2eedf097b909.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "13973c39f1d1",
-   "kind": "news",
-   "time": "2026-11-16T08:17+05:30",
-   "source": "BSE announcements",
-   "headline": "Globe Civil Projects Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Copies of Newspaper Advertisements published in the English Newspaper (Financial Express) and the Hindi Newspaper (Jansatta) for the Un-Audited Financial Results for the Quarter/Half Year ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dfca6eed-54e7-45d8-99c4-f645935ffe6e.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "b0440f6536f0",
-   "kind": "news",
-   "time": "2026-11-16T08:16+05:30",
-   "source": "NSE announcements",
-   "headline": "VA Tech Wabag Limited: Transcript of the Q2 & H1 FY27 Results Conference Call",
-   "summary": "Transcript of the Q2 & H1 FY27 Results Conference Call |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/VATECH_16112026080637_SI_Q2H1Transcript_sd.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "07ba0be71155",
-   "kind": "news",
-   "time": "2026-11-16T08:15+05:30",
-   "source": "Business Standard",
-   "headline": "Asian shares fall before Nvidia earnings, Anthropic IPO test tech rally",
-   "summary": "In Asia on Monday, Japan's Nikkei fell 0.6%, while South Korea slipped 0.2%. MSCI's broadest index of Asia-Pacific shares outside Japan eased 0.1%",
-   "link": "https://www.business-standard.com/markets/news/asian-shares-fall-before-nvidia-earnings-anthropic-ipo-test-tech-rally-126111600048_1.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results",
-    "IPO"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "4b73d87c5380",
-   "kind": "news",
-   "time": "2026-11-16T08:07+05:30",
-   "source": "BusinessLine",
-   "headline": "Mahanadi Coalfields sets IPO price band at ₹129-136; issue opens November 19",
-   "summary": "The proposed listing will make the company the third Coal India subsidiary to go public this year.",
-   "link": "https://www.thehindubusinessline.com/markets/mahanadi-coalfields-sets-ipo-price-band-at-129-136-issue-opens-november-19/article71706647.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "3daed3abcc32",
-   "kind": "news",
-   "time": "2026-11-16T08:00+05:30",
-   "source": "Business Standard",
-   "headline": "Stocks to watch: Ashok Leyland, BEL, Hero Moto, Coal India, Tata Motors PV",
-   "summary": "Ashok Leyland, Kaynes Technology and Easy Trip Planners will be in focus after reporting their Q2FY27 results",
-   "link": "https://www.business-standard.com/markets/news/stocks-to-watch-ashok-leyland-bel-hero-moto-coal-india-jupiter-wagons-126111600057_1.html",
-   "symbols": [
-    "TMPV",
-    "COALINDIA",
-    "BEL"
-   ],
-   "symbol_keys": [
-    "TMPV",
-    "COALINDIA",
-    "BEL"
-   ],
-   "keywords": [
-    "round-up"
-   ],
-   "moving": [
-    "TMPV"
-   ],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "47fbcc9e46f3",
-   "kind": "news",
-   "time": "2026-11-16T07:41+05:30",
-   "source": "Business Standard",
-   "headline": "Bajaj Finance, Radico, Clean Science top stock ideas by Choice Broking",
-   "summary": "Stocks to buy: Sachin Gupta of Choice Broking is bullish on Bajaj Finance, Radico Khaitan and Clean Science and Technology.",
-   "link": "https://www.business-standard.com/markets/news/stocks-to-buy-today-bajaj-finance-radico-clean-science-top-stock-ideas-by-choice-broking-on-monday-126111600049_1.html",
-   "symbols": [
-    "BAJFINANCE"
-   ],
-   "symbol_keys": [
-    "BAJFINANCE"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "c665d0787afa",
-   "kind": "news",
-   "time": "2026-11-16T07:10+05:30",
-   "source": "BusinessLine",
-   "headline": "Buzzing stocks on November 16: Pricol, ONGC, BEL, Dr Reddy’s, VA Tech Wabag and more",
-   "summary": "From a major stake sale in Pricol Autotech and ONGC taking over the disputed Cambay offshore block to BEL’s fresh order wins, USFDA updates, a German acquisition by Fusion CX and new strategic partnerships, several companies announced signi",
-   "link": "https://www.thehindubusinessline.com/markets/buzzing-stocks-on-november-16-pricol-ongc-bel-dr-reddys-va-tech-wabag-and-more/article71705452.ece",
-   "symbols": [
-    "DRREDDY",
-    "ONGC",
-    "BEL"
-   ],
-   "symbol_keys": [
-    "DRREDDY",
-    "ONGC",
-    "BEL"
-   ],
-   "keywords": [
-    "round-up"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "2e29e176c7bb",
-   "kind": "news",
-   "time": "2026-11-16T03:27+05:30",
-   "source": "BusinessLine",
-   "headline": "Mahindra’s electric three-wheeler business eyes IPO in 18 months",
-   "summary": "CEO Suman Mishra says the proposed listing will depend on funding requirements, sustained growth and the readiness of the electric-vehicle business",
-   "link": "https://www.thehindubusinessline.com/markets/mahindras-electric-three-wheeler-business-eyes-ipo-in-18-months/article71705958.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "7c8b459c9da2",
-   "kind": "news",
-   "time": "2026-11-16T00:37+05:30",
-   "source": "NSE announcements",
-   "headline": "Ecos (India) Mobility & Hospitality Limited: a press release dated November 15, 2026, titled \"Prese Release on Unaudited Financial Results for the quarter ended 30th September, 2026\".",
-   "summary": "Ecos (India) Mobility & Hospitality Limited has informed the Exchange regarding a press release dated November 15, 2026, titled \"Prese Release on Unaudited Financial Results for the quarter ended 30th September, 2026\". |SUBJECT: Press Relea",
-   "link": "https://nsearchives.nseindia.com/corporate/7303087361_16112026003655_Earning_Call_Q2FY27.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "7ffb0dd78203",
-   "kind": "news",
-   "time": "2026-11-15T23:47+05:30",
-   "source": "BSE announcements",
-   "headline": "Econo Trade (India) Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Please find enclosed herewith the scanned copies of the newspaper advertisement published in \"Financial Express\" (English Language) on 15th November, 2026 of unaudited financial results ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/04ec3fdd-52b9-4a08-879e-742ec8eab5b5.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "128583342942",
-   "kind": "news",
-   "time": "2026-11-15T23:36+05:30",
-   "source": "BSE announcements",
-   "headline": "Vibrant Global Capital Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper advertisement pertaining to the publishing of financial results of the company for the quarter and half year ended 30th September, 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a14c4bc6-5c0a-4883-97e2-ee48217b0583.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "786262ceeca5",
-   "kind": "news",
-   "time": "2026-11-15T23:32+05:30",
-   "source": "BSE announcements",
-   "headline": "Modipon Ltd: Newspaper Publication Under Regulation 47 Of SEBI Listing Regulations",
-   "summary": "Company Update. Please refer the enclosed file",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f44e6c05-93a4-45bd-9326-3b1622797435.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "b5e6a65a253b",
-   "kind": "news",
-   "time": "2026-11-15T23:20+05:30",
-   "source": "BSE announcements",
-   "headline": "Raksan Transformers Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press Release - Unaudited Financials Results of the Company for the half year ended September 30, 2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0c0b4fec-67d8-44be-8075-3a871606ff13.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "7e23eea4864b",
-   "kind": "news",
-   "time": "2026-11-15T23:02+05:30",
-   "source": "BSE announcements",
-   "headline": "Standard Capital Markets Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Please find enclosed Newspaper publication of Result for the Quarter and half ended 30th September 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a37da30b-cfb0-4f92-bfc3-43cc4f65517e.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "52f1f62886d1",
-   "kind": "news",
-   "time": "2026-11-15T23:00+05:30",
-   "source": "BSE announcements",
-   "headline": "Prime Focus Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Investor Presentation Q2 & H1 FY 2027",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/42a79517-9d5c-456f-8770-6046e153af33.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "313a29099855",
-   "kind": "news",
-   "time": "2026-11-15T22:30+05:30",
-   "source": "BSE announcements",
-   "headline": "Zee Media Corporation Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper Publication of Un-audited Financial Results",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/22c50ac3-5d81-4e46-bbd9-a6bf16300f09.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "8cc92fd20874",
-   "kind": "news",
-   "time": "2026-11-15T22:28+05:30",
-   "source": "BSE announcements",
-   "headline": "Leela Palaces Hotels & Resorts Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
-   "summary": "AGM/EGM. Voting Results & Scrutinizers Report of the Postal Ballot",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f8ccca4b-9bdd-4b0c-989c-a8c2a76f804f.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "a656237fbcc9",
-   "kind": "news",
-   "time": "2026-11-15T22:18+05:30",
-   "source": "BSE announcements",
-   "headline": "Ritco Logistics Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press Release for the Unaudited Financial Results for Q2 FY 27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e520658b-1441-4b9e-bf93-7adbb5acb321.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "cee850b4117b",
-   "kind": "news",
-   "time": "2026-11-15T22:05+05:30",
-   "source": "BSE announcements",
-   "headline": "Kaynes Technology India Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Investor Presentation for the Q2 FY 2026-27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/32e938f1-a9e8-4747-b689-93dbd2177efb.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "7f4e22d874dd",
-   "kind": "news",
-   "time": "2026-11-15T22:03+05:30",
-   "source": "BSE announcements",
-   "headline": "ECOS (India) Mobility & Hospitality Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Outcome of Board Meting held on November 13, 2026 regarding Unaudited Standalone & Consolidated Financial Results of Ecos (India) Mobility & Hospitality Limited for the quarter ended on ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/47849448-a7a5-42d6-8717-6b364f02db5e.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "11388d68d612",
-   "kind": "news",
-   "time": "2026-11-15T22:02+05:30",
-   "source": "BSE announcements",
-   "headline": "Kaynes Technology India Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Press release Q2 FY 2026-27",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5d3cc848-ab80-4a55-b037-cff08c325ac1.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "3d69feabb805",
-   "kind": "news",
-   "time": "2026-11-15T22:01+05:30",
-   "source": "BSE announcements",
-   "headline": "Autoriders International Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper Advertisement- Unaudited Financial Results (Standalone and Consolidated) for the quarter and six months period ended 30th September, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c53f1c1c-8e62-4229-9a40-5c4f60528759.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "0194754c4838",
-   "kind": "news",
-   "time": "2026-11-15T21:44+05:30",
-   "source": "BSE announcements",
-   "headline": "Munoth Communication Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper publication of unaudited financial results for the second quarter ended 30/09/2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/36f7dd73-9804-4c71-a233-0bb033de0841.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "cd4bf83e9aaf",
-   "kind": "news",
-   "time": "2026-11-15T21:38+05:30",
-   "source": "BSE announcements",
-   "headline": "Munoth Financial Services Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper publication of unaudited financial results for the second quarter ended 30/09/2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3ca69c18-f4dc-4939-9883-f38c0bae8d70.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "29b917a66901",
-   "kind": "news",
-   "time": "2026-11-15T21:29+05:30",
-   "source": "BSE announcements",
-   "headline": "Ritco Logistics Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper Publication pertaining to Unaudited Financial Results of the Company for the half year and quarter ended 30th September, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6c357d57-8538-41e6-a7ec-bda740cef3b6.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "2802fc9d3afd",
-   "kind": "news",
-   "time": "2026-11-15T21:27+05:30",
-   "source": "BSE announcements",
-   "headline": "Natural Capsules Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Please find enclosed herewith copy of Investor Presentation in connection with Q2 Financial Results.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1049aa1d-c365-4d2d-bfcf-10e0824cd306.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "4dab35f5d3ab",
-   "kind": "news",
-   "time": "2026-11-15T21:23+05:30",
-   "source": "BSE announcements",
-   "headline": "Natural Capsules Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Please find enclosed herewith Press Release made to Investors and Analysts in connection with Q2 Financials.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/627aeed3-e92b-451f-b577-dbbdd4af2b76.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "abff175ee5bd",
-   "kind": "news",
-   "time": "2026-11-15T21:15+05:30",
-   "source": "BSE announcements",
-   "headline": "Jagatjit Industries Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
-   "summary": "Company Update. Newspaper publication of financial results for the quarter and half year ended on 30.09.2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/049cf587-7944-4d95-82d1-eaf925bdd556.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "3ecb7fd54acd",
-   "kind": "news",
-   "time": "2026-11-15T21:15+05:30",
-   "source": "BSE announcements",
-   "headline": "Urban Company Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
-   "summary": "AGM/EGM. Voting Results and Scrutinizer''s Report of the Postal Ballot Notice dated October 16, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/45aef178-4d9c-41d4-8c48-43521f823512.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "c8041a05fffe",
-   "kind": "news",
-   "time": "2026-11-15T20:54+05:30",
-   "source": "BSE announcements",
-   "headline": "VIP Clothing Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Earning Release of Q2&H1 FY 27.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/e6fa412c-890e-407c-90cc-b186e19a6a11.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "2d21c9a2e6fb",
-   "kind": "news",
-   "time": "2026-11-15T18:14+05:30",
-   "source": "BusinessLine",
-   "headline": "SEBI assures continuous evolving mechanism to thwart possible cyberattacks",
-   "summary": "Vulnerability testing, patch testing, patching quickly, all these activities are continuously taking place, says Pandey",
-   "link": "https://www.thehindubusinessline.com/markets/sebi-assures-continuous-evolving-mechanism-to-thwart-possible-cyberattack/article71704722.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "d15116e84d41",
-   "kind": "news",
-   "time": "2026-11-15T17:30+05:30",
-   "source": "CNBC top news",
-   "headline": "Anthropic’s IPO lands as the embattled AI trade looks for a much-needed bright spot",
-   "summary": "Anthropic's IPO has outsized importance in the tech industry, which is heavily invested in the AI lab and is desperate for some positive momentum.",
-   "link": "https://www.cnbc.com/2026/11/15/anthropic-ipo-is-make-or-break-for-the-technology-industry.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "1e940e777e32",
-   "kind": "news",
-   "time": "2026-11-15T12:16+05:30",
-   "source": "BusinessLine",
-   "headline": "SEBI to issue AI norms for capital markets, safeguard investor interests: Pandey",
-   "summary": "The regulator is also working on strengthening its AI capabilities through international initiatives and supervisory toolkits.",
-   "link": "https://www.thehindubusinessline.com/markets/sebi-to-issue-ai-norms-for-capital-markets-safeguard-investor-interests-pandey/article71704258.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "c30578984ef3",
-   "kind": "news",
-   "time": "2026-11-15T12:14+05:30",
-   "source": "Business Standard",
-   "headline": "Sebi plans AI guardrails for capital markets, focus on investor protection",
-   "summary": "Markets regulator Sebi will soon issue detailed guidelines for the responsible use of Artificial Intelligence (AI) in the capital markets, its chairman Tuhin Kanta Pandey said, emphasising the need to balance technological innovation with i",
-   "link": "https://www.business-standard.com/markets/news/sebi-plans-ai-guardrails-for-capital-markets-focus-on-investor-protection-126111500187_1.html",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "2dc5496bc338",
-   "kind": "news",
-   "time": "2026-11-14T22:03+05:30",
-   "source": "BusinessLine",
-   "headline": "Tech Query: Britannia Industries, JSW Energy, Urban Company, Lemon Tree Hotels — What is the outlook? Where are these stocks headed?",
-   "summary": "We look at the prospects of Britannia Industries, JSW Energy, Urban Company and Lemon Tree Hotels",
-   "link": "https://www.thehindubusinessline.com/portfolio/technical-analysis/tech-query-britannia-industries-jsw-energy-urban-company-lemon-tree-hotels-what-is-the-outlook-where-are-these-stocks-headed/article71698144.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "guidance"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "92fc1d2c3dce",
-   "kind": "news",
-   "time": "2026-11-14T21:54+05:30",
-   "source": "BusinessLine",
-   "headline": "Index Outlook: Staying firmly bullish",
-   "summary": "Supports are there to limit the downside and take the indices higher",
-   "link": "https://www.thehindubusinessline.com/portfolio/technical-analysis/index-outlook-staying-firmly-bullish/article71701225.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "guidance"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-16T09:52+05:30"
-  },
-  {
-   "id": "3bd10ff9d568",
-   "kind": "news",
-   "time": "2026-11-14T21:54+05:30",
-   "source": "BusinessLine",
-   "headline": "US Market Outlook: Bourses get a breather",
-   "summary": "The benchmark indices, however, have to breach their resistance to become bullish again",
-   "link": "https://www.thehindubusinessline.com/portfolio/technical-analysis/us-market-outlook-bourses-get-a-breather/article71701084.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "guidance"
-   ],
-   "moving": [],
-   "score": 2,
    "high": false,
    "theses": [],
    "second_order_candidates": [],
