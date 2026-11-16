@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-16 17:27 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-16 18:09 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 6 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -137,7 +137,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 7a3156bc6b8d
 - Second-order candidates: Winner: listed passenger-vehicle rivals with stronger margins or share momentum (Mahindra & Mahindra M&M, Maruti Suzuki MARUTI) if the weakness is Tata-specific; mechanism is share and pricing pressure shifting to them. I could not open the article (site not reachable from this sandbox), so the cause of the miss is unconfirmed. / Losers: Tata Motors PV (TMPV) itself after the brokerage target cuts; Tata-group ancillaries with concentrated Tata volume (e.g. Tata Autocomp is unlisted, so no clean listed proxy). Losers: none clear beyond TMPV until the reason for the miss (volume, JLR margin, tariffs) is known. / Catalyst: surprise - results already out and brokerages have reset targets; no dated follow-up event identified. Further target cuts are the near-term flow. / Thesis fit: none (a 9% drop on results is a price move without a named mechanism; no draft)
 
-## 12. [6 HIGH] INDO-MIM Limited: the Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ) Audio Recording of Earnings Conference Call held on November 16, 2026 at 15:00 HRS (IST) for the quarter and half year ended September 30, 2026.
+## 12. [6 HIGH] State Bank of India: Acquisition (including agreement to acquire)
+
+- Time: 2026-11-16 17:48 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_238_WebXMLFile_20261116_174801768.xml
+- Matched symbols: SBIN
+- Keywords: M&A
+- Thesis match: none
+- Score: 6
+- Alert id: c9efb82b5fa1
+- Second-order candidates: 
+
+## 13. [6 HIGH] INDO-MIM Limited: the Intimation under Regulation 30 of the Securities and Exchange Board of India (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ) Audio Recording of Earnings Conference Call held on November 16, 2026 at 15:00 HRS (IST) for the quarter and half year ended September 30, 2026.
 
 - Time: 2026-11-16 16:56 IST
 - Source: NSE announcements
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b3516a68faa9
 - Second-order candidates: 
 
-## 13. [6 HIGH] Bajaj Auto Limited: 'Machine readable/legible copy of financial results'.
+## 14. [6 HIGH] Bajaj Auto Limited: 'Machine readable/legible copy of financial results'.
 
 - Time: 2026-11-16 13:57 IST
 - Source: NSE announcements
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8ae124f64f33
 - Second-order candidates: 
 
-## 14. [6 HIGH] Tata Steel, JSW Steel, Jindal Steel remain Nomura's top picks; brokerage stays positive on sector
+## 15. [6 HIGH] Tata Steel, JSW Steel, Jindal Steel remain Nomura's top picks; brokerage stays positive on sector
 
 - Time: 2026-11-16 11:54 IST
 - Source: Moneycontrol
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 550aaca89549
 - Second-order candidates: False match: a brokerage sector view repeating existing picks, not a catalyst.
-
-## 15. [6 HIGH] NBIS -9.9% vs previous close (close 115.88, bar 2026-11-13)
-
-- Time: 2026-11-16 09:52 IST
-- Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/NBIS
-- Matched symbols: NBIS (moving today: NBIS)
-- Keywords: price move
-- Thesis match: none
-- Score: 6
-- Alert id: f036faff15bb
-- Second-order candidates: Winner: same event as [873e41d546ff]; see that note. / Losers: none clear. Continuation of the post-earnings fall already noted on 2026-11-12 (stock down again after the Friday close at 115.88); no new mechanism found and the US sleeve is out of scope for the reviewer. / Catalyst: unknown - no news found beyond the earnings reaction already noted. / Thesis fit: none
