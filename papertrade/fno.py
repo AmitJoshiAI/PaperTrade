@@ -455,6 +455,8 @@ def run_day(main_prices: pd.DataFrame, do_update: bool) -> dict:
     save_queue(config.FNO_ORDERS_FILE, queue)
     record_executed("fno", market_day, executed)
     warnings += chain_notes
+    from .candidates import calendar_warnings
+    warnings += calendar_warnings()             # strategy_reviews/events.json: malformed file / skipped entries
     cands = None
     try:
         from .candidates import build_fno, save as save_cands
@@ -493,7 +495,7 @@ def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool,
     NSE scrape still runs; it owns the file only where Kite failed or is not of the market date, and on days
     both exist the journal compares their ATM mids per expiry. No token or any Kite error: the NSE path
     exactly as before, plus a "Kite: <why>, NSE scrape used" line."""
-    from .candidates import fno_candidate_symbols, fno_event_dates, fno_events_for
+    from .candidates import fno_candidate_symbols, fno_events, fno_events_for
     syms = list(fno_candidate_symbols()[0])
     for p in book.positions.values():
         syms.append(p.underlying)
@@ -512,7 +514,7 @@ def load_chains(book: FnoBook, orders: list, market_day: str, do_update: bool,
             if p.kind in OPTION_KINDS:
                 extra.setdefault(p.underlying, set()).add(p.expiry)
         table = {u: dict(lot=spec(u)["lot"]) for u in list(config.FNO_INDEX) + list(config.FNO_STOCKS)}
-        events = fno_event_dates(market_day)      # the candidates' event expiries, so they get real quotes
+        events = fno_events(market_day)      # the candidates' event expiries (theses + calendar), so they get real quotes
         ev_dates = {u: [ev["date"] for ev in fno_events_for(u, events)] for u in syms}
         weekly = set(config.FNO_WEEKLY_INDICES)
         kite_snaps, kite_notes = _kite_chains(specs, market_day, extra, weekly, ev_dates, prices)

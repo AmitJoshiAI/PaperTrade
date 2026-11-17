@@ -110,6 +110,8 @@ theses/            <slug>.md, one per thesis (copy _TEMPLATE.md); reviews/ for t
                    _EXAMPLE_second_order.md (Meta / CoreWeave / Nebius, a worked example, never executed)
                    proposed/ for draft theses written by the scanner routine (never read by the engine)
 journal/           YYYY-MM-DD.md daily reviews
+strategy_reviews/  YYYY-MM-DD.md weekly strategist reviews; events.json, the scheduled-event calendar (RBI, FOMC,
+                   CPI) whose future events get an expiry block in the F&O / a line in the US candidates
 alerts/            YYYY-MM-DD.json (all scored alerts of the day), latest.md (top 15, for the routine),
                    notes/YYYY-MM-DD.md (second-order notes written by the scanner routine)
 watchlist.yaml     scanner watchlist: Nifty 50 + thesis symbols + extra names, headline names, thresholds

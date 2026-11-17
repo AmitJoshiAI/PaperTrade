@@ -114,6 +114,13 @@ The repository is checked out for you. Work on branch main. Steps:
         "priced in / nothing happens" = iron condor, or the single credit spread on the side you trust; "big
         move, direction unknown" = long straddle only if it fits the 2% size, else the condor is NOT a
         substitute and the line is "none: straddle too big".
+      - The events are the ones in `strategy_reviews/events.json` (the strategist's calendar file; the
+        candidates sections list them at the top with the expiry that holds through each) plus any event of
+        an open thesis. The window is counted in trading days of that market.
+      - A strategist review written BEFORE 17 Nov 2026 could not use credit structures. Where it says
+        "credit structure, not buildable, no order" (the 14 Nov review says this for the RBI decision of
+        4 Dec), read it as the view type "priced in / nothing happens" and take the trade under this rule.
+        Its "do not substitute a debit spread or straddle" still holds. A newer review overrides this line.
       - Expiry: the first expiry that is still open on the event day (the "Event:" block when present).
       - Timing: queue it 3 to 10 trading days before the event, never on or after the event day.
       - Exit, written into the order's `reason` when it is opened: close at the first open after the event

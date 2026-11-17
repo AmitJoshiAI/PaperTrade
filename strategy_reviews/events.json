@@ -1,0 +1,8 @@
+{
+ "note": "Scheduled market events the option candidates must hold through, maintained by the weekly strategist routine. Read by papertrade/candidates.py on every daily run: each future 'fno' event gets an 'Event: <slug> <date> (calendar)' expiry block in the journal's F&O candidates (NIFTY and BANKNIFTY when symbols is empty; a listed stock only if named in symbols and already a candidate); 'us' events are listed at the top of the US candidates with the tabled expiry that covers them. date = the decision / release day (ISO). Past events are ignored; a bad entry is skipped with a warning in the F&O Observations.",
+ "events": [
+  {"slug": "rbi-mpc-december", "date": "2026-12-04", "sleeves": ["fno"], "symbols": [], "event": "RBI MPC decision", "source": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422"},
+  {"slug": "fomc-december", "date": "2026-12-09", "sleeves": ["us"], "symbols": [], "event": "FOMC decision", "source": "strategy_reviews/2026-11-14.md (confirmed there)"},
+  {"slug": "us-cpi-december", "date": "2026-12-10", "sleeves": ["us"], "symbols": [], "event": "US CPI", "source": "strategy_reviews/2026-11-14.md (confirmed there)"}
+ ]
+}

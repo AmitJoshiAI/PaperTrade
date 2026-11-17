@@ -7,7 +7,8 @@ State: state/fno_candidates.json and state/us_candidates.json (latest run only; 
 India (fno.run_day): NIFTY and BANKNIFTY always (config.FNO_CANDIDATE_INDICES), plus every config.FNO_STOCKS
 symbol that an open thesis holds or a queued thesis order names. For the current monthly expiry (and the
 nearest listed expiry for config.FNO_WEEKLY_INDICES, and an "event:" expiry, the first monthly expiry on or
-after a thesis event that the current one ends before; see fno_event_dates): spot, days to expiry, ATM strike
+after a thesis or calendar event that the current one ends before; see fno_events and
+strategy_reviews/events.json): spot, days to expiry, ATM strike
 (the engine's: spot rounded to the config strike step) and ATM-2..ATM+2 calls and puts per unit and per lot,
 then six 1-lot structures. US (us.run_day): config.US_CANDIDATE_TICKERS, the nearest monthly expiry (third Friday)
 14-42 days after the US market date, ATM = the listed strike nearest the last close, ATM-2..ATM+2 listed
@@ -195,10 +196,128 @@ def fno_event_dates(market_day: str) -> list[dict]:
             ds = [d for d in (t.event_date, t.rule_due_date) if d]
             if not ds or max(ds).isoformat() <= market_day:
                 continue
-            out.append(dict(slug=slug, date=max(ds).isoformat(), symbols=sorted({l.symbol for l in t.legs})))
+            out.append(dict(slug=slug, date=max(ds).isoformat(), symbols=sorted({l.symbol for l in t.legs}),
+                            origin="thesis"))
     except Exception as e:
         log.warning("thesis event dates for the F&O candidates not read: %s", e)
     return sorted(out, key=lambda ev: (ev["date"], ev["slug"]))
+
+
+# ---------- the event calendar (strategy_reviews/events.json) ----------
+EVENTS_FILE = config.ROOT / "strategy_reviews" / "events.json"
+EVENT_SLEEVES = ("fno", "us")
+EVENTS_NAME = "strategy_reviews/events.json"
+
+
+def load_event_calendar(path=None) -> tuple[list[dict], list[str]]:
+    """([{slug, date, symbols, sleeves, event, source, origin="calendar"}], warnings) from the calendar file the
+    weekly strategist maintains: scheduled events (RBI, FOMC, CPI) that no thesis names but that the option
+    candidates must still hold through. Every entry, past ones too (callers filter by date). Never raises:
+    a missing file is logged and gives nothing; a malformed file or a bad entry gives a warning (the entry is
+    skipped). The warnings reach the journal's F&O Observations (fno.run_day via calendar_warnings)."""
+    from pathlib import Path
+    p = EVENTS_FILE if path is None else Path(path)
+    warns: list[str] = []
+
+    def warn(msg):
+        log.warning("%s", msg)
+        warns.append(msg)
+    try:
+        if not p.exists():
+            log.warning("event calendar %s not found: no calendar events", p)
+            return [], []
+        data = json.loads(p.read_text(encoding="utf-8-sig"))
+        evs = data.get("events") if isinstance(data, dict) else None
+        if not isinstance(evs, list):
+            warn(f"{EVENTS_NAME} ignored: no \"events\" list")
+            return [], warns
+    except Exception as e:
+        warn(f"{EVENTS_NAME} ignored: not readable ({e})")
+        return [], warns
+    out, seen = [], set()
+    for i, e in enumerate(evs, 1):
+        try:
+            if not isinstance(e, dict):
+                raise ValueError("not an object")
+            slug = e.get("slug")
+            if not isinstance(slug, str) or not slug.strip():
+                raise ValueError("no slug")
+            slug = slug.strip()
+            d = e.get("date")
+            if not isinstance(d, str):
+                raise ValueError("no date")
+            d = _date.fromisoformat(d.strip()).isoformat()
+            sl = e.get("sleeves")
+            if not isinstance(sl, list) or not sl or any(s not in EVENT_SLEEVES for s in sl):
+                raise ValueError(f"sleeves must be a non-empty list of {' / '.join(EVENT_SLEEVES)} (got {sl!r})")
+            sy = e.get("symbols", [])
+            if sy is None:
+                sy = []
+            if not isinstance(sy, list) or any(not isinstance(s, str) or not s.strip() for s in sy):
+                raise ValueError(f"symbols must be a list of symbol strings (got {sy!r})")
+        except Exception as ex:
+            warn(f"{EVENTS_NAME} entry {i} skipped: {ex}")
+            continue
+        if (slug, d) in seen:
+            warn(f"{EVENTS_NAME} entry {i} skipped: duplicate of {slug} {d}")
+            continue
+        seen.add((slug, d))
+        out.append(dict(slug=slug, date=d, symbols=sorted({s.strip() for s in sy}), sleeves=list(dict.fromkeys(sl)),
+                        event=str(e.get("event") or ""), source=str(e.get("source") or ""), origin="calendar"))
+    return sorted(out, key=lambda ev: (ev["date"], ev["slug"])), warns
+
+
+def calendar_events(sleeve: str, market_day: str, path=None) -> list[dict]:
+    """The calendar's events for one sleeve ("fno" / "us") that are after the market date."""
+    evs, _w = load_event_calendar(path)
+    return [ev for ev in evs if sleeve in ev["sleeves"] and ev["date"] > market_day]
+
+
+def calendar_warnings(path=None) -> list[str]:
+    """The calendar's warnings (malformed file, skipped entries) for the journal's F&O Observations."""
+    return load_event_calendar(path)[1]
+
+
+def fno_events(market_day: str, path=None) -> list[dict]:
+    """The events the F&O candidates must hold through: the thesis events (fno_event_dates) plus the calendar's
+    future "fno" events, de-duplicated by (slug, date) (the thesis entry wins), sorted by date. Each has
+    origin "thesis" or "calendar". Never raises."""
+    out = fno_event_dates(market_day)
+    seen = {(ev["slug"], ev["date"]) for ev in out}
+    for ev in calendar_events("fno", market_day, path):
+        if (ev["slug"], ev["date"]) not in seen:
+            seen.add((ev["slug"], ev["date"]))
+            out.append(ev)
+    return sorted(out, key=lambda ev: (ev["date"], ev["slug"]))
+
+
+def _event_name(ev: dict) -> str:
+    """"rbi-mpc-december 2026-12-04", plus " (calendar)" for a calendar event: the expiry block's label."""
+    return f"{ev['slug']} {ev['date']}" + (" (calendar)" if ev.get("origin") == "calendar" else "")
+
+
+def _fno_calendar(out: dict, cal: list[dict]) -> list[dict]:
+    """For each calendar F&O event, which tabled expiry block of each underlying it applies to holds through it
+    (the first tabled expiry on or after the event day), read from the built blocks."""
+    res = []
+    for ev in cal:
+        holds = []
+        for x in out["underlyings"]:
+            u = x["underlying"]
+            if not fno_events_for(u, [ev]):
+                continue
+            if x.get("error"):
+                holds.append(dict(underlying=u, label=None, expiry=None, note="no table today"))
+                continue
+            ok = sorted((ex for ex in x.get("expiries", []) if ex["expiry"] >= ev["date"]), key=lambda ex: ex["expiry"])
+            if ok:
+                holds.append(dict(underlying=u, label=ok[0]["label"], expiry=ok[0]["expiry"]))
+            else:
+                unl = any(w.startswith(f"event {ev['slug']} {ev['date']}:") for w in x.get("warnings", []))
+                holds.append(dict(underlying=u, label=None, expiry=None,
+                                  note="its expiry is not listed on NSE yet" if unl else "no tabled expiry holds through it"))
+        res.append(dict(slug=ev["slug"], date=ev["date"], event=ev.get("event", ""), holds=holds))
+    return res
 
 
 def fno_events_for(sym: str, events: list[dict]) -> list[dict]:
@@ -561,7 +680,7 @@ def build_fno(market, book, market_day: str, chain_notes=(), use_kite: bool = Fa
     nxt = next_weekday(market_day)          # the earliest fill day, as simulate() uses it
     breaker = book.blocked(nxt)
     syms, notes, why = fno_candidate_symbols()
-    events = fno_event_dates(market_day)
+    events = fno_events(market_day)
     out = dict(date=market_day, currency="INR", equity=round(eq, 2), cash=round(cash, 2), cap=round(cap, 2),
                open_positions=len(book.positions), max_positions=config.DERIV_MAX_POSITIONS,
                breaker=book.breaker_text() if breaker else None, notes=list(notes), underlyings=[])
@@ -580,6 +699,8 @@ def build_fno(market, book, market_day: str, chain_notes=(), use_kite: bool = Fa
             out["underlyings"].append(dict(underlying=u, error=str(e), why=why.get(u, [])))
     srcs = {r.get("source") for x in out["underlyings"] for ex in x.get("expiries", []) for r in ex.get("rows", [])}
     out["sources"] = sorted(s for s in srcs if s)
+    # every future calendar event (also one a thesis already names): which built block holds through it
+    out["calendar"] = _fno_calendar(out, calendar_events("fno", market_day))
     _zerodha_margins(out, use_kite)
     return out
 
@@ -634,7 +755,7 @@ def _fno_one(market, sp, market_day, eq, why, events=(), book=None) -> dict:
         if listed and e not in listed:  # stocks list ~3 monthlies: an order for it would be rejected today
             unlisted.append(f"event {ev['slug']} {ev['date']}: its expiry {e} is not listed on NSE yet")
             continue
-        by_exp.setdefault(e, []).append(f"{ev['slug']} {ev['date']}")
+        by_exp.setdefault(e, []).append(_event_name(ev))
     exps += [("event: " + "; ".join(evs), e) for e, evs in sorted(by_exp.items())]
     res = dict(underlying=u, kind=sp["kind"], lot=sp["lot"], step=sp["step"], why=why, spot=round(S, 2), spot_date=sday,
                chain=dict(timestamp=snap["timestamp"], underlying=snap.get("underlying_value"), source=snap.get("source"))
@@ -771,7 +892,23 @@ def build_us(market, book, market_day: str) -> dict:
     out["reference"] = list(config.US_CANDIDATE_REFERENCE)
     srcs = {r.get("source") for x in out["underlyings"] for ex in x.get("expiries", []) for r in ex.get("rows", [])}
     out["sources"] = sorted(s for s in srcs if s)
+    out["calendar"] = _us_calendar(out, calendar_events("us", market_day))
     return out
+
+
+def _us_calendar(out: dict, cal: list[dict]) -> list[dict]:
+    """For each calendar US event: the tickers whose tabled expiry (the nearest monthly 14-42 days out) is
+    still open on the event day, and the ones whose expiry ends before it, read from the built tables."""
+    res = []
+    for ev in cal:
+        held, short = {}, {}
+        for x in out["underlyings"]:
+            if x.get("error") or not x.get("expiries"):
+                continue
+            e = x["expiries"][0]["expiry"]
+            (held if e >= ev["date"] else short).setdefault(e, []).append(x["underlying"])
+        res.append(dict(slug=ev["slug"], date=ev["date"], event=ev.get("event", ""), held=held, short=short))
+    return res
 
 
 def _us_one(market, t, market_day, eq, book=None) -> dict:
@@ -1078,10 +1215,50 @@ def _lines_common(c: dict, ccy: str, unit_word: str) -> list[str]:
     return lines
 
 
+def _ev_text(ev: dict) -> str:
+    return f"{ev['slug']} {ev['date']}" + (f" ({ev['event']})" if ev.get("event") else "")
+
+
+def _fno_calendar_line(cal) -> str | None:
+    """One line: each upcoming calendar F&O event and the expiry block that holds through it."""
+    if cal is None:
+        return None
+    if not cal:
+        return f"**Calendar events** ({EVENTS_NAME}): none upcoming for F&O."
+    parts = []
+    for ev in cal:
+        groups: dict = {}
+        for h in ev["holds"]:
+            key = (f"\"{_heading(h['label'])} expiry {h['expiry']}\"" if h.get("expiry")
+                   else f"no block ({h.get('note', '')})")
+            groups.setdefault(key, []).append(h["underlying"])
+        held = "; ".join(f"{', '.join(us)} -> {k}" for k, us in groups.items()) or "no candidate underlying"
+        parts.append(f"{_ev_text(ev)}: {held}")
+    return f"**Calendar events** ({EVENTS_NAME}): " + "; ".join(parts) + "."
+
+
+def _us_calendar_line(cal) -> str | None:
+    """One line: each upcoming calendar US event and the tabled expiry that covers it (or does not)."""
+    if cal is None:
+        return None
+    if not cal:
+        return f"**Calendar events** ({EVENTS_NAME}): none upcoming for the US sleeve."
+    parts = []
+    for ev in cal:
+        bits = [f"held through by the tabled expiry {e} ({len(ts)} ticker{'s' if len(ts) != 1 else ''})"
+                for e, ts in sorted(ev["held"].items())]
+        bits += [f"NOT held: expiry {e} ends before it ({', '.join(ts)})" for e, ts in sorted(ev["short"].items())]
+        parts.append(f"{_ev_text(ev)}: " + ("; ".join(bits) or "no tabled ticker"))
+    return f"**Calendar events** ({EVENTS_NAME}): " + "; ".join(parts) + "."
+
+
 def fno_lines(c: dict | None) -> list[str]:
     lines = ["## F&O candidates", ""]
     if not c:
         return lines + ["Not available this run (see the run log)."]
+    cl = _fno_calendar_line(c.get("calendar"))
+    if cl:
+        lines += [cl, ""]
     lines += [f"For the reviewer (ROUTINE_PROMPT.md step 5c). Close of {c['date']}. Sleeve equity "
               f"{_m(c['equity'], 'INR')}; the 10% per-order limit is {_m(c['cap'], 'INR')}; free cash "
               f"{_m(c['cash'], 'INR')}; open positions {c['open_positions']} of {c['max_positions']}; circuit breaker "
@@ -1117,7 +1294,12 @@ def us_lines(c: dict | None, offline: bool = False) -> list[str]:
     if not c:
         return lines + ["Not available this run (see the run log)."]
     if c.get("not_refreshed"):      # us.run_day: a US session was in progress at run time
-        return lines + [c["not_refreshed"]]
+        cal = calendar_events("us", _date.today().isoformat())
+        return lines + ([f"**Calendar events** ({EVENTS_NAME}): " + "; ".join(_ev_text(ev) for ev in cal)
+                         + " (expiry coverage not checked: no table this run).", ""] if cal else []) + [c["not_refreshed"]]
+    cl = _us_calendar_line(c.get("calendar"))
+    if cl:
+        lines += [cl, ""]
     lines += [f"For the reviewer (ROUTINE_PROMPT.md step 5c). US market date {c['date']}, chains fetched "
               f"{c['fetched_at']}. Sleeve equity {_m(c['equity'], 'USD')}; the 10% per-order limit is "
               f"{_m(c['cap'], 'USD')}; free cash {_m(c['cash'], 'USD')}; open positions {c['open_positions']} of "

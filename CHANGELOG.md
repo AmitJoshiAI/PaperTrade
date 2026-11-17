@@ -36,6 +36,16 @@ Review and revert: count event trades in the weekly strategist review. At 10 clo
 stop the rule on their net P&L after charges. Stop it earlier if event trades have lost 5% of either sleeve
 (Rs 25,000 / about $265) in total. Reverting the rule is a prompt edit; the candidates rows can stay.
 
+Addendum, same day (after the first real run with the new tables, 17 Nov 18:51 IST): the reviewer wrote that no
+RBI trade was expected, for two reasons, both fixed. (1) The 14 Nov strategist review still said "credit structure,
+not buildable, no order"; ROUTINE_PROMPT.md now says to read that as the "priced in" view type. (2) The December
+expiry block came only from thesis events, and the Bajaj thesis was closed on 14 Nov, so only the 23 Nov expiry was
+tabled. New calendar file strategy_reviews/events.json (kept by the strategist) feeds the candidates: each listed
+F&O event gets its own expiry block and its chain is fetched; US events are listed with the tabled expiry that
+covers them. Seeded with RBI 4 Dec, FOMC 9 Dec, US CPI 10 Dec. Evidence: a full run in a copy fetched the real
+29 Dec NSE chains and tabled NIFTY and BANKNIFTY iron condors, PASS, event-trade size fits, all four legs with
+two-sided quotes; 59 unit tests pass. Not yet seen in the real journal (first on 18 Nov).
+
 ## 2026-11-11: US sleeve ignores an unfinished US session (structural: data error)
 
 Old: the US market date was the newest daily bar Yahoo returned. GitHub starts the scheduled 17:33 IST run 5-10

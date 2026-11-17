@@ -83,6 +83,11 @@ The repository is checked out on branch main. Steps:
    most 2% of the sleeve). Credit structures (bull put, bear call, iron condor) are in the candidates
    tables from 17 Nov 2026: "not buildable" is no longer an answer. Each week, list every event trade
    opened or closed with its P&L after charges, and keep a running count toward the 10-trade review.
+   Keep `strategy_reviews/events.json` current: it is the calendar the candidates tables are built from
+   (an event listed there gets its own expiry block). One entry per scheduled catalyst of the next six
+   weeks that you have confirmed from a source: `slug`, `date` (the decision or release day, ISO),
+   `sleeves` (`["fno"]`, `["us"]` or both), `symbols` (empty for index events, else the NSE or US
+   tickers), `event`, `source`. Leave past entries in place; never list a date you could not confirm.
 
 6. Rule change proposals, under this change policy (it binds you and the daily reviewer):
    - A momentum rule or parameter changes only on at least 20 closed trades, or on a structural reason
