@@ -96,13 +96,51 @@ The repository is checked out for you. Work on branch main. Steps:
       RBI policy, Union Budget, US FOMC or CPI, a known listing). The instrument comes from the journal's
       "## F&O candidates" and "## US candidates" sections (when present): they list, for the indices and for
       every F&O stock held by an open thesis, the current-expiry ATM and ATM+/-2 call and put premiums per
-      lot, days to expiry, and pre-built defined-risk structures (bull call spread, bear put spread, long
-      straddle) with their max loss and a pass/fail against the 10% rule. When a thesis event falls after
+      lot, days to expiry, and pre-built defined-risk structures (debit: bull call spread, bear put spread, long
+      straddle; credit: bull put spread, bear call spread, iron condor) with their max loss, max loss as a
+      percentage of the sleeve, an "event-trade size" marker and a pass/fail against the engine's rules. When a thesis event falls after
       the current expiry, an "Event: <thesis> <date>" expiry is added: the first monthly expiry that is still
       open on the event day (use it for a structure meant to hold through the event). Prefer a debit spread or a long
       option over anything with open-ended risk; the engine rejects naked short options anyway.
 
-      No quota: never open a position to have one. But inaction must be earned: when you decide "none"
+      **Event-trade rule (user's decision, 17 Nov 2026; RISK_LIMITS.md).** The two sleeves traded nothing in
+      their first month, so nothing was learned about fills, costs or exits. From now on, for EVERY scheduled
+      catalyst in the strategist's calendar that touches an index or a held or queued name (RBI MPC, FOMC, US
+      CPI, Union Budget, results of a thesis name), each sleeve it touches takes exactly ONE structure:
+      - Size: one lot / one contract set, marked "event-trade size: fits" in the candidates table (max loss
+        including entry charges at most 2% of sleeve equity: about Rs 10,000, about $105). Never more.
+      - Kind, from the strategist's stated view type for that event (its "For Monday's daily reviewer"
+        section; if it gave none, decide and write why): directional = the debit spread in that direction;
+        "priced in / nothing happens" = iron condor, or the single credit spread on the side you trust; "big
+        move, direction unknown" = long straddle only if it fits the 2% size, else the condor is NOT a
+        substitute and the line is "none: straddle too big".
+      - Expiry: the first expiry that is still open on the event day (the "Event:" block when present).
+      - Timing: queue it 3 to 10 trading days before the event, never on or after the event day.
+      - Exit, written into the order's `reason` when it is opened: close at the first open after the event
+        day; earlier if the structure has made 50% of its max gain, measured from the credit or debit it
+        actually FILLED at (the fill lines in the journal), not from the table. Queue the CLOSE yourself on
+        that day, one CLOSE per leg with its `position` id; never let a short option run to expiry.
+      - Write the legs exactly as the candidates table prints them, in its order (BUY covers first), each
+        leg its own OPEN with the same `decision_date` and `lots`, the numeric strike, the exact expiry and
+        the instrument spelled `CE` / `PE` (India) or `CALL` / `PUT` (US): with any other spelling the
+        engine may check the short before its cover and reject it as naked. Start every leg's `reason`
+        with `event-trade: <event> <date>` so the results can be counted.
+      - One structure per sleeve per run. A PASS in the table is for that structure alone: two queued
+        together share slots and cash, the engine fills leg by leg and can leave one half-built, and it
+        pairs shorts with covers by position id, which can misstate the margin (DEFERRED.md 24).
+      - The table's "fill est." is what the engine will fill near (India: a model on each strike's own
+        implied vol, 1% against you; US before the open: a MODEL price on last-trade IV, not a quote).
+        Judge the trade on the fill estimate, not on the mids.
+      - Skip a structure whose Quotes column says "wide quotes", "no quote", or "fill est." below half the
+        mid credit on any leg; on US rows "no trade in the last session" on a SHORT leg is the same
+        warning. Then take the next structure of the same kind (other underlying or the other index).
+      - "None" for an event is allowed only when no structure of the required kind passes the table's
+        checks at event-trade size with usable quotes; say which check failed for each one you looked at.
+      This rule is about learning at trivial size. It does not change the 10% limit or anything in the
+      momentum or thesis sleeves, and it ends or changes only through CHANGELOG.md (review at 10 closed
+      event trades).
+
+      Outside that rule there is no quota: never open a position to have one. But inaction must be earned: when you decide "none"
       for F&O or US, write one line per candidate category (index spreads; thesis-stock options; US) saying
       which view you considered and why the structure, the size or the timing did not fit. "No setup I can
       verify" is not an acceptable line once the candidates section exists; if that section is missing,
@@ -113,7 +151,7 @@ The repository is checked out for you. Work on branch main. Steps:
         candidates section says "real NSE chain" or "real Zerodha chain". Treat model P&L as an estimate and say so.
       - At Rs 5,00,000 one NIFTY or BANKNIFTY future needs about Rs 1.8 lakh of margin, far above the
         10% per-order limit (about Rs 50,000), so index futures (and most stock futures) are rejected.
-        Do not queue them. Long options and covered spreads fit.
+        Do not queue them. Long options and covered spreads (debit and credit) fit.
       - A short option must be covered (same underlying and expiry): queue the cover in the same file;
         the engine fills covers before shorts.
       - US: the sleeve is about $5,290, so the 10% limit is about $529 per order: a single share of an

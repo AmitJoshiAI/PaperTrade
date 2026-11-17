@@ -1,5 +1,41 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-17: F&O and US sleeves: credit structures in the candidates, and an event-trade rule (user's decision)
+
+Why: both sleeves were at zero trades after a month (22 trading days). The user asked to raise the 10% per-order
+limit to 30%; the journals showed the limit was not the blocker (a NIFTY spread used about 1% of the sleeve and
+passed for up to 9 lots; the reviewer wrote "no view" daily, and the strategist wrote "credit structure, not
+buildable" for the RBI decision of 4 Dec). The limit stays at 10%; the user agreed to these two changes instead.
+
+1. Candidates (both sleeves) now table bull put spreads, bear call spreads and iron condors beside the debit
+   structures: short strikes about one expected move (the ATM straddle) from ATM, wings 2 steps out in India and 1
+   listed strike in the US. PASS/FAIL is the engine's own check run leg by leg on a copy of the book. Every row
+   shows max loss as % of the sleeve, an "event-trade size" marker (max loss <= 2%), a fill estimate and a quote
+   label. DEFERRED 17 done.
+2. Event-trade rule (ROUTINE_PROMPT.md 5c, STRATEGIST_PROMPT.md step 5, RISK_LIMITS.md): for every scheduled
+   catalyst that touches an index or a held or queued name, each sleeve takes one structure, one lot, max loss at
+   most 2% of the sleeve, queued 3-10 trading days before the event, closed at the first open after it or at 50%
+   of max gain. The kind follows the strategist's view type. First case: RBI 4 Dec.
+3. Two pricing errors found while proving the fills (structural):
+   - US: before the US open Yahoo shows no bid/ask and a junk implied vol; the engine priced legs at $0.00 and
+     rejected them, so NO US option order could fill at the usual run time. Now priced from the IV backed out of
+     the last session's trades, labelled a model price; an order with no usable price waits instead of being
+     rejected.
+   - India: fills used NSE's listed per-strike IV, which can disagree with the bid/ask (BANKNIFTY 62,700 CE:
+     listed 13.67%, mid implies 14.63%). Fills now use the IV implied by the strike's bid/ask mid when both
+     sides are quoted. A BANKNIFTY condor tabled at 71.14 credit filled at 38.84 before and 59.63 after.
+
+Evidence: in a copy of the repo, on real NSE chains of 16 Nov and the real 17 Nov open, a NIFTY bull put spread
+and a BANKNIFTY iron condor written as the table prints them filled, margin and equity balanced, and a naked
+short was still rejected; an EEM bear call spread filled pre-market on live Yahoo data; a full daily run in a
+second copy on 17 Nov produced the new tables without errors (81 PASS rows); 52 unit tests pass. Not proven: no
+trade has been placed by the reviewer yet; US fills were checked on one pre-market snapshot only; the Kite margin
+column was not exercised; the dashboard text change was not viewed in a browser. Known engine gaps are DEFERRED 24.
+
+Review and revert: count event trades in the weekly strategist review. At 10 closed event trades, keep, resize or
+stop the rule on their net P&L after charges. Stop it earlier if event trades have lost 5% of either sleeve
+(Rs 25,000 / about $265) in total. Reverting the rule is a prompt edit; the candidates rows can stay.
+
 ## 2026-11-11: US sleeve ignores an unfinished US session (structural: data error)
 
 Old: the US market date was the newest daily bar Yahoo returned. GitHub starts the scheduled 17:33 IST run 5-10

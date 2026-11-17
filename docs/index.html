@@ -764,7 +764,9 @@ footer a { color: inherit; }
             s.verdict === "n/a" ? h("div", { class: "nums", text: s.why }) :
             h("div", { class: "nums num", text: "Max loss " + money(s.max_loss) + " · max gain " + (s.max_gain == null ? "unlimited" : money(s.max_gain)) +
               " · BE " + (s.breakevens || []).map(function (b) { return f2.format(b); }).join(" / ") +
-              " · long leg " + (isNum(s.long_leg_pct) ? s.long_leg_pct.toFixed(1) : "?") + "% of equity" + (ok ? " · up to " + s.max_lots + " " + unit + (s.max_lots === 1 ? "" : "s") : " · " + s.why) })
+              (s.kind === "credit"
+                ? " · margin " + money(s.margin) + (isNum(s.order_risk_pct) ? " (largest order " + s.order_risk_pct.toFixed(1) + "% of equity)" : "")
+                : " · long leg " + (isNum(s.long_leg_pct) ? s.long_leg_pct.toFixed(1) : "?") + "% of equity") + (ok ? " · up to " + s.max_lots + " " + unit + (s.max_lots === 1 ? "" : "s") : " · " + s.why) })
           ]));
         });
       });
@@ -773,7 +775,7 @@ footer a { color: inherit; }
       kids.push(d);
     });
     if (nofit.length) kids.push(h("div", { class: "card small", style: "margin-top:8px" }, [
-      h("div", { class: "muted", text: "Did not fit the 10% limit" }),
+      h("div", { class: "muted", text: "No structure passes" }),
       h("ul", { style: "padding-left:18px;margin:4px 0 0" }, nofit.map(function (n) { return h("li", { text: n }); }))]));
     app.appendChild(section(id, title + " (" + dShort(c.date) + ")", kids));
   }

@@ -15,8 +15,13 @@ Prices:
                 The daily run is at 17:30 IST, before the US open, so the quotes are those of the latest
                 US session's close: an option order fills at the mid as of that session (the first session
                 after its decision_date or later), not at the open. If a contract has no two-sided quote
-                (or the chain cannot be fetched), it is priced with Black-Scholes on the latest close using
-                the chain's last implied vol (or the vol stored at the last good quote), and labelled so.
+                it is priced with Black-Scholes on the latest close: on Yahoo's implied vol only if the row
+                has a bid or an ask; else (US pre-market, the 17:33 IST run: bid = ask = 0 next to a stray IV
+                of a few %) on ONE IV per underlying and expiry backed out of the latest session's near-the-
+                money last trades (candidates.last_trade_iv, the same as the candidates table). RISK: a
+                pre-market option FILL is therefore a MODEL price (last-trade IV), not a quote, and is
+                labelled so. With neither, a mark or a CLOSE uses the vol stored at the last good quote; a
+                new OPEN stays queued (NotYet), as does one priced under US_MIN_OPTION_PRICE (never 0.00).
                 An offline run never fills options (no chain) and marks them with that stored vol.
   late run      GitHub often starts the scheduled run hours late, while a US session is open. A bar for
                 today's New York date fetched before 16:20 New York (close + Yahoo's delay) is a partial
@@ -70,6 +75,7 @@ log = logging.getLogger(__name__)
 
 PAPER_SHORT_US = "PAPER SHORT: not possible from India (LRS)"
 CHAIN_LABEL = "real option chain (mid of bid/ask)"
+LT_LABEL = "model (BS on IV implied by last trades)"     # the same words as candidates.US_LT_LABEL
 REF_TICKER = "SPY"          # always downloaded: fixes the US market date even with nothing held
 NEW_YORK = ZoneInfo("America/New_York")
 SESSION_DONE = _time(16, 20)  # 16:00 close + a buffer for Yahoo's delay; no holiday / early-close logic
@@ -201,7 +207,7 @@ class UsMarket:
         # a New York session was in progress at run time (its partial bar was dropped by load_prices): the
         # chain would be live intraday quotes, so it is not used for fills or marks in this run
         self.session_in_progress = prices.attrs.get("session_in_progress")
-        self._chains, self._expiries = {}, {}
+        self._chains, self._expiries, self._lt_iv = {}, {}, {}
         self.warnings = []
         self.fetched_at = datetime.now(timezone(timedelta(hours=5, minutes=30))).strftime("%Y-%m-%d %H:%M IST")
 
@@ -240,33 +246,60 @@ class UsMarket:
         c = self._chains[key]
         return None if c is None else c[kind]
 
+    def last_trade_iv(self, t: str, expiry: str, day: str) -> tuple[float | None, int, str]:
+        """(IV, trades used, session date) backed out of the latest session's near-the-money last trades
+        (candidates.last_trade_iv, the same function the candidates table prices with). Cached per run."""
+        key = (t, expiry)
+        if key not in self._lt_iv:
+            from .candidates import last_trade_iv
+            calls, puts = self.chain(t, expiry, "CALL"), self.chain(t, expiry, "PUT")
+            S, sday = self.last_close(t, day)
+            if calls is None or puts is None or calls.empty:
+                iv, n = None, 0
+            else:
+                iv, n = last_trade_iv(calls, puts, S, _date.fromisoformat(sday), years_to(expiry, sday))
+            self._lt_iv[key] = (iv, n, sday)
+        return self._lt_iv[key]
+
     def quote(self, p: DPos, day: str) -> tuple[float, str, str, float | None]:
         """(price, pricing text, label, implied vol) for an option at the latest session. The chain is used
-        only when no US session is in progress, so its quotes are those of the latest completed session."""
+        only when no US session is in progress, so its quotes are those of the latest completed session.
+        In order: the bid/ask mid when two-sided; Yahoo's implied vol only when the row has a bid or an ask
+        (before the US open Yahoo shows bid = ask = 0 next to a stray IV of a few %, which priced
+        out-of-the-money options at 0.00); the IV backed out of the latest session's near-the-money last
+        trades (a MODEL price, labelled LT_LABEL); else the position's stored IV (marks and closes; a new
+        order has none, so it stays queued: NotYet)."""
         use_chain = self.online and not self.session_in_progress
         ch = self.chain(p.underlying, p.expiry, p.kind) if use_chain else None
         iv = p.iv
+        src = None
         if ch is not None:
             row = ch[(ch["strike"] - p.strike).abs() < 1e-6]
             if len(row):
                 r = row.iloc[0]
                 bid, ask = float(r.get("bid") or 0), float(r.get("ask") or 0)
                 civ = r.get("impliedVolatility")
-                civ = float(civ) if civ is not None and not pd.isna(civ) and float(civ) >= 0.01 else None
+                civ = (float(civ) if (bid > 0 or ask > 0) and civ is not None and not pd.isna(civ)
+                       and float(civ) >= 0.01 else None)
                 p.contract = str(r.get("contractSymbol", p.contract))
                 if bid > 0 and ask > 0 and ask >= bid:
                     return (round((bid + ask) / 2, 4), f"chain mid: bid {bid:.2f} / ask {ask:.2f} ({p.contract}, "
                             f"quotes of the {self.latest} session, fetched {self.fetched_at})", CHAIN_LABEL, civ or iv)
                 if civ:
                     iv = civ
-                    src = f"chain IV {civ*100:.2f}% (no two-sided quote)"
+                    src = f"chain IV {civ*100:.2f}% (one-sided quote)"
                 else:
-                    src = None
+                    lt, n, sday = self.last_trade_iv(p.underlying, p.expiry, day)
+                    if lt:
+                        S = self.last_close(p.underlying, day)[0]
+                        t = years_to(p.expiry, sday)
+                        px = bs_price(S, p.strike, t, config.US_RISK_FREE_RATE, lt, p.kind)
+                        return (round(px, 4), f"MODEL, not a quote: Black-Scholes on the IV {lt*100:.2f}% backed out of "
+                                f"{n} near-the-money last trade(s) of the {sday} session (no bid/ask: US pre-market), "
+                                f"spot {S:,.2f} ({sday}), r {config.US_RISK_FREE_RATE*100:g}%, T {round(t*365)}/365 "
+                                f"({p.contract})", LT_LABEL, lt)
             else:
-                src = None
                 self.warnings.append(f"{p.underlying} {p.expiry} {p.strike:g} {p.kind}: strike not in today's chain")
-        else:
-            src = None
         if iv is None:
             raise NotYet(f"no quote and no implied vol for {p.underlying} {p.expiry} {p.strike:g} {p.kind}")
         S, sday = self.last_close(p.underlying, day)
@@ -356,12 +389,20 @@ class UsMarket:
         lots = int(o.get("lots") or 0)
         pos = DPos(id="", underlying=und, kind=kind, side=side, lots=lots, lot_size=config.US_CONTRACT_SIZE,
                    entry_price=0.0, entry_date=fill_day, strike=K, expiry=expiry)
-        price, how, label, iv = self.quote(pos, fill_day)
-        if price <= 0:
-            raise Reject(f"price {price} for {und} {expiry} {K:g} {kind}: nothing to trade")
+        price, how, label, iv = self.open_option_price(pos, fill_day)
         pos.entry_price, pos.pricing, pos.iv = price, how, iv
         pos.spot = self.last_close(und)[0]
         return pos, price, us_charges("BUY" if buy else "SELL", lots, price, option=True), label
+
+    def open_option_price(self, p: DPos, day: str) -> tuple[float, str, str, float | None]:
+        """What an option OPEN fills at (quote()), or NotYet (the order stays queued) when there is no price
+        or it is under config.US_MIN_OPTION_PRICE: a leg is never bought or sold at 0.00. Also used by the
+        candidates table (candidates._us_fill_check), so the table mirrors this exactly."""
+        price, how, label, iv = self.quote(p, day)
+        if price < config.US_MIN_OPTION_PRICE:
+            raise NotYet(f"{p.underlying} {p.expiry} {p.strike:g} {p.kind} prices at {price:.4f} under "
+                         f"${config.US_MIN_OPTION_PRICE:.2f} ({how.split(':')[0]}): not traded at that price")
+        return price, how, label, iv
 
     def close_price(self, p: DPos, o, fill_day):
         selling = p.side == "LONG"

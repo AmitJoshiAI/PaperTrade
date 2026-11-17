@@ -42,6 +42,7 @@ session the user asks).
 | Daily-loss circuit breaker | a day's equity change below -3% of starting capital (Rs 15,000; US 3% of its USD starting capital, about $159) blocks new positions and futures rolls until the next Monday; exits always allowed; state in `state/*_portfolio.json` "breaker" | code (`DERIV_DAILY_LOSS_PCT`) |
 | Futures margin | 12% (index) / 20% (stock) of the fill notional, blocked until exit | code (`FUT_MARGIN_PCT`) |
 | Short option margin | 0 when covered by a future or stock; the spread's max loss (strike gap x units) when covered by a long option | code |
+| Event trade (from 17 Nov 2026) | one structure per sleeve per scheduled catalyst, one lot, max loss including entry charges at most 2% of sleeve equity (about Rs 10,000; about $105); queued 3-10 trading days before the event; closed at the first open after it or at 50% of max gain | prompt (ROUTINE_PROMPT.md 5c); the size marker is in the candidates table (`EVENT_TRADE_MAX_LOSS_PCT`) |
 | US short stock margin | 50% of notional (Reg T initial) | code (`US_SHORT_STOCK_MARGIN_PCT`) |
 | Every OPEN order | must carry a written `reason` and `risk_check`, or it is rejected | code |
 | Futures roll | on the expiry day, closed at the close and reopened next month at the next open, through all the checks above; `"roll": false` to stop it | code |

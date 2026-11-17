@@ -74,7 +74,15 @@ The repository is checked out on branch main. Steps:
    field rules as ROUTINE_PROMPT.md step 5, when the setup needs positioning this week; otherwise leave
    it proposed and tell the daily reviewer under step 8. For the F&O and US sleeves do not queue orders:
    describe the defined-risk structure you would use (from the journal's candidates tables) and the
-   condition under which Monday's reviewer should queue it.
+   condition under which Monday's reviewer should queue it. Event-trade rule (user's decision, 17 Nov 2026,
+   ROUTINE_PROMPT.md step 5c): for every scheduled catalyst in your calendar that touches an index or a
+   held or queued name, state in "## For Monday's daily reviewer" (i) the view type: directional up /
+   directional down / priced in, nothing happens / big move, direction unknown, with the dated evidence;
+   (ii) the underlying and expiry; (iii) the first and last date the reviewer may queue it (3 to 10
+   trading days before the event). The reviewer then takes one structure at event-trade size (max loss at
+   most 2% of the sleeve). Credit structures (bull put, bear call, iron condor) are in the candidates
+   tables from 17 Nov 2026: "not buildable" is no longer an answer. Each week, list every event trade
+   opened or closed with its P&L after charges, and keep a running count toward the 10-trade review.
 
 6. Rule change proposals, under this change policy (it binds you and the daily reviewer):
    - A momentum rule or parameter changes only on at least 20 closed trades, or on a structural reason

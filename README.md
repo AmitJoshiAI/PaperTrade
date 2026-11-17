@@ -90,7 +90,8 @@ papertrade/        the package
                    the risk rules and the daily-loss circuit breaker, the order loop, ledgers
   fno.py           India F&O sleeve: futures (carry model) and options (NSE chain mid / Black-Scholes), expiry and roll
   chains.py        real NSE option chains (curl_cffi), cache in state/chains/, lot-size check vs NSE
-  candidates.py    journal "## F&O candidates" / "## US candidates": premiums, structures, PASS/FAIL
+  candidates.py    journal "## F&O candidates" / "## US candidates": premiums; debit (bull call, bear put,
+                   long straddle) and credit (bull put, bear call, iron condor) structures; PASS/FAIL by the engine's checks
   kite.py          Zerodha Kite Connect, READ ONLY (KITE_SETUP.md): chains, official day candles, basket margin
   fillcheck.py     journal "### Fill check (Yahoo vs Zerodha)" and state/fill_check.csv (needs a Kite token)
   us.py            US sleeve: stocks/ETFs and options from real Yahoo chains

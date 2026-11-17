@@ -154,3 +154,16 @@ US_CANDIDATE_TICKERS = ["SPY", "QQQ", "XLF", "KRE", "XLE", "XLU", "XLP", "XLV", 
 US_CANDIDATE_MAX_PRICE = 65.0         # "under about $60": a little headroom so XLE / EEM do not flicker in and out
 US_CANDIDATE_MIN_DAYS = 14
 US_CANDIDATE_MAX_DAYS = 42
+
+# Candidates table (candidates.py), both derivative sleeves. Display and labelling only: the engine's risk
+# rules above are unchanged and are what PASS/FAIL runs.
+EVENT_TRADE_MAX_LOSS_PCT = 0.02       # "event-trade size: fits" when a structure's max loss (incl. entry charges)
+                                      # is at most 2% of sleeve equity (RISK_LIMITS.md "Event trade")
+CREDIT_WING_STEPS = {"INR": 2, "USD": 1}   # credit spreads: long wing this many strike steps beyond the short
+                                      # (1 if not listed/priced). US 1 listed strike: a $1-$2.50 gap, so more fit
+                                      # the 2% event-trade size; India 2 config steps
+US_MIN_OPTION_PRICE = 0.05            # us.py: an option OPEN priced under $0.05 is not filled (stays queued), never at 0.00
+CANDIDATE_WIDE_SPREAD_PCT = 0.10      # "wide quotes": a real-chain leg whose ask - bid is more than 10% of its mid ...
+CANDIDATE_WIDE_SPREAD_MIN = {"INR": 0.10, "USD": 0.05}   # ... and more than this (two NSE ticks / one US nickel)
+CANDIDATE_MIN_LEG_PRICE = {"INR": 0.10, "USD": 0.05}     # a leg priced below this is not used (US: = US_MIN_OPTION_PRICE; NSE: the engine rejects
+                                      # a fill below 0.05, and the India fill is the model -1%; two ticks keeps clear of it)

@@ -15,8 +15,11 @@ Pricing. Real NSE option chains are fetched by the daily run (chains.py, cached 
            ("real NSE chain (mid)"); otherwise Black-Scholes on the chain's IV for that strike or the ATM IV;
            otherwise (no chain today) the model below.
   fills    always the model, at the fill day's open spot, +/-1% slippage (FNO_OPT_SLIPPAGE_PCT): the chain
-           is a close snapshot, not the open. Its vol is the IV of the latest chain BEFORE the fill day (no
-           look-ahead), else the model vol.
+           is a close snapshot, not the open. Its vol comes from the latest chain BEFORE the fill day (no
+           look-ahead): the IV implied by that strike's bid/ask mid when it was two-sided, else NSE's listed IV
+           for the strike, else the expiry's ATM IV, else the model vol (FnoMarket.fill_sigma; the fill's
+           pricing text says which). NSE's listed IV can disagree with its own mid (BANKNIFTY 62,700 CE on
+           16 Nov 2026: 13.67% listed, 14.63% from the mid), which is why the mid comes first.
   model    future = spot x (1 + CARRY_RATE x calendar days to expiry / 365)
            option = Black-Scholes (European) on the spot, r = CARRY_RATE, vol = India VIX / 100 for index
            options, 1.5 x the stock's 30-day realised vol for stock options ("model (BS on VIX / realised
@@ -54,7 +57,7 @@ from __future__ import annotations
 
 import logging
 import re
-from datetime import date as _date
+from datetime import date as _date, timedelta
 
 import pandas as pd
 
@@ -144,6 +147,11 @@ def load_prices(main_prices: pd.DataFrame, tickers: list[str], do_update: bool) 
     return out
 
 
+def fill_premium(model: float, buy: bool) -> float:
+    """An option fill at the model price with FNO_OPT_SLIPPAGE_PCT against us (also the candidates' fill est.)."""
+    return round(model * (1 + config.FNO_OPT_SLIPPAGE_PCT if buy else 1 - config.FNO_OPT_SLIPPAGE_PCT), 2)
+
+
 class FnoMarket:
     """Prices and contract maths for one run. Spot and VIX come from the daily bars."""
 
@@ -194,13 +202,38 @@ class FnoMarket:
             raise NotYet(f"no {ticker} close on or before {day}")
         return float(c.iloc[-1]), c.index[-1].strftime("%Y-%m-%d")
 
+    def fill_sigma(self, sp: dict, day: str, expiry: str, strike: float, kind: str,
+                   prior: dict | None = None) -> tuple[float, str]:
+        """The vol an option fill at the open of `day` uses, from the latest chain snapshot BEFORE `day`
+        (`prior`, default the cache as it was before today's fetch; no look-ahead), at most 7 days old:
+        1. the IV implied by this strike's bid/ask MID when the snapshot has a two-sided quote for it (bisection
+           on Black-Scholes at the snapshot's own underlying and date), so the fill tracks the quoted price;
+        2. else NSE's listed IV for the strike, then the expiry's ATM IV (chains.fill_iv);
+        3. else the model vol (India VIX / realised vol).
+        The returned text says which was used. Also used by the candidates table's "fill est." (one function)."""
+        snap = self.prior.get(sp["name"]) if prior is None else prior
+        lo = (_date.fromisoformat(day) - timedelta(days=7)).isoformat()
+        if snap and lo <= snap.get("date", "") < day:
+            q = chains.quote(snap, expiry, strike, kind)
+            m = chains.mid(q)
+            S0 = snap.get("underlying_value") or 0
+            if m is not None and S0 > 0:
+                from .candidates import _implied_vol
+                iv = _implied_vol(m, S0, strike, years_to(expiry, snap["date"]), config.CARRY_RATE, kind)
+                if iv:
+                    return iv, (f"{chains.source_name(snap)} chain mid-implied IV {iv*100:.2f}% at this strike (bid "
+                                f"{q['bid']:,.2f} / ask {q['ask']:,.2f}, underlying {S0:,.2f}, close of {snap['date']})")
+        got = chains.fill_iv(sp["name"], snap, day, expiry, strike, kind)
+        if got:
+            return got[0], got[1] + (" [listed IV: no two-sided quote at this strike]" if "at this strike" in got[1]
+                                     else " [no two-sided quote or listed IV at this strike]")
+        return self.model_sigma(sp, day, at_open=True)
+
     def sigma(self, sp: dict, day: str, at_open: bool, expiry: str | None = None, strike: float | None = None,
-              kind: str | None = None) -> tuple[float, str]:
+              kind: str | None = None, prior: dict | None = None) -> tuple[float, str]:
         if expiry and strike is not None and kind:
             if at_open:
-                got = chains.fill_iv(sp["name"], self.prior.get(sp["name"]), day, expiry, strike, kind)
-                if got:
-                    return got
+                return self.fill_sigma(sp, day, expiry, strike, kind, prior)
             else:
                 snap = chains.usable(self.today.get(sp["name"]), day)
                 iv = chains.strike_iv(snap, expiry, strike, kind) if snap else None
@@ -254,9 +287,15 @@ class FnoMarket:
         f = spot * (1 + config.CARRY_RATE * max(days, 0) / 365)
         return f, f"carry: spot {spot:,.2f} x (1 + {config.CARRY_RATE*100:g}% x {max(days, 0)}/365)"
 
-    def option_price(self, sp, kind, strike, expiry, day, at_open) -> tuple[float, str, float, float]:
-        S = self.spot_open(sp["yahoo"], day) if at_open else self.spot_close(sp["yahoo"], day)[0]
-        sig, src = self.sigma(sp, day, at_open, expiry, strike, kind)
+    def option_price(self, sp, kind, strike, expiry, day, at_open, spot: float | None = None,
+                     prior: dict | None = None) -> tuple[float, str, float, float]:
+        """Black-Scholes model price. `spot` / `prior` override the spot and the fill snapshot (the candidates
+        table's "fill est.": today's close and today's snapshot, before the next open exists)."""
+        if spot is not None:
+            S = spot
+        else:
+            S = self.spot_open(sp["yahoo"], day) if at_open else self.spot_close(sp["yahoo"], day)[0]
+        sig, src = self.sigma(sp, day, at_open, expiry, strike, kind, prior)
         t = years_to(expiry, day)
         px = bs_price(S, strike, t, config.CARRY_RATE, sig, kind)
         days = round(t * 365)
@@ -290,7 +329,7 @@ class FnoMarket:
         except ValueError as e:
             raise Reject(str(e))
         model, how, sig, _ = self.option_price(sp, kind, K, expiry, fill_day, at_open=True)
-        price = round(model * (1 + config.FNO_OPT_SLIPPAGE_PCT if buy else 1 - config.FNO_OPT_SLIPPAGE_PCT), 2)
+        price = fill_premium(model, buy)
         if price < 0.05:
             raise Reject(f"model premium {model:.4f} is below one tick (0.05)")
         pos = DPos(id="", underlying=sp["name"], kind=kind, side=side, lots=lots, lot_size=sp["lot"],
