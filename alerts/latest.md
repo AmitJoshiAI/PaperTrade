@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-17 11:48 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 3 moving.
+Generated 2026-11-17 13:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 53 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -27,7 +27,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 9
 - Alert id: e70e16e1c5c8
-- Second-order candidates: 
+- Second-order candidates: Winner: Listed Tata group holding-type names (Tata Investment Corp, Tata Chemicals via its Tata Sons exposure) re-rate on the prospect that a Tata Sons listing creates a market price for their stakes; TMPV itself gains nothing direct. Same exchange query also appears as [3b75d7124be5] (Tata Chemicals) and [8a0b72744497] (Tata Investment Corp), so one note covers all three. / Losers: none clear. Any holding-company discount narrowing is a gain for holders, and no listed name is shown to lose from it. If the RBI nudge instead forces a long delay, the rally reverses (risk, not a loser). / Catalyst: surprise - a media report plus the RBI nudge; no dated filing or listing date exists, and the exchanges are only seeking the companies' response (awaited). / Thesis fit: none (no dated event, no named loser; the move was already up to 9% before this filing, so late entry is likely; no draft)
 
 ## 3. [9 HIGH] State Bank of India: Announcement under Regulation 30 (LODR)-Updates on Acquisition
 
@@ -75,7 +75,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 370488e1ab9a
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear; a single-broker rating comment, not a change in demand or pricing. Page not opened from this sandbox. / Losers: TCS and Infosys on the cautious stance; read-across to other large-cap IT services names is possible but not evidenced by this headline. / Catalyst: unknown - broker note with no dated event. / Thesis fit: none
 
 ## 7. [7 HIGH] Sai Parenterals Limited: a press release dated November 17, 2026, titled "Sai Parenterals Wholly Owned Subsidiary SP Analytics enters an agreement to Acquire Majority Stake in Bion Therapeutics Prescription Business . ".
 
@@ -87,7 +87,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 5fb1f7ef1cda
-- Second-order candidates: 
+- Second-order candidates: Winner: Sai Parenterals (SAIPARENTERALS), adding a prescription-drug revenue line; the scanner did not match a symbol, deal size not seen. PDF not opened from this sandbox. / Losers: none clear. / Catalyst: surprise - acquisition announcement; no dated follow-up identified. / Thesis fit: none (illiquid small cap, deal terms unseen; no draft)
 
 ## 8. [7 HIGH] ICICI Bank Limited: Allotment of Securities
 
@@ -101,31 +101,43 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9f15cab446d1
 - Second-order candidates: Winner: none, routine allotment of shares (same type as [e6c7e38c5743] on 2026-11-16, ESOP-sized dilution). / Losers: none clear. / Catalyst: unknown - routine filing; score comes from the symbol match. / Thesis fit: open thesis icici-bank-recovery: neutral, no effect
 
-## 9. [7 HIGH] TMPV shares slide 8% as JLR guidance cut rattles investors
+## 9. [6 HIGH] Tata Motors PV: Nomura cuts target price to Rs 287, retains 'Neutral'; JLR launches key to recovery
 
-- Time: 2026-11-16 12:24 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/tmpv-shares-slide-8-as-jlr-guidance-cut-rattles-investors/article71707035.ece
-- Matched symbols: TMPV (moving today: TMPV)
-- Keywords: guidance
-- Thesis match: none
-- Score: 7
-- Alert id: 57760ebf23d3
-- Second-order candidates: Winner: none clear; same event as [1e8e2c096ee4] (JLR margin and guidance cut), see that note. Price alert 02a3e655b186 (TMPV -8.3%, volume 4.8x average) is the same move. / Losers: JLR-linked suppliers (MOTHERSON) and TMPV itself, as in [1e8e2c096ee4]; no new mechanism. / Catalyst: surprise - guidance cut inside results; no dated follow-up. / Thesis fit: none
-
-## 10. [7 HIGH] Tata Motors PV shares plunge 7%, top Nifty loser as weak JLR margins, guidance cut weigh on outlook
-
-- Time: 2026-11-16 11:54 IST
+- Time: 2026-11-17 13:53 IST
 - Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/tata-motors-pv-shares-plunge-7-top-nifty-loser-as-weak-jlr-margins-guidance-cut-weigh-on-outlook-14080850.html
-- Matched symbols: TMPV (moving today: TMPV)
-- Keywords: guidance
+- Link: https://www.moneycontrol.com/news/business/stocks/tata-motors-pv-nomura-cuts-target-price-to-rs-287-retains-neutral-jlr-launches-key-to-recovery-14082186.html
+- Matched symbols: TMPV
+- Keywords: rating, enters/launches business
 - Thesis match: none
-- Score: 7
-- Alert id: 1e8e2c096ee4
-- Second-order candidates: Winner: Indian PV rivals M&M and Maruti Suzuki (MARUTI) in relative terms, since the cut is JLR margin and guidance driven and does not shift domestic share; weak mechanism, no clean winner. Price alert 02a3e655b186 (TMPV -8.3%, volume 4.1x average) and alerts e5071834b562, 7a3156bc6b8d report the same event. Pages not opened from this sandbox; headlines agree. / Losers: Samvardhana Motherson (MOTHERSON) and other JLR-linked suppliers, since a lowered JLR volume and margin outlook means lower orders and pricing pressure down the chain; TMPV itself. / Catalyst: surprise - guidance cut inside results; follow-up is brokerage target cuts, no dated event. / Thesis fit: none (JLR-supplier loser leg not verified against order data; no draft, and MOTHERSON is not confirmed on the F&O list)
+- Score: 6
+- Alert id: 6ee3c4b3c9f8
+- Second-order candidates: 
 
-## 11. [6 HIGH] M&M, Airtel, TechM, HDFC Bank lead Nifty's 3100 pts rally; more steam left?
+## 10. [6 HIGH] Tata Investment Corporation Limited: The Exchange has sought clarification from Tata Investment Corporation Limited with respect to recent news item captioned Tata Sons IPO soon? Tata Chemicals, Tata Investment Corp shares rally up to 9% after RBI nudge to comply with listing norms. The response from the Company is attached.
+
+- Time: 2026-11-17 12:59 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/TATAINVEST_17112026125845_NSE_Letter.pdf
+- Matched symbols: none
+- Keywords: IPO, listing, RBI
+- Thesis match: none
+- Score: 6
+- Alert id: b562b7d2dda4
+- Second-order candidates: 
+
+## 11. [6 HIGH] Tata Chemicals Limited: The Exchange has sought clarification from Tata Chemicals Limited with respect to recent news item captioned Tata Sons IPO soon? Tata Chemicals, Tata Investment Corp shares rally up to 9% after RBI nudge to comply with listing norms. The response from the Company is attached.
+
+- Time: 2026-11-17 12:43 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/TATACHEMYS_17112026124101_NSE_Letter_signed.pdf
+- Matched symbols: none
+- Keywords: IPO, listing, RBI
+- Thesis match: none
+- Score: 6
+- Alert id: e0393a7d41f8
+- Second-order candidates: 
+
+## 12. [6 HIGH] M&M, Airtel, TechM, HDFC Bank lead Nifty's 3100 pts rally; more steam left?
 
 - Time: 2026-11-17 11:18 IST
 - Source: Business Standard
@@ -135,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: c32edeec1a7d
-- Second-order candidates: 
+- Second-order candidates: False match: market-wrap/round-up article on index leaders, not an event specific to any one of the matched symbols.
 
-## 12. [6 HIGH] Tata Chemicals Limited: The Exchange has sought clarification from Tata Chemicals Limited with respect to recent news item captioned Tata Sons IPO soon? Tata Chemicals, Tata Investment Corp shares rally up to 9% after RBI nudge to comply with listing norms. The response from the Company is awaited.
+## 13. [6 HIGH] Tata Chemicals Limited: The Exchange has sought clarification from Tata Chemicals Limited with respect to recent news item captioned Tata Sons IPO soon? Tata Chemicals, Tata Investment Corp shares rally up to 9% after RBI nudge to comply with listing norms. The response from the Company is awaited.
 
 - Time: 2026-11-17 11:04 IST
 - Source: NSE announcements
@@ -147,9 +159,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 3b75d7124be5
-- Second-order candidates: 
+- Second-order candidates: Winner: Tata Chemicals (holds a Tata Sons-linked stake value story) re-rates if a Tata Sons listing gives a market price; same event as [e70e16e1c5c8], see that note. / Losers: none clear. / Catalyst: surprise - media report plus RBI listing nudge; no dated event, company response awaited. / Thesis fit: none (shares already up to 9% before this filing; late entry, no draft)
 
-## 13. [6 HIGH] Tata Investment Corporation Limited: The Exchange has sought clarification from Tata Investment Corporation Limited with respect to recent news item captioned Tata Sons IPO soon? Tata Chemicals, Tata Investment Corp shares rally up to 9% after RBI nudge to comply with listing norms. The response from the Company is awaited.
+## 14. [6 HIGH] Tata Investment Corporation Limited: The Exchange has sought clarification from Tata Investment Corporation Limited with respect to recent news item captioned Tata Sons IPO soon? Tata Chemicals, Tata Investment Corp shares rally up to 9% after RBI nudge to comply with listing norms. The response from the Company is awaited.
 
 - Time: 2026-11-17 11:04 IST
 - Source: NSE announcements
@@ -159,9 +171,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 8a0b72744497
-- Second-order candidates: 
+- Second-order candidates: Winner: Tata Investment Corp (holding company) could see its discount narrow if Tata Sons lists; same event as [e70e16e1c5c8], see that note. / Losers: none clear. / Catalyst: surprise - media report plus RBI listing nudge; no dated event, company response awaited. / Thesis fit: none (shares already up to 9% before this filing; late entry, no draft)
 
-## 14. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 16, 2026 is Rs. 39.535.
+## 15. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 16, 2026 is Rs. 39.535.
 
 - Time: 2026-11-17 07:00 IST
 - Source: NSE announcements
@@ -171,16 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 75ac8190c524
-- Second-order candidates: False match: a mutual-fund NAV notice whose name contains "Reliance"; it has nothing to do with Reliance Industries (RELIANCE).
-
-## 15. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 16, 2026 is Rs. 13.7001.
-
-- Time: 2026-11-17 07:00 IST
-- Source: NSE announcements
-- Link: 
-- Matched symbols: RELIANCE
-- Keywords: results
-- Thesis match: none
-- Score: 6
-- Alert id: 2289f277f617
 - Second-order candidates: False match: a mutual-fund NAV notice whose name contains "Reliance"; it has nothing to do with Reliance Industries (RELIANCE).
