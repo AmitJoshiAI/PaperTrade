@@ -97,7 +97,7 @@ def _keyring():
         import keyring
         return keyring
     except ImportError:
-        raise Fail(E_SETUP, "the keyring package is not installed: .venv\\Scripts\\pip install -r requirements.txt")
+        raise Fail(E_SETUP, f"the keyring package is not installed for {sys.executable}: run this script with .venv\\Scripts\\python.exe")
 
 
 def kget(name: str) -> str | None:
@@ -124,7 +124,7 @@ def _client(api_key: str, token: str | None = None):
     try:
         from kiteconnect import KiteConnect
     except ImportError:
-        raise Fail(E_SETUP, "the kiteconnect package is not installed: .venv\\Scripts\\pip install -r requirements.txt")
+        raise Fail(E_SETUP, f"the kiteconnect package is not installed for {sys.executable}: run this script with .venv\\Scripts\\python.exe")
     return KiteConnect(api_key=api_key, access_token=token, timeout=20)
 
 
@@ -160,7 +160,7 @@ def cmd_setup() -> int:
             import pyotp
             pyotp.TOTP(totp).now()
         except ImportError:
-            raise Fail(E_SETUP, "the pyotp package is not installed: .venv\\Scripts\\pip install -r requirements.txt")
+            raise Fail(E_SETUP, f"the pyotp package is not installed for {sys.executable}: run this script with .venv\\Scripts\\python.exe")
         except Exception:
             raise Fail(E_SETUP, "that TOTP secret is not valid base32 text; nothing stored for automatic login")
         kset("user_id", uid)
@@ -174,7 +174,7 @@ def cmd_setup() -> int:
                 kdel(n)
         say("Stored: API key and API secret. Default login mode: "
             + ("automatic" if kget("totp_secret") else "manual (browser)") + ".")
-    print("Next: python tools/kite_login.py   (logs in and writes KITE_ACCESS_TOKEN to GitHub)")
+    print("Next: .venv\\Scripts\\python.exe tools\\kite_login.py --manual   (logs in and writes KITE_ACCESS_TOKEN to GitHub)")
     return OK
 
 
@@ -233,7 +233,7 @@ def auto_request_token(kite) -> str:
         import pyotp
         import requests
     except ImportError as e:
-        raise Fail(E_SETUP, f"{e.name} is not installed: .venv\\Scripts\\pip install -r requirements.txt")
+        raise Fail(E_SETUP, f"{e.name} is not installed for {sys.executable}: run this script with .venv\\Scripts\\python.exe")
     uid, pwd, totp = kget("user_id"), kget("password"), kget("totp_secret")
     if not (uid and pwd and totp):
         raise Fail(E_SETUP, "automatic login needs the user ID, password and TOTP secret: run --setup and answer y")
@@ -318,7 +318,7 @@ def write_github_secret(token: str) -> None:
 def cmd_login(mode: str, if_needed: bool) -> int:
     api_key, api_secret = kget("api_key"), kget("api_secret")
     if not (api_key and api_secret):
-        raise Fail(E_SETUP, "no credentials stored: run python tools/kite_login.py --setup")
+        raise Fail(E_SETUP, "no credentials stored: run .venv\\Scripts\\python.exe tools\\kite_login.py --setup")
     if if_needed and kget("access_token_date") == today_ist() and kget("access_token"):
         ok, why = token_works(api_key, kget("access_token"))
         if ok:
@@ -352,7 +352,7 @@ def cmd_login(mode: str, if_needed: bool) -> int:
 def cmd_check() -> int:
     api_key = kget("api_key")
     if not api_key:
-        print("Kite: no credentials stored (run: python tools/kite_login.py --setup)")
+        print("Kite: no credentials stored (run: .venv\\Scripts\\python.exe tools\\kite_login.py --setup)")
         return E_SETUP
     tok, day = kget("access_token"), kget("access_token_date")
     if not tok or day != today_ist():

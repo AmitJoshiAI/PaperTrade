@@ -76,29 +76,74 @@ Pages change; where a screen differs from this, follow the screen and tell Claud
 3. **GitHub CLI on your PC**, needed by the script to write the daily token. In PowerShell:
    `winget install GitHub.cli`, then open a new PowerShell and run `gh auth login` (GitHub.com, HTTPS,
    browser). Check with `gh auth status`.
-4. **Python packages** in the project venv: `kiteconnect`, `keyring`, `pyotp` (the coding session pins them
-   in requirements.txt).
-5. **Store the secrets on the PC and test the login.** From the project folder:
-   `.venv\Scripts\python tools\kite_login.py --setup` asks for the API key and secret (and, only if you
-   choose automatic mode, user ID, password and TOTP secret) and stores them in Windows Credential Manager
-   (service `papertrade-kite`). Nothing you type is shown. Then `.venv\Scripts\python tools\kite_login.py
-   --manual` the first time: it opens the Kite login page in your browser, you log in and click Authorize
-   (Kite asks this once per app), and it catches the redirect on `http://127.0.0.1:5555/callback` (waits 5
-   minutes). It writes `KITE_ACCESS_TOKEN` to GitHub with `gh secret set` (the token goes in on stdin, never
-   on a command line) and keeps a copy in Credential Manager for local runs that day. After that, plain
-   `python tools\kite_login.py` uses automatic mode if a TOTP secret is stored, else manual; `--auto` forces
-   automatic. `python tools\kite_login.py --check` prints whether today's token exists and works. Exit codes
-   are listed at the top of the script; the log is `tools/kite_login.log` (git-ignored, no secrets in it).
+
+**Every command below is typed in PowerShell, in the project folder, with the project's own Python.**
+Plain `python` on this PC is the system Python 3.12, which does not have the Kite packages and fails with
+`ModuleNotFoundError: No module named 'kiteconnect'`. So first, in each new PowerShell window:
+
+```powershell
+cd C:\Users\amitj\Documents\Python\Working\PaperTrade
+```
+
+4. **Python packages.** `kiteconnect`, `keyring` and `pyotp` are already installed in the project venv
+   (checked 18 Nov 2026). To confirm, this prints `ok`:
+
+   ```powershell
+   .venv\Scripts\python.exe -c "import kiteconnect, keyring, pyotp; print('ok')"
+   ```
+
+   If it prints an error instead, install them:
+
+   ```powershell
+   .venv\Scripts\python.exe -m pip install -r requirements.txt
+   ```
+
+5. **Store the secrets on the PC and test the login.**
+
+   a. Store the API key and secret. It asks for each one and shows nothing as you type. Only if you choose
+      automatic mode, it also asks for your user ID, password and TOTP secret. Everything goes into
+      Windows Credential Manager under the service `papertrade-kite`.
+
+   ```powershell
+   .venv\Scripts\python.exe tools\kite_login.py --setup
+   ```
+
+   b. First login, by hand. It opens the Kite login page in your browser. Log in and click Authorize; Kite
+      asks this once per app. The script catches the redirect on `http://127.0.0.1:5555/callback` and
+      waits up to 5 minutes. It then writes `KITE_ACCESS_TOKEN` to GitHub with `gh secret set` (the token
+      goes in on stdin, never on a command line) and keeps a copy in Credential Manager for that day.
+
+   ```powershell
+   .venv\Scripts\python.exe tools\kite_login.py --manual
+   ```
+
+   c. Check that today's token exists and works. Exit code 0 means yes.
+
+   ```powershell
+   .venv\Scripts\python.exe tools\kite_login.py --check
+   ```
+
+   After the first time, the same command with no option uses automatic mode if a TOTP secret is stored,
+   else manual; `--auto` forces automatic. Exit codes are listed at the top of the script. The log is
+   `tools\kite_login.log` (git-ignored, no secrets in it).
    - TOTP secret: Kite web, profile, Password and security, enable external TOTP (if already enabled, you
      will re-enrol and must add the new code to your authenticator app too). Keep the text secret shown.
    - Automatic login is tolerated by Zerodha rather than officially supported. Start with manual mode if
      you prefer; both write the same token.
-6. **Schedule it.** `python tools/kite_login.py --install-task` creates a Windows Task Scheduler entry
-   "PaperTrade Kite login" at 08:30 on weekdays with a retry at 16:30, in the PC's local time (keep the PC on
-   IST). Both runs use `--if-needed`, so the 16:30 run does nothing when the 08:30 token works. It runs as
-   you, only while you are logged on (Credential Manager is per user), and catches up when the PC comes back
-   if a time was missed. In manual mode the 08:30 run opens the browser and waits 5 minutes for you; only
-   automatic mode works unattended. If the PC is off all day, the daily run falls back to Yahoo and NSE.
+
+6. **Schedule it.** This creates a Windows Task Scheduler entry "PaperTrade Kite login" at 08:30 on weekdays
+   with a retry at 16:30, in the PC's local time (keep the PC on IST):
+
+   ```powershell
+   .venv\Scripts\python.exe tools\kite_login.py --install-task
+   ```
+
+   The task itself always runs the project's venv Python, whichever Python you used to create it. Both runs
+   use `--if-needed`, so the 16:30 run does nothing when the 08:30 token works. It runs as you, only while
+   you are logged on (Credential Manager is per user), and catches up when the PC comes back if a time was
+   missed. In manual mode the 08:30 run opens the browser and waits 5 minutes for you; only automatic mode
+   works unattended. If the PC is off all day, the daily run falls back to Yahoo and NSE.
+
 7. **Check.** The next daily journal has, under the F&O sleeve's Observations, `Chains: real Zerodha (n
    underlyings: ...)` or `Kite: no token, NSE scrape used` (or `Kite: <error>, ...`), with a `Chain check
    <SYM>, mid Zerodha vs NSE ...` line per underlying on days both sources worked; option rows priced
