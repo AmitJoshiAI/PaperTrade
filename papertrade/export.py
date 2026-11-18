@@ -199,6 +199,20 @@ def build_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | Non
     except Exception:
         log.exception("Candidates export failed; dashboard written without them.")
         out["candidates"] = None
+    # Yahoo vs Zerodha price check (fillcheck.py): the latest date's rows of state/fill_check.csv
+    try:
+        from . import fillcheck
+        out["fill_check"] = None
+        if fillcheck.FILE.exists():
+            fc = pd.read_csv(fillcheck.FILE, dtype={"date": str})
+            if len(fc):
+                last = str(fc["date"].max())
+                rows = fc[fc["date"].astype(str) == last]
+                out["fill_check"] = dict(date=last, rows=[
+                    {k: (None if pd.isna(v) else v) for k, v in r.items()} for r in rows.to_dict("records")])
+    except Exception:
+        log.exception("Fill check export failed; dashboard written without it.")
+        out["fill_check"] = None
     try:
         out["combined"] = _combined(curve, out)
     except Exception:

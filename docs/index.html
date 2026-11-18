@@ -765,8 +765,12 @@ footer a { color: inherit; }
             h("div", { class: "nums num", text: "Max loss " + money(s.max_loss) + " · max gain " + (s.max_gain == null ? "unlimited" : money(s.max_gain)) +
               " · BE " + (s.breakevens || []).map(function (b) { return f2.format(b); }).join(" / ") +
               (s.kind === "credit"
-                ? " · margin " + money(s.margin) + (isNum(s.order_risk_pct) ? " (largest order " + s.order_risk_pct.toFixed(1) + "% of equity)" : "")
-                : " · long leg " + (isNum(s.long_leg_pct) ? s.long_leg_pct.toFixed(1) : "?") + "% of equity") + (ok ? " · up to " + s.max_lots + " " + unit + (s.max_lots === 1 ? "" : "s") : " · " + s.why) })
+                ? (isNum(s.order_risk_pct) ? " · largest order " + s.order_risk_pct.toFixed(1) + "% of equity" : "")
+                : " · long leg " + (isNum(s.long_leg_pct) ? s.long_leg_pct.toFixed(1) : "?") + "% of equity") + (ok ? " · up to " + s.max_lots + " " + unit + (s.max_lots === 1 ? "" : "s") : " · " + s.why) }),
+            (isNum(s.margin) && s.margin > 0) || isNum(s.zerodha_margin) ? h("div", { class: "nums num",
+              title: "Paper: cash the engine holds back while open (released at close; not a loss). Zerodha: its basket margin calculator, which also counts the premium you pay.",
+              text: "Cash held: paper margin " + money(s.margin || 0) + (isNum(s.net_debit_lot) && s.net_debit_lot > 0 ? " + premium " + money(s.net_debit_lot) : "") +
+                (isNum(s.zerodha_margin) ? " · Zerodha " + money(s.zerodha_margin) : "") }) : null
           ]));
         });
       });
@@ -1041,6 +1045,26 @@ footer a { color: inherit; }
       ]);
     }))] : [h("div", { class: "card empty", text: "No open positions. All cash: " + rs(pf.cash) + "." })];
     app.appendChild(section("positions", "Open positions (" + positions.length + ")", posKids));
+
+    // (d2) Yahoo vs Zerodha price check (fillcheck.py; measurement only, fills still use Yahoo)
+    var fc = d.fill_check;
+    if (fc && fc.rows && fc.rows.length) {
+      var bps = function (v) { return isNum(v) ? (v > 0 ? "+" : "") + v.toFixed(1) : "n/a"; };
+      var px = function (v) { return isNum(v) ? f2.format(v) : "n/a"; };
+      var worst = fc.rows.reduce(function (m, r) { return Math.max(m, Math.abs(r.open_diff_bps || 0), Math.abs(r.close_diff_bps || 0)); }, 0);
+      app.appendChild(section("pricecheck", "Price check: Yahoo vs Zerodha", [
+        h("p", { class: "muted small", style: "margin:0 0 8px", text: dLong(fc.date) + ". Paper fills and marks use Yahoo; this compares them with Zerodha's official day prices. " +
+          "Gap = Yahoo minus Zerodha in bps, hundredths of a percent (10 bps = 0.1%). Largest gap today " + worst.toFixed(1) + " bps." }),
+        h("div", { class: "table-scroll" }, [h("table", null, [
+          h("thead", null, [h("tr", null, [["Symbol"], ["Open gap", "r"], ["Close Yahoo", "r"], ["Zerodha", "r"], ["gap", "r"]].map(function (c) {
+            return h("th", { class: c[1] || null, text: c[0] }); }))]),
+          h("tbody", null, fc.rows.map(function (r) {
+            return h("tr", { title: "Open: Yahoo " + px(r.yahoo_open) + ", Zerodha " + px(r.kite_open) }, [
+              h("td", { text: r.symbol + (r.sleeve && r.sleeve !== "momentum" ? " (" + r.sleeve + ")" : "") }),
+              h("td", { class: "r num", text: bps(r.open_diff_bps) }),
+              h("td", { class: "r num", text: px(r.yahoo_close) }), h("td", { class: "r num", text: px(r.kite_close) }), h("td", { class: "r num", text: bps(r.close_diff_bps) })]);
+          }))])])]));
+    }
 
     // (e) decisions for next open
     var orders = pending && pending.orders ? pending.orders : [];
