@@ -7,9 +7,7 @@
  "open_positions": 0,
  "max_positions": 5,
  "breaker": null,
- "notes": [
-  "Kite: no token; no Zerodha margin column"
- ],
+ "notes": [],
  "underlyings": [
   {
    "underlying": "NIFTY",
@@ -22,9 +20,9 @@
    "spot": 25227.95,
    "spot_date": "2026-11-18",
    "chain": {
-    "timestamp": "18-Nov-2026 15:40:00",
+    "timestamp": "18-Nov-2026 16:56:02",
     "underlying": 25227.95,
-    "source": "NSE option-chain-v3"
+    "source": "zerodha"
    },
    "warnings": [],
    "expiries": [
@@ -33,7 +31,7 @@
      "expiry": "2026-11-23",
      "days": 5,
      "atm": 25250.0,
-     "atm_iv_pct": 13.81,
+     "atm_iv_pct": 13.83,
      "expected_move": 326.95,
      "fill_day": "2026-11-19",
      "rows": [
@@ -42,8 +40,8 @@
        "strike": 25150.0,
        "CE": {
         "price": 202.23,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 12.54,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.47,
         "bid": 202.05,
         "ask": 202.4,
         "listed": true,
@@ -54,8 +52,8 @@
        },
        "PE": {
         "price": 128.38,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.74,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.8,
         "bid": 128.0,
         "ask": 128.75,
         "listed": true,
@@ -64,15 +62,15 @@
         "fill_est_buy": 113.48,
         "fill_est_sell": 111.23
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": -1,
        "strike": 25200.0,
        "CE": {
         "price": 174.95,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 12.6,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.61,
         "bid": 174.45,
         "ask": 175.45,
         "listed": true,
@@ -83,8 +81,8 @@
        },
        "PE": {
         "price": 150.85,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.8,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.86,
         "bid": 150.35,
         "ask": 151.35,
         "listed": true,
@@ -93,15 +91,15 @@
         "fill_est_buy": 135.91,
         "fill_est_sell": 133.21
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 0,
        "strike": 25250.0,
        "CE": {
         "price": 150.75,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 12.76,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.78,
         "bid": 150.3,
         "ask": 151.2,
         "listed": true,
@@ -112,8 +110,8 @@
        },
        "PE": {
         "price": 176.2,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.91,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.98,
         "bid": 175.6,
         "ask": 176.8,
         "listed": true,
@@ -122,15 +120,15 @@
         "fill_est_buy": 161.44,
         "fill_est_sell": 158.25
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 1,
        "strike": 25300.0,
        "CE": {
         "price": 128.35,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 12.93,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.88,
         "bid": 127.9,
         "ask": 128.8,
         "listed": true,
@@ -141,8 +139,8 @@
        },
        "PE": {
         "price": 203.95,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 15.05,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 15.1,
         "bid": 203.7,
         "ask": 204.2,
         "listed": true,
@@ -151,15 +149,15 @@
         "fill_est_buy": 189.65,
         "fill_est_sell": 185.9
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 2,
        "strike": 25350.0,
        "CE": {
         "price": 108.82,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.05,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.0,
         "bid": 108.55,
         "ask": 109.1,
         "listed": true,
@@ -170,8 +168,8 @@
        },
        "PE": {
         "price": 234.18,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 15.12,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 15.26,
         "bid": 232.95,
         "ask": 235.4,
         "listed": true,
@@ -180,7 +178,7 @@
         "fill_est_buy": 220.58,
         "fill_est_sell": 216.21
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       }
      ],
      "structures": [
@@ -194,7 +192,7 @@
          "right": "CE",
          "strike": 25250.0,
          "price": 150.75,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 150.3,
          "ask": 151.2,
          "fill_est": 133.96
@@ -204,7 +202,7 @@
          "right": "CE",
          "strike": 25350.0,
          "price": 108.82,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 108.55,
          "ask": 109.1,
          "fill_est": 90.58
@@ -226,9 +224,9 @@
        "fill_est_lot": 2819.7,
        "long_leg_max": 9798.75,
        "long_leg_pct": 1.96,
-       "margin": 0.0,
-       "cash_change": -2790.64,
-       "cash_need": 9826.76,
+       "margin": 32796.33,
+       "cash_change": -35586.97,
+       "cash_need": 35586.97,
        "slots_needed": 2,
        "order_risk": 9798.75,
        "order_risk_what": "premium (BUY CE 25,250)",
@@ -238,7 +236,8 @@
        "slots": "PASS",
        "max_lots": 5,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 35461.58
       },
       {
        "name": "Bear put spread",
@@ -250,7 +249,7 @@
          "right": "PE",
          "strike": 25250.0,
          "price": 176.2,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 175.6,
          "ask": 176.8,
          "fill_est": 161.44
@@ -260,7 +259,7 @@
          "right": "PE",
          "strike": 25150.0,
          "price": 128.38,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 128.0,
          "ask": 128.75,
          "fill_est": 111.23
@@ -282,9 +281,9 @@
        "fill_est_lot": 3263.65,
        "long_leg_max": 11453.0,
        "long_leg_pct": 2.29,
-       "margin": 0.0,
-       "cash_change": -3176.68,
-       "cash_need": 11481.75,
+       "margin": 32796.33,
+       "cash_change": -35973.01,
+       "cash_need": 35973.01,
        "slots_needed": 2,
        "order_risk": 11453.0,
        "order_risk_what": "premium (BUY PE 25,250)",
@@ -294,7 +293,8 @@
        "slots": "PASS",
        "max_lots": 4,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 35903.33
       },
       {
        "name": "Long straddle",
@@ -306,7 +306,7 @@
          "right": "CE",
          "strike": 25250.0,
          "price": 150.75,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 150.3,
          "ask": 151.2,
          "fill_est": 133.96
@@ -316,7 +316,7 @@
          "right": "PE",
          "strike": 25250.0,
          "price": 176.2,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 175.6,
          "ask": 176.8,
          "fill_est": 161.44
@@ -351,7 +351,8 @@
        "slots": "PASS",
        "max_lots": 4,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 21183.5
       },
       {
        "name": "Bull put spread",
@@ -365,7 +366,7 @@
          "right": "PE",
          "strike": 24800.0,
          "price": 33.2,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 32.8,
          "ask": 33.6,
          "fill_est": 24.07
@@ -375,7 +376,7 @@
          "right": "PE",
          "strike": 24900.0,
          "price": 50.1,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 49.7,
          "ask": 50.5,
          "fill_est": 38.08
@@ -397,19 +398,20 @@
        "fill_est_lot": 910.65,
        "long_leg_max": 2158.0,
        "long_leg_pct": 0.43,
-       "margin": 6500.0,
-       "cash_change": -5455.92,
-       "cash_need": 5455.92,
+       "margin": 39296.33,
+       "cash_change": -38252.25,
+       "cash_need": 38252.25,
        "slots_needed": 2,
        "order_risk": 6500.0,
-       "order_risk_what": "margin (SELL PE 24,900)",
+       "order_risk_what": "margin (spread max loss) (SELL PE 24,900)",
        "order_risk_pct": 1.3,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 7,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 37838.33
       },
       {
        "name": "Bear call spread",
@@ -423,7 +425,7 @@
          "right": "CE",
          "strike": 25700.0,
          "price": 28.8,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 28.6,
          "ask": 29.0,
          "fill_est": 19.56
@@ -433,7 +435,7 @@
          "right": "CE",
          "strike": 25600.0,
          "price": 43.1,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 43.0,
          "ask": 43.2,
          "fill_est": 30.87
@@ -455,19 +457,20 @@
        "fill_est_lot": 735.15,
        "long_leg_max": 1872.0,
        "long_leg_pct": 0.37,
-       "margin": 6500.0,
-       "cash_change": -5623.93,
-       "cash_need": 5623.93,
+       "margin": 39296.33,
+       "cash_change": -38420.26,
+       "cash_need": 38420.26,
        "slots_needed": 2,
        "order_risk": 6500.0,
-       "order_risk_what": "margin (SELL CE 25,600)",
+       "order_risk_what": "margin (spread max loss) (SELL CE 25,600)",
        "order_risk_pct": 1.3,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 7,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 38088.33
       },
       {
        "name": "Iron condor",
@@ -481,7 +484,7 @@
          "right": "PE",
          "strike": 24800.0,
          "price": 33.2,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 32.8,
          "ask": 33.6,
          "fill_est": 24.07
@@ -491,7 +494,7 @@
          "right": "CE",
          "strike": 25700.0,
          "price": 28.8,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 28.6,
          "ask": 29.0,
          "fill_est": 19.56
@@ -501,7 +504,7 @@
          "right": "PE",
          "strike": 24900.0,
          "price": 50.1,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 49.7,
          "ask": 50.5,
          "fill_est": 38.08
@@ -511,7 +514,7 @@
          "right": "CE",
          "strike": 25600.0,
          "price": 43.1,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 43.0,
          "ask": 43.2,
          "fill_est": 30.87
@@ -534,19 +537,20 @@
        "fill_est_lot": 1645.8,
        "long_leg_max": 2158.0,
        "long_leg_pct": 0.43,
-       "margin": 13000.0,
-       "cash_change": -11079.85,
-       "cash_need": 11079.85,
+       "margin": 78592.66,
+       "cash_change": -76672.51,
+       "cash_need": 76672.52,
        "slots_needed": 4,
        "order_risk": 6500.0,
-       "order_risk_what": "margin (SELL PE 24,900)",
+       "order_risk_what": "margin (spread max loss) (SELL PE 24,900)",
        "order_risk_pct": 1.3,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 7,
+       "max_lots": 6,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 69750.67
       }
      ]
     },
@@ -555,7 +559,7 @@
      "expiry": "2026-12-29",
      "days": 41,
      "atm": 25250.0,
-     "atm_iv_pct": 13.53,
+     "atm_iv_pct": 13.51,
      "expected_move": 916.93,
      "fill_day": "2026-11-19",
      "rows": [
@@ -564,8 +568,8 @@
        "strike": 25150.0,
        "CE": {
         "price": 584.92,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.31,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.18,
         "bid": 580.0,
         "ask": 589.85,
         "listed": true,
@@ -576,8 +580,8 @@
        },
        "PE": {
         "price": 350.6,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.92,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.99,
         "bid": 349.6,
         "ask": 351.6,
         "listed": true,
@@ -586,15 +590,15 @@
         "fill_est_buy": 350.32,
         "fill_est_sell": 343.38
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": -1,
        "strike": 25200.0,
        "CE": {
         "price": 555.0,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.28,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.14,
         "bid": 554.0,
         "ask": 556.0,
         "listed": true,
@@ -605,8 +609,8 @@
        },
        "PE": {
         "price": 371.6,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.88,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.98,
         "bid": 371.0,
         "ask": 372.2,
         "listed": true,
@@ -615,15 +619,15 @@
         "fill_est_buy": 371.56,
         "fill_est_sell": 364.2
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 0,
        "strike": 25250.0,
        "CE": {
         "price": 525.0,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.26,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.07,
         "bid": 522.0,
         "ask": 528.0,
         "listed": true,
@@ -634,8 +638,8 @@
        },
        "PE": {
         "price": 391.93,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.86,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.93,
         "bid": 390.3,
         "ask": 393.55,
         "listed": true,
@@ -644,15 +648,15 @@
         "fill_est_buy": 392.15,
         "fill_est_sell": 384.39
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 1,
        "strike": 25300.0,
        "CE": {
         "price": 495.52,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.08,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.99,
         "bid": 493.6,
         "ask": 497.45,
         "listed": true,
@@ -663,8 +667,8 @@
        },
        "PE": {
         "price": 412.68,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.75,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.86,
         "bid": 412.0,
         "ask": 413.35,
         "listed": true,
@@ -673,15 +677,15 @@
         "fill_est_buy": 413.18,
         "fill_est_sell": 405.0
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 2,
        "strike": 25350.0,
        "CE": {
         "price": 469.25,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.07,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.98,
         "bid": 461.3,
         "ask": 477.2,
         "listed": true,
@@ -692,8 +696,8 @@
        },
        "PE": {
         "price": 436.27,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.74,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.86,
         "bid": 434.45,
         "ask": 438.1,
         "listed": true,
@@ -702,7 +706,7 @@
         "fill_est_buy": 437.07,
         "fill_est_sell": 428.41
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       }
      ],
      "structures": [
@@ -716,7 +720,7 @@
          "right": "CE",
          "strike": 25250.0,
          "price": 525.0,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 522.0,
          "ask": 528.0,
          "fill_est": 522.38
@@ -726,7 +730,7 @@
          "right": "CE",
          "strike": 25350.0,
          "price": 469.25,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 461.3,
          "ask": 477.2,
          "fill_est": 456.97
@@ -748,9 +752,9 @@
        "fill_est_lot": 4251.65,
        "long_leg_max": 34125.0,
        "long_leg_pct": 6.83,
-       "margin": 0.0,
-       "cash_change": -3744.89,
-       "cash_need": 34163.96,
+       "margin": 32796.33,
+       "cash_change": -36541.22,
+       "cash_need": 36541.22,
        "slots_needed": 2,
        "order_risk": 34125.0,
        "order_risk_what": "premium (BUY CE 25,250)",
@@ -760,7 +764,8 @@
        "slots": "PASS",
        "max_lots": 1,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 36634.58
       },
       {
        "name": "Bear put spread",
@@ -772,7 +777,7 @@
          "right": "PE",
          "strike": 25250.0,
          "price": 391.93,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 390.3,
          "ask": 393.55,
          "fill_est": 392.15
@@ -782,7 +787,7 @@
          "right": "PE",
          "strike": 25150.0,
          "price": 350.6,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 349.6,
          "ask": 351.6,
          "fill_est": 343.38
@@ -804,9 +809,9 @@
        "fill_est_lot": 3170.05,
        "long_leg_max": 25475.45,
        "long_leg_pct": 5.1,
-       "margin": 0.0,
-       "cash_change": -2788.88,
-       "cash_need": 25510.52,
+       "margin": 32796.33,
+       "cash_change": -35585.21,
+       "cash_need": 35585.21,
        "slots_needed": 2,
        "order_risk": 25475.45,
        "order_risk_what": "premium (BUY PE 25,250)",
@@ -816,7 +821,8 @@
        "slots": "PASS",
        "max_lots": 1,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 35507.33
       },
       {
        "name": "Long straddle",
@@ -828,7 +834,7 @@
          "right": "CE",
          "strike": 25250.0,
          "price": 525.0,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 522.0,
          "ask": 528.0,
          "fill_est": 522.38
@@ -838,7 +844,7 @@
          "right": "PE",
          "strike": 25250.0,
          "price": 391.93,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 390.3,
          "ask": 393.55,
          "fill_est": 392.15
@@ -873,7 +879,8 @@
        "slots": "PASS",
        "max_lots": 1,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 59832.5
       },
       {
        "name": "Bull put spread",
@@ -887,7 +894,7 @@
          "right": "PE",
          "strike": 24250.0,
          "price": 119.62,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 116.55,
          "ask": 122.7,
          "fill_est": 117.6
@@ -897,7 +904,7 @@
          "right": "PE",
          "strike": 24350.0,
          "price": 136.38,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 133.6,
          "ask": 139.15,
          "fill_est": 131.71
@@ -919,9 +926,9 @@
        "fill_est_lot": 917.15,
        "long_leg_max": 7775.3,
        "long_leg_pct": 1.56,
-       "margin": 6500.0,
-       "cash_change": -5478.33,
-       "cash_need": 7802.4,
+       "margin": 39296.33,
+       "cash_change": -38274.66,
+       "cash_need": 38274.66,
        "slots_needed": 2,
        "order_risk": 7775.3,
        "order_risk_what": "premium (BUY PE 24,250)",
@@ -931,7 +938,8 @@
        "slots": "PASS",
        "max_lots": 6,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 37120.83
       },
       {
        "name": "Bear call spread",
@@ -945,7 +953,7 @@
          "right": "CE",
          "strike": 26250.0,
          "price": 136.57,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 130.7,
          "ask": 142.45,
          "fill_est": 133.0
@@ -955,7 +963,7 @@
          "right": "CE",
          "strike": 26150.0,
          "price": 167.2,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 160.9,
          "ask": 173.5,
          "fill_est": 160.14
@@ -977,9 +985,9 @@
        "fill_est_lot": 1764.1,
        "long_leg_max": 8877.05,
        "long_leg_pct": 1.78,
-       "margin": 6500.0,
-       "cash_change": -4581.12,
-       "cash_need": 8904.65,
+       "margin": 39296.33,
+       "cash_change": -37377.45,
+       "cash_need": 37377.45,
        "slots_needed": 2,
        "order_risk": 8877.05,
        "order_risk_what": "premium (BUY CE 26,250)",
@@ -989,7 +997,8 @@
        "slots": "PASS",
        "max_lots": 5,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 37270.83
       },
       {
        "name": "Iron condor",
@@ -1003,7 +1012,7 @@
          "right": "PE",
          "strike": 24250.0,
          "price": 119.62,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 116.55,
          "ask": 122.7,
          "fill_est": 117.6
@@ -1013,7 +1022,7 @@
          "right": "CE",
          "strike": 26250.0,
          "price": 136.57,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 130.7,
          "ask": 142.45,
          "fill_est": 133.0
@@ -1023,7 +1032,7 @@
          "right": "PE",
          "strike": 24350.0,
          "price": 136.38,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 133.6,
          "ask": 139.15,
          "fill_est": 131.71
@@ -1033,7 +1042,7 @@
          "right": "CE",
          "strike": 26150.0,
          "price": 167.2,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 160.9,
          "ask": 173.5,
          "fill_est": 160.14
@@ -1056,9 +1065,9 @@
        "fill_est_lot": 2681.25,
        "long_leg_max": 8877.05,
        "long_leg_pct": 1.78,
-       "margin": 13000.0,
-       "cash_change": -10059.45,
-       "cash_need": 16707.05,
+       "margin": 78592.66,
+       "cash_change": -75652.11,
+       "cash_need": 75652.12,
        "slots_needed": 4,
        "order_risk": 8877.05,
        "order_risk_what": "premium (BUY CE 26,250)",
@@ -1068,7 +1077,8 @@
        "slots": "PASS",
        "max_lots": 5,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 69231.67
       }
      ]
     }
@@ -1085,9 +1095,9 @@
    "spot": 62038.65,
    "spot_date": "2026-11-18",
    "chain": {
-    "timestamp": "18-Nov-2026 15:40:00",
+    "timestamp": "18-Nov-2026 16:55:30",
     "underlying": 62038.65,
-    "source": "NSE option-chain-v3"
+    "source": "zerodha"
    },
    "warnings": [],
    "expiries": [
@@ -1096,7 +1106,7 @@
      "expiry": "2026-11-23",
      "days": 5,
      "atm": 62000.0,
-     "atm_iv_pct": 15.91,
+     "atm_iv_pct": 15.8,
      "expected_move": 907.09,
      "fill_day": "2026-11-19",
      "rows": [
@@ -1105,8 +1115,8 @@
        "strike": 61800.0,
        "CE": {
         "price": 531.67,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 12.66,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.67,
         "bid": 528.35,
         "ask": 535.0,
         "listed": true,
@@ -1117,8 +1127,8 @@
        },
        "PE": {
         "price": 386.25,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 17.87,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 17.99,
         "bid": 383.5,
         "ask": 389.0,
         "listed": true,
@@ -1127,15 +1137,15 @@
         "fill_est_buy": 340.74,
         "fill_est_sell": 333.99
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": -1,
        "strike": 61900.0,
        "CE": {
         "price": 479.82,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 12.92,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 12.97,
         "bid": 477.65,
         "ask": 482.0,
         "listed": true,
@@ -1146,8 +1156,8 @@
        },
        "PE": {
         "price": 432.0,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 18.16,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 18.09,
         "bid": 429.0,
         "ask": 435.0,
         "listed": true,
@@ -1156,15 +1166,15 @@
         "fill_est_buy": 386.11,
         "fill_est_sell": 378.46
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 0,
        "strike": 62000.0,
        "CE": {
         "price": 428.82,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.09,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.13,
         "bid": 427.65,
         "ask": 430.0,
         "listed": true,
@@ -1175,8 +1185,8 @@
        },
        "PE": {
         "price": 478.27,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 18.3,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 18.1,
         "bid": 475.7,
         "ask": 480.85,
         "listed": true,
@@ -1185,15 +1195,15 @@
         "fill_est_buy": 432.64,
         "fill_est_sell": 424.07
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 1,
        "strike": 62100.0,
        "CE": {
         "price": 385.25,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.48,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.4,
         "bid": 383.05,
         "ask": 387.45,
         "listed": true,
@@ -1204,8 +1214,8 @@
        },
        "PE": {
         "price": 538.58,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 18.33,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 18.49,
         "bid": 534.9,
         "ask": 542.25,
         "listed": true,
@@ -1214,15 +1224,15 @@
         "fill_est_buy": 492.53,
         "fill_est_sell": 482.78
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 2,
        "strike": 62200.0,
        "CE": {
         "price": 343.23,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.68,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.59,
         "bid": 341.5,
         "ask": 344.95,
         "listed": true,
@@ -1233,8 +1243,8 @@
        },
        "PE": {
         "price": 594.35,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 18.5,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 18.62,
         "bid": 591.7,
         "ask": 597.0,
         "listed": true,
@@ -1243,7 +1253,7 @@
         "fill_est_buy": 548.99,
         "fill_est_sell": 538.12
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       }
      ],
      "structures": [
@@ -1257,7 +1267,7 @@
          "right": "CE",
          "strike": 62000.0,
          "price": 428.82,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 427.65,
          "ask": 430.0,
          "fill_est": 386.8
@@ -1267,7 +1277,7 @@
          "right": "CE",
          "strike": 62200.0,
          "price": 343.23,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 341.5,
          "ask": 344.95,
          "fill_est": 293.99
@@ -1289,9 +1299,9 @@
        "fill_est_lot": 2784.3,
        "long_leg_max": 12864.6,
        "long_leg_pct": 2.57,
-       "margin": 0.0,
-       "cash_change": -2640.48,
-       "cash_need": 12894.0,
+       "margin": 37223.19,
+       "cash_change": -39863.67,
+       "cash_need": 39863.67,
        "slots_needed": 2,
        "order_risk": 12864.6,
        "order_risk_what": "premium (BUY CE 62,000)",
@@ -1301,7 +1311,8 @@
        "slots": "PASS",
        "max_lots": 3,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 39677.69
       },
       {
        "name": "Bear put spread",
@@ -1313,7 +1324,7 @@
          "right": "PE",
          "strike": 62000.0,
          "price": 478.27,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 475.7,
          "ask": 480.85,
          "fill_est": 432.64
@@ -1323,7 +1334,7 @@
          "right": "PE",
          "strike": 61800.0,
          "price": 386.25,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 383.5,
          "ask": 389.0,
          "fill_est": 333.99
@@ -1345,9 +1356,9 @@
        "fill_est_lot": 2959.5,
        "long_leg_max": 14348.1,
        "long_leg_pct": 2.87,
-       "margin": 0.0,
-       "cash_change": -2836.51,
-       "cash_need": 14378.16,
+       "margin": 37223.19,
+       "cash_change": -40059.7,
+       "cash_need": 40059.7,
        "slots_needed": 2,
        "order_risk": 14348.1,
        "order_risk_what": "premium (BUY PE 62,000)",
@@ -1357,7 +1368,8 @@
        "slots": "PASS",
        "max_lots": 3,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 40262.19
       },
       {
        "name": "Long straddle",
@@ -1369,7 +1381,7 @@
          "right": "CE",
          "strike": 62000.0,
          "price": 428.82,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 427.65,
          "ask": 430.0,
          "fill_est": 386.8
@@ -1379,7 +1391,7 @@
          "right": "PE",
          "strike": 62000.0,
          "price": 478.27,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 475.7,
          "ask": 480.85,
          "fill_est": 432.64
@@ -1414,7 +1426,8 @@
        "slots": "PASS",
        "max_lots": 3,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 27349.5
       },
       {
        "name": "Bull put spread",
@@ -1428,7 +1441,7 @@
          "right": "PE",
          "strike": 60900.0,
          "price": 121.55,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 120.15,
          "ask": 122.95,
          "fill_est": 90.84
@@ -1438,7 +1451,7 @@
          "right": "PE",
          "strike": 61100.0,
          "price": 158.23,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 156.55,
          "ask": 159.9,
          "fill_est": 121.01
@@ -1460,19 +1473,20 @@
        "fill_est_lot": 905.1,
        "long_leg_max": 3646.5,
        "long_leg_pct": 0.73,
-       "margin": 6000.0,
-       "cash_change": -4957.55,
-       "cash_need": 4957.55,
+       "margin": 43223.19,
+       "cash_change": -42180.74,
+       "cash_need": 42180.74,
        "slots_needed": 2,
        "order_risk": 6000.0,
-       "order_risk_what": "margin (SELL PE 61,100)",
+       "order_risk_what": "margin (spread max loss) (SELL PE 61,100)",
        "order_risk_pct": 1.2,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 8,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 41734.69
       },
       {
        "name": "Bear call spread",
@@ -1486,7 +1500,7 @@
          "right": "CE",
          "strike": 63100.0,
          "price": 106.25,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 105.15,
          "ask": 107.35,
          "fill_est": 76.56
@@ -1496,7 +1510,7 @@
          "right": "CE",
          "strike": 62900.0,
          "price": 138.8,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 137.8,
          "ask": 139.8,
          "fill_est": 102.88
@@ -1518,19 +1532,20 @@
        "fill_est_lot": 789.6,
        "long_leg_max": 3187.5,
        "long_leg_pct": 0.64,
-       "margin": 6000.0,
-       "cash_change": -5080.13,
-       "cash_need": 5080.13,
+       "margin": 43223.19,
+       "cash_change": -42303.32,
+       "cash_need": 42303.32,
        "slots_needed": 2,
        "order_risk": 6000.0,
-       "order_risk_what": "margin (SELL CE 62,900)",
+       "order_risk_what": "margin (spread max loss) (SELL CE 62,900)",
        "order_risk_pct": 1.2,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 8,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 41886.69
       },
       {
        "name": "Iron condor",
@@ -1544,7 +1559,7 @@
          "right": "PE",
          "strike": 60900.0,
          "price": 121.55,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 120.15,
          "ask": 122.95,
          "fill_est": 90.84
@@ -1554,7 +1569,7 @@
          "right": "CE",
          "strike": 63100.0,
          "price": 106.25,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 105.15,
          "ask": 107.35,
          "fill_est": 76.56
@@ -1564,7 +1579,7 @@
          "right": "PE",
          "strike": 61100.0,
          "price": 158.23,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 156.55,
          "ask": 159.9,
          "fill_est": 121.01
@@ -1574,7 +1589,7 @@
          "right": "CE",
          "strike": 62900.0,
          "price": 138.8,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 137.8,
          "ask": 139.8,
          "fill_est": 102.88
@@ -1597,19 +1612,20 @@
        "fill_est_lot": 1694.7,
        "long_leg_max": 3646.5,
        "long_leg_pct": 0.73,
-       "margin": 12000.0,
-       "cash_change": -10037.68,
-       "cash_need": 10037.68,
+       "margin": 86446.38,
+       "cash_change": -84484.06,
+       "cash_need": 84484.06,
        "slots_needed": 4,
        "order_risk": 6000.0,
-       "order_risk_what": "margin (SELL PE 61,100)",
+       "order_risk_what": "margin (spread max loss) (SELL PE 61,100)",
        "order_risk_pct": 1.2,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
-       "max_lots": 8,
+       "max_lots": 5,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 77954.38
       }
      ]
     },
@@ -1618,7 +1634,7 @@
      "expiry": "2026-12-29",
      "days": 41,
      "atm": 62000.0,
-     "atm_iv_pct": 15.03,
+     "atm_iv_pct": 14.99,
      "expected_move": 2506.05,
      "fill_day": "2026-11-19",
      "rows": [
@@ -1627,8 +1643,8 @@
        "strike": 61800.0,
        "CE": {
         "price": 1552.3,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.36,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.26,
         "bid": 1539.6,
         "ask": 1565.0,
         "listed": true,
@@ -1639,8 +1655,8 @@
        },
        "PE": {
         "price": 991.92,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 15.6,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 15.85,
         "bid": 981.85,
         "ask": 1002.0,
         "listed": true,
@@ -1649,15 +1665,15 @@
         "fill_est_buy": 990.71,
         "fill_est_sell": 971.09
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": -1,
        "strike": 61900.0,
        "CE": {
         "price": 1490.0,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.36,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.2,
         "bid": 1470.0,
         "ask": 1510.0,
         "listed": true,
@@ -1668,8 +1684,8 @@
        },
        "PE": {
         "price": 1021.02,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 15.67,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 15.68,
         "bid": 1000.05,
         "ask": 1042.0,
         "listed": true,
@@ -1678,15 +1694,15 @@
         "fill_est_buy": 1020.3,
         "fill_est_sell": 1000.1
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 0,
        "strike": 62000.0,
        "CE": {
         "price": 1441.5,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.38,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.29,
         "bid": 1437.0,
         "ask": 1446.0,
         "listed": true,
@@ -1697,8 +1713,8 @@
        },
        "PE": {
         "price": 1064.55,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 15.62,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 15.67,
         "bid": 1061.1,
         "ask": 1068.0,
         "listed": true,
@@ -1707,15 +1723,15 @@
         "fill_est_buy": 1064.32,
         "fill_est_sell": 1043.25
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 1,
        "strike": 62100.0,
        "CE": {
         "price": 1390.65,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.41,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.33,
         "bid": 1388.4,
         "ask": 1392.9,
         "listed": true,
@@ -1726,8 +1742,8 @@
        },
        "PE": {
         "price": 1099.53,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 15.64,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 15.55,
         "bid": 1080.05,
         "ask": 1119.0,
         "listed": true,
@@ -1736,15 +1752,15 @@
         "fill_est_buy": 1099.84,
         "fill_est_sell": 1078.06
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 2,
        "strike": 62200.0,
        "CE": {
         "price": 1332.75,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.41,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.28,
         "bid": 1330.0,
         "ask": 1335.5,
         "listed": true,
@@ -1755,8 +1771,8 @@
        },
        "PE": {
         "price": 1159.78,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 15.54,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 15.71,
         "bid": 1146.7,
         "ask": 1172.85,
         "listed": true,
@@ -1765,7 +1781,7 @@
         "fill_est_buy": 1160.61,
         "fill_est_sell": 1137.63
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       }
      ],
      "structures": [
@@ -1779,7 +1795,7 @@
          "right": "CE",
          "strike": 62000.0,
          "price": 1441.5,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 1437.0,
          "ask": 1446.0,
          "fill_est": 1435.33
@@ -1789,7 +1805,7 @@
          "right": "CE",
          "strike": 62200.0,
          "price": 1332.75,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 1330.0,
          "ask": 1335.5,
          "fill_est": 1299.38
@@ -1811,8 +1827,8 @@
        "fill_est_lot": 4078.5,
        "long_leg_max": 43245.0,
        "long_leg_pct": 8.65,
-       "margin": 0.0,
-       "cash_change": -3405.95,
+       "margin": 37223.19,
+       "cash_change": -40629.14,
        "cash_need": 43288.07,
        "slots_needed": 2,
        "order_risk": 43245.0,
@@ -1823,7 +1839,8 @@
        "slots": "PASS",
        "max_lots": 1,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 40358.19
       },
       {
        "name": "Bear put spread",
@@ -1835,7 +1852,7 @@
          "right": "PE",
          "strike": 62000.0,
          "price": 1064.55,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 1061.1,
          "ask": 1068.0,
          "fill_est": 1064.32
@@ -1845,7 +1862,7 @@
          "right": "PE",
          "strike": 61800.0,
          "price": 991.92,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 981.85,
          "ask": 1002.0,
          "fill_est": 971.09
@@ -1867,9 +1884,9 @@
        "fill_est_lot": 2796.9,
        "long_leg_max": 31936.5,
        "long_leg_pct": 6.39,
-       "margin": 0.0,
-       "cash_change": -2297.64,
-       "cash_need": 31974.49,
+       "margin": 37223.19,
+       "cash_change": -39520.83,
+       "cash_need": 39520.83,
        "slots_needed": 2,
        "order_risk": 31936.5,
        "order_risk_what": "premium (BUY PE 62,000)",
@@ -1879,7 +1896,8 @@
        "slots": "PASS",
        "max_lots": 1,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 39889.19
       },
       {
        "name": "Long straddle",
@@ -1891,7 +1909,7 @@
          "right": "CE",
          "strike": 62000.0,
          "price": 1441.5,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 1437.0,
          "ask": 1446.0,
          "fill_est": 1435.33
@@ -1901,7 +1919,7 @@
          "right": "PE",
          "strike": 62000.0,
          "price": 1064.55,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 1061.1,
          "ask": 1068.0,
          "fill_est": 1064.32
@@ -1936,7 +1954,8 @@
        "slots": "PASS",
        "max_lots": 1,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 75213.0
       },
       {
        "name": "Bull put spread",
@@ -1950,7 +1969,7 @@
          "right": "PE",
          "strike": 59300.0,
          "price": 348.35,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 345.7,
          "ask": 351.0,
          "fill_est": 342.39
@@ -1960,7 +1979,7 @@
          "right": "PE",
          "strike": 59500.0,
          "price": 375.0,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 374.0,
          "ask": 376.0,
          "fill_est": 361.79
@@ -1982,9 +2001,9 @@
        "fill_est_lot": 582.0,
        "long_leg_max": 10450.5,
        "long_leg_pct": 2.09,
-       "margin": 6000.0,
-       "cash_change": -5274.01,
-       "cash_need": 10478.8,
+       "margin": 43223.19,
+       "cash_change": -42497.2,
+       "cash_need": 42497.2,
        "slots_needed": 2,
        "order_risk": 10450.5,
        "order_risk_what": "premium (BUY PE 59,300)",
@@ -1994,7 +2013,8 @@
        "slots": "PASS",
        "max_lots": 4,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 40688.69
       },
       {
        "name": "Bear call spread",
@@ -2008,7 +2028,7 @@
          "right": "CE",
          "strike": 64700.0,
          "price": 351.8,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 348.6,
          "ask": 355.0,
          "fill_est": 342.66
@@ -2018,7 +2038,7 @@
          "right": "CE",
          "strike": 64500.0,
          "price": 400.73,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 398.45,
          "ask": 403.0,
          "fill_est": 383.47
@@ -2040,9 +2060,9 @@
        "fill_est_lot": 1224.3,
        "long_leg_max": 10554.0,
        "long_leg_pct": 2.11,
-       "margin": 6000.0,
-       "cash_change": -4607.14,
-       "cash_need": 10582.36,
+       "margin": 43223.19,
+       "cash_change": -41830.33,
+       "cash_need": 41830.33,
        "slots_needed": 2,
        "order_risk": 10554.0,
        "order_risk_what": "premium (BUY CE 64,700)",
@@ -2052,7 +2072,8 @@
        "slots": "PASS",
        "max_lots": 4,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 40861.69
       },
       {
        "name": "Iron condor",
@@ -2066,7 +2087,7 @@
          "right": "PE",
          "strike": 59300.0,
          "price": 348.35,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 345.7,
          "ask": 351.0,
          "fill_est": 342.39
@@ -2076,7 +2097,7 @@
          "right": "CE",
          "strike": 64700.0,
          "price": 351.8,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 348.6,
          "ask": 355.0,
          "fill_est": 342.66
@@ -2086,7 +2107,7 @@
          "right": "PE",
          "strike": 59500.0,
          "price": 375.0,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 374.0,
          "ask": 376.0,
          "fill_est": 361.79
@@ -2096,7 +2117,7 @@
          "right": "CE",
          "strike": 64500.0,
          "price": 400.73,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 398.45,
          "ask": 403.0,
          "fill_est": 383.47
@@ -2119,9 +2140,9 @@
        "fill_est_lot": 1806.3,
        "long_leg_max": 10554.0,
        "long_leg_pct": 2.11,
-       "margin": 12000.0,
-       "cash_change": -9881.15,
-       "cash_need": 21061.16,
+       "margin": 86446.38,
+       "cash_change": -84327.53,
+       "cash_need": 84327.53,
        "slots_needed": 4,
        "order_risk": 10554.0,
        "order_risk_what": "premium (BUY CE 64,700)",
@@ -2131,7 +2152,8 @@
        "slots": "PASS",
        "max_lots": 4,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 77172.38
       }
      ]
     }
@@ -2143,14 +2165,15 @@
    "lot": 700,
    "step": 10.0,
    "why": [
-    "open thesis icici-bank-recovery"
+    "open thesis icici-bank-recovery",
+    "queued thesis order icici-bank-recovery (SELL 2026-11-18)"
    ],
    "spot": 1601.3,
    "spot_date": "2026-11-18",
    "chain": {
-    "timestamp": "18-Nov-2026 15:40:00",
+    "timestamp": "18-Nov-2026 16:58:45",
     "underlying": 1601.3,
-    "source": "NSE option-chain-v3"
+    "source": "zerodha"
    },
    "warnings": [],
    "expiries": [
@@ -2159,7 +2182,7 @@
      "expiry": "2026-11-23",
      "days": 5,
      "atm": 1600.0,
-     "atm_iv_pct": 15.54,
+     "atm_iv_pct": 15.55,
      "expected_move": 21.77,
      "fill_day": "2026-11-19",
      "rows": [
@@ -2168,8 +2191,8 @@
        "strike": 1580.0,
        "CE": {
         "price": 23.4,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 10.64,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 9.06,
         "bid": 23.05,
         "ask": 23.75,
         "listed": true,
@@ -2180,8 +2203,8 @@
        },
        "PE": {
         "price": 5.0,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 18.03,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 18.06,
         "bid": 4.95,
         "ask": 5.05,
         "listed": true,
@@ -2190,15 +2213,15 @@
         "fill_est_buy": 4.01,
         "fill_est_sell": 3.93
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": -1,
        "strike": 1590.0,
        "CE": {
         "price": 16.07,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 11.02,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 11.01,
         "bid": 15.9,
         "ask": 16.25,
         "listed": true,
@@ -2209,8 +2232,8 @@
        },
        "PE": {
         "price": 7.7,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 17.55,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 17.57,
         "bid": 7.6,
         "ask": 7.8,
         "listed": true,
@@ -2219,15 +2242,15 @@
         "fill_est_buy": 6.59,
         "fill_est_sell": 6.46
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 0,
        "strike": 1600.0,
        "CE": {
         "price": 10.07,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 11.51,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 11.57,
         "bid": 9.95,
         "ask": 10.2,
         "listed": true,
@@ -2238,8 +2261,8 @@
        },
        "PE": {
         "price": 11.7,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 17.19,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 17.42,
         "bid": 11.55,
         "ask": 11.85,
         "listed": true,
@@ -2248,15 +2271,15 @@
         "fill_est_buy": 10.57,
         "fill_est_sell": 10.36
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 1,
        "strike": 1610.0,
        "CE": {
         "price": 6.62,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 13.19,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 13.12,
         "bid": 6.55,
         "ask": 6.7,
         "listed": true,
@@ -2267,8 +2290,8 @@
        },
        "PE": {
         "price": 17.98,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 18.94,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 18.74,
         "bid": 17.7,
         "ask": 18.25,
         "listed": true,
@@ -2277,15 +2300,15 @@
         "fill_est_buy": 16.87,
         "fill_est_sell": 16.54
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       },
       {
        "offset": 2,
        "strike": 1620.0,
        "CE": {
         "price": 4.12,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 14.24,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 14.09,
         "bid": 4.05,
         "ask": 4.2,
         "listed": true,
@@ -2296,8 +2319,8 @@
        },
        "PE": {
         "price": 25.6,
-        "src": "real NSE chain (mid)",
-        "iv_pct": 20.74,
+        "src": "real Zerodha chain (mid)",
+        "iv_pct": 20.57,
         "bid": 25.2,
         "ask": 26.0,
         "listed": true,
@@ -2306,7 +2329,7 @@
         "fill_est_buy": 24.58,
         "fill_est_sell": 24.1
        },
-       "source": "real NSE chain (mid)"
+       "source": "real Zerodha chain (mid)"
       }
      ],
      "structures": [
@@ -2320,7 +2343,7 @@
          "right": "CE",
          "strike": 1600.0,
          "price": 10.07,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 9.95,
          "ask": 10.2,
          "fill_est": 9.1
@@ -2330,7 +2353,7 @@
          "right": "CE",
          "strike": 1620.0,
          "price": 4.12,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 4.05,
          "ask": 4.2,
          "fill_est": 3.14
@@ -2352,9 +2375,9 @@
        "fill_est_lot": 4172.0,
        "long_leg_max": 7049.0,
        "long_leg_pct": 1.41,
-       "margin": 0.0,
-       "cash_change": -4220.9,
-       "cash_need": 7075.77,
+       "margin": 39231.85,
+       "cash_change": -43452.75,
+       "cash_need": 43452.75,
        "slots_needed": 2,
        "order_risk": 7049.0,
        "order_risk_what": "premium (BUY CE 1,600)",
@@ -2364,7 +2387,8 @@
        "slots": "PASS",
        "max_lots": 7,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 78291.85
       },
       {
        "name": "Bear put spread",
@@ -2376,7 +2400,7 @@
          "right": "PE",
          "strike": 1600.0,
          "price": 11.7,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 11.55,
          "ask": 11.85,
          "fill_est": 10.57
@@ -2386,7 +2410,7 @@
          "right": "PE",
          "strike": 1580.0,
          "price": 5.0,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 4.95,
          "ask": 5.05,
          "fill_est": 3.93
@@ -2408,9 +2432,9 @@
        "fill_est_lot": 4648.0,
        "long_leg_max": 8190.0,
        "long_leg_pct": 1.64,
-       "margin": 0.0,
-       "cash_change": -4747.61,
-       "cash_need": 8217.3,
+       "margin": 39231.85,
+       "cash_change": -43979.46,
+       "cash_need": 43979.46,
        "slots_needed": 2,
        "order_risk": 8190.0,
        "order_risk_what": "premium (BUY PE 1,600)",
@@ -2420,7 +2444,8 @@
        "slots": "PASS",
        "max_lots": 6,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 43816.85
       },
       {
        "name": "Long straddle",
@@ -2432,7 +2457,7 @@
          "right": "CE",
          "strike": 1600.0,
          "price": 10.07,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 9.95,
          "ask": 10.2,
          "fill_est": 9.1
@@ -2442,7 +2467,7 @@
          "right": "PE",
          "strike": 1600.0,
          "price": 11.7,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 11.55,
          "ask": 11.85,
          "fill_est": 10.57
@@ -2477,7 +2502,8 @@
        "slots": "PASS",
        "max_lots": 6,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 50085.0
       },
       {
        "name": "Bull put spread",
@@ -2491,7 +2517,7 @@
          "right": "PE",
          "strike": 1560.0,
          "price": 2.25,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 2.2,
          "ask": 2.3,
          "fill_est": 1.56
@@ -2501,7 +2527,7 @@
          "right": "PE",
          "strike": 1580.0,
          "price": 5.0,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 4.95,
          "ask": 5.05,
          "fill_est": 3.93
@@ -2523,19 +2549,20 @@
        "fill_est_lot": 1659.0,
        "long_leg_max": 1575.0,
        "long_leg_pct": 0.32,
-       "margin": 14000.0,
-       "cash_change": -12129.62,
-       "cash_need": 12129.62,
+       "margin": 53231.85,
+       "cash_change": -51361.47,
+       "cash_need": 51361.47,
        "slots_needed": 2,
        "order_risk": 14000.0,
-       "order_risk_what": "margin (SELL PE 1,580)",
+       "order_risk_what": "margin (spread max loss) (SELL PE 1,580)",
        "order_risk_pct": 2.8,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 3,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 49360.85
       },
       {
        "name": "Bear call spread",
@@ -2549,7 +2576,7 @@
          "right": "CE",
          "strike": 1640.0,
          "price": 1.55,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 1.5,
          "ask": 1.6,
          "fill_est": 1.0
@@ -2559,7 +2586,7 @@
          "right": "CE",
          "strike": 1620.0,
          "price": 4.12,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 4.05,
          "ask": 4.2,
          "fill_est": 3.14
@@ -2581,19 +2608,20 @@
        "fill_est_lot": 1498.0,
        "long_leg_max": 1085.0,
        "long_leg_pct": 0.22,
-       "margin": 14000.0,
-       "cash_change": -12254.22,
-       "cash_need": 12254.22,
+       "margin": 53231.85,
+       "cash_change": -51486.07,
+       "cash_need": 51486.07,
        "slots_needed": 2,
        "order_risk": 14000.0,
-       "order_risk_what": "margin (SELL CE 1,620)",
+       "order_risk_what": "margin (spread max loss) (SELL CE 1,620)",
        "order_risk_pct": 2.8,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 3,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 50368.85
       },
       {
        "name": "Iron condor",
@@ -2607,7 +2635,7 @@
          "right": "PE",
          "strike": 1560.0,
          "price": 2.25,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 2.2,
          "ask": 2.3,
          "fill_est": 1.56
@@ -2617,7 +2645,7 @@
          "right": "CE",
          "strike": 1640.0,
          "price": 1.55,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 1.5,
          "ask": 1.6,
          "fill_est": 1.0
@@ -2627,7 +2655,7 @@
          "right": "PE",
          "strike": 1580.0,
          "price": 5.0,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 4.95,
          "ask": 5.05,
          "fill_est": 3.93
@@ -2637,7 +2665,7 @@
          "right": "CE",
          "strike": 1620.0,
          "price": 4.12,
-         "src": "real NSE chain (mid)",
+         "src": "real Zerodha chain (mid)",
          "bid": 4.05,
          "ask": 4.2,
          "fill_est": 3.14
@@ -2660,19 +2688,20 @@
        "fill_est_lot": 3157.0,
        "long_leg_max": 1575.0,
        "long_leg_pct": 0.32,
-       "margin": 28000.0,
-       "cash_change": -24383.84,
-       "cash_need": 24383.84,
+       "margin": 106463.7,
+       "cash_change": -102847.54,
+       "cash_need": 102847.54,
        "slots_needed": 4,
        "order_risk": 14000.0,
-       "order_risk_what": "margin (SELL PE 1,580)",
+       "order_risk_what": "margin (spread max loss) (SELL PE 1,580)",
        "order_risk_pct": 2.8,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "PASS",
        "max_lots": 3,
        "verdict": "PASS",
-       "why": ""
+       "why": "",
+       "zerodha_margin": 87675.7
       }
      ]
     }
@@ -2681,7 +2710,7 @@
  ],
  "india_vix": 15.520000457763672,
  "sources": [
-  "real NSE chain (mid)"
+  "real Zerodha chain (mid)"
  ],
  "calendar": [
   {
@@ -2701,5 +2730,6 @@
     }
    ]
   }
- ]
+ ],
+ "zerodha_margin": true
 }
