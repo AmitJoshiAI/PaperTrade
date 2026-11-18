@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-18 13:59 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
+Generated 2026-11-18 17:39 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -17,7 +17,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 5ffd08949285
 - Second-order candidates: Winner: Same story as [e70e16e1c5c8]; the company response is now filed. Listed Tata holding-type names (Tata Investment Corp, Tata Chemicals) are the beneficiaries if a Tata Sons listing sets a market price for their stakes; TMPV gains nothing direct. Response PDF not opened from this sandbox. / Losers: none clear. / Catalyst: surprise - media report plus RBI nudge; no dated listing event. / Thesis fit: none (no dated event, no named loser, move already up to 9%; no draft)
 
-## 2. [7 HIGH] Seamec Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
+## 2. [7 HIGH] ICICI Bank Limited: Allotment of Securities
+
+- Time: 2026-11-18 14:48 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/ALTERATION_OF_CAPITAL_AND_FUND_RAISING_1606_WebXMLFile_20261118_144829633.xml
+- Matched symbols: ICICIBANK
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 7
+- Alert id: 9f15cab446d1
+- Second-order candidates: Winner: none, routine allotment of shares (same type as [e6c7e38c5743] on 2026-11-16, ESOP-sized dilution). / Losers: none clear. / Catalyst: unknown - routine filing; score comes from the symbol match. / Thesis fit: open thesis icici-bank-recovery: neutral, no effect
+
+## 3. [7 HIGH] Seamec Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
 
 - Time: 2026-11-18 13:04 IST
 - Source: BSE announcements
@@ -27,9 +39,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 6d3a98f93ae7
-- Second-order candidates: 
+- Second-order candidates: Winner: Seamec (offshore support / multi-support vessels) gets a contract; value and counterparty are in the PDF, which this sandbox could not open. The scanner matched ONGC, so ONGC is a probable charterer, not a beneficiary. / Losers: none clear. / Catalyst: surprise - routine order disclosure; size unknown, so no read-through to ONGC or other vessel operators. / Thesis fit: none (crude-ongc-vs-hpcl unaffected)
 
-## 3. [7 HIGH] ICICI Bank Limited: Allotment of 461865 Shares.
+## 4. [7 HIGH] ICICI Bank Limited: Allotment of 461865 Shares.
 
 - Time: 2026-11-18 10:14 IST
 - Source: NSE announcements
@@ -41,7 +53,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c9ae137f4d5f
 - Second-order candidates: Winner: none - routine ESOP allotment, employees receive shares; dilution is negligible against ICICI's share count. / Losers: none clear. / Catalyst: surprise (non-event) - routine Reg 30 filing, no price-relevant information. / Thesis fit: none (open thesis icici-bank-recovery: neither supports nor weakens)
 
-## 4. [7 HIGH] ICICI Bank Ltd: Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS
+## 5. [7 HIGH] ICICI Bank Ltd: Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS
 
 - Time: 2026-11-18 10:09 IST
 - Source: BSE announcements
@@ -51,21 +63,45 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 7
 - Alert id: ffec1d389b46
+- Second-order candidates: Winner: none - BSE copy of the routine ESOP allotment already noted under [c9ae137f4d5f]; employees receive shares, dilution negligible. / Losers: none clear. / Catalyst: surprise (non-event) - duplicate routine Reg 30 filing, no price-relevant information. / Thesis fit: none (open thesis icici-bank-recovery: neither supports nor weakens)
+
+## 6. [6 HIGH] Piramal Pharma Limited: exercise of call option to acquire the balance 26% equity stake in Yapan Bio Private Limited
+
+- Time: 2026-11-18 17:15 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/Priyankamehta_18112026171520_SE_Disclosure_Call_Option_Exercise.pdf
+- Matched symbols: none
+- Keywords: stake sale, M&A
+- Thesis match: none
+- Score: 6
+- Alert id: 04d4d2b64145
 - Second-order candidates: 
 
-## 5. [7 HIGH] Refex Industries Limited: Refex Industries Limited ( RIL ) bags contract for utilization of Pond Ash from a Major Power Producer Company
+## 7. [6 HIGH] Piramal Pharma Ltd: Exercise Of Call Option To Acquire The Balance 26% Equity Stake In Yapan Bio Private Limited.
 
-- Time: 2026-11-17 14:40 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/REFEX2002_17112026143522_RIL_order_Pond_Ash_NTECL17112026.pdf
-- Matched symbols: RELIANCE
-- Keywords: order win
+- Time: 2026-11-18 17:01 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/db518f27-a966-4cb9-bd87-f7d3b0ff9918.pdf
+- Matched symbols: none
+- Keywords: stake sale, M&A
 - Thesis match: none
-- Score: 7
-- Alert id: 80ecf32d602f
-- Second-order candidates: Winner: Refex Industries (REFEX), a new ash-handling revenue stream; the scanner matched RELIANCE, which is a wrong symbol match for this filing. Order value not seen (PDF not opened from this sandbox). / Losers: none clear. / Catalyst: surprise - order win, no dated follow-up. / Thesis fit: none (small cap, value unseen; no draft)
+- Score: 6
+- Alert id: 472cf6e477e6
+- Second-order candidates: 
 
-## 6. [6 HIGH] Chanda Kochhar gets relief as Bombay High Court sets aside ICICI Bank's sanction for CBI prosecution
+## 8. [6 HIGH] Accord Transformer & Switchgear Ltd: Intimation Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('SEBI Listing Regulations') - Investors / Earnings Presentation
+
+- Time: 2026-11-18 16:57 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/811ecc91-6059-49a1-8221-f51e6fa05e1d.pdf
+- Matched symbols: none
+- Keywords: results, listing, SEBI
+- Thesis match: none
+- Score: 6
+- Alert id: d4849cabbff2
+- Second-order candidates: 
+
+## 9. [6 HIGH] Chanda Kochhar gets relief as Bombay High Court sets aside ICICI Bank's sanction for CBI prosecution
 
 - Time: 2026-11-18 13:32 IST
 - Source: Moneycontrol
@@ -75,9 +111,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 6
 - Alert id: f08b187ea51b
-- Second-order candidates: 
+- Second-order candidates: Winner: ICICI Bank's governance overhang is slightly smaller only if the ruling stands; the court faulted the sanction process, not the facts, so the CBI case can be re-sanctioned. Chanda Kochhar and Deepak Kochhar are the direct winners. / Losers: none clear. The ruling is legacy litigation with no earnings effect. / Catalyst: surprise - court order; an appeal or fresh sanction is possible but undated. / Thesis fit: open thesis icici-bank-recovery: neutral (thesis rests on foreign flows and asset quality, not this case)
 
-## 7. [6 HIGH] Eicher Motors Limited: Transcripts - earnings or quarterly calls
+## 10. [6 HIGH] Eicher Motors Limited: Transcripts - earnings or quarterly calls
 
 - Time: 2026-11-18 11:28 IST
 - Source: NSE announcements
@@ -89,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: edb6422889c0
 - Second-order candidates: Winner: none - transcript of an already-reported Q2 call; results were priced in on the day. / Losers: none clear. / Catalyst: none new - duplicate of the transcript note already written under [1bd43ac1e89f]. / Thesis fit: none
 
-## 8. [6 HIGH] IIFL Finance shares jump 6% as Fairfax likely exits entire stake in Rs 3,463-crore block deal
+## 11. [6 HIGH] IIFL Finance shares jump 6% as Fairfax likely exits entire stake in Rs 3,463-crore block deal
 
 - Time: 2026-11-18 09:46 IST
 - Source: Moneycontrol
@@ -101,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fb328fe440a3
 - Second-order candidates: Winner: IIFL Finance (IIFLFIN): a large overhang clears once the block is absorbed by institutions; the 13.25% FIH Mauritius sale ($370 mn) is a supply event, not a change in the business. / Losers: none clear; the seller exits, which is a transfer of shares, not a competitive loss. / Catalyst: surprise - block deal executes on the day; no dated follow-up. / Thesis fit: none (block-deal pop is mostly priced in at the open; no draft)
 
-## 9. [6 HIGH] Block Deals: Ribbit Capital sells Groww stake worth Rs 1,905 crore; Happy Forgings promoters offload 1.7% stake
+## 12. [6 HIGH] Block Deals: Ribbit Capital sells Groww stake worth Rs 1,905 crore; Happy Forgings promoters offload 1.7% stake
 
 - Time: 2026-11-18 09:46 IST
 - Source: Moneycontrol
@@ -113,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c85c8a54e2a9
 - Second-order candidates: Winner: none clear; secondary supply absorbed by buyers, no change in fundamentals. / Losers: none clear. Early-investor exit from a recently listed fintech can weigh on the stock via supply, a risk and not a named loser. / Catalyst: surprise - block trades; no dated event. / Thesis fit: none
 
-## 10. [6 HIGH] Cognizant beats TCS, HCLTech and two global rivals to win $175-million UK data centre deal
+## 13. [6 HIGH] Cognizant beats TCS, HCLTech and two global rivals to win $175-million UK data centre deal
 
 - Time: 2026-11-18 09:27 IST
 - Source: Moneycontrol
@@ -123,9 +159,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: cca8996f2757
-- Second-order candidates: 
+- Second-order candidates: Winner: Cognizant (CTSH, US-listed) wins a single deal against four rivals. / Losers: TCS and HCLTech lost a bid; $175m (about Rs 1,500 crore) is small against their annual revenue, so earnings impact is negligible. The signal is Cognizant's strength in UK infrastructure deals. / Catalyst: surprise - deal announcement; no dated follow-up. / Thesis fit: none
 
-## 11. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 17, 2026 is Rs. 39.5408.
+## 14. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 17, 2026 is Rs. 39.5408.
 
 - Time: 2026-11-18 07:00 IST
 - Source: NSE announcements
@@ -137,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fd1eca40a207
 - Second-order candidates: False match: routine daily NAV publication of a debt interval fund, not a company catalyst (keyword hit only).
 
-## 12. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 17, 2026 is Rs. 13.7021.
+## 15. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 17, 2026 is Rs. 13.7021.
 
 - Time: 2026-11-18 07:00 IST
 - Source: NSE announcements
@@ -148,39 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 1940c8c5cd01
 - Second-order candidates: False match: routine daily NAV publication of a debt interval fund, not a company catalyst (keyword hit only).
-
-## 13. [6 HIGH] BlackRock raises its stake in Axis Bank to 5 pc
-
-- Time: 2026-11-18 00:36 IST
-- Source: Moneycontrol
-- Link: https://news.google.com/rss/articles/CBMipwFBVV95cUxPYUMyU1ZSdHJfdF9jc2lmVkNnRFB2R3l3MUJqTndXQjVwWHdPOWpEWjFybllFMHFaNlpkWG1zUURzeGF1Z3pralNwN0oyYWVFLTFSbXBvZFZoeFBya1c5WGt0QmdXN3VjODQwVWpLUHNReDNmaGVCT2gxUERlcG9YYlp0STkwM0NDUm9nNXVCQWx6RGIxTEFWbVFiS1d1eWUzUlRSY0xxc9IBrAFBVV95cUxOSUlQNzVROV9jeHNDNFh2V0hOU0k5b3ZIaUZfajNnTlhjUnlHaFVuWndNRHd0V3hGWGcwYkNvRE90QmlzNmVRZjRRUVMyalhVVmZMOFBmZm8xSzUzanJySW1xR3ljVko3dzE0UUx3T0hhZ2hwYlM5ZlJHQUM5OU1LakV4MG91NTVpeV9XeXdBWDFnbFZwUDFfdzdkajFGOGtvNkpUU3FycEdoQ2ky?oc=5
-- Matched symbols: AXISBANK
-- Keywords: stake sale
-- Thesis match: none
-- Score: 6
-- Alert id: 008c0122484d
-- Second-order candidates: 
-
-## 14. [6 HIGH] BlackRock raises its stake in Axis Bank to 5%
-
-- Time: 2026-11-17 19:58 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/blackrock-raises-its-stake-in-axis-bank-to-5/articleshow/135929469.cms
-- Matched symbols: AXISBANK
-- Keywords: stake sale
-- Thesis match: none
-- Score: 6
-- Alert id: 22e8847bfdcb
-- Second-order candidates: Winner: Axis Bank (AXISBANK): passive and active inflow signal, small effect on the price. / Losers: none clear. / Catalyst: surprise - disclosure of a threshold crossing; no dated follow-up. / Thesis fit: none (a disclosure threshold, not a business change; no draft)
-
-## 15. [6 HIGH] Prestige Estates Projects Ltd: Announcement under Regulation 30 (LODR)-Acquisition
-
-- Time: 2026-11-17 18:41 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/0874e47f-7e8a-4178-8be8-d8cacc3bad7e.pdf
-- Matched symbols: none
-- Keywords: stake sale, M&A
-- Thesis match: none
-- Score: 6
-- Alert id: db0d906d7196
-- Second-order candidates: Winner: Prestige Estates (PRESTIGE), adding a land or asset parcel; deal size and target not seen (PDF not opened from this sandbox). / Losers: none clear. / Catalyst: surprise - acquisition filing; no dated follow-up identified. / Thesis fit: none (terms unseen; no draft)
