@@ -133,18 +133,43 @@ def _err(e: Exception) -> str:
     return f"{type(e).__name__}: {m}"[:200] if m else type(e).__name__
 
 
+def pasted_twice(value: str, what: str) -> None:
+    """Typing is hidden, so a double paste (Ctrl+V plus right-click) goes unnoticed: refuse 'abcabc'."""
+    n = len(value)
+    if n >= 8 and n % 2 == 0 and value[: n // 2] == value[n // 2:]:
+        raise Fail(E_SETUP, f"the {what} looks pasted twice (the same text repeated); nothing changed. "
+                            "Run --setup again and paste it once")
+
+
+def open_login_page(url: str) -> None:
+    """Prefer Chrome (where the user is logged in to Kite); else the default browser. The redirect goes to
+    127.0.0.1 on this PC, so any browser here works."""
+    for p in (os.path.expandvars(r"%ProgramFiles%\Google\Chrome\Application\chrome.exe"),
+              os.path.expandvars(r"%ProgramFiles(x86)%\Google\Chrome\Application\chrome.exe"),
+              os.path.expandvars(r"%LocalAppData%\Google\Chrome\Application\chrome.exe")):
+        if os.path.isfile(p):
+            try:
+                subprocess.Popen([p, url])
+                return
+            except OSError:
+                break
+    webbrowser.open(url)
+
+
 # ---------- --setup ----------
 def cmd_setup() -> int:
     print("Stores your Kite Connect credentials in Windows Credential Manager (service papertrade-kite).")
     print("What you type is not shown. Press Enter on an optional field to leave it as it is.\n")
     have = bool(kget("api_key"))
     key = getpass.getpass("Kite API key" + (" (Enter = keep the stored one)" if have else "") + ": ").strip()
+    pasted_twice(key, "API key")
     if key:
         kset("api_key", key)
     elif not have:
         raise Fail(E_SETUP, "an API key is required")
     have = bool(kget("api_secret"))
     sec = getpass.getpass("Kite API secret" + (" (Enter = keep the stored one)" if have else "") + ": ").strip()
+    pasted_twice(sec, "API secret")
     if sec:
         kset("api_secret", sec)
     elif not have:
@@ -212,7 +237,9 @@ def manual_request_token(kite) -> str:
     th.start()
     say(f"Opening the Kite login page in your browser; waiting up to {MANUAL_TIMEOUT // 60} minutes for the redirect "
         f"to http://{CALLBACK_HOST}:{CALLBACK_PORT}{CALLBACK_PATH}")
-    webbrowser.open(kite.login_url())
+    url = kite.login_url()
+    print("If the page does not open in the browser where you are logged in to Kite, paste this into it:\n  " + url)
+    open_login_page(url)
     ok = done.wait(MANUAL_TIMEOUT)
     srv.shutdown()
     srv.server_close()
