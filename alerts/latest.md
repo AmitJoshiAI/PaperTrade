@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-18 09:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 0 moving.
+Generated 2026-11-18 11:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 53 symbols checked, 1 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -15,21 +15,33 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 9
 - Alert id: 5ffd08949285
+- Second-order candidates: Winner: Same story as [e70e16e1c5c8]; the company response is now filed. Listed Tata holding-type names (Tata Investment Corp, Tata Chemicals) are the beneficiaries if a Tata Sons listing sets a market price for their stakes; TMPV gains nothing direct. Response PDF not opened from this sandbox. / Losers: none clear. / Catalyst: surprise - media report plus RBI nudge; no dated listing event. / Thesis fit: none (no dated event, no named loser, move already up to 9%; no draft)
+
+## 2. [7 HIGH] ICICI Bank Limited: Allotment of 461865 Shares.
+
+- Time: 2026-11-18 10:14 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/ICICIBANK1_18112026101250_Lettertoexchange.pdf
+- Matched symbols: ICICIBANK
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 7
+- Alert id: c9ae137f4d5f
 - Second-order candidates: 
 
-## 2. [9 HIGH] Tata Motors Limited: The Exchange has sought clarification from Tata Motors Limited with respect to recent news item captioned Tata Sons IPO soon? Tata Chemicals, Tata Investment Corp shares rally up to 9% after RBI nudge to comply with listing norms. The response from the Company is awaited.
+## 3. [7 HIGH] ICICI Bank Ltd: Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS
 
-- Time: 2026-11-17 11:04 IST
-- Source: NSE announcements
-- Link: 
-- Matched symbols: TMPV
-- Keywords: IPO, listing, RBI
-- Thesis match: none
-- Score: 9
-- Alert id: e70e16e1c5c8
-- Second-order candidates: Winner: Listed Tata group holding-type names (Tata Investment Corp, Tata Chemicals via its Tata Sons exposure) re-rate on the prospect that a Tata Sons listing creates a market price for their stakes; TMPV itself gains nothing direct. Same exchange query also appears as [3b75d7124be5] (Tata Chemicals) and [8a0b72744497] (Tata Investment Corp), so one note covers all three. / Losers: none clear. Any holding-company discount narrowing is a gain for holders, and no listed name is shown to lose from it. If the RBI nudge instead forces a long delay, the rally reverses (risk, not a loser). / Catalyst: surprise - a media report plus the RBI nudge; no dated filing or listing date exists, and the exchanges are only seeking the companies' response (awaited). / Thesis fit: none (no dated event, no named loser; the move was already up to 9% before this filing, so late entry is likely; no draft)
+- Time: 2026-11-18 10:09 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/351c34b7-08d4-4c74-8644-152b2054f464.pdf
+- Matched symbols: ICICIBANK
+- Keywords: none
+- Thesis match: icici-bank-recovery (open)
+- Score: 7
+- Alert id: ffec1d389b46
+- Second-order candidates: 
 
-## 3. [7 HIGH] Refex Industries Limited: Refex Industries Limited ( RIL ) bags contract for utilization of Pond Ash from a Major Power Producer Company
+## 4. [7 HIGH] Refex Industries Limited: Refex Industries Limited ( RIL ) bags contract for utilization of Pond Ash from a Major Power Producer Company
 
 - Time: 2026-11-17 14:40 IST
 - Source: NSE announcements
@@ -39,31 +51,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: 80ecf32d602f
-- Second-order candidates: 
+- Second-order candidates: Winner: Refex Industries (REFEX), a new ash-handling revenue stream; the scanner matched RELIANCE, which is a wrong symbol match for this filing. Order value not seen (PDF not opened from this sandbox). / Losers: none clear. / Catalyst: surprise - order win, no dated follow-up. / Thesis fit: none (small cap, value unseen; no draft)
 
-## 4. [7 HIGH] TCS, Infosys stock ratings: CLSA cautious, flags growth, margin concerns; check target prices, downside risk
+## 5. [6 HIGH] Eicher Motors Limited: Transcripts - earnings or quarterly calls
 
-- Time: 2026-11-17 11:48 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/tcs-infosys-stock-ratings-clsa-cautious-flags-growth-margin-concerns-check-target-prices-downside-risk-14082027.html
-- Matched symbols: INFY, TCS
-- Keywords: rating
-- Thesis match: none
-- Score: 7
-- Alert id: 370488e1ab9a
-- Second-order candidates: Winner: none clear; a single-broker rating comment, not a change in demand or pricing. Page not opened from this sandbox. / Losers: TCS and Infosys on the cautious stance; read-across to other large-cap IT services names is possible but not evidenced by this headline. / Catalyst: unknown - broker note with no dated event. / Thesis fit: none
-
-## 5. [7 HIGH] Sai Parenterals Limited: a press release dated November 17, 2026, titled "Sai Parenterals Wholly Owned Subsidiary SP Analytics enters an agreement to Acquire Majority Stake in Bion Therapeutics Prescription Business . ".
-
-- Time: 2026-11-17 10:15 IST
+- Time: 2026-11-18 11:28 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/SAIPARENTERALS_17112026101522_PressRelease.pdf
-- Matched symbols: none
-- Keywords: stake sale, M&A, enters/launches business
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_449_WebXMLFile_20261118_112814380.xml
+- Matched symbols: EICHERMOT
+- Keywords: results
 - Thesis match: none
-- Score: 7
-- Alert id: 5fb1f7ef1cda
-- Second-order candidates: Winner: Sai Parenterals (SAIPARENTERALS), adding a prescription-drug revenue line; the scanner did not match a symbol, deal size not seen. PDF not opened from this sandbox. / Losers: none clear. / Catalyst: surprise - acquisition announcement; no dated follow-up identified. / Thesis fit: none (illiquid small cap, deal terms unseen; no draft)
+- Score: 6
+- Alert id: edb6422889c0
+- Second-order candidates: 
 
 ## 6. [6 HIGH] IIFL Finance shares jump 6% as Fairfax likely exits entire stake in Rs 3,463-crore block deal
 
@@ -75,7 +75,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: fb328fe440a3
-- Second-order candidates: 
+- Second-order candidates: Winner: IIFL Finance (IIFLFIN): a large overhang clears once the block is absorbed by institutions; the 13.25% FIH Mauritius sale ($370 mn) is a supply event, not a change in the business. / Losers: none clear; the seller exits, which is a transfer of shares, not a competitive loss. / Catalyst: surprise - block deal executes on the day; no dated follow-up. / Thesis fit: none (block-deal pop is mostly priced in at the open; no draft)
 
 ## 7. [6 HIGH] Block Deals: Ribbit Capital sells Groww stake worth Rs 1,905 crore; Happy Forgings promoters offload 1.7% stake
 
@@ -87,7 +87,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: c85c8a54e2a9
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear; secondary supply absorbed by buyers, no change in fundamentals. / Losers: none clear. Early-investor exit from a recently listed fintech can weigh on the stock via supply, a risk and not a named loser. / Catalyst: surprise - block trades; no dated event. / Thesis fit: none
 
 ## 8. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 17, 2026 is Rs. 39.5408.
 
@@ -99,7 +99,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: fd1eca40a207
-- Second-order candidates: 
+- Second-order candidates: False match: routine daily NAV publication of a debt interval fund, not a company catalyst (keyword hit only).
 
 ## 9. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 17, 2026 is Rs. 13.7021.
 
@@ -111,7 +111,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 1940c8c5cd01
-- Second-order candidates: 
+- Second-order candidates: False match: routine daily NAV publication of a debt interval fund, not a company catalyst (keyword hit only).
 
 ## 10. [6 HIGH] BlackRock raises its stake in Axis Bank to 5%
 
@@ -123,7 +123,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 22e8847bfdcb
-- Second-order candidates: 
+- Second-order candidates: Winner: Axis Bank (AXISBANK): passive and active inflow signal, small effect on the price. / Losers: none clear. / Catalyst: surprise - disclosure of a threshold crossing; no dated follow-up. / Thesis fit: none (a disclosure threshold, not a business change; no draft)
 
 ## 11. [6 HIGH] Prestige Estates Projects Ltd: Announcement under Regulation 30 (LODR)-Acquisition
 
@@ -135,7 +135,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: db0d906d7196
-- Second-order candidates: 
+- Second-order candidates: Winner: Prestige Estates (PRESTIGE), adding a land or asset parcel; deal size and target not seen (PDF not opened from this sandbox). / Losers: none clear. / Catalyst: surprise - acquisition filing; no dated follow-up identified. / Thesis fit: none (terms unseen; no draft)
 
 ## 12. [6 HIGH] Eicher Motors Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript
 
@@ -147,7 +147,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 1bd43ac1e89f
-- Second-order candidates: 
+- Second-order candidates: False match: a transcript of an earnings call that was already covered in [e02f363fd614]; no new fact.
 
 ## 13. [6 HIGH] Block deal alert: FIH Mauritius to sell up to 13.25% stake in IIFL Finance for $370 mn
 
@@ -171,7 +171,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 8de68615ab39
-- Second-order candidates: 
+- Second-order candidates: False match: transcript filings of results already out; no new event, and the mechanism would have to come from the call content, which was not read.
 
 ## 15. [6 HIGH] Grasim Industries Limited: Transcript of Conference Call on the Unaudited Financial Results (Standalone & Consolidated) for the quarter and half year ended 30th September 2026
 
