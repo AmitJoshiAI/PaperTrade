@@ -34,7 +34,8 @@ log = logging.getLogger(__name__)
 
 SERVICE = "papertrade-kite"          # keyring service name, shared with tools/kite_login.py
 IST = timezone(timedelta(hours=5, minutes=30))
-QUOTE_BATCH = 500
+QUOTE_BATCH = 200                   # Kite allows 500 per call, but 500 BANKNIFTY keys make the GET URL too
+                                    # long: HTTP 400 "Bad request" (seen 18 Nov 2026); 200 works
 _MIN_GAP = {"historical": 1 / 3 + 0.02, "quote": 1.02, "other": 0.11}
 # Underlying quote keys for the indices (Kite's tradingsymbols on NSE); stocks are "NSE:<SYMBOL>".
 INDEX_QUOTE = {"NIFTY": "NSE:NIFTY 50", "BANKNIFTY": "NSE:NIFTY BANK"}
