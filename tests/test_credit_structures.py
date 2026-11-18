@@ -48,8 +48,8 @@ def india_rows(q, atm=25300.0, step=50.0):
             for o in (-2, -1, 0, 1, 2)}
 
 
-def india_ctx(book, lot=65, fill_day="2026-11-17", expiry=EXP):
-    return dict(book=book, underlying="NIFTY", lot=lot, expiry=expiry, letters=("CE", "PE"), fill_day=fill_day,
+def india_ctx(book, lot=65, fill_day="2026-11-17", expiry=EXP, spot=25300.0):
+    return dict(book=book, underlying="NIFTY", lot=lot, expiry=expiry, letters=("CE", "PE"), fill_day=fill_day, spot=spot,
                 charge_fn=lambda side, lots, px: charges(side, lots * lot, px, "OPT").total, eq=book.equity(),
                 ccy="INR", us=False, atm_real=True, strike_step=50.0, min_price=config.CANDIDATE_MIN_LEG_PRICE["INR"])
 
@@ -82,8 +82,32 @@ class Maths(unittest.TestCase):
         self.assertAlmostEqual(s["max_loss"], round((gap - credit) * 65 + ch, 2), places=2)
         self.assertAlmostEqual(s["max_gain"], round(credit * 65 - ch, 2), places=2)
         self.assertEqual(s["breakevens"], [round(short["strike"] - credit, 2)])
-        self.assertAlmostEqual(s["margin"], gap * 65, places=2)      # engine: strike gap x units
+        # engine: strike gap x units, plus India exposure margin 2% x spot x units (Zerodha, 18 Nov 2026)
+        self.assertAlmostEqual(s["margin"], gap * 65 + 0.02 * 25300.0 * 65, places=2)
         self.assertEqual(gap, 2 * 50)                                # wing CREDIT_WING_STEPS beyond
+
+    def test_exposure_margin_is_cash_not_risk(self):
+        """18 Nov 2026 Zerodha readings: NIFTY spot 25,227.95, 1 lot: bull put 24,900/24,800 Rs 37,838 (incl.
+        no premium paid), iron condor Rs 69,751. The engine blocks the gap plus 2% x spot x 65 on each short; the
+        10% rule still measures the gap only."""
+        s = build(fresh_book(), spot=25227.95)
+        bp, ic = s["Bull put spread"], s["Iron condor"]
+        expo = 0.02 * 25227.95 * 65
+        self.assertAlmostEqual(bp["margin"], 100 * 65 + expo, places=2)
+        self.assertAlmostEqual(ic["margin"], 2 * (100 * 65 + expo), places=1)
+        self.assertLess(abs(bp["margin"] - 37838.33) / 37838.33, 0.10)        # within 10% of Zerodha
+        self.assertLess(abs(ic["margin"] - 69750.67) / 69750.67, 0.15)        # condor: both sides' gap (DEFERRED 24d)
+        self.assertAlmostEqual(bp["order_risk"], 100 * 65, places=2)          # rule 3: spread max loss, not exposure
+        self.assertIn("spread max loss", bp["order_risk_what"])
+
+    def test_stock_exposure_and_usd_none(self):
+        from papertrade.derivbook import DPos, exposure_margin
+        p = DPos(id="x", underlying="ICICIBANK", kind="PUT", side="SHORT", lots=1, lot_size=700, entry_price=5.0,
+                 entry_date=DAY, strike=1580.0, expiry=EXP, spot=1601.3)
+        self.assertAlmostEqual(exposure_margin(p, "INR"), 0.035 * 1601.3 * 700, places=4)
+        self.assertEqual(exposure_margin(p, "USD"), 0.0)
+        p.side = "LONG"
+        self.assertEqual(exposure_margin(p, "INR"), 0.0)
 
     def test_short_strike_is_nearest_atm_minus_expected_move(self):
         q = india_quote_fn()
@@ -208,7 +232,7 @@ class EngineMirror(unittest.TestCase):
             kind = "CALL" if o["instrument"] == "CE" else "PUT"
             px = self.prices[(float(o["strike"]), o["instrument"])]
             pos = DPos(id="", underlying="NIFTY", kind=kind, side=side, lots=int(o["lots"]), lot_size=65, entry_price=px,
-                       entry_date=fill_day, strike=float(o["strike"]), expiry=o["expiry"])
+                       entry_date=fill_day, strike=float(o["strike"]), expiry=o["expiry"], spot=25300.0)
             return pos, px, charges("BUY" if side == "LONG" else "SELL", int(o["lots"]) * 65, px, "OPT"), ""
 
     def engine(self, book, legs, lots):

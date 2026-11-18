@@ -1,5 +1,19 @@
 # CHANGELOG - strategy and rule changes (date, old -> new, why, evidence, revert condition)
 
+## 2026-11-18: India short options block exposure margin, as Zerodha does (user's request)
+
+Old: a covered short option blocked only its spread's max loss (strike gap x units); a debit spread blocked
+nothing. New: India (INR) short options also block exposure margin, 2% of spot x units for NIFTY/BANKNIFTY and
+3.5% for stocks (config.OPT_EXPOSURE_MARGIN_PCT). The 10% per-order rule still measures the spread's max loss only,
+so what the user may risk is unchanged; only the cash held back changes. US: unchanged (US brokers hold max loss).
+Why: the first run with a Kite token showed Zerodha's basket margin far above the paper figure (NIFTY 29 Dec iron
+condor Rs 69,232 vs Rs 13,000 paper). Evidence: 31 structures on 18 Nov; Zerodha total = premium paid + exposure
+on each short + spread max loss, fitting 2.00% (index) within Rs 250 and 3.5% (ICICIBANK). After the change, on the
+same data: debit spreads match (paper 32,796 + premium vs Zerodha 35,462), credit spreads about 4% above Zerodha,
+iron condors 10-13% above (the engine charges both sides' max loss, DEFERRED 24d). 61 unit tests pass. Not done:
+the condor overcharge, and SEBI's extra 2% on the expiry day. Revert: set both percentages to 0.
+Also: Kite quotes in batches of 200 (500 BANKNIFTY keys gave HTTP 400), so all three chains now come from Zerodha.
+
 ## 2026-11-17: F&O and US sleeves: credit structures in the candidates, and an event-trade rule (user's decision)
 
 Why: both sleeves were at zero trades after a month (22 trading days). The user asked to raise the 10% per-order

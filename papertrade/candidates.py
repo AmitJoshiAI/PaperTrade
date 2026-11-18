@@ -445,7 +445,8 @@ def simulate(book, legs: list, lots: int, ctx: dict) -> dict:
         side = "LONG" if l["side"] == "BUY" else "SHORT"
         price = float(l["price"])
         pos = DPos(id="", underlying=ctx["underlying"], kind=kind, side=side, lots=lots, lot_size=ctx["lot"],
-                   entry_price=price, entry_date=ctx.get("fill_day") or "", strike=l["strike"], expiry=ctx["expiry"])
+                   entry_price=price, entry_date=ctx.get("fill_day") or "", strike=l["strike"], expiry=ctx["expiry"],
+                   spot=ctx.get("spot"))
         pos.id = position_id(ctx["underlying"], kind, side, ctx["expiry"], l["strike"], ctx["letters"])
         chg = ctx["charge_fn"](l["side"], lots, price)
         name = _leg_name(l, ctx.get("us", False))
@@ -454,7 +455,7 @@ def simulate(book, legs: list, lots: int, ctx: dict) -> dict:
             opp = pos.id[:-1] + ("S" if side == "LONG" else "L")
             if pos.id not in sim.positions and opp in sim.positions:
                 raise Reject(f"{opp} is open on the other side; CLOSE it instead")
-            sim.check_open(pos, price, chg, ctx.get("fill_day") or "9999-12-31")
+            risk, what = sim.check_open(pos, price, chg, ctx.get("fill_day") or "9999-12-31")
         except Reject as e:
             msg = str(e)
             if side == "SHORT" and msg.startswith("naked short option") and any(
@@ -475,8 +476,7 @@ def simulate(book, legs: list, lots: int, ctx: dict) -> dict:
         else:
             pos.mark = price
             sim.positions[pos.id] = pos
-        out.append(dict(leg=name, risk=round(price * units if side == "LONG" else pos.margin, 2),
-                        what="premium" if side == "LONG" else "margin", margin=round(pos.margin, 2),
+        out.append(dict(leg=name, risk=round(risk, 2), what=what, margin=round(pos.margin, 2),
                         cash_change=round(delta, 2), cap=round(cap, 2), new_slot=old is None))
     return dict(ok=not rejects, rejects=rejects, legs=out, margin=round(sum(x["margin"] for x in out), 2),
                 cash_change=round(sum(x["cash_change"] for x in out), 2), cash_need=round(need_peak, 2),
@@ -817,7 +817,7 @@ def _fno_one(market, sp, market_day, eq, why, events=(), book=None) -> dict:
             n = int(config.CHAIN_STRIKE_BAND * S / sp["step"])
             grid = [round(atm + i * sp["step"], 4) for i in range(-n, n + 1) if atm + i * sp["step"] > 0]
         atm_real = all((rows[0].get(x) or {}).get("src") in REAL_LABELS for x in ("CE", "PE"))
-        ctx = dict(book=book, underlying=u, lot=sp["lot"], expiry=e, letters=("CE", "PE"), fill_day=fill_day,
+        ctx = dict(book=book, underlying=u, lot=sp["lot"], expiry=e, letters=("CE", "PE"), fill_day=fill_day, spot=S,
                    charge_fn=lambda side, lots, px, L=sp["lot"]: charges(side, lots * L, px, "OPT").total,
                    eq=eq, ccy="INR", us=False, atm_real=atm_real, strike_step=sp["step"],
                    min_price=config.CANDIDATE_MIN_LEG_PRICE["INR"])

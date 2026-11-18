@@ -93,6 +93,12 @@ STOCK_OPT_VOL_MULT = 1.5
 REALISED_VOL_DAYS = 30
 FNO_VIX_SYMBOL = "^INDIAVIX"
 FUT_MARGIN_PCT = {"index": 0.12, "stock": 0.20}    # of notional at entry, blocked from cash until exit
+# Exposure margin on every SHORT option (India only), of spot x units, blocked on top of the spread's max loss.
+# Calibrated on 18 Nov 2026 against Zerodha's basket margin calculator (Kite, 31 structures, 1 lot each):
+# Zerodha total = premium paid + this exposure on each short leg + the spread's max loss. NIFTY and BANKNIFTY
+# fit 2.00% within Rs 250, ICICIBANK 3.5% (NSE: index 2%, stocks the higher of 3.5% and 1.5 sigma). It is cash
+# held back, not risk: the 10% per-order rule still counts the spread's max loss only.
+OPT_EXPOSURE_MARGIN_PCT = {"index": 0.02, "stock": 0.035}
 FNO_OPT_SLIPPAGE_PCT = 0.01           # 1% adverse on model option premiums (stands in for the bid/ask spread
                                       # a model price does not have); futures use SLIPPAGE_PCT like the other sleeves
 # Monthly expiry = the last <weekday> of the month (0 = Monday ... 3 = Thursday). NSE moved ALL its equity

@@ -30,6 +30,8 @@ Risk rules (config, listed in RISK_LIMITS.md), checked on every OPEN order befor
      blocks new positions (and futures rolls) until the next Monday. Exits are always allowed.
 Margin of a short option: 0 when it is covered by a future or stock (that cover's margin or cash is
 already blocked), else its spread's maximum loss against the long option covering it (strike gap x units).
+India (INR) adds exposure margin on every short option, config.OPT_EXPOSURE_MARGIN_PCT x spot x units, so the
+cash blocked is close to what Zerodha blocks; rule 3 still counts only the spread's maximum loss.
 """
 from __future__ import annotations
 
@@ -250,6 +252,15 @@ def short_option_margin(short: DPos, cover: list) -> float:
     return m
 
 
+def exposure_margin(p: Optional[DPos], currency: str = "INR") -> float:
+    """India only: config.OPT_EXPOSURE_MARGIN_PCT (index or stock) x spot x units of a SHORT option; the
+    strike stands in when the spot is unknown. 0 for anything else, and for USD books."""
+    if p is None or currency != "INR" or p.kind not in OPTION_KINDS or p.side != "SHORT":
+        return 0.0
+    pct = config.OPT_EXPOSURE_MARGIN_PCT["index" if p.underlying in config.FNO_INDEX else "stock"]
+    return pct * float(p.spot or p.strike or 0.0) * p.units
+
+
 # ---------- the book ----------
 class Reject(Exception):
     """The order is removed from the queue and recorded as rejected."""
@@ -456,8 +467,10 @@ class DerivBook:
         return f"ON since {b['tripped_on']} (day P&L {b['day_pnl']:,.2f}); no new positions until {b['until']}"
 
     # ---------- risk ----------
-    def check_open(self, pos: DPos, price: float, chg_total: float, fill_day: str) -> None:
-        """Rules 1-5 for an OPEN. Sets pos.margin for a short option. Raises Reject."""
+    def check_open(self, pos: DPos, price: float, chg_total: float, fill_day: str) -> tuple:
+        """Rules 1-5 for an OPEN. Sets pos.margin for a short option. Raises Reject. Returns (risk, what):
+        the amount rule 3 measured and its name."""
+        span = None
         if self.blocked(fill_day):
             raise Reject(f"circuit breaker: no new positions until {self.breaker['until']}")
         merging = pos.id in self.positions
@@ -476,9 +489,13 @@ class DerivBook:
                              + " covering every unit (a short CALL needs a LONG cover, a short PUT a SHORT future"
                              + ("/stock" if self.CURRENCY == "USD" else "") + " or a LONG put)")
             total = short_option_margin(next(p for p in trial if p.id == pos.id), mine)
-            pos.margin = max(total - (self.positions[pos.id].margin if merging else 0.0), 0.0)
+            old = self.positions[pos.id] if merging else None
+            span = max(total - (old.margin - exposure_margin(old, self.CURRENCY) if merging else 0.0), 0.0)
+            pos.margin = span + exposure_margin(pos, self.CURRENCY)
         units = pos.units
-        if pos.kind == "FUT" or pos.side == "SHORT":
+        if span is not None:
+            risk, what = span, "margin (spread max loss)"
+        elif pos.kind == "FUT" or pos.side == "SHORT":
             risk, what = pos.margin, "margin"
         elif pos.kind == "STK":
             risk, what = price * units, "notional"
@@ -498,6 +515,7 @@ class DerivBook:
             need = pos.margin + chg_total - price * units
         if need > self.cash + 1e-9:
             raise Reject(f"free cash {self.cash:,.2f} is less than the {need:,.2f} this order blocks (margin/premium + charges)")
+        return risk, what
 
     def check_close(self, pid: str, lots: int) -> None:
         """Reject a close that would leave a short option uncovered."""
