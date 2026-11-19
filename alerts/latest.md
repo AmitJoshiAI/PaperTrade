@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-18 18:27 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
-Quotes: 54 symbols checked, 1 moving.
+Generated 2026-11-19 09:58 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 54 symbols checked, 2 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -53,7 +53,67 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: ffec1d389b46
 - Second-order candidates: Winner: none - BSE copy of the routine ESOP allotment already noted under [c9ae137f4d5f]; employees receive shares, dilution negligible. / Losers: none clear. / Catalyst: surprise (non-event) - duplicate routine Reg 30 filing, no price-relevant information. / Thesis fit: none (open thesis icici-bank-recovery: neither supports nor weakens)
 
-## 5. [6 HIGH] Jio Financial Services Limited: Investment in Jio BlackRock Asset Management Private Limited, Joint Venture between the Company and BlackRock
+## 5. [6 HIGH] Block Deals: Fairfax India sells Rs 3,488 crore worth of IIFL Finance shares; Rimco India, Nippon India, SBI MF among 40 buyers
+
+- Time: 2026-11-19 09:58 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/block-deals-fairfax-india-sells-rs-3-488-crore-worth-of-iifl-finance-shares-rimco-india-nippon-india-sbi-mf-among-40-buyers-14083718.html
+- Matched symbols: SBIN
+- Keywords: block deal
+- Thesis match: none
+- Score: 6
+- Alert id: 44c2b55b389d
+- Second-order candidates: 
+
+## 6. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 18, 2026 is Rs. 13.7038.
+
+- Time: 2026-11-19 07:00 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: RELIANCE
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 726c08b3ecae
+- Second-order candidates: 
+
+## 7. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 18, 2026 is Rs. 39.5459.
+
+- Time: 2026-11-19 07:00 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: RELIANCE
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 8b0b29c1759c
+- Second-order candidates: 
+
+## 8. [6 HIGH] Infosys Ltd: Disclosure Under Regulation 30 Of SEBI LODR Regulations
+
+- Time: 2026-11-18 22:08 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/8629dba6-9d8f-487c-8f05-cc95e1588d94.pdf
+- Matched symbols: INFY
+- Keywords: SEBI
+- Thesis match: none
+- Score: 6
+- Alert id: 9513ed360dd2
+- Second-order candidates: 
+
+## 9. [6 HIGH] Kotak MF, BlackRock, others buy stake worth Rs 1,905 cr in Groww
+
+- Time: 2026-11-18 18:52 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/kotak-mf-blackrock-others-buy-stake-worth-rs-1905-cr-in-groww/articleshow/135964570.cms
+- Matched symbols: KOTAKBANK
+- Keywords: stake sale
+- Thesis match: none
+- Score: 6
+- Alert id: 452c46852f26
+- Second-order candidates: 
+
+## 10. [6 HIGH] Jio Financial Services Limited: Investment in Jio BlackRock Asset Management Private Limited, Joint Venture between the Company and BlackRock
 
 - Time: 2026-11-18 18:21 IST
 - Source: NSE announcements
@@ -65,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 340ab91f9c08
 - Second-order candidates: 
 
-## 6. [6 HIGH] Jio Financial Services Ltd: Announcement under Regulation 30 (LODR)-Acquisition
+## 11. [6 HIGH] Jio Financial Services Ltd: Announcement under Regulation 30 (LODR)-Acquisition
 
 - Time: 2026-11-18 18:21 IST
 - Source: BSE announcements
@@ -77,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8850a7cd0eb7
 - Second-order candidates: 
 
-## 7. [6 HIGH] Steamhouse India Limited: AcquisitionPursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), we wish to inform you that Steamhouse India Limited has incorporated a Wholly-Owned Subsidiary company named "STEAMHOUSE (GABHENI) INDIA PRIVATE LIMITED" on November 18th, 2026.
+## 12. [6 HIGH] Steamhouse India Limited: AcquisitionPursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), we wish to inform you that Steamhouse India Limited has incorporated a Wholly-Owned Subsidiary company named "STEAMHOUSE (GABHENI) INDIA PRIVATE LIMITED" on November 18th, 2026.
 
 - Time: 2026-11-18 17:40 IST
 - Source: NSE announcements
@@ -89,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: d3c42a2c24a2
 - Second-order candidates: 
 
-## 8. [6 HIGH] Piramal Pharma Limited: exercise of call option to acquire the balance 26% equity stake in Yapan Bio Private Limited
+## 13. [6 HIGH] Piramal Pharma Limited: exercise of call option to acquire the balance 26% equity stake in Yapan Bio Private Limited
 
 - Time: 2026-11-18 17:15 IST
 - Source: NSE announcements
@@ -101,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 04d4d2b64145
 - Second-order candidates: 
 
-## 9. [6 HIGH] Piramal Pharma Ltd: Exercise Of Call Option To Acquire The Balance 26% Equity Stake In Yapan Bio Private Limited.
+## 14. [6 HIGH] Piramal Pharma Ltd: Exercise Of Call Option To Acquire The Balance 26% Equity Stake In Yapan Bio Private Limited.
 
 - Time: 2026-11-18 17:01 IST
 - Source: BSE announcements
@@ -113,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 472cf6e477e6
 - Second-order candidates: 
 
-## 10. [6 HIGH] Accord Transformer & Switchgear Ltd: Intimation Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('SEBI Listing Regulations') - Investors / Earnings Presentation
+## 15. [6 HIGH] Accord Transformer & Switchgear Ltd: Intimation Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('SEBI Listing Regulations') - Investors / Earnings Presentation
 
 - Time: 2026-11-18 16:57 IST
 - Source: BSE announcements
@@ -124,63 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: d4849cabbff2
 - Second-order candidates: 
-
-## 11. [6 HIGH] Chanda Kochhar gets relief as Bombay High Court sets aside ICICI Bank's sanction for CBI prosecution
-
-- Time: 2026-11-18 13:32 IST
-- Source: Moneycontrol
-- Link: https://news.google.com/rss/articles/CBMi7gFBVV95cUxNZHhWSDQ0T0NPaFBpTl9xQ3d1LWpKcEw4Y2JDUUpFS0s1aGFVRk1ndGVIRmZTVWJJdHN1NjVGRlZIT2NvZG00TW1SeEh2NGRlZ0J1MUVEdEI5bzVCZUVHUGhHUGt4Si1CT2JUeXdfbHNBU0FMb3B5MXpGcUg5U3RhOGY0U21IVU9YaENTMDA1WmM5N25WTUQ4d3EtRVl6RUhXWmprb2NtZUJ3T2VORUMzNzFqVGtHM21PMW81ZUVBX0lJSU9RcEFaYk9pcjNWRnVKQjRYaEdCV0d4RUV2NlNJMWRkZ29yVktINTU4UGdn0gHzAUFVX3lxTE9QNDZ4eF8wZ0V3YVVHS1d0ZUVINU5VWXotYnBtcVpJY09rcE9LTDRJOUcydWduYkQwNWlIQ2ZPMmh6anYyQmlWYnliejZPSUlqUDR4Z2JzUHg2dDRLWTN1aVJyV29QT0NnTVpjTkdPV3VHWmFPLVBtU3dIZ1pqN0Y0UVFHb0tRZDdkLWQ3RjEyaUxRdS1ZMHVQRDYxdmR0SnU4bVUxVWZPaWs1RDFHc25mWmVjMWhvZ3NnWEV3QzVmM3BkekhHMWg5QWsyck52LU5Md0Zxb1VwQ0YwUzZvd1M2TDdMcnFVWmxidDNJeG9lQldyOA?oc=5
-- Matched symbols: ICICIBANK
-- Keywords: none
-- Thesis match: icici-bank-recovery (open)
-- Score: 6
-- Alert id: f08b187ea51b
-- Second-order candidates: Winner: ICICI Bank's governance overhang is slightly smaller only if the ruling stands; the court faulted the sanction process, not the facts, so the CBI case can be re-sanctioned. Chanda Kochhar and Deepak Kochhar are the direct winners. / Losers: none clear. The ruling is legacy litigation with no earnings effect. / Catalyst: surprise - court order; an appeal or fresh sanction is possible but undated. / Thesis fit: open thesis icici-bank-recovery: neutral (thesis rests on foreign flows and asset quality, not this case)
-
-## 12. [6 HIGH] Eicher Motors Limited: Transcripts - earnings or quarterly calls
-
-- Time: 2026-11-18 11:28 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_449_WebXMLFile_20261118_112814380.xml
-- Matched symbols: EICHERMOT
-- Keywords: results
-- Thesis match: none
-- Score: 6
-- Alert id: edb6422889c0
-- Second-order candidates: Winner: none - transcript of an already-reported Q2 call; results were priced in on the day. / Losers: none clear. / Catalyst: none new - duplicate of the transcript note already written under [1bd43ac1e89f]. / Thesis fit: none
-
-## 13. [6 HIGH] IIFL Finance shares jump 6% as Fairfax likely exits entire stake in Rs 3,463-crore block deal
-
-- Time: 2026-11-18 09:46 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/iifl-finance-shares-jump-6-as-fairfax-likely-exits-entire-stake-in-rs-3-463-crore-block-deal-14083052.html
-- Matched symbols: none
-- Keywords: block deal, stake sale
-- Thesis match: none
-- Score: 6
-- Alert id: fb328fe440a3
-- Second-order candidates: Winner: IIFL Finance (IIFLFIN): a large overhang clears once the block is absorbed by institutions; the 13.25% FIH Mauritius sale ($370 mn) is a supply event, not a change in the business. / Losers: none clear; the seller exits, which is a transfer of shares, not a competitive loss. / Catalyst: surprise - block deal executes on the day; no dated follow-up. / Thesis fit: none (block-deal pop is mostly priced in at the open; no draft)
-
-## 14. [6 HIGH] Block Deals: Ribbit Capital sells Groww stake worth Rs 1,905 crore; Happy Forgings promoters offload 1.7% stake
-
-- Time: 2026-11-18 09:46 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/block-deals-ribbit-capital-sells-groww-stake-worth-rs-1-905-crore-happy-forgings-promoters-offload-1-7-stake-14082803.html
-- Matched symbols: none
-- Keywords: block deal, stake sale
-- Thesis match: none
-- Score: 6
-- Alert id: c85c8a54e2a9
-- Second-order candidates: Winner: none clear; secondary supply absorbed by buyers, no change in fundamentals. / Losers: none clear. Early-investor exit from a recently listed fintech can weigh on the stock via supply, a risk and not a named loser. / Catalyst: surprise - block trades; no dated event. / Thesis fit: none
-
-## 15. [6 HIGH] Cognizant beats TCS, HCLTech and two global rivals to win $175-million UK data centre deal
-
-- Time: 2026-11-18 09:27 IST
-- Source: Moneycontrol
-- Link: https://news.google.com/rss/articles/CBMi_AFBVV95cUxPcjdHWnV1cnFiVjA3QjJrZExSc1ZSVGw3U3REb0U5Q2VLRi1lRWVjTWw1SUxqYUVEZUhmTExvZlpXV0VSemVJRU4teTJCcXNYbUFkeUhsYkVQWDNfdW5uZVNDRGpYRGdMaEVzdWg1eHRORGIwdmJZb3ZQMHBqdmV2MEJ6dnBMM1pjNS0wRXU0eXloVGVXYWlxSXZwMHpWZGxBTDRheVVwTGlNbDRzX29QN2hFZHNibUFMRWItVXRrTlBJS3VmY1NNTmFIcmF4amNBb2o1OVBpRURUcWMzendDVXdPRzBxM1VVZzFfSzg0U01IT3FPTWV1emZxelY?oc=5
-- Matched symbols: HCLTECH, TCS
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: cca8996f2757
-- Second-order candidates: Winner: Cognizant (CTSH, US-listed) wins a single deal against four rivals. / Losers: TCS and HCLTech lost a bid; $175m (about Rs 1,500 crore) is small against their annual revenue, so earnings impact is negligible. The signal is Cognizant's strength in UK infrastructure deals. / Catalyst: surprise - deal announcement; no dated follow-up. / Thesis fit: none
