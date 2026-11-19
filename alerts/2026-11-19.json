@@ -494,7 +494,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: a mutual-fund NAV notice that matched RELIANCE and the keyword \"results\" only by name. It has nothing to do with Reliance Industries."
+   ],
    "first_seen": "2026-11-19T09:58+05:30"
   },
   {
@@ -1422,7 +1424,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: unknown - the PDF could not be opened from this sandbox, so the content is not verified; the SEBI keyword alone is not a signal.",
+    "Losers: none clear.",
+    "Catalyst: unknown - content of the disclosure not read.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-19T09:58+05:30"
   },
   {
@@ -1880,7 +1887,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: KOTAKBANK matched only because Kotak MF is one of the buyers. Groww is unlisted; this is a primary or secondary private-market round. Read-through: listed broker/AMC peers (Angel One, 5paisa, CAMS) get a higher private valuation marker, but it is not a dated catalyst."
+   ],
    "first_seen": "2026-11-19T09:58+05:30"
   },
   {
@@ -2438,7 +2447,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: the scanner matched SBIN only because SBI MF is a buyer; the subject is IIFL Finance (not on the watchlist). A large promoter-adjacent exit absorbed by institutions is an overhang clearing for IIFL Finance, but there is no named loser and no dated follow-up."
+   ],
    "first_seen": "2026-11-19T09:58+05:30"
   },
   {
@@ -2571,8 +2582,8 @@
    "kind": "price",
    "time": "2026-11-19T09:58+05:30",
    "source": "Yahoo quotes",
-   "headline": "MARUTI +5.0% vs previous close (close 13257.0, bar 2026-11-19)",
-   "summary": "Headlines this run: Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Stock Performance on the Rise | Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Stock Performance on the Rise | Maruti Suzuki Share Price Highlights: Maruti Suzuki Stock Price History",
+   "headline": "MARUTI +6.8% vs previous close (close 13495.0, bar 2026-11-19)",
+   "summary": "Headlines this run: Maruti Suzuki India Ltd: Disclosures under Reg. 29(2) of SEBI (SAST) Regulations, 2011 | Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Positive Market Movement | Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Positive Market Movement",
    "link": "https://finance.yahoo.com/quote/MARUTI.NS",
    "symbols": [
     "MARUTI"
@@ -2590,8 +2601,8 @@
    "high": false,
    "theses": [],
    "second_order_candidates": [],
-   "change_pct": 4.95,
-   "volume_x": 0.49,
+   "change_pct": 6.83,
+   "volume_x": 1.32,
    "first_seen": "2026-11-19T09:58+05:30"
   },
   {
@@ -2621,7 +2632,989 @@
    "change_pct": -4.13,
    "volume_x": 0.87,
    "first_seen": "2026-11-19T09:58+05:30"
+  },
+  {
+   "id": "a8e1afe1ca67",
+   "kind": "news",
+   "time": "2026-11-19T11:51+05:30",
+   "source": "NSE announcements",
+   "headline": "Sandur Manganese & Iron Ores Limited: a press and media release dated November 19, 2026, titled \"Sandur plans Rs.280 crore beneficiation capex, targets up to 1.7 MTPA of upgraded ore output\".",
+   "summary": "Sandur Manganese & Iron Ores Limited has informed the Exchange regarding a press and media release dated November 19, 2026, titled \"Sandur plans Rs.280 crore beneficiation capex, targets up to 1.7 MTPA of upgraded ore output\". |SUBJECT: Pre",
+   "link": "https://nsearchives.nseindia.com/corporate/SANDUR_19112026114303_Ltr2SEsPressRelease.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "capex"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "53790424994f",
+   "kind": "news",
+   "time": "2026-11-19T11:51+05:30",
+   "source": "NSE announcements",
+   "headline": "Onyx Biotec Limited: VC Corporate Advisors Private Limited has Submitted to the Exchange a copy of post offer advertisement to the public shareholders of the Onyx Biotec Limited (Target Company).",
+   "summary": "VC Corporate Advisors Private Limited has Submitted to the Exchange a copy of post offer advertisement to the public shareholders of the Onyx Biotec Limited (Target Company). |SUBJECT: Public Announcement-Open Offer",
+   "link": "https://nsearchives.nseindia.com/corporate/team_sandeshc_19112026112510_ONYX.zip",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "7561211da424",
+   "kind": "news",
+   "time": "2026-11-19T11:33+05:30",
+   "source": "NSE announcements",
+   "headline": "Sandhar Technologies Limited: Transcripts - earnings or quarterly calls",
+   "summary": "SANDHAR TECHNOLOGIES LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_16017_WebXMLFile_20261119_113355887.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "4ab292d45b62",
+   "kind": "news",
+   "time": "2026-11-19T11:33+05:30",
+   "source": "NSE announcements",
+   "headline": "Apsis Aerocom Limited: Transcripts - earnings or quarterly calls",
+   "summary": "APSIS AEROCOM LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_27083_WebXMLFile_20261119_113302276.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "8d83262e8ccb",
+   "kind": "news",
+   "time": "2026-11-19T11:22+05:30",
+   "source": "NSE announcements",
+   "headline": "POWERGRID Infrastructure Investment Trust: 'Intimation - Earnings Conference Call for Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust on Wednesday, November 25, 2026'.",
+   "summary": "POWERGRID Infrastructure Investment Trust has informed the Exchange regarding 'Intimation - Earnings Conference Call for Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust on Wednesday, November 25, 2026'. |SUBJECT:",
+   "link": "https://nsearchives.nseindia.com/corporate/PGINVIT_19112026112158_INTIMATIONEC.pdf",
+   "symbols": [
+    "POWERGRID"
+   ],
+   "symbol_keys": [
+    "POWERGRID"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "7c23fc9f631b",
+   "kind": "news",
+   "time": "2026-11-19T10:58+05:30",
+   "source": "NSE announcements",
+   "headline": "Orient Cables (India) Limited: Transcripts - earnings or quarterly calls",
+   "summary": "Orient Cables (India) Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_26510_WebXMLFile_20261119_105837088.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "e9f22ccff7c9",
+   "kind": "news",
+   "time": "2026-11-19T10:55+05:30",
+   "source": "NSE announcements",
+   "headline": "SKF India Limited: Pursuant to Regulation 30 and 33 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI LODR ) including circulars issued thereunder and other applicable provisions, if any, as amended from time to time, and in continuation to our intimation dated October 27, 2026, we wish to inform you that the Board of Directors of the Company at its meeting held today i.e. November 03, 2026 commenced at 16:00 Hrs (IST) and concluded at 18:15 Hrs (IST) has, inter-alia, considered and approved the following along with other matters:a) On the recommendation of the Audit Committee, the Unaudited Financial Results (Standalone and Consolidated) for the second quarter and half year ended September 30, 2026, together with Limited Review Report of the Statutory Auditors, that were placed before the Board of Directors and was taken on record.b) On the recommendation of the Audit Committee, Standalone and Consolidated Statement of Assets and Liabilities as on September 30, 2026.c) On the recommendation of the Audit Committee, Standalone and Consolidated Statement of Cash Flow for the half year ended September 30, 2026.d) Approved proposed capacity expansion by addition of new channels at various locations.e) Brand Launch: On 3 November,2026, the SKF Vertevo brand is officially launched across theorganization and to our customers and stakeholders worldwide. The brand is the face of ourcompany, it shows our personality what we stand for, what we are passionate about and what our customers can expect from us.The SKF Vertevo brand is inspired by the world of racing, where the company has contributed to automotive innovation for decades. The identity is designed to keep a connection to the long SKF heritage and expertise, while signalling its ambition to help accelerate the future of mobility.Please note that only the brand is being launched, while the company name continues to remain the same. Any further developments will be communicated to stakeholders as and when applicable.Note: The company had already submitted the financial results for the period ended 30-Sep-2026 on 03rd November 2026. The company is re-submitting the same intimation in machine-readable format as instructed by NSE.",
+   "summary": "Pursuant to Regulation 30 and 33 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI LODR ) including circulars issued thereunder and other applicable provisions, if any, as amended from time to time, and in c",
+   "link": "https://nsearchives.nseindia.com/corporate/SKFINDIA25_19112026105437_NSE.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "SEBI",
+    "capex",
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 7,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "60e3c64f09ea",
+   "kind": "news",
+   "time": "2026-11-19T10:55+05:30",
+   "source": "NSE announcements",
+   "headline": "Vijaya Diagnostic Centre Limited: Transcripts - earnings or quarterly calls",
+   "summary": "Vijaya Diagnostic Centre Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_19532_WebXMLFile_20261119_105501456.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "130e9f230a93",
+   "kind": "news",
+   "time": "2026-11-19T10:08+05:30",
+   "source": "NSE announcements",
+   "headline": "Setco Automotive Limited: Board Meeting to be held on 24-Nov-2026 to consider and approve the Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business.",
+   "summary": "SETCO AUTOMOTIVE LIMITED has informed the Exchange about Board Meeting to be held on 24-Nov-2026 to consider and approve the Yearly Unaudited Financial results of the Company for the period ended September 2026 and Other business. |SUBJECT:",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_13961_WebXMLFile_20261119_100834661.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "59aa01599aab",
+   "kind": "news",
+   "time": "2026-11-19T10:06+05:30",
+   "source": "NSE announcements",
+   "headline": "Aurionpro Solutions Limited: a press release dated November 19, 2026, titled \"Aurionpro secures additional order of nearly ₹100 crore from global hyperscaler, expands AI-ready data centre engagement in Southern India.\".",
+   "summary": "Aurionpro Solutions Limited has informed the Exchange regarding a press release dated November 19, 2026, titled \"Aurionpro secures additional order of nearly ₹100 crore from global hyperscaler, expands AI-ready data centre engagement in Sou",
+   "link": "https://nsearchives.nseindia.com/corporate/AURIONPRO_19112026100548_ASL_Press_Release_DC_Win_19112026_sd.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "2c27f3b3dc08",
+   "kind": "news",
+   "time": "2026-11-19T10:05+05:30",
+   "source": "NSE announcements",
+   "headline": "Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF: the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on November 18, 2026 is Rs. 47.93.",
+   "summary": "MOIPO : Motilal Oswal Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on November 18, 2026 is Rs. 47.93. |SUBJECT: Declaration",
+   "link": "",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "8a48e2c6ebd8",
+   "kind": "news",
+   "time": "2026-11-19T11:38+05:30",
+   "source": "BSE announcements",
+   "headline": "Sandhar Technologies Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Transcript of Investor Conference call for Q2 2027",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d534182a-d8fc-4c1c-933e-d9c19e1123c1.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "c946fa00787c",
+   "kind": "news",
+   "time": "2026-11-19T11:26+05:30",
+   "source": "BSE announcements",
+   "headline": "Apex Frozen Foods Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. submission of Transcript of Q2&H1FY27 Earnings conference call held on 16th November, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9b64bdf2-86c2-4533-bf14-d3dabba09473.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "3df137cc849f",
+   "kind": "news",
+   "time": "2026-11-19T11:18+05:30",
+   "source": "BSE announcements",
+   "headline": "Shree Rajeshwaranand Paper Mills Ltd: Revised Unaudited Results For The Quarter Ended 31.12.2025 As Per BSE Query",
+   "summary": "Result. Revised submission of unaudited results for the quarter ended 31.12.2025 as BSE query for filing of signed results",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5a5e7d99-2111-4f4c-a175-b4ff5999a590.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "19ef596df959",
+   "kind": "news",
+   "time": "2026-11-19T11:17+05:30",
+   "source": "BSE announcements",
+   "headline": "POWERGRID Infrastructure Investment Trust: Reg 23(5)(i): Disclosure of material issue",
+   "summary": "Others. POWERGRID Infrastructure Investment Trust has informed the Exchange regarding Disclosure of material issue",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/aacab1e8-7b5d-4f12-9bda-8ece414b87e1.pdf",
+   "symbols": [
+    "POWERGRID"
+   ],
+   "symbol_keys": [
+    "POWERGRID"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "d038adc17922",
+   "kind": "news",
+   "time": "2026-11-19T11:13+05:30",
+   "source": "BSE announcements",
+   "headline": "Ahluwalia Contracts (India) Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Outcome",
+   "summary": "Company Update. Transcript of Investor Meeting 16-11-2026 at 4 p.m. for Q2 Financial Results 30-09-2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8df1f213-f06c-4e95-8262-6a5827c7bb18.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "1e803bcb63cf",
+   "kind": "news",
+   "time": "2026-11-19T11:12+05:30",
+   "source": "BSE announcements",
+   "headline": "Regency Fincorp Ltd: ANNOUNCEMENT UNDER REGULATION 30 OF SEBI (LISTING OBLIGATIONS AND DISCLOSURE REQUIREMENTS) REGULATIONS, 2015",
+   "summary": "Company Update. Receipt of Listing Approval from BSE Limited",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cac41627-7924-4305-bd64-e4a78e5f7b4f.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "283e7bd336ea",
+   "kind": "news",
+   "time": "2026-11-19T11:09+05:30",
+   "source": "BSE announcements",
+   "headline": "RMC Switchgears Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)",
+   "summary": "Others. We wish to inform you that the company has received the order worth of Rs. 18,50,99,684",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f8b49bc3-e185-44aa-ba4f-616e95936a92.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "aef2cb0085b8",
+   "kind": "news",
+   "time": "2026-11-19T11:09+05:30",
+   "source": "BSE announcements",
+   "headline": "Msafe Equipments Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "summary": "Company Update. Press Release titled \"Msafe Equipments Launches Aluminium Formwork Solutions at ACETECH Mumbai, marking a strategic milestone in its growth journey.\"",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/cd637373-e343-4b05-af3c-38e2f97baf58.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "34bd98f0ce6d",
+   "kind": "news",
+   "time": "2026-11-19T11:07+05:30",
+   "source": "BSE announcements",
+   "headline": "JD Cables Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "summary": "Company Update. BSE Intimation for Investor Presentation for September 30, 2026 earnings call",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d04c1628-2357-4e1e-9499-843ba576e2bc.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "b28caef886b8",
+   "kind": "news",
+   "time": "2026-11-19T10:53+05:30",
+   "source": "BSE announcements",
+   "headline": "Reliable Ventures India Ltd: Disclosures under Reg. 10(5) in respect of acquisition under Reg. 10(1)(a) of SEBI (SAST) Regulations, 2011",
+   "summary": "Insider Trading / SAST. The Exchange has received the disclosure under Regulation 10(5) in respect of acquisition under Regulation 10(1)(a) of SEBI (Substantial Acquisition of Shares & Takeovers) Regulations, ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1EA04467_4280_4024_8C7A_9503ED98CCD4_105258.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "35f0fdab9bd8",
+   "kind": "news",
+   "time": "2026-11-19T10:46+05:30",
+   "source": "BSE announcements",
+   "headline": "Maruti Suzuki India Ltd: Disclosures under Reg. 29(2) of SEBI (SAST) Regulations, 2011",
+   "summary": "Insider Trading / SAST. The Exchange has received the disclosure under Regulation 29(2) of SEBI (Substantial Acquisition of Shares & Takeovers) Regulations, 2011 for ICICI Prudential Mutual Fund",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5032B2DC_353F_4F45_BDF4_0641BBF3C146_104632.pdf",
+   "symbols": [
+    "MARUTI"
+   ],
+   "symbol_keys": [
+    "MARUTI"
+   ],
+   "keywords": [],
+   "moving": [
+    "MARUTI"
+   ],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "01a84e963ba7",
+   "kind": "news",
+   "time": "2026-11-19T10:02+05:30",
+   "source": "BSE announcements",
+   "headline": "Aurionpro Solutions Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "summary": "Company Update. Aurionpro secures additional order of nearly Rs. 100 Crore from global hyperscaler, expands AI- ready data centre engagement in Southern India",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/57a1b6f3-6b32-4020-9865-8e976e0b1033.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "43c9ba5febe1",
+   "kind": "news",
+   "time": "2026-11-19T08:20+05:30",
+   "source": "ET Markets",
+   "headline": "Maruti Suzuki Share Price Live Updates: Maruti Suzuki's Positive Market Movement",
+   "summary": "",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/maruti-suzuki-stock-price-livestock-price-today-live-updates-19-nov-2026/liveblog/135975911.cms",
+   "symbols": [
+    "MARUTI"
+   ],
+   "symbol_keys": [
+    "MARUTI"
+   ],
+   "keywords": [
+    "round-up"
+   ],
+   "moving": [
+    "MARUTI"
+   ],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "451693b63aae",
+   "kind": "news",
+   "time": "2026-11-19T08:11+05:30",
+   "source": "ET Markets",
+   "headline": "M&M Share Price Live Updates: M&M Stock Performance",
+   "summary": "",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/stock-liveblog/mm-stock-price-today-live-19-nov-2026/liveblog/135975819.cms",
+   "symbols": [
+    "M&M"
+   ],
+   "symbol_keys": [
+    "M&M"
+   ],
+   "keywords": [
+    "round-up"
+   ],
+   "moving": [
+    "M&M"
+   ],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "9c7bed04d5be",
+   "kind": "news",
+   "time": "2026-11-19T10:58+05:30",
+   "source": "Business Standard",
+   "headline": "Gold, silver fall as strong dollar, Fed rate outlook weigh on bullion",
+   "summary": "MCX gold futures fell nearly Rs 1,000 to Rs 1,28,858 per 10 gm, while silver declined Rs 997 to Rs 1,59,737 per kg amid a stronger dollar and rate-hike concerns",
+   "link": "https://www.business-standard.com/markets/commodities/gold-silver-fall-as-strong-dollar-fed-rate-outlook-weigh-on-bullion-126111900318_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "52a9e3a32102",
+   "kind": "news",
+   "time": "2026-11-19T10:46+05:30",
+   "source": "Business Standard",
+   "headline": "Maruti, M&M, Hero Moto, Eicher rally up to 5%; what's driving auto stocks?",
+   "summary": "At 10:11 AM on Thursday, the Nifty Auto index was top gainer among the sectoral indices, up 2.6% at 28,111.95, compared to a 0.2 per cent rise in the Nifty 50.",
+   "link": "https://www.business-standard.com/markets/news/maruti-m-m-hero-moto-eicher-rally-up-to-5-what-s-driving-auto-stocks-126111900282_1.html",
+   "symbols": [
+    "EICHERMOT",
+    "MARUTI",
+    "M&M"
+   ],
+   "symbol_keys": [
+    "EICHERMOT",
+    "MARUTI",
+    "M&M"
+   ],
+   "keywords": [],
+   "moving": [
+    "MARUTI",
+    "M&M"
+   ],
+   "score": 8,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "e8537a9d1889",
+   "kind": "news",
+   "time": "2026-11-19T10:38+05:30",
+   "source": "Business Standard",
+   "headline": "BLS Polymers zooms 8%, hits record high post Q2 nos; up 100% from IPO level",
+   "summary": "BLS Polymers, a manufacturer of multiple grades of custom-formulated polymer compounds, reported 130.63 per cent Y-o-Y growth in its PAT to ₹10.54 crore for Q2FY27, compared to ₹4.57 crore in Q2FY26.",
+   "link": "https://www.business-standard.com/markets/news/bls-polymers-zooms-8-hits-record-high-post-q2-nos-up-100-from-ipo-level-126111900281_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results",
+    "IPO"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "a4eb939875dc",
+   "kind": "news",
+   "time": "2026-11-19T10:11+05:30",
+   "source": "Business Standard",
+   "headline": "Mahanadi Coalfields IPO: Should you bid for Coal India arm? Analysts answer",
+   "summary": "Mahanadi Coalfields is India's largest single coal-producing company, supported by a sizeable reserve base, predominantly mechanised opencast operations and integrated rail and port evacuation infra",
+   "link": "https://www.business-standard.com/markets/news/mahanadi-coalfields-ipo-analysts-bullish-on-reserves-growth-and-low-costs-126111900249_1.html",
+   "symbols": [
+    "COALINDIA"
+   ],
+   "symbol_keys": [
+    "COALINDIA"
+   ],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "0908be88866e",
+   "kind": "news",
+   "time": "2026-11-19T09:58+05:30",
+   "source": "Business Standard",
+   "headline": "Physicswallah shares gain 4% as company unveils ambitious FY30 guidance",
+   "summary": "Physicswallah announced its ambition to build an online-first education platform, targeting revenue of ₹9,000-10,000 crore by FY30.",
+   "link": "https://www.business-standard.com/markets/news/physicswallah-shares-gain-4-as-company-unveils-ambitious-fy30-guidance-126111900223_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance",
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "40a58ea78c5b",
+   "kind": "news",
+   "time": "2026-11-19T09:51+05:30",
+   "source": "Business Standard",
+   "headline": "LT Foods snaps 4-day losing streak, jumps 8% on plan to acquire MK Foods",
+   "summary": "LT Foods has announced plans to acquire MK Foods Holdings Inc for an enterprise value of USD 5.8 million (around ₹54.2 crore).",
+   "link": "https://www.business-standard.com/markets/news/lt-foods-snaps-4-day-losing-streak-jumps-8-on-plan-to-acquire-mk-foods-126111900212_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "a803227dbaa4",
+   "kind": "news",
+   "time": "2026-11-19T10:40+05:30",
+   "source": "BusinessLine",
+   "headline": "IIFL Finance shares drop over 3% after Fairfax pared over 13% stake",
+   "summary": "The investors collectively acquired over 5.65 crore shares of Mumbai-based IIFL Finance through open market transactions on Wednesday, according to block deal data on the BSE",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/iifl-finance-shares-drop-over-3-after-fairfax-pared-over-13-stake/article71718723.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "stake sale"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "75a5ca7d65ac",
+   "kind": "news",
+   "time": "2026-11-19T10:37+05:30",
+   "source": "BusinessLine",
+   "headline": "Goldman Sachs sees global equities rallying in 2027, forecasts up to 24% returns",
+   "summary": "Moderating inflation, lower energy prices and potential interest rate cuts could support equity valuations even as corporate earnings growth loses momentum.",
+   "link": "https://www.thehindubusinessline.com/markets/goldman-sachs-sees-global-equities-rallying-in-2027-forecasts-up-to-24-returns/article71718728.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "a494128ec3f2",
+   "kind": "news",
+   "time": "2026-11-19T10:04+05:30",
+   "source": "BusinessLine",
+   "headline": "Anthropic’s rise to $1.5 trillion puts Indian companies’ competitiveness in focus: Uday Kotak",
+   "summary": "The Kotak Mahindra Bank founder has drawn attention to the challenge facing Indian businesses as artificial intelligence reshapes global markets and valuations",
+   "link": "https://www.thehindubusinessline.com/markets/anthropics-rise-to-15-trillion-puts-indian-companies-competitiveness-in-focus-uday-kotak/article71718661.ece",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "52ae70706475",
+   "kind": "news",
+   "time": "2026-11-18T17:15+05:30",
+   "source": "Moneycontrol",
+   "headline": "India-US trade deal negotiations nearly finalised, signing delayed till new US tariff framework takes...",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPOFBkcWk4Y0lSYmJlRHNvaVFiMlNFb2htSENQWThQU2E3Tktob21saHJVVWZjazlfN2FyVTZoX1BzQ21FN0h4emRIcTJEVTQyak9BRGZWTTlHNkMtOUJJc2hlOW5RSy1GS3owSlQ4YXR1bGxqcHVuNVB2TFdONS13ei1BbW9SS25xTDNaU0MxLVdrMzlXUjl3UktyaWRnR1Bkb3UydEtzM19WZnZZY3Y3MDlXTFp1VnhDMXlxTkxScURUTmludVJUdC0zZ2VTY0xGQWJLcjBkMVZ5TEVDZzFNbG1NM1RhOUtiMkhJQjZXZUlUZUJ1YmxEZzZodEhRSy0yOTN2MGVhN09XV3h0c0l1ZG9laWpCb3FlZ3U5cTZ1N0NxXzjSAagCQVVfeXFMUEVpei1IUGk0bWFVOVBrWjFITUpPdUtxY0w2cl9UOWlnZ3NJak12MWF2ZHZhN0pUWEVLRklzb2NFdkxVZUVvSmJrTGxENDF3QU0tZTlEUExZQTZCR2JHb1p2U0xRckVCOHhYa0FnTzJ2U2h0UzJZRks1bUtPMG8yWDB5czFCSWZ2ZlBDQk1aZ2xXV0tEX0JobGVESHQ2MUxRdUNuNFFZYUloQ0dUTzFrQmRNelgtdVRoMWpYcGhyWEkwTVFtZVdMYlVzYVRpYkt1OXVtbHYxZm1fWVpkWlluT1Z2U1d2WnF0SHF4b1Byby1TRXo4WXVXTzZ5TlBGdHNNT1ZITTJPc3ZuaWpMUmRTYUZrenBXaVRTVkFGT0ZZdmYzUHNybkNEdEY?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "tariff"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "34cc38f1cbf0",
+   "kind": "news",
+   "time": "2026-11-19T06:55+05:30",
+   "source": "Moneycontrol",
+   "headline": "Anthropic IPO raises $107.3 billion to top SpaceX's record debut",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaW1YU0w3Y2lzTG1VYlk2enI4dVBTQ0xNVE9ZS3RPS1lTd0NldUtXTWdNOWxNUDdQRG9abzl4MjJVRnY2VE5DalJZaUlfMmswcW9wWWVUb2I1aFppc3Z5M2NmSVhBUk5rQ0hkZUNJTkp1Nm9fTUN4ZW5uUkpwR0VOcThiZWJwbGdBNHgtbktiMW4tSE9ERUgzaVAtYWFKVml5eXJUX2pJd091eWRmOGdpajg1eTJYeHQ3ekxxWjZkSzFBQdIBxwFBVV95cUxOczJtMFNPaUVuTzQ4T0dZUlZ2ODhWTFJReTdCRGFUYUxCR3ZoN1V4ZWJjS3daZWs5NExtMnowSmN2TUR2cE91d0JGMllaUlZpMTBhVC1iNTdmRGpRSk1zRkdqdk5YY2JzUUNMZzFhc2sza29NNnZfS18yS1NQUHFrYWsybkhUelJaLUxLMjU5VklZdjNTVWwyMWt0VUlrU3YzWjR0SWpETjZlLVgzRmg2d040aDRoUjJCLVMwM3R1MXhORUhHUnY0?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO",
+    "listing"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "f85c683d2e06",
+   "kind": "news",
+   "time": "2026-11-19T04:03+05:30",
+   "source": "Moneycontrol",
+   "headline": "Anthropic prices blockbuster IPO at $83 a share",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOFFzanpfUGU3MU5SU2NLMmVJcWV1bERlVHVDR2pYcnByMld1dURoZTJUalhSNVo2OG5uSFpkeF9yR0hlaS11dmhURG51V2Y3VmhRZm5qNmRucU1Xd0VVQjlVU0QyWDZ0UjRHYzkxcEJsaXY0b1FqNkx3b3Q1SmRjQ1liWnhLbklfY1RLdTc2aEZhaWxybmxzQnhsdkotS0VPZXdkV3ZR0gGrAUFVX3lxTE45bmpUYl9KZ3ZHdExLNkhFZ2xyQXNOVUlBUFF0a0NpUlNRaWdLNXptT1QyNVRlQVRxUjVQVm1Nb3hKcEFhZkVhc2xqSC15NE94Q1QxcnYxME1zeFM1VVF3ZHptZXZhYzlIelVjSmF0OTZ1enlVdDJ3RU0wemNrc1J6WlNLQ1l6bXp0M3NnWm5FWDlwYkVCNkI3VUJNWlp4ZjBPWG9fTnREb2hCQQ?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "ff856dbb7ad0",
+   "kind": "news",
+   "time": "2026-11-18T19:43+05:30",
+   "source": "Moneycontrol",
+   "headline": "Block Deals: Fairfax India sells Rs 3,488 crore worth of IIFL Finance shares; Rimco India, Nippon India,...",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNc21ET2Q0dEswU2lWQ3FKaEh6TlNWUmU0UkduMzc0cUo4TVlTQTQwdjZZcHpRVlhua1UtVjd6TVowY0RUa0pTUkthYkpKZDFsaUNQSURBQW5mcHMzUzNQXzN5R25SMmN5T3ltWkxaZjhla0ZLR01CZmlLc3Z6a0xmdnJBQzZRSXY1U192TnRURXpvaURYbGdrNnVCLUo2SkxhU1hNZ0pwcElMZUdfUGJyM0NkUVdGQ1NQMFdkZ3hfMTdxbkEtY05SZEN2ZEk0ZEtCc3VhZnJGaWxzVFAzUG5wWVRreWJGQmxqanpNVWt1bWlMV2E0ODhjSmhlQnV5aUZfMHlrbjI1QmJxN3NOZ2J6UVhVYklacnfSAZwCQVVfeXFMUHNZZkYtYkFabFNSV29IWHVQTzBrVUczZDFPSk12V3ZCbk5YWmdMZkV2T2dRTUZiOTBiQTNjWWVmSU9oVEdtdk45RDE5THIyUERLdTZTQVRxQmNpeno5ZjJyR3d6ZDBRcVN3QkkxSVpWTFJRbXRjTjhFYUpWcXZ3ZHVtY1RKdFZyYWVFUTNZTnByZWdJeFBqNnpjRlhVRFRLVklZcnpwdFhEb1A4TGQtYXU2R2ctd2xPaXlrUk1xXzFpQXBxZ1pESzNLbmt2UmZnYnVacmQzSmtkblE2blRCU19ZLVBUV0VTNElpbWdteDdZVXRPX29kMER2N1Y5Q1BZb21qaWpFbktyRnI3Q2liY0RlSEItRk9mam1KM1Q?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "block deal"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "1a6401886ef1",
+   "kind": "news",
+   "time": "2026-11-19T10:06+05:30",
+   "source": "Moneycontrol",
+   "headline": "Price Action: Infosys sheds 2% on JV with Japanese firm; Tonbo Imaging up 2% on order win",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNNGJYSjJ5bFRYdHk1ajRjTjhjSmtjNkFaZTZrMEtPYVItNEp0QmRiMUR0bUJhSkphZUxCYnN4dExiME1vdlloZ1dTQzZJOEIzcUI2TldCQkNOZ1g3c3o2VldYTVdjdDgwc09kWkN4NmpCZldfSGZ1dWpwWHNicFFpNDVwU1hIV0wzLXFQSkdqSjlrMzBrRmNzOWlKODFaM1B3LUhURkVWZWh3ZGlpUzIzSTBGNS14ODVGUGQ1TG5tVzlCYVhVZGY4NWlxLWhRTnFYQkxxdWdqanVUNDN2dE1yck9Ra9IB6AFBVV95cUxQM3NjdU10LWtrSXgyQ3l3elAwSXlQZ0szNGstZU9BT3IyRGxQMWpPSE80SzFqR25LRGIydS1lNHhFcjJDOW1YRGlnVUtrMDVFOXRIc0NIU2g5SGwzeHVIWGx1Wkd3UHlKdFU1NEluRFBHclAtQkM0aFZKM0YzNFc4bno0dWlPV0tfR1lOMThFeFMyWXpCZFJLSEViWEhLRFdreHQxbUpNOGE1dlpyVC13NUlMOGkxd01sazZoelNpWXR4MjZMRVNxTUJRQllMdVE3YWxZaTJJemwtVE9PQUtCZnJSbUxmbmZz?oc=5",
+   "symbols": [
+    "INFY"
+   ],
+   "symbol_keys": [
+    "INFY"
+   ],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "24a68683f390",
+   "kind": "news",
+   "time": "2026-11-19T09:22+05:30",
+   "source": "Moneycontrol",
+   "headline": "Anthropic worth more than India's top 10 companies combined: Uday Kotak raises a big question",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOLVhpQWgwOURDc3l2TzlvYmdXZ1FtT1kyNkx5T2thdGZncUpQcW1RU2FZRDZFX0Eza2JsNHpVOFJYQkZUWGpSOWoyZWhPMTVQN0ZNT2R4RmVQbU0zVXMwczd1VUs0R2tueFg0OTY2eDZtM0lzNUFhUHUteElGSmpsVnEwTnRuYXlTalQ3ZXFRc29scHBRb1UtVGlHWnN5c0hqb3dvcV9FSERGcHNIbWF0U0dUbzJ5bVJGaE9OM2xVb3FDTDZFZkZJRmZPWVFtWlBrTzZDQm1LZXNZNm4tanExUUxpa9IB6AFBVV95cUxPUUpJQzVNVTNTakpTOHVRWEJmQXhXTzBpaWNzRm9MODkxRGhrbnNJMl9WX1J2eXFQa2hOSjVxcDVVR2lPakpYeDFSc3RzTm5POFNtUGppdnVUMmc2QkhjX0xlVk9DVzRUc2RBNzZrRjIwME9yQVdRTEJTU002WjJWc2ZJaFphXzhyTXZ2djQyUzZuZXdST09HQlgweVpOQ1B1Q1NNUVBmZnFSc3c5ZmxxOFpzd0lNaWxnUmVaT3NYTE5MQ0g0Z1BJU3kxRW1UQ1lOMjdNSl9idlFuZUlqaEFZaWs5REpaUzVG?oc=5",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "5eca4fa953e5",
+   "kind": "news",
+   "time": "2026-11-19T10:38+05:30",
+   "source": "Moneycontrol",
+   "headline": "Mahanadi Coalfields IPO subscribed 2% so far on Day 1; check latest GMP",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQVG9UMHZQbWw2Z3Rya0duVWlEMmpjMW9ISXFpVlVhdEVsYzJHY0NxOEtacEJaQWwxd0huMXpKNjNlUWt5V01HemxYWGR0ZlRNcnJQMW44NjMyUWJzamtPQW95SjV4bjZDdkRfaEJYdUc3QUZqWU9BX09YdWFJZ1E5dGpQeGtCOG4yZnpiNGc3Ni1HRG05SmpsZFNEX2phQkhjdlJKdEw3WHJqQThpYVJjdjNiWVlkZFZ2dUxvbVZwV1FuN3ZKWFFPR1p6VjNlUzNoY01nX3pNYmRKa2I4ZHdZ0gHkAUFVX3lxTFBDa28ta1lTSmUyTkRybW43N2haU0xVODRSRkdzNXVuYzlnVnAzcDc1bGF2dzdUaHBQcWVFV3dYekhTVTMyWmZQMjJieEpZUmlpSlpDTWJqXzROcTQ3Z1F1cmtHZHlRMzVMX1IwM0Jjem1PN0F4X0pUSFpFVXZaMnozblNmWXZqRE5QOGYzb1BnbGp2S0lSS1B4ZnJScWVsRXF0djFfTjY0T2Z0bjd2cnVhaGNwX21vN1NpWmFzNU5BcExCLWxkOGZkZFczTEFPRjExSS1GUkx1NHdHTG9MaFkwc1Q0Tw?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "847f52f9a95c",
+   "kind": "news",
+   "time": "2026-11-19T10:50+05:30",
+   "source": "Moneycontrol",
+   "headline": "Crystal Crop Protection IPO booked nearly 2x so far on Day 2; QIBs, retail investors lead demand",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQUk5ia09kb0JpeUt5bTU0aUtnY1hxdHZiZUpKWDRxUlVEZUprSzFIS01lRTZCWTVIYm5UejNiRHZuNVlneFlLVXMyQzVtbUVwVVhrUlRTN19aZEtqOHFZOHlyZXl1eXN4NEhpWGxzNEVtYTRBc1hDZERlRWxuV2llZmNMX2pYdEFqY3Q4QnhzSG84SkhpYnlmV0FwbDljdnlKTkE4c0NTZlpVRU5pSUFLWlRLY3llWFZOeDcyMXRGdExiX2RsMEZaUmhEc3RpdmJkYUhnel8xUkJlVjM0OG9vTE14Zk5aX3pUTXdV0gHwAUFVX3lxTE1jbGV4STRoVUlkYjNWZFBRRVZYYXg3eVNmMUFENEthX20xWnZ5eFNpcTJDUmg2ejFZNFl6dzZrRFI0ZmV4c1ZMU25aTW9USDhoWHg3eEhsSVVIbUhWak0za1JHYTMtZEM5S3JZSmNQamZveGJuSjBoRW5zVW9LdlZPTkdmQTgwNVYwT091Z2xNOHBvQ0FvaGpZWWhMdzJVMHAzT2FYYlBvS05jbkF6a1k4cG5mdzROTFBoblAtbjUxRVlUemFyN0tIZkJnS3J1bkQwZFV6U1RQNW9qdWc1RjJUaUFGQ0VsSW1TZ25jSUd4WQ?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "0ab850cff3b1",
+   "kind": "news",
+   "time": "2026-11-19T11:25+05:30",
+   "source": "Moneycontrol",
+   "headline": "BDL, BEL, other defence shares gain up to 3% as MoD seeks 20% rise in capex in Budget 2027",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNFF6VzFJRGJNUVV4TnZNcjVYZVdreXI2ZHlyLWNiLUxESnljOGNXbDV5RTlCVkFNY1F2NkszNWVSZlpXdVEzQ01ZRE1idTVhOHJDWWN4QUwySkxWbHVIclZYREZBLTJIUFpRRWtMNWdaamxMNFFPRGdtOUM5RXRqX0UyaVgzN0JTM0huZFV1WEhSb3FWUEJzMDlJN2t4SHNIYlRUeEUtZFByd20tMmdTd2otcjVuSmpjSkxnTHQwaDFpbE0tUXQwdDNoVkRKdG85N2x4TUxlMXAzVS1CSEFJSmx6OFFJZ9IB6wFBVV95cUxOaVRRYU1sN2hURFhPV05KcmlMaWFZU3lwYS1xQUQwb3Zham40SHpMSlQzUnh0TnZrM0hQeld2S0p5M3U3SzN2UmctS1ljTEw1Qm5fS0FTOGo0SHF0QldlbW9jdFE2ak85RkUwSmVzc05sU0ZJVW0ydVJJS01aX3NxZEtRd2kxSl9VNENCSHBrSWhaZjhJTEwyenB5anZ1MU1Jd21Qb1pNWjg4MkotSlg5Wnpnb0FKYVRIS3BWOUx1NXpDbE9UZGlvb245eTgtNTg4YWJmTGFFT0xhbEZtZXBrbTV1NVpFaDhUNnB3?oc=5",
+   "symbols": [
+    "BEL"
+   ],
+   "symbol_keys": [
+    "BEL"
+   ],
+   "keywords": [
+    "budget",
+    "capex"
+   ],
+   "moving": [],
+   "score": 7,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "7887a56d0480",
+   "kind": "news",
+   "time": "2026-11-19T07:29+05:30",
+   "source": "Moneycontrol",
+   "headline": "Man tries to force entry into Delhi Airport Terminal 3, CISF stops him within seconds | Watch",
+   "summary": "",
+   "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxNYnZ4YjBLLVkza3FaeFJMYWF0bmFCaG9ZYjFjTkpZYWtjVVcxZlNpYmd6Z3NYeG13cmJWT3N5UjlHZDQyRjEtY1JiUHU5aUhvQ3RGdnZuYzNYbW03Qk1fY3dublc2WnFMQTVMbHEtX1hIa3I0SGpJVUdWUWd5MWducWRPUGtkN0xVdV9UWWRrX3V6X0o2SVJHaEI0YVdUR3pPVHE2VktJMndzT0hCQ0lENkU1ZUJyS2JfM2lWLUxWLWdwN1BJSGhYYkRfdF85T1dRaVdOaHVUbDdSc3Itd0440gHkAUFVX3lxTFAzcjMwQnBoSUhHWU5OZC1wX2s3djF3OEFwckc1SWVnZ1ZaWWJiM0plM1A1U0NPZXR5Zi1JQUEwVUpqZGZGcnZYemNjLVdsSkFPb3l3Z2JpdjlhOTBEUkpJeW53X2NLeklLSnlJeTBTbHZORXpfZDRkdktLLU1XWUpnQ0VlZ0M2Qm5DLVBjYURYNjR0dGZaOTBsaDFTQmZIek9uMjR3YTRNYTNvNDVmQUd0T2lQdENwclRGMDdnWkZYQVFkNER3ODdHalU3UVdKektXM3c3R0JlRUlyMUxDZElHQXdQTA?oc=5",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "cde5cf3356ed",
+   "kind": "news",
+   "time": "2026-11-19T11:04+05:30",
+   "source": "CNBC top news",
+   "headline": "The 'exceptional' dollar scenario that forced Deutsche Bank to change its FX forecasts",
+   "summary": "Deutsche Bank sees some greenback strength in the first half of next year, then modest weakness in the second half — overall the currency will stay at elevated levels.",
+   "link": "https://www.cnbc.com/2026/11/19/exceptional-dollar-setup-made-deutsche-bank-change-fx-forecasts.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-19T11:52+05:30"
+  },
+  {
+   "id": "c4ba2a3bfca9",
+   "kind": "price",
+   "time": "2026-11-19T11:52+05:30",
+   "source": "Yahoo quotes",
+   "headline": "M&M +4.3% vs previous close (close 3504.9, bar 2026-11-19)",
+   "summary": "Headlines this run: M&M Share Price Live Updates: M&M Stock Performance | M&M Share Price Live Updates: M&M Stock Performance | Maruti, M&M, Hero Moto, Eicher rally up to 5%; what's driving auto stocks?",
+   "link": "https://finance.yahoo.com/quote/M&M.NS",
+   "symbols": [
+    "M&M"
+   ],
+   "symbol_keys": [
+    "M&M"
+   ],
+   "keywords": [
+    "price move"
+   ],
+   "moving": [
+    "M&M"
+   ],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "change_pct": 4.34,
+   "volume_x": 0.77,
+   "first_seen": "2026-11-19T11:52+05:30"
   }
  ],
- "updated_at": "2026-11-19T09:58+05:30"
+ "updated_at": "2026-11-19T11:52+05:30"
 }

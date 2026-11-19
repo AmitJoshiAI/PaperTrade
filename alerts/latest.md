@@ -1,11 +1,47 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-19 09:58 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 2 moving.
+Generated 2026-11-19 11:52 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via Google News RSS), CNBC top news.
+Quotes: 54 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [7 HIGH] ICICI Bank Limited: Allotment of Securities
+## 1. [8 HIGH] Maruti, M&M, Hero Moto, Eicher rally up to 5%; what's driving auto stocks?
+
+- Time: 2026-11-19 10:46 IST
+- Source: Business Standard
+- Link: https://www.business-standard.com/markets/news/maruti-m-m-hero-moto-eicher-rally-up-to-5-what-s-driving-auto-stocks-126111900282_1.html
+- Matched symbols: EICHERMOT, MARUTI, M&M (moving today: MARUTI, M&M)
+- Keywords: none
+- Thesis match: none
+- Score: 8
+- Alert id: 52a9e3a32102
+- Second-order candidates: 
+
+## 2. [7 HIGH] BDL, BEL, other defence shares gain up to 3% as MoD seeks 20% rise in capex in Budget 2027
+
+- Time: 2026-11-19 11:25 IST
+- Source: Moneycontrol
+- Link: https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNFF6VzFJRGJNUVV4TnZNcjVYZVdreXI2ZHlyLWNiLUxESnljOGNXbDV5RTlCVkFNY1F2NkszNWVSZlpXdVEzQ01ZRE1idTVhOHJDWWN4QUwySkxWbHVIclZYREZBLTJIUFpRRWtMNWdaamxMNFFPRGdtOUM5RXRqX0UyaVgzN0JTM0huZFV1WEhSb3FWUEJzMDlJN2t4SHNIYlRUeEUtZFByd20tMmdTd2otcjVuSmpjSkxnTHQwaDFpbE0tUXQwdDNoVkRKdG85N2x4TUxlMXAzVS1CSEFJSmx6OFFJZ9IB6wFBVV95cUxOaVRRYU1sN2hURFhPV05KcmlMaWFZU3lwYS1xQUQwb3Zham40SHpMSlQzUnh0TnZrM0hQeld2S0p5M3U3SzN2UmctS1ljTEw1Qm5fS0FTOGo0SHF0QldlbW9jdFE2ak85RkUwSmVzc05sU0ZJVW0ydVJJS01aX3NxZEtRd2kxSl9VNENCSHBrSWhaZjhJTEwyenB5anZ1MU1Jd21Qb1pNWjg4MkotSlg5Wnpnb0FKYVRIS3BWOUx1NXpDbE9UZGlvb245eTgtNTg4YWJmTGFFT0xhbEZtZXBrbTV1NVpFaDhUNnB3?oc=5
+- Matched symbols: BEL
+- Keywords: budget, capex
+- Thesis match: none
+- Score: 7
+- Alert id: 0ab850cff3b1
+- Second-order candidates: 
+
+## 3. [7 HIGH] SKF India Limited: Pursuant to Regulation 30 and 33 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI LODR ) including circulars issued thereunder and other applicable provisions, if any, as amended from time to time, and in continuation to our intimation dated October 27, 2026, we wish to inform you that the Board of Directors of the Company at its meeting held today i.e. November 03, 2026 commenced at 16:00 Hrs (IST) and concluded at 18:15 Hrs (IST) has, inter-alia, considered and approved the following along with other matters:a) On the recommendation of the Audit Committee, the Unaudited Financial Results (Standalone and Consolidated) for the second quarter and half year ended September 30, 2026, together with Limited Review Report of the Statutory Auditors, that were placed before the Board of Directors and was taken on record.b) On the recommendation of the Audit Committee, Standalone and Consolidated Statement of Assets and Liabilities as on September 30, 2026.c) On the recommendation of the Audit Committee, Standalone and Consolidated Statement of Cash Flow for the half year ended September 30, 2026.d) Approved proposed capacity expansion by addition of new channels at various locations.e) Brand Launch: On 3 November,2026, the SKF Vertevo brand is officially launched across theorganization and to our customers and stakeholders worldwide. The brand is the face of ourcompany, it shows our personality what we stand for, what we are passionate about and what our customers can expect from us.The SKF Vertevo brand is inspired by the world of racing, where the company has contributed to automotive innovation for decades. The identity is designed to keep a connection to the long SKF heritage and expertise, while signalling its ambition to help accelerate the future of mobility.Please note that only the brand is being launched, while the company name continues to remain the same. Any further developments will be communicated to stakeholders as and when applicable.Note: The company had already submitted the financial results for the period ended 30-Sep-2026 on 03rd November 2026. The company is re-submitting the same intimation in machine-readable format as instructed by NSE.
+
+- Time: 2026-11-19 10:55 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/SKFINDIA25_19112026105437_NSE.pdf
+- Matched symbols: none
+- Keywords: results, SEBI, capex, enters/launches business
+- Thesis match: none
+- Score: 7
+- Alert id: e9f22ccff7c9
+- Second-order candidates: 
+
+## 4. [7 HIGH] ICICI Bank Limited: Allotment of Securities
 
 - Time: 2026-11-18 14:48 IST
 - Source: NSE announcements
@@ -15,9 +51,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 7
 - Alert id: 9f15cab446d1
-- Second-order candidates: Winner: none, routine allotment of shares (same type as [e6c7e38c5743] on 2026-11-16, ESOP-sized dilution). / Losers: none clear. / Catalyst: unknown - routine filing; score comes from the symbol match. / Thesis fit: open thesis icici-bank-recovery: neutral, no effect
+- Second-order candidates: Winner: none - routine ESOP-type allotment, same kind as [c9ae137f4d5f] and [ffec1d389b46] noted on 2026-11-18; dilution negligible. / Losers: none clear. / Catalyst: surprise (non-event) - routine filing; score comes from the symbol match. / Thesis fit: none (open thesis icici-bank-recovery: neither supports nor weakens)
 
-## 2. [7 HIGH] Seamec Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
+## 5. [7 HIGH] Seamec Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)
 
 - Time: 2026-11-18 13:04 IST
 - Source: BSE announcements
@@ -29,31 +65,43 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 6d3a98f93ae7
 - Second-order candidates: Winner: Seamec (offshore support / multi-support vessels) gets a contract; value and counterparty are in the PDF, which this sandbox could not open. The scanner matched ONGC, so ONGC is a probable charterer, not a beneficiary. / Losers: none clear. / Catalyst: surprise - routine order disclosure; size unknown, so no read-through to ONGC or other vessel operators. / Thesis fit: none (crude-ongc-vs-hpcl unaffected)
 
-## 3. [7 HIGH] ICICI Bank Limited: Allotment of 461865 Shares.
+## 6. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Intimation - Earnings Conference Call for Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust on Wednesday, November 25, 2026'.
 
-- Time: 2026-11-18 10:14 IST
+- Time: 2026-11-19 11:22 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/ICICIBANK1_18112026101250_Lettertoexchange.pdf
-- Matched symbols: ICICIBANK
-- Keywords: none
-- Thesis match: icici-bank-recovery (open)
-- Score: 7
-- Alert id: c9ae137f4d5f
-- Second-order candidates: Winner: none - routine ESOP allotment, employees receive shares; dilution is negligible against ICICI's share count. / Losers: none clear. / Catalyst: surprise (non-event) - routine Reg 30 filing, no price-relevant information. / Thesis fit: none (open thesis icici-bank-recovery: neither supports nor weakens)
+- Link: https://nsearchives.nseindia.com/corporate/PGINVIT_19112026112158_INTIMATIONEC.pdf
+- Matched symbols: POWERGRID
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: 8d83262e8ccb
+- Second-order candidates: 
 
-## 4. [7 HIGH] ICICI Bank Ltd: Announcement under Regulation 30 (LODR)-Allotment of ESOP / ESPS
+## 7. [6 HIGH] Maruti Suzuki India Ltd: Disclosures under Reg. 29(2) of SEBI (SAST) Regulations, 2011
 
-- Time: 2026-11-18 10:09 IST
+- Time: 2026-11-19 10:46 IST
 - Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/351c34b7-08d4-4c74-8644-152b2054f464.pdf
-- Matched symbols: ICICIBANK
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/5032B2DC_353F_4F45_BDF4_0641BBF3C146_104632.pdf
+- Matched symbols: MARUTI (moving today: MARUTI)
 - Keywords: none
-- Thesis match: icici-bank-recovery (open)
-- Score: 7
-- Alert id: ffec1d389b46
-- Second-order candidates: Winner: none - BSE copy of the routine ESOP allotment already noted under [c9ae137f4d5f]; employees receive shares, dilution negligible. / Losers: none clear. / Catalyst: surprise (non-event) - duplicate routine Reg 30 filing, no price-relevant information. / Thesis fit: none (open thesis icici-bank-recovery: neither supports nor weakens)
+- Thesis match: none
+- Score: 6
+- Alert id: 35f0fdab9bd8
+- Second-order candidates: 
 
-## 5. [6 HIGH] Block Deals: Fairfax India sells Rs 3,488 crore worth of IIFL Finance shares; Rimco India, Nippon India, SBI MF among 40 buyers
+## 8. [6 HIGH] Price Action: Infosys sheds 2% on JV with Japanese firm; Tonbo Imaging up 2% on order win
+
+- Time: 2026-11-19 10:06 IST
+- Source: Moneycontrol
+- Link: https://news.google.com/rss/articles/CBMi4wFBVV95cUxNNGJYSjJ5bFRYdHk1ajRjTjhjSmtjNkFaZTZrMEtPYVItNEp0QmRiMUR0bUJhSkphZUxCYnN4dExiME1vdlloZ1dTQzZJOEIzcUI2TldCQkNOZ1g3c3o2VldYTVdjdDgwc09kWkN4NmpCZldfSGZ1dWpwWHNicFFpNDVwU1hIV0wzLXFQSkdqSjlrMzBrRmNzOWlKODFaM1B3LUhURkVWZWh3ZGlpUzIzSTBGNS14ODVGUGQ1TG5tVzlCYVhVZGY4NWlxLWhRTnFYQkxxdWdqanVUNDN2dE1yck9Ra9IB6AFBVV95cUxQM3NjdU10LWtrSXgyQ3l3elAwSXlQZ0szNGstZU9BT3IyRGxQMWpPSE80SzFqR25LRGIydS1lNHhFcjJDOW1YRGlnVUtrMDVFOXRIc0NIU2g5SGwzeHVIWGx1Wkd3UHlKdFU1NEluRFBHclAtQkM0aFZKM0YzNFc4bno0dWlPV0tfR1lOMThFeFMyWXpCZFJLSEViWEhLRFdreHQxbUpNOGE1dlpyVC13NUlMOGkxd01sazZoelNpWXR4MjZMRVNxTUJRQllMdVE3YWxZaTJJemwtVE9PQUtCZnJSbUxmbmZz?oc=5
+- Matched symbols: INFY
+- Keywords: order win
+- Thesis match: none
+- Score: 6
+- Alert id: 1a6401886ef1
+- Second-order candidates: 
+
+## 9. [6 HIGH] Block Deals: Fairfax India sells Rs 3,488 crore worth of IIFL Finance shares; Rimco India, Nippon India, SBI MF among 40 buyers
 
 - Time: 2026-11-19 09:58 IST
 - Source: Moneycontrol
@@ -63,9 +111,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 44c2b55b389d
-- Second-order candidates: 
+- Second-order candidates: False match: the scanner matched SBIN only because SBI MF is a buyer; the subject is IIFL Finance (not on the watchlist). A large promoter-adjacent exit absorbed by institutions is an overhang clearing for IIFL Finance, but there is no named loser and no dated follow-up.
 
-## 6. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 18, 2026 is Rs. 13.7038.
+## 10. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 18, 2026 is Rs. 13.7038.
 
 - Time: 2026-11-19 07:00 IST
 - Source: NSE announcements
@@ -75,9 +123,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 726c08b3ecae
-- Second-order candidates: 
+- Second-order candidates: False match: a mutual-fund NAV notice that matched RELIANCE and the keyword "results" only by name. It has nothing to do with Reliance Industries.
 
-## 7. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 18, 2026 is Rs. 39.5459.
+## 11. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 18, 2026 is Rs. 39.5459.
 
 - Time: 2026-11-19 07:00 IST
 - Source: NSE announcements
@@ -89,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 8b0b29c1759c
 - Second-order candidates: 
 
-## 8. [6 HIGH] Infosys Ltd: Disclosure Under Regulation 30 Of SEBI LODR Regulations
+## 12. [6 HIGH] Infosys Ltd: Disclosure Under Regulation 30 Of SEBI LODR Regulations
 
 - Time: 2026-11-18 22:08 IST
 - Source: BSE announcements
@@ -99,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 9513ed360dd2
-- Second-order candidates: 
+- Second-order candidates: Winner: unknown - the PDF could not be opened from this sandbox, so the content is not verified; the SEBI keyword alone is not a signal. / Losers: none clear. / Catalyst: unknown - content of the disclosure not read. / Thesis fit: none
 
-## 9. [6 HIGH] Kotak MF, BlackRock, others buy stake worth Rs 1,905 cr in Groww
+## 13. [6 HIGH] Kotak MF, BlackRock, others buy stake worth Rs 1,905 cr in Groww
 
 - Time: 2026-11-18 18:52 IST
 - Source: ET Markets
@@ -111,9 +159,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 452c46852f26
-- Second-order candidates: 
+- Second-order candidates: False match: KOTAKBANK matched only because Kotak MF is one of the buyers. Groww is unlisted; this is a primary or secondary private-market round. Read-through: listed broker/AMC peers (Angel One, 5paisa, CAMS) get a higher private valuation marker, but it is not a dated catalyst.
 
-## 10. [6 HIGH] Jio Financial Services Limited: Investment in Jio BlackRock Asset Management Private Limited, Joint Venture between the Company and BlackRock
+## 14. [6 HIGH] Jio Financial Services Limited: Investment in Jio BlackRock Asset Management Private Limited, Joint Venture between the Company and BlackRock
 
 - Time: 2026-11-18 18:21 IST
 - Source: NSE announcements
@@ -123,9 +171,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 340ab91f9c08
-- Second-order candidates: 
+- Second-order candidates: Winner: JIOFIN deepens its asset-management JV with BlackRock; the amount sits in the PDF, which was not opened, so the size is unknown. / Losers: incumbent listed AMCs (HDFC AMC, Nippon India AMC, UTI AMC) face a better-funded entrant competing on fees, but the effect is slow and long-dated, not a trade. / Catalyst: surprise - capital infusion disclosure; launch milestones are undated. / Thesis fit: none
 
-## 11. [6 HIGH] Jio Financial Services Ltd: Announcement under Regulation 30 (LODR)-Acquisition
+## 15. [6 HIGH] Jio Financial Services Ltd: Announcement under Regulation 30 (LODR)-Acquisition
 
 - Time: 2026-11-18 18:21 IST
 - Source: BSE announcements
@@ -135,52 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 8850a7cd0eb7
-- Second-order candidates: 
-
-## 12. [6 HIGH] Steamhouse India Limited: AcquisitionPursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI Listing Regulations ), we wish to inform you that Steamhouse India Limited has incorporated a Wholly-Owned Subsidiary company named "STEAMHOUSE (GABHENI) INDIA PRIVATE LIMITED" on November 18th, 2026.
-
-- Time: 2026-11-18 17:40 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/CAVAIBHAVGATTANI_18112026173952_WOS_INTIMATION.pdf
-- Matched symbols: none
-- Keywords: listing, SEBI, M&A
-- Thesis match: none
-- Score: 6
-- Alert id: d3c42a2c24a2
-- Second-order candidates: 
-
-## 13. [6 HIGH] Piramal Pharma Limited: exercise of call option to acquire the balance 26% equity stake in Yapan Bio Private Limited
-
-- Time: 2026-11-18 17:15 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/Priyankamehta_18112026171520_SE_Disclosure_Call_Option_Exercise.pdf
-- Matched symbols: none
-- Keywords: stake sale, M&A
-- Thesis match: none
-- Score: 6
-- Alert id: 04d4d2b64145
-- Second-order candidates: 
-
-## 14. [6 HIGH] Piramal Pharma Ltd: Exercise Of Call Option To Acquire The Balance 26% Equity Stake In Yapan Bio Private Limited.
-
-- Time: 2026-11-18 17:01 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/db518f27-a966-4cb9-bd87-f7d3b0ff9918.pdf
-- Matched symbols: none
-- Keywords: stake sale, M&A
-- Thesis match: none
-- Score: 6
-- Alert id: 472cf6e477e6
-- Second-order candidates: 
-
-## 15. [6 HIGH] Accord Transformer & Switchgear Ltd: Intimation Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('SEBI Listing Regulations') - Investors / Earnings Presentation
-
-- Time: 2026-11-18 16:57 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/811ecc91-6059-49a1-8221-f51e6fa05e1d.pdf
-- Matched symbols: none
-- Keywords: results, listing, SEBI
-- Thesis match: none
-- Score: 6
-- Alert id: d4849cabbff2
 - Second-order candidates: 
