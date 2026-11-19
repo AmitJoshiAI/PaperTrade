@@ -7,12 +7,13 @@ target: 1600
 invalidation: Nifty closes more than 5% below its 15 Oct 2026 level (22,623) on a sustained basis, or ICICI Q2/Q3 results show rising slippages (gross NPA up quarter on quarter)
 invalidation_price: 1320
 size_cap_pct: 20
-status: open
+status: closed
 type: theme
 event:
 event_date:
 post_event_rule:
 post_event_applied:
+exit_date: 2026-11-19
 ---
 
 ## Why (the long form)

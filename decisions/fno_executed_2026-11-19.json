@@ -1,0 +1,142 @@
+[
+  {
+    "order": {
+      "action": "OPEN",
+      "underlying": "NIFTY",
+      "instrument": "PE",
+      "side": "BUY",
+      "lots": 1,
+      "strike": 24250,
+      "expiry": "2026-12-29",
+      "decision_date": "2026-11-18",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry.",
+      "risk_check": "1 lot (event-trade size). Table: credit Rs 3,080 (fill est. Rs 2,681), max loss Rs 3,559 = 0.71% of equity Rs 5,00,000 (event limit 2%); long leg premium Rs 8,877 = 1.8% (limit 10%); margin Rs 13,000, cash needed Rs 16,707 of Rs 5,00,000; 4 legs, shorts covered in same file; breaker off; quotes ok."
+    },
+    "status": "filled",
+    "detail": "opened NIFTY:2026-12-29:PE24250:L x1 @ 124.80 (model: Black-Scholes, spot 25,186.80, IV 15.11% (Zerodha chain mid-implied IV 15.11% at this strike (bid 116.55 / ask 122.70, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 123.56 +1% slippage); margin 0.00",
+    "fill": {
+      "date": "2026-11-19",
+      "position": "NIFTY:2026-12-29:PE24250:L",
+      "underlying": "NIFTY",
+      "instrument": "NIFTY 2026-12-29 24250 PE",
+      "action": "OPEN",
+      "side": "BUY",
+      "lots": 1,
+      "units": 65,
+      "price": 124.8,
+      "notional": 8112.0,
+      "charges": 27.25,
+      "margin": 0.0,
+      "cash_change": -8139.25,
+      "realised_pnl": "",
+      "pricing": "model: Black-Scholes, spot 25,186.80, IV 15.11% (Zerodha chain mid-implied IV 15.11% at this strike (bid 116.55 / ask 122.70, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 123.56 +1% slippage",
+      "label": "model (Black-Scholes / carry) unless a mark says real NSE chain (mid)",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
+    }
+  },
+  {
+    "order": {
+      "action": "OPEN",
+      "underlying": "NIFTY",
+      "instrument": "CE",
+      "side": "BUY",
+      "lots": 1,
+      "strike": 26250,
+      "expiry": "2026-12-29",
+      "decision_date": "2026-11-18",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry.",
+      "risk_check": "1 lot (event-trade size). Table: credit Rs 3,080 (fill est. Rs 2,681), max loss Rs 3,559 = 0.71% of equity Rs 5,00,000 (event limit 2%); long leg premium Rs 8,877 = 1.8% (limit 10%); margin Rs 13,000, cash needed Rs 16,707 of Rs 5,00,000; 4 legs, shorts covered in same file; breaker off; quotes ok."
+    },
+    "status": "filled",
+    "detail": "opened NIFTY:2026-12-29:CE26250:L x1 @ 123.99 (model: Black-Scholes, spot 25,186.80, IV 12.55% (Zerodha chain mid-implied IV 12.55% at this strike (bid 130.70 / ask 142.45, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 122.76 +1% slippage); margin 0.00",
+    "fill": {
+      "date": "2026-11-19",
+      "position": "NIFTY:2026-12-29:CE26250:L",
+      "underlying": "NIFTY",
+      "instrument": "NIFTY 2026-12-29 26250 CE",
+      "action": "OPEN",
+      "side": "BUY",
+      "lots": 1,
+      "units": 65,
+      "price": 123.99,
+      "notional": 8059.35,
+      "charges": 27.23,
+      "margin": 0.0,
+      "cash_change": -8086.58,
+      "realised_pnl": "",
+      "pricing": "model: Black-Scholes, spot 25,186.80, IV 12.55% (Zerodha chain mid-implied IV 12.55% at this strike (bid 130.70 / ask 142.45, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 122.76 +1% slippage",
+      "label": "model (Black-Scholes / carry) unless a mark says real NSE chain (mid)",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
+    }
+  },
+  {
+    "order": {
+      "action": "OPEN",
+      "underlying": "NIFTY",
+      "instrument": "PE",
+      "side": "SELL",
+      "lots": 1,
+      "strike": 24350,
+      "expiry": "2026-12-29",
+      "decision_date": "2026-11-18",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry.",
+      "risk_check": "1 lot (event-trade size). Table: credit Rs 3,080 (fill est. Rs 2,681), max loss Rs 3,559 = 0.71% of equity Rs 5,00,000 (event limit 2%); long leg premium Rs 8,877 = 1.8% (limit 10%); margin Rs 13,000, cash needed Rs 16,707 of Rs 5,00,000; 4 legs, shorts covered in same file; breaker off; quotes ok."
+    },
+    "status": "filled",
+    "detail": "opened NIFTY:2026-12-29:PE24350:S x1 @ 139.59 (model: Black-Scholes, spot 25,186.80, IV 14.99% (Zerodha chain mid-implied IV 14.99% at this strike (bid 133.60 / ask 139.15, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 141.00 -1% slippage); margin 39,242.84",
+    "fill": {
+      "date": "2026-11-19",
+      "position": "NIFTY:2026-12-29:PE24350:S",
+      "underlying": "NIFTY",
+      "instrument": "NIFTY 2026-12-29 24350 PE",
+      "action": "OPEN",
+      "side": "SELL",
+      "lots": 1,
+      "units": 65,
+      "price": 139.59,
+      "notional": 9073.35,
+      "charges": 41.02,
+      "margin": 39242.84,
+      "cash_change": -30210.51,
+      "realised_pnl": "",
+      "pricing": "model: Black-Scholes, spot 25,186.80, IV 14.99% (Zerodha chain mid-implied IV 14.99% at this strike (bid 133.60 / ask 139.15, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 141.00 -1% slippage",
+      "label": "model (Black-Scholes / carry) unless a mark says real NSE chain (mid)",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
+    }
+  },
+  {
+    "order": {
+      "action": "OPEN",
+      "underlying": "NIFTY",
+      "instrument": "CE",
+      "side": "SELL",
+      "lots": 1,
+      "strike": 26150,
+      "expiry": "2026-12-29",
+      "decision_date": "2026-11-18",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry.",
+      "risk_check": "1 lot (event-trade size). Table: credit Rs 3,080 (fill est. Rs 2,681), max loss Rs 3,559 = 0.71% of equity Rs 5,00,000 (event limit 2%); long leg premium Rs 8,877 = 1.8% (limit 10%); margin Rs 13,000, cash needed Rs 16,707 of Rs 5,00,000; 4 legs, shorts covered in same file; breaker off; quotes ok."
+    },
+    "status": "filled",
+    "detail": "opened NIFTY:2026-12-29:CE26150:S x1 @ 149.96 (model: Black-Scholes, spot 25,186.80, IV 12.85% (Zerodha chain mid-implied IV 12.85% at this strike (bid 160.90 / ask 173.50, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 151.47 -1% slippage); margin 39,242.84",
+    "fill": {
+      "date": "2026-11-19",
+      "position": "NIFTY:2026-12-29:CE26150:S",
+      "underlying": "NIFTY",
+      "instrument": "NIFTY 2026-12-29 26150 CE",
+      "action": "OPEN",
+      "side": "SELL",
+      "lots": 1,
+      "units": 65,
+      "price": 149.96,
+      "notional": 9747.4,
+      "charges": 42.32,
+      "margin": 39242.84,
+      "cash_change": -29537.76,
+      "realised_pnl": "",
+      "pricing": "model: Black-Scholes, spot 25,186.80, IV 12.85% (Zerodha chain mid-implied IV 12.85% at this strike (bid 160.90 / ask 173.50, underlying 25,227.95, close of 2026-11-18)), T 40/365, model 151.47 -1% slippage",
+      "label": "model (Black-Scholes / carry) unless a mark says real NSE chain (mid)",
+      "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
+    }
+  }
+]
