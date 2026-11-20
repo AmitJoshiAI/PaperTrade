@@ -1,11 +1,35 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-20 09:59 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-20 11:53 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [9 HIGH] IndiGo, Tata Motors PV among 10 Nifty stocks facing earnings downgrades
+## 1. [9 HIGH] Macquarie double upgrade: Max Healthcare, Apollo Hospitals shares rise up to 4.5%, become top Nifty gainers
+
+- Time: 2026-11-20 11:53 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/macquarie-double-upgrade-max-healthcare-apollo-hospitals-shares-rise-up-to-4-5-become-top-nifty-gainers-14085536.html
+- Matched symbols: APOLLOHOSP, MAXHEALTH (moving today: APOLLOHOSP, MAXHEALTH)
+- Keywords: rating
+- Thesis match: none
+- Score: 9
+- Alert id: a873c623c4e5
+- Second-order candidates: 
+
+## 2. [9 HIGH] Max Healthcare, Apollo Hospitals shares rally up to 5% as Macquarie double upgrades
+
+- Time: 2026-11-20 10:26 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/markets/stock-markets/max-healthcare-apollo-hospitals-shares-rally-up-to-5-as-macquarie-double-upgrades/article71723119.ece
+- Matched symbols: APOLLOHOSP, MAXHEALTH (moving today: APOLLOHOSP, MAXHEALTH)
+- Keywords: rating
+- Thesis match: none
+- Score: 9
+- Alert id: 4316d92e0ef1
+- Second-order candidates: 
+
+## 3. [9 HIGH] IndiGo, Tata Motors PV among 10 Nifty stocks facing earnings downgrades
 
 - Time: 2026-11-20 09:11 IST
 - Source: ET Markets
@@ -15,9 +39,21 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 9
 - Alert id: cea4e9130d9a
+- Second-order candidates: Winner: none direct; analyst estimate cuts hit the named companies, so the relative winners are peers with intact estimates (for IndiGo: other listed carriers are not in our universe; for TMPV: Maruti and M&M, whose estimates are not on the downgrade list). / Losers: IndiGo (INDIGO) and Tata Motors PV (TMPV), because lower consensus EPS compresses the multiple; the same fall in expected cash flow also weighs on lessors and aircraft suppliers' sentiment only indirectly, not verified. Cause of each downgrade is in the slideshow, which this sandbox cannot open. / Catalyst: surprise - estimate revisions after Q2 results, no dated event ahead; the downgrades are probably already in the price. / Thesis fit: none (not drafted: a round-up of ten stocks, mechanism per stock unverified, near coin flip)
+
+## 4. [8 HIGH] Sensex Today | Stock Market Live: Sensex up nearly 150 pts, Nifty above 25,550; IT jumps 2.4%, metals slide; Apollo Hospitals, TCS rally
+
+- Time: 2026-11-20 11:53 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/stock-market-live-updates-nifty50-share-price-sensex-share-price-crude-fii-gift-nifty-rupee-latest-updates-20-11-2026-alpha-liveblog-14085261.html
+- Matched symbols: APOLLOHOSP, TCS (moving today: APOLLOHOSP)
+- Keywords: none
+- Thesis match: none
+- Score: 8
+- Alert id: 39a460772923
 - Second-order candidates: 
 
-## 2. [8 HIGH] ICICI Bank Limited: Credit rating
+## 5. [8 HIGH] ICICI Bank Limited: Credit rating
 
 - Time: 2026-11-19 17:35 IST
 - Source: NSE announcements
@@ -27,9 +63,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 8
 - Alert id: b09ca8363d24
-- Second-order candidates: 
+- Second-order candidates: Winner: ICICI Bank (ICICIBANK) if the rating is reaffirmed at the top domestic grade: it keeps wholesale and bond funding costs unchanged versus peers. / Losers: none clear - a routine rating letter; the PDF could not be opened here, so a downgrade or outlook change is not ruled out but is not indicated by the title. / Catalyst: surprise only if the rating changed; otherwise routine annual reaffirmation, no price driver. / Thesis fit: none (open thesis icici-bank-recovery is already closed, exit 2026-11-19)
 
-## 3. [8 HIGH] ICICI Bank Ltd: Announcement under Regulation 30 (LODR)-Credit Rating
+## 6. [8 HIGH] ICICI Bank Ltd: Announcement under Regulation 30 (LODR)-Credit Rating
 
 - Time: 2026-11-19 17:21 IST
 - Source: BSE announcements
@@ -39,9 +75,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: icici-bank-recovery (open)
 - Score: 8
 - Alert id: b132a12deba5
-- Second-order candidates: 
+- Second-order candidates: Winner: ICICI Bank (ICICIBANK): see b09ca8363d24, same rating filing. / Losers: none clear / Catalyst: surprise - routine rating reaffirmation filing, nothing new beyond the NSE copy / Thesis fit: open thesis icici-bank-recovery: supports (marginally)
 
-## 4. [8 HIGH] Maruti Suzuki shares jump 5%, M&M, Tata Motors, Eicher Motors rally as Nifty Auto surges 2.6%
+## 7. [8 HIGH] Maruti Suzuki shares jump 5%, M&M, Tata Motors, Eicher Motors rally as Nifty Auto surges 2.6%
 
 - Time: 2026-11-19 13:54 IST
 - Source: Moneycontrol
@@ -53,43 +89,31 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: ae2a7bf72b20
 - Second-order candidates: Winner: same sector move as [52a9e3a32102]; Maruti (+5%) and M&M lead, Tata Motors PV and Eicher follow. Cause not stated in the headline; this sandbox cannot open the article. / Losers: none clear - a broad sector rally; no named company is hurt by it. / Catalyst: unknown - no driver verified; second article on the same rally, so no new information beyond the move having held into the afternoon. / Thesis fit: none
 
-## 5. [8 HIGH] Maruti, M&M, Hero Moto, Eicher rally up to 5%; what's driving auto stocks?
+## 8. [6 HIGH] TSMC invests $500 million in Anthropic, acquires 0.03% stake at IPO price
 
-- Time: 2026-11-19 10:46 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/maruti-m-m-hero-moto-eicher-rally-up-to-5-what-s-driving-auto-stocks-126111900282_1.html
-- Matched symbols: EICHERMOT, MARUTI, M&M (moving today: MARUTI, M&M)
-- Keywords: none
-- Thesis match: none
-- Score: 8
-- Alert id: 52a9e3a32102
-- Second-order candidates: Winner: listed passenger-vehicle and two-wheeler makers; the cause is in the article, which this sandbox cannot open, so the mechanism is not verified (the scanner shows Maruti and M&M moving today). / Losers: none clear - a sector-wide move; auto-ancillary names and dealers would follow rather than lose. / Catalyst: unknown - the driver is not stated in the headline and I did not verify it; sector rallies of this kind usually trace to demand data or a policy or tax signal. / Thesis fit: none
-
-## 6. [7 HIGH] BDL, BEL, other defence shares gain up to 3% as MoD seeks 20% rise in capex in Budget 2027
-
-- Time: 2026-11-19 11:25 IST
-- Source: Moneycontrol
-- Link: https://news.google.com/rss/articles/CBMi5gFBVV95cUxNNFF6VzFJRGJNUVV4TnZNcjVYZVdreXI2ZHlyLWNiLUxESnljOGNXbDV5RTlCVkFNY1F2NkszNWVSZlpXdVEzQ01ZRE1idTVhOHJDWWN4QUwySkxWbHVIclZYREZBLTJIUFpRRWtMNWdaamxMNFFPRGdtOUM5RXRqX0UyaVgzN0JTM0huZFV1WEhSb3FWUEJzMDlJN2t4SHNIYlRUeEUtZFByd20tMmdTd2otcjVuSmpjSkxnTHQwaDFpbE0tUXQwdDNoVkRKdG85N2x4TUxlMXAzVS1CSEFJSmx6OFFJZ9IB6wFBVV95cUxOaVRRYU1sN2hURFhPV05KcmlMaWFZU3lwYS1xQUQwb3Zham40SHpMSlQzUnh0TnZrM0hQeld2S0p5M3U3SzN2UmctS1ljTEw1Qm5fS0FTOGo0SHF0QldlbW9jdFE2ak85RkUwSmVzc05sU0ZJVW0ydVJJS01aX3NxZEtRd2kxSl9VNENCSHBrSWhaZjhJTEwyenB5anZ1MU1Jd21Qb1pNWjg4MkotSlg5Wnpnb0FKYVRIS3BWOUx1NXpDbE9UZGlvb245eTgtNTg4YWJmTGFFT0xhbEZtZXBrbTV1NVpFaDhUNnB3?oc=5
-- Matched symbols: BEL
-- Keywords: budget, capex
-- Thesis match: none
-- Score: 7
-- Alert id: 0ab850cff3b1
-- Second-order candidates: Winner: Indian defence PSUs and suppliers (BEL, BDL, HAL, Mazagon Dock): a 20% higher capital outlay ask means a larger domestic order pipeline. / Losers: none clear - a ministry request is not an allocation. If the ask is cut, the move reverses. Foreign OEMs lose only if the extra spend favours domestic buyers, and that is not stated. / Catalyst: scheduled - Union Budget 2027 (due about 1 February 2027, date not yet fixed); an MoD request is a proposal, so the allocation is the real event, and it is about 10 weeks away. / Thesis fit: none (not drafted: a ministry ask is not an allocation and no dated source gives a firm outcome yet)
-
-## 7. [7 HIGH] SKF India Limited: Pursuant to Regulation 30 and 33 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 ( SEBI LODR ) including circulars issued thereunder and other applicable provisions, if any, as amended from time to time, and in continuation to our intimation dated October 27, 2026, we wish to inform you that the Board of Directors of the Company at its meeting held today i.e. November 03, 2026 commenced at 16:00 Hrs (IST) and concluded at 18:15 Hrs (IST) has, inter-alia, considered and approved the following along with other matters:a) On the recommendation of the Audit Committee, the Unaudited Financial Results (Standalone and Consolidated) for the second quarter and half year ended September 30, 2026, together with Limited Review Report of the Statutory Auditors, that were placed before the Board of Directors and was taken on record.b) On the recommendation of the Audit Committee, Standalone and Consolidated Statement of Assets and Liabilities as on September 30, 2026.c) On the recommendation of the Audit Committee, Standalone and Consolidated Statement of Cash Flow for the half year ended September 30, 2026.d) Approved proposed capacity expansion by addition of new channels at various locations.e) Brand Launch: On 3 November,2026, the SKF Vertevo brand is officially launched across theorganization and to our customers and stakeholders worldwide. The brand is the face of ourcompany, it shows our personality what we stand for, what we are passionate about and what our customers can expect from us.The SKF Vertevo brand is inspired by the world of racing, where the company has contributed to automotive innovation for decades. The identity is designed to keep a connection to the long SKF heritage and expertise, while signalling its ambition to help accelerate the future of mobility.Please note that only the brand is being launched, while the company name continues to remain the same. Any further developments will be communicated to stakeholders as and when applicable.Note: The company had already submitted the financial results for the period ended 30-Sep-2026 on 03rd November 2026. The company is re-submitting the same intimation in machine-readable format as instructed by NSE.
-
-- Time: 2026-11-19 10:55 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/SKFINDIA25_19112026105437_NSE.pdf
+- Time: 2026-11-20 11:48 IST
+- Source: BusinessLine
+- Link: https://www.thehindubusinessline.com/info-tech/tsmc-invests-500-million-in-anthropic-acquires-003-stake-at-ipo-price/article71723133.ece
 - Matched symbols: none
-- Keywords: results, SEBI, capex, enters/launches business
+- Keywords: IPO, stake sale, M&A
 - Thesis match: none
-- Score: 7
-- Alert id: e9f22ccff7c9
-- Second-order candidates: False match: the filing text refers to a board meeting held on 3 November (results/other matters), but it was posted today and is a continuation notice; the "capex" and "enters/launches business" keywords come from boilerplate. No new information is visible without the PDF.
+- Score: 6
+- Alert id: f858c0a0daa2
+- Second-order candidates: 
 
-## 8. [6 HIGH] Nifty IT jumps over 1% as TCS, Tech Mahindra, HCL Tech gain; Indian IT stocks buck global AI selloff
+## 9. [6 HIGH] Asian Paints Ltd: Announcement under Regulation 30 (LODR)-Trading Plan under SEBI (PIT) Regulations, 2015
+
+- Time: 2026-11-20 11:18 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/b95cae6b-fb93-4750-b9d7-d9189b64a54b.pdf
+- Matched symbols: ASIANPAINT
+- Keywords: SEBI
+- Thesis match: none
+- Score: 6
+- Alert id: 3b366ed0d30f
+- Second-order candidates: 
+
+## 10. [6 HIGH] Nifty IT jumps over 1% as TCS, Tech Mahindra, HCL Tech gain; Indian IT stocks buck global AI selloff
 
 - Time: 2026-11-20 09:59 IST
 - Source: Moneycontrol
@@ -99,9 +123,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 1c494f88cea2
-- Second-order candidates: 
+- Second-order candidates: Winner: Indian IT services (TCS, TECHM, HCLTECH): when money leaves AI infrastructure and AI-capex names, defensive, cash-generating services companies with USD revenue and a weak-rupee tailwind attract rotation. / Losers: AI-infrastructure and neocloud names (NBIS, CoreWeave) whose valuations depend on continued capex growth; see the NBIS note below. Cause of the global AI selloff is not stated in the headline. / Catalyst: surprise - a rotation inside one session; no dated event. Could reverse if the AI selloff stops. / Thesis fit: none
 
-## 9. [6 HIGH] NBIS -9.5% vs previous close (close 96.85, bar 2026-11-19)
+## 11. [6 HIGH] NBIS -9.4% vs previous close (close 96.92, bar 2026-11-19)
 
 - Time: 2026-11-20 09:59 IST
 - Source: Yahoo quotes
@@ -111,9 +135,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 41e5370eeb9b
-- Second-order candidates: 
+- Second-order candidates: Winner: none direct; hyperscalers that rent rather than build GPU capacity benefit if neocloud pricing weakens. / Losers: NBIS and other neocloud peers (CRWV) whose revenue guidance and funding depend on GPU rental demand; NBIS had already fallen sharply the week before on revised revenue guidance (Motley Fool reports, 13-14 Nov), so this looks like a continuation, not a new cause. Reuters-style cause for 19 Nov itself not found. / Catalyst: unknown - no news found for 19 Nov; follows the guidance cut and analyst target cuts of the prior week. / Thesis fit: none
 
-## 10. [6 HIGH] Axis Direct names 35 top stocks to buy; ICICI Bank, HUL and Maruti Suzuki feature in list
+## 12. [6 HIGH] Axis Direct names 35 top stocks to buy; ICICI Bank, HUL and Maruti Suzuki feature in list
 
 - Time: 2026-11-20 09:01 IST
 - Source: ET Markets
@@ -123,9 +147,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 9e513f152911
-- Second-order candidates: 
+- Second-order candidates: False match: broker stock-list slideshow (round-up), not a company event; no mechanism, winner or loser to name.
 
-## 11. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 19, 2026 is Rs. 13.706.
+## 13. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 19, 2026 is Rs. 13.706.
 
 - Time: 2026-11-20 07:00 IST
 - Source: NSE announcements
@@ -135,9 +159,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 48cb33b2f4d2
-- Second-order candidates: 
+- Second-order candidates: False match: a mutual-fund NAV notice (Reliance Mutual Fund, not Reliance Industries); no company event. Same for 72b8cf883231 (DP-GO).
 
-## 12. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 19, 2026 is Rs. 39.5522.
+## 14. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 19, 2026 is Rs. 39.5522.
 
 - Time: 2026-11-20 07:00 IST
 - Source: NSE announcements
@@ -149,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 72b8cf883231
 - Second-order candidates: 
 
-## 13. [6 HIGH] NHPC Limited: In continuation to our earlier letter dated 14.08.2023 and in compliance to Reg 30 of SEBI LODR, it is to inform that settlement agreement has been entered with M/s Patel - L&T Consortium (PLNT) and settlement amount has been released. The other details are given in attached letter.
+## 15. [6 HIGH] NHPC Limited: In continuation to our earlier letter dated 14.08.2023 and in compliance to Reg 30 of SEBI LODR, it is to inform that settlement agreement has been entered with M/s Patel - L&T Consortium (PLNT) and settlement amount has been released. The other details are given in attached letter.
 
 - Time: 2026-11-19 17:31 IST
 - Source: NSE announcements
@@ -159,28 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 97105e446fd0
-- Second-order candidates: 
-
-## 14. [6 HIGH] NHPC Ltd: Disclosure Regarding Change In Status Of Material Litigation Cases Under Arbitration
-
-- Time: 2026-11-19 17:19 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/b5c32e33-e227-4cc9-9d01-c68f2a51964e.pdf
-- Matched symbols: LT
-- Keywords: SEBI
-- Thesis match: none
-- Score: 6
-- Alert id: b718833a86b5
-- Second-order candidates: 
-
-## 15. [6 HIGH] Ucal Ltd: Announcement under Regulation 30 (LODR)-Acquisition
-
-- Time: 2026-11-19 17:06 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/1bde3ac1-f3e0-4b18-a35c-aad23c8156e8.pdf
-- Matched symbols: none
-- Keywords: stake sale, M&A
-- Thesis match: none
-- Score: 6
-- Alert id: 7d9f18b5288d
-- Second-order candidates: 
+- Second-order candidates: Winner: the contractor consortium (Patel Engineering, L&T) that receives the released settlement amount, ending a dispute open since 2023; for L&T (LT) it is small against its order book. / Losers: NHPC pays out; amount is in the attached letter, which could not be opened here, so the size against NHPC's earnings is not verified. Matching to LT is by counterparty name only. / Catalyst: surprise - an arbitration settlement; one-off, no follow-on event. Also covers b718833a86b5. / Thesis fit: none
