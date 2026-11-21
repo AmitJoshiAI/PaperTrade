@@ -1,8 +1,65 @@
 {
  "note": "Scheduled market events the option candidates must hold through, maintained by the weekly strategist routine. Read by papertrade/candidates.py on every daily run: each future 'fno' event gets an 'Event: <slug> <date> (calendar)' expiry block in the journal's F&O candidates (NIFTY and BANKNIFTY when symbols is empty; a listed stock only if named in symbols and already a candidate); 'us' events are listed at the top of the US candidates with the tabled expiry that covers them. date = the decision / release day (ISO). Past events are ignored; a bad entry is skipped with a warning in the F&O Observations.",
  "events": [
-  {"slug": "rbi-mpc-december", "date": "2026-12-04", "sleeves": ["fno"], "symbols": [], "event": "RBI MPC decision", "source": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422"},
-  {"slug": "fomc-december", "date": "2026-12-09", "sleeves": ["us"], "symbols": [], "event": "FOMC decision", "source": "strategy_reviews/2026-11-14.md (confirmed there)"},
-  {"slug": "us-cpi-december", "date": "2026-12-10", "sleeves": ["us"], "symbols": [], "event": "US CPI", "source": "strategy_reviews/2026-11-14.md (confirmed there)"}
+  {
+   "slug": "india-gdp-q2fy27",
+   "date": "2026-11-30",
+   "sleeves": [
+    "fno"
+   ],
+   "symbols": [],
+   "event": "India Q2 FY27 GDP (MoSPI)",
+   "source": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf (fetched 2026-11-21: 30th Nov)"
+  },
+  {
+   "slug": "rbi-mpc-december",
+   "date": "2026-12-04",
+   "sleeves": [
+    "fno"
+   ],
+   "symbols": [],
+   "event": "RBI MPC decision",
+   "source": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422"
+  },
+  {
+   "slug": "us-payrolls-december",
+   "date": "2026-12-04",
+   "sleeves": [
+    "us"
+   ],
+   "symbols": [],
+   "event": "US Employment Situation (November)",
+   "source": "https://www.bls.gov/schedule/news_release/empsit.htm (fetched 2026-11-21: 4 Dec 2026, 8:30 ET)"
+  },
+  {
+   "slug": "fomc-december",
+   "date": "2026-12-09",
+   "sleeves": [
+    "us"
+   ],
+   "symbols": [],
+   "event": "FOMC decision",
+   "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm (fetched 2026-11-21: 8-9 Dec 2026)"
+  },
+  {
+   "slug": "us-cpi-december",
+   "date": "2026-12-10",
+   "sleeves": [
+    "us"
+   ],
+   "symbols": [],
+   "event": "US CPI",
+   "source": "https://www.bls.gov/schedule/news_release/cpi.htm (fetched 2026-11-21: 10 Dec 2026, 8:30 ET)"
+  },
+  {
+   "slug": "india-cpi-november",
+   "date": "2026-12-12",
+   "sleeves": [
+    "fno"
+   ],
+   "symbols": [],
+   "event": "India CPI (November) (MoSPI; calendar date is a Saturday)",
+   "source": "https://www.mospi.gov.in/uploads/documents/releaseCalender/1779709510470-ADVANCE%20RELEASE%20CALENDAR%202026-27%20Updated%2025.05.2026.pdf (fetched 2026-11-21: 12th Dec)"
+  }
  ]
 }
