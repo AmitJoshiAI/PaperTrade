@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-23T13:53+05:30",
+ "generated_at": "2026-11-23T15:46+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 403,
+   "items": 480,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.3
   },
   {
    "id": "nse_results",
@@ -17,7 +17,7 @@
    "items": 3,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.2
   },
   {
    "id": "bse",
@@ -28,7 +28,7 @@
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.8
+   "seconds": 1.3
   },
   {
    "id": "et_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bl_markets",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.7
+   "seconds": 1.3
   },
   {
    "id": "cnbc",
@@ -86,19 +86,856 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   }
  ],
  "optional_unavailable": [],
  "quotes_checked": 54,
  "movers": 4,
  "quotes_error": null,
- "new_alerts": 65,
+ "new_alerts": 42,
  "high_score": 6,
- "seconds": 4.1,
+ "seconds": 4.3,
  "theses": [],
  "watchlist_size": 54,
  "alerts": [
+  {
+   "id": "76d9954922fb",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Lenskart shares fall nearly 4% as Rs 921-crore block deal takes place at discount",
+   "summary": "Lenskart shares fell nearly 4% after 1.27 crore shares worth Rs 921 crore changed hands in a block deal at a 2.6% discount. The transaction follows recent stake sales by SoftBank and Alpha Wave Ventures.",
+   "link": "https://www.moneycontrol.com/news/business/markets/lenskart-shares-fall-nearly-4-as-rs-921-crore-block-deal-takes-place-at-discount-14087205.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "block deal"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "b43a583af6d4",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Who wins and who loses in the Tata Steel and APL Apollo Tubes deal?",
+   "summary": "Apparently good deal for Tata Steel and the APL’s promoters. What about minority shareholders?",
+   "link": "https://www.moneycontrol.com/news/business/moneycontrol-research/who-wins-and-who-loses-in-the-tata-steel-and-apl-apollo-tubes-deal-14087125.html",
+   "symbols": [
+    "TATASTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL"
+   ],
+   "keywords": [],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "b10645457bcc",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Mahanadi Coalfields IPO fully subscribed on last day of bidding; check latest GMP",
+   "summary": "The initial public offering (IPO) of Mahanadi Coalfields saw a pick-up in investor interest on the last day of bidding, with the issue receiving 1.02 times subscription by 2:50 pm on November 23, according to NSE data.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/mahanadi-coalfields-ipo-gmp-today-check-subscription-status-should-you-apply-or-avoid-14086904.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "54faf8c0014a",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "APL Apollo Tubes shares crash 22%, Tata Steel falls 8.5% as Rs 5,825-crore block deal follows acquisition news",
+   "summary": "APL Apollo Tubes shares plunged nearly 22% and Tata Steel fell 8.5% after a Rs 5,825-crore block deal involving nearly 10% of APL Apollo's equity, following Tata Steel's announcement of a potential Rs 32,266 crore acquisition.",
+   "link": "https://www.moneycontrol.com/news/business/markets/apl-apollo-tubes-shares-plunge-10-tata-steel-falls-4-as-rs-5-825-crore-block-deal-follows-acquisition-news-14086850.html",
+   "symbols": [
+    "TATASTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL"
+   ],
+   "keywords": [
+    "block deal",
+    "M&A"
+   ],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 10,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "67028e5f5be1",
+   "kind": "news",
+   "time": "2026-11-23T15:42+05:30",
+   "source": "BSE announcements",
+   "headline": "Zenith Exports Ltd: Disclosures under Reg. 10(5) in respect of acquisition under Reg. 10(1)(a) of SEBI (SAST) Regulations, 2011",
+   "summary": "Insider Trading / SAST. The Exchange has received the disclosure under Regulation 10(5) in respect of acquisition under Regulation 10(1)(a) of SEBI (Substantial Acquisition of Shares & Takeovers) Regulations, ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/CECE42F0_443C_4836_AD0E_D8D2F5B51C98_154231.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "572eb2895d4e",
+   "kind": "news",
+   "time": "2026-11-23T15:30+05:30",
+   "source": "BSE announcements",
+   "headline": "Pricol Ltd: Con-Call Transcript",
+   "summary": "Company Update. Transcript for the Con-call held on Thursday, 19th November 2026 at 04:00 PM (IST) pertaining to the stake sale in Pricol Autotech Limited.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5b5093eb-06d8-4ce0-8e3f-cf49a633a839.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "stake sale"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "fa02f6dc0942",
+   "kind": "news",
+   "time": "2026-11-23T15:27+05:30",
+   "source": "NSE announcements",
+   "headline": "Shakti Pumps (India) Limited: the management of Company will be participating in Investor conference organised by Kotak Securities Institutional Equities on November 26, 2026.",
+   "summary": "Shakti Pumps (India) Limited has informed the Exchange that the management of Company will be participating in Investor conference organised by Kotak Securities Institutional Equities on November 26, 2026. |SUBJECT: Analysts/Institutional I",
+   "link": "https://nsearchives.nseindia.com/corporate/SHAKTIPUMP_23112026152633_Announcement_under_Regulation_30__LODR_-AnalystInvestorMeet.pdf",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "8f3b51f97406",
+   "kind": "news",
+   "time": "2026-11-23T15:25+05:30",
+   "source": "BSE announcements",
+   "headline": "Healthy Life Agritec Ltd: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Newspaper publications pursuant to Regulation 30 of SEBI listing Obligations and Disclosure requirement for quarter ending September 30, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9d4dbb4b-a1eb-4150-846d-d0ad82355b02.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "e9e669d6967c",
+   "kind": "news",
+   "time": "2026-11-23T15:24+05:30",
+   "source": "BSE announcements",
+   "headline": "Shakti Pumps India Ltd-$: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. We hereby inform that the management of Company will be participating in Investor conference organised by Kotak Securities Institutional Equities on November 26, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/249db38e-0480-4cdd-99f5-420f5b77a232.pdf",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "3643daaaeb03",
+   "kind": "news",
+   "time": "2026-11-23T15:15+05:30",
+   "source": "BSE announcements",
+   "headline": "OTCO International Ltd: Board Meeting Outcome for To Authorize Sale Of Land Held As Power Of Attorney",
+   "summary": "Others. To give authorization to execute sale of land acquired through power of attorney.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/29aedaab-e5e5-405e-b842-96a464fa81b2.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "4883bac17d25",
+   "kind": "news",
+   "time": "2026-11-23T15:13+05:30",
+   "source": "BusinessLine",
+   "headline": "RBI plans to tap broker apps to boost retail trading in government bonds, sources say",
+   "summary": "The Reserve Bank ‌of India's move is designed to broaden the investor base for the $2.3 trillion sovereign debt market, which remains largely institutional",
+   "link": "https://www.thehindubusinessline.com/markets/rbi-plans-to-tap-broker-apps-to-boost-retail-trading-in-government-bonds-sources-say/article71734011.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "RBI",
+    "report/sources"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "615e6398cdf5",
+   "kind": "news",
+   "time": "2026-11-23T15:08+05:30",
+   "source": "BSE announcements",
+   "headline": "Exhicon Events Media Solutions Ltd: Financial Results For The Half Year Ended September 30, 2026.",
+   "summary": "Result. as per the attachment.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/08119b55-e569-4b35-b152-7e4f5a35f890.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "6077b03ce8e0",
+   "kind": "news",
+   "time": "2026-11-23T15:08+05:30",
+   "source": "BusinessLine",
+   "headline": "Tata Steel dips 7% as APL Apollo plunge on ₹28,000 cr deal; Hindalco under pressure",
+   "summary": "The proposed transactions include the sale of Tata Steel’s tubes business for up to ₹11,700 crore and its 100% stake in Tata Steel Colors for ₹16,300 crore.",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-dips-7-as-apl-apollo-tumbles-on-28000-crore-deal-hindalco-also-under-pressure/article71733581.ece",
+   "symbols": [
+    "TATASTEEL",
+    "HINDALCO"
+   ],
+   "symbol_keys": [
+    "TATASTEEL",
+    "HINDALCO"
+   ],
+   "keywords": [],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 8,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "4fb1b9950271",
+   "kind": "news",
+   "time": "2026-11-23T15:06+05:30",
+   "source": "NSE announcements",
+   "headline": "Coal India Limited: Change in Directors/KMP/SMP/Auditor/RTA",
+   "summary": "COAL INDIA LIMITED has informed the Exchange about Change in Directors/KMP/SMP/Auditor/RTA |SUBJECT: Change in Directors/KMP/SMP/Auditor/RTA",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/CIM_3691_WebXMLFile_20261123_150625489.xml",
+   "symbols": [
+    "COALINDIA"
+   ],
+   "symbol_keys": [
+    "COALINDIA"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "b8024135d3f5",
+   "kind": "news",
+   "time": "2026-11-23T15:06+05:30",
+   "source": "Business Standard",
+   "headline": "Milky Mist gains 5% on JM Financial's bullish call, up 140% from IPO price",
+   "summary": "The recently-listed stock has multiplied investors' wealth over a short span of time. Milk Mist's shares, which debuted in August this year, are up 142 per cent over the IPO price of ₹₹140 apiece.",
+   "link": "https://www.business-standard.com/markets/news/milky-mist-gains-5-on-jm-financial-s-bullish-call-up-140-from-ipo-price-126112300622_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "a6cfc2a8906c",
+   "kind": "news",
+   "time": "2026-11-23T15:00+05:30",
+   "source": "BSE announcements",
+   "headline": "Spice Islands Industries Ltd-$: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. Disclosure under Regulation 47 of the SEBI (LODR) Regulation, 2015 - Publication of Unaudited Financial Results for the quater and half year ended September 30, 2026 in Newspaper",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1f9fba10-bef5-4f00-9493-e7e3bcd99b7c.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "aed5dc6776fa",
+   "kind": "news",
+   "time": "2026-11-23T14:59+05:30",
+   "source": "BSE announcements",
+   "headline": "Pushpsons Industries Ltd: Intimation Regarding Dispatch Of Notice Of Postal Ballot - Disclosure Under Regulation 30 Of The SEBI (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('SEBI Listing Regulations')",
+   "summary": "Company Update. In respect of M/s Pushpsons Industries Limited",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/b36dc7e5-df94-43ac-b11b-e2a91775eb3d.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "8b0cb509fb02",
+   "kind": "news",
+   "time": "2026-11-23T14:57+05:30",
+   "source": "BSE announcements",
+   "headline": "Gammon India Ltd: Board Meeting Outcome for Intimation Under Regulation 30 (2) Of SEBI (Listing Obligation And Disclosure Requirement) Regulation, 2015 (SEBI LODR 2015) - Appointment Of Compliance Officer.",
+   "summary": "Others. Pursuant to Regulation 30 of the SEBI (Listing Obligations and Disclosures Requirements), Regulations, 2015, Section 203 of the Company Act, 2013 and regulation 6 (1) of SEBI LODR, 2015 ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/8ba401ce-ae56-4762-84f2-da01757d22ce.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "1cac7289ce61",
+   "kind": "news",
+   "time": "2026-11-23T14:56+05:30",
+   "source": "NSE announcements",
+   "headline": "Coal India Limited: Disclosure under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements), Regulations 2015-Change in Senior Management",
+   "summary": "Disclosure under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements), Regulations 2015-Change in Senior Management |SUBJECT: Appointment",
+   "link": "https://nsearchives.nseindia.com/corporate/COALINDIA_23112026145349_CISM230926.pdf",
+   "symbols": [
+    "COALINDIA"
+   ],
+   "symbol_keys": [
+    "COALINDIA"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "5909ceb49477",
+   "kind": "news",
+   "time": "2026-11-23T14:54+05:30",
+   "source": "BSE announcements",
+   "headline": "Syschem India Ltd: Announcement Under Regulation 30 Dated 23.10.2026",
+   "summary": "Company Update. Pursuant to regulation 30 of SEBI LODR, 2015 : 1. appointment of COO(Cheif operating officer) 2. appointment of director of the company",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/95097a8d-a758-4c9e-a912-cf237788f48d.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "10ee7043e97b",
+   "kind": "news",
+   "time": "2026-11-23T14:48+05:30",
+   "source": "NSE announcements",
+   "headline": "Madhya Bharat Agro Products Limited: Transcripts - earnings or quarterly calls",
+   "summary": "MADHYA BHARAT AGRO PRODUCTS LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_14179_WebXMLFile_20261123_144853286.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "1be3c9a0c412",
+   "kind": "news",
+   "time": "2026-11-23T14:48+05:30",
+   "source": "BSE announcements",
+   "headline": "Praj Industries Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Praj Industries Limited will be participating in Investor Conference, 'Kotak Midcap Conference 2026' organized by Kotak Securities Limited",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/62876ae7-bb96-487e-b1ca-15b047d3bd71.pdf",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "ce4330dcc06e",
+   "kind": "news",
+   "time": "2026-11-23T14:47+05:30",
+   "source": "BSE announcements",
+   "headline": "Coal India Ltd: Announcement under Regulation 30 (LODR)-Change in Management",
+   "summary": "Company Update. Appointment of Excecutive Director ( Co-ordination) and Executive Director (Contracts) in CIL w.e.f. 23.11.26",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/339c63f8-2286-424f-bdc2-54b450528f5d.pdf",
+   "symbols": [
+    "COALINDIA"
+   ],
+   "symbol_keys": [
+    "COALINDIA"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "7f621b70bba2",
+   "kind": "news",
+   "time": "2026-11-23T14:45+05:30",
+   "source": "BusinessLine",
+   "headline": "Dalmia Bharat board approves ₹700 crore share buyback at up to ₹1,850 per share",
+   "summary": "The company will buy back up to 37.83 lakh shares, representing 2.02% of its existing paid-up equity share capital",
+   "link": "https://www.thehindubusinessline.com/markets/dalmia-bharat-board-approves-700-crore-share-buyback-at-up-to-1850-per-share/article71734042.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "buyback"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "c62f498d1b2f",
+   "kind": "news",
+   "time": "2026-11-23T14:43+05:30",
+   "source": "BSE announcements",
+   "headline": "Solarworld Energy Solutions Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)",
+   "summary": "Others. Announcement under regulation 30 of SEBI LODR - Receipt of Purchase order for supply of Lithium-ion Batteries",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4c4e1069-3ae1-486d-b6ce-248b517a8c47.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "c0caf0b51e15",
+   "kind": "news",
+   "time": "2026-11-23T14:39+05:30",
+   "source": "BSE announcements",
+   "headline": "Hinduja Global Solutions Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Transcript of Earnings call held on November 16, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0aa11483-6bc3-461e-b16a-f6325bd96382.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "93c6d76c520e",
+   "kind": "news",
+   "time": "2026-11-23T14:31+05:30",
+   "source": "Business Standard",
+   "headline": "Dalmia Bharat pares losses to trade flat after ₹700-cr buyback announcement",
+   "summary": "Dalmia Bharat, the country's fourth-largest cement maker, has announced a share buyback programme, worth ₹700 crore via open-market route.",
+   "link": "https://www.business-standard.com/markets/news/dalmia-bharat-pares-losses-to-trade-flat-after-700-cr-buyback-announcement-126112300559_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "buyback"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "ff1ee53ce7bf",
+   "kind": "news",
+   "time": "2026-11-23T14:29+05:30",
+   "source": "BSE announcements",
+   "headline": "G. G. Dandekar Properties Ltd: Announcement under Regulation 30 (LODR)-Change in Registered Office Address",
+   "summary": "Company Update. This has reference to our intimation - voting results of the resolutions passed at the 87th AGM dated 4th September 2026. Pursuant to Regulation 30 of SEBI (LODR) Regulations, we are ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bf85f9ff-9eb7-4042-b505-bd396918d444.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "9c396d2369b2",
+   "kind": "news",
+   "time": "2026-11-23T14:29+05:30",
+   "source": "BSE announcements",
+   "headline": "Nova Iron & Steel Ltd: Board Meeting Intimation for Approval Of The Un-Audited Standalone Financial Results For The Quarter And Half Year Ended September 30, 2026.",
+   "summary": "Board Meeting. Nova Iron & Steel Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 30/11/2026 ,inter alia, to consider and approve Un-Audited Standalone Financial ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/469b8e4b-9164-46b5-8c6e-f73920505611.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "1d5ebf6f6a1b",
+   "kind": "news",
+   "time": "2026-11-23T14:27+05:30",
+   "source": "NSE announcements",
+   "headline": "Bank Of Baroda: CENTBANK FINANCIAL SERVICES LIMITED has informed the exchange for Bank Of Baroda regarding Security Cover Certificate of ISIN INE077A08098 for Q2 for the FY 2026-2027",
+   "summary": "CENTBANK FINANCIAL SERVICES LIMITED has informed the exchange for Bank Of Baroda regarding Security Cover Certificate of ISIN INE077A08098 for Q2 for the FY 2026-2027 |SUBJECT: Security Cover Certificate",
+   "link": "https://nsearchives.nseindia.com/corporate/CBFCL_23112026142724_Security_Cover_Certificate_BOB.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "d34e0c7bbc61",
+   "kind": "news",
+   "time": "2026-11-23T14:25+05:30",
+   "source": "NSE announcements",
+   "headline": "UCO Bank: CENTBANK FINANCIAL SERVICES LIMITED has informed the exchange for UCO Bank regarding Security Cover Certificate of ISIN INE691A08070 for Q2 for the FY 2026-2027",
+   "summary": "CENTBANK FINANCIAL SERVICES LIMITED has informed the exchange for UCO Bank regarding Security Cover Certificate of ISIN INE691A08070 for Q2 for the FY 2026-2027 |SUBJECT: Security Cover Certificate",
+   "link": "https://nsearchives.nseindia.com/corporate/CBFCL_23112026142517_Security_Cover_Certifiacte_UCO.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "de2369dd2591",
+   "kind": "news",
+   "time": "2026-11-23T14:25+05:30",
+   "source": "NSE announcements",
+   "headline": "UCO Bank: CENTBANK FINANCIAL SERVICES LIMITED has informed the exchange for UCO Bank regarding Security Cover Certificate of ISIN INE691A08088 for Q2 for the FY 2026-2027",
+   "summary": "CENTBANK FINANCIAL SERVICES LIMITED has informed the exchange for UCO Bank regarding Security Cover Certificate of ISIN INE691A08088 for Q2 for the FY 2026-2027 |SUBJECT: Security Cover Certificate",
+   "link": "https://nsearchives.nseindia.com/corporate/CBFCL_23112026142517_Security_Cover_Certifiacte_UCO.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "d7b0f75c3957",
+   "kind": "news",
+   "time": "2026-11-23T14:24+05:30",
+   "source": "NSE announcements",
+   "headline": "Natural Capsules Limited: Transcripts - earnings or quarterly calls",
+   "summary": "Natural Capsules Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_24719_WebXMLFile_20261123_142450598.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "e32a127ff9d4",
+   "kind": "news",
+   "time": "2026-11-23T14:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Tech Mahindra Limited: Record date for the purpose of Bonus is 30-Nov-2026.",
+   "summary": "Tech Mahindra Limited has informed the Exchange that Record date for the purpose of Bonus is 30-Nov-2026. |SUBJECT: Record Date",
+   "link": "https://nsearchives.nseindia.com/corporate/Apekshakhemka_23112026142123_SE_intimation_record_dateF_S.pdf",
+   "symbols": [
+    "TECHM"
+   ],
+   "symbol_keys": [
+    "TECHM"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "c2f127ebb4a8",
+   "kind": "news",
+   "time": "2026-11-23T14:21+05:30",
+   "source": "NSE announcements",
+   "headline": "Virtual Galaxy Infotech Limited: 'Submission of Financial Results in Machine-Readable and Searchable Format'.",
+   "summary": "Virtual Galaxy Infotech Limited has informed the Exchange regarding 'Submission of Financial Results in Machine-Readable and Searchable Format'. |SUBJECT: Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/VIRTUAL_23112026141928_Submission_of_Financial_Results_in_Machine-Readable.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "8f1444edc130",
+   "kind": "news",
+   "time": "2026-11-23T14:20+05:30",
+   "source": "BSE announcements",
+   "headline": "Tech Mahindra Ltd: The Company Has Fixed Monday, 30 November 2026 As The Record Date For The Purpose Of Determining The Eligibility Of The Equity Shareholders Of The Company For Issuance Of Bonus Equity Shares Of The Company.",
+   "summary": "Corp. Action. The Company has fixed Monday, 30 November 2026 as the Record Date for the purpose of determining the eligibility of the equity shareholders of the Company for Issuance of Bonus Equity Shares ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0c928116-6b3c-4d8f-bf24-abe0f8c77870.pdf",
+   "symbols": [
+    "TECHM"
+   ],
+   "symbol_keys": [
+    "TECHM"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "3dc758ea5f70",
+   "kind": "news",
+   "time": "2026-11-23T14:18+05:30",
+   "source": "BSE announcements",
+   "headline": "Trishakti Industries Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
+   "summary": "Company Update. Press Release issued by the Company in respect of Trishakti Industries Deploys CWIP Fleet into Operations, Expected to Drive Higher Revenue; Completes Rs 370 Crore Capex Programme.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a905b57d-aba5-4baa-9ca1-fad956bb2333.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "capex"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "bc68382762d6",
+   "kind": "news",
+   "time": "2026-11-23T14:18+05:30",
+   "source": "CNBC top news",
+   "headline": "Forget Anthropic: In Europe, the IPO hype is about a blue lagoon",
+   "summary": "Iceland’s famed Blue Lagoon geothermal spa is going public in a $110 million IPO, tapping investor interest in tourism and the booming wellness industry.",
+   "link": "https://www.cnbc.com/2026/11/20/anthropic-ipo-iceland-blue-lagoon.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "79b86aefdee5",
+   "kind": "news",
+   "time": "2026-11-23T14:08+05:30",
+   "source": "Business Standard",
+   "headline": "PTC Industries rebounds, up 3% from day's low on major defence order win",
+   "summary": "PTC Industries hit a high of ₹25,540 as against the day's low of ₹23,825 in Monday's intraday trade after the company said it secured a major Indian Defence Order for 400 tonnes of titanium products.",
+   "link": "https://www.business-standard.com/markets/news/ptc-industries-rebounds-up-3-from-day-s-low-on-major-defence-order-win-126112300539_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "order win"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
+  {
+   "id": "638aa4d6466c",
+   "kind": "news",
+   "time": "2026-11-23T14:02+05:30",
+   "source": "BSE announcements",
+   "headline": "DCB Bank Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
+   "summary": "Company Update. Pursuant to Regulation 30 of the SEBI Listing Regulations and other applicable provisions of SEBI Listing Regulations, this is to inform you that the representatives of DCB Bank Limited ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/15d03a88-3019-4c26-9fff-a785de857ca4.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T15:46+05:30"
+  },
   {
    "id": "e9c4469dfd5e",
    "kind": "news",
@@ -163,7 +1000,12 @@
    "score": 8,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: Tata Steel's long-run downstream volume and APL's promoters (premium exit); no clear public-shareholder winner if the open offer is priced below market.",
+    "Losers: APL Apollo (APLAPOLLO) minority holders: the headline argues for earnings downgrades and a lower multiple once promoters sell and Tata becomes the controlling owner (article body not read; Moneycontrol analyst view). Tata Steel (TATASTEEL) on funding and integration cost, per [9d1d3c869d15].",
+    "Catalyst: scheduled follow-up - open-offer window and any broker rating changes; dates unknown to me.",
+    "Thesis fit: none (opinion piece on an event already priced; no draft)"
+   ],
    "first_seen": "2026-11-23T13:53+05:30"
   },
   {
@@ -210,7 +1052,12 @@
    "score": 10,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: same event as [9d1d3c869d15] and [4cd2fed2e6bc]; see those notes. Block-deal buyers who took the stock at the lower price; the open-offer price stays the reference level for APL public holders.",
+    "Losers: APL Apollo (APLAPOLLO) holders who sold into the block, and Tata Steel (TATASTEEL), which carries the stake purchase plus a mandatory open offer. Peers in tubes and coated steel (JINDALSAW, HITECH, SURYAROSNI) as in [ebf86f5aeb1e]; mechanism inferred, not confirmed.",
+    "Catalyst: scheduled follow-up - open-offer window (public announcement filed, see [c299b877814e]); dates not read. The sell-off is already in prices.",
+    "Thesis fit: none (no draft: move already in prices, offer terms unread)."
+   ],
    "first_seen": "2026-11-23T13:53+05:30"
   },
   {
@@ -436,7 +1283,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: this is the open-offer public announcement for APL Apollo Tubes, filed by Kotak Mahindra Capital as manager to the offer; KOTAKBANK is not a party to the deal. It is the dated follow-up to [ebf86f5aeb1e]; the zip with offer price and dates could not be opened here."
+   ],
    "first_seen": "2026-11-23T13:53+05:30"
   },
   {
@@ -2430,7 +3279,7 @@
    "kind": "price",
    "time": "2026-11-23T09:46+05:30",
    "source": "Yahoo quotes",
-   "headline": "TATASTEEL -8.9% vs previous close, volume 5.8x 20-day average (close 162.11, bar 2026-11-23)",
+   "headline": "TATASTEEL -8.4% vs previous close, volume 6.9x 20-day average (close 163.0, bar 2026-11-23)",
    "summary": "Headlines this run: Tata Steel Limited: Disclosure Under Regulation 51 | Tata Steel Limited: Press Release | Tata Steel Limited: Investor Presentation",
    "link": "https://finance.yahoo.com/quote/TATASTEEL.NS",
    "symbols": [
@@ -2454,8 +3303,8 @@
     "Catalyst: surprise - same event as [ebf86f5aeb1e].",
     "Thesis fit: none"
    ],
-   "change_pct": -8.93,
-   "volume_x": 5.82,
+   "change_pct": -8.43,
+   "volume_x": 6.91,
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -2550,985 +3399,6 @@
    ],
    "change_pct": -16.11,
    "volume_x": 1.69,
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "c0d3920c2a71",
-   "kind": "news",
-   "time": "2026-11-23T09:46+05:30",
-   "source": "NSE announcements",
-   "headline": "Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF: the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on November 20, 2026 is Rs. 48.38.",
-   "summary": "MOIPO : Motilal Oswal Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on November 20, 2026 is Rs. 48.38. |SUBJECT: Declaration",
-   "link": "",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T11:48+05:30"
-  },
-  {
-   "id": "329ea74c7735",
-   "kind": "news",
-   "time": "2026-11-23T09:38+05:30",
-   "source": "Business Standard",
-   "headline": "APL Apollo tanks 15% on Tata Steel deal: Why analysts see near-term pain",
-   "summary": "Upon the completion of the transaction and after the close of the open offer by Tata Steel, the consolidated APL Apollo will comprise a 7.5 MTPA Steel Tubes and Colour Coated capacity.",
-   "link": "https://www.business-standard.com/markets/news/apl-apollo-tanks-10-tata-steel-5-on-28k-cr-deal-what-it-means-for-cos-126112300182_1.html",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T11:48+05:30"
-  },
-  {
-   "id": "0e6fd29b0b65",
-   "kind": "news",
-   "time": "2026-11-23T09:34+05:30",
-   "source": "NSE announcements",
-   "headline": "Larsen & Toubro Limited: Bagging/Receiving of orders/contracts",
-   "summary": "Larsen & Toubro Limited has informed the Exchange about Bagging/Receiving of orders/contracts |SUBJECT: Bagging/Receiving of orders/contracts",
-   "link": "https://nsearchives.nseindia.com/corporate/PAM_23112026093338_PressRelease23112026.pdf",
-   "symbols": [
-    "LT"
-   ],
-   "symbol_keys": [
-    "LT"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "4837c911f97f",
-   "kind": "news",
-   "time": "2026-11-23T09:30+05:30",
-   "source": "BSE announcements",
-   "headline": "Larsen & Toubro Ltd: Announcement under Regulation 30 (LODR)-Award of Order Receipt of Order",
-   "summary": "Company Update. Larsen & Toubro Secures (Large*) Order for Deploying AI Cluster",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6961c994-01be-4b8d-85ac-5c857530ea43.pdf",
-   "symbols": [
-    "LT"
-   ],
-   "symbol_keys": [
-    "LT"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "3887db44bfa1",
-   "kind": "news",
-   "time": "2026-11-23T09:26+05:30",
-   "source": "BSE announcements",
-   "headline": "Dilip Buildcon Ltd: Announcement under Regulation 30 (LODR) - Bagging/receiving of order(s) or contract(s)",
-   "summary": "Others. Dilip Buildcon Limited has received Letter of Award for 'Development of Satellite Township Phase-l, Package- 3 (Group Housing 02) including allied works at Rakh Gund Aksha, Bemina, Srinagar ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/22a6bb3d-8453-4bbd-90d4-143ebba7e3c9.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "order win"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "b2f5cb50e115",
-   "kind": "news",
-   "time": "2026-11-23T09:24+05:30",
-   "source": "BSE announcements",
-   "headline": "Indo Farm Equipment Ltd: Regulation 30 Of The SEBI (LODR) Regulations, 2015 ('Listing Regulations')- Increase In 'Promoter/Promoter Group' Shareholding In The Company.",
-   "summary": "Company Update. Regulation 30 of the SEBI (LODR) Regulation, 2015-Increase in Promoter/Promoter Group'' Shareholding in the Company.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ced05273-5f88-4fe8-af15-22dfc97de09a.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "9d520ccc6843",
-   "kind": "news",
-   "time": "2026-11-23T09:16+05:30",
-   "source": "NSE announcements",
-   "headline": "Mirae Asset Mutual Fund - Mirae Asset BSE 500 Dividend Leaders 50 ETF: the Net Asset Value (per unit) of Mirae Asset Mutual Fund - Mirae Asset BSE 500 Dividend Leaders 50 ETF as on November 20, 2026 is Rs. 35.2275.",
-   "summary": "DIVIDEND : Mirae Asset Investment Managers (India) Private Limited has informed the Exchange that the Net Asset Value (per unit) of Mirae Asset Mutual Fund - Mirae Asset BSE 500 Dividend Leaders 50 ETF as on November 20, 2026 is Rs. 35.2275",
-   "link": "",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "436dd3d056d2",
-   "kind": "news",
-   "time": "2026-11-23T09:16+05:30",
-   "source": "NSE announcements",
-   "headline": "Mirae Asset Mutual Fund - Mirae Asset BSE Select IPO ETF: the Net Asset Value (per unit) of Mirae Asset Mutual Fund - Mirae Asset BSE Select IPO ETF as on November 20, 2026 is Rs. 48.3474.",
-   "summary": "SELECTIPO : Mirae Asset Investment Managers (India) Private Limited has informed the Exchange that the Net Asset Value (per unit) of Mirae Asset Mutual Fund - Mirae Asset BSE Select IPO ETF as on November 20, 2026 is Rs. 48.3474. |SUBJECT: ",
-   "link": "",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "572abe78d3f6",
-   "kind": "news",
-   "time": "2026-11-23T09:16+05:30",
-   "source": "NSE announcements",
-   "headline": "Mirae Asset BSE LargeMid (60:40) Stable Dividend 50 ETF: the Net Asset Value (per unit) of Mirae Asset BSE LargeMid (60:40) Stable Dividend 50 ETF as on November 20, 2026 is Rs. 38.2835.",
-   "summary": "Mirae Asset Investment Managers (India) Private Limited has informed the Exchange that the Net Asset Value (per unit) of Mirae Asset BSE LargeMid (60:40) Stable Dividend 50 ETF as on November 20, 2026 is Rs. 38.2835. |SUBJECT: Declaration o",
-   "link": "",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "dividend"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "9903f68ec5f0",
-   "kind": "news",
-   "time": "2026-11-23T08:56+05:30",
-   "source": "BSE announcements",
-   "headline": "L&T Technology Services Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. L&T Technology Services Limited has informed the Exchange regarding a press release dated November 23, 2026, titled \"L&T Technology Services Launches SDVault.ai to Bring Engineering Intelligence ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/36adb4a7-cedb-4217-8d95-3ef9ab622457.pdf",
-   "symbols": [
-    "LT"
-   ],
-   "symbol_keys": [
-    "LT"
-   ],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: L&T Technology Services (LTTS, a subsidiary of Larsen & Toubro, LT) - a small product launch aimed at automotive software-defined-vehicle testing; revenue effect likely small.",
-    "Losers: none clear - rival engineering-services firms (Tata Elxsi TATAELXSI, KPIT Technologies KPITTECH) compete in the same niche, but one launch is not evidence of share loss.",
-    "Catalyst: surprise - a press release with no dated follow-up; the matched symbol LT is the parent, not LTTS, so the scanner match is loose.",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "32b77f845581",
-   "kind": "news",
-   "time": "2026-11-23T08:55+05:30",
-   "source": "NSE announcements",
-   "headline": "L&T Technology Services Limited: a press release dated November 23, 2026, titled \"L&T Technology Services Launches SDVault.ai to Bring Engineering Intelligence to the Software-Defined Vehicle V-Cycle\".",
-   "summary": "L&T Technology Services Limited has informed the Exchange regarding a press release dated November 23, 2026, titled \"L&T Technology Services Launches SDVault.ai to Bring Engineering Intelligence to the Software-Defined Vehicle V-Cycle\". |SU",
-   "link": "https://nsearchives.nseindia.com/corporate/LTTS_23112026085541_23112026LTTSPRessreleasesd.pdf",
-   "symbols": [
-    "LT"
-   ],
-   "symbol_keys": [
-    "LT"
-   ],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "7088ee9e1cc1",
-   "kind": "news",
-   "time": "2026-11-23T08:50+05:30",
-   "source": "ET Markets",
-   "headline": "Rupee could rise to 91.50/$ on equity inflows, says HDFC Bank's treasury head",
-   "summary": "The Indian rupee is experiencing a noteworthy appreciation, fueled by solid equity investment and lesser geopolitical uncertainties. Experts foresee further strengthening, potentially reaching 91.50 against the US dollar. A rate hike by the",
-   "link": "https://economictimes.indiatimes.com/markets/forex/rupee-could-rise-to-91-50/-on-equity-inflows-says-hdfc-banks-treasury-head/articleshow/136088042.cms",
-   "symbols": [
-    "HDFCBANK"
-   ],
-   "symbol_keys": [
-    "HDFCBANK"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "94d78b196aaf",
-   "kind": "news",
-   "time": "2026-11-23T08:43+05:30",
-   "source": "BSE announcements",
-   "headline": "Lords Mark Industries Ltd: Intimation Titled 'LMIL Unlocks Commercial Launch Of Radiation-Free Breast Cancer Screening Device With Official Manufacturing License'.",
-   "summary": "Company Update. Intimation about launch of Radiation Free Breast Cancer screening device",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7eb23049-e3d8-402e-96e8-1948214e0984.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "85e15d5cb87d",
-   "kind": "news",
-   "time": "2026-11-23T08:30+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: Disclosure Under Regulation 51",
-   "summary": "Disclosure Under Regulation 51 |SUBJECT: Disclosure Under Regulation 51",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/NIDHIFADNAVIS_23112026083017_BSENSE_IRPR.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: see ebf86f5aeb1e.",
-    "Losers: none clear (routine LODR disclosure tied to the same transaction).",
-    "Catalyst: surprise - follow-on disclosure of the APL Apollo deal.",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "c8fcde127232",
-   "kind": "news",
-   "time": "2026-11-23T08:29+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: Press Release",
-   "summary": "Press Release |SUBJECT: Press Release",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/NIDHIFADNAVIS_23112026082907_BSENSE_IRPR.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: see ebf86f5aeb1e.",
-    "Losers: none clear (same press release, different filing).",
-    "Catalyst: surprise - duplicate of the APL Apollo deal announcement.",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "029f6fa7b111",
-   "kind": "news",
-   "time": "2026-11-23T08:27+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
-   "summary": "Company Update. Please find enclosed the Investor Presentation to be presented to analysts/investors at the investor call scheduled today.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/60bf73b2-f86e-42e5-a0aa-22f361c13e57.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: see ebf86f5aeb1e; deck explains the 15.5 Mt tubes and colour-coated capacity target.",
-    "Losers: none clear (presentation adds no new loser beyond the first note).",
-    "Catalyst: scheduled - analyst/investor meet on the deal (see 25e0f8141783).",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "f9763a62bb48",
-   "kind": "news",
-   "time": "2026-11-23T08:25+05:30",
-   "source": "ET Markets",
-   "headline": "HDFC Bank among 5 stocks showing White Marubozu pattern",
-   "summary": "Five Nifty200 stocks featured in StockEdge’s White Marubozu bullish scanner on November 23, indicating strong buying momentum during the session, with prices moving higher from the opening level to the close.",
-   "link": "https://economictimes.indiatimes.com/markets/stocks/news/hdfc-bank-among-5-stocks-showing-white-marubozu-pattern/slideshow/136087788.cms",
-   "symbols": [
-    "HDFCBANK"
-   ],
-   "symbol_keys": [
-    "HDFCBANK"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "25e0f8141783",
-   "kind": "news",
-   "time": "2026-11-23T08:23+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. Intimation of Investor Call",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f63b5c82-f041-4b4a-8e80-56236321870b.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: see ebf86f5aeb1e.",
-    "Losers: none clear (meeting intimation only).",
-    "Catalyst: scheduled - investor call on the APL Apollo deal; management Q&A may clarify open-offer terms.",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "f35cf7c13eda",
-   "kind": "news",
-   "time": "2026-11-23T08:22+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: Investor Presentation",
-   "summary": "Tata Steel Limited has informed the Exchange about Investor Presentation |SUBJECT: Investor Presentation",
-   "link": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026082123_BSENSEPRIR.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: see ebf86f5aeb1e.",
-    "Losers: none clear (duplicate filing).",
-    "Catalyst: scheduled - same investor meet as 25e0f8141783.",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "680dc8abd199",
-   "kind": "news",
-   "time": "2026-11-23T08:20+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: Schedule of meet",
-   "summary": "Tata Steel Limited has informed the Exchange about Schedule of meet |SUBJECT: Analysts/Institutional Investor Meet/Con. Call Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026081952_BSENSEPRIR.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "fa4a77a4634c",
-   "kind": "news",
-   "time": "2026-11-23T08:19+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release",
-   "summary": "Company Update. Please find enclosed the press release titled ''Tata Steel and Promoters of APL Apollo Enter into a Comprehensive Agreement to Build an Indian Steel Tubes and Colour Coated Products Powerhouse ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/54e6c463-0cfd-460d-af38-cee7a37ec5c4.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 8,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: see ebf86f5aeb1e (Tata Steel / APL Apollo promoters agreement).",
-    "Losers: none clear (no new information beyond the first note).",
-    "Catalyst: surprise - duplicate filing of the APL Apollo agreement press release.",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "56e67f186066",
-   "kind": "news",
-   "time": "2026-11-23T08:16+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: a press release dated November 23, 2026, titled \"Tata Steel and Promoters of APL Apollo Enter into a Comprehensive Agreement to Build an Indian Steel Tubes and Colour Coated Products Powerhouse Targeting 15.5 Million Tonnes of Capacity\".",
-   "summary": "Tata Steel Limited has informed the Exchange regarding a press release dated November 23, 2026, titled \"Tata Steel and Promoters of APL Apollo Enter into a Comprehensive Agreement to Build an Indian Steel Tubes and Colour Coated Products Po",
-   "link": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026081530_BSENSEPRIR.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [
-    "enters/launches business"
-   ],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 8,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: same event as [ebf86f5aeb1e]; see that note.",
-    "Losers: none clear beyond [ebf86f5aeb1e]. Press release only.",
-    "Catalyst: surprise - same event as [ebf86f5aeb1e].",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "8778595af566",
-   "kind": "news",
-   "time": "2026-11-23T08:02+05:30",
-   "source": "Business Standard",
-   "headline": "Stocks to watch: Tata Steel, Waaree, Adani Energy, Maruti, IndusInd Bank",
-   "summary": "Several stocks are likely to remain in focus on Monday following key corporate announcements, major deal approvals, fresh order wins, regulatory updates and business expansion plans.",
-   "link": "https://www.business-standard.com/markets/news/stocks-to-watch-tata-steel-waaree-adani-energy-maruti-indusind-bank-126112300090_1.html",
-   "symbols": [
-    "TATASTEEL",
-    "MARUTI",
-    "WAAREEENER"
-   ],
-   "symbol_keys": [
-    "TATASTEEL",
-    "MARUTI",
-    "WAAREEENER"
-   ],
-   "keywords": [
-    "round-up"
-   ],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "9f8ea4febf14",
-   "kind": "news",
-   "time": "2026-11-23T07:48+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Outcome Of Board Meeting Of Tata Steel Limited",
-   "summary": "Company Update. Outcome of Board Meeting of Tata Steel Limited",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/9ca0cd91-9706-4fe0-bea5-fff5453f7095.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "8cdd51dcd2cf",
-   "kind": "news",
-   "time": "2026-11-23T07:43+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: Updates",
-   "summary": "Updates |SUBJECT: Updates",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/NIDHIFADNAVIS_23112026074247_BSENSE.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "af810e492e0c",
-   "kind": "news",
-   "time": "2026-11-23T07:40+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Outcome Of Board Meeting Of Tata Steel Limited Held On November 23, 2026",
-   "summary": "Company Update. Outcome of Board Meeting of Tata Steel Limited held on November 23, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/493cd1be-44dc-4a63-9b2a-5286b7bc9669.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "7baa23c0c461",
-   "kind": "news",
-   "time": "2026-11-23T07:39+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: approval of Open Offer",
-   "summary": "Tata Steel Limited has informed the Exchange about approval of Open Offer |SUBJECT: General Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026073828_BSENSE.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 8,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: same event as [ebf86f5aeb1e]; see that note.",
-    "Losers: none clear beyond [ebf86f5aeb1e]. Board approval of the open offer is the procedural step for the same deal; the offer price and dates are in the PDF, which could not be opened here.",
-    "Catalyst: scheduled follow-up (open-offer window), dates not read.",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "ebf86f5aeb1e",
-   "kind": "news",
-   "time": "2026-11-23T07:35+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: acquisition of equity stake in APL Apollo Tubes Limited",
-   "summary": "Tata Steel Limited has informed the Exchange about acquisition of equity stake in APL Apollo Tubes Limited |SUBJECT: Acquisition",
-   "link": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026073427_BSENSE.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [
-    "stake sale",
-    "M&A"
-   ],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 11,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: APL Apollo promoters (a premium exit, with a mandatory open offer for public holders) and, in the long run, Tata Steel's downstream tubes and colour-coated volume (press release targets 15.5 Mt capacity). The filing PDFs could not be opened here, so price, stake size and open-offer terms are unverified.",
-    "Losers: other listed structural-tube and coated-steel makers (Jindal Saw JINDALSAW, Hi-Tech Pipes HITECH, Surya Roshni SURYAROSNI, JSW Steel JSWSTEEL in coated products) lose their position as APL's main independent supplier-customer competitor, as Tata Steel's raw-material and distribution backing sharpens APL's pricing. Tata Steel itself is down about 4% on funding and execution worries (see [9d1d3c869d15]). Mechanism inferred, not confirmed from the filing.",
-    "Catalyst: surprise - announced before the open, with a dated follow-up still to come (open-offer letter and offer window); dates unknown to me.",
-    "Thesis fit: none. No draft: event already in prices at the open, deal terms unread, and the open-offer timeline is missing, so the checklist cannot be answered concretely."
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "62933a463ef5",
-   "kind": "news",
-   "time": "2026-11-23T07:33+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Acquisition",
-   "summary": "Company Update. Outcome of Board Meeting of Tata Steel Limited held on November 23, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/f92992e1-1a6c-4cbd-ae41-73454c54236c.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 8,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [
-    "Winner: same event as [ebf86f5aeb1e]; see that note.",
-    "Losers: none clear beyond [ebf86f5aeb1e]. BSE copy of the acquisition disclosure.",
-    "Catalyst: surprise - same event as [ebf86f5aeb1e].",
-    "Thesis fit: none"
-   ],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "197f4272d4e4",
-   "kind": "news",
-   "time": "2026-11-23T07:32+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: Outcome of Board Meeting",
-   "summary": "Outcome of Board Meeting |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/content/debt/WDM/NIDHIFADNAVIS_23112026073148_BSENSE.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "0de876f08a29",
-   "kind": "news",
-   "time": "2026-11-23T07:31+05:30",
-   "source": "NSE announcements",
-   "headline": "Tata Steel Limited: Outcome of Board Meeting held on November 23, 2026.",
-   "summary": "Tata Steel Limited has informed the Exchange regarding Outcome of Board Meeting held on November 23, 2026. |SUBJECT: Outcome of Board Meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026073027_BSENSE.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "ecd86d71c1e5",
-   "kind": "news",
-   "time": "2026-11-23T07:31+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Board Meeting Outcome for Outcome Of Board Meeting Of Tata Steel Limited",
-   "summary": "Others. Outcome of Board Meeting of Tata Steel Limited held on November 23, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/868d59db-6c59-44fc-b6f7-9970976c7fd9.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "568081c6ff04",
-   "kind": "news",
-   "time": "2026-11-23T06:59+05:30",
-   "source": "BusinessLine",
-   "headline": "Stocks to watch, Nov 23: Tata Steel, APL Apollo Tubes, IndusInd Bank, NSE, Adani Energy, Waaree Energies, Premier Explosives, Maruti Suzuki, Texmaco Rail, RVNL, Ashoka Buildcon",
-   "summary": "Tata Steel moves to unlock value with downstream sale; IndusInd under new scrutiny post-controversy; regulatory tightenings on algo trading; and fresh orders and renewables deals shaping a volatile week for Indian equities.",
-   "link": "https://www.thehindubusinessline.com/markets/stock-markets/stocks-to-watch-nov-23-tata-steel-apl-apollo-tubes-indusind-bank-nse-adani-energy-waaree-energies-premier-explosives-maruti-suzuki-texmaco-rail-rvnl-ashoka-buildcon/article71733190.ece",
-   "symbols": [
-    "WAAREEENER",
-    "MARUTI",
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "WAAREEENER",
-    "MARUTI",
-    "TATASTEEL"
-   ],
-   "keywords": [
-    "round-up"
-   ],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 5,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "b05111e9eed1",
-   "kind": "news",
-   "time": "2026-11-22T21:23+05:30",
-   "source": "BSE announcements",
-   "headline": "Annvrridhhi Ventures Ltd: Board Meeting Intimation for Un-Audited Financial Results Of The Company For The Quarter Ended On 30Th September, 2026",
-   "summary": "Board Meeting. Annvrridhhi Ventures Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 26/11/2026 ,inter alia, to consider and approve 1. The Un-audited Financial ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fd690f9b-9bc3-4907-9366-df540b718e3f.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "59747faa9b2d",
-   "kind": "news",
-   "time": "2026-11-22T20:36+05:30",
-   "source": "BSE announcements",
-   "headline": "Melstar Information Technologies Ltd: Announcement under Regulation 30 (LODR)-Acquisition",
-   "summary": "Company Update. Melstarr Fintech Private Limited ('Wholly Owned Subsidiary') of Melstar Information Technologies Limited ('The Company') has acquired a 50% stake and has been admitted as a partner in newly ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/6109b44e-01f6-4d85-a143-ce25532264dc.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "stake sale",
-    "M&A"
-   ],
-   "moving": [],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "367c8082150d",
-   "kind": "news",
-   "time": "2026-11-22T20:24+05:30",
-   "source": "BusinessLine",
-   "headline": "SEBI starts work on network to train independent directors",
-   "summary": "Regulator expects demand for boardroom talent to rise with start-up growth and a likely increase in IPOs over the next decade",
-   "link": "https://www.thehindubusinessline.com/markets/sebi-starts-work-on-network-to-train-independent-directors/article71731685.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "6f80342cf0ec",
-   "kind": "news",
-   "time": "2026-11-22T19:20+05:30",
-   "source": "BSE announcements",
-   "headline": "APL Apollo Tubes Ltd: Announcement under Regulation 30 (LODR)-Acquisition",
-   "summary": "Company Update. Disclosure under Regulation 30- Acquisition",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/5731aa6e-266d-4753-ad3e-1a1be0318114.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "8380d475c776",
-   "kind": "news",
-   "time": "2026-11-22T19:09+05:30",
-   "source": "BSE announcements",
-   "headline": "Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Diversification / Disinvestment",
-   "summary": "Company Update. Outcome of Board Meeting of Tata Steel Limited",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/dc39d04e-0db0-49cb-8433-cc7e201e65bd.pdf",
-   "symbols": [
-    "TATASTEEL"
-   ],
-   "symbol_keys": [
-    "TATASTEEL"
-   ],
-   "keywords": [],
-   "moving": [
-    "TATASTEEL"
-   ],
-   "score": 6,
-   "high": true,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "2f33b0fc97af",
-   "kind": "news",
-   "time": "2026-11-22T17:15+05:30",
-   "source": "BusinessLine",
-   "headline": "IPO Street set for year-end revival; 29 firms eye ₹42,000 crore as sentiment improves",
-   "summary": "Despite the recent global equity market sell-off, Indian markets have remained relatively resilient, helping restore investor confidence",
-   "link": "https://www.thehindubusinessline.com/markets/ipo-street-set-for-year-end-revival-29-firms-eye-42000-crore-as-sentiment-improves/article71731112.ece",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "IPO"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T09:46+05:30"
-  },
-  {
-   "id": "05fbf199d853",
-   "kind": "news",
-   "time": "2026-11-22T14:39+05:30",
-   "source": "BSE announcements",
-   "headline": "Adani Energy Solutions Ltd: Announcement under Regulation 30 (LODR)-Acquisition",
-   "summary": "Company Update. Acquisition of 100% Equity Shares of Vikramshila Power Transmission Limited",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/0205795e-6018-4aee-9a2c-82227cd2e201.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "M&A"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
    "first_seen": "2026-11-23T09:46+05:30"
   }
  ]
