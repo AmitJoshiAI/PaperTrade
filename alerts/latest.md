@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-23 15:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-23 19:03 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -27,7 +27,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 10
 - Alert id: 54faf8c0014a
-- Second-order candidates: 
+- Second-order candidates: Winner: same event as [69be225db660]; block-deal buyers who took the stock at the lower price. / Losers: none clear beyond [69be225db660] (APLAPOLLO holders, TATASTEEL); the move has deepened from 10% to 22% on APL since the first version. / Catalyst: surprise - same event as [ebf86f5aeb1e]; open-offer window still ahead, dates not read. / Thesis fit: none (move already in prices, offer terms unread, so no draft)
 
 ## 3. [10 HIGH] APL Apollo Tubes shares plunge 20%, Tata Steel falls 8.5% as Rs 5,825 crore block deal follows acquisition news
 
@@ -65,7 +65,19 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9d1d3c869d15
 - Second-order candidates: Winner: block-deal buyers entering at the lower price; the open-offer price becomes the reference level for APL holders. / Losers: APL Apollo (APLAPOLLO) holders who sold into the block, and Tata Steel (TATASTEEL), because it takes on a large stake purchase plus an open offer, which raises capital needs and integration risk. One search found only a pre-deal report of a Gupta-family stake sale of about 28%, valued above Rs 32,000 crore with open offer; nothing confirming this block deal. / Catalyst: surprise - same-day block deal after the announcement; the next dated trigger is the open-offer window, not yet known to me. / Thesis fit: none (price move already in; no draft).
 
-## 6. [8 HIGH] Tata Steel dips 7% as APL Apollo plunge on ₹28,000 cr deal; Hindalco under pressure
+## 6. [8 HIGH] Tata Steel Limited: Acquisition (including agreement to acquire)
+
+- Time: 2026-11-23 17:55 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_234_WebXMLFile_20261123_175522724.xml
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: M&A
+- Thesis match: none
+- Score: 8
+- Alert id: e33b5b7a5ad0
+- Second-order candidates: 
+
+## 7. [8 HIGH] Tata Steel dips 7% as APL Apollo plunge on ₹28,000 cr deal; Hindalco under pressure
 
 - Time: 2026-11-23 15:08 IST
 - Source: BusinessLine
@@ -75,9 +87,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 6077b03ce8e0
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear; see [ebf86f5aeb1e]. / Losers: Tata Steel (TATASTEEL) on funding and open-offer burden; Hindalco (HINDALCO) is named as "under pressure" in the article but no deal mechanism is given, so treat it as sector tone, not a loser. / Catalyst: surprise - same event as [ebf86f5aeb1e]. / Thesis fit: none
 
-## 7. [8 HIGH] ‘Tata Steel deal negative for APL Apollo Tubes minority shareholders; co faces earnings downgrades, derating’
+## 8. [8 HIGH] ‘Tata Steel deal negative for APL Apollo Tubes minority shareholders; co faces earnings downgrades, derating’
 
 - Time: 2026-11-23 13:53 IST
 - Source: Moneycontrol
@@ -89,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 00aaa509d27f
 - Second-order candidates: Winner: Tata Steel's long-run downstream volume and APL's promoters (premium exit); no clear public-shareholder winner if the open offer is priced below market. / Losers: APL Apollo (APLAPOLLO) minority holders: the headline argues for earnings downgrades and a lower multiple once promoters sell and Tata becomes the controlling owner (article body not read; Moneycontrol analyst view). Tata Steel (TATASTEEL) on funding and integration cost, per [9d1d3c869d15]. / Catalyst: scheduled follow-up - open-offer window and any broker rating changes; dates unknown to me. / Thesis fit: none (opinion piece on an event already priced; no draft)
 
-## 8. [8 HIGH] Tata Steel dips 7% as APL Apollo tumbles on ₹28,000 crore deal; Hindalco also under pressure
+## 9. [8 HIGH] Tata Steel dips 7% as APL Apollo tumbles on ₹28,000 crore deal; Hindalco also under pressure
 
 - Time: 2026-11-23 11:28 IST
 - Source: BusinessLine
@@ -101,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b0b408be6421
 - Second-order candidates: Winner: none clear. Deal value of Rs 28,000 crore is the headline figure; the filing itself was not readable here. / Losers: Hindalco (HINDALCO) is named as "also under pressure" but the article gives no mechanism I could verify (likely sector or index drag, not deal exposure); JSW Steel (JSWSTEEL) and Jindal Saw (JINDALSAW) face a better-funded coated/tubes rival. Mechanism inferred, not confirmed. / Catalyst: surprise - same event as [ebf86f5aeb1e]; follow-ups are the investor meet and the open-offer window. / Thesis fit: none
 
-## 9. [8 HIGH] Tata Steel vs JSW Steel vs Hind Zinc: Which stock looks stronger on charts?
+## 10. [8 HIGH] Tata Steel vs JSW Steel vs Hind Zinc: Which stock looks stronger on charts?
 
 - Time: 2026-11-23 10:00 IST
 - Source: Business Standard
@@ -113,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: b2162b9c0cb8
 - Second-order candidates: False match: technical-analysis round-up of three metal stocks, not a company event; no catalyst.
 
-## 10. [8 HIGH] Tata Steel to buy $1.67 billion stake in India’s largest steel pipe maker; shares plunge nearly 5%
+## 11. [8 HIGH] Tata Steel to buy $1.67 billion stake in India’s largest steel pipe maker; shares plunge nearly 5%
 
 - Time: 2026-11-23 09:56 IST
 - Source: CNBC top news
@@ -125,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 807e7a7961dc
 - Second-order candidates: Winner: same event as [ebf86f5aeb1e]; the $1.67 billion figure is the stake price reported by CNBC. / Losers: none clear beyond [ebf86f5aeb1e]. / Catalyst: surprise - international coverage of the same announcement. / Thesis fit: none
 
-## 11. [8 HIGH] TATASTEEL -8.4% vs previous close, volume 6.9x 20-day average (close 163.0, bar 2026-11-23)
+## 12. [8 HIGH] TATASTEEL -8.4% vs previous close, volume 6.9x 20-day average (close 163.0, bar 2026-11-23)
 
 - Time: 2026-11-23 09:46 IST
 - Source: Yahoo quotes
@@ -137,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c4a0489cbb72
 - Second-order candidates: Winner: none clear; see [ebf86f5aeb1e]. / Losers: Tata Steel itself - the fall is the market's reaction to the APL Apollo deal (stake purchase plus open offer), with volume 3.9x average showing forced selling rather than drift. / Catalyst: surprise - same event as [ebf86f5aeb1e]. / Thesis fit: none
 
-## 12. [8 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
+## 13. [8 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
 
 - Time: 2026-11-23 08:19 IST
 - Source: BSE announcements
@@ -149,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fa4a77a4634c
 - Second-order candidates: Winner: see ebf86f5aeb1e (Tata Steel / APL Apollo promoters agreement). / Losers: none clear (no new information beyond the first note). / Catalyst: surprise - duplicate filing of the APL Apollo agreement press release. / Thesis fit: none
 
-## 13. [8 HIGH] Tata Steel Limited: a press release dated November 23, 2026, titled "Tata Steel and Promoters of APL Apollo Enter into a Comprehensive Agreement to Build an Indian Steel Tubes and Colour Coated Products Powerhouse Targeting 15.5 Million Tonnes of Capacity".
+## 14. [8 HIGH] Tata Steel Limited: a press release dated November 23, 2026, titled "Tata Steel and Promoters of APL Apollo Enter into a Comprehensive Agreement to Build an Indian Steel Tubes and Colour Coated Products Powerhouse Targeting 15.5 Million Tonnes of Capacity".
 
 - Time: 2026-11-23 08:16 IST
 - Source: NSE announcements
@@ -161,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 56e67f186066
 - Second-order candidates: Winner: same event as [ebf86f5aeb1e]; see that note. / Losers: none clear beyond [ebf86f5aeb1e]. Press release only. / Catalyst: surprise - same event as [ebf86f5aeb1e]. / Thesis fit: none
 
-## 14. [8 HIGH] Tata Steel Limited: approval of Open Offer
+## 15. [8 HIGH] Tata Steel Limited: approval of Open Offer
 
 - Time: 2026-11-23 07:39 IST
 - Source: NSE announcements
@@ -172,15 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 8
 - Alert id: 7baa23c0c461
 - Second-order candidates: Winner: same event as [ebf86f5aeb1e]; see that note. / Losers: none clear beyond [ebf86f5aeb1e]. Board approval of the open offer is the procedural step for the same deal; the offer price and dates are in the PDF, which could not be opened here. / Catalyst: scheduled follow-up (open-offer window), dates not read. / Thesis fit: none
-
-## 15. [8 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Acquisition
-
-- Time: 2026-11-23 07:33 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f92992e1-1a6c-4cbd-ae41-73454c54236c.pdf
-- Matched symbols: TATASTEEL (moving today: TATASTEEL)
-- Keywords: M&A
-- Thesis match: none
-- Score: 8
-- Alert id: 62933a463ef5
-- Second-order candidates: Winner: same event as [ebf86f5aeb1e]; see that note. / Losers: none clear beyond [ebf86f5aeb1e]. BSE copy of the acquisition disclosure. / Catalyst: surprise - same event as [ebf86f5aeb1e]. / Thesis fit: none
