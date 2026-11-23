@@ -31,8 +31,8 @@ tools/kite_login.py                            python -m papertrade run
                                                  journal says which source was used and why
 ```
 
-The access token lives one trading day (dies about 06:00 IST next morning). A token made at 08:30 covers
-the 17:33 run. If the PC was off, the run falls back; nothing breaks, the journal says "Kite: no token".
+The access token lives one trading day (dies about 06:00 IST next morning). A token made at any time from
+07:00 covers the evening run (the task now runs at unlock / sign-in / network connect and hourly, step 6). If the PC was off, the run falls back; nothing breaks, the journal says "Kite: no token".
 
 What goes where:
 
@@ -131,18 +131,21 @@ cd C:\Users\amitj\Documents\Python\Working\PaperTrade
    - Automatic login is tolerated by Zerodha rather than officially supported. Start with manual mode if
      you prefer; both write the same token.
 
-6. **Schedule it.** This creates a Windows Task Scheduler entry "PaperTrade Kite login" at 08:30 on weekdays
-   with a retry at 16:30, in the PC's local time (keep the PC on IST):
+6. **Schedule it.** This creates a Windows Task Scheduler entry "PaperTrade Kite login" that runs at sign-in,
+   at unlock, when a network connects, and every hour 09:00-18:00 on weekdays, in the PC's local time (keep
+   the PC on IST). Changed 2026-11-24 from fixed 08:30 / 16:30 times: the PC sleeps offline overnight and the
+   token is first needed by the evening run, so any login between waking and 18:30 is as good:
 
    ```powershell
    .venv\Scripts\python.exe tools\kite_login.py --install-task
    ```
 
-   The task itself always runs the project's venv Python, whichever Python you used to create it. Both runs
-   use `--if-needed`, so the 16:30 run does nothing when the 08:30 token works. It runs as you, only while
-   you are logged on (Credential Manager is per user), and catches up when the PC comes back if a time was
-   missed. In manual mode the 08:30 run opens the browser and waits 5 minutes for you; only automatic mode
-   works unattended. If the PC is off all day, the daily run falls back to Yahoo and NSE.
+   The task itself always runs the project's venv Python, whichever Python you used to create it. Every run
+   uses `--scheduled`: it does nothing once today's token works, and nothing outside Monday-Friday
+   07:00-18:30 IST. It runs as you, only while you are logged on (Credential Manager is per user). In manual
+   mode a run opens the browser and waits 5 minutes for you, at most once every 55 minutes until you have
+   logged in that day; only automatic mode works unattended. If the PC is off or offline until after 18:30,
+   the daily run falls back to Yahoo and NSE.
 
 7. **Check.** The next daily journal has, under the F&O sleeve's Observations, `Chains: real Zerodha (n
    underlyings: ...)` or `Kite: no token, NSE scrape used` (or `Kite: <error>, ...`), with a `Chain check

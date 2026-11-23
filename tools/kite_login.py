@@ -16,12 +16,15 @@ Run from the project folder with the venv python:
   python tools/kite_login.py --manual         open the Kite login page in the browser and catch the
                                               redirect on http://127.0.0.1:5555/callback (waits 5 minutes)
   python tools/kite_login.py --auto           log in by itself with the stored user ID, password and TOTP
-  python tools/kite_login.py --if-needed      (with any mode) do nothing if today's token already works;
-                                              the scheduled task uses this, so its 16:30 retry is a no-op
-                                              when the 08:30 run succeeded
+  python tools/kite_login.py --if-needed      (with any mode) do nothing if today's token already works
+  python tools/kite_login.py --scheduled      what the scheduled task runs: --if-needed, and also do nothing
+                                              outside Monday-Friday 07:00-18:30 IST (a token is only used by
+                                              the evening run) or, in manual mode, when the browser page was
+                                              already opened in the last 55 minutes
   python tools/kite_login.py --install-task   register the Windows Task Scheduler task "PaperTrade Kite
-                                              login": weekdays 08:30 and 16:30 (local time = IST on this PC),
-                                              running this script with --if-needed as the current user
+                                              login", running this script with --scheduled as the current
+                                              user: at sign-in, at unlock, when a network connects, and every
+                                              hour 09:00-18:00 on weekdays (local time = IST on this PC)
   python tools/kite_login.py --check          print whether a token for today exists and whether
                                               profile() works with it; changes nothing
 
@@ -342,10 +345,26 @@ def write_github_secret(token: str) -> None:
                          " - is gh logged in? (gh auth status)")
 
 
-def cmd_login(mode: str, if_needed: bool) -> int:
+SCHED_FROM, SCHED_TO = (7, 0), (18, 30)     # --scheduled logs in only Monday-Friday inside this IST window
+MANUAL_RETRY_MIN = 55                       # --scheduled, manual mode: one browser page per this many minutes
+
+
+def in_schedule_window(now: datetime) -> bool:
+    """Monday-Friday, SCHED_FROM <= time < SCHED_TO (IST). The token dies about 06:00 and is first used by
+    the evening run, so a login outside this window is of no use. NSE holidays are not known here: a token
+    made on one is harmless."""
+    return now.weekday() < 5 and SCHED_FROM <= (now.hour, now.minute) < SCHED_TO
+
+
+def cmd_login(mode: str, if_needed: bool, scheduled: bool = False) -> int:
     api_key, api_secret = kget("api_key"), kget("api_secret")
     if not (api_key and api_secret):
         raise Fail(E_SETUP, "no credentials stored: run .venv\\Scripts\\python.exe tools\\kite_login.py --setup")
+    now = datetime.now(IST)
+    if scheduled and not in_schedule_window(now):
+        say(f"Scheduled run outside Monday-Friday {SCHED_FROM[0]:02d}:{SCHED_FROM[1]:02d}-"
+            f"{SCHED_TO[0]:02d}:{SCHED_TO[1]:02d} IST; nothing to do.")
+        return OK
     if if_needed and kget("access_token_date") == today_ist() and kget("access_token"):
         ok, why = token_works(api_key, kget("access_token"))
         if ok:
@@ -354,6 +373,16 @@ def cmd_login(mode: str, if_needed: bool) -> int:
         say(f"Today's stored token does not work ({why}); logging in again.")
     if mode == "default":
         mode = "auto" if (kget("totp_secret") and kget("user_id") and kget("password")) else "manual"
+    if scheduled and mode == "manual":
+        last = kget("manual_attempt_at")
+        try:
+            mins = (now - datetime.fromisoformat(last)).total_seconds() / 60 if last else None
+        except ValueError:
+            mins = None
+        if mins is not None and 0 <= mins < MANUAL_RETRY_MIN:
+            say(f"The Kite login page was opened {mins:.0f} minutes ago; not opening it again yet.")
+            return OK
+        kset("manual_attempt_at", now.isoformat(timespec="seconds"))
     say(f"Logging in ({mode}).")
     kite = _client(api_key)
     req = auto_request_token(kite) if mode == "auto" else manual_request_token(kite)
@@ -393,16 +422,28 @@ def cmd_check() -> int:
 
 # ---------- --install-task ----------
 def _task_xml(python: str, script: str) -> str:
-    def trig(hhmm: str) -> str:
-        return (f"<CalendarTrigger><StartBoundary>2026-01-01T{hhmm}:00</StartBoundary><Enabled>true</Enabled>"
-                "<ScheduleByWeek><DaysOfWeek><Monday/><Tuesday/><Wednesday/><Thursday/><Friday/></DaysOfWeek>"
-                "<WeeksInterval>1</WeeksInterval></ScheduleByWeek></CalendarTrigger>")
     user = os.environ.get("USERDOMAIN", "") + "\\" + getpass.getuser() if os.environ.get("USERDOMAIN") else getpass.getuser()
     esc = lambda s: s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;").replace('"', "&quot;")
+    net = ('<QueryList><Query Id="0" Path="Microsoft-Windows-NetworkProfile/Operational">'
+           '<Select Path="Microsoft-Windows-NetworkProfile/Operational">*[System[(EventID=10000)]]</Select>'
+           '</Query></QueryList>')
+    triggers = (
+        # every hour 09:00 ... 18:00, Monday-Friday
+        "<CalendarTrigger><Repetition><Interval>PT1H</Interval><Duration>PT9H30M</Duration>"
+        "<StopAtDurationEnd>false</StopAtDurationEnd></Repetition>"
+        "<StartBoundary>2026-01-01T09:00:00</StartBoundary><Enabled>true</Enabled>"
+        "<ScheduleByWeek><DaysOfWeek><Monday/><Tuesday/><Wednesday/><Thursday/><Friday/></DaysOfWeek>"
+        "<WeeksInterval>1</WeeksInterval></ScheduleByWeek></CalendarTrigger>"
+        # sign-in and unlock (a minute later, so the Wi-Fi has time to connect)
+        f"<LogonTrigger><Enabled>true</Enabled><UserId>{esc(user)}</UserId><Delay>PT1M</Delay></LogonTrigger>"
+        f"<SessionStateChangeTrigger><Enabled>true</Enabled><StateChange>SessionUnlock</StateChange>"
+        f"<UserId>{esc(user)}</UserId><Delay>PT1M</Delay></SessionStateChangeTrigger>"
+        # a network connects (Wi-Fi switched back on)
+        f"<EventTrigger><Enabled>true</Enabled><Subscription>{esc(net)}</Subscription><Delay>PT30S</Delay></EventTrigger>")
     return f"""<?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
-  <RegistrationInfo><Description>PaperTrade: daily Zerodha Kite Connect login (data only), writes the GitHub secret KITE_ACCESS_TOKEN. 16:30 is a retry; it does nothing if the 08:30 run worked.</Description></RegistrationInfo>
-  <Triggers>{trig("08:30")}{trig("16:30")}</Triggers>
+  <RegistrationInfo><Description>PaperTrade: daily Zerodha Kite Connect login (data only), writes the GitHub secret KITE_ACCESS_TOKEN. Runs at sign-in, unlock, network connect and hourly 09:00-18:00 on weekdays; does nothing once today's token works or outside Monday-Friday 07:00-18:30.</Description></RegistrationInfo>
+  <Triggers>{triggers}</Triggers>
   <Principals><Principal id="Author"><UserId>{esc(user)}</UserId><LogonType>InteractiveToken</LogonType><RunLevel>LeastPrivilege</RunLevel></Principal></Principals>
   <Settings>
     <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
@@ -413,7 +454,7 @@ def _task_xml(python: str, script: str) -> str:
     <ExecutionTimeLimit>PT15M</ExecutionTimeLimit>
     <Enabled>true</Enabled>
   </Settings>
-  <Actions Context="Author"><Exec><Command>{esc(python)}</Command><Arguments>"{esc(script)}" --if-needed</Arguments><WorkingDirectory>{esc(str(ROOT))}</WorkingDirectory></Exec></Actions>
+  <Actions Context="Author"><Exec><Command>{esc(python)}</Command><Arguments>"{esc(script)}" --scheduled</Arguments><WorkingDirectory>{esc(str(ROOT))}</WorkingDirectory></Exec></Actions>
 </Task>
 """
 
@@ -433,8 +474,10 @@ def cmd_install_task() -> int:
         Path(tmp).unlink(missing_ok=True)
     if r.returncode != 0:
         raise Fail(E_TASK, f"schtasks failed (exit {r.returncode}): {(r.stderr or r.stdout).strip()[:300]}")
-    say(f'Task "{TASK_NAME}" registered: Monday-Friday 08:30 and 16:30 (this PC\'s local time), runs '
-        f"{python} tools\\kite_login.py --if-needed as you, only while you are logged on. Check it in Task Scheduler; "
+    say(f'Task "{TASK_NAME}" registered: at sign-in, at unlock, when a network connects, and every hour '
+        f"09:00-18:00 Monday-Friday (this PC's local time); runs {python} tools\\kite_login.py --scheduled as you, "
+        f"only while you are logged on. It logs in only Monday-Friday 07:00-18:30 and only if today's token is "
+        f"missing. Check it in Task Scheduler; "
         f'run it now with: schtasks /Run /TN "{TASK_NAME}"')
     return OK
 
@@ -449,6 +492,7 @@ def main(argv=None) -> int:
     g.add_argument("--install-task", action="store_true")
     g.add_argument("--check", action="store_true")
     p.add_argument("--if-needed", action="store_true")
+    p.add_argument("--scheduled", action="store_true")
     a = p.parse_args(argv)
     try:
         if a.setup:
@@ -457,7 +501,7 @@ def main(argv=None) -> int:
             return cmd_check()
         if a.install_task:
             return cmd_install_task()
-        return cmd_login("manual" if a.manual else "auto" if a.auto else "default", a.if_needed)
+        return cmd_login("manual" if a.manual else "auto" if a.auto else "default", a.if_needed or a.scheduled, a.scheduled)
     except Fail as f:
         print(f"FAILED: {f}", file=sys.stderr)
         log.error("exit %s: %s", f.code, f)
