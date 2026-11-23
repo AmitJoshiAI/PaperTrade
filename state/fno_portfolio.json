@@ -16,11 +16,11 @@
       "margin": 0.0,
       "entry_charges": 27.25,
       "roll": false,
-      "pricing": "real Zerodha chain (mid): bid 63.00 / ask 68.15 (Zerodha 20-Nov-2026 16:59:37)",
-      "iv": 0.166,
-      "mark": 65.58,
-      "mark_date": "2026-11-20",
-      "spot": 25800.5996,
+      "pricing": "model: Black-Scholes, spot 25,349.65, IV 16.25% (NSE chain IV 16.25% at this strike (close of 2026-11-23)), T 36/365",
+      "iv": 0.1625,
+      "mark": 106.14,
+      "mark_date": "2026-11-23",
+      "spot": 25349.6504,
       "contract": "",
       "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
     },
@@ -38,11 +38,11 @@
       "margin": 0.0,
       "entry_charges": 27.23,
       "roll": false,
-      "pricing": "real Zerodha chain (mid): bid 300.45 / ask 304.65 (Zerodha 20-Nov-2026 16:59:37)",
-      "iv": 0.1251,
-      "mark": 302.55,
-      "mark_date": "2026-11-20",
-      "spot": 25800.5996,
+      "pricing": "model: Black-Scholes, spot 25,349.65, IV 14.48% (NSE chain IV 14.48% at this strike (close of 2026-11-23)), T 36/365",
+      "iv": 0.1448,
+      "mark": 188.84,
+      "mark_date": "2026-11-23",
+      "spot": 25349.6504,
       "contract": "",
       "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
     },
@@ -60,11 +60,11 @@
       "margin": 39242.841015625,
       "entry_charges": 41.02,
       "roll": false,
-      "pricing": "real Zerodha chain (mid): bid 54.00 / ask 88.20 (Zerodha 20-Nov-2026 16:59:37)",
-      "iv": 0.1623,
-      "mark": 71.1,
-      "mark_date": "2026-11-20",
-      "spot": 25800.5996,
+      "pricing": "model: Black-Scholes, spot 25,349.65, IV 16.19% (NSE chain IV 16.19% at this strike (close of 2026-11-23)), T 36/365",
+      "iv": 0.1619,
+      "mark": 122.46,
+      "mark_date": "2026-11-23",
+      "spot": 25349.6504,
       "contract": "",
       "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
     },
@@ -82,11 +82,11 @@
       "margin": 39242.841015625,
       "entry_charges": 42.32,
       "roll": false,
-      "pricing": "real Zerodha chain (mid): bid 340.50 / ask 345.90 (Zerodha 20-Nov-2026 16:59:37)",
-      "iv": 0.125,
-      "mark": 343.2,
-      "mark_date": "2026-11-20",
-      "spot": 25800.5996,
+      "pricing": "model: Black-Scholes, spot 25,349.65, IV 14.38% (NSE chain IV 14.38% at this strike (close of 2026-11-23)), T 36/365",
+      "iv": 0.1438,
+      "mark": 213.09,
+      "mark_date": "2026-11-23",
+      "spot": 25349.6504,
       "contract": "",
       "reason": "event-trade: rbi-mpc-december 2026-12-04 | View type 'priced in / nothing happens' (14 Nov strategist 'hike priced in', read per 17 Nov rule). NIFTY iron condor, expiry 2026-12-29, spot 25,228, short strikes 24,350/26,150 = about 3.5% each side vs expected move 3.6%. Exit: CLOSE all four legs at the first open after 2026-12-04 (Mon 2026-12-07), or earlier if 50% of the max gain from the FILLED credit is made; never run a short to expiry."
     }
@@ -96,13 +96,12 @@
   "realised_pnl": 0.0,
   "breaker": {},
   "last_run": {
-    "date": "2026-11-20",
+    "date": "2026-11-23",
     "notes": [],
     "warnings": [
-      "NSE option chains for 2026-11-20: BANKNIFTY, NIFTY of 2 (NIFTY, BANKNIFTY)",
-      "Chains: real Zerodha (2 underlyings: NIFTY, BANKNIFTY)",
-      "Chain check NIFTY, mid Zerodha vs NSE (Zerodha 20-Nov-2026 16:59:37, NSE 20-Nov-2026 15:40:00): 2026-11-23 ATM 25800: CE 83.97 vs 83.97 (diff +0.00), PE 142.15 vs 142.15 (diff +0.00); 2026-12-29 ATM 25800: CE 513.33 vs 513.33 (diff +0.00), PE 421.60 vs 421.60 (diff +0.00)",
-      "Chain check BANKNIFTY, mid Zerodha vs NSE (Zerodha 20-Nov-2026 16:59:04, NSE 20-Nov-2026 15:40:00): 2026-11-23 ATM 64600: CE 317.18 vs 317.18 (diff +0.00), PE 510.00 vs 510.00 (diff +0.00); 2026-12-29 ATM 64600: CE 1,420.43 vs 1,420.43 (diff +0.00), PE 1,295.30 vs 1,295.30 (diff +0.00)"
+      "NSE option chains for 2026-11-23: BANKNIFTY, NIFTY of 2 (NIFTY, BANKNIFTY)",
+      "Kite: NIFTY chain not used (no two-sided quote in the book); NSE scrape for it",
+      "Kite: BANKNIFTY chain not used (no two-sided quote in the book); NSE scrape for it"
     ]
   }
 }

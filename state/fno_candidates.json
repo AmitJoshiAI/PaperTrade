@@ -1,9 +1,9 @@
 {
- "date": "2026-11-20",
+ "date": "2026-11-23",
  "currency": "INR",
- "equity": 499510.53,
+ "equity": 499874.53,
  "cash": 424025.9,
- "cap": 49951.05,
+ "cap": 49987.45,
  "open_positions": 4,
  "max_positions": 5,
  "breaker": null,
@@ -17,853 +17,391 @@
    "why": [
     "index"
    ],
-   "spot": 25800.6,
-   "spot_date": "2026-11-20",
+   "spot": 25349.65,
+   "spot_date": "2026-11-23",
    "chain": {
-    "timestamp": "20-Nov-2026 16:59:37",
-    "underlying": 25800.6,
-    "source": "zerodha"
+    "timestamp": "23-Nov-2026 15:40:00",
+    "underlying": 25349.65,
+    "source": "NSE option-chain-v3"
    },
    "warnings": [],
    "expiries": [
     {
-     "label": "monthly",
-     "expiry": "2026-11-23",
-     "days": 3,
-     "atm": 25800.0,
-     "atm_iv_pct": 12.39,
-     "expected_move": 226.12,
-     "fill_day": "2026-11-23",
+     "label": "weekly",
+     "expiry": "2026-12-01",
+     "days": 8,
+     "atm": 25350.0,
+     "atm_iv_pct": 16.65,
+     "expected_move": 499.92,
+     "fill_day": "2026-11-24",
      "rows": [
       {
        "offset": -2,
-       "strike": 25700.0,
+       "strike": 25250.0,
        "CE": {
-        "price": 131.1,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 6.06,
-        "bid": 130.5,
-        "ask": 131.7,
+        "price": 326.65,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.95,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 8521.5,
-        "pct": 1.71,
-        "fill_est_buy": 101.61,
-        "fill_est_sell": 99.59
+        "per_lot": 21232.25,
+        "pct": 4.25,
+        "fill_est_buy": 311.15,
+        "fill_est_sell": 304.99
        },
        "PE": {
-        "price": 89.72,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 14.98,
-        "bid": 89.45,
-        "ask": 90.0,
+        "price": 184.34,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.49,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 5831.8,
-        "pct": 1.17,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 11982.1,
+        "pct": 2.4,
+        "fill_est_buy": 172.41,
+        "fill_est_sell": 168.99
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": -1,
-       "strike": 25750.0,
+       "strike": 25300.0,
        "CE": {
-        "price": 105.82,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 7.4,
-        "bid": 105.3,
-        "ask": 106.35,
+        "price": 297.59,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.89,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 6878.3,
-        "pct": 1.38,
-        "fill_est_buy": 51.11,
-        "fill_est_sell": 50.09
+        "per_lot": 19343.35,
+        "pct": 3.87,
+        "fill_est_buy": 281.75,
+        "fill_est_sell": 276.17
        },
        "PE": {
-        "price": 114.3,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 15.47,
-        "bid": 113.7,
-        "ask": 114.9,
+        "price": 204.66,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.4,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 7429.5,
-        "pct": 1.49,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 13302.9,
+        "pct": 2.66,
+        "fill_est_buy": 192.92,
+        "fill_est_sell": 189.1
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": 0,
-       "strike": 25800.0,
+       "strike": 25350.0,
        "CE": {
-        "price": 83.97,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 8.21,
-        "bid": 83.3,
-        "ask": 84.65,
+        "price": 270.52,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.86,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 5458.05,
-        "pct": 1.09,
-        "fill_est_buy": 0.61,
-        "fill_est_sell": 0.59
+        "per_lot": 17583.8,
+        "pct": 3.52,
+        "fill_est_buy": 254.44,
+        "fill_est_sell": 249.4
        },
        "PE": {
-        "price": 142.15,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 16.0,
-        "bid": 141.45,
-        "ask": 142.85,
+        "price": 229.4,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.5,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 9239.75,
-        "pct": 1.85,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 14911.0,
+        "pct": 2.98,
+        "fill_est_buy": 217.81,
+        "fill_est_sell": 213.5
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": 1,
-       "strike": 25850.0,
+       "strike": 25400.0,
        "CE": {
-        "price": 65.65,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 8.81,
-        "bid": 65.3,
-        "ask": 66.0,
+        "price": 245.46,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.86,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 4267.25,
-        "pct": 0.85,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 15954.9,
+        "pct": 3.19,
+        "fill_est_buy": 229.24,
+        "fill_est_sell": 224.7
        },
        "PE": {
-        "price": 174.12,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 16.67,
-        "bid": 173.15,
-        "ask": 175.1,
+        "price": 254.41,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.51,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 11317.8,
-        "pct": 2.27,
-        "fill_est_buy": 49.89,
-        "fill_est_sell": 48.91
+        "per_lot": 16536.65,
+        "pct": 3.31,
+        "fill_est_buy": 243.18,
+        "fill_est_sell": 238.37
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": 2,
-       "strike": 25900.0,
+       "strike": 25450.0,
        "CE": {
-        "price": 50.72,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 9.3,
-        "bid": 50.4,
-        "ask": 51.05,
+        "price": 222.87,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.92,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 3296.8,
-        "pct": 0.66,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 14486.55,
+        "pct": 2.9,
+        "fill_est_buy": 206.58,
+        "fill_est_sell": 202.49
        },
        "PE": {
-        "price": 209.73,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 17.48,
-        "bid": 208.05,
-        "ask": 211.4,
+        "price": 279.53,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 16.42,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 13632.45,
-        "pct": 2.73,
-        "fill_est_buy": 100.39,
-        "fill_est_sell": 98.41
+        "per_lot": 18169.45,
+        "pct": 3.63,
+        "fill_est_buy": 268.88,
+        "fill_est_sell": 263.56
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       }
      ],
      "structures": [
       {
        "name": "Bull call spread",
        "kind": "debit",
-       "expiry": "2026-11-23",
+       "expiry": "2026-12-01",
        "legs": [
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 25800.0,
-         "price": 83.97,
-         "src": "real Zerodha chain (mid)",
-         "bid": 83.3,
-         "ask": 84.65,
-         "fill_est": 0.61
+         "strike": 25350.0,
+         "price": 270.52,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 254.44
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 25900.0,
-         "price": 50.72,
-         "src": "real Zerodha chain (mid)",
-         "bid": 50.4,
-         "ask": 51.05,
-         "fill_est": 0.0
+         "strike": 25450.0,
+         "price": 222.87,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 202.49
         }
        ],
        "units": 65,
-       "net_debit": 33.25,
-       "net_debit_lot": 2161.25,
-       "entry_charges": 55.99,
-       "max_loss": 2217.24,
-       "max_gain": 4282.76,
+       "net_debit": 47.65,
+       "net_debit_lot": 3097.25,
+       "entry_charges": 82.95,
+       "max_loss": 3180.2,
+       "max_gain": 3319.8,
        "breakevens": [
-        25833.25
+        25397.65
        ],
-       "max_loss_pct": 0.44,
+       "max_loss_pct": 0.64,
        "event_size": "fits",
        "quotes": [],
-       "fill_est_debit": 0.61,
-       "fill_est_lot": 39.65,
-       "long_leg_max": 5458.05,
-       "long_leg_pct": 1.09,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
+       "fill_est_debit": 51.95,
+       "fill_est_lot": 3376.75,
+       "long_leg_max": 17583.8,
+       "long_leg_pct": 3.52,
+       "margin": 0.0,
+       "cash_change": -17615.33,
+       "cash_need": 17615.33,
+       "slots_needed": 2,
+       "order_risk": 17583.8,
+       "order_risk_what": "premium (BUY CE 25,350)",
+       "order_risk_pct": 3.52,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "SELL CE 25,450: max 5 open positions already held"
       },
       {
        "name": "Bear put spread",
        "kind": "debit",
-       "expiry": "2026-11-23",
+       "expiry": "2026-12-01",
        "legs": [
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 25800.0,
-         "price": 142.15,
-         "src": "real Zerodha chain (mid)",
-         "bid": 141.45,
-         "ask": 142.85,
-         "fill_est": 0.0
+         "strike": 25350.0,
+         "price": 229.4,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 217.81
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 25700.0,
-         "price": 89.72,
-         "src": "real Zerodha chain (mid)",
-         "bid": 89.45,
-         "ask": 90.0,
-         "fill_est": 0.0
+         "strike": 25250.0,
+         "price": 184.34,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 168.99
         }
        ],
        "units": 65,
-       "net_debit": 52.43,
-       "net_debit_lot": 3407.95,
-       "entry_charges": 62.56,
-       "max_loss": 3470.51,
-       "max_gain": 3029.49,
+       "net_debit": 45.06,
+       "net_debit_lot": 2928.9,
+       "entry_charges": 76.93,
+       "max_loss": 3005.83,
+       "max_gain": 3494.17,
        "breakevens": [
-        25747.57
+        25304.94
        ],
-       "max_loss_pct": 0.69,
+       "max_loss_pct": 0.6,
        "event_size": "fits",
        "quotes": [],
-       "fill_est_debit": -0.0,
-       "fill_est_lot": -0.0,
-       "long_leg_max": 9239.75,
-       "long_leg_pct": 1.85,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
+       "fill_est_debit": 48.82,
+       "fill_est_lot": 3173.3,
+       "long_leg_max": 14911.0,
+       "long_leg_pct": 2.98,
+       "margin": 0.0,
+       "cash_change": -14941.32,
+       "cash_need": 14941.32,
+       "slots_needed": 2,
+       "order_risk": 14911.0,
+       "order_risk_what": "premium (BUY PE 25,350)",
+       "order_risk_pct": 2.98,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "SELL PE 25,250: max 5 open positions already held"
       },
       {
        "name": "Long straddle",
        "kind": "debit",
-       "expiry": "2026-11-23",
+       "expiry": "2026-12-01",
        "legs": [
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 25800.0,
-         "price": 83.97,
-         "src": "real Zerodha chain (mid)",
-         "bid": 83.3,
-         "ask": 84.65,
-         "fill_est": 0.61
+         "strike": 25350.0,
+         "price": 270.52,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 254.44
         },
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 25800.0,
-         "price": 142.15,
-         "src": "real Zerodha chain (mid)",
-         "bid": 141.45,
-         "ask": 142.85,
-         "fill_est": 0.0
+         "strike": 25350.0,
+         "price": 229.4,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 217.81
         }
        ],
        "units": 65,
-       "net_debit": 226.12,
-       "net_debit_lot": 14697.8,
-       "entry_charges": 53.82,
-       "max_loss": 14751.62,
+       "net_debit": 499.92,
+       "net_debit_lot": 32494.8,
+       "entry_charges": 61.85,
+       "max_loss": 32556.65,
        "max_gain": null,
        "breakevens": [
-        25573.88,
-        26026.12
+        24850.08,
+        25849.92
        ],
-       "max_loss_pct": 2.95,
+       "max_loss_pct": 6.51,
        "event_size": "too big",
        "quotes": [],
-       "fill_est_debit": 0.61,
-       "fill_est_lot": 39.65,
-       "long_leg_max": 9239.75,
-       "long_leg_pct": 1.85,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
+       "fill_est_debit": 472.25,
+       "fill_est_lot": 30696.25,
+       "long_leg_max": 17583.8,
+       "long_leg_pct": 3.52,
+       "margin": 0.0,
+       "cash_change": -17615.33,
+       "cash_need": 17615.33,
+       "slots_needed": 2,
+       "order_risk": 17583.8,
+       "order_risk_what": "premium (BUY CE 25,350)",
+       "order_risk_pct": 3.52,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "BUY PE 25,350: max 5 open positions already held"
       },
       {
        "name": "Bull put spread",
        "kind": "credit",
-       "expiry": "2026-11-23",
+       "expiry": "2026-12-01",
        "units": 65,
-       "expected_move": 226.12,
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 25450.0,
-         "price": 26.02,
-         "src": "real Zerodha chain (mid)",
-         "bid": 25.9,
-         "ask": 26.15,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 25550.0,
-         "price": 41.92,
-         "src": "real Zerodha chain (mid)",
-         "bid": 41.65,
-         "ask": 42.2,
-         "fill_est": 0.0
-        }
-       ],
-       "net_credit": 15.9,
-       "net_credit_lot": 1033.5,
-       "entry_charges": 53.19,
-       "strike_gap": 100.0,
-       "max_loss": 5519.69,
-       "max_gain": 980.31,
-       "breakevens": [
-        25534.1
-       ],
-       "max_loss_pct": 1.11,
-       "event_size": "fits",
-       "quotes": [
-        "engine fill est. credit 0.00 / unit vs 15.90 at the mids (the fill model prices each leg on NSE's own strike IV, not the mid)"
-       ],
-       "fill_est_credit": 0.0,
-       "fill_est_lot": 0.0,
-       "long_leg_max": 1691.3,
-       "long_leg_pct": 0.34,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      },
-      {
-       "name": "Bear call spread",
-       "kind": "credit",
-       "expiry": "2026-11-23",
-       "units": 65,
-       "expected_move": 226.12,
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 26150.0,
-         "price": 10.32,
-         "src": "real Zerodha chain (mid)",
-         "bid": 10.05,
-         "ask": 10.6,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 26050.0,
-         "price": 20.75,
-         "src": "real Zerodha chain (mid)",
-         "bid": 20.55,
-         "ask": 20.95,
-         "fill_est": 0.0
-        }
-       ],
-       "net_credit": 10.43,
-       "net_credit_lot": 677.95,
-       "entry_charges": 50.09,
-       "strike_gap": 100.0,
-       "max_loss": 5872.14,
-       "max_gain": 627.86,
-       "breakevens": [
-        26060.43
-       ],
-       "max_loss_pct": 1.18,
-       "event_size": "fits",
-       "quotes": [
-        "engine fill est. credit 0.00 / unit vs 10.43 at the mids (the fill model prices each leg on NSE's own strike IV, not the mid)"
-       ],
-       "fill_est_credit": 0.0,
-       "fill_est_lot": 0.0,
-       "long_leg_max": 670.8,
-       "long_leg_pct": 0.13,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      },
-      {
-       "name": "Iron condor",
-       "kind": "credit",
-       "expiry": "2026-11-23",
-       "units": 65,
-       "expected_move": 226.12,
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 25450.0,
-         "price": 26.02,
-         "src": "real Zerodha chain (mid)",
-         "bid": 25.9,
-         "ask": 26.15,
-         "fill_est": 0.0
-        },
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 26150.0,
-         "price": 10.32,
-         "src": "real Zerodha chain (mid)",
-         "bid": 10.05,
-         "ask": 10.6,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 25550.0,
-         "price": 41.92,
-         "src": "real Zerodha chain (mid)",
-         "bid": 41.65,
-         "ask": 42.2,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 26050.0,
-         "price": 20.75,
-         "src": "real Zerodha chain (mid)",
-         "bid": 20.55,
-         "ask": 20.95,
-         "fill_est": 0.0
-        }
-       ],
-       "net_credit": 26.33,
-       "net_credit_lot": 1711.45,
-       "entry_charges": 103.28,
-       "strike_gap": 100.0,
-       "max_loss": 4891.83,
-       "max_gain": 1608.17,
-       "breakevens": [
-        25523.67,
-        26076.33
-       ],
-       "max_loss_pct": 0.98,
-       "event_size": "fits",
-       "quotes": [
-        "engine fill est. credit 0.00 / unit vs 26.33 at the mids (the fill model prices each leg on NSE's own strike IV, not the mid)"
-       ],
-       "fill_est_credit": 0.0,
-       "fill_est_lot": 0.0,
-       "long_leg_max": 1691.3,
-       "long_leg_pct": 0.34,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      }
-     ]
-    },
-    {
-     "label": "event: rbi-mpc-december 2026-12-04 (calendar)",
-     "expiry": "2026-12-29",
-     "days": 39,
-     "atm": 25800.0,
-     "atm_iv_pct": 13.72,
-     "expected_move": 934.93,
-     "fill_day": "2026-11-23",
-     "rows": [
-      {
-       "offset": -2,
-       "strike": 25700.0,
-       "CE": {
-        "price": 570.05,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.43,
-        "bid": 567.9,
-        "ask": 572.2,
-        "listed": true,
-        "per_lot": 37053.25,
-        "pct": 7.42,
-        "fill_est_buy": 551.61,
-        "fill_est_sell": 540.69
-       },
-       "PE": {
-        "price": 377.83,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 15.09,
-        "bid": 376.85,
-        "ask": 378.8,
-        "listed": true,
-        "per_lot": 24558.95,
-        "pct": 4.92,
-        "fill_est_buy": 367.9,
-        "fill_est_sell": 360.62
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": -1,
-       "strike": 25750.0,
-       "CE": {
-        "price": 539.77,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.4,
-        "bid": 530.75,
-        "ask": 548.8,
-        "listed": true,
-        "per_lot": 35085.05,
-        "pct": 7.02,
-        "fill_est_buy": 521.11,
-        "fill_est_sell": 510.79
-       },
-       "PE": {
-        "price": 400.62,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 15.13,
-        "bid": 398.45,
-        "ask": 402.8,
-        "listed": true,
-        "per_lot": 26040.3,
-        "pct": 5.21,
-        "fill_est_buy": 390.92,
-        "fill_est_sell": 383.18
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": 0,
-       "strike": 25800.0,
-       "CE": {
-        "price": 513.33,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.46,
-        "bid": 511.65,
-        "ask": 515.0,
-        "listed": true,
-        "per_lot": 33366.45,
-        "pct": 6.68,
-        "fill_est_buy": 494.42,
-        "fill_est_sell": 484.63
-       },
-       "PE": {
-        "price": 421.6,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 15.1,
-        "bid": 419.95,
-        "ask": 423.25,
-        "listed": true,
-        "per_lot": 27404.0,
-        "pct": 5.49,
-        "fill_est_buy": 412.24,
-        "fill_est_sell": 404.08
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": 1,
-       "strike": 25850.0,
-       "CE": {
-        "price": 477.6,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.21,
-        "bid": 461.55,
-        "ask": 493.65,
-        "listed": true,
-        "per_lot": 31044.0,
-        "pct": 6.21,
-        "fill_est_buy": 458.77,
-        "fill_est_sell": 449.69
-       },
-       "PE": {
-        "price": 444.02,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 15.08,
-        "bid": 441.45,
-        "ask": 446.6,
-        "listed": true,
-        "per_lot": 28861.3,
-        "pct": 5.78,
-        "fill_est_buy": 435.02,
-        "fill_est_sell": 426.41
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": 2,
-       "strike": 25900.0,
-       "CE": {
-        "price": 458.52,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.43,
-        "bid": 457.1,
-        "ask": 459.95,
-        "listed": true,
-        "per_lot": 29803.8,
-        "pct": 5.97,
-        "fill_est_buy": 439.38,
-        "fill_est_sell": 430.68
-       },
-       "PE": {
-        "price": 465.6,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 15.02,
-        "bid": 463.5,
-        "ask": 467.7,
-        "listed": true,
-        "per_lot": 30264.0,
-        "pct": 6.06,
-        "fill_est_buy": 457.05,
-        "fill_est_sell": 448.0
-       },
-       "source": "real Zerodha chain (mid)"
-      }
-     ],
-     "structures": [
-      {
-       "name": "Bull call spread",
-       "kind": "debit",
-       "expiry": "2026-12-29",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 25800.0,
-         "price": 513.33,
-         "src": "real Zerodha chain (mid)",
-         "bid": 511.65,
-         "ask": 515.0,
-         "fill_est": 494.42
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 25900.0,
-         "price": 458.52,
-         "src": "real Zerodha chain (mid)",
-         "bid": 457.1,
-         "ask": 459.95,
-         "fill_est": 430.68
-        }
-       ],
-       "units": 65,
-       "net_debit": 54.81,
-       "net_debit_lot": 3562.65,
-       "entry_charges": 119.47,
-       "max_loss": 3682.12,
-       "max_gain": 2817.88,
-       "breakevens": [
-        25854.81
-       ],
-       "max_loss_pct": 0.74,
-       "event_size": "fits",
-       "quotes": [],
-       "fill_est_debit": 63.74,
-       "fill_est_lot": 4143.1,
-       "long_leg_max": 33366.45,
-       "long_leg_pct": 6.68,
-       "margin": 0.0,
-       "cash_change": -33405.08,
-       "cash_need": 33405.08,
-       "slots_needed": 2,
-       "order_risk": 33366.45,
-       "order_risk_what": "premium (BUY CE 25,800)",
-       "order_risk_pct": 6.68,
-       "rule_10pct": "PASS",
-       "free_cash": "PASS",
-       "slots": "FAIL",
-       "max_lots": 0,
-       "verdict": "FAIL",
-       "why": "SELL CE 25,900: max 5 open positions already held"
-      },
-      {
-       "name": "Bear put spread",
-       "kind": "debit",
-       "expiry": "2026-12-29",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 25800.0,
-         "price": 421.6,
-         "src": "real Zerodha chain (mid)",
-         "bid": 419.95,
-         "ask": 423.25,
-         "fill_est": 412.24
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 25700.0,
-         "price": 377.83,
-         "src": "real Zerodha chain (mid)",
-         "bid": 376.85,
-         "ask": 378.8,
-         "fill_est": 360.62
-        }
-       ],
-       "units": 65,
-       "net_debit": 43.77,
-       "net_debit_lot": 2845.05,
-       "entry_charges": 106.72,
-       "max_loss": 2951.77,
-       "max_gain": 3548.23,
-       "breakevens": [
-        25756.23
-       ],
-       "max_loss_pct": 0.59,
-       "event_size": "fits",
-       "quotes": [],
-       "fill_est_debit": 51.62,
-       "fill_est_lot": 3355.3,
-       "long_leg_max": 27404.0,
-       "long_leg_pct": 5.49,
-       "margin": 0.0,
-       "cash_change": -27439.95,
-       "cash_need": 27439.95,
-       "slots_needed": 2,
-       "order_risk": 27404.0,
-       "order_risk_what": "premium (BUY PE 25,800)",
-       "order_risk_pct": 5.49,
-       "rule_10pct": "PASS",
-       "free_cash": "PASS",
-       "slots": "FAIL",
-       "max_lots": 0,
-       "verdict": "FAIL",
-       "why": "SELL PE 25,700: max 5 open positions already held"
-      },
-      {
-       "name": "Long straddle",
-       "kind": "debit",
-       "expiry": "2026-12-29",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 25800.0,
-         "price": 513.33,
-         "src": "real Zerodha chain (mid)",
-         "bid": 511.65,
-         "ask": 515.0,
-         "fill_est": 494.42
-        },
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 25800.0,
-         "price": 421.6,
-         "src": "real Zerodha chain (mid)",
-         "bid": 419.95,
-         "ask": 423.25,
-         "fill_est": 412.24
-        }
-       ],
-       "units": 65,
-       "net_debit": 934.93,
-       "net_debit_lot": 60770.45,
-       "entry_charges": 74.58,
-       "max_loss": 60845.03,
-       "max_gain": null,
-       "breakevens": [
-        24865.07,
-        26734.93
-       ],
-       "max_loss_pct": 12.18,
-       "event_size": "too big",
-       "quotes": [],
-       "fill_est_debit": 906.66,
-       "fill_est_lot": 58932.9,
-       "long_leg_max": 33366.45,
-       "long_leg_pct": 6.68,
-       "margin": 0.0,
-       "cash_change": -33405.08,
-       "cash_need": 33405.08,
-       "slots_needed": 2,
-       "order_risk": 33366.45,
-       "order_risk_what": "premium (BUY CE 25,800)",
-       "order_risk_pct": 6.68,
-       "rule_10pct": "PASS",
-       "free_cash": "PASS",
-       "slots": "FAIL",
-       "max_lots": 0,
-       "verdict": "FAIL",
-       "why": "BUY PE 25,800: max 5 open positions already held"
-      },
-      {
-       "name": "Bull put spread",
-       "kind": "credit",
-       "expiry": "2026-12-29",
-       "units": 65,
-       "expected_move": 934.93,
+       "expected_move": 499.92,
        "legs": [
         {
          "side": "BUY",
          "right": "PE",
          "strike": 24750.0,
-         "price": 124.5,
-         "src": "real Zerodha chain (mid)",
-         "bid": 119.05,
-         "ask": 129.95,
-         "fill_est": 114.84
+         "price": 48.98,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 40.92
         },
         {
          "side": "SELL",
          "right": "PE",
          "strike": 24850.0,
-         "price": 136.07,
-         "src": "real Zerodha chain (mid)",
-         "bid": 132.15,
-         "ask": 140.0,
-         "fill_est": 123.76
+         "price": 63.79,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 53.63
         }
        ],
-       "net_credit": 11.57,
-       "net_credit_lot": 752.05,
-       "entry_charges": 67.84,
+       "net_credit": 14.81,
+       "net_credit_lot": 962.65,
+       "entry_charges": 56.59,
        "strike_gap": 100.0,
-       "max_loss": 5815.79,
-       "max_gain": 684.21,
+       "max_loss": 5593.94,
+       "max_gain": 906.06,
        "breakevens": [
-        24838.43
+        24835.19
        ],
-       "max_loss_pct": 1.16,
+       "max_loss_pct": 1.12,
        "event_size": "fits",
        "quotes": [],
-       "fill_est_credit": 8.92,
-       "fill_est_lot": 579.8,
-       "long_leg_max": 8092.5,
-       "long_leg_pct": 1.62,
+       "fill_est_credit": 12.71,
+       "fill_est_lot": 826.15,
+       "long_leg_max": 3183.7,
+       "long_leg_pct": 0.64,
        "margin": 0.0,
-       "cash_change": -8119.75,
-       "cash_need": 8119.75,
+       "cash_change": -3208.73,
+       "cash_need": 3208.73,
        "slots_needed": 2,
-       "order_risk": 8092.5,
+       "order_risk": 3183.7,
        "order_risk_what": "premium (BUY PE 24,750)",
-       "order_risk_pct": 1.62,
+       "order_risk_pct": 0.64,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "FAIL",
@@ -874,84 +412,661 @@
       {
        "name": "Bear call spread",
        "kind": "credit",
-       "expiry": "2026-12-29",
+       "expiry": "2026-12-01",
        "units": 65,
-       "expected_move": 934.93,
+       "expected_move": 499.92,
        "legs": [
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 26850.0,
-         "price": 150.88,
-         "src": "real Zerodha chain (mid)",
-         "bid": 120.7,
-         "ask": 181.05,
-         "fill_est": 135.8
+         "strike": 25950.0,
+         "price": 70.18,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 58.65
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 26750.0,
-         "price": 117.4,
-         "src": "real Zerodha chain (mid)",
-         "bid": 70.0,
-         "ask": 164.8,
-         "fill_est": 102.68
+         "strike": 25850.0,
+         "price": 89.96,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 75.52
         }
        ],
-       "verdict": "n/a",
-       "why": "inconsistent prices: call credit -33.48 is outside 0..100 (strike gap)"
+       "net_credit": 19.78,
+       "net_credit_lot": 1285.7,
+       "entry_charges": 60.49,
+       "strike_gap": 100.0,
+       "max_loss": 5274.79,
+       "max_gain": 1225.21,
+       "breakevens": [
+        25869.78
+       ],
+       "max_loss_pct": 1.06,
+       "event_size": "fits",
+       "quotes": [],
+       "fill_est_credit": 16.87,
+       "fill_est_lot": 1096.55,
+       "long_leg_max": 4561.7,
+       "long_leg_pct": 0.91,
+       "margin": 0.0,
+       "cash_change": -4587.35,
+       "cash_need": 4587.35,
+       "slots_needed": 2,
+       "order_risk": 4561.7,
+       "order_risk_what": "premium (BUY CE 25,950)",
+       "order_risk_pct": 0.91,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "SELL CE 25,850: max 5 open positions already held"
+      },
+      {
+       "name": "Iron condor",
+       "kind": "credit",
+       "expiry": "2026-12-01",
+       "units": 65,
+       "expected_move": 499.92,
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 24750.0,
+         "price": 48.98,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 40.92
+        },
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 25950.0,
+         "price": 70.18,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 58.65
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 24850.0,
+         "price": 63.79,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 53.63
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 25850.0,
+         "price": 89.96,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 75.52
+        }
+       ],
+       "net_credit": 34.59,
+       "net_credit_lot": 2248.35,
+       "entry_charges": 117.08,
+       "strike_gap": 100.0,
+       "max_loss": 4368.73,
+       "max_gain": 2131.27,
+       "breakevens": [
+        24815.41,
+        25884.59
+       ],
+       "max_loss_pct": 0.87,
+       "event_size": "fits",
+       "quotes": [],
+       "fill_est_credit": 29.58,
+       "fill_est_lot": 1922.7,
+       "long_leg_max": 4561.7,
+       "long_leg_pct": 0.91,
+       "margin": 0.0,
+       "cash_change": -3208.73,
+       "cash_need": 3208.73,
+       "slots_needed": 4,
+       "order_risk": 3183.7,
+       "order_risk_what": "premium (BUY PE 24,750)",
+       "order_risk_pct": 0.64,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "BUY CE 25,950: max 5 open positions already held; SELL PE 24,850: max 5 open positions already held; SELL CE 25,850: max 5 open positions already held"
+      }
+     ]
+    },
+    {
+     "label": "monthly",
+     "expiry": "2026-12-29",
+     "days": 36,
+     "atm": 25350.0,
+     "atm_iv_pct": 14.99,
+     "expected_move": 953.42,
+     "fill_day": "2026-11-24",
+     "rows": [
+      {
+       "offset": -2,
+       "strike": 25250.0,
+       "CE": {
+        "price": 603.79,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.61,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 39246.35,
+        "pct": 7.85,
+        "fill_est_buy": 600.85,
+        "fill_est_sell": 588.95
+       },
+       "PE": {
+        "price": 356.95,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 15.07,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 23201.75,
+        "pct": 4.64,
+        "fill_est_buy": 355.86,
+        "fill_est_sell": 348.82
+       },
+       "source": "model (BS on NSE chain IV)"
+      },
+      {
+       "offset": -1,
+       "strike": 25300.0,
+       "CE": {
+        "price": 585.33,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.93,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 38046.45,
+        "pct": 7.61,
+        "fill_est_buy": 582.08,
+        "fill_est_sell": 570.56
+       },
+       "PE": {
+        "price": 375.56,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.98,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 24411.4,
+        "pct": 4.88,
+        "fill_est_buy": 374.71,
+        "fill_est_sell": 367.29
+       },
+       "source": "model (BS on NSE chain IV)"
+      },
+      {
+       "offset": 0,
+       "strike": 25350.0,
+       "CE": {
+        "price": 557.22,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.91,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 36219.3,
+        "pct": 7.25,
+        "fill_est_buy": 553.72,
+        "fill_est_sell": 542.75
+       },
+       "PE": {
+        "price": 396.2,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.93,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 25753.0,
+        "pct": 5.15,
+        "fill_est_buy": 395.61,
+        "fill_est_sell": 387.77
+       },
+       "source": "model (BS on NSE chain IV)"
+      },
+      {
+       "offset": 1,
+       "strike": 25400.0,
+       "CE": {
+        "price": 533.39,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 15.0,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 34670.35,
+        "pct": 6.94,
+        "fill_est_buy": 529.65,
+        "fill_est_sell": 519.16
+       },
+       "PE": {
+        "price": 419.22,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.93,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 27249.3,
+        "pct": 5.45,
+        "fill_est_buy": 418.9,
+        "fill_est_sell": 410.6
+       },
+       "source": "model (BS on NSE chain IV)"
+      },
+      {
+       "offset": 2,
+       "strike": 25450.0,
+       "CE": {
+        "price": 503.45,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.87,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 32724.25,
+        "pct": 6.55,
+        "fill_est_buy": 499.51,
+        "fill_est_sell": 489.62
+       },
+       "PE": {
+        "price": 435.47,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 14.69,
+        "bid": 0.0,
+        "ask": 0.0,
+        "listed": true,
+        "per_lot": 28305.55,
+        "pct": 5.66,
+        "fill_est_buy": 435.47,
+        "fill_est_sell": 426.85
+       },
+       "source": "model (BS on NSE chain IV)"
+      }
+     ],
+     "structures": [
+      {
+       "name": "Bull call spread",
+       "kind": "debit",
+       "expiry": "2026-12-29",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 25350.0,
+         "price": 557.22,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 553.72
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 25450.0,
+         "price": 503.45,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 489.62
+        }
+       ],
+       "units": 65,
+       "net_debit": 53.77,
+       "net_debit_lot": 3495.05,
+       "entry_charges": 126.37,
+       "max_loss": 3621.42,
+       "max_gain": 2878.58,
+       "breakevens": [
+        25403.77
+       ],
+       "max_loss_pct": 0.72,
+       "event_size": "fits",
+       "quotes": [],
+       "fill_est_debit": 64.1,
+       "fill_est_lot": 4166.5,
+       "long_leg_max": 36219.3,
+       "long_leg_pct": 7.25,
+       "margin": 0.0,
+       "cash_change": -36259.22,
+       "cash_need": 36259.22,
+       "slots_needed": 2,
+       "order_risk": 36219.3,
+       "order_risk_what": "premium (BUY CE 25,350)",
+       "order_risk_pct": 7.25,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "SELL CE 25,450: max 5 open positions already held"
+      },
+      {
+       "name": "Bear put spread",
+       "kind": "debit",
+       "expiry": "2026-12-29",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 25350.0,
+         "price": 396.2,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 395.61
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 25250.0,
+         "price": 356.95,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 348.82
+        }
+       ],
+       "units": 65,
+       "net_debit": 39.25,
+       "net_debit_lot": 2551.25,
+       "entry_charges": 103.35,
+       "max_loss": 2654.6,
+       "max_gain": 3845.4,
+       "breakevens": [
+        25310.75
+       ],
+       "max_loss_pct": 0.53,
+       "event_size": "fits",
+       "quotes": [],
+       "fill_est_debit": 46.79,
+       "fill_est_lot": 3041.35,
+       "long_leg_max": 25753.0,
+       "long_leg_pct": 5.15,
+       "margin": 0.0,
+       "cash_change": -25788.2,
+       "cash_need": 25788.2,
+       "slots_needed": 2,
+       "order_risk": 25753.0,
+       "order_risk_what": "premium (BUY PE 25,350)",
+       "order_risk_pct": 5.15,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "SELL PE 25,250: max 5 open positions already held"
+      },
+      {
+       "name": "Long straddle",
+       "kind": "debit",
+       "expiry": "2026-12-29",
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 25350.0,
+         "price": 557.22,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 553.72
+        },
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 25350.0,
+         "price": 396.2,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 395.61
+        }
+       ],
+       "units": 65,
+       "net_debit": 953.42,
+       "net_debit_lot": 61972.3,
+       "entry_charges": 75.12,
+       "max_loss": 62047.42,
+       "max_gain": null,
+       "breakevens": [
+        24396.58,
+        26303.42
+       ],
+       "max_loss_pct": 12.41,
+       "event_size": "too big",
+       "quotes": [],
+       "fill_est_debit": 949.33,
+       "fill_est_lot": 61706.45,
+       "long_leg_max": 36219.3,
+       "long_leg_pct": 7.25,
+       "margin": 0.0,
+       "cash_change": -36259.22,
+       "cash_need": 36259.22,
+       "slots_needed": 2,
+       "order_risk": 36219.3,
+       "order_risk_what": "premium (BUY CE 25,350)",
+       "order_risk_pct": 7.25,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "BUY PE 25,350: max 5 open positions already held"
+      },
+      {
+       "name": "Bull put spread",
+       "kind": "credit",
+       "expiry": "2026-12-29",
+       "units": 65,
+       "expected_move": 953.42,
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "PE",
+         "strike": 24300.0,
+         "price": 110.94,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 108.41
+        },
+        {
+         "side": "SELL",
+         "right": "PE",
+         "strike": 24400.0,
+         "price": 129.67,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 124.54
+        }
+       ],
+       "net_credit": 18.73,
+       "net_credit_lot": 1217.45,
+       "entry_charges": 66.63,
+       "strike_gap": 100.0,
+       "max_loss": 5349.18,
+       "max_gain": 1150.82,
+       "breakevens": [
+        24381.27
+       ],
+       "max_loss_pct": 1.07,
+       "event_size": "fits",
+       "quotes": [],
+       "fill_est_credit": 16.13,
+       "fill_est_lot": 1048.45,
+       "long_leg_max": 7211.1,
+       "long_leg_pct": 1.44,
+       "margin": 0.0,
+       "cash_change": -7237.95,
+       "cash_need": 7237.95,
+       "slots_needed": 2,
+       "order_risk": 7211.1,
+       "order_risk_what": "premium (BUY PE 24,300)",
+       "order_risk_pct": 1.44,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "SELL PE 24,400: max 5 open positions already held"
+      },
+      {
+       "name": "Bear call spread",
+       "kind": "credit",
+       "expiry": "2026-12-29",
+       "units": 65,
+       "expected_move": 953.42,
+       "legs": [
+        {
+         "side": "BUY",
+         "right": "CE",
+         "strike": 26400.0,
+         "price": 151.61,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 147.19
+        },
+        {
+         "side": "SELL",
+         "right": "CE",
+         "strike": 26300.0,
+         "price": 177.64,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 169.57
+        }
+       ],
+       "net_credit": 26.03,
+       "net_credit_lot": 1691.95,
+       "entry_charges": 73.81,
+       "strike_gap": 100.0,
+       "max_loss": 4881.86,
+       "max_gain": 1618.14,
+       "breakevens": [
+        26326.03
+       ],
+       "max_loss_pct": 0.98,
+       "event_size": "fits",
+       "quotes": [],
+       "fill_est_credit": 22.38,
+       "fill_est_lot": 1454.7,
+       "long_leg_max": 9854.65,
+       "long_leg_pct": 1.97,
+       "margin": 0.0,
+       "cash_change": -9882.69,
+       "cash_need": 9882.69,
+       "slots_needed": 2,
+       "order_risk": 9854.65,
+       "order_risk_what": "premium (BUY CE 26,400)",
+       "order_risk_pct": 1.97,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "SELL CE 26,300: max 5 open positions already held"
       },
       {
        "name": "Iron condor",
        "kind": "credit",
        "expiry": "2026-12-29",
        "units": 65,
-       "expected_move": 934.93,
+       "expected_move": 953.42,
        "legs": [
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 24750.0,
-         "price": 124.5,
-         "src": "real Zerodha chain (mid)",
-         "bid": 119.05,
-         "ask": 129.95,
-         "fill_est": 114.84
+         "strike": 24300.0,
+         "price": 110.94,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 108.41
         },
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 26850.0,
-         "price": 150.88,
-         "src": "real Zerodha chain (mid)",
-         "bid": 120.7,
-         "ask": 181.05,
-         "fill_est": 135.8
+         "strike": 26400.0,
+         "price": 151.61,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 147.19
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 24850.0,
-         "price": 136.07,
-         "src": "real Zerodha chain (mid)",
-         "bid": 132.15,
-         "ask": 140.0,
-         "fill_est": 123.76
+         "strike": 24400.0,
+         "price": 129.67,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 124.54
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 26750.0,
-         "price": 117.4,
-         "src": "real Zerodha chain (mid)",
-         "bid": 70.0,
-         "ask": 164.8,
-         "fill_est": 102.68
+         "strike": 26300.0,
+         "price": 177.64,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 169.57
         }
        ],
-       "verdict": "n/a",
-       "why": "inconsistent prices: call credit -33.48 is outside 0..100 (strike gap)"
+       "net_credit": 44.76,
+       "net_credit_lot": 2909.4,
+       "entry_charges": 140.44,
+       "strike_gap": 100.0,
+       "max_loss": 3731.04,
+       "max_gain": 2768.96,
+       "breakevens": [
+        24355.24,
+        26344.76
+       ],
+       "max_loss_pct": 0.75,
+       "event_size": "fits",
+       "quotes": [],
+       "fill_est_credit": 38.51,
+       "fill_est_lot": 2503.15,
+       "long_leg_max": 9854.65,
+       "long_leg_pct": 1.97,
+       "margin": 0.0,
+       "cash_change": -7237.95,
+       "cash_need": 7237.95,
+       "slots_needed": 4,
+       "order_risk": 7211.1,
+       "order_risk_what": "premium (BUY PE 24,300)",
+       "order_risk_pct": 1.44,
+       "rule_10pct": "PASS",
+       "free_cash": "PASS",
+       "slots": "FAIL",
+       "max_lots": 0,
+       "verdict": "FAIL",
+       "why": "BUY CE 26,400: max 5 open positions already held; SELL PE 24,400: max 5 open positions already held; SELL CE 26,300: max 5 open positions already held"
       }
      ]
     }
@@ -965,688 +1080,226 @@
    "why": [
     "index"
    ],
-   "spot": 64635.2,
-   "spot_date": "2026-11-20",
+   "spot": 62585.35,
+   "spot_date": "2026-11-23",
    "chain": {
-    "timestamp": "20-Nov-2026 16:59:04",
-    "underlying": 64635.2,
-    "source": "zerodha"
+    "timestamp": "23-Nov-2026 15:40:00",
+    "underlying": 62585.35,
+    "source": "NSE option-chain-v3"
    },
    "warnings": [],
    "expiries": [
     {
      "label": "monthly",
-     "expiry": "2026-11-23",
-     "days": 3,
-     "atm": 64600.0,
-     "atm_iv_pct": 18.0,
-     "expected_move": 827.18,
-     "fill_day": "2026-11-23",
+     "expiry": "2026-12-29",
+     "days": 36,
+     "atm": 62600.0,
+     "atm_iv_pct": 18.15,
+     "expected_move": 2830.59,
+     "fill_day": "2026-11-24",
      "rows": [
       {
        "offset": -2,
-       "strike": 64400.0,
+       "strike": 62400.0,
        "CE": {
-        "price": 413.4,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 10.99,
-        "bid": 400.0,
-        "ask": 426.8,
+        "price": 1667.54,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 17.37,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 12402.0,
-        "pct": 2.48,
-        "fill_est_buy": 237.55,
-        "fill_est_sell": 232.85
+        "per_lot": 50026.2,
+        "pct": 10.01,
+        "fill_est_buy": 1659.13,
+        "fill_est_sell": 1626.28
        },
        "PE": {
-        "price": 407.4,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 22.78,
-        "bid": 396.55,
-        "ask": 418.25,
+        "price": 1208.88,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 19.0,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 12222.0,
-        "pct": 2.45,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 36266.4,
+        "pct": 7.26,
+        "fill_est_buy": 1205.3,
+        "fill_est_sell": 1181.43
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": -1,
-       "strike": 64500.0,
+       "strike": 62500.0,
        "CE": {
-        "price": 360.5,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 11.44,
-        "bid": 351.3,
-        "ask": 369.7,
+        "price": 1654.47,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 17.91,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 10815.0,
-        "pct": 2.17,
-        "fill_est_buy": 136.55,
-        "fill_est_sell": 133.85
+        "per_lot": 49634.1,
+        "pct": 9.93,
+        "fill_est_buy": 1645.37,
+        "fill_est_sell": 1612.79
        },
        "PE": {
-        "price": 464.6,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 23.35,
-        "bid": 451.9,
-        "ask": 477.3,
+        "price": 1239.35,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 18.81,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 13938.0,
-        "pct": 2.79,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 37180.5,
+        "pct": 7.44,
+        "fill_est_buy": 1236.3,
+        "fill_est_sell": 1211.82
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": 0,
-       "strike": 64600.0,
+       "strike": 62600.0,
        "CE": {
-        "price": 317.18,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.02,
-        "bid": 306.35,
-        "ask": 328.0,
+        "price": 1561.39,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 17.4,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 9515.4,
-        "pct": 1.9,
-        "fill_est_buy": 35.55,
-        "fill_est_sell": 34.85
+        "per_lot": 46841.7,
+        "pct": 9.37,
+        "fill_est_buy": 1551.94,
+        "fill_est_sell": 1521.21
        },
        "PE": {
-        "price": 510.0,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 23.29,
-        "bid": 494.55,
-        "ask": 525.45,
+        "price": 1269.2,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 18.6,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 15300.0,
-        "pct": 3.06,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 38076.0,
+        "pct": 7.62,
+        "fill_est_buy": 1266.73,
+        "fill_est_sell": 1241.65
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": 1,
-       "strike": 64700.0,
+       "strike": 62700.0,
        "CE": {
-        "price": 279.0,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.57,
-        "bid": 270.45,
-        "ask": 287.55,
+        "price": 1507.33,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 17.38,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 8370.0,
-        "pct": 1.68,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 45219.9,
+        "pct": 9.05,
+        "fill_est_buy": 1497.42,
+        "fill_est_sell": 1467.77
        },
        "PE": {
-        "price": 570.05,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 23.73,
-        "bid": 541.05,
-        "ask": 599.05,
+        "price": 1314.06,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 18.57,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 17101.5,
-        "pct": 3.42,
-        "fill_est_buy": 65.45,
-        "fill_est_sell": 64.15
+        "per_lot": 39421.8,
+        "pct": 7.89,
+        "fill_est_buy": 1312.13,
+        "fill_est_sell": 1286.15
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       },
       {
        "offset": 2,
-       "strike": 64800.0,
+       "strike": 62800.0,
        "CE": {
-        "price": 238.48,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 12.78,
-        "bid": 230.65,
-        "ask": 246.3,
+        "price": 1485.69,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 17.76,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 7154.4,
-        "pct": 1.43,
-        "fill_est_buy": 0.0,
-        "fill_est_sell": 0.0
+        "per_lot": 44570.7,
+        "pct": 8.92,
+        "fill_est_buy": 1475.21,
+        "fill_est_sell": 1446.0
        },
        "PE": {
-        "price": 631.62,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 24.11,
-        "bid": 613.25,
-        "ask": 650.0,
+        "price": 1348.25,
+        "src": "model (BS on NSE chain IV)",
+        "iv_pct": 18.39,
+        "bid": 0.0,
+        "ask": 0.0,
         "listed": true,
-        "per_lot": 18948.6,
-        "pct": 3.79,
-        "fill_est_buy": 166.45,
-        "fill_est_sell": 163.15
+        "per_lot": 40447.5,
+        "pct": 8.09,
+        "fill_est_buy": 1346.94,
+        "fill_est_sell": 1320.27
        },
-       "source": "real Zerodha chain (mid)"
+       "source": "model (BS on NSE chain IV)"
       }
      ],
      "structures": [
       {
        "name": "Bull call spread",
        "kind": "debit",
-       "expiry": "2026-11-23",
+       "expiry": "2026-12-29",
        "legs": [
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 64600.0,
-         "price": 317.18,
-         "src": "real Zerodha chain (mid)",
-         "bid": 306.35,
-         "ask": 328.0,
-         "fill_est": 35.55
+         "strike": 62600.0,
+         "price": 1561.39,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 1551.94
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 64800.0,
-         "price": 238.48,
-         "src": "real Zerodha chain (mid)",
-         "bid": 230.65,
-         "ask": 246.3,
-         "fill_est": 0.0
+         "strike": 62800.0,
+         "price": 1485.69,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 1446.0
         }
        ],
        "units": 30,
-       "net_debit": 78.7,
-       "net_debit_lot": 2361.0,
-       "entry_charges": 65.23,
-       "max_loss": 2426.23,
-       "max_gain": 3573.77,
+       "net_debit": 75.7,
+       "net_debit_lot": 2271.0,
+       "entry_charges": 153.9,
+       "max_loss": 2424.9,
+       "max_gain": 3575.1,
        "breakevens": [
-        64678.7
+        62675.7
        ],
        "max_loss_pct": 0.49,
        "event_size": "fits",
        "quotes": [],
-       "fill_est_debit": 35.55,
-       "fill_est_lot": 1066.5,
-       "long_leg_max": 9515.4,
-       "long_leg_pct": 1.9,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      },
-      {
-       "name": "Bear put spread",
-       "kind": "debit",
-       "expiry": "2026-11-23",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 64600.0,
-         "price": 510.0,
-         "src": "real Zerodha chain (mid)",
-         "bid": 494.55,
-         "ask": 525.45,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 64400.0,
-         "price": 407.4,
-         "src": "real Zerodha chain (mid)",
-         "bid": 396.55,
-         "ask": 418.25,
-         "fill_est": 0.0
-        }
-       ],
-       "units": 30,
-       "net_debit": 102.6,
-       "net_debit_lot": 3078.0,
-       "entry_charges": 77.56,
-       "max_loss": 3155.56,
-       "max_gain": 2844.44,
-       "breakevens": [
-        64497.4
-       ],
-       "max_loss_pct": 0.63,
-       "event_size": "fits",
-       "quotes": [],
-       "fill_est_debit": -0.0,
-       "fill_est_lot": -0.0,
-       "long_leg_max": 15300.0,
-       "long_leg_pct": 3.06,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      },
-      {
-       "name": "Long straddle",
-       "kind": "debit",
-       "expiry": "2026-11-23",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 64600.0,
-         "price": 317.18,
-         "src": "real Zerodha chain (mid)",
-         "bid": 306.35,
-         "ask": 328.0,
-         "fill_est": 35.55
-        },
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 64600.0,
-         "price": 510.0,
-         "src": "real Zerodha chain (mid)",
-         "bid": 494.55,
-         "ask": 525.45,
-         "fill_est": 0.0
-        }
-       ],
-       "units": 30,
-       "net_debit": 827.18,
-       "net_debit_lot": 24815.4,
-       "entry_charges": 58.39,
-       "max_loss": 24873.79,
-       "max_gain": null,
-       "breakevens": [
-        63772.82,
-        65427.18
-       ],
-       "max_loss_pct": 4.98,
-       "event_size": "too big",
-       "quotes": [],
-       "fill_est_debit": 35.55,
-       "fill_est_lot": 1066.5,
-       "long_leg_max": 15300.0,
-       "long_leg_pct": 3.06,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      },
-      {
-       "name": "Bull put spread",
-       "kind": "credit",
-       "expiry": "2026-11-23",
-       "units": 30,
-       "expected_move": 827.18,
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 63600.0,
-         "price": 119.95,
-         "src": "real Zerodha chain (mid)",
-         "bid": 115.85,
-         "ask": 124.05,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 63800.0,
-         "price": 168.93,
-         "src": "real Zerodha chain (mid)",
-         "bid": 161.05,
-         "ask": 176.8,
-         "fill_est": 0.0
-        }
-       ],
-       "net_credit": 48.98,
-       "net_credit_lot": 1469.4,
-       "entry_charges": 58.56,
-       "strike_gap": 200.0,
-       "max_loss": 4589.16,
-       "max_gain": 1410.84,
-       "breakevens": [
-        63751.02
-       ],
-       "max_loss_pct": 0.92,
-       "event_size": "fits",
-       "quotes": [
-        "engine fill est. credit 0.00 / unit vs 48.98 at the mids (the fill model prices each leg on NSE's own strike IV, not the mid)"
-       ],
-       "fill_est_credit": 0.0,
-       "fill_est_lot": 0.0,
-       "long_leg_max": 3598.5,
-       "long_leg_pct": 0.72,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      },
-      {
-       "name": "Bear call spread",
-       "kind": "credit",
-       "expiry": "2026-11-23",
-       "units": 30,
-       "expected_move": 827.18,
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 65600.0,
-         "price": 62.6,
-         "src": "real Zerodha chain (mid)",
-         "bid": 60.0,
-         "ask": 65.2,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 65400.0,
-         "price": 91.7,
-         "src": "real Zerodha chain (mid)",
-         "bid": 90.0,
-         "ask": 93.4,
-         "fill_est": 0.0
-        }
-       ],
-       "net_credit": 29.1,
-       "net_credit_lot": 873.0,
-       "entry_charges": 53.34,
-       "strike_gap": 200.0,
-       "max_loss": 5180.34,
-       "max_gain": 819.66,
-       "breakevens": [
-        65429.1
-       ],
-       "max_loss_pct": 1.04,
-       "event_size": "fits",
-       "quotes": [
-        "engine fill est. credit 0.00 / unit vs 29.10 at the mids (the fill model prices each leg on NSE's own strike IV, not the mid)"
-       ],
-       "fill_est_credit": 0.0,
-       "fill_est_lot": 0.0,
-       "long_leg_max": 1878.0,
-       "long_leg_pct": 0.38,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      },
-      {
-       "name": "Iron condor",
-       "kind": "credit",
-       "expiry": "2026-11-23",
-       "units": 30,
-       "expected_move": 827.18,
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "PE",
-         "strike": 63600.0,
-         "price": 119.95,
-         "src": "real Zerodha chain (mid)",
-         "bid": 115.85,
-         "ask": 124.05,
-         "fill_est": 0.0
-        },
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 65600.0,
-         "price": 62.6,
-         "src": "real Zerodha chain (mid)",
-         "bid": 60.0,
-         "ask": 65.2,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "PE",
-         "strike": 63800.0,
-         "price": 168.93,
-         "src": "real Zerodha chain (mid)",
-         "bid": 161.05,
-         "ask": 176.8,
-         "fill_est": 0.0
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 65400.0,
-         "price": 91.7,
-         "src": "real Zerodha chain (mid)",
-         "bid": 90.0,
-         "ask": 93.4,
-         "fill_est": 0.0
-        }
-       ],
-       "net_credit": 78.08,
-       "net_credit_lot": 2342.4,
-       "entry_charges": 111.9,
-       "strike_gap": 200.0,
-       "max_loss": 3769.5,
-       "max_gain": 2230.5,
-       "breakevens": [
-        63721.92,
-        65478.08
-       ],
-       "max_loss_pct": 0.75,
-       "event_size": "fits",
-       "quotes": [
-        "engine fill est. credit 0.00 / unit vs 78.08 at the mids (the fill model prices each leg on NSE's own strike IV, not the mid)"
-       ],
-       "fill_est_credit": 0.0,
-       "fill_est_lot": 0.0,
-       "long_leg_max": 3598.5,
-       "long_leg_pct": 0.72,
-       "verdict": "n/a",
-       "why": "expires 2026-11-23, on or before the earliest fill day 2026-11-23: the engine rejects an expiry that is not after the fill day"
-      }
-     ]
-    },
-    {
-     "label": "event: rbi-mpc-december 2026-12-04 (calendar)",
-     "expiry": "2026-12-29",
-     "days": 39,
-     "atm": 64600.0,
-     "atm_iv_pct": 15.97,
-     "expected_move": 2715.73,
-     "fill_day": "2026-11-23",
-     "rows": [
-      {
-       "offset": -2,
-       "strike": 64400.0,
-       "CE": {
-        "price": 1534.72,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 13.87,
-        "bid": 1501.0,
-        "ask": 1568.45,
-        "listed": true,
-        "per_lot": 46041.6,
-        "pct": 9.22,
-        "fill_est_buy": 1485.09,
-        "fill_est_sell": 1455.69
-       },
-       "PE": {
-        "price": 1177.5,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 17.81,
-        "bid": 1135.0,
-        "ask": 1220.0,
-        "listed": true,
-        "per_lot": 35325.0,
-        "pct": 7.07,
-        "fill_est_buy": 1146.24,
-        "fill_est_sell": 1123.54
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": -1,
-       "strike": 64500.0,
-       "CE": {
-        "price": 1468.45,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 13.76,
-        "bid": 1453.45,
-        "ask": 1483.45,
-        "listed": true,
-        "per_lot": 44053.5,
-        "pct": 8.82,
-        "fill_est_buy": 1418.58,
-        "fill_est_sell": 1390.49
-       },
-       "PE": {
-        "price": 1253.45,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 18.2,
-        "bid": 1246.9,
-        "ask": 1260.0,
-        "listed": true,
-        "per_lot": 37603.5,
-        "pct": 7.53,
-        "fill_est_buy": 1221.8,
-        "fill_est_sell": 1197.61
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": 0,
-       "strike": 64600.0,
-       "CE": {
-        "price": 1420.43,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 13.86,
-        "bid": 1395.9,
-        "ask": 1444.95,
-        "listed": true,
-        "per_lot": 42612.9,
-        "pct": 8.53,
-        "fill_est_buy": 1369.9,
-        "fill_est_sell": 1342.77
-       },
-       "PE": {
-        "price": 1295.3,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 18.16,
-        "bid": 1290.6,
-        "ask": 1300.0,
-        "listed": true,
-        "per_lot": 38859.0,
-        "pct": 7.78,
-        "fill_est_buy": 1264.33,
-        "fill_est_sell": 1239.29
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": 1,
-       "strike": 64700.0,
-       "CE": {
-        "price": 1355.97,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 13.74,
-        "bid": 1323.8,
-        "ask": 1388.15,
-        "listed": true,
-        "per_lot": 40679.1,
-        "pct": 8.14,
-        "fill_est_buy": 1305.35,
-        "fill_est_sell": 1279.5
-       },
-       "PE": {
-        "price": 1330.45,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 18.02,
-        "bid": 1294.9,
-        "ask": 1366.0,
-        "listed": true,
-        "per_lot": 39913.5,
-        "pct": 7.99,
-        "fill_est_buy": 1300.43,
-        "fill_est_sell": 1274.68
-       },
-       "source": "real Zerodha chain (mid)"
-      },
-      {
-       "offset": 2,
-       "strike": 64800.0,
-       "CE": {
-        "price": 1306.95,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 13.79,
-        "bid": 1276.0,
-        "ask": 1337.9,
-        "listed": true,
-        "per_lot": 39208.5,
-        "pct": 7.85,
-        "fill_est_buy": 1255.92,
-        "fill_est_sell": 1231.05
-       },
-       "PE": {
-        "price": 1338.92,
-        "src": "real Zerodha chain (mid)",
-        "iv_pct": 17.56,
-        "bid": 1271.5,
-        "ask": 1406.35,
-        "listed": true,
-        "per_lot": 40167.6,
-        "pct": 8.04,
-        "fill_est_buy": 1310.71,
-        "fill_est_sell": 1284.76
-       },
-       "source": "real Zerodha chain (mid)"
-      }
-     ],
-     "structures": [
-      {
-       "name": "Bull call spread",
-       "kind": "debit",
-       "expiry": "2026-12-29",
-       "legs": [
-        {
-         "side": "BUY",
-         "right": "CE",
-         "strike": 64600.0,
-         "price": 1420.43,
-         "src": "real Zerodha chain (mid)",
-         "bid": 1395.9,
-         "ask": 1444.95,
-         "fill_est": 1369.9
-        },
-        {
-         "side": "SELL",
-         "right": "CE",
-         "strike": 64800.0,
-         "price": 1306.95,
-         "src": "real Zerodha chain (mid)",
-         "bid": 1276.0,
-         "ask": 1337.9,
-         "fill_est": 1231.05
-        }
-       ],
-       "units": 30,
-       "net_debit": 113.48,
-       "net_debit_lot": 3404.4,
-       "entry_charges": 141.68,
-       "max_loss": 3546.08,
-       "max_gain": 2453.92,
-       "breakevens": [
-        64713.48
-       ],
-       "max_loss_pct": 0.71,
-       "event_size": "fits",
-       "quotes": [],
-       "fill_est_debit": 138.85,
-       "fill_est_lot": 4165.5,
-       "long_leg_max": 42612.9,
-       "long_leg_pct": 8.53,
+       "fill_est_debit": 105.94,
+       "fill_est_lot": 3178.2,
+       "long_leg_max": 46841.7,
+       "long_leg_pct": 9.37,
        "margin": 0.0,
-       "cash_change": -42655.69,
-       "cash_need": 42655.69,
+       "cash_change": -46886.4,
+       "cash_need": 46886.4,
        "slots_needed": 2,
-       "order_risk": 42612.9,
-       "order_risk_what": "premium (BUY CE 64,600)",
-       "order_risk_pct": 8.53,
+       "order_risk": 46841.7,
+       "order_risk_what": "premium (BUY CE 62,600)",
+       "order_risk_pct": 9.37,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "FAIL",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "SELL CE 64,800: max 5 open positions already held"
+       "why": "SELL CE 62,800: max 5 open positions already held"
       },
       {
        "name": "Bear put spread",
@@ -1656,53 +1309,53 @@
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 64600.0,
-         "price": 1295.3,
-         "src": "real Zerodha chain (mid)",
-         "bid": 1290.6,
-         "ask": 1300.0,
-         "fill_est": 1264.33
+         "strike": 62600.0,
+         "price": 1269.2,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 1266.73
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 64400.0,
-         "price": 1177.5,
-         "src": "real Zerodha chain (mid)",
-         "bid": 1135.0,
-         "ask": 1220.0,
-         "fill_est": 1123.54
+         "strike": 62400.0,
+         "price": 1208.88,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 1181.43
         }
        ],
        "units": 30,
-       "net_debit": 117.8,
-       "net_debit_lot": 3534.0,
-       "entry_charges": 132.56,
-       "max_loss": 3666.56,
-       "max_gain": 2333.44,
+       "net_debit": 60.32,
+       "net_debit_lot": 1809.6,
+       "entry_charges": 134.01,
+       "max_loss": 1943.61,
+       "max_gain": 4056.39,
        "breakevens": [
-        64482.2
+        62539.68
        ],
-       "max_loss_pct": 0.73,
+       "max_loss_pct": 0.39,
        "event_size": "fits",
        "quotes": [],
-       "fill_est_debit": 140.79,
-       "fill_est_lot": 4223.7,
-       "long_leg_max": 38859.0,
-       "long_leg_pct": 7.78,
+       "fill_est_debit": 85.3,
+       "fill_est_lot": 2559.0,
+       "long_leg_max": 38076.0,
+       "long_leg_pct": 7.62,
        "margin": 0.0,
-       "cash_change": -38900.11,
-       "cash_need": 38900.11,
+       "cash_change": -38116.75,
+       "cash_need": 38116.75,
        "slots_needed": 2,
-       "order_risk": 38859.0,
-       "order_risk_what": "premium (BUY PE 64,600)",
-       "order_risk_pct": 7.78,
+       "order_risk": 38076.0,
+       "order_risk_what": "premium (BUY PE 62,600)",
+       "order_risk_pct": 7.62,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "FAIL",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "SELL PE 64,400: max 5 open positions already held"
+       "why": "SELL PE 62,400: max 5 open positions already held"
       },
       {
        "name": "Long straddle",
@@ -1712,264 +1365,277 @@
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 64600.0,
-         "price": 1420.43,
-         "src": "real Zerodha chain (mid)",
-         "bid": 1395.9,
-         "ask": 1444.95,
-         "fill_est": 1369.9
+         "strike": 62600.0,
+         "price": 1561.39,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 1551.94
         },
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 64600.0,
-         "price": 1295.3,
-         "src": "real Zerodha chain (mid)",
-         "bid": 1290.6,
-         "ask": 1300.0,
-         "fill_est": 1264.33
+         "strike": 62600.0,
+         "price": 1269.2,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 1266.73
         }
        ],
        "units": 30,
-       "net_debit": 2715.73,
-       "net_debit_lot": 81471.9,
-       "entry_charges": 83.9,
-       "max_loss": 81555.8,
+       "net_debit": 2830.59,
+       "net_debit_lot": 84917.7,
+       "entry_charges": 85.45,
+       "max_loss": 85003.15,
        "max_gain": null,
        "breakevens": [
-        61884.27,
-        67315.73
+        59769.41,
+        65430.59
        ],
-       "max_loss_pct": 16.33,
+       "max_loss_pct": 17.0,
        "event_size": "too big",
        "quotes": [],
-       "fill_est_debit": 2634.23,
-       "fill_est_lot": 79026.9,
-       "long_leg_max": 42612.9,
-       "long_leg_pct": 8.53,
+       "fill_est_debit": 2818.67,
+       "fill_est_lot": 84560.1,
+       "long_leg_max": 46841.7,
+       "long_leg_pct": 9.37,
        "margin": 0.0,
-       "cash_change": -42655.69,
-       "cash_need": 42655.69,
+       "cash_change": -46886.4,
+       "cash_need": 46886.4,
        "slots_needed": 2,
-       "order_risk": 42612.9,
-       "order_risk_what": "premium (BUY CE 64,600)",
-       "order_risk_pct": 8.53,
+       "order_risk": 46841.7,
+       "order_risk_what": "premium (BUY CE 62,600)",
+       "order_risk_pct": 9.37,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "FAIL",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "BUY PE 64,600: max 5 open positions already held"
+       "why": "BUY PE 62,600: max 5 open positions already held"
       },
       {
        "name": "Bull put spread",
        "kind": "credit",
        "expiry": "2026-12-29",
        "units": 30,
-       "expected_move": 2715.73,
+       "expected_move": 2830.59,
        "legs": [
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 61700.0,
-         "price": 446.5,
-         "src": "real Zerodha chain (mid)",
-         "bid": 435.75,
-         "ask": 457.25,
-         "fill_est": 413.89
+         "strike": 59600.0,
+         "price": 427.86,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 419.01
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 61900.0,
-         "price": 483.65,
-         "src": "real Zerodha chain (mid)",
-         "bid": 472.7,
-         "ask": 494.6,
-         "fill_est": 441.35
+         "strike": 59800.0,
+         "price": 472.32,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 454.15
         }
        ],
-       "net_credit": 37.15,
-       "net_credit_lot": 1114.5,
-       "entry_charges": 81.09,
+       "net_credit": 44.46,
+       "net_credit_lot": 1333.8,
+       "entry_charges": 80.18,
        "strike_gap": 200.0,
-       "max_loss": 4966.59,
-       "max_gain": 1033.41,
+       "max_loss": 4746.38,
+       "max_gain": 1253.62,
        "breakevens": [
-        61862.85
+        59755.54
        ],
-       "max_loss_pct": 0.99,
+       "max_loss_pct": 0.95,
        "event_size": "fits",
        "quotes": [],
-       "fill_est_credit": 27.46,
-       "fill_est_lot": 823.8,
-       "long_leg_max": 13395.0,
-       "long_leg_pct": 2.68,
+       "fill_est_credit": 35.14,
+       "fill_est_lot": 1054.2,
+       "long_leg_max": 12835.8,
+       "long_leg_pct": 2.57,
        "margin": 0.0,
-       "cash_change": -13424.63,
-       "cash_need": 13424.63,
+       "cash_change": -12865.18,
+       "cash_need": 12865.18,
        "slots_needed": 2,
-       "order_risk": 13395.0,
-       "order_risk_what": "premium (BUY PE 61,700)",
-       "order_risk_pct": 2.68,
+       "order_risk": 12835.8,
+       "order_risk_what": "premium (BUY PE 59,600)",
+       "order_risk_pct": 2.57,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "FAIL",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "SELL PE 61,900: max 5 open positions already held"
+       "why": "SELL PE 59,800: max 5 open positions already held"
       },
       {
        "name": "Bear call spread",
        "kind": "credit",
        "expiry": "2026-12-29",
        "units": 30,
-       "expected_move": 2715.73,
+       "expected_move": 2830.59,
        "legs": [
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 67500.0,
-         "price": 400.33,
-         "src": "real Zerodha chain (mid)",
-         "bid": 394.55,
-         "ask": 406.1,
-         "fill_est": 360.41
+         "strike": 65600.0,
+         "price": 457.34,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 444.65
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 67300.0,
-         "price": 465.82,
-         "src": "real Zerodha chain (mid)",
-         "bid": 431.65,
-         "ask": 500.0,
-         "fill_est": 414.41
+         "strike": 65400.0,
+         "price": 502.59,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 479.87
         }
        ],
-       "net_credit": 65.49,
-       "net_credit_lot": 1964.7,
-       "entry_charges": 79.45,
+       "net_credit": 45.25,
+       "net_credit_lot": 1357.5,
+       "entry_charges": 82.34,
        "strike_gap": 200.0,
-       "max_loss": 4114.75,
-       "max_gain": 1885.25,
+       "max_loss": 4724.84,
+       "max_gain": 1275.16,
        "breakevens": [
-        67365.49
+        65445.25
        ],
-       "max_loss_pct": 0.82,
+       "max_loss_pct": 0.95,
        "event_size": "fits",
-       "quotes": [
-        "wide quotes: SELL CE 67,300 bid/ask 431.65/500.00 (15% of mid)"
-       ],
-       "fill_est_credit": 54.0,
-       "fill_est_lot": 1620.0,
-       "long_leg_max": 12009.9,
-       "long_leg_pct": 2.4,
+       "quotes": [],
+       "fill_est_credit": 35.22,
+       "fill_est_lot": 1056.6,
+       "long_leg_max": 13720.2,
+       "long_leg_pct": 2.74,
        "margin": 0.0,
-       "cash_change": -12038.91,
-       "cash_need": 12038.91,
+       "cash_change": -13749.97,
+       "cash_need": 13749.97,
        "slots_needed": 2,
-       "order_risk": 12009.9,
-       "order_risk_what": "premium (BUY CE 67,500)",
-       "order_risk_pct": 2.4,
+       "order_risk": 13720.2,
+       "order_risk_what": "premium (BUY CE 65,600)",
+       "order_risk_pct": 2.74,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "FAIL",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "SELL CE 67,300: max 5 open positions already held"
+       "why": "SELL CE 65,400: max 5 open positions already held"
       },
       {
        "name": "Iron condor",
        "kind": "credit",
        "expiry": "2026-12-29",
        "units": 30,
-       "expected_move": 2715.73,
+       "expected_move": 2830.59,
        "legs": [
         {
          "side": "BUY",
          "right": "PE",
-         "strike": 61700.0,
-         "price": 446.5,
-         "src": "real Zerodha chain (mid)",
-         "bid": 435.75,
-         "ask": 457.25,
-         "fill_est": 413.89
+         "strike": 59600.0,
+         "price": 427.86,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 419.01
         },
         {
          "side": "BUY",
          "right": "CE",
-         "strike": 67500.0,
-         "price": 400.33,
-         "src": "real Zerodha chain (mid)",
-         "bid": 394.55,
-         "ask": 406.1,
-         "fill_est": 360.41
+         "strike": 65600.0,
+         "price": 457.34,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 444.65
         },
         {
          "side": "SELL",
          "right": "PE",
-         "strike": 61900.0,
-         "price": 483.65,
-         "src": "real Zerodha chain (mid)",
-         "bid": 472.7,
-         "ask": 494.6,
-         "fill_est": 441.35
+         "strike": 59800.0,
+         "price": 472.32,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 454.15
         },
         {
          "side": "SELL",
          "right": "CE",
-         "strike": 67300.0,
-         "price": 465.82,
-         "src": "real Zerodha chain (mid)",
-         "bid": 431.65,
-         "ask": 500.0,
-         "fill_est": 414.41
+         "strike": 65400.0,
+         "price": 502.59,
+         "src": "model (BS on NSE chain IV)",
+         "bid": 0.0,
+         "ask": 0.0,
+         "fill_est": 479.87
         }
        ],
-       "net_credit": 102.64,
-       "net_credit_lot": 3079.2,
-       "entry_charges": 160.54,
+       "net_credit": 89.71,
+       "net_credit_lot": 2691.3,
+       "entry_charges": 162.52,
        "strike_gap": 200.0,
-       "max_loss": 3081.34,
-       "max_gain": 2918.66,
+       "max_loss": 3471.22,
+       "max_gain": 2528.78,
        "breakevens": [
-        61797.36,
-        67402.64
+        59710.29,
+        65489.71
        ],
-       "max_loss_pct": 0.62,
+       "max_loss_pct": 0.69,
        "event_size": "fits",
-       "quotes": [
-        "wide quotes: SELL CE 67,300 bid/ask 431.65/500.00 (15% of mid)"
-       ],
-       "fill_est_credit": 81.46,
-       "fill_est_lot": 2443.8,
-       "long_leg_max": 13395.0,
-       "long_leg_pct": 2.68,
+       "quotes": [],
+       "fill_est_credit": 70.36,
+       "fill_est_lot": 2110.8,
+       "long_leg_max": 13720.2,
+       "long_leg_pct": 2.74,
        "margin": 0.0,
-       "cash_change": -13424.63,
-       "cash_need": 13424.63,
+       "cash_change": -12865.18,
+       "cash_need": 12865.18,
        "slots_needed": 4,
-       "order_risk": 13395.0,
-       "order_risk_what": "premium (BUY PE 61,700)",
-       "order_risk_pct": 2.68,
+       "order_risk": 12835.8,
+       "order_risk_what": "premium (BUY PE 59,600)",
+       "order_risk_pct": 2.57,
        "rule_10pct": "PASS",
        "free_cash": "PASS",
        "slots": "FAIL",
        "max_lots": 0,
        "verdict": "FAIL",
-       "why": "BUY CE 67,500: max 5 open positions already held; SELL PE 61,900: max 5 open positions already held; SELL CE 67,300: max 5 open positions already held"
+       "why": "BUY CE 65,600: max 5 open positions already held; SELL PE 59,800: max 5 open positions already held; SELL CE 65,400: max 5 open positions already held"
       }
      ]
     }
    ]
   }
  ],
- "india_vix": 17.31999969482422,
+ "india_vix": 17.697500228881836,
  "sources": [
-  "real Zerodha chain (mid)"
+  "model (BS on NSE chain IV)"
  ],
  "calendar": [
+  {
+   "slug": "india-gdp-q2fy27",
+   "date": "2026-11-30",
+   "event": "India Q2 FY27 GDP (MoSPI)",
+   "holds": [
+    {
+     "underlying": "NIFTY",
+     "label": "weekly",
+     "expiry": "2026-12-01"
+    },
+    {
+     "underlying": "BANKNIFTY",
+     "label": "monthly",
+     "expiry": "2026-12-29"
+    }
+   ]
+  },
   {
    "slug": "rbi-mpc-december",
    "date": "2026-12-04",
@@ -1977,12 +1643,29 @@
    "holds": [
     {
      "underlying": "NIFTY",
-     "label": "event: rbi-mpc-december 2026-12-04 (calendar)",
+     "label": "monthly",
      "expiry": "2026-12-29"
     },
     {
      "underlying": "BANKNIFTY",
-     "label": "event: rbi-mpc-december 2026-12-04 (calendar)",
+     "label": "monthly",
+     "expiry": "2026-12-29"
+    }
+   ]
+  },
+  {
+   "slug": "india-cpi-november",
+   "date": "2026-12-12",
+   "event": "India CPI (November) (MoSPI; calendar date is a Saturday)",
+   "holds": [
+    {
+     "underlying": "NIFTY",
+     "label": "monthly",
+     "expiry": "2026-12-29"
+    },
+    {
+     "underlying": "BANKNIFTY",
+     "label": "monthly",
      "expiry": "2026-12-29"
     }
    ]
