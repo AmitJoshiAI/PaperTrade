@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-23T09:46+05:30",
+ "generated_at": "2026-11-23T11:48+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 67,
+   "items": 217,
    "error": null,
    "optional": false,
-   "seconds": 0.6
+   "seconds": 0.5
   },
   {
    "id": "nse_results",
@@ -23,12 +23,12 @@
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 57,
+   "items": 87,
    "error": null,
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.8
+   "seconds": 1.7
   },
   {
    "id": "et_markets",
@@ -37,7 +37,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   },
   {
    "id": "et_stocks",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   },
   {
    "id": "bs_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.3
+   "seconds": 0.2
   },
   {
    "id": "bl_markets",
@@ -64,7 +64,7 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.1
   },
   {
    "id": "moneycontrol",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.2
+   "seconds": 1.4
   },
   {
    "id": "cnbc",
@@ -86,19 +86,752 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.2
   }
  ],
  "optional_unavailable": [],
- "quotes_checked": 54,
- "movers": 4,
+ "quotes_checked": 53,
+ "movers": 5,
  "quotes_error": null,
- "new_alerts": 61,
+ "new_alerts": 35,
  "high_score": 6,
- "seconds": 10.0,
+ "seconds": 4.0,
  "theses": [],
  "watchlist_size": 54,
  "alerts": [
+  {
+   "id": "f0de4230f0dd",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "IPO action: 3 public issues to open for subscription this week; 3 listings lined up",
+   "summary": "Agrochemicals manufacturer Crystal Crop Protection will be listed on November 26, followed by Mahanadi Coalfields and Watrana Rentals on November 27.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/ipo-action-3-public-issues-to-open-for-subscription-this-week-3-listings-lined-up-14087001.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "46ae63d60c7b",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Mahanadi Coalfields IPO subscribed 50% so far on last day of bidding; check latest GMP",
+   "summary": "The initial public offering (IPO) of Mahanadi Coalfields continued to witness subdued demand on the last day of bidding, with the issue receiving 50 percent subscription by 10:10 am on November 23, according to NSE data.",
+   "link": "https://www.moneycontrol.com/news/business/ipo/mahanadi-coalfields-ipo-gmp-today-check-subscription-status-should-you-apply-or-avoid-14086904.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "a3efb4e57a15",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Bank Nifty plunges nearly 1,000 points; Axis Bank, ICICI Bank, SBI among top losers as banking stocks slide",
+   "summary": "Bank Nifty plunged nearly 1,000 points, or 1.5 percent, as selling pressure hit banking stocks. Axis Bank, ICICI Bank and SBI were among the major losers, while PSU and private bank indices declined sharply.",
+   "link": "https://www.moneycontrol.com/news/business/markets/bank-nifty-plunges-nearly-1-000-points-axis-bank-icici-bank-sbi-among-top-losers-as-banking-stocks-slide-14086891.html",
+   "symbols": [
+    "ICICIBANK",
+    "AXISBANK",
+    "SBIN"
+   ],
+   "symbol_keys": [
+    "ICICIBANK",
+    "AXISBANK",
+    "SBIN"
+   ],
+   "keywords": [
+    "round-up"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "4cd2fed2e6bc",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "APL Apollo Tubes shares plunge 15%, Tata Steel falls 6% as Rs 5,825 crore block deal follows acquisition news",
+   "summary": "APL Apollo Tubes shares plunged 15% and Tata Steel fell 6% after a Rs 5,825 crore block deal involving nearly 10% of APL Apollo's equity, following Tata Steel's announcement of a potential Rs 32,266 crore acquisition.",
+   "link": "https://www.moneycontrol.com/news/business/markets/apl-apollo-tubes-shares-plunge-10-tata-steel-falls-4-as-rs-5-825-crore-block-deal-follows-acquisition-news-14086850.html",
+   "symbols": [
+    "TATASTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL"
+   ],
+   "keywords": [
+    "block deal",
+    "M&A"
+   ],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 10,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "843ccbd42460",
+   "kind": "news",
+   "time": null,
+   "source": "Moneycontrol",
+   "headline": "Sensex Today | Stock Market Live: Sensex plunges over 550 pts, Nifty near 25,600; metals, banks slide; Tata Steel crashes 7%, IT rallies",
+   "summary": "Sensex Today | Stock Market Live: Indian stock market benchmarks declined sharply on Monday, November 23, with the Sensex falling 551 points, or 0.66 percent, to 83,369 and the Nifty slipping 175 points, or 0.68 percent, to 25,625 around 11",
+   "link": "https://www.moneycontrol.com/news/business/markets/stock-market-live-updates-nifty50-share-price-sensex-share-price-crude-fii-gift-nifty-rupee-latest-updates-23-11-2026-alpha-liveblog-14086746.html",
+   "symbols": [
+    "TATASTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL"
+   ],
+   "keywords": [],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "501ede35fe7c",
+   "kind": "price",
+   "time": "2026-11-23T11:48+05:30",
+   "source": "Yahoo quotes",
+   "headline": "TCS +4.2% vs previous close (close 2475.2, bar 2026-11-23)",
+   "summary": "No matching headline in this run's feeds.",
+   "link": "https://finance.yahoo.com/quote/TCS.NS",
+   "symbols": [
+    "TCS"
+   ],
+   "symbol_keys": [
+    "TCS"
+   ],
+   "keywords": [
+    "price move"
+   ],
+   "moving": [
+    "TCS"
+   ],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "change_pct": 4.17,
+   "volume_x": 1.19,
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "eb932b9a20df",
+   "kind": "news",
+   "time": "2026-11-23T11:44+05:30",
+   "source": "BusinessLine",
+   "headline": "HDFC Bank shares, Bank Nifty retreat sharply from record highs",
+   "summary": "HDFC stock opened strong at ₹855 and briefly touched ₹859.70 before sellers took control, dragging it to a low of ₹824.70.",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/hdfc-bank-shares-bank-nifty-retreat-sharply-from-record-highs/article71733624.ece",
+   "symbols": [
+    "HDFCBANK"
+   ],
+   "symbol_keys": [
+    "HDFCBANK"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "7afb74ef17d9",
+   "kind": "news",
+   "time": "2026-11-23T11:43+05:30",
+   "source": "BSE announcements",
+   "headline": "Jindal Drilling & Industries Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Transcript of Earnings Conference Call held on 16th Novemebr, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4da1ee56-bc38-452a-9a8a-ed6f8c61f17b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "6a483676f600",
+   "kind": "news",
+   "time": "2026-11-23T11:42+05:30",
+   "source": "BSE announcements",
+   "headline": "Raymond Ltd: Announcement Under Regulation 30 Of SEBI Listing Regulations - Analyst / Investor Conference Meet",
+   "summary": "Company Update. PFA Analyst / Investor Conference meet intimation.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/db12a28a-9f21-49bd-925d-02966cc7bc30.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "840df78035d4",
+   "kind": "news",
+   "time": "2026-11-23T11:32+05:30",
+   "source": "NSE announcements",
+   "headline": "Dalmia Bharat Limited: Outcome of Board Meeting held on November 23, 2026, inter-alia approving buyback of equity shares",
+   "summary": "Dalmia Bharat Limited has informed the Exchange regarding Outcome of Board Meeting held on November 23, 2026, inter-alia approving buyback of equity shares |SUBJECT: Outcome of Board Meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/DALBHARAT_23112026113131_outcomeBMbb23112026n.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "buyback"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "b286148afb2e",
+   "kind": "news",
+   "time": "2026-11-23T11:29+05:30",
+   "source": "BusinessLine",
+   "headline": "Shriram Finance set to join Sensex as Trent exits on December 21",
+   "summary": "On the BSE, the stock was trading at ₹1,000.45 on November 23, up 2.72% from its previous close of ₹974, touching an intraday high of ₹1,015",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/shriram-finance-set-to-join-sensex-as-trent-exits-on-december-21/article71733549.ece",
+   "symbols": [
+    "SHRIRAMFIN",
+    "TRENT"
+   ],
+   "symbol_keys": [
+    "SHRIRAMFIN",
+    "TRENT"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "b0b408be6421",
+   "kind": "news",
+   "time": "2026-11-23T11:28+05:30",
+   "source": "BusinessLine",
+   "headline": "Tata Steel dips 7% as APL Apollo tumbles on ₹28,000 crore deal; Hindalco also under pressure",
+   "summary": "The proposed transactions include the sale of Tata Steel’s tubes business for up to ₹11,700 crore and its 100% stake in Tata Steel Colors for ₹16,300 crore.",
+   "link": "https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-dips-7-as-apl-apollo-tumbles-on-28000-crore-deal-hindalco-also-under-pressure/article71733581.ece",
+   "symbols": [
+    "TATASTEEL",
+    "HINDALCO"
+   ],
+   "symbol_keys": [
+    "TATASTEEL",
+    "HINDALCO"
+   ],
+   "keywords": [],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 8,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "878b00184b72",
+   "kind": "news",
+   "time": "2026-11-23T11:25+05:30",
+   "source": "BSE announcements",
+   "headline": "Elnet Technologies Ltd-$: Announcement under Regulation 30 (LODR)-Newspaper Publication",
+   "summary": "Company Update. In accordance with the SEBI circular dated 30th of January, 2026 a special window has been opened for re-lodgment of transfer deeds which were lodged prior to the deadline of April 01st, ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/fdc4aa4b-a375-46f7-9232-04a6fe38325f.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "SEBI"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "86814f5c5b2c",
+   "kind": "news",
+   "time": "2026-11-23T11:09+05:30",
+   "source": "NSE announcements",
+   "headline": "BLS Polymers Limited: Transcripts - earnings or quarterly calls",
+   "summary": "BLS Polymers Limited has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_26716_WebXMLFile_20261123_110952694.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "6ab32f821405",
+   "kind": "news",
+   "time": "2026-11-23T11:06+05:30",
+   "source": "BSE announcements",
+   "headline": "Nath Bio-Genes (India) Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Earning Call Transcript on Conference Call held on 16th November 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/c8c17a1c-99ec-4b97-b53e-bfb493a196ed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "b9e487c828ae",
+   "kind": "news",
+   "time": "2026-11-23T11:05+05:30",
+   "source": "BSE announcements",
+   "headline": "BLS Polymers Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Announcement under Regulation 30 (LODR)-Earnings Call Transcript.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/07272a3c-56c6-42c7-9b72-ef4d54720b0b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "5d315a5f4ba5",
+   "kind": "news",
+   "time": "2026-11-23T11:02+05:30",
+   "source": "Business Standard",
+   "headline": "Tata Chemicals jumps 4.5% as Tata Sons listing debate puts stake in focus",
+   "summary": "Noel Tata, in a recent letter, has maintained that the alternative plan to keep Tata Sons private must be discussed at the upcoming board meeting.",
+   "link": "https://www.business-standard.com/markets/news/tata-chemicals-jumps-4-5-as-tata-sons-listing-debate-puts-stake-in-focus-126112300276_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing",
+    "stake sale"
+   ],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "211988652177",
+   "kind": "news",
+   "time": "2026-11-23T11:01+05:30",
+   "source": "Business Standard",
+   "headline": "Maruti Suzuki gains 2% on price hike; stock up 14% in one week",
+   "summary": "In the past month, the market price of Maruti Suzuki India rallied 27%, against a 14% surge in the BSE Sensex.",
+   "link": "https://www.business-standard.com/markets/news/maruti-suzuki-jumps-2-on-price-hike-stock-up-14-in-one-week-126112300269_1.html",
+   "symbols": [
+    "MARUTI"
+   ],
+   "symbol_keys": [
+    "MARUTI"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "b1bd95148af8",
+   "kind": "news",
+   "time": "2026-11-23T10:42+05:30",
+   "source": "BSE announcements",
+   "headline": "IFGL Refractories Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Further to our letter dated 17th November, 2026 please find enclosed herewith Transcript of Earnings Conference Call on Q2 & H1FY27, held on Tuesday, 17th November, 2026. A copy of this ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7fbe9d79-6190-46f5-918a-3abd8c461812.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "e4fbafbdac96",
+   "kind": "news",
+   "time": "2026-11-23T10:27+05:30",
+   "source": "Business Standard",
+   "headline": "Tata Steel divests tubes biz: Will it unlock value? What analysts say",
+   "summary": "While Tata Steel shares slumped almost 6 per cent following the deal announcement on Monday, brokerages largely retained their bullish views on the counter.",
+   "link": "https://www.business-standard.com/markets/news/tata-steel-share-price-tata-steel-divests-tubes-biz-will-it-unlock-value-what-analysts-say-126112300236_1.html",
+   "symbols": [
+    "TATASTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL"
+   ],
+   "keywords": [],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "ff2f18991cbb",
+   "kind": "news",
+   "time": "2026-11-23T10:26+05:30",
+   "source": "BSE announcements",
+   "headline": "APL Apollo Tubes Ltd: Public Announcement - Open Offer",
+   "summary": "Company Update. Kotak Mahindra Capital Company Ltd (\"Manager to the Open Offer\") has submitted to BSE a copy of Public Announcement for the attention of the Public Shareholders of APL Apollo Tubes Ltd ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1A46F314-7EB9-40DF-A38C-6A63723A5B1E-102548.pdf",
+   "symbols": [
+    "KOTAKBANK"
+   ],
+   "symbol_keys": [
+    "KOTAKBANK"
+   ],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 6,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "5e93c85d7530",
+   "kind": "news",
+   "time": "2026-11-23T10:25+05:30",
+   "source": "Business Standard",
+   "headline": "Gold, Copper, Zinc, Aluminium: Morgan Stanley's outlook on key metals",
+   "summary": "If oil prices move lower more decisively and/or the market gets to the point where it believes the US Fed has finished hiking, gold prices could move higher, Morgan Stanley said.",
+   "link": "https://www.business-standard.com/markets/news/gold-copper-zinc-aluminium-morgan-stanley-s-outlook-on-key-metals-126112300235_1.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "guidance"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "a83975290887",
+   "kind": "news",
+   "time": "2026-11-23T10:24+05:30",
+   "source": "BSE announcements",
+   "headline": "Jaipan Industries Ltd: Public Announcement - Open Offer",
+   "summary": "Company Update. Fintellectual Corporate Advisors Pvt. Ltd. has submitted to BSE a copy of Public Announcement (\"PA\") under Regulation 3(1) and Regulation 4 read with Regulations 13, 14, and 15 (1) of Securities ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/374FC991-5B76-4154-967C-49F3340CAAA8-102429.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "e51ebc51778b",
+   "kind": "news",
+   "time": "2026-11-23T10:22+05:30",
+   "source": "NSE announcements",
+   "headline": "Expleo Solutions Limited: Transcripts - earnings or quarterly calls",
+   "summary": "EXPLEO SOLUTIONS LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_2923_WebXMLFile_20261123_102226408.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "0b71cef4b88d",
+   "kind": "news",
+   "time": "2026-11-23T10:14+05:30",
+   "source": "BusinessLine",
+   "headline": "BHP unveils $17.4 billion plan to double South Australian copper output by 2040",
+   "summary": "Found an economic path to raise annual copper output to ⁠650,000 metric tonnes from the region, which it says is the world's second-biggest source of copper, BHP says",
+   "link": "https://www.thehindubusinessline.com/markets/commodities/bhp-unveils-174-billion-plan-to-double-south-australian-copper-output-by-2040/article71733346.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "enters/launches business"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "03a2d85938c7",
+   "kind": "news",
+   "time": "2026-11-23T10:12+05:30",
+   "source": "Business Standard",
+   "headline": "Eicher Motors hits all-time high; here's why stock rallied 17% in one month",
+   "summary": "Analysts believe Eicher's flagship brand Royal Enfield remains well-positioned to benefit from the structural premiumisation of the Indian 2W industry.",
+   "link": "https://www.business-standard.com/markets/news/eicher-motors-hits-all-time-high-here-s-why-stock-rallied-17-in-one-month-126112300208_1.html",
+   "symbols": [
+    "EICHERMOT"
+   ],
+   "symbol_keys": [
+    "EICHERMOT"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "bce817a12357",
+   "kind": "news",
+   "time": "2026-11-23T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on November 20, 2026 is Rs. 266.0212.",
+   "summary": "NIFTYBETF : BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on November 20, 2026 is Rs. 266.0212. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "fac848e05c4f",
+   "kind": "news",
+   "time": "2026-11-23T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on November 20, 2026 is Rs. 65.7958.",
+   "summary": "BANKBETF : BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on November 20, 2026 is Rs. 65.7958. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "9d13846730bb",
+   "kind": "news",
+   "time": "2026-11-23T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on November 20, 2026 is Rs. 23.7972.",
+   "summary": "BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on November 20, 2026 is Rs. 23.7972. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "f9c5438098f9",
+   "kind": "news",
+   "time": "2026-11-23T10:01+05:30",
+   "source": "NSE announcements",
+   "headline": "Bajaj Finserv Nifty 1D Rate Liquid ETF-Growth: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on November 20, 2026 is Rs. 1108.7019.",
+   "summary": "BAJAJ ASSET MANAGEMENT LIMITED has informed the Exchange that the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on November 20, 2026 is Rs. 1108.7019. |SUBJECT: Declaration of NAV",
+   "link": "",
+   "symbols": [
+    "BAJAJFINSV"
+   ],
+   "symbol_keys": [
+    "BAJAJFINSV"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "b2162b9c0cb8",
+   "kind": "news",
+   "time": "2026-11-23T10:00+05:30",
+   "source": "Business Standard",
+   "headline": "Tata Steel vs JSW Steel vs Hind Zinc: Which stock looks stronger on charts?",
+   "summary": "Deepesh Sarawagi, technical research analyst at Choice Broking reckons that JSW Steel looks favourably placed on charts compared to Tata Steel and Hindustan Zinc. Here's why he explains.",
+   "link": "https://www.business-standard.com/markets/news/tata-steel-vs-jsw-steel-vs-hind-zinc-which-metal-stock-looks-stronger-on-tech-charts-126112300200_1.html",
+   "symbols": [
+    "TATASTEEL",
+    "JSWSTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL",
+    "JSWSTEEL"
+   ],
+   "keywords": [],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 8,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "807e7a7961dc",
+   "kind": "news",
+   "time": "2026-11-23T09:56+05:30",
+   "source": "CNBC top news",
+   "headline": "Tata Steel to buy $1.67 billion stake in India’s largest steel pipe maker; shares plunge nearly 5%",
+   "summary": "Tata Steel will buy a 26.4% stake in India's leading structural steel pipes and tubes maker to boost downstream capacity.",
+   "link": "https://www.cnbc.com/2026/11/23/tata-steel-acquisition-deal-apl-india.html",
+   "symbols": [
+    "TATASTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL"
+   ],
+   "keywords": [
+    "stake sale"
+   ],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 8,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "5a90ca12a52d",
+   "kind": "news",
+   "time": "2026-11-23T09:51+05:30",
+   "source": "BusinessLine",
+   "headline": "Foodlink F&B Holdings' ₹361-crore IPO to open on Nov 26; price band set at ₹181-191",
+   "summary": "The issue comprises a fresh issue of equity shares aggregating up to ₹192 crore and an Offer for Sale of up to 88,35,382 equity shares worth ₹168.76 crore by existing shareholders",
+   "link": "https://www.thehindubusinessline.com/markets/foodlink-fb-holdings-361-crore-ipo-to-open-on-nov-26-price-band-set-at-181-191/article71733345.ece",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
   {
    "id": "eba9d59277ea",
    "kind": "news",
@@ -143,7 +876,12 @@
    "score": 10,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: block-deal buyers entering at the lower price; the open-offer price becomes the reference level for APL holders.",
+    "Losers: APL Apollo (APLAPOLLO) holders who sold into the block, and Tata Steel (TATASTEEL), because it takes on a large stake purchase plus an open offer, which raises capital needs and integration risk. One search found only a pre-deal report of a Gupta-family stake sale of about 28%, valued above Rs 32,000 crore with open offer; nothing confirming this block deal.",
+    "Catalyst: surprise - same-day block deal after the announcement; the next dated trigger is the open-offer window, not yet known to me.",
+    "Thesis fit: none (price move already in; no draft)."
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -279,7 +1017,7 @@
    "kind": "price",
    "time": "2026-11-23T09:46+05:30",
    "source": "Yahoo quotes",
-   "headline": "TATASTEEL -4.8% vs previous close (close 169.36, bar 2026-11-23)",
+   "headline": "TATASTEEL -7.9% vs previous close, volume 3.9x 20-day average (close 163.88, bar 2026-11-23)",
    "summary": "Headlines this run: Tata Steel Limited: Disclosure Under Regulation 51 | Tata Steel Limited: Press Release | Tata Steel Limited: Investor Presentation",
    "link": "https://finance.yahoo.com/quote/TATASTEEL.NS",
    "symbols": [
@@ -294,12 +1032,12 @@
    "moving": [
     "TATASTEEL"
    ],
-   "score": 4,
-   "high": false,
+   "score": 6,
+   "high": true,
    "theses": [],
    "second_order_candidates": [],
-   "change_pct": -4.85,
-   "volume_x": 1.65,
+   "change_pct": -7.93,
+   "volume_x": 3.89,
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -353,7 +1091,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: none clear. The fall follows the sharp drop in NBIS (see [906b3191da56]); the US sleeve is out of scope for this routine.",
+    "Losers: GPU-cloud peers CoreWeave (CRWV) and Nebius (NBIS) fell together, so the pressure looks sector-wide (AI-capex or financing worries), not company-specific. Indian proxies E2E Networks (E2E) and Netweb (NETWEB) may trade the read-across; no mechanism to size.",
+    "Catalyst: unknown - no news found (one search not run for this note; the earlier notes of 12-13 Nov already covered the post-earnings sell-off).",
+    "Thesis fit: none"
+   ],
    "change_pct": -12.02,
    "volume_x": 1.12,
    "first_seen": "2026-11-23T09:46+05:30"
@@ -381,10 +1124,59 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: none clear; same group move as [23f27f5d5134]. Close of 81.31 is down from 141 earlier in the month, so this is a continuation of the sell-off, not a new event.",
+    "Losers: none clear - sector-wide fall in GPU-cloud names; rental-pricing effects not checked.",
+    "Catalyst: unknown - no news found",
+    "Thesis fit: none"
+   ],
    "change_pct": -16.11,
    "volume_x": 1.69,
    "first_seen": "2026-11-23T09:46+05:30"
+  },
+  {
+   "id": "c0d3920c2a71",
+   "kind": "news",
+   "time": "2026-11-23T09:46+05:30",
+   "source": "NSE announcements",
+   "headline": "Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF: the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on November 20, 2026 is Rs. 48.38.",
+   "summary": "MOIPO : Motilal Oswal Asset Management Company Limited has informed the Exchange that the Net Asset Value (per unit) of Motilal Oswal Mutual Fund - Motilal Oswal BSE Select IPO ETF as on November 20, 2026 is Rs. 48.38. |SUBJECT: Declaration",
+   "link": "",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
+  },
+  {
+   "id": "329ea74c7735",
+   "kind": "news",
+   "time": "2026-11-23T09:38+05:30",
+   "source": "Business Standard",
+   "headline": "APL Apollo tanks 15% on Tata Steel deal: Why analysts see near-term pain",
+   "summary": "Upon the completion of the transaction and after the close of the open offer by Tata Steel, the consolidated APL Apollo will comprise a 7.5 MTPA Steel Tubes and Colour Coated capacity.",
+   "link": "https://www.business-standard.com/markets/news/apl-apollo-tanks-10-tata-steel-5-on-28k-cr-deal-what-it-means-for-cos-126112300182_1.html",
+   "symbols": [
+    "TATASTEEL"
+   ],
+   "symbol_keys": [
+    "TATASTEEL"
+   ],
+   "keywords": [],
+   "moving": [
+    "TATASTEEL"
+   ],
+   "score": 5,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-23T11:48+05:30"
   },
   {
    "id": "0e6fd29b0b65",
@@ -551,7 +1343,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: L&T Technology Services (LTTS, a subsidiary of Larsen & Toubro, LT) - a small product launch aimed at automotive software-defined-vehicle testing; revenue effect likely small.",
+    "Losers: none clear - rival engineering-services firms (Tata Elxsi TATAELXSI, KPIT Technologies KPITTECH) compete in the same niche, but one launch is not evidence of share loss.",
+    "Catalyst: surprise - a press release with no dated follow-up; the matched symbol LT is the parent, not LTTS, so the scanner match is loose.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -641,7 +1438,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: see ebf86f5aeb1e.",
+    "Losers: none clear (routine LODR disclosure tied to the same transaction).",
+    "Catalyst: surprise - follow-on disclosure of the APL Apollo deal.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -665,7 +1467,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: see ebf86f5aeb1e.",
+    "Losers: none clear (same press release, different filing).",
+    "Catalyst: surprise - duplicate of the APL Apollo deal announcement.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -689,7 +1496,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: see ebf86f5aeb1e; deck explains the 15.5 Mt tubes and colour-coated capacity target.",
+    "Losers: none clear (presentation adds no new loser beyond the first note).",
+    "Catalyst: scheduled - analyst/investor meet on the deal (see 25e0f8141783).",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -735,7 +1547,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: see ebf86f5aeb1e.",
+    "Losers: none clear (meeting intimation only).",
+    "Catalyst: scheduled - investor call on the APL Apollo deal; management Q&A may clarify open-offer terms.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -759,7 +1576,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: see ebf86f5aeb1e.",
+    "Losers: none clear (duplicate filing).",
+    "Catalyst: scheduled - same investor meet as 25e0f8141783.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -809,7 +1631,12 @@
    "score": 8,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: see ebf86f5aeb1e (Tata Steel / APL Apollo promoters agreement).",
+    "Losers: none clear (no new information beyond the first note).",
+    "Catalyst: surprise - duplicate filing of the APL Apollo agreement press release.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -835,7 +1662,12 @@
    "score": 8,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: same event as [ebf86f5aeb1e]; see that note.",
+    "Losers: none clear beyond [ebf86f5aeb1e]. Press release only.",
+    "Catalyst: surprise - same event as [ebf86f5aeb1e].",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -963,7 +1795,12 @@
    "score": 8,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: same event as [ebf86f5aeb1e]; see that note.",
+    "Losers: none clear beyond [ebf86f5aeb1e]. Board approval of the open offer is the procedural step for the same deal; the offer price and dates are in the PDF, which could not be opened here.",
+    "Catalyst: scheduled follow-up (open-offer window), dates not read.",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -990,7 +1827,12 @@
    "score": 11,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: APL Apollo promoters (a premium exit, with a mandatory open offer for public holders) and, in the long run, Tata Steel's downstream tubes and colour-coated volume (press release targets 15.5 Mt capacity). The filing PDFs could not be opened here, so price, stake size and open-offer terms are unverified.",
+    "Losers: other listed structural-tube and coated-steel makers (Jindal Saw JINDALSAW, Hi-Tech Pipes HITECH, Surya Roshni SURYAROSNI, JSW Steel JSWSTEEL in coated products) lose their position as APL's main independent supplier-customer competitor, as Tata Steel's raw-material and distribution backing sharpens APL's pricing. Tata Steel itself is down about 4% on funding and execution worries (see [9d1d3c869d15]). Mechanism inferred, not confirmed from the filing.",
+    "Catalyst: surprise - announced before the open, with a dated follow-up still to come (open-offer letter and offer window); dates unknown to me.",
+    "Thesis fit: none. No draft: event already in prices at the open, deal terms unread, and the open-offer timeline is missing, so the checklist cannot be answered concretely."
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
@@ -1016,7 +1858,12 @@
    "score": 8,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: same event as [ebf86f5aeb1e]; see that note.",
+    "Losers: none clear beyond [ebf86f5aeb1e]. BSE copy of the acquisition disclosure.",
+    "Catalyst: surprise - same event as [ebf86f5aeb1e].",
+    "Thesis fit: none"
+   ],
    "first_seen": "2026-11-23T09:46+05:30"
   },
   {
