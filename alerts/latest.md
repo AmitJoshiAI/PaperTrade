@@ -1,186 +1,186 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-20 18:16 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-23 09:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
-## 1. [9 HIGH] Macquarie double upgrade: Max Healthcare, Apollo Hospitals shares rise up to 4.5%, become top Nifty gainers
+## 1. [11 HIGH] Tata Steel Limited: acquisition of equity stake in APL Apollo Tubes Limited
 
-- Time: 2026-11-20 11:53 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/macquarie-double-upgrade-max-healthcare-apollo-hospitals-shares-rise-up-to-4-5-become-top-nifty-gainers-14085536.html
-- Matched symbols: APOLLOHOSP, MAXHEALTH (moving today: APOLLOHOSP, MAXHEALTH)
-- Keywords: rating
-- Thesis match: none
-- Score: 9
-- Alert id: a873c623c4e5
-- Second-order candidates: Winner: Max Healthcare (MAXHEALTH) and Apollo Hospitals (APOLLOHOSP): a two-notch broker upgrade resets earnings estimates and target prices upward, and re-rates the whole listed hospital group on bed-addition and occupancy-led growth. / Losers: none clear (a broker upgrade moves sentiment, not a competitor's cash flows; listed peers such as Fortis (FORTIS) and Narayana Hrudayalaya (NH) may be pulled up in sympathy, not hurt). / Catalyst: surprise - an unscheduled broker rating change; the next dated trigger is Q3 FY27 results in early February 2027, which is where the upgrade has to be validated. / Thesis fit: none (a broker call alone is not a second-order event; the price move is already in).
-
-## 2. [9 HIGH] Max Healthcare, Apollo Hospitals shares rally up to 5% as Macquarie double upgrades
-
-- Time: 2026-11-20 10:26 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/max-healthcare-apollo-hospitals-shares-rally-up-to-5-as-macquarie-double-upgrades/article71723119.ece
-- Matched symbols: APOLLOHOSP, MAXHEALTH (moving today: APOLLOHOSP, MAXHEALTH)
-- Keywords: rating
-- Thesis match: none
-- Score: 9
-- Alert id: 4316d92e0ef1
-- Second-order candidates: 
-
-## 3. [9 HIGH] IndiGo, Tata Motors PV among 10 Nifty stocks facing earnings downgrades
-
-- Time: 2026-11-20 09:11 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/indigo-tata-motors-pv-among-10-nifty-stocks-facing-earnings-downgrades/slideshow/136012225.cms
-- Matched symbols: TMPV, INDIGO
-- Keywords: results, rating
-- Thesis match: none
-- Score: 9
-- Alert id: cea4e9130d9a
-- Second-order candidates: Winner: none direct; analyst estimate cuts hit the named companies, so the relative winners are peers with intact estimates (for IndiGo: other listed carriers are not in our universe; for TMPV: Maruti and M&M, whose estimates are not on the downgrade list). / Losers: IndiGo (INDIGO) and Tata Motors PV (TMPV), because lower consensus EPS compresses the multiple; the same fall in expected cash flow also weighs on lessors and aircraft suppliers' sentiment only indirectly, not verified. Cause of each downgrade is in the slideshow, which this sandbox cannot open. / Catalyst: surprise - estimate revisions after Q2 results, no dated event ahead; the downgrades are probably already in the price. / Thesis fit: none (not drafted: a round-up of ten stocks, mechanism per stock unverified, near coin flip)
-
-## 4. [8 HIGH] Nifty hits 10-month high; Apollo Hospitals, Axis Bank lead midday rally
-
-- Time: 2026-11-20 13:25 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/nifty-hits-10-month-high-at-midday-apollo-hospitals-axis-bank-lead-rally/article71723518.ece
-- Matched symbols: APOLLOHOSP, AXISBANK (moving today: APOLLOHOSP, AXISBANK)
-- Keywords: none
-- Thesis match: none
-- Score: 8
-- Alert id: c804672900b1
-- Second-order candidates: 
-
-## 5. [8 HIGH] Nifty hits 10-month high at midday; Apollo Hospitals, Axis Bank lead rally
-
-- Time: 2026-11-20 13:00 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/nifty-hits-10-month-high-at-midday-apollo-hospitals-axis-bank-lead-rally/article71723518.ece
-- Matched symbols: APOLLOHOSP, AXISBANK (moving today: APOLLOHOSP, AXISBANK)
-- Keywords: none
-- Thesis match: none
-- Score: 8
-- Alert id: 7681eb1d611d
-- Second-order candidates: Winner: Apollo Hospitals (APOLLOHOSP) on the Macquarie double upgrade already noted under [a873c623c4e5]; Axis Bank (AXISBANK) as a high-beta private bank in an index-level rally. The headline itself is a midday market round-up, so the mechanism is the upgrade, not new information. / Losers: none clear - a broad index rally, and no named company is hurt by it; the article was not opened here, so no Axis-specific cause is verified. / Catalyst: surprise - rating upgrade plus index momentum, no dated event ahead; the move is already in the price at a 10-month Nifty high. / Thesis fit: none (round-up of an upgrade already noted; not drafted, near coin flip).
-
-## 6. [8 HIGH] Sensex Today | Stock Market Live: Sensex up nearly 150 pts, Nifty above 25,550; IT jumps 2.4%, metals slide; Apollo Hospitals, TCS rally
-
-- Time: 2026-11-20 11:53 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/stock-market-live-updates-nifty50-share-price-sensex-share-price-crude-fii-gift-nifty-rupee-latest-updates-20-11-2026-alpha-liveblog-14085261.html
-- Matched symbols: APOLLOHOSP, TCS (moving today: APOLLOHOSP)
-- Keywords: none
-- Thesis match: none
-- Score: 8
-- Alert id: 39a460772923
-- Second-order candidates: False match: intraday market live blog, a round-up of moves already covered by the IT [1c494f88cea2], hospital [a873c623c4e5] and auto [ae2a7bf72b20] notes; no single event to analyse.
-
-## 7. [6 HIGH] Axis Bank Limited: Record Date Updates
-
-- Time: 2026-11-20 14:31 IST
+- Time: 2026-11-23 07:35 IST
 - Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/content/debt/WDM/AXISBANK1_20112026143122_SEIntimationRCSr6Signed.pdf
-- Matched symbols: AXISBANK (moving today: AXISBANK)
-- Keywords: none
+- Link: https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026073427_BSENSE.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: stake sale, M&A
 - Thesis match: none
-- Score: 6
-- Alert id: 44feed1d90b1
+- Score: 11
+- Alert id: ebf86f5aeb1e
 - Second-order candidates: 
 
-## 8. [6 HIGH] AXISBANK +4.7% vs previous close, volume 3.2x 20-day average (close 1446.0, bar 2026-11-20)
+## 2. [10 HIGH] APL Apollo Tubes shares plunge 10%, Tata Steel falls 4% as Rs 5,825 crore block deal follows acquisition news
 
-- Time: 2026-11-20 13:49 IST
+- Time: 2026-11-23 09:46 IST
+- Source: Moneycontrol
+- Link: https://www.moneycontrol.com/news/business/markets/apl-apollo-tubes-shares-plunge-10-tata-steel-falls-4-as-rs-5-825-crore-block-deal-follows-acquisition-news-14086850.html
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: block deal, M&A
+- Thesis match: none
+- Score: 10
+- Alert id: 9d1d3c869d15
+- Second-order candidates: 
+
+## 3. [8 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
+
+- Time: 2026-11-23 08:19 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/54e6c463-0cfd-460d-af38-cee7a37ec5c4.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: enters/launches business
+- Thesis match: none
+- Score: 8
+- Alert id: fa4a77a4634c
+- Second-order candidates: 
+
+## 4. [8 HIGH] Tata Steel Limited: a press release dated November 23, 2026, titled "Tata Steel and Promoters of APL Apollo Enter into a Comprehensive Agreement to Build an Indian Steel Tubes and Colour Coated Products Powerhouse Targeting 15.5 Million Tonnes of Capacity".
+
+- Time: 2026-11-23 08:16 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026081530_BSENSEPRIR.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: enters/launches business
+- Thesis match: none
+- Score: 8
+- Alert id: 56e67f186066
+- Second-order candidates: 
+
+## 5. [8 HIGH] Tata Steel Limited: approval of Open Offer
+
+- Time: 2026-11-23 07:39 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026073828_BSENSE.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: M&A
+- Thesis match: none
+- Score: 8
+- Alert id: 7baa23c0c461
+- Second-order candidates: 
+
+## 6. [8 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Acquisition
+
+- Time: 2026-11-23 07:33 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f92992e1-1a6c-4cbd-ae41-73454c54236c.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: M&A
+- Thesis match: none
+- Score: 8
+- Alert id: 62933a463ef5
+- Second-order candidates: 
+
+## 7. [6 HIGH] CRWV -12.0% vs previous close (close 39.51, bar 2026-11-20)
+
+- Time: 2026-11-23 09:46 IST
 - Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/AXISBANK.NS
-- Matched symbols: AXISBANK (moving today: AXISBANK)
+- Link: https://finance.yahoo.com/quote/CRWV
+- Matched symbols: CRWV (moving today: CRWV)
 - Keywords: price move
 - Thesis match: none
 - Score: 6
-- Alert id: 592351de529c
+- Alert id: 23f27f5d5134
 - Second-order candidates: 
 
-## 9. [6 HIGH] TSMC invests $500 million in Anthropic, acquires 0.03% stake at IPO price
+## 8. [6 HIGH] NBIS -16.1% vs previous close (close 81.31, bar 2026-11-20)
 
-- Time: 2026-11-20 11:48 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/info-tech/tsmc-invests-500-million-in-anthropic-acquires-003-stake-at-ipo-price/article71723133.ece
-- Matched symbols: none
-- Keywords: IPO, stake sale, M&A
-- Thesis match: none
-- Score: 6
-- Alert id: f858c0a0daa2
-- Second-order candidates: Winner: Anthropic and its compute suppliers: TSMC taking a stake ties the leading-edge chip maker to an AI lab's demand, which supports the AI-capex chain (TSMC, NVDA) and signals that an Anthropic IPO is priced and moving. / Losers: none clear. Listed AI-lab peers are private; the only listed read-across is sentiment for neocloud/AI-capex names (NBIS, CRWV), which are already weak on funding worries, and a $500m cheque is too small to change that. / Catalyst: scheduled - the stake is bought at the IPO price, so the listing date is the dated event; no Indian-listed symbol is directly exposed, so nothing tradable in the NSE sleeve. / Thesis fit: none (no NSE-tradable leg).
-
-## 10. [6 HIGH] Asian Paints Ltd: Announcement under Regulation 30 (LODR)-Trading Plan under SEBI (PIT) Regulations, 2015
-
-- Time: 2026-11-20 11:18 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/b95cae6b-fb93-4750-b9d7-d9189b64a54b.pdf
-- Matched symbols: ASIANPAINT
-- Keywords: SEBI
-- Thesis match: none
-- Score: 6
-- Alert id: 3b366ed0d30f
-- Second-order candidates: False match: routine insider trading-plan disclosure (a promoter or designated person pre-declaring future share sales or purchases under SEBI PIT rules); the "SEBI" keyword is the only hit, there is no operating event, winner or loser to name.
-
-## 11. [6 HIGH] Nifty IT jumps over 1% as TCS, Tech Mahindra, HCL Tech gain; Indian IT stocks buck global AI selloff
-
-- Time: 2026-11-20 09:59 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/nifty-it-jumps-over-1-as-tcs-tech-mahindra-hcl-tech-gain-indian-it-stocks-buck-global-ai-selloff-14085395.html
-- Matched symbols: TECHM, HCLTECH, TCS
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: 1c494f88cea2
-- Second-order candidates: Winner: Indian IT services (TCS, TECHM, HCLTECH): when money leaves AI infrastructure and AI-capex names, defensive, cash-generating services companies with USD revenue and a weak-rupee tailwind attract rotation. / Losers: AI-infrastructure and neocloud names (NBIS, CoreWeave) whose valuations depend on continued capex growth; see the NBIS note below. Cause of the global AI selloff is not stated in the headline. / Catalyst: surprise - a rotation inside one session; no dated event. Could reverse if the AI selloff stops. / Thesis fit: none
-
-## 12. [6 HIGH] NBIS -9.4% vs previous close (close 96.92, bar 2026-11-19)
-
-- Time: 2026-11-20 09:59 IST
+- Time: 2026-11-23 09:46 IST
 - Source: Yahoo quotes
 - Link: https://finance.yahoo.com/quote/NBIS
 - Matched symbols: NBIS (moving today: NBIS)
 - Keywords: price move
 - Thesis match: none
 - Score: 6
-- Alert id: 41e5370eeb9b
-- Second-order candidates: Winner: none direct; hyperscalers that rent rather than build GPU capacity benefit if neocloud pricing weakens. / Losers: NBIS and other neocloud peers (CRWV) whose revenue guidance and funding depend on GPU rental demand; NBIS had already fallen sharply the week before on revised revenue guidance (Motley Fool reports, 13-14 Nov), so this looks like a continuation, not a new cause. Reuters-style cause for 19 Nov itself not found. / Catalyst: unknown - no news found for 19 Nov; follows the guidance cut and analyst target cuts of the prior week. / Thesis fit: none
+- Alert id: 906b3191da56
+- Second-order candidates: 
 
-## 13. [6 HIGH] Axis Direct names 35 top stocks to buy; ICICI Bank, HUL and Maruti Suzuki feature in list
+## 9. [6 HIGH] L&T Technology Services Ltd: Announcement under Regulation 30 (LODR)-Press Release / Media Release
 
-- Time: 2026-11-20 09:01 IST
-- Source: ET Markets
-- Link: https://economictimes.indiatimes.com/markets/stocks/news/axis-direct-names-35-top-stocks-to-buy-icici-bank-hul-and-maruti-suzuki-feature-in-list/slideshow/136011903.cms
-- Matched symbols: MARUTI, ICICIBANK, HINDUNILVR
+- Time: 2026-11-23 08:56 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/36adb4a7-cedb-4217-8d95-3ef9ab622457.pdf
+- Matched symbols: LT
+- Keywords: enters/launches business
+- Thesis match: none
+- Score: 6
+- Alert id: 9903f68ec5f0
+- Second-order candidates: 
+
+## 10. [6 HIGH] L&T Technology Services Limited: a press release dated November 23, 2026, titled "L&T Technology Services Launches SDVault.ai to Bring Engineering Intelligence to the Software-Defined Vehicle V-Cycle".
+
+- Time: 2026-11-23 08:55 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/LTTS_23112026085541_23112026LTTSPRessreleasesd.pdf
+- Matched symbols: LT
+- Keywords: enters/launches business
+- Thesis match: none
+- Score: 6
+- Alert id: 32b77f845581
+- Second-order candidates: 
+
+## 11. [6 HIGH] Tata Steel Limited: Disclosure Under Regulation 51
+
+- Time: 2026-11-23 08:30 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/content/debt/WDM/NIDHIFADNAVIS_23112026083017_BSENSE_IRPR.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
 - Keywords: none
 - Thesis match: none
 - Score: 6
-- Alert id: 9e513f152911
-- Second-order candidates: False match: broker stock-list slideshow (round-up), not a company event; no mechanism, winner or loser to name.
+- Alert id: 85e15d5cb87d
+- Second-order candidates: 
 
-## 14. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-DRO as on November 19, 2026 is Rs. 13.706.
+## 12. [6 HIGH] Tata Steel Limited: Press Release
 
-- Time: 2026-11-20 07:00 IST
+- Time: 2026-11-23 08:29 IST
 - Source: NSE announcements
-- Link: 
-- Matched symbols: RELIANCE
-- Keywords: results
+- Link: https://nsearchives.nseindia.com/content/debt/WDM/NIDHIFADNAVIS_23112026082907_BSENSE_IRPR.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: none
 - Thesis match: none
 - Score: 6
-- Alert id: 48cb33b2f4d2
-- Second-order candidates: False match: a mutual-fund NAV notice (Reliance Mutual Fund, not Reliance Industries); no company event. Same for 72b8cf883231 (DP-GO).
+- Alert id: c8fcde127232
+- Second-order candidates: 
 
-## 15. [6 HIGH] Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO: the Net Asset Value (per unit) of Reliance MF - Reliance IF - Quarterly Interval Fund Series II - DP-GO as on November 19, 2026 is Rs. 39.5522.
+## 13. [6 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation
 
-- Time: 2026-11-20 07:00 IST
-- Source: NSE announcements
-- Link: 
-- Matched symbols: RELIANCE
-- Keywords: results
+- Time: 2026-11-23 08:27 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/60bf73b2-f86e-42e5-a0aa-22f361c13e57.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: none
 - Thesis match: none
 - Score: 6
-- Alert id: 72b8cf883231
+- Alert id: 029f6fa7b111
+- Second-order candidates: 
+
+## 14. [6 HIGH] Tata Steel Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation
+
+- Time: 2026-11-23 08:23 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f63b5c82-f041-4b4a-8e80-56236321870b.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 25e0f8141783
+- Second-order candidates: 
+
+## 15. [6 HIGH] Tata Steel Limited: Investor Presentation
+
+- Time: 2026-11-23 08:22 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/NIDHIFADNAVIS_23112026082123_BSENSEPRIR.pdf
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: f35cf7c13eda
 - Second-order candidates: 
