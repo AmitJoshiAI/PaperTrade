@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-24T11:47+05:30",
+ "generated_at": "2026-11-24T13:46+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 190,
+   "items": 258,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.6
   },
   {
    "id": "nse_results",
@@ -17,18 +17,18 @@
    "items": 3,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.5
   },
   {
    "id": "bse",
    "name": "BSE announcements",
    "ok": true,
-   "items": 85,
+   "items": 81,
    "error": null,
    "optional": false,
    "path": "cffi_api",
    "skipped": [],
-   "seconds": 1.6
+   "seconds": 1.7
   },
   {
    "id": "et_markets",
@@ -37,7 +37,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "et_stocks",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bs_markets",
@@ -55,7 +55,7 @@
    "items": 35,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.3
   },
   {
    "id": "bl_markets",
@@ -64,7 +64,7 @@
    "items": 60,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.2
   },
   {
    "id": "moneycontrol",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 1.1
+   "seconds": 1.6
   },
   {
    "id": "cnbc",
@@ -86,19 +86,405 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.4
+   "seconds": 0.3
   }
  ],
  "optional_unavailable": [],
  "quotes_checked": 53,
  "movers": 4,
  "quotes_error": null,
- "new_alerts": 14,
+ "new_alerts": 20,
  "high_score": 6,
- "seconds": 4.9,
+ "seconds": 5.3,
  "theses": [],
  "watchlist_size": 54,
  "alerts": [
+  {
+   "id": "36996d5c6474",
+   "kind": "news",
+   "time": "2026-11-24T13:31+05:30",
+   "source": "BSE announcements",
+   "headline": "Citurgia Biochemicals Ltd: Results-Delay in Financial Results",
+   "summary": "Result. UNAUDITED FINANCE RESULT FOR THE QUARTER AND HALF YEAR ENDED 30.09.2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/54847877-fcd2-4c2a-aca8-95238196a22b.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "de04a6fb9d05",
+   "kind": "news",
+   "time": "2026-11-24T13:31+05:30",
+   "source": "BSE announcements",
+   "headline": "John Cockerill India Ltd-$: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Pursuant to Regs 30 and 46(2) of SEBI (LODR) Regulations 2015, please find attached Earnings Call Transcript of audio call held on November 17, 2026, for the quarter and nine months ended ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/7074f5dc-84e5-405e-9e3a-844d137df15f.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "5423e8820f5a",
+   "kind": "news",
+   "time": "2026-11-24T13:17+05:30",
+   "source": "NSE announcements",
+   "headline": "Kalpataru Limited: the receipt of Regional Director confirmation Order for the Scheme of Arrangement (Merger by Absorption) of Kalpataru Hills Residency Private Limited, a step-down wholly-owned subsidiary with Kalpataru Properties (Thane) Limited, a wholly-owned subsidiary of the Company",
+   "summary": "Kalpataru Limited has informed the Exchange about the receipt of Regional Director confirmation Order for the Scheme of Arrangement (Merger by Absorption) of Kalpataru Hills Residency Private Limited, a step-down wholly-owned subsidiary wit",
+   "link": "https://nsearchives.nseindia.com/corporate/ravi_sah_24112026131637_Reg_30_disclosure_-_RD_order_for_merger_of_K_Hills.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "3f3993b531eb",
+   "kind": "news",
+   "time": "2026-11-24T13:17+05:30",
+   "source": "BSE announcements",
+   "headline": "Kalpataru Ltd: Announcement under Regulation 30 (LODR)-Restructuring",
+   "summary": "Company Update. Intimation regarding the receipt of Regional Director Confirmation Order for the Scheme of Arrangement (Merger by Absorption) of Kalpataru Hills Residency Private Limited, step down wholly-owned ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3cf67013-e76e-47ca-97d9-21e188a9b6a2.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "de42f029fc4b",
+   "kind": "news",
+   "time": "2026-11-24T13:14+05:30",
+   "source": "NSE announcements",
+   "headline": "Bharti Airtel Limited: Action(s) taken or orders passed (sub-para 20)",
+   "summary": "Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed (sub-para 20) |SUBJECT: Actions initiated/taken or orders passed-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/AIATOP_2002_WebXMLFile_20261124_131457208.xml",
+   "symbols": [
+    "BHARTIARTL"
+   ],
+   "symbol_keys": [
+    "BHARTIARTL"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "67eb8fdbd2ec",
+   "kind": "news",
+   "time": "2026-11-24T13:14+05:30",
+   "source": "BSE announcements",
+   "headline": "Arco Leasing Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
+   "summary": "AGM/EGM. Disclosure of Voting Results in respect of the Extra Ordinary General Meeting held on November 23, 2026.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/db303cb5-c3dc-488c-8d05-8e0e07748697.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "94a2058d9c66",
+   "kind": "news",
+   "time": "2026-11-24T13:13+05:30",
+   "source": "NSE announcements",
+   "headline": "Bharti Airtel Limited: Action(s) taken or orders passed",
+   "summary": "Bharti Airtel Limited has informed the Exchange about Action(s) taken or orders passed |SUBJECT: Action(s) taken or orders passed",
+   "link": "https://nsearchives.nseindia.com/corporate/BHARTIARTL_24112026131238_BhartiAirtelSTXdisclosure.pdf",
+   "symbols": [
+    "BHARTIARTL"
+   ],
+   "symbol_keys": [
+    "BHARTIARTL"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "36608820d97b",
+   "kind": "news",
+   "time": "2026-11-24T13:13+05:30",
+   "source": "BSE announcements",
+   "headline": "Bharti Airtel Ltd: Disclosure Under Regulation 30 Of SEBI (Listing Obligations And Disclosure Requirements), Regulations, 2015",
+   "summary": "Company Update. Disclosure under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements), Regulations, 2015",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/990083cd-3c00-47eb-8ffc-d8eb40c3322c.pdf",
+   "symbols": [
+    "BHARTIARTL"
+   ],
+   "symbol_keys": [
+    "BHARTIARTL"
+   ],
+   "keywords": [],
+   "moving": [],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "995b743f1c94",
+   "kind": "news",
+   "time": "2026-11-24T12:58+05:30",
+   "source": "BSE announcements",
+   "headline": "Chatterbox Technologies Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
+   "summary": "Company Update. Please find attached the transcript of the Earnings Conference Call held on 19th November, 2026 to discuss financial results for the first half year of FY 2026-27 (H1 FY27).",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ac1be398-a348-47c4-a3c6-2b6a5aa6f871.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "43ed97b9b89e",
+   "kind": "news",
+   "time": "2026-11-24T12:49+05:30",
+   "source": "NSE announcements",
+   "headline": "Hoac Foods India Limited: Business Update on Full-Container Export Consignment to Hong Kong-Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 (\"Listing Regulations\")",
+   "summary": "Business Update on Full-Container Export Consignment to Hong Kong-Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 (\"Listing Regulations\") |SUBJECT: General Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/HOAC_24112026124138_HOAC_business_update_new_vidisha_plant_FInal-1_signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "listing"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "6f0aa2215001",
+   "kind": "news",
+   "time": "2026-11-24T12:44+05:30",
+   "source": "NSE announcements",
+   "headline": "Fujiyama Power Systems Limited: Fujiyama Power Systems Limited has submitted to the Exchange a copy of Scrutinizer's report of Postal Ballot along with the voting results.",
+   "summary": "Fujiyama Power Systems Limited has submitted to the Exchange a copy of Scrutinizer's report of Postal Ballot along with the voting results. |SUBJECT: Shareholders meeting",
+   "link": "https://nsearchives.nseindia.com/corporate/UTLSOLAR2024_24112026124425_NSE_BSE_Postal_Ballot_Voting_Results.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "d02b5e902495",
+   "kind": "news",
+   "time": "2026-11-24T12:43+05:30",
+   "source": "BSE announcements",
+   "headline": "Fujiyama Power Systems Ltd: Shareholder Meeting / Postal Ballot-Outcome of Postal Ballot",
+   "summary": "AGM/EGM. Fujiyama Power Systems Limited has informed the Exchange regarding the voting results of Postal Ballot.",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/234d6c15-6209-45bc-be41-999b430a100f.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "3dc9dcde6bb8",
+   "kind": "news",
+   "time": "2026-11-24T12:16+05:30",
+   "source": "NSE announcements",
+   "headline": "Rox Hi Tech Limited: Transcripts - earnings or quarterly calls",
+   "summary": "ROX HI TECH LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_22460_WebXMLFile_20261124_121625738.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "2b6efdcf2de4",
+   "kind": "news",
+   "time": "2026-11-24T12:14+05:30",
+   "source": "BSE announcements",
+   "headline": "Everestims Technologies Ltd: Announcement under Regulation 30 (LODR)-Investor Presentation",
+   "summary": "Company Update. Investor Presentation in relation to the Unaudited Financial Results (Standalone and Consolidated) for the half year ended September 30, 2026",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/580ced67-48ae-4f3c-9fa7-87a8f2424bba.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "e6527e3c7674",
+   "kind": "news",
+   "time": "2026-11-24T12:09+05:30",
+   "source": "NSE announcements",
+   "headline": "Steel City Securities Limited: Board Meeting to be held on 27-Nov-2026 to consider Dividend.",
+   "summary": "STEEL CITY SECURITIES LIMITED has informed the Exchange about Board Meeting to be held on 27-Nov-2026 to consider Dividend. |SUBJECT: Board Meeting Intimation",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/PRIOR_INTIMATION_14558_WebXMLFile_20261124_120949679.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "dividend"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "b6140b250bc8",
+   "kind": "news",
+   "time": "2026-11-24T12:09+05:30",
+   "source": "BSE announcements",
+   "headline": "Srit India Ltd: Intimation Regarding Additional Participant In The Earnings Conference Call Scheduled On November 24, 2026.",
+   "summary": "Company Update. SRIT India Limited has informed the Exchange regarding ''additional participant in the Earnings Conference Call scheduled on November 24, 2026.''",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/46ef1f19-b916-4ab9-ae6a-f7c7a9513353.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "7163b750d1d6",
+   "kind": "news",
+   "time": "2026-11-24T12:09+05:30",
+   "source": "BSE announcements",
+   "headline": "EBIX Ltd: Board Meeting Intimation for Postponement Of Board Meeting And Rescheduled To November 28, 2026",
+   "summary": "Company Update. EBIX Ltdhas informed BSE that the meeting of the Board of Directors of the Company is scheduled on 28/11/2026 ,inter alia, to consider and approve Unaudited Financial Results (Standalone ....",
+   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4f6996b5-657c-45cf-9b74-eaa019d55ba9.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "1fe525e541c5",
+   "kind": "news",
+   "time": "2026-11-24T12:01+05:30",
+   "source": "NSE announcements",
+   "headline": "SRIT India Limited: 'additional participant in the Earnings Conference Call scheduled on November 24, 2026'.",
+   "summary": "SRIT India Limited has informed the Exchange regarding 'additional participant in the Earnings Conference Call scheduled on November 24, 2026'. |SUBJECT: Updates",
+   "link": "https://nsearchives.nseindia.com/corporate/SRIT_24112026120117_Intimation_Additional_Participant_Signed.pdf",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
+  {
+   "id": "9345e4059d44",
+   "kind": "news",
+   "time": "2026-11-24T11:55+05:30",
+   "source": "NSE announcements",
+   "headline": "Zydus Lifesciences Limited: Acquisition of to be incorporated companies",
+   "summary": "Zydus Lifesciences Limited has informed the Exchange regarding Acquisition of to be incorporated companies |SUBJECT: Acquisition of 'to be incorporated companies'-XBRL",
+   "link": "https://nsearchives.nseindia.com/corporate/xbrl/REG30_Restructuring_1852_WebXMLFile_20261124_115506086.xml",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "M&A"
+   ],
+   "moving": [],
+   "score": 3,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
+  },
   {
    "id": "b74131cf0e20",
    "kind": "news",
@@ -138,6 +524,32 @@
    "theses": [],
    "second_order_candidates": [],
    "first_seen": "2026-11-24T11:47+05:30"
+  },
+  {
+   "id": "cea4d59070f7",
+   "kind": "news",
+   "time": "2026-11-24T11:45+05:30",
+   "source": "ET Markets",
+   "headline": "HDFC Bank, Reliance Industries among 10 stocks with highest DII holding in Q2. See full list",
+   "summary": "With the rise in the share of MFs and also an overall net investment of Rs 1.69 lakh crore during the quarter, the share of Domestic Institutional Investors (DIIs) as a whole increased to an all-time high of 19.31% as on September 30, 2026,",
+   "link": "https://economictimes.indiatimes.com/markets/stocks/news/hdfc-bank-reliance-industries-among-10-stocks-with-highest-dii-holding-in-q2-see-full-list/slideshow/136121838.cms",
+   "symbols": [
+    "RELIANCE",
+    "HDFCBANK"
+   ],
+   "symbol_keys": [
+    "RELIANCE",
+    "HDFCBANK"
+   ],
+   "keywords": [
+    "results"
+   ],
+   "moving": [],
+   "score": 8,
+   "high": true,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T13:46+05:30"
   },
   {
    "id": "ca2cd360c22e",
@@ -517,7 +929,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: unclear; GPU-cloud names rebounding together with CRWV (see [cc2a46a0dd4e]), likely a bounce after the 20 Nov sell-off, not a new event.",
+    "Losers: none clear.",
+    "Catalyst: unknown - no news found (no search run; US sleeve is out of scope for this routine)",
+    "Thesis fit: none"
+   ],
    "change_pct": 20.28,
    "volume_x": 1.66,
    "first_seen": "2026-11-24T09:46+05:30"
@@ -584,7 +1001,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: Coal India (COALINDIA) as parent, via a listing-value unlock; same event as [abd57e31d7f1], which holds the notes.",
+    "Losers: none clear.",
+    "Catalyst: scheduled - the prospectus filing means the IPO opens within days; price band and dates not read.",
+    "Thesis fit: none (no draft: size, price band and dates unknown)"
+   ],
    "first_seen": "2026-11-24T09:46+05:30"
   },
   {
@@ -1619,7 +2041,12 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "Winner: Adani Enterprises (ADANIENT) if the target adds a business line; target and price not read (PDF not opened here).",
+    "Losers: none clear; nothing verifiable about the target or its competitors.",
+    "Catalyst: surprise - filed 22:07 IST on 23 Nov, after the close; first reaction is the 24 Nov session. Terms unknown.",
+    "Thesis fit: none (no draft: acquisition target, size and funding unread)"
+   ],
    "first_seen": "2026-11-24T09:46+05:30"
   },
   {
@@ -2085,7 +2512,9 @@
    "score": 6,
    "high": true,
    "theses": [],
-   "second_order_candidates": [],
+   "second_order_candidates": [
+    "False match: routine shareholder-vote result for a small company, no price catalyst and no matched symbol."
+   ],
    "first_seen": "2026-11-23T19:58+05:30"
   },
   {
@@ -2869,422 +3298,6 @@
    ],
    "moving": [],
    "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "a451a875a6c7",
-   "kind": "news",
-   "time": "2026-11-23T18:45+05:30",
-   "source": "BSE announcements",
-   "headline": "Technocraft Ventures Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Transcript of Earnings Conference Call held on Thursday, November 19, 2026 is attached.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/4736a7f4-35b5-489d-bd48-b163fd50817c.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "6852e5f80aea",
-   "kind": "news",
-   "time": "2026-11-23T18:45+05:30",
-   "source": "BSE announcements",
-   "headline": "Mahindra & Mahindra Ltd: Transfer Of Equity Shares By Mahindra & Mahindra Employees Stock Option Trust To The Stock Option Grantees.",
-   "summary": "Company Update. Please refer enclosed file",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/426b618f-735c-4008-b0bd-3d0d4f564cc4.pdf",
-   "symbols": [
-    "M&M"
-   ],
-   "symbol_keys": [
-    "M&M"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "7953434a75e2",
-   "kind": "news",
-   "time": "2026-11-23T18:44+05:30",
-   "source": "BSE announcements",
-   "headline": "Epigral Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. Epigral Limited informs that the officials of the Company are participating in Kotak Midcap Conference 2026 scheduled on 27.11.2026.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/91feb38f-057b-42e8-8c1d-9218f7fad53b.pdf",
-   "symbols": [
-    "KOTAKBANK"
-   ],
-   "symbol_keys": [
-    "KOTAKBANK"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "4850c029ba24",
-   "kind": "news",
-   "time": "2026-11-23T18:43+05:30",
-   "source": "NSE announcements",
-   "headline": "Skyways Air Services Limited: Transcripts - earnings or quarterly calls",
-   "summary": "SKYWAYS AIR SERVICES LIMITED has informed the Exchange about Transcripts - earnings or quarterly calls |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_26444_WebXMLFile_20261123_184324768.xml",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "e28de1c4dc24",
-   "kind": "news",
-   "time": "2026-11-23T18:43+05:30",
-   "source": "BSE announcements",
-   "headline": "Carver Roboweld Ltd: Financial Results For The Half Year Ended September 30, 2026",
-   "summary": "Result. We have attached herewith Unaudited Standalone and Consolidated Financial Results for the Half Year ended September 30, 2026. Kindly take the same on your record. Thank you.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/1ead908e-6a68-4e2c-8aa8-075b2a7e495a.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "c471b591566f",
-   "kind": "news",
-   "time": "2026-11-23T18:38+05:30",
-   "source": "NSE announcements",
-   "headline": "Max Healthcare Institute Limited: change in Senior Management Personnel",
-   "summary": "Max Healthcare Institute Limited has informed the Exchange about change in Senior Management Personnel |SUBJECT: Change in Management",
-   "link": "https://nsearchives.nseindia.com/corporate/MAXHEALTH_23112026183702_SE_Intimation_SMP_Resignation.pdf",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "76017dbc34db",
-   "kind": "news",
-   "time": "2026-11-23T18:37+05:30",
-   "source": "NSE announcements",
-   "headline": "Allcargo Logistics Limited: voting results.",
-   "summary": "Allcargo Logistics Limited has submitted the Exchange a copy Srutinizers report of Postal Ballot. Further, the company has informed the Exchange regarding voting results. |SUBJECT: Shareholders meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/ALLCARGO_23112026183738_SEuplaod.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "1ff3835e10e7",
-   "kind": "news",
-   "time": "2026-11-23T18:37+05:30",
-   "source": "BSE announcements",
-   "headline": "Max Healthcare Institute Ltd: Announcement under Regulation 30 (LODR)-Change in Management",
-   "summary": "Company Update. Change in Senior Management Personnel",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/50913add-7d7d-49f5-a141-df6c0c0dbf22.pdf",
-   "symbols": [
-    "MAXHEALTH"
-   ],
-   "symbol_keys": [
-    "MAXHEALTH"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "510775ef28c6",
-   "kind": "news",
-   "time": "2026-11-23T18:37+05:30",
-   "source": "BSE announcements",
-   "headline": "Innova Captab Ltd: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. Pursuant to the regulation 30 read with schedule III (Part A) of the Securities Exchange Board of India (Listing Obligations and Disclosure Requirements), Regulations 2015 ('Listing Regulations'), ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/586c4a03-7dda-45a3-8c5d-cd83923dc436.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "3c24f7502231",
-   "kind": "news",
-   "time": "2026-11-23T18:37+05:30",
-   "source": "BSE announcements",
-   "headline": "Carver Roboweld Ltd: Board Meeting Outcome for Consider And Approve Unaudited Standalone And Consolidated Financial Results For The Half Year Ended September 30, 2026",
-   "summary": "Board Meeting. We have attached herewith outcome of Board Meeting held on Monday, November 23, 2026 to consider and approve the Unaudited Standalone and Consolidated Financial Result for the Half Year ....",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/bb4c0093-8bbb-4b14-811d-49d0b6786671.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "398475456fd0",
-   "kind": "news",
-   "time": "2026-11-23T18:35+05:30",
-   "source": "BSE announcements",
-   "headline": "Aris International Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer\"s Report",
-   "summary": "AGM/EGM. The Stock Exchange and stakeholders are requested to take on record Scrutinizer Report along with Voting Result for Postal Ballot.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/ac717e77-a853-4350-b172-d73da6ddf151.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "0cb14187d085",
-   "kind": "news",
-   "time": "2026-11-23T18:35+05:30",
-   "source": "BSE announcements",
-   "headline": "Vegorama Punjabi Angithi Ltd: Announcement under Regulation 30 (LODR)-Earnings Call Transcript",
-   "summary": "Company Update. Transcript of the Investor/Analysts''s Earnings Conference call for the half year ended September, 2026",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/38ed4ac8-e8ac-4692-bb4c-71a569cac842.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "356228d63edd",
-   "kind": "news",
-   "time": "2026-11-23T18:35+05:30",
-   "source": "BSE announcements",
-   "headline": "Yes Bank Ltd: Announcement under Regulation 30 (LODR)-Change in Management",
-   "summary": "Company Update. Disclosure under Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements Regulations, 2015 - Update regarding Senior Management Personnel",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/926ebb2c-a67f-41d5-9b81-0595ff4f270c.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "704a736fd428",
-   "kind": "news",
-   "time": "2026-11-23T18:34+05:30",
-   "source": "NSE announcements",
-   "headline": "Mahindra & Mahindra Limited: 'Transfer Of Equity Shares by Mahindra & Mahindra Employees Stock Option Trust to the Stock Option Grantees'.",
-   "summary": "Mahindra & Mahindra Limited has informed the Exchange regarding 'Transfer Of Equity Shares by Mahindra & Mahindra Employees Stock Option Trust to the Stock Option Grantees'. |SUBJECT: Updates",
-   "link": "https://nsearchives.nseindia.com/corporate/Deepak_23112026183408_Employeeslist23112026.pdf",
-   "symbols": [
-    "M&M"
-   ],
-   "symbol_keys": [
-    "M&M"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "941c20f9eeeb",
-   "kind": "news",
-   "time": "2026-11-23T18:32+05:30",
-   "source": "NSE announcements",
-   "headline": "Century Plyboards (India) Limited: Credit Rating",
-   "summary": "Century Plyboards (India) Limited has informed the Exchange about Credit Rating |SUBJECT: Credit Rating",
-   "link": "https://nsearchives.nseindia.com/corporate/CENTURYPLY_23112026183242_Credit_Rating_November_2026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "b5040230df72",
-   "kind": "news",
-   "time": "2026-11-23T18:32+05:30",
-   "source": "NSE announcements",
-   "headline": "NACL Industries Limited: voting results.",
-   "summary": "NACL Industries Limited has submitted the Exchange a copy Srutinizers report of Postal Ballot. Further, the company has informed the Exchange regarding voting results. |SUBJECT: Shareholders meeting",
-   "link": "https://nsearchives.nseindia.com/corporate/NACLIND_23112026183228_PBRNACLNOV2026.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "results"
-   ],
-   "moving": [],
-   "score": 3,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "4404f402b377",
-   "kind": "news",
-   "time": "2026-11-23T18:29+05:30",
-   "source": "BSE announcements",
-   "headline": "Century Plyboards (India) Ltd-$: Announcement under Regulation 30 (LODR)-Credit Rating",
-   "summary": "Company Update. Credit Ratings received from ICRA Limited",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/d78ec866-4817-4157-8345-3aea89d0a177.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "rating"
-   ],
-   "moving": [],
-   "score": 2,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "28f47c3041e5",
-   "kind": "news",
-   "time": "2026-11-23T18:16+05:30",
-   "source": "BSE announcements",
-   "headline": "State Bank of India: Announcement under Regulation 30 (LODR)-Analyst / Investor Meet - Intimation",
-   "summary": "Company Update. Interaction with Institutional Investors organized by Macquarie Capital",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/3169fed4-07a6-49ea-a64b-30219f2c6ab9.pdf",
-   "symbols": [
-    "SBIN"
-   ],
-   "symbol_keys": [
-    "SBIN"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "d67e90ece498",
-   "kind": "news",
-   "time": "2026-11-23T18:16+05:30",
-   "source": "BSE announcements",
-   "headline": "Jet Freight Logistics Ltd: Announcement under Regulation 30 (LODR)-Change in Management",
-   "summary": "Company Update. Please find enclosed, the intimation under Regulation 30 of the SEBI Listing Regulation with respect to resignation of Senior Management Personnel of the Company.",
-   "link": "https://www.bseindia.com/xml-data/corpfiling/AttachLive/43aaf4bb-a090-4125-ba88-166480eeabf8.pdf",
-   "symbols": [],
-   "symbol_keys": [],
-   "keywords": [
-    "listing",
-    "SEBI"
-   ],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-23T19:03+05:30"
-  },
-  {
-   "id": "545b67c8997e",
-   "kind": "news",
-   "time": "2026-11-23T18:15+05:30",
-   "source": "NSE announcements",
-   "headline": "Hindustan Unilever Limited: Schedule of Analysts or Institutional Investors Meet",
-   "summary": "Hindustan Unilever Limited has informed the Exchange about Schedule of Analysts or Institutional Investors Meet |SUBJECT: Analyst/Investor Meet Para A-XBRL",
-   "link": "https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_1232_WebXMLFile_20261123_181518355.xml",
-   "symbols": [
-    "HINDUNILVR"
-   ],
-   "symbol_keys": [
-    "HINDUNILVR"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
    "high": false,
    "theses": [],
    "second_order_candidates": [],

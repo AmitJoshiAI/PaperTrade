@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-24 11:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-24 13:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 53 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -41,17 +41,17 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 69be225db660
 - Second-order candidates: Winner: same event as [9d1d3c869d15] and [4cd2fed2e6bc]; see those notes. Block-deal buyers who took the stock at the lower price; the open-offer price stays the reference level for APL public holders. / Losers: APL Apollo (APLAPOLLO) holders who sold into the block, and Tata Steel (TATASTEEL), which carries the stake purchase plus a mandatory open offer. Peers in tubes and coated steel (JINDALSAW, HITECH, SURYAROSNI) as in [ebf86f5aeb1e]; mechanism inferred, not confirmed. / Catalyst: scheduled follow-up - open-offer window (public announcement filed, see [c299b877814e]); dates not read. The sell-off is already in prices. / Thesis fit: none (no draft: move already in prices, offer terms unread).
 
-## 4. [10 HIGH] APL Apollo Tubes shares plunge 15%, Tata Steel falls 6% as Rs 5,825 crore block deal follows acquisition news
+## 4. [8 HIGH] HDFC Bank, Reliance Industries among 10 stocks with highest DII holding in Q2. See full list
 
-- Time: 2026-11-23 11:48 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/apl-apollo-tubes-shares-plunge-10-tata-steel-falls-4-as-rs-5-825-crore-block-deal-follows-acquisition-news-14086850.html
-- Matched symbols: TATASTEEL (moving today: TATASTEEL)
-- Keywords: block deal, M&A
+- Time: 2026-11-24 11:45 IST
+- Source: ET Markets
+- Link: https://economictimes.indiatimes.com/markets/stocks/news/hdfc-bank-reliance-industries-among-10-stocks-with-highest-dii-holding-in-q2-see-full-list/slideshow/136121838.cms
+- Matched symbols: RELIANCE, HDFCBANK
+- Keywords: results
 - Thesis match: none
-- Score: 10
-- Alert id: 4cd2fed2e6bc
-- Second-order candidates: Winner: block-deal buyers who took the stock at the discount; see [9d1d3c869d15]. / Losers: same as [9d1d3c869d15]; the move has deepened since 09:46 (APL -10% to -15%, Tata Steel -4% to -6%), so the market is pricing both financing strain at Tata Steel and a weaker APL float, not a one-off dip. / Catalyst: surprise - same-day block deal; next dated step is the open-offer window (dates not read). / Thesis fit: none (no draft: terms and open-offer dates unverified, and the move is already in prices).
+- Score: 8
+- Alert id: cea4d59070f7
+- Second-order candidates: 
 
 ## 5. [8 HIGH] South Indian Bank Ltd: Approval Granted By The Reserve Bank Of India (RBI) To SBI Mutual Fund For Acquiring Aggregate Holding Of Up To 9.99% Of The Paid-Up Share Capital Or Voting Rights In The Bank
 
@@ -135,7 +135,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 26c60ab76fb3
-- Second-order candidates: 
+- Second-order candidates: Winner: unclear; GPU-cloud names rebounding together with CRWV (see [cc2a46a0dd4e]), likely a bounce after the 20 Nov sell-off, not a new event. / Losers: none clear. / Catalyst: unknown - no news found (no search run; US sleeve is out of scope for this routine) / Thesis fit: none
 
 ## 12. [6 HIGH] Coal India Limited: Disclosure under Regulation 30 of Securities and Exchange Board of India(Listing Obligations and Disclosure Requirements) Regulations, 2015 ( ListingRegulations ) Initial public oﬀering ( IPO ) of equity shares of face value ₹ 2 each( Equity Shares ) of Mahanadi Coalfield Limited, a subsidiary of Coal India Limited( Company )- Filing of Prospectus with RoC by MCL
 
@@ -147,7 +147,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: eba39fa9e83f
-- Second-order candidates: 
+- Second-order candidates: Winner: Coal India (COALINDIA) as parent, via a listing-value unlock; same event as [abd57e31d7f1], which holds the notes. / Losers: none clear. / Catalyst: scheduled - the prospectus filing means the IPO opens within days; price band and dates not read. / Thesis fit: none (no draft: size, price band and dates unknown)
 
 ## 13. [6 HIGH] Adani Enterprises Ltd: Announcement under Regulation 30 (LODR)-Acquisition
 
@@ -159,7 +159,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 58ba9ec87f08
-- Second-order candidates: 
+- Second-order candidates: Winner: Adani Enterprises (ADANIENT) if the target adds a business line; target and price not read (PDF not opened here). / Losers: none clear; nothing verifiable about the target or its competitors. / Catalyst: surprise - filed 22:07 IST on 23 Nov, after the close; first reaction is the 24 Nov session. Terms unknown. / Thesis fit: none (no draft: acquisition target, size and funding unread)
 
 ## 14. [6 HIGH] Sealmatic India Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer"s Report
 
@@ -171,7 +171,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 6d24544aa95f
-- Second-order candidates: 
+- Second-order candidates: False match: routine shareholder-vote result for a small company, no price catalyst and no matched symbol.
 
 ## 15. [6 HIGH] Tata Steel Limited: Schedule of Analysts or Institutional Investors Meet
 
@@ -183,4 +183,4 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: ec34b3895fd3
-- Second-order candidates: 
+- Second-order candidates: Winner: none clear; same event as [ebf86f5aeb1e], the meet is the company's chance to explain the APL Apollo deal. / Losers: none clear beyond [ebf86f5aeb1e]. / Catalyst: scheduled - the investor meet date is in the filing (not read); a possible sentiment catalyst for the post-deal sell-off. / Thesis fit: none
