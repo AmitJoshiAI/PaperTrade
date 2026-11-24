@@ -326,7 +326,9 @@ def _gh() -> str | None:
     if g:
         return g
     for p in (Path(os.environ.get("ProgramFiles", r"C:\Program Files")) / "GitHub CLI" / "gh.exe",
-              Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "GitHub CLI" / "gh.exe"):
+              Path(os.environ.get("LOCALAPPDATA", "")) / "Programs" / "GitHub CLI" / "gh.exe",
+              # a portable copy; Task Scheduler does not get the terminal's PATH, so which() misses it there
+              Path.home() / "tools" / "gh" / "bin" / "gh.exe"):
         if p.is_file():
             return str(p)
     return None
@@ -368,6 +370,12 @@ def cmd_login(mode: str, if_needed: bool, scheduled: bool = False) -> int:
     if if_needed and kget("access_token_date") == today_ist() and kget("access_token"):
         ok, why = token_works(api_key, kget("access_token"))
         if ok:
+            if kget("github_secret_date") != today_ist():
+                # an earlier run made the token but could not write it to GitHub (exit 4): finish that now
+                write_github_secret(kget("access_token"))
+                kset("github_secret_date", today_ist())
+                say(f"Today's token already works; GitHub secret {SECRET_NAME} updated on {REPO}.")
+                return OK
             say("Today's token already works; nothing to do.")
             return OK
         say(f"Today's stored token does not work ({why}); logging in again.")
@@ -400,6 +408,7 @@ def cmd_login(mode: str, if_needed: bool, scheduled: bool = False) -> int:
         raise Fail(E_EXCHANGE, f"the new token does not work: {why}")
     say(f"Access token for {today_ist()} made and stored in Credential Manager.")
     write_github_secret(token)
+    kset("github_secret_date", today_ist())
     say(f"GitHub secret {SECRET_NAME} updated on {REPO}.")
     return OK
 
