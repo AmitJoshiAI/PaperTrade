@@ -1,14 +1,14 @@
 {
- "generated_at": "2026-11-24T19:41+05:30",
+ "generated_at": "2026-11-24T20:16+05:30",
  "feeds": [
   {
    "id": "nse",
    "name": "NSE announcements",
    "ok": true,
-   "items": 550,
+   "items": 559,
    "error": null,
    "optional": false,
-   "seconds": 0.5
+   "seconds": 0.3
   },
   {
    "id": "nse_results",
@@ -17,7 +17,7 @@
    "items": 3,
    "error": null,
    "optional": false,
-   "seconds": 0.6
+   "seconds": 0.2
   },
   {
    "id": "bse",
@@ -46,7 +46,7 @@
    "items": 50,
    "error": null,
    "optional": false,
-   "seconds": 0.8
+   "seconds": 0.2
   },
   {
    "id": "bs_markets",
@@ -77,7 +77,7 @@
    "skipped": [
     "curl_cffi RSS: ValueError: RSS stale (newest item 2024-04-23)"
    ],
-   "seconds": 4.2
+   "seconds": 1.7
   },
   {
    "id": "cnbc",
@@ -86,19 +86,95 @@
    "items": 30,
    "error": null,
    "optional": false,
-   "seconds": 0.2
+   "seconds": 0.4
   }
  ],
  "optional_unavailable": [],
- "quotes_checked": 54,
- "movers": 4,
+ "quotes_checked": 53,
+ "movers": 3,
  "quotes_error": null,
- "new_alerts": 81,
+ "new_alerts": 3,
  "high_score": 6,
- "seconds": 4.9,
+ "seconds": 5.5,
  "theses": [],
  "watchlist_size": 54,
  "alerts": [
+  {
+   "id": "2017b67a1571",
+   "kind": "price",
+   "time": "2026-11-24T20:16+05:30",
+   "source": "Yahoo quotes",
+   "headline": "CRWV -6.9% vs previous close (close 45.01, bar 2026-11-24)",
+   "summary": "No matching headline in this run's feeds.",
+   "link": "https://finance.yahoo.com/quote/CRWV",
+   "symbols": [
+    "CRWV"
+   ],
+   "symbol_keys": [
+    "US:CRWV"
+   ],
+   "keywords": [
+    "price move"
+   ],
+   "moving": [
+    "CRWV"
+   ],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "change_pct": -6.87,
+   "volume_x": 0.13,
+   "first_seen": "2026-11-24T20:16+05:30"
+  },
+  {
+   "id": "7f24a601192e",
+   "kind": "price",
+   "time": "2026-11-24T20:16+05:30",
+   "source": "Yahoo quotes",
+   "headline": "NBIS -6.8% vs previous close (close 91.12, bar 2026-11-24)",
+   "summary": "No matching headline in this run's feeds.",
+   "link": "https://finance.yahoo.com/quote/NBIS",
+   "symbols": [
+    "NBIS"
+   ],
+   "symbol_keys": [
+    "US:NBIS"
+   ],
+   "keywords": [
+    "price move"
+   ],
+   "moving": [
+    "NBIS"
+   ],
+   "score": 4,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "change_pct": -6.84,
+   "volume_x": 0.16,
+   "first_seen": "2026-11-24T20:16+05:30"
+  },
+  {
+   "id": "3e08aa97762b",
+   "kind": "news",
+   "time": "2026-11-24T20:06+05:30",
+   "source": "CNBC top news",
+   "headline": "Anthropic stock falls below $83 IPO price, but analysts are still largely positive",
+   "summary": "Anthropic has been sinking steadily since the stock opened at $111.50 on the Nasdaq on Nov. 19.",
+   "link": "https://www.cnbc.com/2026/11/24/anthropic-stock-ipo-price.html",
+   "symbols": [],
+   "symbol_keys": [],
+   "keywords": [
+    "IPO"
+   ],
+   "moving": [],
+   "score": 2,
+   "high": false,
+   "theses": [],
+   "second_order_candidates": [],
+   "first_seen": "2026-11-24T20:16+05:30"
+  },
   {
    "id": "596041a09f90",
    "kind": "news",
@@ -3192,72 +3268,6 @@
    "source": "NSE announcements",
    "headline": "SBI Mutual Fund - Magnum Hybrid Long Short Fund - RP-IDCW PO: the Net Asset Value (per unit) of SBI Mutual Fund - Magnum Hybrid Long Short Fund - RP-IDCW PO as on November 23, 2026 is Rs. 10.4954.",
    "summary": "MHLSRD : SBI Funds Management Limited has informed the Exchange that the Net Asset Value (per unit) of SBI Mutual Fund - Magnum Hybrid Long Short Fund - RP-IDCW PO as on November 23, 2026 is Rs. 10.4954. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [
-    "SBIN"
-   ],
-   "symbol_keys": [
-    "SBIN"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-24T09:46+05:30"
-  },
-  {
-   "id": "ad0d13bc7141",
-   "kind": "news",
-   "time": "2026-11-24T07:00+05:30",
-   "source": "NSE announcements",
-   "headline": "SBI Mutual Fund - Magnum Hybrid Long Short Fund - RP-GO: the Net Asset Value (per unit) of SBI Mutual Fund - Magnum Hybrid Long Short Fund - RP-GO as on November 23, 2026 is Rs. 10.4963.",
-   "summary": "MHLSRG : SBI Funds Management Limited has informed the Exchange that the Net Asset Value (per unit) of SBI Mutual Fund - Magnum Hybrid Long Short Fund - RP-GO as on November 23, 2026 is Rs. 10.4963. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [
-    "SBIN"
-   ],
-   "symbol_keys": [
-    "SBIN"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-24T09:46+05:30"
-  },
-  {
-   "id": "17bf067d441b",
-   "kind": "news",
-   "time": "2026-11-24T07:00+05:30",
-   "source": "NSE announcements",
-   "headline": "SBI Mutual Fund - SBI FMP S61 - SFMP61GR-RP-Growth Option: the Net Asset Value (per unit) of SBI Mutual Fund - SBI FMP S61 - SFMP61GR-RP-Growth Option as on November 23, 2026 is Rs. 13.3899.",
-   "summary": "SFMP61GR : SBI Funds Management Limited has informed the Exchange that the Net Asset Value (per unit) of SBI Mutual Fund - SBI FMP S61 - SFMP61GR-RP-Growth Option as on November 23, 2026 is Rs. 13.3899. |SUBJECT: Declaration of NAV",
-   "link": "",
-   "symbols": [
-    "SBIN"
-   ],
-   "symbol_keys": [
-    "SBIN"
-   ],
-   "keywords": [],
-   "moving": [],
-   "score": 4,
-   "high": false,
-   "theses": [],
-   "second_order_candidates": [],
-   "first_seen": "2026-11-24T09:46+05:30"
-  },
-  {
-   "id": "44e2de0a3145",
-   "kind": "news",
-   "time": "2026-11-24T07:00+05:30",
-   "source": "NSE announcements",
-   "headline": "SBI Mutual Fund - SBI FMP S61 - SFMP61DD-DP- IDCW Payout Option: the Net Asset Value (per unit) of SBI Mutual Fund - SBI FMP S61 - SFMP61DD-DP- IDCW Payout Option as on November 23, 2026 is Rs. 13.4625.",
-   "summary": "SFMP61DD : SBI Funds Management Limited has informed the Exchange that the Net Asset Value (per unit) of SBI Mutual Fund - SBI FMP S61 - SFMP61DD-DP- IDCW Payout Option as on November 23, 2026 is Rs. 13.4625. |SUBJECT: Declaration of NAV",
    "link": "",
    "symbols": [
     "SBIN"

@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-24 19:41 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 4 moving.
+Generated 2026-11-24 20:16 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 53 symbols checked, 3 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -173,14 +173,14 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 9567778fddaa
 - Second-order candidates: 
 
-## 15. [4] Hero MotoCorp Limited: Pursuant to Regulation 30 of the SEBI Listing Regulations, please refer to the disclosure document regarding the update on Trade Registration Certificate matter.
+## 15. [4] CRWV -6.9% vs previous close (close 45.01, bar 2026-11-24)
 
-- Time: 2026-11-24 18:02 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/HEROMOTO_24112026180157_StockExchangeDisclosure.pdf
-- Matched symbols: none
-- Keywords: listing, SEBI
+- Time: 2026-11-24 20:16 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/CRWV
+- Matched symbols: CRWV (moving today: CRWV)
+- Keywords: price move
 - Thesis match: none
 - Score: 4
-- Alert id: 172a667ca5b3
+- Alert id: 2017b67a1571
 - Second-order candidates: 
