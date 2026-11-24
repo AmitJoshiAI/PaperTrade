@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-24 09:46 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 4 moving.
+Generated 2026-11-24 11:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 53 symbols checked, 4 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -15,7 +15,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 11
 - Alert id: ccb535c2a4d8
-- Second-order candidates: 
+- Second-order candidates: Winner: APL Apollo promoters (premium exit, first tranche of a larger staged purchase) and, later, Tata Steel's tubes and coated volume once control passes; the mechanism is staged buying ahead of a mandatory open offer. / Losers: Tata Steel (TATASTEEL) carries the purchase plus open-offer funding, and APL minority holders (APLAPOLLO) face a weaker float and possible derating, as in [00aaa509d27f]. Peers JINDALSAW, HITECH, SURYAROSNI face a better-backed rival; inferred, not confirmed from the filing. / Catalyst: scheduled follow-up - remaining tranches and the open-offer window, dates not read; the first tranche is already in prices after the 22% APL fall. / Thesis fit: none (no draft: terms and offer dates unverified, move already priced)
 
 ## 2. [10 HIGH] APL Apollo Tubes shares crash 22%, Tata Steel falls 8.5% as Rs 5,825-crore block deal follows acquisition news
 
@@ -53,19 +53,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 4cd2fed2e6bc
 - Second-order candidates: Winner: block-deal buyers who took the stock at the discount; see [9d1d3c869d15]. / Losers: same as [9d1d3c869d15]; the move has deepened since 09:46 (APL -10% to -15%, Tata Steel -4% to -6%), so the market is pricing both financing strain at Tata Steel and a weaker APL float, not a one-off dip. / Catalyst: surprise - same-day block deal; next dated step is the open-offer window (dates not read). / Thesis fit: none (no draft: terms and open-offer dates unverified, and the move is already in prices).
 
-## 5. [10 HIGH] APL Apollo Tubes shares plunge 10%, Tata Steel falls 4% as Rs 5,825 crore block deal follows acquisition news
-
-- Time: 2026-11-23 09:46 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/apl-apollo-tubes-shares-plunge-10-tata-steel-falls-4-as-rs-5-825-crore-block-deal-follows-acquisition-news-14086850.html
-- Matched symbols: TATASTEEL (moving today: TATASTEEL)
-- Keywords: block deal, M&A
-- Thesis match: none
-- Score: 10
-- Alert id: 9d1d3c869d15
-- Second-order candidates: Winner: block-deal buyers entering at the lower price; the open-offer price becomes the reference level for APL holders. / Losers: APL Apollo (APLAPOLLO) holders who sold into the block, and Tata Steel (TATASTEEL), because it takes on a large stake purchase plus an open offer, which raises capital needs and integration risk. One search found only a pre-deal report of a Gupta-family stake sale of about 28%, valued above Rs 32,000 crore with open offer; nothing confirming this block deal. / Catalyst: surprise - same-day block deal after the announcement; the next dated trigger is the open-offer window, not yet known to me. / Thesis fit: none (price move already in; no draft).
-
-## 6. [8 HIGH] South Indian Bank Ltd: Approval Granted By The Reserve Bank Of India (RBI) To SBI Mutual Fund For Acquiring Aggregate Holding Of Up To 9.99% Of The Paid-Up Share Capital Or Voting Rights In The Bank
+## 5. [8 HIGH] South Indian Bank Ltd: Approval Granted By The Reserve Bank Of India (RBI) To SBI Mutual Fund For Acquiring Aggregate Holding Of Up To 9.99% Of The Paid-Up Share Capital Or Voting Rights In The Bank
 
 - Time: 2026-11-23 22:16 IST
 - Source: BSE announcements
@@ -75,9 +63,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: f80f40776942
-- Second-order candidates: 
+- Second-order candidates: False match: the filing is about South Indian Bank (a separate listed bank), not State Bank of India (SBIN); the matched symbol is wrong, and it is an RBI holding-limit approval for a mutual fund, not a company event.
 
-## 7. [8 HIGH] Tata Steel Limited: Acquisition (including agreement to acquire)
+## 6. [8 HIGH] Tata Steel Limited: Acquisition (including agreement to acquire)
 
 - Time: 2026-11-23 17:55 IST
 - Source: NSE announcements
@@ -87,9 +75,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: e33b5b7a5ad0
-- Second-order candidates: 
+- Second-order candidates: Winner: same event as [ebf86f5aeb1e]; the XBRL restructuring filing is the formal Reg 30 disclosure of the APL Apollo deal. / Losers: none clear beyond [ebf86f5aeb1e]. / Catalyst: scheduled follow-up - open-offer window, dates not read. / Thesis fit: none
 
-## 8. [8 HIGH] Tata Steel dips 7% as APL Apollo plunge on ₹28,000 cr deal; Hindalco under pressure
+## 7. [8 HIGH] Tata Steel dips 7% as APL Apollo plunge on ₹28,000 cr deal; Hindalco under pressure
 
 - Time: 2026-11-23 15:08 IST
 - Source: BusinessLine
@@ -101,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 6077b03ce8e0
 - Second-order candidates: Winner: none clear; see [ebf86f5aeb1e]. / Losers: Tata Steel (TATASTEEL) on funding and open-offer burden; Hindalco (HINDALCO) is named as "under pressure" in the article but no deal mechanism is given, so treat it as sector tone, not a loser. / Catalyst: surprise - same event as [ebf86f5aeb1e]. / Thesis fit: none
 
-## 9. [8 HIGH] ‘Tata Steel deal negative for APL Apollo Tubes minority shareholders; co faces earnings downgrades, derating’
+## 8. [8 HIGH] ‘Tata Steel deal negative for APL Apollo Tubes minority shareholders; co faces earnings downgrades, derating’
 
 - Time: 2026-11-23 13:53 IST
 - Source: Moneycontrol
@@ -113,55 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 00aaa509d27f
 - Second-order candidates: Winner: Tata Steel's long-run downstream volume and APL's promoters (premium exit); no clear public-shareholder winner if the open offer is priced below market. / Losers: APL Apollo (APLAPOLLO) minority holders: the headline argues for earnings downgrades and a lower multiple once promoters sell and Tata becomes the controlling owner (article body not read; Moneycontrol analyst view). Tata Steel (TATASTEEL) on funding and integration cost, per [9d1d3c869d15]. / Catalyst: scheduled follow-up - open-offer window and any broker rating changes; dates unknown to me. / Thesis fit: none (opinion piece on an event already priced; no draft)
 
-## 10. [8 HIGH] Tata Steel dips 7% as APL Apollo tumbles on ₹28,000 crore deal; Hindalco also under pressure
-
-- Time: 2026-11-23 11:28 IST
-- Source: BusinessLine
-- Link: https://www.thehindubusinessline.com/markets/stock-markets/tata-steel-dips-7-as-apl-apollo-tumbles-on-28000-crore-deal-hindalco-also-under-pressure/article71733581.ece
-- Matched symbols: TATASTEEL, HINDALCO (moving today: TATASTEEL)
-- Keywords: none
-- Thesis match: none
-- Score: 8
-- Alert id: b0b408be6421
-- Second-order candidates: Winner: none clear. Deal value of Rs 28,000 crore is the headline figure; the filing itself was not readable here. / Losers: Hindalco (HINDALCO) is named as "also under pressure" but the article gives no mechanism I could verify (likely sector or index drag, not deal exposure); JSW Steel (JSWSTEEL) and Jindal Saw (JINDALSAW) face a better-funded coated/tubes rival. Mechanism inferred, not confirmed. / Catalyst: surprise - same event as [ebf86f5aeb1e]; follow-ups are the investor meet and the open-offer window. / Thesis fit: none
-
-## 11. [8 HIGH] Tata Steel vs JSW Steel vs Hind Zinc: Which stock looks stronger on charts?
-
-- Time: 2026-11-23 10:00 IST
-- Source: Business Standard
-- Link: https://www.business-standard.com/markets/news/tata-steel-vs-jsw-steel-vs-hind-zinc-which-metal-stock-looks-stronger-on-tech-charts-126112300200_1.html
-- Matched symbols: TATASTEEL, JSWSTEEL (moving today: TATASTEEL)
-- Keywords: none
-- Thesis match: none
-- Score: 8
-- Alert id: b2162b9c0cb8
-- Second-order candidates: False match: technical-analysis round-up of three metal stocks, not a company event; no catalyst.
-
-## 12. [8 HIGH] Tata Steel to buy $1.67 billion stake in India’s largest steel pipe maker; shares plunge nearly 5%
-
-- Time: 2026-11-23 09:56 IST
-- Source: CNBC top news
-- Link: https://www.cnbc.com/2026/11/23/tata-steel-acquisition-deal-apl-india.html
-- Matched symbols: TATASTEEL (moving today: TATASTEEL)
-- Keywords: stake sale
-- Thesis match: none
-- Score: 8
-- Alert id: 807e7a7961dc
-- Second-order candidates: Winner: same event as [ebf86f5aeb1e]; the $1.67 billion figure is the stake price reported by CNBC. / Losers: none clear beyond [ebf86f5aeb1e]. / Catalyst: surprise - international coverage of the same announcement. / Thesis fit: none
-
-## 13. [8 HIGH] TATASTEEL -8.4% vs previous close, volume 6.9x 20-day average (close 163.0, bar 2026-11-23)
-
-- Time: 2026-11-23 09:46 IST
-- Source: Yahoo quotes
-- Link: https://finance.yahoo.com/quote/TATASTEEL.NS
-- Matched symbols: TATASTEEL (moving today: TATASTEEL)
-- Keywords: price move
-- Thesis match: none
-- Score: 8
-- Alert id: c4a0489cbb72
-- Second-order candidates: Winner: none clear; see [ebf86f5aeb1e]. / Losers: Tata Steel itself - the fall is the market's reaction to the APL Apollo deal (stake purchase plus open offer), with volume 3.9x average showing forced selling rather than drift. / Catalyst: surprise - same event as [ebf86f5aeb1e]. / Thesis fit: none
-
-## 14. [7 HIGH] Coal India Ltd: Disclosure Under Regulation 30 Of Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('Listing Regulations') - Initial Public O?ering ('IPO') Of Equity Shares Of Face Value Rs 2 Each ('Equity Shares') Of Mahanadi Coalfield Limited, A Subsidiary Of Coal India Limited ('Company')
+## 9. [7 HIGH] Coal India Ltd: Disclosure Under Regulation 30 Of Securities And Exchange Board Of India (Listing Obligations And Disclosure Requirements) Regulations, 2015 ('Listing Regulations') - Initial Public O?ering ('IPO') Of Equity Shares Of Face Value Rs 2 Each ('Equity Shares') Of Mahanadi Coalfield Limited, A Subsidiary Of Coal India Limited ('Company')
 
 - Time: 2026-11-24 07:02 IST
 - Source: BSE announcements
@@ -171,9 +111,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 7
 - Alert id: abd57e31d7f1
-- Second-order candidates: 
+- Second-order candidates: Winner: Coal India (COALINDIA) if the subsidiary lists at a value above its book carrying, which unlocks value; mechanism is a subsidiary IPO re-rating the parent's holding. / Losers: none clear; a large coal-sector IPO could pull funds from other PSU issues, but that is inferred and weak. / Catalyst: scheduled - IPO opening and listing dates follow the DRHP/RHP process; the disclosure alone gives no dates or size (PDF not read). / Thesis fit: none (no draft: size, price band and dates unknown)
 
-## 15. [6 HIGH] CRWV +22.3% vs previous close (close 48.33, bar 2026-11-23)
+## 10. [6 HIGH] CRWV +22.3% vs previous close (close 48.33, bar 2026-11-23)
 
 - Time: 2026-11-24 09:46 IST
 - Source: Yahoo quotes
@@ -183,4 +123,64 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: cc2a46a0dd4e
+- Second-order candidates: Winner: unclear; AI-cloud capacity names are the likely group, but no cause was found. / Losers: none clear. / Catalyst: unknown - no news found (one search returned only 2025 CoreWeave jumps, none for 23 Nov 2026). / Thesis fit: none
+
+## 11. [6 HIGH] NBIS +20.3% vs previous close (close 97.8, bar 2026-11-23)
+
+- Time: 2026-11-24 09:46 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/NBIS
+- Matched symbols: NBIS (moving today: NBIS)
+- Keywords: price move
+- Thesis match: none
+- Score: 6
+- Alert id: 26c60ab76fb3
+- Second-order candidates: 
+
+## 12. [6 HIGH] Coal India Limited: Disclosure under Regulation 30 of Securities and Exchange Board of India(Listing Obligations and Disclosure Requirements) Regulations, 2015 ( ListingRegulations ) Initial public oﬀering ( IPO ) of equity shares of face value ₹ 2 each( Equity Shares ) of Mahanadi Coalfield Limited, a subsidiary of Coal India Limited( Company )- Filing of Prospectus with RoC by MCL
+
+- Time: 2026-11-24 07:09 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/COALINDIA_24112026070916_MCL-Prospectus.pdf
+- Matched symbols: COALINDIA
+- Keywords: IPO
+- Thesis match: none
+- Score: 6
+- Alert id: eba39fa9e83f
+- Second-order candidates: 
+
+## 13. [6 HIGH] Adani Enterprises Ltd: Announcement under Regulation 30 (LODR)-Acquisition
+
+- Time: 2026-11-23 22:07 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/e1abed3d-9957-4ec1-9f2c-36cc8e5c9cde.pdf
+- Matched symbols: ADANIENT
+- Keywords: M&A
+- Thesis match: none
+- Score: 6
+- Alert id: 58ba9ec87f08
+- Second-order candidates: 
+
+## 14. [6 HIGH] Sealmatic India Ltd: Shareholder Meeting / Postal Ballot-Scrutinizer"s Report
+
+- Time: 2026-11-23 19:35 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/32feb4ee-d2b4-471a-8d23-f1086836a952.pdf
+- Matched symbols: none
+- Keywords: results, listing, SEBI
+- Thesis match: none
+- Score: 6
+- Alert id: 6d24544aa95f
+- Second-order candidates: 
+
+## 15. [6 HIGH] Tata Steel Limited: Schedule of Analysts or Institutional Investors Meet
+
+- Time: 2026-11-23 16:21 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_234_WebXMLFile_20261123_162114268.xml
+- Matched symbols: TATASTEEL (moving today: TATASTEEL)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: ec34b3895fd3
 - Second-order candidates: 
