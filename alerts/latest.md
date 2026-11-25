@@ -1,6 +1,6 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-25 18:54 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Generated 2026-11-25 19:43 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
 Quotes: 54 symbols checked, 8 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
@@ -29,19 +29,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 050a4d78eeb3
 - Second-order candidates: Winner: IndiGo (fuel is a large share of airline costs, paid in dollars), Asian Paints (crude-derived inputs), BPCL (marketing margin widens when crude falls faster than pump prices). / Losers: ONGC and Oil India (INDIA: ONGC, OIL) earn realisations linked to Brent, so lower crude cuts upstream revenue per barrel. / Catalyst: surprise - crude price move, no dated trigger; Brent is already down from 105 in October, so this is a continuation, and the earlier crude-ongc-vs-hpcl thesis is closed. / Thesis fit: none (crude-ongc-vs-hpcl already closed on 2026-11-06; no new draft, this is a price continuation without a dated event)
 
-## 3. [7 HIGH] Maruti Global Industries Ltd: Announcement under Regulation 30 (LODR)-Award of Order Receipt of Order
-
-- Time: 2026-11-24 19:29 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/f440da87-f85e-4536-83b4-45da08d7cfc0.pdf
-- Matched symbols: MARUTI
-- Keywords: order win
-- Thesis match: none
-- Score: 7
-- Alert id: 596041a09f90
-- Second-order candidates: False match: Maruti Global Industries is a separate small listed company, not Maruti Suzuki (MARUTI); the symbol match is on the name only.
-
-## 4. [6 HIGH] Ladderup Finance Ltd: Announcement under Regulation 30 (LODR)-Scheme of Arrangement
+## 3. [6 HIGH] Ladderup Finance Ltd: Announcement under Regulation 30 (LODR)-Scheme of Arrangement
 
 - Time: 2026-11-25 18:48 IST
 - Source: BSE announcements
@@ -53,7 +41,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: adaf043f3cfa
 - Second-order candidates: 
 
-## 5. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Audio recording - Earnings Conference Call on Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust'.
+## 4. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Audio recording - Earnings Conference Call on Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust'.
 
 - Time: 2026-11-25 17:39 IST
 - Source: NSE announcements
@@ -65,7 +53,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: a26245d3b9b9
 - Second-order candidates: 
 
-## 6. [6 HIGH] Bajaj Finserv Limited: Schedule of Analysts or Institutional Investors Meet
+## 5. [6 HIGH] Bajaj Finserv Limited: Schedule of Analysts or Institutional Investors Meet
 
 - Time: 2026-11-25 17:28 IST
 - Source: NSE announcements
@@ -77,7 +65,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: e930eb5d769c
 - Second-order candidates: 
 
-## 7. [6 HIGH] Bajaj Finserv Limited: Schedule of meet
+## 6. [6 HIGH] Bajaj Finserv Limited: Schedule of meet
 
 - Time: 2026-11-25 17:24 IST
 - Source: NSE announcements
@@ -89,7 +77,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: eec0d68de4f4
 - Second-order candidates: 
 
-## 8. [6 HIGH] HINDUNILVR +6.1% vs previous close, volume 3.0x 20-day average (close 2141.8, bar 2026-11-25)
+## 7. [6 HIGH] HINDUNILVR +6.1% vs previous close, volume 3.0x 20-day average (close 2141.8, bar 2026-11-25)
 
 - Time: 2026-11-25 13:47 IST
 - Source: Yahoo quotes
@@ -101,7 +89,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: bdee1ba8d7de
 - Second-order candidates: 
 
-## 9. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Investor Presentation on Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust'.
+## 8. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Investor Presentation on Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust'.
 
 - Time: 2026-11-25 13:11 IST
 - Source: NSE announcements
@@ -113,7 +101,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 631b2e56184a
 - Second-order candidates: False match: this is the InvIT's own results presentation (a separate listed trust), not a POWERGRID (parent) catalyst.
 
-## 10. [6 HIGH] Tata Steel Limited: Tata Steel Limited has Submitted to the Exchange a copy of Disclosure under Regulation 18 (6) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.
+## 9. [6 HIGH] Tata Steel Limited: Tata Steel Limited has Submitted to the Exchange a copy of Disclosure under Regulation 18 (6) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.
 
 - Time: 2026-11-25 12:41 IST
 - Source: NSE announcements
@@ -125,7 +113,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 2feb8100f6eb
 - Second-order candidates: False match: routine promoter/SAST compliance disclosure with no stated transaction; the PDF content was not opened and nothing here is a catalyst.
 
-## 11. [6 HIGH] APL Apollo Tubes stock: Brokerages slash price targets on debt, earnings concerns following Tata Steel deal
+## 10. [6 HIGH] APL Apollo Tubes stock: Brokerages slash price targets on debt, earnings concerns following Tata Steel deal
 
 - Time: 2026-11-25 11:47 IST
 - Source: Moneycontrol
@@ -137,7 +125,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 1eb21a8c813b
 - Second-order candidates: Winner: APL Apollo's selling promoter entity (cash out at a premium) and, longer term, Tata Steel's tubes/coated volumes once control passes; see [ccb535c2a4d8]. / Losers: APL Apollo minority holders (APLAPOLLO): brokerages see higher debt and weaker earnings if the staged purchase leads to an open offer and a thinner float; Tata Steel (TATASTEEL) carries the funding. Peers (JINDALSAW, HITECH, SURYAROSNI) face a better-backed rival; inferred, not confirmed. / Catalyst: scheduled follow-up - remaining tranches and open-offer window, dates not read; target cuts are a reaction to news already in prices. / Thesis fit: none (no draft: offer terms and dates unverified, move already priced)
 
-## 12. [6 HIGH] Sensex Today | Stock Market Live: Sensex surges over 2,000 pts, Nifty near 25,950; private banks, FMCG rally; ICICI Bank, HDFC Bank lead gains
+## 11. [6 HIGH] Sensex Today | Stock Market Live: Sensex surges over 2,000 pts, Nifty near 25,950; private banks, FMCG rally; ICICI Bank, HDFC Bank lead gains
 
 - Time: 2026-11-25 11:47 IST
 - Source: Moneycontrol
@@ -149,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fd69668fd75e
 - Second-order candidates: False match: market-wide live blog, not a company event; same move as [7aaac6ae82f9]; no catalyst or loser to name.
 
-## 13. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on November 23, 2026 is Rs. 261.3744.
+## 12. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on November 23, 2026 is Rs. 261.3744.
 
 - Time: 2026-11-25 10:16 IST
 - Source: NSE announcements
@@ -161,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 97e97469dc4b
 - Second-order candidates: False match: routine daily NAV disclosure for an ETF, not a company catalyst.
 
-## 14. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on November 23, 2026 is Rs. 63.7086.
+## 13. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on November 23, 2026 is Rs. 63.7086.
 
 - Time: 2026-11-25 10:16 IST
 - Source: NSE announcements
@@ -173,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c036378453cd
 - Second-order candidates: False match: routine daily NAV disclosure for an ETF, not a company catalyst.
 
-## 15. [6 HIGH] BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on November 23, 2026 is Rs. 23.0449.
+## 14. [6 HIGH] BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on November 23, 2026 is Rs. 23.0449.
 
 - Time: 2026-11-25 10:16 IST
 - Source: NSE announcements
@@ -184,3 +172,15 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 1fc4e9b4e59d
 - Second-order candidates: False match: routine daily NAV disclosure for an ETF, not a company catalyst.
+
+## 15. [6 HIGH] Bajaj Finserv Nifty 1D Rate Liquid ETF-Growth: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on November 23, 2026 is Rs. 1109.1794.
+
+- Time: 2026-11-25 10:16 IST
+- Source: NSE announcements
+- Link: 
+- Matched symbols: BAJAJFINSV (moving today: BAJAJFINSV)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: 04d731b28712
+- Second-order candidates: False match: routine daily NAV disclosure for a liquid ETF, not a company catalyst.
