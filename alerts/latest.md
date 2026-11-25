@@ -1,7 +1,7 @@
 # Catalyst scanner: top alerts, last 24 hours
 
-Generated 2026-11-25 13:47 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
-Quotes: 54 symbols checked, 6 moving.
+Generated 2026-11-25 18:54 IST. High score = 6+. Feeds OK: NSE announcements, NSE results, BSE announcements (via cffi_api), ET Markets, ET Stocks, Business Standard, BusinessLine, Moneycontrol (via curl_cffi HTML listing), CNBC top news.
+Quotes: 54 symbols checked, 8 moving.
 
 Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROMPT.md) only writes notes and draft theses for the user to approve.
 
@@ -15,7 +15,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 3d2f049828e5
-- Second-order candidates: 
+- Second-order candidates: Winner: HUL, Tata Consumer, ITC via broad FII-driven rotation into defensives; sector-wide, not company-specific. / Losers: none clear; a sentiment round-up names no displaced company (the same day's private-bank rally suggests funds are adding to both, not switching). / Catalyst: surprise - FII flow-driven market move, no scheduled event named; likely to fade if flows reverse. / Thesis fit: none
 
 ## 2. [8 HIGH] IndiGo, BPCL, Asian Paints, other crude-sensitive shares rise up to 4% as Brent eases to $88
 
@@ -27,7 +27,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 8
 - Alert id: 050a4d78eeb3
-- Second-order candidates: 
+- Second-order candidates: Winner: IndiGo (fuel is a large share of airline costs, paid in dollars), Asian Paints (crude-derived inputs), BPCL (marketing margin widens when crude falls faster than pump prices). / Losers: ONGC and Oil India (INDIA: ONGC, OIL) earn realisations linked to Brent, so lower crude cuts upstream revenue per barrel. / Catalyst: surprise - crude price move, no dated trigger; Brent is already down from 105 in October, so this is a continuation, and the earlier crude-ongc-vs-hpcl thesis is closed. / Thesis fit: none (crude-ongc-vs-hpcl already closed on 2026-11-06; no new draft, this is a price continuation without a dated event)
 
 ## 3. [7 HIGH] Maruti Global Industries Ltd: Announcement under Regulation 30 (LODR)-Award of Order Receipt of Order
 
@@ -41,7 +41,67 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 596041a09f90
 - Second-order candidates: False match: Maruti Global Industries is a separate small listed company, not Maruti Suzuki (MARUTI); the symbol match is on the name only.
 
-## 4. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Investor Presentation on Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust'.
+## 4. [6 HIGH] Ladderup Finance Ltd: Announcement under Regulation 30 (LODR)-Scheme of Arrangement
+
+- Time: 2026-11-25 18:48 IST
+- Source: BSE announcements
+- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/8f09110e-291c-4091-aae4-3e4671c62801.pdf
+- Matched symbols: none
+- Keywords: listing, SEBI, M&A
+- Thesis match: none
+- Score: 6
+- Alert id: adaf043f3cfa
+- Second-order candidates: 
+
+## 5. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Audio recording - Earnings Conference Call on Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust'.
+
+- Time: 2026-11-25 17:39 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/PGINVIT_25112026173937_INTIMATION.pdf
+- Matched symbols: POWERGRID
+- Keywords: results
+- Thesis match: none
+- Score: 6
+- Alert id: a26245d3b9b9
+- Second-order candidates: 
+
+## 6. [6 HIGH] Bajaj Finserv Limited: Schedule of Analysts or Institutional Investors Meet
+
+- Time: 2026-11-25 17:28 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/xbrl/SAIIM_2749_WebXMLFile_20261125_172853208.xml
+- Matched symbols: BAJAJFINSV (moving today: BAJAJFINSV)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: e930eb5d769c
+- Second-order candidates: 
+
+## 7. [6 HIGH] Bajaj Finserv Limited: Schedule of meet
+
+- Time: 2026-11-25 17:24 IST
+- Source: NSE announcements
+- Link: https://nsearchives.nseindia.com/corporate/walimbelk_25112026172422_BFSSEIntimationInvestorsday07122026.pdf
+- Matched symbols: BAJAJFINSV (moving today: BAJAJFINSV)
+- Keywords: none
+- Thesis match: none
+- Score: 6
+- Alert id: eec0d68de4f4
+- Second-order candidates: 
+
+## 8. [6 HIGH] HINDUNILVR +6.1% vs previous close, volume 3.0x 20-day average (close 2141.8, bar 2026-11-25)
+
+- Time: 2026-11-25 13:47 IST
+- Source: Yahoo quotes
+- Link: https://finance.yahoo.com/quote/HINDUNILVR.NS
+- Matched symbols: HINDUNILVR (moving today: HINDUNILVR)
+- Keywords: price move
+- Thesis match: none
+- Score: 6
+- Alert id: bdee1ba8d7de
+- Second-order candidates: 
+
+## 9. [6 HIGH] POWERGRID Infrastructure Investment Trust: 'Investor Presentation on Q2 & H1 FY27 Financial Results of POWERGRID Infrastructure Investment Trust'.
 
 - Time: 2026-11-25 13:11 IST
 - Source: NSE announcements
@@ -51,9 +111,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 631b2e56184a
-- Second-order candidates: 
+- Second-order candidates: False match: this is the InvIT's own results presentation (a separate listed trust), not a POWERGRID (parent) catalyst.
 
-## 5. [6 HIGH] Tata Steel Limited: Tata Steel Limited has Submitted to the Exchange a copy of Disclosure under Regulation 18 (6) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.
+## 10. [6 HIGH] Tata Steel Limited: Tata Steel Limited has Submitted to the Exchange a copy of Disclosure under Regulation 18 (6) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.
 
 - Time: 2026-11-25 12:41 IST
 - Source: NSE announcements
@@ -63,9 +123,9 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Thesis match: none
 - Score: 6
 - Alert id: 2feb8100f6eb
-- Second-order candidates: 
+- Second-order candidates: False match: routine promoter/SAST compliance disclosure with no stated transaction; the PDF content was not opened and nothing here is a catalyst.
 
-## 6. [6 HIGH] APL Apollo Tubes stock: Brokerages slash price targets on debt, earnings concerns following Tata Steel deal
+## 11. [6 HIGH] APL Apollo Tubes stock: Brokerages slash price targets on debt, earnings concerns following Tata Steel deal
 
 - Time: 2026-11-25 11:47 IST
 - Source: Moneycontrol
@@ -77,7 +137,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 1eb21a8c813b
 - Second-order candidates: Winner: APL Apollo's selling promoter entity (cash out at a premium) and, longer term, Tata Steel's tubes/coated volumes once control passes; see [ccb535c2a4d8]. / Losers: APL Apollo minority holders (APLAPOLLO): brokerages see higher debt and weaker earnings if the staged purchase leads to an open offer and a thinner float; Tata Steel (TATASTEEL) carries the funding. Peers (JINDALSAW, HITECH, SURYAROSNI) face a better-backed rival; inferred, not confirmed. / Catalyst: scheduled follow-up - remaining tranches and open-offer window, dates not read; target cuts are a reaction to news already in prices. / Thesis fit: none (no draft: offer terms and dates unverified, move already priced)
 
-## 7. [6 HIGH] Sensex Today | Stock Market Live: Sensex surges over 2,000 pts, Nifty near 25,950; private banks, FMCG rally; ICICI Bank, HDFC Bank lead gains
+## 12. [6 HIGH] Sensex Today | Stock Market Live: Sensex surges over 2,000 pts, Nifty near 25,950; private banks, FMCG rally; ICICI Bank, HDFC Bank lead gains
 
 - Time: 2026-11-25 11:47 IST
 - Source: Moneycontrol
@@ -89,7 +149,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: fd69668fd75e
 - Second-order candidates: False match: market-wide live blog, not a company event; same move as [7aaac6ae82f9]; no catalyst or loser to name.
 
-## 8. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on November 23, 2026 is Rs. 261.3744.
+## 13. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 50 ETF as on November 23, 2026 is Rs. 261.3744.
 
 - Time: 2026-11-25 10:16 IST
 - Source: NSE announcements
@@ -101,7 +161,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: 97e97469dc4b
 - Second-order candidates: False match: routine daily NAV disclosure for an ETF, not a company catalyst.
 
-## 9. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on November 23, 2026 is Rs. 63.7086.
+## 14. [6 HIGH] Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty Bank ETF as on November 23, 2026 is Rs. 63.7086.
 
 - Time: 2026-11-25 10:16 IST
 - Source: NSE announcements
@@ -113,7 +173,7 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Alert id: c036378453cd
 - Second-order candidates: False match: routine daily NAV disclosure for an ETF, not a company catalyst.
 
-## 10. [6 HIGH] BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on November 23, 2026 is Rs. 23.0449.
+## 15. [6 HIGH] BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF: the Net Asset Value (per unit) of BAJAJ FINSERV MUTUAL FUND - Bajaj Finserv BSE Top 10 Banks ETF as on November 23, 2026 is Rs. 23.0449.
 
 - Time: 2026-11-25 10:16 IST
 - Source: NSE announcements
@@ -124,63 +184,3 @@ Paper trading only. Nothing here is an order; the reviewer routine (SCANNER_PROM
 - Score: 6
 - Alert id: 1fc4e9b4e59d
 - Second-order candidates: False match: routine daily NAV disclosure for an ETF, not a company catalyst.
-
-## 11. [6 HIGH] Bajaj Finserv Nifty 1D Rate Liquid ETF-Growth: the Net Asset Value (per unit) of Bajaj Finserv Mutual Fund - Bajaj Finserv Nifty 1D Rate Liquid ETF as on November 23, 2026 is Rs. 1109.1794.
-
-- Time: 2026-11-25 10:16 IST
-- Source: NSE announcements
-- Link: 
-- Matched symbols: BAJAJFINSV (moving today: BAJAJFINSV)
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: 04d731b28712
-- Second-order candidates: False match: routine daily NAV disclosure for a liquid ETF, not a company catalyst.
-
-## 12. [6 HIGH] Bank Nifty jumps nearly 1,300 pts as HDFC Bank, ICICI Bank rally over 3% each; private lenders lead gains
-
-- Time: 2026-11-25 09:46 IST
-- Source: Moneycontrol
-- Link: https://www.moneycontrol.com/news/business/markets/bank-nifty-jumps-nearly-1-300-pts-as-hdfc-bank-icici-bank-rally-over-3-each-private-lenders-lead-gains-14088402.html
-- Matched symbols: ICICIBANK, HDFCBANK
-- Keywords: none
-- Thesis match: none
-- Score: 6
-- Alert id: 7aaac6ae82f9
-- Second-order candidates: Winner: HDFC Bank (HDFCBANK) and ICICI Bank (ICICIBANK) as index heavyweights; a broad private-lender rally lifts the index mechanically through their weights. / Losers: none clear; the headline is a market-move round-up and names no company-specific cause, so no non-obvious loser can be argued. / Catalyst: unknown - round-up of an index move, cause not stated in the headline (not searched; no company event). / Thesis fit: none
-
-## 13. [6 HIGH] TechEra Engineering (India) Limited: 'TechEra Engineering (India) Limited Secures Purchase Orders worth ₹8.63 Crore for Space Launch Vehicle Ground Support Equipment'.
-
-- Time: 2026-11-24 18:27 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/TECHERA_24112026182743_TechEra_Press_Release_24Nov2026.pdf
-- Matched symbols: none
-- Keywords: order win, enters/launches business
-- Thesis match: none
-- Score: 6
-- Alert id: 9636019357f0
-- Second-order candidates: Winner: TechEra itself; the order is small (Rs 8.63 crore) and shows entry into space ground-support work. Not on the watchlist, so no tracked symbol. / Losers: none clear; a small-order win names no displaced competitor. / Catalyst: surprise - an unscheduled order announcement - small in size, any move is likely sentiment-driven rather than a rerating. / Thesis fit: none
-
-## 14. [6 HIGH] Pavna Industries Ltd: Announcement under Regulation 30 (LODR)-Updates on Acquisition
-
-- Time: 2026-11-24 17:49 IST
-- Source: BSE announcements
-- Link: https://www.bseindia.com/xml-data/corpfiling/AttachLive/2927a824-4fff-41ce-8dee-6905769f98a8.pdf
-- Matched symbols: none
-- Keywords: stake sale, M&A
-- Thesis match: none
-- Score: 6
-- Alert id: 72a1afb072ab
-- Second-order candidates: Winner: unclear; the filing is an update on an acquisition and the target, price and stage were not read (PDF not opened in this sandbox). / Losers: none clear. / Catalyst: unknown - filing content unread, so no scheduled date can be named. / Thesis fit: none (no draft: terms unverified)
-
-## 15. [5] Globesecure Technologies Limited: Ragavan Rajkumar has Submitted to the Exchange a copy of Disclosure under Regulation 31(1) and 31 (2) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.
-
-- Time: 2026-11-25 12:43 IST
-- Source: NSE announcements
-- Link: https://nsearchives.nseindia.com/corporate/team_sandeshc_25112026122305_Disclosure1.pdf
-- Matched symbols: none
-- Keywords: SEBI, M&A
-- Thesis match: none
-- Score: 5
-- Alert id: 4b23de9fe00e
-- Second-order candidates: 
