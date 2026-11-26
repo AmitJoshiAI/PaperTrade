@@ -956,6 +956,11 @@ footer a { color: inherit; }
       })));
       if (isNum(cb.usd_inr)) hdr.appendChild(h("p", { class: "muted small", style: "margin:8px 0 0", text: "US at Rs " + cb.usd_inr.toFixed(2) + "/$" +
         (cb.fx_date ? " (Yahoo USDINR=X close of " + dShort(cb.fx_date) + ")" : "") + "." }));
+      // why the US "Day" is a day behind: the evening run in India sees the US session that closed that morning
+      var usRows = (d.us && d.us.equity_curve) || [], usDay = usRows.length ? usRows[usRows.length - 1].date : null;
+      if (usDay && d.as_of && usDay < d.as_of) hdr.appendChild(h("p", { class: "muted small", style: "margin:4px 0 0",
+        text: "The US market closes around 2:30 am India time, so the US \"Day\" here is its " + dShort(usDay) +
+          " session, the latest one finished before this evening's update. A US holiday shows as Rs 0." }));
     } else if (th) {
       var combinedEq = (perf.equity || 0) + (th.equity || 0), combinedCap = th.combined_capital || 0;
       hdr.appendChild(h("p", { class: "muted small", style: "margin:10px 0 0" }, [
