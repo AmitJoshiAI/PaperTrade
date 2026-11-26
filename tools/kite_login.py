@@ -341,7 +341,8 @@ def write_github_secret(token: str) -> None:
     # No --body: gh then reads the value from stdin (not a terminal here), so the token is never on a
     # command line or in the process list.
     r = subprocess.run([gh, "secret", "set", SECRET_NAME, "--repo", REPO], input=token, text=True,
-                       capture_output=True, timeout=60)
+                       capture_output=True, timeout=60,
+                       creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))   # no console flash from the task
     if r.returncode != 0:
         raise Fail(E_GH, f"gh secret set failed (exit {r.returncode}): {(r.stderr or r.stdout).strip()[:200]}"
                          " - is gh logged in? (gh auth status)")
@@ -377,6 +378,12 @@ def cmd_login(mode: str, if_needed: bool, scheduled: bool = False) -> int:
                 say(f"Today's token already works; GitHub secret {SECRET_NAME} updated on {REPO}.")
                 return OK
             say("Today's token already works; nothing to do.")
+            return OK
+        if why.split(":")[0] in ("ConnectionError", "ConnectTimeout", "ReadTimeout", "Timeout", "SSLError",
+                                 "NetworkException"):
+            # no network yet (the task also fires the moment a network appears): the token was not refused,
+            # so do not log in again; the next run checks it
+            say(f"Could not reach Kite to check today's token ({why[:80]}); leaving it as it is.")
             return OK
         say(f"Today's stored token does not work ({why}); logging in again.")
     if mode == "default":
@@ -471,8 +478,10 @@ def _task_xml(python: str, script: str) -> str:
 def cmd_install_task() -> int:
     if os.name != "nt":
         raise Fail(E_TASK, "--install-task is for Windows Task Scheduler")
-    venv_py = ROOT / ".venv" / "Scripts" / "python.exe"
-    python = str(venv_py if venv_py.is_file() else Path(sys.executable))
+    # pythonw.exe has no console, so the task shows no black window (it runs at every unlock and every hour);
+    # print() is then a no-op and everything the run says is in tools/kite_login.log
+    venv = ROOT / ".venv" / "Scripts"
+    python = str(next((p for p in (venv / "pythonw.exe", venv / "python.exe") if p.is_file()), Path(sys.executable)))
     xml = _task_xml(python, str(Path(__file__).resolve()))
     fd, tmp = tempfile.mkstemp(suffix=".xml")
     os.close(fd)
