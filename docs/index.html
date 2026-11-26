@@ -187,6 +187,11 @@ td { font-variant-numeric: tabular-nums; }
 .sleeve .pl .k { color: var(--ink-2); }
 .sleeve .pl .num { font-weight: 600; font-size: 13px; overflow-wrap: anywhere; text-align: right; }
 .sleeve .eq { font-size: 12px; color: var(--muted); overflow-wrap: anywhere; }
+/* 'Today in brief': a few plain sentences directly under the four sleeve cards (papertrade/brief.py) */
+.brief { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border); }
+.brief h2 { margin-bottom: 6px; }
+.brief ul { margin: 0; padding-left: 18px; }
+.brief li { font-size: 14px; color: var(--ink-2); margin: 4px 0; overflow-wrap: anywhere; }
 .momline { margin: 0 0 8px; }
 
 footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--muted); }
@@ -956,6 +961,14 @@ footer a { color: inherit; }
       hdr.appendChild(h("p", { class: "muted small", style: "margin:10px 0 0" }, [
         "Thesis sleeve " + rs(th.equity) + " (" + pct(th.total_pnl_pct) + "). Combined ",
         h("strong", { text: rs(combinedEq) }), " of " + rs(combinedCap) + " paper capital."]));
+    }
+    // "Today in brief": what moved, what was bought and sold, what is queued; right under the four sleeve cards.
+    // Older data.json files have no brief: render nothing.
+    if (d.brief && d.brief.lines && d.brief.lines.length) {
+      hdr.appendChild(h("div", { class: "brief", role: "region", "aria-label": "Today in brief" }, [
+        h("h2", { text: "Today in brief" + (d.brief.date ? " · " + dShort(d.brief.date) : "") }),
+        h("ul", null, d.brief.lines.map(function (l) { return h("li", { text: String(l) }); }))
+      ]));
     }
     hdr.appendChild(h("nav", { class: "jump", "aria-label": "Sections" }, [
       ["#alerts", "Alerts"], ["#positions", "Positions"], ["#decisions", "Next open"], ["#thesis", "Thesis"], ["#fno", "F&O"], ["#fno-cands", "F&O candidates"], ["#us", "US"], ["#us-cands", "US candidates"],

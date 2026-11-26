@@ -218,7 +218,15 @@ def build_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | Non
     except Exception:
         log.exception("Combined equity export failed.")
         out["combined"] = None
-    return _clean(out)
+    out = _clean(out)
+    # 'Today in brief' sentences under the four sleeve cards (brief.py), built from the finished data
+    try:
+        from . import brief
+        out["brief"] = brief.build(out, prices)
+    except Exception:
+        log.exception("Brief export failed; dashboard written without it.")
+        out["brief"] = None
+    return out
 
 
 def _combined(momentum_curve: pd.DataFrame, out: dict) -> dict:
