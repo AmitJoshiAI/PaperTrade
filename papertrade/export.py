@@ -231,7 +231,11 @@ def build_dashboard_data(pf: Portfolio | None = None, prices: pd.DataFrame | Non
 
 def _combined(momentum_curve: pd.DataFrame, out: dict) -> dict:
     """All four sleeves in INR on the momentum sleeve's dates. A sleeve's value on a date is its latest
-    equity row on or before it (the US sleeve's dates are US sessions), or its capital before its first row."""
+    equity row on or before it, or its capital before its first row. The US sleeve's rows are US sessions, and
+    the session of date X ends after the India run of X: the India run of a date first sees the US session
+    BEFORE it. So the US value on an India date is its latest row strictly before that date: a US session is
+    counted on the India day that first showed it, and stays there (before 2026-11-27 it was filed back under
+    its own date at the next run, so the US 'Day' on the dashboard read Rs 0 on most days)."""
     parts = [("momentum", config.STARTING_CAPITAL, None), ("thesis", config.THESIS_CAPITAL, "thesis"),
              ("fno", config.FNO_CAPITAL, "fno"), ("us", config.US_CAPITAL, "us")]
     series = {}
@@ -249,8 +253,10 @@ def _combined(momentum_curve: pd.DataFrame, out: dict) -> dict:
         for name, cap, _k in parts:
             v = cap
             for dd, e in series[name]:
-                if dd <= d or d == last_day:    # the last point uses every sleeve's latest row, so it
-                    v = e                       # matches the headline total (US rows can be a day ahead)
+                # the last point uses every sleeve's latest row, so it matches the headline total (a late
+                # re-run can already hold the US session of the last India date)
+                if d == last_day or (dd < d if name == "us" else dd <= d):
+                    v = e
             row[name] = v
         row["equity"] = sum(row[n] for n, _c, _k in parts)
         curve.append(row)

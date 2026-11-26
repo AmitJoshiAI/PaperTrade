@@ -230,12 +230,11 @@ def why_line(d: dict, prices) -> str | None:
             g = _option_groups(d["fno"].get("positions"))
             detail = f" on its {_join(g)}" if g else ""
         elif s == "us" and d.get("us"):
-            detail = _us_detail(d["us"], mv)
+            us_day = _us_day(d["us"])
+            # the US session the India run saw is an earlier date than the India day: name it
+            detail = (f" in its {_day(us_day)} session" if us_day and str(us_day) < as_of else "") + _us_detail(d["us"], mv)
         clauses.append(head + detail)
     text = "; ".join(clauses) + "." if clauses else ""
-    note = _us_hidden_note(d, moves)
-    if note:
-        text = (text + " " + note).strip()
     return text or None
 
 
@@ -252,21 +251,6 @@ def _us_detail(us: dict, mv: float) -> str:
     if abs(fxp) >= 1:
         return f" ({inr(fxp)} of it from the dollar-rupee rate)"
     return ""
-
-
-def _us_hidden_note(d: dict, moves: dict) -> str:
-    """The US sleeve's latest session is filed under an earlier date on the chart, so it is not in today's
-    change. Say so when that session moved enough to matter, so the US card's 'Day' does not mislead."""
-    us = d.get("us") or {}
-    curve = us.get("equity_curve") or []
-    day = _num(us.get("day_pnl_inr"))
-    if not curve or day is None or abs(day) < MIN_MOVE or abs(moves.get("us", 0.0)) >= 1:
-        return ""
-    us_day = str(curve[-1].get("date"))
-    if us_day >= str(d.get("as_of")) or not _us_is_new(d, us_day):
-        return ""
-    return (f"The US sleeve {'lost' if day < 0 else 'gained'} {inr(day)} in its last session ({_day(us_day)}); "
-            f"that is counted in the {_day(us_day)} total, not in today's.")
 
 
 # ---------- trades and plans ----------

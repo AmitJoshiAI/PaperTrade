@@ -174,12 +174,13 @@ class PricesMissing(unittest.TestCase):
 
 
 class UsSession(unittest.TestCase):
-    def test_us_move_filed_under_earlier_date(self):
-        d = base(last=dict(momentum=496_000.0, thesis=500_000.0, fno=500_000.0, us=500_000.0))
+    def test_us_session_named_when_earlier_than_india_day(self):
+        # the India run of 26 Nov first sees the US session of 25 Nov; export._combined counts it on 26 Nov
+        d = base(last=dict(momentum=496_000.0, thesis=500_000.0, fno=500_000.0, us=497_234.0))
         d["us"].update(day_pnl_inr=-2766.0, day_fx_pnl_inr=-575.0, equity_curve=[dict(date=PREV)])
         why = brief.build(d, None)["lines"][1]
-        self.assertEqual(why, "Momentum lost Rs 4,000. The US sleeve lost Rs 2,766 in its last session (25 Nov); "
-                              "that is counted in the 25 Nov total, not in today's.")
+        self.assertEqual(why, "Momentum lost Rs 4,000; US lost Rs 2,766 in its 25 Nov session "
+                              "(Rs 575 of it from the dollar-rupee rate).")
 
     def test_us_holiday_does_not_repeat(self):
         # the latest US row is two India rows back (US holiday): the previous run already showed it
@@ -196,6 +197,25 @@ class UsSession(unittest.TestCase):
         d["us"].update(day_pnl_inr=-2000.0, day_fx_pnl_inr=-1900.0, equity_curve=[dict(date=AS_OF)])
         why = brief.build(d, None)["lines"][1]
         self.assertEqual(why, "US lost Rs 2,000, almost all of it from the dollar-rupee rate, not the trades.")
+
+
+class CombinedDating(unittest.TestCase):
+    """export._combined: a US session is counted on the India day whose run first saw it."""
+
+    def test_us_session_counts_on_the_next_india_day(self):
+        from papertrade import config
+        from papertrade.export import _combined
+        mom = pd.DataFrame([dict(date=d, equity=500_000.0) for d in ("2026-11-23", "2026-11-25", "2026-11-26", "2026-11-27")])
+        us_rows = [dict(date="2026-11-20", equity_inr=493_000.0), dict(date="2026-11-24", equity_inr=491_000.0),
+                   dict(date="2026-11-25", equity_inr=489_000.0)]            # 26 Nov: US holiday, no row
+        out = dict(thesis=dict(equity=500_000.0, equity_curve=[]), fno=dict(equity_inr=500_000.0, equity_curve=[]),
+                   us=dict(equity_inr=489_000.0, equity_curve=us_rows))
+        us = {r["date"]: r["us"] for r in _combined(mom, out)["equity_curve"]}
+        self.assertEqual(us, {"2026-11-23": 493_000.0,     # run of 23 Nov saw the 20 Nov session
+                              "2026-11-25": 491_000.0,     # run of 25 Nov saw the 24 Nov session
+                              "2026-11-26": 489_000.0,     # run of 26 Nov saw the 25 Nov session: Day -2,000
+                              "2026-11-27": 489_000.0})    # US holiday on 26 Nov: Day 0
+        self.assertEqual(config.US_CAPITAL, 500_000)
 
 
 if __name__ == "__main__":
