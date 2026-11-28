@@ -482,3 +482,15 @@ Zerodha opens within 5 bps on 20 trading days, phase 2 is not needed and the sub
   date. Past trades are not restated.
 - **Fortnight rule**: a fee correction to its published source, like the NSE, SEC and FINRA fixes (CHANGELOG 2026-11-07).
 - **Revert if**: a Zerodha contract note or a newer charges page shows Rs 15.93.
+
+## PROPOSAL (2026-11-28) - US sleeve: risk-free rate in the Black-Scholes fallback 0.04 -> 0.042 (weekly strategist; not applied)
+
+- **Old -> new**: `US_RISK_FREE_RATE` 0.04 -> **0.042** (`papertrade/config.py`, marked "VERIFY / update by hand").
+- **Evidence (structural: an input out of date)**: Federal Reserve H.15, https://www.federalreserve.gov/releases/h15/,
+  fetched 28 Nov 2026: 25 Nov 2026 3-month Treasury bill (secondary market) 4.16%, 3-month constant maturity 4.34%,
+  effective fed funds 3.88%. A 25 bp FOMC hike on 9 Dec is ~98-99% priced (CME FedWatch via search excerpts), which
+  lifts bill yields further.
+- **Expected effect**: cents per contract on 3-4 week US options priced by the fallback (all four EEM condor legs are
+  model-priced before the US open). No restatement. DEFERRED #26.
+- **Fortnight rule**: the only US-sleeve proposal since the FINRA fix (7 Nov).
+- **Revert if**: H.15 3-month bill yield falls below 3.9%.
